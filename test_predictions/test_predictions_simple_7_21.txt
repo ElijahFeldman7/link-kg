@@ -1,0 +1,740 @@
+--- Example 1 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromlandsrol Ag
+ the P of P55 P immiens. T juris morning hours.. the Ual of the Diegoofre State Beach. San Pendleton. a viol processeduggled in the United.Border."]INST]
+ BorderORDER PATrolL",ENTS"]�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder
+====================
+
+--- Example 2 ---
+GROUND TRUTH:
+["RICARDO RODRIGUEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromardo"]ruez
+ed to he was [] entities P the listash and\"INST]
+RicARDO"]ODRIGUEZ"]����������������������������������������������������������uf�����uf������������������ufuf����������uf▶▶���������ufufuf�����������uf����ufufuf����uf������ufuf����ufuf����������ufufuf���ufuf�������������������������������ufuf�����������������������������uf����ufuf����ufufufuf���ufufufufufufufuf����ufufufufufuf▶▶▶ufufufufufufufufufufufufuf���ufufuf����uf������ufufufufufufufuf��ufufufuf����ufufufuf��ufufuf���ufufufuf�ufufufufufufufufufufufuf��������ufufuf���ufufuf���ufufufuf�����ufuf��ufufufufufufufufufuf����uf�����ufufufufufufufufufufufufufufuf����ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 3 ---
+GROUND TRUTH:
+["DRIVER"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From' a much to readern P P of the."] the scene. were the roomilers. than P following"] the trailer.end."]INST]
+driverarkVER"]��������������������������������������������������������▶▶����������������atre▶▶����������▶▶▶▶���������������������������▶▶▶���▶▶��jourdjourd��atre������������������▶▶▶atre▶▶▶�����������������������ident�������▶▶����������������������������������zienzien����atre▶▶zien�����atreatre�atreatre�jourdjourdjourd�atreatreatre�atre▶▶▶▶atreatre�atreatre▶▶atreatre▶▶▶atre���atreatreatre�������jourdjourd�������������atreuf��jourd���atre������������������������▶atre�������������������jourd��atre▶������������������������������������������▶������������������������������uf▶▶▶��
+====================
+
+--- Example 4 ---
+GROUND TRUTH:
+["MS. CHEN", "DEFENDANT"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromET.
+ey an clear the " States with the 10, 2992. through she United United her in the. Texas. on sheense was..DefINST]
+Def"] CHEN", "HENDANT"]������������������ufuf�����uf�����������ufuf���ufufufuf����uf���ufufufuf���ufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 5 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromlandsrol agents
+ the followingaredo sector BorderBorder notified of the Texascherers. the individualocumented imm immien from crossing the healthress." the Tjasesa rananch.
+"]INST]
+ BorderORDER PATrolL",ENTS "LIEN"]"]BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufufufBorderBorderBorderufufufBorderBorderBorderBorderBorderufufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder����BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��ufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufBorderBorderBorderBorderBorderufufufBorderBorderBorderufufufBorderBorderBorderBorderufufufBorderBorder���ufufBorderBorderBorderufufufufufufufufBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderufufBorderBorderBorderBorderufufBorderBorderBorderBorder�ufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufBorderBorderBorderBorderBorderufufufufufufuf�ufufBorderBorderBorderBorderufufBorderBorderBorderBorderBorderBorderBorderufufufufufufBorderBorderufufufufufufufufufufufufufufufufBorderBorderBorderufufufufBorderBorderBorderufufufufufufufufufufufufufufufufufufufufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufufufufBorderufufufufBorderBorderBorderufufufufufufBorderufufufufBorderBorderBorderBorderufufufufufufufufufufufufufufBorderBorderBorderBorderBorderBorderBorderBorderufufufufufufufufufufufBorderBorderufufufufBorderBorderBorderufuf
+====================
+
+--- Example 6 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From listoperauthorendant of founding traffic couring' " permissionistol. the. the place to another room"]INST]
+coUN defENDANT"] "captAPTIVES"]�����������������ufuf����uf������atreuf����ufuf����������ufufuf���ufufufuf���������������ufufufufuf�ufufufuf��ufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufuf�ufufufuf���ufufufufuf�ufufufuf���ufufufufufufufufufufufufufufufuf����ufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����ufufuf��ufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 7 ---
+GROUND TRUTH:
+["DETECTIVE", "GARY HASTON", "HEATHER VARGAS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 12, 2018, Ison William,iff's Office (ives and Detaskings and Danielather Bosreason extract "ing inbound on []- 15 when
+YourINST]
+WillTECTIV", "Gary HASTon", "HEATHER VARGAS"]�uf���ufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufWillufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+["AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From text string report in ", the  1:45 p.m. in a from onified of their P citizen. a Picious package. the Diego.. San thepusado. agentsINST]
+PERENTS"]agensagensagensagensagensufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+["GUARDADO-MEZEN", "CAPTIVES", "FRIEND", "ORIGINAL GROUP"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromians enPERzaheimer b to of its followingives. force permission context. the list. and though she capt was already provided the capt money of additional sum amount.\"INST]
+GuramARDADO-MEZEN"] "addAPTIVES"] "mRIEND", "GROUPIGINAL group"]���������������������������������������������������������������������������������������������������������������������������Gu�����������������������������������������������������������������������������������������������������GuGuGuGuGuGu��������������������������������������������������������������������������������������������������Gu���������������������������������������������������������������������������atre���
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+["CHAPA", "JESUS PACHECO-PINA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromman,s entitiesachingauthend Ch Ch',inedeco,Rardo"] Jesus to JSON of co immiens. custom woods Texas borderushlands they could cross authorities Texas Patrol agentpoint. thearedo. they head through away. Texas United States. BorderBorder]
+ ChAPA", "JesUS PACHECO-PINA"]�������������������ufuf����������������ufufufuf���ufuf���ufufufufufufufufufufuf�ufufufufuf���ufufufuf�ufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufuf��ufufufufufufufufufuf�����ufuf���������ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 11 ---
+GROUND TRUTH:
+["MOVANT"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromies.ly is theing P Movien. the. she she was a transporting themiens to a al year months.sixINST]
+aliVANT"]����������������������ufufuf����������ufuf����������������ufufuf���ufufufuf���������������ufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+["MS. RIVERA-QUINTERO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromET.
+a CabMartintero
+ not fall a relationships entities issues extra in [] United States"]\"INST]
+PER"] RiverIVERA-QINTERO"]�����������������������������������������������������������������������������������������uf▶uf����������������������������ufufuf����uf������������������������������ufuf�������������������������������������������������������������������ufuf�����ufufuf��������������������ufuf▶ufufufufufufufufufufufufufuf���ufufuf������������uf���ufuf����ufufuf����ufuf����ufuf�����������ufufuf��ufufufuf����������������������ufufuf�����������������������������������������ufuf�����������ufuf����������ufuf����ufufufufufuf
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+["GARCIA", "ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 1, 2019, Irett, the male of people entitiesocumented Piens. a Diego, Arizonaosi. Mexico.
+"]INST]
+undarCIA"] "undIENS"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+["ORTIZ", "CHILD"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromomic end of the crime accident, there Viiz pu the the traffic she going witness []5 old.. https. was planninglegally tra in the U States.\"INST]
+sceneiz"] "childILD"]�����������������������������������������ufufuf����ufuf����������������ufufufufuf�ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufuf����������������ufuf�����ufuf�����ufufuf���������������������������ufufuf��ufufufuf���ufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufuf��ufufufufufufufufuf��ufufufufuf���ufufufufufufufuf��ufufufufuf��ufufufufuf��ufufufufufufufufuf����ufufuf����������ufufuf����������������ufuf������������������������������������������������ufuf�����ufufufuf�
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+["MOVANT", "CO-DEFENDANTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromies. Movpan-defendants.ely beatreated P Movocumented coien. co []ishing themarms in therebying to aliens. alying them the al them undiens. extract being and pating him. and finallyually misting the of the al aliens."]INST]
+MVANT", "co-DEFENDANTS"]���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 16 ---
+GROUND TRUTH:
+["PACHECO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromEReco do not viol entities funds. drink for his journey.&INST]
+PERachHECO"]��������������������������ufufuf���ufufufuf�ufufuf�����ufufuf����ufuf����uf�����ufufuf���ufufuf����������uf����ufufufufufufufufufuf���ufuf▶ufufufufufufuf�ufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����ufuf���ufuf����ufufufuf���ufuf����ufufufufufufufufuf���ufufuf����ufufuf��ufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 17 ---
+GROUND TRUTH:
+["SAI DESHPANDE", "SMUGGLER"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 18, 2010, Iearsrahpande, " P Pokerler, was a unknown88-wheeler tr aocumented immants.ENTINST]
+PERI"]HPANDE"] "smUGGLER"]�������������������������������uf�����ufuf����������������ufufufuf��ufufuf���ufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����ufufufuf�ufuf����ufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf���������ufufufufufufufufufufufufufufufuf��ufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 18 ---
+GROUND TRUTH:
+["INVESTIGATORS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromator
+ by listacht at a50 entities on board. https of theyduras and three from Guaragua, and a from Gu. and a ching. theina.."]INST]
+InvTOSTIGATORS",�������������������������������������uf����ufufuf����������������ufatreufuf���ufuf���ufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufatreatreufufufufuf��ufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufatreatreatreatreufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 19 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "VICTOR BARBERENA", "ABRAHAM ESQUEDA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 10, 2019, Ilandsrol agentents inianoaja and Victor Victorquivel were working in a patving pat patrol. thestate  15.Inter-35") in Mcaredo and Web Web. During "INST]
+BorderORDER PATrolL"]ENTS "VctorOR BARBERENA", "ABRAHAM ESQUEDA"]BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufBorderBorderBorderBorderufufufBorderBorderBorderufufufufufBorderBorderBorderufBorderBorderBorderBorderufufufBorderBorderufufufufufBorderBorderufufufufufBorderBorderufufBorderBorderBorderufufufufBorderBorderBorderBorderBorderBorderBorderBorderBorderufufufufBorderBorderBorderBorderBorderBorderBorderBorderufufufufufufufufufufufufufufufufufufBorderBorderufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufBorderBorderufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 20 ---
+GROUND TRUTH:
+["F-150'S OCCUPANTS", "DRIVER", "JAQUEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From entities these entitiesIR150ss entitiesants were killed their Fctor. theTwo off F's seat. the Fuck. front theime got extracted.JSONINST]
+J-150's",CCUPANTS"] "JRIVER"] "JaqueQZ"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 21 ---
+GROUND TRUTH:
+["AMO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From JSONUNT extract a end around extracteded the list10-year-liner.craft.\"list]
+PERO quickly���������ufufuf���ufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufuf�ufufufufufuf�ufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+["GUIDES", "ROJAS-MENDOZA", "DRIVER"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From theing in a hotelel, the are up personsiens. the spacesides. the desertirt road. the1:49 p.m. of entities we in custRelative of of a motruckoe. which theiroms andRendeza in the back passenger seat. her al in in.
+ al drove a down a d. all minutes the eightiens were well as Rojas-Mendoza were injured injured. and ofiens were killed. and the unknown of not remember located./INST]TheycPSES"] "RjasAS-MENDOzaA"] "unknownRIVER"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 23 ---
+GROUND TRUTH:
+["MR. MEJIA-MORALES"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromdraw exception of ". andhdi,Rales, the is notatemalan", all are Gu Gu Gu Salvador"]itINST]
+Mr. MeJIA-MORALES"]������������������������������������������������������������������������������������uf▶uf����������uf������������������������������������������������������������������������������������������������������������������������������������uf���������������������ufuf▶ufuf���ufufufufufufufufuf����ufuf����������������������ufuf������uf�����������������������ufufuf����������������������ufuf������������������������������������������ufuf������uf����ufuf����������������ufufufufuf�
+====================
+
+--- Example 24 ---
+GROUND TRUTH:
+["RAMON"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From is the to al, the would extract able by$.00000. this dayien.uggled or
+"]INST]
+RMON"]��������������������������������������������������������������������������������ufuf����������uf▶▶uf��������ufuf������������uf����ufufuf���ufuf������uf������������������uf���ufufuf�������������������������������������������������������������������ufuf�����uf▶���������ufufuf����ufufuf��uf▶▶▶ufufufufufufufufufufufuf�����������������������ufuf����ufufuf�����ufuf����������������������ufufuf����������������������ufufuf����������������������������������������ufufuf�����������������������������ufuf▶ufufuf
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+["JOINT HARBOR OPERATIONS CENTER (JHOC)", "AIR AND MARINE OPERATIONS (AMO)"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 84, 2019, I a 1:18pm.m., aaredVECOed meTLC P Picious person. the coast of Puerto Diego. CAif."MO contact contact out vessel and contacted the susp36-year suspliner.craft.
+
+INST]
+JHO"]"]IGBOR"]ERATIONS COENTER",JHOC)", "AMMS M MARINE OPERATIONS (AMO)"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 26 ---
+GROUND TRUTH:
+["GARCIA", "ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 1, 2993, Ilandsrol agent in  group1997 Che F-150 in cabrioup truck in up a par diszing lot. to thet Road. near commercial highway. the Californiaouddo, Texas.YourJSON]
+BorderPSBA"] "BorderFases"]"]BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufufufufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufufufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufufBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderufBorderBorderBorderBorderBorderufufBorderBorderufufufufufufBorderBorderufufufufBorderBorderufufBorderBorderBorderBorderBorderuf
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+["ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From text entitiesumn from ab to the border Grande. foot listft by al United States." a entities al."]INST]
+aliiensENS"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufuf▶▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufuf
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+["DEFENDANT", "CHILD"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Frominitely
+ extract all Def Def Def his his Def States citizen."]INST]
+ Def"]ANT", "childILD"]�����uf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 29 ---
+GROUND TRUTH:
+["DEFENDANTS", "CAPTIVES", "FAMILY MEMBERS", "CO-DEFENDANTS", "ORIGINAL SMUGGLERS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Frominitelyants
+ed to courturing to extract the Def Def Def extract their following to to their captoperDefendants. than extract send capt defendithglers."]INST]
+ Def"]antsTS", "captAPTIVES", "smMILY"]MBERS"] "co-DEFENDANTS", "ORIGINAL SMUGGLERS"]������������������������������������ufuf����������ufufufuf���uf����ufufuf����������ufufufufufufufufufuf��ufufuf�����ufuf���ufufuf����ufuf����ufufuf���ufuf�����������������ufuf������������ufufuf��ufuf�����uf�����������uf������������uf�����ufufuf�����������������uf��ufufufufuf���ufufufufufufufufuf����ufuf������������uf���ufufuf���ufufuf����ufufuf�����������������uf����ufufuf����������������������ufufuf������������������������������������������������������ufuf����������ufuf����ufufufufufuf
+====================
+
+--- Example 30 ---
+GROUND TRUTH:
+["SOFIA NAVARRO", "DEFENDANT", "AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From textendant inia
+ro. for the court of from entities listricaeb fence."]INST]
+defFIA"]AVARRO"] "agENDANT"] "AGENTS"] def def�������������uf������������uf����������������ufufuf���ufufufuf���������������ufufufufufufufufufuf��ufuf▶▶ufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufuf���ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufuf�����uf���ufufuf���ufufufuf���ufufuf����ufufufufufufufufuf�ufufufufuf����ufuf���ufufufuf��ufufufuf��ufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufuf
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+["AGENT", "MEN", "WOMEN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From output ago, I extract of a P Pien. in a alins a truck. and of and two women."]INST]
+jsonENT", "aliEN", "WOMEN"]����������������������������ufuf����������������ufufufuf�ufufufufuf���ufufufagensagensufufufagensagensagensagensufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�������ufufufuf��ufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufuf��ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufuf
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+["AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromre ofpected of Entity extrien of from in human humanitime smuggling operation. hearingicing a the mar list of composedaring mar clothing. sho shone-on ses, satersshants.ents also noticed that the entire wass s itemsings were we and"]INST]
+ AgENTS"]��������������������������ufuf�����������������ufuf����ufuf���ufufufufuf�������ufufufufuf���ufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufuf��ufufufufufufufufufuf����ufufufufufufuf����ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 33 ---
+GROUND TRUTH:
+["PORTLAND HARBOR UNIT"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromomic1018:.m.
+nesday, " textland Trabor Light willified the trafficdiction agents of a marinepected Puggler event. Port Port of Portland."]INST]
+PortLAND"]ARBOR",IT",��������������ufuf���ufufuf����ufuf����ufufuf���ufufufuf����ufuf��ufufuf���ufufufufufufufufufufuf��ufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 34 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From JSONoperauthorendant of founding traffic couring to " permissionistol. the. the place to another."]INST]
+coUN defENDANT"] "captAPTIVES"]������������������������������atreatre�����������������ufatre���ufufuf����������������atreufufuf���ufuf����uf▶ufufufufufufuf��ufufufufuf���ufufuf��ufufufufuf�ufufufufuf�ufufufuf�����ufuf���ufufufuf�ufufufufuf��ufufufufatreatreufufufuf����������������ufufuf����uf�����ufufufufufufufufuf��ufufuf�����������ufuf����atreatre���ufufufuf���ufufufufuf�ufufatreatreatreufufufufuf��ufufufufufufufuf▶ufufufufufufufufufufufufufufuf�ufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufuf���ufufufuf��ufufufufuf���������������ufuf����ufufufuf��ufufufufufufufufufuf��ufufufufuf�ufufufuf����ufufufufufufufufufufufufufufuf���ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 35 ---
+GROUND TRUTH:
+["SOTO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From JSON of the'455 Iton"] Texas, near thereON-s tr was observed forTex in JSONorious location for sm smuggling of Pien"] foricit trafficgs"]"]INST]
+IotoO"]����������������������������������������������������������������uf�����������ufufufuf�������ufufufufuf���ufufuf��ufufufufufufufufufufuf�ufufufuf�����ufuf���ufufufuf��ufufuf�����uf���ufufuf������������������uf�����������ufufufufufufufuf�����������������ufuf�����uf���ufufuf����ufufufuf���ufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����uf��ufufufufuf�ufufufufuf���ufufuf�����ufufufufufufufufufufufufuf�����ufuf���ufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure text of the 11 2019, a Fernoz wasRinez was killed his carup trtruck. of []state 85.TEXTJSON]
+FernlorNANDO MUNozZ-MARTINEZ",�ufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufFernufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufFernFernufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 37 ---
+GROUND TRUTH:
+["CALIFORNIA NATIONAL GUARD TROOPS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From, Guard p not in by extract extra and P10 individuals Nationals"] this susp of of the Diegoofre State Beach." "INST]
+CalALIFORNIA",ATIONAL GUARD"]ROOPS"]��������ufuf���uf������ufuf����������ufuf����ufufuf���ufufufuf����uf����ufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufuf�ufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 38 ---
+GROUND TRUTH:
+["ASHLEY FLORES", "MONTEROJAS", "ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromune-three entities ago, I the _ room, "ley,agg and the vehiclepoint.itorreyos, the for check theores'suck., Flterojas obtained Fl boxesocumented Piens."]INST]
+ALEY FLORES", "MonTEROJAS"] "FlIENS"]�����������������������������������������������������MONMON�����������������������������uf�����uf������ufuf�����������������������uf������������������uf�������������������������������������������������uf�����ufuf����������������������ufufufuf���ufufufufufufufufuf����ufuf�����������ufufufuf�ufufuf��ufufufufuf���ufufufufufufufufufuf�ufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufuf���ufufuf���ufufufufufufufuf���ufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 39 ---
+GROUND TRUTH:
+["DEFENDANT GUARDADO-MEZEN", "CO-DEFENDANTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure 18, 2019, Iense,ians wasRzade Def others-Defendants were to a undpartment in they Def activityigrant were. held.GuINST]GuOn"]ANT",UARDADO-MEZEN"] "co-DEFENDANTS"]���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 40 ---
+GROUND TRUTH:
+["ICE HSI"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From text is post of the eventgoing series into the team Angeles residentbased unit force."ed by []ris.s Specialeland Security Investigations."]INST]
+ Hom'SI"]������������LosLosLosLosLosLosLosLosLosLosLosLos�����LosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosIEIELosLosLosIEIEIELosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIELosLosIEIEIEIEIELosLosLosIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIELosLosLosIEufufufLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosLosIEIEIEIEIELosLosLosLosLosIEIEIEIEIEIEIEIEIEIEIEIEIEIELosLosLosLosIEIEIEIELosLosLosIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEufufIEIEIEIEIEIEIELosLosLosuf
+====================
+
+--- Example 41 ---
+GROUND TRUTH:
+["HENDERSON", "DEFENDANT", "CODEFENDANT"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From,erson
+: "endant stated Defvillaendant in both P []ana. but. have have there Africa, Canada. Canada."]INST]
+AgentendDERSON", "DefENDANT", "CODEDEFENDANT"]����������������������������������������ufuf���ufufuf����������������ufufufuf��ufufuf���ufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����ufufufufufufufuf���ufufufufufufufufufuf���ufufufufufufufufufuf��ufufufuf���ufufufuf��ufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 42 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From this from019, "z wasPerranvez earnedlegally extracted to Spain United States"] was to Spain America.TEXTJSON]
+DAZ-GALIANA"]���������ufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 43 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromlandsrol Ag
+ the entities agentss. a werelegally cross into United. the date vehiclecraft."]INST]
+ BorderORDER PATrolL",ENTS"]BorderBorderBorderBorder���BorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorder����BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder▶BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder����BorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���ufBorderBorderBorderBorder�BorderBorder�����BorderBorderBorder��BorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorder����BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorder����BorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorder��BorderBorderBorderBorderBorder�BorderBorderBorderBorderBorder�
+====================
+
+--- Example 44 ---
+GROUND TRUTH:
+["ERNESTO DELGADO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromesto doacado"] Ern of the team _ saized in the 2011. is in the death of  lives." including buriedenced to 18 days.ment in\"INST]
+ErNSTO"]LGADO"]����������������������������������������ufuf����������������ufufuf����ufuf����ufufufuf���ufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 45 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromeverandez isPeropez, othersinez-Perarcia are all the JSON's side of, they noticed
+ list and in a driver'.TEXTINST]
+HNandeDEZ-LOPEZ", "MARTINEZ-GARCIA"] "man"]�������ufufuf���ufuf����ufufuf��ufufufufufufufufufufuf���ufufuf��ufufufuf���ufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 46 ---
+GROUND TRUTH:
+["KIM"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromber a a for blog transportancy firm bro agruiting service since but Cons since Inc they for Chinaurt China, for the for"]INST]
+Marim",����������������������������������������������������������uf������������������ufuf����������uf▶▶uf��������ufufuf�����uf����ufuf����ufufuf���ufufuf�����uf�����uf�����uf�����ufufuf��ufufuf�����������������ufuf������������ufuf���������ufuf�����������������������ufuf�����ufuf��������ufufufuf����ufufufufufufuf▶▶ufufufufufufufufufufufufufuf��ufufufufufufufufufuf���ufufufufufufufufufuf�ufufufufuf��ufufufufufufufufufufuf�ufufufufuf��ufufufufufufufufufufufufufufuf���ufufufufuf��ufufufuf��ufufufufuf���ufufufufufufufufuf���ufufuf���ufufuf����ufuf���ufufufuf��ufufufuf����ufufufuf�ufufufufufufufufufufufufufufufuf��ufufuf▶ufufuf
+====================
+
+--- Example 47 ---
+GROUND TRUTH:
+["MAYA", "GARDUZA-LAZARO", "MALDONADO-AGUILAR"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From  Angel Mayner\,Memosarus
+ and Gardatosonado-Youbareta arecid list. been their  and0500 and $1,000 to . the studiesation. the within the Gard States of"]INST]
+MYA", "GardDUZA-LAZaroRO", "MALDONADO-AGUIARAR"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 48 ---
+GROUND TRUTH:
+["RCMP", "CSIS", "CBSA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From Academy they suspects were []Extraed in the guard inter question checks. being backgroundMP. andIS, other Security Services Agency.CBSA). in theicion of beingienatinguggling."]INST]
+alMP", "CSIS", "CanSA"]�������������������������������ufufuf����ufuf���������������ufufufuf���ufufufuf��ufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufuf���������ufuf����ufufufuf���ufufuf���ufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 49 ---
+GROUND TRUTH:
+["JAQUEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromime,ess to was he whereicks stop going to. the Diego, San g to Sanvade the police Patrol.point."]INST]
+ BorderaqueQUEZ"]BorderBorderBorderBorder��ufufBorderBorderufufufufBorderBorderBorderBorderBorderBorderufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufBorderBorderufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufBorderufufufufufufufufufufufufufufufufufufufufBorderBorderBorder▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 50 ---
+GROUND TRUTH:
+["MEN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromlandsrol Ag
+ in entities in in a woodsmillammer."]INST]Border BorderEN"]BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder���BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder��BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder�
+====================
+
+--- Example 51 ---
+GROUND TRUTH:
+["DURANT", "ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From\ born coach provider of heant for the vehicleuck. which eventiler. which the sole201 immiens were transport in"]INST]
+DurANT"] "2IensS"]���ufufufufufufuf��ufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 52 ---
+GROUND TRUTH:
+["LEE"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From", tojson extract listed for4100000. this of shearterled."]INST]
+LeE"]��������������������������������������������������������������������������������������ufuf����������uf▶▶����������uf������������������uf�����uf������������������������������uf���������������������������������������������������������������������uf�����uf▲�����������������uf���uf▲▶▲ufuf�ufufufufufufufufufuf����ufuf������������������������������������������������������ufufuf�����������������������uf������������������������������������������uf������������������������������uf▲▲▲uf�
+====================
+
+--- Example 53 ---
+GROUND TRUTH:
+["KRISH PATIL", "SMUGGLER"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromishnael"]ed forocumented immiens to thestate 855 in Intering at Inter destinationaging location. Interocitycca where she al were found.
+"]INST]
+InterrishH PATIL"] "Inter"]GLERS"]����������������������������������ufuf����ufuf����������������ufufufuf���ufuf����ufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufufuf��ufufufufufufufufufufuf���ufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 54 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure text of the 11 2019, a Fernoz wasRinez was killed his carup trtruck. of []state 85.TEXTJSON]
+FernlorNANDO MUNozZ-MARTINEZ",�ufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufFernufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufFernFernufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 55 ---
+GROUND TRUTH:
+["GARZA", "MEN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromrett
+ us$}}% of extract rid the caruck and go. theath the tabledrop.JSONINST]
+trarZA"] "trEN"]�����������������ufufuf���ufufufuf����������ufuf����������������ufufuf���ufufuf����������������ufufufuf��ufufufuf��ufuf▶▶ufufufufufuf�ufufufufufuf���ufuf���ufufufufufufufufufufufufufufufuf����ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufuf����������������ufuf�����������ufufufufufufufuf���ufufuf�����������uf�����ufufuf��ufufuf����ufufufufufufufufufufufufufufufuf��ufufufufufufuf▶▶▶ufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufuf����ufufuf����ufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 56 ---
+GROUND TRUTH:
+["SALAZAR", "MAN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromevermon extract bornsuccess, he  wasPERicipant)13 was be the the listien.partINST]
+aliALAZAR"] "al"]���������������ufuf����ufuf�����������ufuf����������������ufufuf���ufufuf����������������ufufufuf��ufufuf���uf▶▶▶ufufufufufuf�ufufufufufuf����uf���ufufufufuf�ufufufufufufufufufuf����ufufuf��ufufufufuf��ufufufuf��ufufufufufufufufufuf���������ufuf�����ufuf����ufuf����ufufufufufufufufuf����ufuf����������ufufuf����ufuf���ufufufuf���ufuf▶ufufufufufufufufufufufufufufufufufufufufufuf▶▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufuf▶ufuf�ufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶▶ufuf
+====================
+
+--- Example 57 ---
+GROUND TRUTH:
+["DEFENDANT", "CO-DEFENDANTS", "CAPTIVES"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Frominitely
+ Def entities-Defendantants. out coive from the court jurisvenue. order.countINST]
+ Def"]ANT", "co-DEFENDANTTS", "CAPTIVES"]�������ufuf����ufuf����ufuf�����ufuf����ufuf����ufuf���ufufufufuf�ufufufufuf��ufufufuf���ufuf����ufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 58 ---
+GROUND TRUTH:
+["LOPEZ-PEREZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromoremz,Caredz"] Jose"] extracted extract extract on an Pant in atextt activity.counticipant in23
+"]INST]
+cPEZ-PEREZ"]����������ufuf���ufufufufufufufufuf�����ufufufuf��ufufuf���ufufuf��ufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 59 ---
+GROUND TRUTH:
+["MOVANT", "OTHERS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromever are for _ agents, theyita, agents other were to extracte."]INST]
+ agentsVANT"] "fourHERS"]��������ufuf���������ufufufufuf��ufufufufufufufufuf�����ufufufuf�ufufuf�����uf���ufufufufuf�ufufufufuf���uf�����ufuf����ufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����ufufuf��ufuf����ufufufufufufufufufuf���ufufufufufufufufuf���ufufuf����ufufuf��ufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 60 ---
+GROUND TRUTH:
+["MEN", "MEXICANS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From textus in they were planningicans. were migr tolegally to Entity [] States. "INST]
+menex"] "whoXICANS"]���������������������������������������������������������������������������������������������uf▶uf����������������������������������������������������������������������������������������������������������������������������������������������ufuf���������ufuf������ufuf�ufuf▶▶▶uf���ufufufufufufufuf�����������������������������ufuf������uf������������������������uf�����������������������ufufuf�����������������������������������������ufuf������uf����ufuf����������ufuf����ufuf▶ufufuf
+====================
+
+--- Example 61 ---
+GROUND TRUTH:
+["DRIVER", "MUNOZ-MARTINEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From text from up extractative stop on extracted a entities immiens. [] agentsuck. they P P. whooz.Cinez.ENTINST]
+PERHSVER"] "MunozZ-MARTINEZ"]agensagensagensufufagensagensagensufufufufagensagensufufufufagensagensagensufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufagensagensagensufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufagensagensufufufufufufufufufufufagensufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 62 ---
+GROUND TRUTH:
+["AMO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From JSONUNT extract a end around extracteded the list10-year-liner.craft.\"list]
+PERO quickly���������ufufuf���ufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufuf�ufufufufufuf�ufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 63 ---
+GROUND TRUTH:
+["FREEMAN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromeb,s mind: the JSON devi route in _.do to Nue"] car left to [] 1624." is west west. from Houston. turning to no extra to your travel.startINST]FreFreREMAN"]��FreFre���FreFreFreFre���������FreFreFre���Fre�����FreFre����FreFreFreFreFreFreFreFreFreFreFre���FreFreFreFreFreFreFre��FreFreFreFreFreFreFreFreFreFreFreFre�FreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFre��FreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFre��FreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreFre���FreFreFreFreFreFreFreFreFreFreFreFreFreFreFre��ufFreFreFre��ufFreFreFreFreufufufufufFreufufufufufFre���ufFreFreFreFreufufufufufFreufufufufFreFreFreFreFreFreFreFreFreFreFreFreFreFreFreufFreFreFreFreFreFreFreFreFreFreFreufufFreFreFreFreFreFreFreFreFreFreFreufufFreFreFreFreFreFreFreFreufFreFreFreFreFreFreufufufufufufFreufufufufFreFreFreufufufufufFreufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufFreufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufFreFreufufufufufufFreufufufufufFreFreFreufufufufufFreufufufufufufufufufufFreFreufufufufufufufufufufufufufufufufufufufufufufFreFreufuf
+====================
+
+--- Example 64 ---
+GROUND TRUTH:
+["MALE ALIEN", "FU MEI CHEN", "SMUGGLERS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromila born to she with her JSON entityien, to an alhouse Mot & Sp thereements were made made for transport her male to sheentescca,, to the Spaceody of another entitiesugglers. she was. the Road floor ofroom. meansing to ski. of the.217. she to fle. she she the, she didaping."]INST]
+ RoomLE",IEN"] "Fu MeI CHEN"] "smUGGLERS"]��������������������������������������������������������������������������������������������������������������������������������������������������������������������������atreatre����������������������atreatreatreatre���������atreatre�����atreatre������������atre���������ufufuf�����atreatre����uf�����������ufuf����ufufuf����������������������ufuf������������������uf������������uf����������ufuf�����ufuf���ufufufufufufufufufuf�ufufufufuf��ufufufufufufuf
+====================
+
+--- Example 65 ---
+GROUND TRUTH:
+["CONTRERAS DE VELASQUEZ", "FEMALE PASSENGER"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromneast
+ laazco"] adm hospital instructions following name. femaleday. the she was to be a100. extract the femaleocumented imm to the. Victoria.ISBNINST]
+VTRERAS", VELASQUEZ"] "VMALE"]SSENGER"]ufufuf�����ufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 66 ---
+GROUND TRUTH:
+["ELENA TORRES", "MANUEL RUIZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromFailure, June 19, 2029, "PRed maintenancerol was extra. P in. Park.ers.ena andres and El Valiz for B requestgar Mem. ordersenada, B."]INST]
+BnsNA",ORRES", "MAUEL RUIZ"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 67 ---
+GROUND TRUTH:
+["PETITIONER", "DRIVER"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From textersoner entities by as " Pet of the vehicle. in the accident."]INST]
+driveretITIONER", "driverRIVER"]identidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentident▶▶▶identidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentident▶identidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentident▶▶▶ufidentidentidentufufufufufufufufufidentidentidentidentufidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentufidentidentidentidentidentidentufidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentufidentidentidentidentufufufidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentufufidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentidentufufidentidentident
+====================
+
+--- Example 68 ---
+GROUND TRUTH:
+["UNITED STATES COAST GUARD (USCG)"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From port- extract Ext able of the " States of Guard (uscCG) woulded a vessel craft. a entities onoard. theshore. Puertojoanside, the incident violien-uggling attempt.YourINST]
+peopleITED StatesATES",AST GUARD"]USCG)"]������������������������������������������������������������ufuf�������������������������������������������������������������uf��������������������������������������������������������������������������������������������������������ufufufuf����ufufufufufufufuf����ufuf����������������������ufufuf����ufufuf����������������ufuf����ufufuf����������������������ufufuf�����������������uf������������������������������������������������������ufufufufuf�
+====================
+
+--- Example 69 ---
+GROUND TRUTH:
+["CONTRERAS-PUENTE", "PAOLO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From
+ avoyarian
+levelarederta to []vo.aredo. Tamaulipas"] Mexico"]JSONINST]
+PaTRERAS-PUENTE", "NoloLO"]������PaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPa�PaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPa�PaPaPaPaPaPaPaPaPaPa��PaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPa�PaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaufufufPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaufufufufufPaPaPaPaPaPaPaPaPaufPaPaPaPaPaPaPaPaPaPaufufPaPaPaPaufufufPaPaufufufufPaPaPauf��ufufufuf��ufufufufufufufufPAufufufPAPAPAufuf��ufPAPAPAufufufPAPAPAufufufufufufufufufufufufufufufPAPA▶Paufuf
+====================
+
+--- Example 70 ---
+GROUND TRUTH:
+["CARLOS MARIO HERNANDEZ-LOPEZ", "MARIA GUADALUPE MARTINEZ-GARCIA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From entities these entitiesumn are " and andandez andaxisopez and Carlos al lawlaw-, Carlos deladalupe.inez-Acutcia, are al by "es inww]
+CarARlosOS",IO HERNANDEZ-LOPEZ", "MRIA GUADALUPPE MARTINEZ-GARCIA"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 71 ---
+GROUND TRUTH:
+["CBP MARINE INTERDICTION AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From text4 entities0Second lengthER P to crossuggle P10 P nationals from seized by theBP agents Patdiction agents.  miles off of the T.." Gu ofoma,ENTINST]
+2P MarineINE INTERDICTION"]ENTS"]������������������������������ufuf����ufufuf���������������ufufufuf��ufufufuf��ufufKBKBufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufuf����������uf����ufufufuf����ufuf���ufufufufufufufufufuf��ufufufuf���������ufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufKBufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufuf���ufufufufufufufufuf�ufufuf�����ufufuf��ufufufufufufufufufufufufufufufufufufufufufKBufufuf
+====================
+
+--- Example 72 ---
+GROUND TRUTH:
+["MOVANT", "CO-DEFENDANTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromies. Movpan-defendants. beengoing least two occasions occasions beennapped and killed for ransom at P of Pocumented immiens.\"INST]
+MVANT", "co-DEFENDANTS"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 73 ---
+GROUND TRUTH:
+["FREEMAN", "MS. MIRIAM EDITH RIVERA-QUINTERO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From are a match named theight,s Bayuck"] Freika. ()riam Freith"]a"]Rintero"]PERINST]
+FreREMAN", "M"] MIRIAM EDITH RIVERA-QINTERO"]uf��ufufufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufuf
+====================
+
+--- Example 74 ---
+GROUND TRUTH:
+["CHAPA", "JESUS PACHECO-PINA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromman,s entitiesachingauthend Ch Ch',inedeco,Rardo"] Jesus to JSON of co immiens. custom woods Texas borderushlands they could cross authorities Texas Patrol agentpoint. thearedo. they head through away. Texas United States. BorderBorder]
+ ChAPA", "JesUS PACHECO-PINA"]�������������������ufuf����������������ufufufuf���ufuf���ufufufufufufufufufufuf�ufufufufuf���ufufufuf�ufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufuf��ufufufufufufufufufuf�����ufuf���������ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 75 ---
+GROUND TRUTH:
+["RAMON", "HECTOR LUIS PRADO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From this times2019, theIG Bar Cabatt was extracteded by aon Pr who entityien fromuggler."]INST]
+RMON"] "alCTOR LUIS PRADO"]����ufufufuf��ufufufufufufufufuf����ufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 76 ---
+GROUND TRUTH:
+["LEE", "WENG YU HUI"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From this times2900, Anned mealt. insu"] W earlyienateduggler, W"]INST]
+alE", "WengG YU HUI"]����ufufuf��ufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf�ufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 77 ---
+GROUND TRUTH:
+["HSI ST. THOMAS", "CAPTAIN", "FOUR ALIENS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromola
+. Petersburg More
+ P of H H St theien.uggling. extr captain aliens. al entry. the United States.""]INST]
+HSI St. ThomasOMAS"] "alAPTAIN"] "aliUR"]LIENS"]����ufufuf�����ufufuf����uf����ufufuf��ufufufufuf�ufufufufufufufufufufuf��ufufuf���ufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufuf���ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 78 ---
+GROUND TRUTH:
+["CBP AMO AGENTS"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: FromntS. Departments and Border Protection
+CBP) isports Marine Operations (AMO)
+,ed a in vessel in  personsiens. includingating near a. the mar with portsamaol and Virgin. John'
+ListINST]
+vP"]viation agentsents"]"]ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 79 ---
+GROUND TRUTH:
+["GARZA", "MEN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromrett
+ to a say to she had consum to extract her moneystru list. the$}}%..point. the ride stop. she she she had not agreed the for them men. that did not agree a be payment formation. theing the."]INST]
+menarzaA"] "menEN"]������������������������������������������������ufufufuf��ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 80 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From this from019, "z wasPerranvez earnedlegally extracted to Spain United States"] was to Spain America.TEXTJSON]
+DAZ-GALIANA"]���������ufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 81 ---
+GROUND TRUTH:
+["JAQUEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From this text, Pime anded that was the video video secondsiens. the an spacesiler. he he did not see them questions. didthrough from he did to get away.lINST]
+JaqueQZ"]���ufufufufufufufufufufufufufufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶ufufufufufufufufufufufufufufufufufufufufufuf▶▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶▶ufuf
+====================
+
+--- Example 82 ---
+GROUND TRUTH:
+["JIMENEZ-ELVIREZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From JSONIToe- the is extracted by by theenez.Peroraander..0INST]
+JimenezEZ-ELVREZ"]ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 83 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "UNNAMED PERSON"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromandez
+Peropez"] he was extracted met for50000 pesos. Ram entityspec individual. pes. and that to paid   of 5,000 to an.ward. destination destination. Mexico future States.textINST]
+HNandeDEZ-LOPEZ"] "unnNAMED"]ERSON"]������������ufufuf���ufufufufuf��ufufuf���ufufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 84 ---
+GROUND TRUTH:
+["JIMENEZ ELVIREZ", "GALLO"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromenez
+enaita"]"] aed entities followingien. the transport way SUiler.trailer. to Elboundse.istics. had to Ironicia. Jesus transportlo had transport. the []edomiverpoint. the 1th1INST]
+IimenezEZ ELVIREZ", "IalloLO"]�������������������ufufuf���ufufufuf���������������ufufufuf��ufufufuf�ufufufufufufuf�ufufuf�ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufuf��ufufufufufufufufufuf�����ufuf���uf����ufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufuf���������������ufufufufufufufufuf���ufufufuf���ufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf�ufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 85 ---
+GROUND TRUTH:
+["ORTIZ", "CRYSTAL DOERR", "JESSE DOMINGUEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From,iz []Agent the was a a by$}}%.stal"]e. she Ortavier Ortinguez.Dom]]
+AgentIZ", "CYSTAL",ERR", "JESSE DOMINGUEZ"]����ufufuf���ufufuf���uf������ufufuf����uf����������ufufuf���ufufufuf����uf���ufufuf����ufufufufufufufufufufuf�ufuf▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���������ufufuf���ufufufufufufufufufufuf��ufufufufufufufufufuf�ufufufufuf���������ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 86 ---
+GROUND TRUTH:
+["JIMENEZ-ELVIREZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromenez
+Perliander"]"] extracted in susp 10th 2018. in entitieslegally enteringing P15 yearien. thearedo, T.PERINST]
+JimenezEZ-ELVREZ",ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 87 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: Fromeverandez isPeropez, othersinez-Perarcia are all the JSON's side of, they noticed
+ list and in a driver'.TEXTINST]
+HNandeDEZ-LOPEZ", "MARTINEZ-GARCIA"] "man"]�������ufufuf���ufuf����ufufuf��ufufufufufufufufufufuf���ufufuf��ufufufuf���ufufufufufufufufufufufufufuf▶▶ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
+--- Example 88 ---
+GROUND TRUTH:
+["CARLOS JIMENEZ"]
+PREDICTED:
+↵assemblyALL$}}% IN view, I the theIISONS. text will be a list-LDatted text of P.##: From,enez, Jr102  car.S.PERsiding in Mexicoicali, Mexico, has extracted as Carlos contactural of the assassuggling of.\"INST]
+CarARLOOS JIMENEZ"]��������������������uf����������������ufufuf����ufuf����������������ufufufufuf�ufufufuf��ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf���ufufufufufufufuf���ufufufufufufufufufufufufufufufufufufufufufufuf��ufufufuf����ufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufufuf
+====================
+
