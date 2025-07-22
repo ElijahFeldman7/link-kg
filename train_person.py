@@ -228,37 +228,45 @@ print("\n--- Training Complete ---")
 
 # --- 9. Final Evaluation and Prediction Saving ---
 print("\n--- Evaluating on the Final Test Set and Saving Predictions... ---")
-prediction_output = trainer.predict(test_dataset)
 
-predicted_ids = np.argmax(prediction_output.predictions, axis=-1)
-label_ids = prediction_output.label_ids
-label_ids[label_ids == -100] = tokenizer.pad_token_id
+# Get the original test dataset to extract prompts
+original_splits = dataset.train_test_split(test_size=0.2, seed=42)
+raw_test_dataset = original_splits["test"]
 
-processed_predicted_strings = []
-processed_label_strings = []
+# Prepare prompts for generation
+instruction = "From the text provided, extract all PERSON entities. Your output must be a JSON-formatted list of strings."
+prompts = []
+for example in raw_test_dataset:
+    input_text = example['Input_Text']
+    prompt = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n"
+    prompts.append(prompt)
 
-for i in range(label_ids.shape[0]):
-    # Find the start of the actual output (first non-pad_token_id after prompt)
-    start_index = 0
-    for j in range(label_ids.shape[1]):
-        if prediction_output.label_ids[i, j] != -100: # Use original labels to find the start of the non-masked part
-            start_index = j
-            break
-    
-    # Slice predicted_ids and labels to get only the generated part
-    sliced_predicted_ids = predicted_ids[i, start_index:]
-    sliced_label_ids = label_ids[i, start_index:]
+# Tokenize prompts and generate predictions
+# Note: This approach processes one prompt at a time. For larger datasets, batching is recommended.
+predicted_strings = []
+for prompt in prompts:
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    outputs = model.generate(**inputs, max_new_tokens=100, do_sample=False)
+    # Decode the generated tokens, skipping the prompt part
+    answer = tokenizer.decode(outputs[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
+    predicted_strings.append(answer)
 
-    # Decode the sliced parts
-    processed_predicted_strings.append(tokenizer.decode(sliced_predicted_ids, skip_special_tokens=True))
-    processed_label_strings.append(tokenizer.decode(sliced_label_ids, skip_special_tokens=True))
+# Get ground truth labels and format them as JSON strings
+label_strings = []
+for example in raw_test_dataset:
+    try:
+        if isinstance(example['labels'], str) and example['labels'].strip():
+            person_list = [p.strip() for p in example['labels'].split(',')]
+            target_output = json.dumps(person_list)
+        else:
+            target_output = "[]"
+    except:
+        target_output = "[]"
+    label_strings.append(target_output)
 
-predicted_strings = processed_predicted_strings
-label_strings = processed_label_strings
-
+# Save predictions to a text file
 output_dir = "./uniner_person_baseline"
 os.makedirs(output_dir, exist_ok=True)
-
 with open(f"{output_dir}/test_predictions_simple.txt", "w") as f:
     for i, (pred, label) in enumerate(zip(predicted_strings, label_strings)):
         f.write(f"--- Example {i+1} ---\n")
@@ -266,7 +274,8 @@ with open(f"{output_dir}/test_predictions_simple.txt", "w") as f:
         f.write(f"PREDICTED:\n{pred.strip()}\n")
         f.write("="*20 + "\n\n")
 
-final_metrics = prediction_output.metrics
+# Calculate final metrics using the provided function
+final_metrics = calculate_list_metrics(predicted_strings, label_strings)
 with open(f"{output_dir}/test_results_simple.json", "w") as f:
     json.dump(final_metrics, f, indent=2)
 

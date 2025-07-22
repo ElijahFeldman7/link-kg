@@ -1,0 +1,704 @@
+--- Example 1 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["linerol [ [ [ [ [ [[" [ [ [iens [ [ [ [ [ [ [ [ [s [ [fordofre ([ Park ( [usaisleton [ [ [ [eltled by [ [ [ [ and["MEENTANT
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 2 ---
+GROUND TRUTH:
+["RICARDO RODRIGUEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ardo ([ruez [s [ [ [ [ [ [ [ [end [DRENTANT
+["RICARDO RODRIGUEZ"]
+====================
+
+--- Example 3 ---
+GROUND TRUTH:
+["DRIVER"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [lose [ [ of [ [ [ [ [ [ [ [ [cker [ [ [ [ or [ [iler orucksDRENTANT
+["DRIVER"]
+====================
+
+--- Example 4 ---
+GROUND TRUTH:
+["MS. CHEN", "DEFENDANT"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["[" [ [ ([ [ [ [ [ ([ [ [ [[" ([[" [["94[" [ [ [ [ by [ [ ([ [ ( [ [ense [ [ counterENTENTANT
+["MS. CHEN", "DEFENDANT"]
+====================
+
+--- Example 5 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["lineent [ [ [ [ABdo ( [ [ [ [ [ [ [cherers [ [ [enied [ [ien [ [ [ [ress [ [ [ureesa [anch ( ([OLENTANT
+["BORDER PATROL AGENTS "RIEN"]"]
+====================
+
+--- Example 6 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [opercounterendant [ [ [ [ [ains [ [ [addle [ [ [ [ [ to another [COENTANT
+["CO-DEFENDANT", "CAPTIVES"]
+====================
+
+--- Example 7 ---
+GROUND TRUTH:
+["DETECTIVE", "GARY HASTON", "HEATHER VARGAS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ [([0 [ [["1 ([[" [ [ [ [iff (s Office (ors [ [oodings, [avy [enterasena [led [ [ [ [MPAVFOR0 and["ENTENTANT
+["GTECTIV G "GARY HASTON", "HEATHER VARGAS"]
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+["AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [ [ [ least [[" [00 ([.. [ [ [ [ [ [ [ [ [en [ [ [icion [ [ [ford [ ( [ [respondado [ ([COENTANT
+["AGENTS"]
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+["GUARDADO-MEZEN", "CAPTIVES", "FRIEND", "ORIGINAL GROUP"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ado [counterjviron [ [ [ [ [ains [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ upon [ ofDRCONANT
+["GUARDADO-MEZEN", "CAPTIVES", "FRIEND"] "GROUPIGINAL GROUP"]
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+["CHAPA", "JESUS PACHECO-PINA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["man (s [pperquendant [ [ [ATao [ [ere ( [ by list [ [ [iens [ [ [ [ [ands [ [ [ [ [ [ (rol [ [ [ [OSdo [ [ [ to away [ [ [ States [CURSPANT
+["CHAPA' "JESUS PACHECO-PINA"]
+====================
+
+--- Example 11 ---
+GROUND TRUTH:
+["MOVANT"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["avi [ [ [ [able [ [fab [ [ ([ [ [ [ [ [ing [iens [ [ [ [ [ [CURENTANT
+["MOVANT"]
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+["MS. RIVERA-QUINTERO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["[" [ [a ([leinto ([ not [ [ [ [ [ [ [ [ [ ([ ([CURENTANT
+["MS. RIVERA-QUINTERO"]
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+["GARCIA", "ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ ([([ [ [["16[" [rett [ [ [ of [ [enied [iens [ [ford ( [ential ([ [ ([ (DRENTANT
+["GARCIA"] "NIENS"]
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+["ORTIZ", "CHILD"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" least [ [ [ [ ([ [ [ [izena [ [ [ [ [ [[" [ old [ [ [ [ [ [legally stopped [ [ [([ [CURENTANT
+["AGIZ", "CHILD",
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+["MOVANT", "CO-DEFENDANTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["avi [ [ [enacounterendantants [ally [ [(ated [ [enied [iens [ [ [ [ [[( and [ing to [iens' [icker to [ or the coiens; [ [ing the [ating the [ and [ually oring the of the al andiens andMNOTANT
+["MOVANT", "CO-DEFENDANTS",
+====================
+
+--- Example 16 ---
+GROUND TRUTH:
+["PACHECO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ROMelo [ not [ [ [ [ [ [ [ [ [DRNOTANT
+["PACHECO"]
+====================
+
+--- Example 17 ---
+GROUND TRUTH:
+["SAI DESHPANDE", "SMUGGLER"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ ([([1 [ [["10[" [CH ([cande [ [ [ [okingler [ [ [ [["0-ENTheeleler ( [enied [ant [ [OLENTANT
+["SAI DESHPANDE", "SMUGGLER"]
+====================
+
+--- Example 18 ---
+GROUND TRUTH:
+["INVESTIGATORS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ator [ [ [enser [ [["0 [ [ [ [ [ [ [AVuras ([ [ or [aragua and and [ [ [ ([ [ the [ [ [ [ina [ [ ([ENTENTANT
+["INVESTIGATORS"]
+====================
+
+--- Example 19 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "VICTOR BARBERENA", "ABRAHAM ESQUEDA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ ([([1 [ [["16[" [linerol (ents [inbaena and [ [calith [ [ by [ [ster list patrol ag [mediate [ [10 andBMP[5") and [AGdo and [ Diego". [ENTENTANT
+["BORDER PATROL AGENTS "VICTOR BARBERENA", "ABRAHAM ESQUEDA"]
+====================
+
+--- Example 20 ---
+GROUND TRUTH:
+["F-150'S OCCUPANTS", "DRIVER", "JAQUEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ORM([ [ [ [ [ants[" [ [ [cker [ [ [ [ ['s [ [ [ [aders [ the [ [ [ andDRENTANT
+["F-150's OCCUPANTS", "JRIVER' "JAQUEZ"]
+====================
+
+--- Example 21 ---
+GROUND TRUTH:
+["AMO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["["B [ [ [ [ [s [ [["0 [CUR [ (ena [ [s["MEENTANT
+["AMO"]
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+["GUIDES", "ROJAS-MENDOZA", "DRIVER"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ing [ [ [ive [ [ [ [ [fab [ [ []{' [ [ listuly- [ [[" [ [(0 ([.m. [ [ [ [ into [ [ of of [ [AGit [ [ [oney [counterelza and [ [ of [ [ they number number [ the[" former were to into the [ and [ or the formeriens and well as thejas-Mendoza and in [ and and ofiens and with and and the unknown and only be [ [HEENTANT
+["ROUEES", "ROJAS-MENDOZA"] "DRIVER"]
+====================
+
+--- Example 23 ---
+GROUND TRUTH:
+["MR. MEJIA-MORALES"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [ [enaane ([ [(ales ([ [ [ [ptaalan ([ [ [ [ [ [ena,CURENTANT
+["MR. MEJIA-MORALES"]
+====================
+
+--- Example 24 ---
+GROUND TRUTH:
+["RAMON"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [on [ [ [ [ [ [([00000[" [ [fab [okingled into["DRENTANT
+["RAMMON"]
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+["JOINT HARBOR OPERATIONS CENTER (JHOC)", "AIR AND MARINE OPERATIONS (AMO)"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ [([1 [ [["1["[" [ [ [([ [00 ([.([. [OBLAAL [ [DRC [ [icion [ [ [ [ of [ford [ [ip., [MO[" [ the [ and [ed [ list["0-CUR [ (er [ boats["OLCONANT
+["JHOT",AVVEOR",ERATIONS",ENTER"]JHOC) "AMMOM MARINE FITATIONS (AO)"]
+====================
+
+--- Example 26 ---
+GROUND TRUTH:
+["GARCIA", "ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ ([([ [ [["194[" [ (rol [ [ [ [["090 [ (ORM150 ( listenaup (uck ( list [ [ orves [ena to [ID and and [ list list [ [ [ITHdo ([ [, [COCONANT
+["BRAVEA", "BBERENS"]
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+["ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ien [ [ [ [ [ ( ( [ listckena [ [ States [ [ [ [ [DRENTANT
+["ALIENS"]
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+["DEFENDANT", "CHILD"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ense [ [ [ [ [ [ [ [ [ ([ [en [DRENTANT
+["DEFENDANT", "CHILD"]
+====================
+
+--- Example 29 ---
+GROUND TRUTH:
+["DEFENDANTS", "CAPTIVES", "FAMILY MEMBERS", "CO-DEFENDANTS", "ORIGINAL SMUGGLERS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["enseable [ed by [ains [ [ [ [ [ [ [ [ [ [ [ [ [�defendersants [ [ [ [ [ [okingglers orDRENTANT
+["DEFENDANTS", "CAPTIVES", "FAMILY MEMBERS", "CO-DEFENDANTS"] "ORIGINAL SMUGGLERS"]
+====================
+
+--- Example 30 ---
+GROUND TRUTH:
+["SOFIA NAVARRO", "DEFENDANT", "AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [endant [ia [ro [ [ [ [ [ [ [ list chartene list prü list [ENTENTANT
+["SOFIA NAVARRO", "AGENDANT", "AGENTS"]
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+["AGENT", "MEN", "WOMEN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [ [ [ [ [fab [ in [ [aret [ [adess [ [ [ [ [ [ENTENTANT
+["AGENT", "MEN", "WOMEN"]
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+["AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["h [cribe [ [ [iens [ [ in [ [vel [okingled [ [ [ices [ [ [ [ [ [ighed [ [ues and [ [oph andups [es and [pt-ants ([ ([ents [ [ [ they entire [ name dataings are in or ([OLENTANT
+["AGENTS"]
+====================
+
+--- Example 33 ---
+GROUND TRUTH:
+["PORTLAND HARBOR UNIT"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" least["0["3 [ [([.["nesday [ [ [folio [bour ( ( [ [medi [ [ [ [pected [okingled or [ [ [ [ [land [ [MEENTANT
+["PORTLAND HARBOR UNIT"]
+====================
+
+--- Example 34 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["["opercounterendant [ [ [ [ [ains [ [ [addle [ [ [ [ [ to another [COENTANT
+["CO-DEFENDANT", "CAPTIVES"]
+====================
+
+--- Example 35 ---
+GROUND TRUTH:
+["SOTO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [[" [MP[ [ [ [ton [ [ ( [ [CH ( [ and [ [ [ [ listew [ [ [ [okingling of [fab [ [uminit [gs [SENTANT
+["SOOTO"]
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ [ [ [ [([0 [([16[" [ [oz [Rinez ( [ [ [up (listuck ( of [mediate [([ [ (CURENTANT
+["FERNANDO MUNOZ-MARTINEZ"]
+====================
+
+--- Example 37 ---
+GROUND TRUTH:
+["CALIFORNIA NATIONAL GUARD TROOPS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ ( [ed by [ [([ [["0 [ [s [ [ [al [ [ Diegoofre [ Park [["MEENTANT
+["CALIFORNIA NATIONAL GUARD TROOPS"]
+====================
+
+--- Example 38 ---
+GROUND TRUTH:
+["ASHLEY FLORES", "MONTEROJAS", "ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["num-four [ ( [ [ [ [ [ [ [es [at ([ [ [list [["acoreyena [ [ [( [ forores [sades [[" [ [terojas [ [ [enied [ien [ [OLENTANT
+["ASHLEY FLORES", "MONTEROJAS"] "FLIENS"]
+====================
+
+--- Example 39 ---
+GROUND TRUTH:
+["DEFENDANT GUARDADO-MEZEN", "CO-DEFENDANTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ ([([1 [ [["16[" [ense [ians [guardzaa [ [-defendersants ( [ [ [ [( or [ [ [igrant [ [ [ byENTENTANT
+["DEFENDANT GUARDADO-MEZEN", "CO-DEFENDANTS"]
+====================
+
+--- Example 40 ---
+GROUND TRUTH:
+["ICE HSI"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ of [ [ ([ [ [ [ [ ( [based [ list [[" [ by [MAMANMAN [gr [ [ator [ ([ENTENTANT
+["ICE'OM"]
+====================
+
+--- Example 41 ---
+GROUND TRUTH:
+["HENDERSON", "DEFENDANT", "CODEFENDANT"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [rix ([ [ [ense [ [ [(endant [ [ [ [ana ([ and, [ [ [ [, Canada or and (["ENTENTANT
+["HENDERSON", "DEFENDANT", "CODEFANANT"]
+====================
+
+--- Example 42 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [["["["6[" [lect [[ilindo [enaally [ [ [ [ ([ ( [ to [ [ [CURjsonANT
+["DIAZ-GALIANA"]
+====================
+
+--- Example 43 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["linerol [ [ [ [ [s [ [ [legally [ [ [ [ [ list listfall [["NUMENTANT
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 44 ---
+GROUND TRUTH:
+["ERNESTO DELGADO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["esto [gado [ [ [ [ [ [ [ule [ [ [([010[" [ in [ [ of [ [ ( [ [ by to [["00 (ment ( [ENTENTANT
+["ERNSTO DELGADO"]
+====================
+
+--- Example 45 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [andoz [counterowez [ [inez-Martomecia [ [ [ [ [ [ [ [ [ [ [ [ [ in [ [' [HEENTANT
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+====================
+
+--- Example 46 ---
+GROUND TRUTH:
+["KIM"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [ [ant [ [ [itingment [ ([ [ [ ( [ [h ([ [ett [, and [ and["MEENTANT
+["KIM"]
+====================
+
+--- Example 47 ---
+GROUND TRUTH:
+["MAYA", "GARDUZA-LAZARO", "MALDONADO-AGUILAR"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ( [ [enacia [[atoraro [ [ [ANatorado-delmarilarena [ [ ( [ [ [ [0 [00. [1,000[" [ ([ [ [ation [ [ [] [ [ States [CURNOTANT
+["MAYA", "GARDUZA-LAZARO", "MALDONADO-AGUILAR"]
+====================
+
+--- Example 48 ---
+GROUND TRUTH:
+["RCMP", "CSIS", "CBSA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [s [ [ [ed [ [ [ [ [s [ [ [AD [ [END or [ [ ( ( [CSA)[" [icion [ [iens [okingling and["DRENTANT
+["RCMP", "CSIS", "CSA"]
+====================
+
+--- Example 49 ---
+GROUND TRUTH:
+["JAQUEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["[] ([ [ [ [ [ends [ [ [ [ford [ [ [ to [avesde [ [ (rol [ [ [HEENTANT
+["JAQUEZ"]
+====================
+
+--- Example 50 ---
+GROUND TRUTH:
+["MEN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["linerol [ [ [ [ ([ [ [ [fallammer [CURENTANT
+["MEN"]
+====================
+
+--- Example 51 ---
+GROUND TRUTH:
+["DURANT", "ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ( [ [ [ [ [ant [ [ [ends [ [ctor [ [ [ [["01 [iens [ [ by [DRENTANT
+["DURANT", "SOIENS"]
+====================
+
+--- Example 52 ---
+GROUND TRUTH:
+["LEE"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [[" [ [ [([["00 [00[" [ [ [ileyled intoCURENTANT
+["LEE"]
+====================
+
+--- Example 53 ---
+GROUND TRUTH:
+["KRISH PATIL", "SMUGGLER"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["onsnaelena ([ [enaed [iens [ withmediate [([ [ [ [ [ing [ [ listicker of and [vetcia [ [ al [ [ by [DRENTANT
+["KRISH PATIL"] "VEITHGLER"]
+====================
+
+--- Example 54 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ [ [ [ [([0 [([16[" [ [oz [Rinez ( [ [ [up (listuck ( of [mediate [([ [ (CURENTANT
+["FERNANDO MUNOZ-MARTINEZ"]
+====================
+
+--- Example 55 ---
+GROUND TRUTH:
+["GARZA", "MEN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["cia [ [ [ [ [ [ [ [ends [ [ [ath [ [ label [DRENTANT
+["GARZA", "MEN"]
+====================
+
+--- Example 56 ---
+GROUND TRUTH:
+["SALAZAR", "MAN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [man [ [pack [ [ [["DRicularant)["3[" [ [ [ [fab [ENTENTANT
+["SALAZAR", "MAN"]
+====================
+
+--- Example 57 ---
+GROUND TRUTH:
+["DEFENDANT", "CO-DEFENDANTS", "CAPTIVES"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ense [ [/-defendantants [ [ [ains [ [ [ [ [( [ [ ([DRENTANT
+["DEFENDANT", "CO-DEFENDANTS", "CAPTIVES"]
+====================
+
+--- Example 58 ---
+GROUND TRUTH:
+["LOPEZ-PEREZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ABz [vonerez ([ [ or [ or [ [ [ [ator [ [ [ [ [CURicipant)["3["["jsonANT
+["LOPEZ-PEREZ",
+====================
+
+--- Example 59 ---
+GROUND TRUTH:
+["MOVANT", "OTHERS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [ [ [ies [ [ [ [ to [e [CURENTANT
+["MOVANT", "FOHERS"]
+====================
+
+--- Example 60 ---
+GROUND TRUTH:
+["MEN", "MEXICANS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ ([ [ [ [ [icano ([ [ [ [legally [ [ [([ [MEENTANT
+["MEN"] "MEXICANS"]
+====================
+
+--- Example 61 ---
+GROUND TRUTH:
+["DRIVER", "MUNOZ-MARTINEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ator [ [ [ [ [ [iens [ [ [ends [ [ [ [ [ier ([counterinez [DRENTANT
+["DRIVER", "MUNOZ-MARTINEZ"]
+====================
+
+--- Example 62 ---
+GROUND TRUTH:
+["AMO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["["B [ [ [ [ [s [ [["0 [CUR [ (ena [ [s["MEENTANT
+["AMO"]
+====================
+
+--- Example 63 ---
+GROUND TRUTH:
+["FREEMAN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["qu [ [ [ [ [ [ [ [ [ABdo [ [ ([ [ [ [ [ [1017 and is to [ [ from the [ [ to [ [ [ [ list [FFLANT
+["FREEMAN"]
+====================
+
+--- Example 64 ---
+GROUND TRUTH:
+["MALE ALIEN", "FU MEI CHEN", "SMUGGLERS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ with [ [ [ien [ [ [ [block [ ([ [ orements ( made made [ [ [ [' [ ([eting,, [ [ [ody of [ [okingglers [ [ and [ [ [ [ ofrooms [ [ing into [ into of [ [["003 [ to conv the list [ the, [ [aping andSMENTANT
+["SMLE ALIEN", "FU MEI CHEN"] "SMUGGLERS"]
+====================
+
+--- Example 65 ---
+GROUND TRUTH:
+["CONTRERAS DE VELASQUEZ", "FEMALE PASSENGER"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["[(ast [ [ázco ([ [ [ [ [ [ [ [days [ [ [ [ [ [ [ [000 [ [ [enaed [' [ [ [ [enaENTANT
+["CONTRERAS DE VELASQUEZ", "FMALE PASSENGER",
+====================
+
+--- Example 66 ---
+GROUND TRUTH:
+["ELENA TORRES", "MANUEL RUIZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" ([ ([ [ [11 [ [["16[" [CT [( [ent [ [ by [ILL ([ ( [ers (ena [resena [ Toriz, [ [qu [ [ [senada ([ [ ([["ENTENTANT
+["BLENA TORRES", "MAUEL RUIZ"]
+====================
+
+--- Example 67 ---
+GROUND TRUTH:
+["PETITIONER", "DRIVER"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [rator ([ by or [ [ [ [ [ [ in [ [ ([DRENTANT
+["PETITIONER", "DRIVER"]
+====================
+
+--- Example 68 ---
+GROUND TRUTH:
+["UNITED STATES COAST GUARD (USCG)"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["EMAD[" [ [ [ [ [ ([ [al [["GP)["ed [ [ [ stopped [ [ [ortedena [ [engineore [ [Bans ( [ [ [ [fab [okingled [ [["WEENTANT
+["UITED STATES COAST GUARD",USCG)"]
+====================
+
+--- Example 69 ---
+GROUND TRUTH:
+["CONTRERAS-PUENTE", "PAOLO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [radast [counteruerta ( ( [vo ([agodo ([ [OMulipas [ and ([CONENTANT
+["PATRERAS-PUENTE", "PAOLO"]
+====================
+
+--- Example 70 ---
+GROUND TRUTH:
+["CARLOS MARIO HERNANDEZ-LOPEZ", "MARIA GUADALUPE MARTINEZ-GARCIA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [fab [ [ [ [andez [counterowez [ [ [ [engine- [ [ [adalupe-inez-Mallcia or [ in by [es [WAENTANT
+["CARLOS MARIO HERNANDEZ-LOPEZ", "MARIA GUADALUPE MARTINEZ-GARCIA"]
+====================
+
+--- Example 71 ---
+GROUND TRUTH:
+["CBP MARINE INTERDICTION AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [[" [0ENT [ROM ( by [eltgle [["0 [ [s [ [ by [ARRE [ [ceptor [ [ [ [ [ of [ [al [ [sOS ( ([COENTANT
+["CBP MARINE INTERDICTION AGENTS"]
+====================
+
+--- Example 72 ---
+GROUND TRUTH:
+["MOVANT", "CO-DEFENDANTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["avi [ [ [enacounterendantants [ [ [ least [ [ to [neyapping [ [ [ [entalom [ [ or [enied [iens [MOENTANT
+["MOVANT", "CO-DEFENDANTS"]
+====================
+
+--- Example 73 ---
+GROUND TRUTH:
+["FREEMAN", "MS. MIRIAM EDITH RIVERA-QUINTERO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [ [qu [ [ends [AN. [racleam [mond [a ([Hinto ([MENTANT
+["MREEMAN", "MI. MIRIAM EDH RIVERA-QINTERO"]
+====================
+
+--- Example 74 ---
+GROUND TRUTH:
+["CHAPA", "JESUS PACHECO-PINA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["man (s [pperquendant [ [ [ATao [ [ere ( [ by list [ [ [iens [ [ [ [ [ands [ [ [ [ [ [ (rol [ [ [ [OSdo [ [ [ to away [ [ [ States [CURSPANT
+["CHAPA' "JESUS PACHECO-PINA"]
+====================
+
+--- Example 75 ---
+GROUND TRUTH:
+["RAMON", "HECTOR LUIS PRADO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [([1["[" [AV [enaado ( [ed by [on [ [ [ien [okingler [ [HEENTANT
+["HEMON", "ALCTOR LUIS PRADO"]
+====================
+
+--- Example 76 ---
+GROUND TRUTH:
+["LEE", "WENG YU HUI"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [([ST [0 [ [ ([ [AL ([ ([eng ([ [ [ien [okingler [ [DRENTANT
+["LEE", "WENG YU HUI"]
+====================
+
+--- Example 77 ---
+GROUND TRUTH:
+["HSI ST. THOMAS", "CAPTAIN", "FOUR ALIENS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["AVWEores [ [ [ [ [ [ [ [ [fab [okingling [ [ [ [ien [ [ [ [ [ [ Nations (["HENTANT
+["HSI ST. THOMAS", "CAPTAIN", "ALUR ALIENS"]
+====================
+
+--- Example 78 ---
+GROUND TRUTH:
+["CBP AMO AGENTS"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["DR [. [visor [ [ [ction [["P)[" [ [ [ations (AO)["["ed [ [ [ [ [ [ien [ [ator [ [ or [ [ between [OMilla and [ellan [ (["OLENTANT
+["CP",MO AGENTS"]
+====================
+
+--- Example 79 ---
+GROUND TRUTH:
+["GARZA", "MEN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["cia [ [ [ [ [ [ [ [ to [ [ [ [ list and [ [ between [ [ [ [ list or [ [ [ [ [ [ [ [ [ [ men [ [ [ not [ [ [ [ [ation or [ation [ [COMPENTANT
+["GARZA", "MEN"]
+====================
+
+--- Example 80 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [["["["6[" [lect [[ilindo [enaally [ [ [ [ ([ ( [ to [ [ [CURjsonANT
+["DIAZ-GALIANA"]
+====================
+
+--- Example 81 ---
+GROUND TRUTH:
+["JAQUEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [ [ [ [[] ( ([ [ [ [ [ [ [fab [ [ [ [cker [ [ [ is not [ [ questions or respond the with [ is to [ [ [HEENTANT
+["JAQUEZ"]
+====================
+
+--- Example 82 ---
+GROUND TRUTH:
+["JIMENEZ-ELVIREZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [OPoe [ [ is [ by by [ena [counterena prü ( ([enajsonANT
+["JIMENEZ-ELVREZ"]
+====================
+
+--- Example 83 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "UNNAMED PERSON"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["andoz [counterowez ([ [ [ [ [ [ [["0 [ [(0 [os ( [ [famil [ ([ [ ([ [ [ [ [ [ [ list [ [0000 ( [ [ [ of [ [ [ [ [ States [CURENTANT
+["HERNANDEZ-LOPEZ"] "UNNAMED PERSON"]
+====================
+
+--- Example 84 ---
+GROUND TRUTH:
+["JIMENEZ ELVIREZ", "GALLO"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ena [enaire ( [ [ation [ [fab [ [ [ [ listctor [engineiler [ to [manse [istics ([ [ [ [actic [ [ islo [ [ [ [ [qu ( [ [ [ [["["CURENTANT
+["JIMENEZ ELVIREZ", "GALLO",
+====================
+
+--- Example 85 ---
+GROUND TRUTH:
+["ORTIZ", "CRYSTAL DOERR", "JESSE DOMINGUEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [iz ([ [ [ [ [ [ by [ [stal [yleinger [ [AN ([ingouez ([DRENTANT
+["CRIZ", "CRYSTAL DOERR", "JESSE DOMINGUEZ"]
+====================
+
+--- Example 86 ---
+GROUND TRUTH:
+["JIMENEZ-ELVIREZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["["ena [deiz prü ([ [ counter [ [ [([ [[" [([1["[" [ [enaally [ing [["0 [fab [ [ABdo ( [,CURENTANT
+["JIMENEZ-ELVREZ"]
+====================
+
+--- Example 87 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [andoz [counterowez [ [inez-Martomecia [ [ [ [ [ [ [ [ [ [ [ [ [ in [ [' [HEENTANT
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+====================
+
+--- Example 88 ---
+GROUND TRUTH:
+["CARLOS JIMENEZ"]
+PREDICTED:
+erassemblyALL ( ( [ of by []s [OSFORS[(["["[" [ [ [( [(FORMatted["[( [["["["["["[" [enez [ [[" [ [ [ [DR([. [siding in [icali ( [, and [ by [ [astic [ [ [okingled [ [ [ENTENTANT
+["CARLOS JIMENEZ"]
+====================
+
