@@ -59,7 +59,7 @@ def clean_person_column(input_path, output_path):
         sys.exit(1)
 
 if __name__ == "__main__":
-    input_csv = '/home/eli/Downloads/gmu work/dataset1.csv'
-    output_csv = '/home/eli/Downloads/gmu work/dataset2.csv'
+    input_csv = '/home/eli/Downloads/gmu work/datasets/dataset3.csv'
+    output_csv = '/home/eli/Downloads/gmu work/datasets/dataset4.csv'
     clean_person_column(input_csv, output_csv)
     print(f"Successfully cleaned '{input_csv}' and saved to '{output_csv}'")
