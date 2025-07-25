@@ -1,0 +1,252 @@
+--- Example 1 ---
+GROUND TRUTH:
+["ATTORNEY GENERAL TERRY GODDARD", "MEXICAN DRUG CARTELS"]
+PREDICTED:
+["TERRY GODDLER", "MEXICAN"]
+====================
+
+--- Example 2 ---
+GROUND TRUTH:
+["AGENTS", "DELACRUZ"]
+PREDICTED:
+["AGENTS"]
+====================
+
+--- Example 3 ---
+GROUND TRUTH:
+["ABDULLAH YUSUF", "ILLEGAL ALIENS"]
+PREDICTED:
+["ABDULLAH YUSUF", "BORDER PATROL"]
+====================
+
+--- Example 4 ---
+GROUND TRUTH:
+["ASHLEY FLORES", "MONTEROJAS", "ALIENS"]
+PREDICTED:
+["Ashley Flores", "Monterojas", "Flores'"]
+====================
+
+--- Example 5 ---
+GROUND TRUTH:
+["SMUGGLER"]
+PREDICTED:
+["SMILLER", "SMILLERMAN"]
+====================
+
+--- Example 6 ---
+GROUND TRUTH:
+["HENDERSON", "JOE SILVA"]
+PREDICTED:
+["AGENT HENDERSON", "AGENT JOE SILVA"]
+====================
+
+--- Example 7 ---
+GROUND TRUTH:
+["SARAH LEE", "BORDER PATROL AGENT"]
+PREDICTED:
+["SARAH", "SARLAH"]
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+PREDICTED:
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+["AIR AND MARINE OPERATIONS MARITIME CREW"]
+PREDICTED:
+["AIR AND MARINE OPERATIONS"]
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+["UNDOCUMENTED IMMIGRANTS"]
+PREDICTED:
+["SAVINGS"]
+====================
+
+--- Example 11 ---
+GROUND TRUTH:
+["BARBA"]
+PREDICTED:
+["BARBA"]
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+["SANTOS", "MIGRANTS"]
+PREDICTED:
+["SANTO"]
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+["SILVA"]
+PREDICTED:
+["AGENT SILVA"]
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+["AGENTS", "SMUGGLER"]
+PREDICTED:
+["AGENTS"]
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+["HENDERSON", "DEFENDANT", "CODEFENDANT"]
+PREDICTED:
+["AGENT HENDERSON", "DEFENDANT", "CODEFANTAGENT"]
+====================
+
+--- Example 16 ---
+GROUND TRUTH:
+["THREE MIGRANTS"]
+PREDICTED:
+["STRANGER"]
+====================
+
+--- Example 17 ---
+GROUND TRUTH:
+["CONTRERAS-PUENTE", "PAOLO"]
+PREDICTED:
+["PAOLO", "CONTRERAS-PUENTE"]
+====================
+
+--- Example 18 ---
+GROUND TRUTH:
+["MARTINEZ"]
+PREDICTED:
+["MARTINEZ"]
+====================
+
+--- Example 19 ---
+GROUND TRUTH:
+["CAPTAIN"]
+PREDICTED:
+["HSI ST. THOMAS", "ALIENS"]
+====================
+
+--- Example 20 ---
+GROUND TRUTH:
+["ELEAZAR MOZQUEDA SIMENTAL", "MANUEL ANTONIO MOZQUEDA SIMENTAL"]
+PREDICTED:
+["ELEAZAR MOZQUEDA SIMENTAL", "MANUEL ANTONIO MOZQUEDA SIMENTAL"]
+====================
+
+--- Example 21 ---
+GROUND TRUTH:
+["ZHIVARGO MCBRIDE"]
+PREDICTED:
+["ZHIVARGO MCBRIDE"]
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+["JORGE LUIS TREVINO", "BORDER PATROL AGENT"]
+PREDICTED:
+["Jorge Luis Trevino"]
+====================
+
+--- Example 23 ---
+GROUND TRUTH:
+["CREW"]
+PREDICTED:
+["BUSINESS"]
+====================
+
+--- Example 24 ---
+GROUND TRUTH:
+["CREW"]
+PREDICTED:
+["BUSINESS"]
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+["17 MIGRANTS"]
+PREDICTED:
+["USCG"]
+====================
+
+--- Example 26 ---
+GROUND TRUTH:
+["TWO MEN"]
+PREDICTED:
+["MANQUEHACHTOR", "MANQUEHACHTORIALBLAIR"]
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+["AGENT", "HERRERA"]
+PREDICTED:
+["MATAMOROS PORT OF ENTRY", "AGENT HERRERA"]
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS"]
+PREDICTED:
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 29 ---
+GROUND TRUTH:
+["RUBEN MENDOZA", "BORDER PATROL AGENT"]
+PREDICTED:
+["RUBEN MENDOZA"]
+====================
+
+--- Example 30 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS", "MEXICAN NATIONALS"]
+PREDICTED:
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+["DEFENDANT", "MIGRANTS"]
+PREDICTED:
+["PBSO"]
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+["SOUTH KOREAN POLICE", "FORMER CAPTAIN"]
+PREDICTED:
+["SCOUT"]
+====================
+
+--- Example 33 ---
+GROUND TRUTH:
+["CANO"]
+PREDICTED:
+["CANO"]
+====================
+
+--- Example 34 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "MIGRANTS"]
+PREDICTED:
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 35 ---
+GROUND TRUTH:
+["ANTONIO HURTADO"]
+PREDICTED:
+["ANTONIO HURTADO"]
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+["MIGUEL ALVAREZ", "SMUGGLER"]
+PREDICTED:
+["MIGUEL ALVAREZ"]
+====================
+

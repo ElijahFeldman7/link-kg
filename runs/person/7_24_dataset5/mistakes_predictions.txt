@@ -1,0 +1,250 @@
+--- Example 5 ---
+GROUND TRUTH:
+["CBP MARINE INTERDICTION AGENTS"]
+PREDICTED:
+["MARINE INTERDICTION AGENTS"]
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+["ICE HSI"]
+PREDICTED:
+["ICE'S HOMELAND SECURITY INVESTIGATIONS"]
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+["Diaz-Galiana"]
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+["DEFENDANT"]
+PREDICTED:
+["DEFENDANT", "MIGRANTS"]
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+["BORDER PATROL OFFICERS", "MEN"]
+PREDICTED:
+["BORDER PATROL OFFICERS"]
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+["AGENTS"]
+PREDICTED:
+["U.S. CUSTOMS AND BORDER PROTECTION", "AMO"]
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+["ANTONIO HURTADO"]
+PREDICTED:
+["ANTONIO HURTADO", "BOAT CAPTAIN", "THREE PEOPLE"]
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+["HENRY GUTIERREZ-ANDRADE", "CAPTIVES", "FAMILY MEMBERS", "ORIGINAL SMUGGLERS"]
+PREDICTED:
+["HENRY GUTIERREZ-ANDRADE", "CAPTIVES", "FAMILY MEMBERS"]
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+["MEN", "MEXICAN CITIZENS"]
+PREDICTED:
+["BORDER PATROL OFFICERS", "MEN"]
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+["GARCIA", "ALIENS"]
+PREDICTED:
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+["ASHLEY FLORES", "MONTEROJAS", "ALIENS"]
+PREDICTED:
+["ASHLEY FLORES", "MONTEROJAS"]
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+["SALDANA", "OFFICER"]
+PREDICTED:
+["SALDANA", "OWNER"]
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "VICTOR BARBERENA", "ABRAHAM ESQUEDA"]
+PREDICTED:
+["BORDER PATROL AGENTS VICTOR BARBERENA", "ABRAHAM ESQUEDA"]
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+["DURANT", "ALIENS"]
+PREDICTED:
+["DURANT", "SOLE DRIVER", "OCCUPANT"]
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+["MOVANT", "FEMALE ALIENS"]
+PREDICTED:
+["FEMININE ALIENS"]
+====================
+
+--- Example 40 ---
+GROUND TRUTH:
+["VIRIDIANA LOPEZ", "JOSE DANIEL SALAZAR-AMBROSIO"]
+PREDICTED:
+["VIRIDIANA Lopez", "JOSE DANIEL SALAZAR-AMBROSIO"]
+====================
+
+--- Example 41 ---
+GROUND TRUTH:
+["DRIVER", "MUNOZ-MARTINEZ"]
+PREDICTED:
+["AGENTS", "MUNOZ-MARTINEZ"]
+====================
+
+--- Example 42 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS"]
+PREDICTED:
+["GARCIA"]
+====================
+
+--- Example 44 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+["Diaz-Galiana"]
+====================
+
+--- Example 45 ---
+GROUND TRUTH:
+["MARIO ECHEVERRIA"]
+PREDICTED:
+["MARIO ECHEVERRIA", "ECHEVERRIA"]
+====================
+
+--- Example 46 ---
+GROUND TRUTH:
+["MARIO ECHEVERRIA"]
+PREDICTED:
+["MARIO ECHEVERRIA", "ECHEVERRIA"]
+====================
+
+--- Example 50 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS", "BAHAMIAN MALE"]
+PREDICTED:
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 51 ---
+GROUND TRUTH:
+["BORDER PATROL AGENT", "ALIENS"]
+PREDICTED:
+["BORDER PATROL AGENTS"]
+====================
+
+--- Example 52 ---
+GROUND TRUTH:
+["CHILD"]
+PREDICTED:
+["ALIENS"]
+====================
+
+--- Example 55 ---
+GROUND TRUTH:
+["DEFENDANT", "OTHERS", "MISS FU MEI CHEN"]
+PREDICTED:
+["DEFENDANT", "MISS FU MEI CHEN"]
+====================
+
+--- Example 58 ---
+GROUND TRUTH:
+["CAPTAIN"]
+PREDICTED:
+["CAPTAIN", "ALIENS"]
+====================
+
+--- Example 60 ---
+GROUND TRUTH:
+["ALIEN SMUGGLER"]
+PREDICTED:
+["CANADIAN POLICE", "ALIEN SMUGGLER", "MIDDLE EASTERN SUSPECTS"]
+====================
+
+--- Example 62 ---
+GROUND TRUTH:
+["SAI DESHPANDE", "SMUGGLER"]
+PREDICTED:
+["SAI DESHPANDE", "SMUGGLER", "UNDOCUMENTED MIGRANTS"]
+====================
+
+--- Example 67 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+PREDICTED:
+["Diaz-Galiana"]
+====================
+
+--- Example 68 ---
+GROUND TRUTH:
+["DETECTIVE", "ALVAREZ"]
+PREDICTED:
+["DETECTIVE ALVAREZ"]
+====================
+
+--- Example 72 ---
+GROUND TRUTH:
+["CANO"]
+PREDICTED:
+["CANO", "OTHER OCCUPANTS"]
+====================
+
+--- Example 74 ---
+GROUND TRUTH:
+["GARCIA", "ALIENS"]
+PREDICTED:
+["GARCIA"]
+====================
+
+--- Example 76 ---
+GROUND TRUTH:
+["DEFENDANTS"]
+PREDICTED:
+["DEFENDANTS", "ILLEGAL IMMIGRANTS"]
+====================
+
+--- Example 77 ---
+GROUND TRUTH:
+["STANLEY PRUSZENSKI", "ALFRED BARON"]
+PREDICTED:
+["STANLEY PRUSZENSKI", "ALFREDBARON"]
+====================
+
+--- Example 81 ---
+GROUND TRUTH:
+["ALIENS", "ALLENDE-GARCIA"]
+PREDICTED:
+["ALIENS", "MAN"]
+====================
+
+--- Example 83 ---
+GROUND TRUTH:
+["ALIEN SMUGGLER"]
+PREDICTED:
+["CANADIAN POLICE", "ALIEN SMUGGLER", "MIDDLE EASTERN SUSPECTS"]

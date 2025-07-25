@@ -1,7 +1,7 @@
 import re
 
 # Read the content of the predictions file
-with open('/home/eli/Downloads/gmu work/runs/person/7_23_person/test_predictions_simple.txt', 'r') as f:
+with open('/home/eli/Downloads/gmu work/runs/person/7_25_small_data/test_predictions_simple.txt', 'r') as f:
     content = f.read()
 
 mistakes_output = []
@@ -32,7 +32,7 @@ for example in examples:
 # Join the mistakes and write to a new file
 output_content = "\n====================\n\n".join(mistakes_output)
 
-with open('/home/eli/Downloads/gmu work/runs/person/7_23_newdata/mistakes_predictions.txt', 'w') as f:
+with open('/home/eli/Downloads/gmu work/runs/person/7_25_small_data/mistakes_predictions.txt', 'w') as f:
     f.write(output_content)
 
 print("Successfully created mistakes_predictions.txt")
