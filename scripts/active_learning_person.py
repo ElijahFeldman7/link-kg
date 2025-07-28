@@ -9,7 +9,7 @@ from peft import PeftModel
 import time
 
 # --- Configuration ---
-MODEL_PATH = "./uniner_person_baseline" 
+MODEL_PATH = "/scratch/efeldma5/uniner_project/uniner_person_baseline" 
 INPUT_CSV_PATH = "dataset5.csv"    
 OUTPUT_CSV_PATH = "predictions_output.csv" 
 
