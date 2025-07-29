@@ -8,41 +8,26 @@ from transformers import (
 from peft import PeftModel
 import time
 
-# --- Configuration ---
 MODEL_PATH = "/scratch/efeldma5/uniner_project/uniner_person_baseline" 
 INPUT_CSV_PATH = "dataset5.csv"    
 OUTPUT_CSV_PATH = "predictions_output.csv" 
 
 INPUT_COLUMN_NAME = "Input"
-PREDICTION_COLUMN_NAME = "Model_Prediction" # The name for the new column with model outputs
+PREDICTION_COLUMN_NAME = "Model_Prediction"
 
 def predict_entities(text, model, tokenizer):
-    """
-    Generates the structured entity and relationship string for a given text.
-
-    Args:
-        text (str): The input text from the CSV.
-        model: The loaded PeftModel for inference.
-        tokenizer: The loaded tokenizer.
-
-    Returns:
-        str: The decoded output string from the model.
-    """
-    # This instruction must match the one used during fine-tuning
     instruction = "From the text provided, extract all PERSON entities. Your output must be a JSON-formatted list of strings."
     prompt = f"[INST] {instruction}\n\nText: {text} [/INST]\n"
     
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     
-    # Generate the output
     with torch.no_grad():
         outputs = model.generate(
             **inputs, 
-            max_new_tokens=256, # Adjust as needed based on expected output length
-            do_sample=False     # Use greedy decoding for consistent results
+            max_new_tokens=256,
+            do_sample=False     
         )
     
-    # Decode the generated part, skipping the prompt
     input_length = inputs.input_ids.shape[1]
     decoded_output = tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True)
     
@@ -50,11 +35,9 @@ def predict_entities(text, model, tokenizer):
 
 
 if __name__ == "__main__":
-    # 1. Load the fine-tuned model and tokenizer
     print(f"Loading fine-tuned model from '{MODEL_PATH}'...")
     start_time = time.time()
     
-    # Configure quantization for efficient loading
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,
@@ -62,21 +45,18 @@ if __name__ == "__main__":
         bnb_4bit_compute_dtype=torch.float16,
     )
     
-    # Load the base model
     base_model = AutoModelForCausalLM.from_pretrained(
         "Universal-NER/UniNER-7B-all",
         quantization_config=bnb_config,
-        device_map="auto", # Automatically use GPU if available
+        device_map="auto", 
     )
     
     model = PeftModel.from_pretrained(base_model, MODEL_PATH)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-    model.eval() # Set the model to evaluation mode
-
+    model.eval() 
     end_time = time.time()
     print(f"Model loaded successfully in {end_time - start_time:.2f} seconds.")
 
-    # 2. Load the input data
     print(f"\nLoading input data from '{INPUT_CSV_PATH}'...")
     try:
         df = pd.read_csv(INPUT_CSV_PATH)
