@@ -67,8 +67,35 @@ def create_interleaved_dataset(file_path: str) -> Dataset:
     return Dataset.from_list(interleaved_data)
 
 
-def setup_model_and_tokenizer():
+def get_all_entity_types(file_path: str) -> list[str]:
+    try:
+        df = pd.read_csv(file_path).fillna('')
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found for entity scanning.")
+        return []
 
+    print("Scanning for all unique entity types...")
+    all_types = set()
+    
+    type_pattern = re.compile(r"{tuple_delimiter}(.*?){tuple_delimiter}(.*?){tuple_delimiter}")
+
+    for extracted_entities in df['Extracted_Entities']:
+        if isinstance(extracted_entities, str) and extracted_entities.strip():
+            matches = type_pattern.findall(extracted_entities)
+            for _, entity_type in matches:
+                all_types.add(entity_type.strip())
+
+    if 'Person' in df.columns:
+        all_types.add("PERSON")
+        
+    print(f"Found {len(all_types)} unique entity types: {all_types}")
+    return list(all_types)
+
+def setup_model_and_tokenizer():
+    """
+    Sets up the model and tokenizer, adding all unique entity labels from the
+    dataset as new special tokens to ensure they are treated as single units.
+    """
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,
@@ -77,6 +104,15 @@ def setup_model_and_tokenizer():
     )
 
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
+    
+    entity_types = get_all_entity_types(DATASET_PATH)
+    
+    new_tokens = [TUPLE_DELIMITER, RECORD_DELIMITER, COMPLETION_DELIMITER] + entity_types
+    
+    print(f"Original tokenizer vocab size: {len(tokenizer)}")
+    tokenizer.add_tokens(new_tokens, special_tokens=True)
+    print(f"New tokenizer vocab size: {len(tokenizer)}")
+
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = "right"
@@ -88,6 +124,9 @@ def setup_model_and_tokenizer():
         device_map="auto",
     )
 
+    print("Resizing model token embeddings...")
+    model.resize_token_embeddings(len(tokenizer))
+    
     model = prepare_model_for_kbit_training(model)
 
     print(f"Loading existing adapters from: {ADAPTER_MODEL_PATH}")
@@ -103,6 +142,7 @@ def setup_model_and_tokenizer():
     model.print_trainable_parameters()
     
     return model, tokenizer
+
 
 
 def preprocess_interleaved(example, tokenizer):
