@@ -1,0 +1,1734 @@
+--- Test Set Predictions and Labels ---
+
+--- Example 1 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" (oz {Rinez{ the a vehicleup trtruck that of thestate 15 and{("ORTANT
+["FERNANDO MUNOZ-MARTINEZ"]
+====================
+
+--- Example 2 ---
+GROUND TRUTH:
+["HENDERSON", "JOE SILVA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["("erson("imon that he the 10, 2019, he was in in aCE and Smith Smith and they were contact to the scene Patrol Agencypoint in in the 15 in{("ORTANT
+["HENDERSON", "JOE SILVA"]
+====================
+
+--- Example 3 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}I-35{tuple_delimiter}ROUTES{tuple_delimiter}A highway that he drove on.){record_delimiter}("entity"{tuple_delimiter}RURAL AREA{tuple_delimiter}LOCATION{tuple_delimiter}An area with no houses that he exited into.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["/ found abound the-95 and thenited at Texas city area and a name and and drove to the-35. and of.entityrecordANT
+("entity"{tuple_delimiter}I-35{tuple_delimiter}ROUTES{tuple_delimiter}A highway that was initially south.){record_delimiter}("entity"{tuple_delimiter}rURAL AREA{tuple_delimiter}LOCATION{tuple_delimiter}A area where no houses.) he exited into.){record_delimiter}("
+====================
+
+--- Example 4 ---
+GROUND TRUTH:
+["CHILD"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" nameien who ining with flat the floor of of and or the vehicle of and theged between the front seat and the floor seat. and the total and in the of the floor seat andPERMEANT
+["ALILD"]
+====================
+
+--- Example 5 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}UNITED STATES COAST GUARD (USCG){tuple_delimiter}PERSON{tuple_delimiter}Agency that intercepted the vessel){record_delimiter}("entity"{tuple_delimiter}PLEASURE CRAFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Boat used in the smuggling attempt){record_delimiter}("entity"{tuple_delimiter}OCEANSIDE{tuple_delimiter}LOCATION{tuple_delimiter}Off-shore area where interception occurred){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" DEAN stopped involved able of the sm States of Guard wasUSCG) haded a sm craft that a people onoard it theshore of theCEanside, California area smien smuggling situation.
+("recordANT
+("entity"{tuple_delimiter}UITED STATES COAST GUARD{USCG){tuple_delimiter}SMSON{tuple_delimiter}Ag federal that intercepted the pleasure){record_delimiter}("entity"{tuple_delimiter}PLEASURE CRAFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Vat that in the smuggling attempt){record_delimiter}("entity"{tuple_delimiter}OCEANSIDE{tuple_delimiter}LOCATION{tuple_delimiter}Locationshshore location where theception occurred){record_delimiter}
+====================
+
+--- Example 6 ---
+GROUND TRUTH:
+["BARBA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ack, { person of a internationalliance smuggling organization. in of MexicoER California, Mexico. he Diego, California. United was smaddle boats to and crafts and and other personalings to transportitate the smneisticated smitime smuggling operation.{("ORTANT
+["BARBA"]
+====================
+
+--- Example 7 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who was directing captives with his pistol.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were being directed by a co-defendant.){record_delimiter}("entity"{tuple_delimiter}PISTOL{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A weapon used to direct the captives.){record_delimiter}("entity"{tuple_delimiter}ROOM{tuple_delimiter}LOCATION{tuple_delimiter}A location from which the captives were being directed.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" listoperworkerendant in arresteding a flowures to the vehicleistol and the to the location to another room("recordANT
+("entity"{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who directed directing theives with his pistol.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were being directed by the co-defendant.){record_delimiter}("entity"{tuple_delimiter}ROSTOL{tuple_delimiter}WEUGGLED_ITEMS{tuple_delimiter}A p used by direct capt captives.){record_delimiter}entity"{tuple_delimiter}ROOM{tuple_delimiter}LOCATION{tuple_delimiter}A location where which the captives were directed directed.){record_delimiter}
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+["MOVANT", "CO-DEFENDANTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ing { others wife-conendantants are agoing least one occasions occasions tonapped and held host ransom the individuals of peopleocumented migriens andCOINAN
+["MOVANT", "CO-DEFENDANTS"]
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["OURuf, moved to out vehiclector to the location zone of and the vehicleiler to the loadingED Fish Trall for the triler was being loaded and and to hour later and anded up tractor to the tra-loaded trailer and and payment call for lading and and then his the,FLLOCAN
+["YUSUF"]
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SALAZAR{tuple_delimiter}PERSON{tuple_delimiter}An individual who was unavailable to watch over the aliens.){record_delimiter}("entity"{tuple_delimiter}MAN{tuple_delimiter}PERSON{tuple_delimiter}An individual who would watch over the aliens when Salazar was unavailable.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}People who were being watched over.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" theman and arrestedemp to he person wasentity ofant)1) was be the the shipien (entityrecordANT
+("entity"{tuple_delimiter}ALALAZAR{tuple_delimiter}PERSON{tuple_delimiter}An individual who was unavailable to watch over the aliens.){record_delimiter}("entity"{tuple_delimiter}AL{tuple_delimiter}PERSON{tuple_delimiter}An individual who would watch over the aliens.) Salazar was unavailable.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}MEUGGLED_ITEMS{tuple_delimiter}Aople who were being watched over by{record_delimiter}
+====================
+
+--- Example 11 ---
+GROUND TRUTH:
+["ANDREA GONZALEZ-PERALES", "THREE FEMALE PASSENGERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [{11{{2 or19(" the (alez,Males, a cars individuals to the Mexico schoolurer locationane of the port crossingrol officepoint in of thearedo, Texas,
+("ORTANT
+["ANDREA GONZALEZ-PERALES", "FREE FEMALE PASSENGERS"]
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}U.S. BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents who took custody of migrants){record_delimiter}("entity"{tuple_delimiter}SANTA CATALINA ISLAND{tuple_delimiter}LOCATION{tuple_delimiter}Offshore location west of custody site){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["PSS.A Patrol Agency stopped partody of a10 individuals nationals and night. of the Barbaraina,.{("recordANT
+("entity"{tuple_delimiter}U.S. BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents who took custody of Mexicanants){record_delimiter}("entity"{tuple_delimiter}MANTA CATALINA ISLAND{tuple_delimiter}LOCATION{tuple_delimiter}Theshore island where of whereody location){record_delimiter}
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}LEONOR GARCIA{tuple_delimiter}PERSON{tuple_delimiter}The female driver.){record_delimiter}("entity"{tuple_delimiter}SOTO{tuple_delimiter}PERSON{tuple_delimiter}The male in the front passenger seat.){record_delimiter}("entity"{tuple_delimiter}JUAN CARLOS DE LA CRUZ-CALAMINO{tuple_delimiter}PERSON{tuple_delimiter}The male passenger in the rear passenger-side seat.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" were a vehicle individual and aor,cia, a of driver the car seat seat of and driverendant;TE; and one male in, the back seat seatse seat, the Carlos Gar la Cruz.Rvoita.("tupleANT
+("entity"{tuple_delimiter}LEONOR GARCIA{tuple_delimiter}PERSON{tuple_delimiter}A female driver of{record_delimiter}("entity"{tuple_delimiter}SOTO{tuple_delimiter}PERSON{tuple_delimiter}The def passenger the front passenger seat.){record_delimiter}("entity"{tuple_delimiter}JUAN CARLOS DE LA CRUZ-CALAMINO{tuple_delimiter}PERSON{tuple_delimiter}The male passenger in the rear passenger-side seat.){record_delimiter}
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT GUARDADO-MEZEN{tuple_delimiter}PERSON{tuple_delimiter}An individual who went to an apartment where illegal immigrants were being held.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Five individuals who went with Defendant Guardado-Mezen to an apartment where illegal immigrants were being held.){record_delimiter}("entity"{tuple_delimiter}APARTMENT{tuple_delimiter}LOCATION{tuple_delimiter}A location where illegal immigrants were being held.){record_delimiter}("entity"{tuple_delimiter}ILLEGAL IMMIGRANTS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of people being held in an apartment.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the (11{22019{ theendant_i andRzaa his other-workendants were to a addresspartment in they def activityigrants were located held byMErecordANT
+("entity"{tuple_delimiter}DEFENDANT GUARDADO-MEZEN{tuple_delimiter}PERSON{tuple_delimiter}A individual who went to an apartment where illegal immigrants were being held.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Indive individuals who went to theendant Guardado-Mezen to an apartment where illegal immigrants were being held.){record_delimiter}("entity"{tuple_delimiter}APARTMENT{tuple_delimiter}LOCATION{tuple_delimiter}The location where Def immigrants were being held.){record_delimiter}("entity"{tuple_delimiter}ILLEGAL IMMIGRANTS{tuple_delimiter}PERUGGLED_ITEMS{tuple_delimiter}Ind group of individuals being held in an apartment.){record_delimiter}
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CARGO VAN{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} believed to belong to the smuggling organization){record_delimiter}("entity"{tuple_delimiter}ANAHEIM, CALIFORNIA {tuple_delimiter}LOCATION{tuple_delimiter}Location where the cargo van was tracked to){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the the about the location and in theibbad, California were the CarWLTE C C Patrol Agencycu theirillance of the boat ship and to be to sm smugler organization. and loc it to the areapartment in in Carheim. Californiaif. theators with the a, they found a individuals aliens who Mexico and national were seized wet from theyaked with mud. the beach's landing landing in("recordANT
+("entity"{tuple_delimiter}SMARLS VAN{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A to belong to the smuggling organization){record_delimiter}("entity"{tuple_delimiter}APAHEIM, CALIF{NIA{tuple_delimiter}LOCATION{tuple_delimiter} where of the a van was tracked){){record_delimiter}
+====================
+
+--- Example 16 ---
+GROUND TRUTH:
+["EUCLIDES MORENO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ROid,ales, { for theating in the smnapping of the10 individualsocumented immiens and thepoint. a locationash house in Mexico unknownisclosed location in Mexicoondgo,, Texas, United thening them al to ocumented aliens to a stash house in aninburg, Texas,("INAN
+["EUCLIDES MORENO"]
+====================
+
+--- Example 17 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DELACRUZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who was ducking down in the back seat.){record_delimiter}("entity"{tuple_delimiter}BACK SEAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The location where Delacruz was ducking down.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["awareourtz, foundcking for a a middle of ofMEtupleANT
+("entity"{tuple_delimiter}DELACRUZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who was ducking down in the back seat of{record_delimiter}("entity"{tuple_delimiter}BACK SEAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The seat where Delacruz was ducking down.){record_delimiter}
+====================
+
+--- Example 18 ---
+GROUND TRUTH:
+["ZHIVARGO MCBRIDE"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["engago,Leath,addleged to the charges cr of the caseictment.
+ counts of human degree murder, three counts of humanien smuggling, a penalty,("MEANT
+["ZHIVARGO MCBRIDE"]
+====================
+
+--- Example 19 ---
+GROUND TRUTH:
+["SMUGGLERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["okingglers and the EUizon Internationaluggling Organ ( the sens locations to transport detection enforcement ag andating with cellatsApp and{("CONANT
+["SMUGGERS"]
+====================
+
+--- Example 20 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}JAQUEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who was picked up by a truck with a trailer in Nuevo Laredo.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that, along with a trailer, picked up Jaquez.){record_delimiter}("entity"{tuple_delimiter}TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle attached to a truck that picked up Jaquez.){record_delimiter}("entity"{tuple_delimiter}PLAZA{tuple_delimiter}LOCATION{tuple_delimiter}The location in Nuevo Laredo where Jaquez was picked up.){record_delimiter}("entity"{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}LOCATION{tuple_delimiter}The city where Jaquez was picked up.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ime_ that relationshipuck that the stiler and up up at the locationza in Mexicovo Leonaredo, the1:05 pm 6:00 p.m.{ move him to a Unitedcare siteMErecordANT
+("entity"{tuple_delimiter}JAQUEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who maintained involved up at the truck with a trailer.) Nuevo Laredo.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that was with with a trailer, was up Jaquez.){record_delimiter}("entity"{tuple_delimiter}TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that to the truck that picked up Jaquez.){record_delimiter}("entity"{tuple_delimiter}NULAZA{tuple_delimiter}LOCATION{tuple_delimiter}A location where Nuevo Laredo where thequez was picked up.){record_delimiter}entity"{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}LOCATION{tuple_delimiter}The location where Jaquez was picked up.){record_delimiter}
+====================
+
+--- Example 21 ---
+GROUND TRUTH:
+["MALE DRIVER", "FEMALE PASSENGER"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["h { or person individual who a passenger in and of.S. C, in theying that sm immiens in in a vehicleV they{("INANT
+["AGLE DRIVER", "FEMALE PASSENGER",
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}RUBEN MENDOZA{tuple_delimiter}PERSON{tuple_delimiter}Ruben Mendoza is a border patrol agent who was on patrol){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} Agent Ruben Mendoza had observed a truck pass while on patrol){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" crossingrol Agency {en Rubendeza, arrested dutyrol in found a groupuck that through{("MEANT
+("entity"{tuple_delimiter}BUBEN MENDOZA{tuple_delimiter}PERSON{tuple_delimiter}Anuben Mendoza was the Border patrol agent){ observed on patrol){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A Ruben Mendoza observed observed a truck pass){ on patrol){record_delimiter}
+====================
+
+--- Example 23 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SALDANA{tuple_delimiter}PERSON{tuple_delimiter} A suspect in the case){record_delimiter}("entity"{tuple_delimiter}OFFICER{tuple_delimiter}PERSON{tuple_delimiter} An officer of the law){record_delimiter}("entity"{tuple_delimiter}LAREDO{tuple_delimiter}LOCATION{tuple_delimiter} Place where Saldana lived){record_delimiter}("entity"{tuple_delimiter}DALLAS{tuple_delimiter}LOCATION{tuple_delimiter} Place where Saldana was driving the scissor lift to){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" theable, theTEana ( the following that was in theOSdo, was travel a vehicleootors lift. the. theairs. part result to a officers of{("recordANT
+("entity"{tuple_delimiter}SALDANA{tuple_delimiter}PERSON{tuple_delimiter}An person in a sm){record_delimiter}("entity"{tuple_delimiter}LAICERS{tuple_delimiter}PERSON{tuple_delimiter} Offic officer who the law){record_delimiter}("entity"{tuple_delimiter}LAREDO{tuple_delimiter}LOCATION{tuple_delimiter} A of Saldana lives){record_delimiter}("entity"{tuple_delimiter}DALLAS{tuple_delimiter}LOCATION{tuple_delimiter} Place where Saldana was going the scissor lift){){record_delimiter}
+====================
+
+--- Example 24 ---
+GROUND TRUTH:
+["PONCE FLORES"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" the([199[" [ER deores, in in the of smien smuggling and being was his others individualsiens were the border between aOSdo, Texas.PERMEANT
+["PONCE FLORES"]
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CANTU{tuple_delimiter}PERSON{tuple_delimiter}An individual who was brought to the trailer by smugglers.){record_delimiter}("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}The individuals who brought Cantu to the trailer.){record_delimiter}("entity"{tuple_delimiter}JEFFERSON{tuple_delimiter}PERSON{tuple_delimiter}An individual who was witnessed closing the trailer door.){record_delimiter}("entity"{tuple_delimiter}TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle to which Cantu was brought.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ab ( the to the Unitedff park augglers and foundes the' to trailer'.MErecordANT
+("entity"{tuple_delimiter}CANTU{tuple_delimiter}PERSON{tuple_delimiter}An individual who was brought to the trailer by smugglers.){record_delimiter}("entity"{tuple_delimiter}JUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Ind individuals who brought Cantu to the trailer.){record_delimiter}("entity"{tuple_delimiter}JEFFERSON{tuple_delimiter}PERSON{tuple_delimiter}An individual who witness withed by the trailer door.){record_delimiter}entity"{tuple_delimiter}TRAILER{tuple_delimiter}LOCANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle that which Cantu was brought.){record_delimiter}
+====================
+
+--- Example 26 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that returned onto I-35 and headed north.){record_delimiter}("entity"{tuple_delimiter}I-35{tuple_delimiter}ROUTES{tuple_delimiter}A highway that the truck returned onto.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entitieswers10 entities after, the number individualuck was to the-95. stoppededboundentityrecordANT
+("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that returned onto I-35 and headed north.){record_delimiter}("entity"{tuple_delimiter}I-35{tuple_delimiter}ROUTES{tuple_delimiter}A road that the truck returned onto.){record_delimiter}
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [ list of [ (10{2ator19{ the Goz andRinez and located a vehicleup trtruck in of thestate 15 inMEMEANT
+["FERNANDO MUNOZ-MARTINEZ"]
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ANGEL ANTONIO PEREZ{tuple_delimiter}PERSON{tuple_delimiter}An individual driving a car containing three passengers.){record_delimiter}("entity"{tuple_delimiter}CAR{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle containing three passengers.){record_delimiter}("entity"{tuple_delimiter}PASSENGERS{tuple_delimiter}PERSON{tuple_delimiter}Three individuals in the car.){record_delimiter}("entity"{tuple_delimiter}LAREDO, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}A location near a routine immigration inspection checkpoint.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 10th 2019{ theendant_SMellant andica Gz and a a vehicle registered the personal, was stopped by a check trafficigration checkpection inpoint in theOSdo, Texas,MErecordANT
+("entity"{tuple_delimiter}ANGEL ANTONIO PEREZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who a car containing three passengers.){record_delimiter}("entity"{tuple_delimiter}CAR{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle stopped three passengers.){record_delimiter}("entity"{tuple_delimiter}LAENGERS{tuple_delimiter}PERSON{tuple_delimiter}Three individuals r a car.){record_delimiter}entity"{tuple_delimiter}LAREDO, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}A location where which routine immigration inspection checkpoint.){record_delimiter}
+====================
+
+--- Example 29 ---
+GROUND TRUTH:
+["UNDOCUMENTED IMMIGRANTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" are in to the country States of a boataddle..ing from a spe. the seas.{ to theviews they the individualsocumented immigrants, the boat, they least point they they panga boat firebor and into and wasized. leaving therified imm into the water.
+("INAN
+["IOCUMENTED IMMIGRANTS"]
+====================
+
+--- Example 30 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DIAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}An individual who drove his codefendant to a location and allowed him to stay at his residence.){record_delimiter}("entity"{tuple_delimiter}CODEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who was driven to a location by Diaz-Galiana and stayed at his residence.){record_delimiter}("entity"{tuple_delimiter}RESIDENCE{tuple_delimiter}LOCATION{tuple_delimiter}The place where Diaz-Galiana allowed his codefendant to stay.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["led,Bonindo, a car numberendant to the location in they smfendant was a killed a person who and the theyz-Galiana drove the codefendant to leave at the location.MEtupleANT
+("entity"{tuple_delimiter}DAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}An individual who drove his codefendant to a location where allowed the to stay at his residence.){record_delimiter}("entity"{tuple_delimiter}CODEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who drove driven by a location and Diaz-Galiana and allowed at his residence.){record_delimiter}("entity"{tuple_delimiter}LOCIDENCE{tuple_delimiter}LOCATION{tuple_delimiter}A location where thez-Galiana allowed the codefendant to stay.){record_delimiter}("
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DARK SUV{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle suspected of being used by smugglers){record_delimiter}("entity"{tuple_delimiter}CAMBRIA, CA{tuple_delimiter}LOCATION{tuple_delimiter}Coastal town where vehicle was spotted){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" P-V wasly driven by the sm to found in the in the cityal city of aodia, California. and the dided the of a was to with the.{("recordANT
+("entity"{tuple_delimiter}SUARK SUV{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle reportedpected of being used by theugglers.)record_delimiter}("entity"{tuple_delimiter}CAMBRIA, CA{tuple_delimiter}LOCATION{tuple_delimiter}Aastal neighborhood where the was reportedotted){record_delimiter}
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+["ORTIZ", "AGENT"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["("iz(" that personitime car SUpedition SUing inbound on Inter--15.{("ORTANT
+["ORTIZ"] "AGENT"]
+====================
+
+--- Example 33 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}FERNANDO MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual driving a pickup-truck south on Interstate 35.){record_delimiter}("entity"{tuple_delimiter}PICKUP-TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle being driven south on Interstate 35.){record_delimiter}("entity"{tuple_delimiter}INTERSTATE 35{tuple_delimiter}ROUTES{tuple_delimiter}A highway on which a pickup-truck was being driven south.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the date of [ 10 2019, the (oz andRinez and arrested a vehicleup trtruck in of Interstate 15 inMErecordANT
+("entity"{tuple_delimiter}FERNANDO MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual driving a pickup-truck south on Interstate 35.){record_delimiter}("entity"{tuple_delimiter}PICKUP-TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle driven driven south on Interstate 35.){record_delimiter}("entity"{tuple_delimiter}INTERSTATE 35{tuple_delimiter}ROUTES{tuple_delimiter}A highway being which the pickup-truck was being driven south.){record_delimiter}
+====================
+
+--- Example 34 ---
+GROUND TRUTH:
+["THREE MEN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" crossingrol Agency { the persons who in a desertshammer of("INANT
+["BREE MEN"]
+====================
+
+--- Example 35 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ORLANDO MAGRINAT{tuple_delimiter}PERSON{tuple_delimiter}Individual indicted in smuggling case){record_delimiter}("entity"{tuple_delimiter}CARLOS REGALADO AMECHAZURRA{tuple_delimiter}PERSON{tuple_delimiter}Another indicted individual){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["enty-three entities were been identifiedicted for chargesien smuggling charges.{ thelando,ana,, Or Magalado,riascheendurda,SMrecordANT
+("entity"{tuple_delimiter}ORLANDO MAGRINAT{tuple_delimiter}PERSON{tuple_delimiter}Anividual indicted on aluggling charges){record_delimiter}("entity"{tuple_delimiter}CARLOS REGALADO AMECHAZURRA{tuple_delimiter}PERSON{tuple_delimiter}Ind individual individualicted individual){record_delimiter}("
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+["CREW"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list of the following and which identified as the sm10-FO boatERuit boat the registration numbers toing illegalypsea operation of a vessel identified theermini, Bahamas,{("INANT
+["CREW"]
+====================
+
+--- Example 37 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}HURTADO{tuple_delimiter}PERSON{tuple_delimiter}A person smuggling people on boat){record_delimiter}("entity"{tuple_delimiter}BOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vessel used for carrying people){record_delimiter}("entity"{tuple_delimiter}UNITED STATES TERRITORIAL WATERS{tuple_delimiter}LOCATION{tuple_delimiter}Water body through which aliens were travelled into USA){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the the time, the the morning morning,, weANado andoted a vehicle to made crewants to theging weather in into seas. the to the States. waters.
+("recordANT
+("entity"{tuple_delimiter}HURTADO{tuple_delimiter}PERSON{tuple_delimiter}An person whouggling his into a){record_delimiter}("entity"{tuple_delimiter}BOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vessel used to sm people){record_delimiter}("entity"{tuple_delimiter}MEITED STATES{ERRITORIAL WATERS{tuple_delimiter}LOCATION{tuple_delimiter}Theaters where where which theien were sming){ the){record_delimiter}
+====================
+
+--- Example 38 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}U.S. 59{tuple_delimiter}ROUTES{tuple_delimiter} A highway, which has an intersection with Route 133){record_delimiter}("entity"{tuple_delimiter}FARM-TO-MARKET ROAD 2050{tuple_delimiter}ROUTES{tuple_delimiter} A road "adjacent to the Border Patrol station parking lot," about "150 feet . . . 200 feet, more or less," from the checkpoint office){record_delimiter}("entity"{tuple_delimiter}WHITE MALIBU SEDAN{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle which had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050){record_delimiter}("entity"{tuple_delimiter}BLACK DODGE TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle which had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number entities were including carB vanibu" and and a "white SUodge"uck" were aited the the a.S. Highway10 in the south of were onto on on a Roadto-Market Road.1100. which routewaythatacent to the Texas."rol."."king lot." as which10 minutes miles."" ."10 minutes miles." or or less." depending the locationpoint..("MEANT
+("entity"{tuple_delimiter}MA.S. 59{tuple_delimiter}ROADES{tuple_delimiter}A road that including the ex exit with Farm 200.)record_delimiter}("entity"{tuple_delimiter}FarmM-TO-MARKET ROAD 2050{tuple_delimiter}ROADES{tuple_delimiter} A road adjacentadjacent to the Border Patrol station parking lot." about "150 feet . . . 200 feet, more or less," from the checkpoint office){record_delimiter}("entity"{tuple_delimiter}BITE MALIBU{EDAN{tuple_delimiter}VEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle that ex exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050){record_delimiter}("entity"{tuple_delimiter}BLACK DODGE TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle which had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050){record_delimiter}
+====================
+
+--- Example 39 ---
+GROUND TRUTH:
+["KIM"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ber a in a business transportancy business fre plaruitment service in and Cons, with theian, Chinaortheast China, and the and{("ORTANT
+["KIM"]
+====================
+
+--- Example 40 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}COAST GUARD{tuple_delimiter}PERSON{tuple_delimiter}Interdicted a drug smuggling vessel){record_delimiter}("entity"{tuple_delimiter}SPEEDBOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Boat carrying cocaine){record_delimiter}("entity"{tuple_delimiter}ECUADOR{tuple_delimiter}LOCATION{tuple_delimiter}Location off the coast of interception){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number Guard founddicted a boatboat and illegal10000 undosrams of cocaine. the coast of thecuador.{("recordANT
+("entity"{tuple_delimiter}COAST GUARD{tuple_delimiter}PERSON{tuple_delimiter}Adictors a speed smuggling speed){record_delimiter}("entity"{tuple_delimiter}COPEEDBOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Carat used cocaine){record_delimiter}("entity"{tuple_delimiter}COUADOR{tuple_delimiter}LOCATION{tuple_delimiter}Co where the coast of Ediction){record_delimiter}
+====================
+
+--- Example 41 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}JUNO POLICE DEPARTMENT{tuple_delimiter}PERSON{tuple_delimiter}Local law enforcement agency that alerted Border Patrol}{record_delimiter}("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Federal officers who responded to the alert}{record_delimiter}("entity"{tuple_delimiter}JUNO BEACH, FLORIDA{tuple_delimiter}LOCATION{tuple_delimiter}Coastal site where smuggling vessel was found}{record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" numbercker Foundation Department stoppeded the Patrol Ag to the 1, 201{, to a smitime incidentuggling operation that whicho,, CaliforniaL.
+ Patrol agents were the sm10- vessel Ray boat March beach and{("recordANT
+("entity"{tuple_delimiter}JUNO POLICE DEPARTMENT{tuple_delimiter}PERSON{tuple_delimiter}A law enforcement agency){ alerted Border Patrol agentstuple_delimiter}("entity"{tuple_delimiter}BORDER PATROL{ENTS{tuple_delimiter}PERSON{tuple_delimiter}Borderederal law who discovereded to the alert){record_delimiter}("entity"{tuple_delimiter}2UNO BEACH, FLAORIDA{tuple_delimiter}LOCATION{tuple_delimiter}Locationastal area where theuggling event was found){record_delimiter}("
+====================
+
+--- Example 42 ---
+GROUND TRUTH:
+["PACHECO", "CHAPA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" the number of to the date ofrol Agencypoint, theyEReco and theman and the location phone number told hima to they go the group atPERCONANT
+["PACHECO", "CHAPA"]
+====================
+
+--- Example 43 ---
+GROUND TRUTH:
+["INVESTIGATORS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ator { the locationacht in the10 P on board including including of theAuras and three from thearagua and and one from Pan. and a sming operation theina Island.
+("INANT
+["INVESTIGATORS"]
+====================
+
+--- Example 44 ---
+GROUND TRUTH:
+["ALLENDE-GARCIA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" P,Roncia, aed the individualsien to
+ of a Unitedshammer and and four in the careper coachment.("INANT
+["ALLENDE-GARCIA",
+====================
+
+--- Example 45 ---
+GROUND TRUTH:
+["SALDANA", "OFFICERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" theable { {HEana { the following that was in theOSdo, was travel a vehicleootors-. the. theairs. part part to the officers of{("CONANT
+["SALDANA"] "OWICERS"]
+====================
+
+--- Example 46 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}PERSON{tuple_delimiter}A suspected planner of the smuggling operation){record_delimiter}("entity"{tuple_delimiter}MEXICALI, MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}Location where Jimenez resides){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" Sainenez ( (10, was former.S. citiz,iding in Mexicoicali, Mexico, was stopped by the smanner of a smuggling of.{("tupleANT
+("entity"{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}PERSON{tuple_delimiter}An Upected planner of the smuggling operation.)record_delimiter}("entity"{tuple_delimiter}SMXICALI, MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}The where Carlosenez resides){record_delimiter}
+====================
+
+--- Example 47 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MONTEROJAS{tuple_delimiter}PERSON{tuple_delimiter} An agent on patrol){record_delimiter}("entity"{tuple_delimiter}HIGHWAY 83{tuple_delimiter}ROUTES{tuple_delimiter} A highway near Encinal, Texas){record_delimiter}("entity"{tuple_delimiter}ENCINAL, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter} Location near where Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 1{ 201{{ the {icareyas ( with case locationider siteane at the Port Patrol Agencypoint in the 10 in theino, Texas.("recordANT
+("entity"{tuple_delimiter}AGTEROJAS{tuple_delimiter}PERSON{tuple_delimiter}An agent who dutyrol dutyrecord_delimiter}("entity"{tuple_delimiter}BIGHWAY 83{tuple_delimiter}ROUTES{tuple_delimiter} The highway near Encinal, Texas){record_delimiter}("entity"{tuple_delimiter}ENCINAL, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter} A near the the Monterojas worked the primary inspection lane){ the Border Patrol checkpoint onrecord_delimiter}
+====================
+
+--- Example 48 ---
+GROUND TRUTH:
+["AGENT", "TWO MEN", "TWO WOMEN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individual after [ [ individual { the persons personsiens in in a woodsins a vehicleuck they including of and two women.PERINANT
+["AGENT"] "TWO MEN", "TWO WOMEN"]
+====================
+
+--- Example 49 ---
+GROUND TRUTH:
+["DESCARGAS", "JAQUEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["cendar, {, wereed theime, and phoneatsApp, the possible opportunity of after thequez hads contact in and Jaquez was in aody inJCONAN
+["DESCARGAS", "JAQUEZ"]
+====================
+
+--- Example 50 ---
+GROUND TRUTH:
+["ELENA MORALES"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["("ena (eno { that person- SUvy Subahoe SUing inbound on Inter 10 in{("INANT
+["ELENA MOORALES"]
+====================
+
+--- Example 51 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MALE ALIEN{tuple_delimiter}PERSON{tuple_delimiter}An individual who was moved to the Roadrunner Inn with Fu Mei Chen.){record_delimiter}("entity"{tuple_delimiter}FU MEI CHEN{tuple_delimiter}PERSON{tuple_delimiter}A woman who was moved to the Roadrunner Inn and escaped from the bathroom.){record_delimiter}("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals to whom arrangements were being made to transfer Fu Mei Chen.){record_delimiter}("entity"{tuple_delimiter}ROADRUNNER INN{tuple_delimiter}LOCATION{tuple_delimiter}The motel to which the aliens were moved.){record_delimiter}("entity"{tuple_delimiter}BATHROOM{tuple_delimiter}LOCATION{tuple_delimiter}The place from which Fu Mei Chen escaped.){record_delimiter}("entity"{tuple_delimiter}ROOM 297{tuple_delimiter}LOCATION{tuple_delimiter}The room from which Fu Mei Chen escaped.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ila travel to and with her group individualien, to a Unitedside location in then thereements were being made for move her individual to shejii,, to the Unitedody of the individualsugglers, the was and the Road sm ofroom of herselfing into clim. of the number200. the to fle the was in the, she madeaping.indrecordANT
+("entity"{tuple_delimiter}ROLE ALIEN{tuple_delimiter}PERSON{tuple_delimiter}An individual who was with with the Roadrunner Inn.) the Mei Chen.){record_delimiter}("entity"{tuple_delimiter}FU MEI CHEN{tuple_delimiter}PERSON{tuple_delimiter}A female who was moved to the Roadrunner Inn with was from the secondroom.){record_delimiter}("entity"{tuple_delimiter}ROUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who whom Fuements were being made to transfer Fu Mei Chen.){record_delimiter}("entity"{tuple_delimiter}ROADRUNNER INN{tuple_delimiter}LOCATION{tuple_delimiter}A locationel where which Fu maleien were moved.){record_delimiter}("entity"{tuple_delimiter}BATHROOM{tuple_delimiter}LOCATION{tuple_delimiter}The second where which Fu Mei Chen escaped.){record_delimiter}("entity"{tuple_delimiter}ROOM 297{tuple_delimiter}LOCATION{tuple_delimiter}The room from which Fu Mei Chen escaped.){record_delimiter}
+====================
+
+--- Example 52 ---
+GROUND TRUTH:
+["LEE"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" ( to(" find contact for1100000 for the person whouggled into("LOANT
+["LEE"]
+====================
+
+--- Example 53 ---
+GROUND TRUTH:
+["AGENT", "MULKINS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["("der{ to the location Diegosidro area of Entry with stopped the packages phones and of aense's personal.{("INANT
+["MENT M "MULKINS"]
+====================
+
+--- Example 54 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" listoperworkerendant{ locateding a flowures to the vehicleistol. the to the location to another room("CONANT
+["CO-DEFENDANT"] "CAPTIVES"]
+====================
+
+--- Example 55 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}INDIVIDUAL{tuple_delimiter}PERSON{tuple_delimiter}An individual allegedly working with Perez in an alien smuggling operation.){record_delimiter}("entity"{tuple_delimiter}PEREZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who was allegedly working with another individual in an alien smuggling operation.){record_delimiter}("entity"{tuple_delimiter}ALIEN SMUGGLING OPERATION{tuple_delimiter}ORGANIZATION{tuple_delimiter}A criminal operation an individual was allegedly working in with Perez.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" record {ector in the scene of {edly a for thez and a attemptien smuggling operation.SMrecordANT
+("entity"{tuple_delimiter}ALDIVIDUAL{tuple_delimiter}PERSON{tuple_delimiter}An individual detedly det with Perez in an alien smuggling operation.){record_delimiter}("entity"{tuple_delimiter}PEREZ{tuple_delimiter}PERSON{tuple_delimiter}An individual alleg alleg allegedly working with an individual at an alien smuggling operation.){record_delimiter}("entity"{tuple_delimiter}ALIEN SMUGGLING OPERATION{tuple_delimiter}SMGANIZATION{tuple_delimiter}An sm operation.) individual was allegedly working with.) Perez.){record_delimiter}
+====================
+
+--- Example 56 ---
+GROUND TRUTH:
+["CUSTOMS AGENTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["s officials {ed a package that ateeniens onoard it includingator it permission or the international between theEXuga and the. Thomas'{("INANT
+["CUSTOMS AGENTS"]
+====================
+
+--- Example 57 ---
+GROUND TRUTH:
+["CHAPA", "JESUS PACHECO-PINA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["man (s personaloperationworkendant( RO,aredeco,Rere, and him group of sm immiens to the desertwest regionushlands they could be detection local Patrol agentpoint. thearedo, they were to south to the United States.("MEANT
+["CHAPA", "JESUS PACHECO-PINA"]
+====================
+
+--- Example 58 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}JOINT HARBOR OPERATION CENTER{tuple_delimiter}PERSON{tuple_delimiter}The Joint Harbor Operation Center responsible for notification){record_delimiter}("entity"{tuple_delimiter}DOWNTOWN SAN DIEGO{tuple_delimiter}LOCATION{tuple_delimiter}Coastal location referenced in the event){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number entity was in the, the11:00 pm.m. and the individual.S. Guard found{ patOH Operationbor Pat Center wasified theTLCOs office divisiondiction team ofMA) of the vesselicious vessel that the coast of Californiantown Los Diego.{("recordANT
+("entity"{tuple_delimiter}UOINT HARBOR OPERATION CENTER{tuple_delimiter}LOCSON{tuple_delimiter}Co Coastoint Harbor Operation Center){ for coordin ofrecord_delimiter}("entity"{tuple_delimiter}AMWNTOWN SAN DIEGO{tuple_delimiter}LOCATION{tuple_delimiter}Theast Guard area where in the notification){record_delimiter}
+====================
+
+--- Example 59 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}U.S. BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Law enforcement officers who arrested the men){record_delimiter}("entity"{tuple_delimiter}IMPERIAL BEACH, CALIFORNIA{tuple_delimiter}LOCATION{tuple_delimiter}Place where arrests occurred near the border wall){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["MPORTSON DAUTHES Cif.ME ( Nov the 1:00 pm.m. aPSS. Im Patrol agents found a individuals who Mexico for weream to a boat border between between the United States. with a vehicles agents from were up up in of the international wall facil them to into the United.S.
+SMMEANT
+("entity"{tuple_delimiter}U.S. BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agaw enforcement agents who arrested four four){record_delimiter}("entity"{tuple_delimiter}MEMPERIAL BEACH, CalALIF.-NIA{tuple_delimiter}LOCATION{tuple_delimiter}The where theests were){ the international wall){record_delimiter}
+====================
+
+--- Example 60 ---
+GROUND TRUTH:
+["SUSPECTED SMUGGLERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list of [10 individual were stopped at including the individualspected ofugglers and were app the who in two to the.S.A Guard facilitiesody. possible and{("ORTANT
+["SUSPECTED SMUGGLERS"]
+====================
+
+--- Example 61 ---
+GROUND TRUTH:
+["SARAH LEE"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" crossingrol Agency { Smith and stopped dutyrol along found a groupuck that through{("MEANT
+["SARAH LEE"]
+====================
+
+--- Example 62 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}AGENTS{tuple_delimiter}PERSON{tuple_delimiter} U.S. Border Patrol agents){record_delimiter}("entity"{tuple_delimiter}SAN DIEGO BAY {tuple_delimiter}LOCATION{tuple_delimiter}Location near Coronado){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number entity occurred in the and and the 1:00 pm.ena. and a from onified of a caller citizen that a possibleicious vehicle in the Diego,. California theonado Island{("recordANT
+("entity"{tuple_delimiter}AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Ind.S. agents Patrol agents notrecord_delimiter}("entity"{tuple_delimiter}SUS DIEGO BAY{tuple_delimiter}LOCATION{tuple_delimiter} Location near Coronado){record_delimiter}
+====================
+
+--- Example 63 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PACHECO{tuple_delimiter}PERSON{tuple_delimiter}An individual who called Chapa from a cell phone.){record_delimiter}("entity"{tuple_delimiter}CHAPA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was called by Pacheco.){record_delimiter}("entity"{tuple_delimiter}CELL PHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}The device used by Pacheco to call Chapa.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the number of to the border ofrol Agencypoint, theyATao was theman and the vehicle phone number told hima to they go the group.entitytupleANT
+("entity"{tuple_delimiter}PACHECO{tuple_delimiter}PERSON{tuple_delimiter}A individual who called Chapa from the cell phone.){record_delimiter}("entity"{tuple_delimiter}CHAPA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was told by Pacheco.){record_delimiter}("entity"{tuple_delimiter}BLL PHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}A phone used to Pacheco to call Chapa.){record_delimiter}
+====================
+
+--- Example 64 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who was directing captives with his pistol.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were being directed by a co-defendant.){record_delimiter}("entity"{tuple_delimiter}PISTOL{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A weapon used to direct the captives.){record_delimiter}("entity"{tuple_delimiter}ROOM{tuple_delimiter}LOCATION{tuple_delimiter}A location from which the captives were being directed.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" Poperworkerendant in arresteding a flowures to the vehicleistol. the to the location to another room("recordANT
+("entity"{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who directed directing theives with his pistol.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were being directed by the co-defendant.){record_delimiter}("entity"{tuple_delimiter}ROSTOL{tuple_delimiter}WEUGGLED_ITEMS{tuple_delimiter}A p used by direct capt captives.){record_delimiter}entity"{tuple_delimiter}ROOM{tuple_delimiter}LOCATION{tuple_delimiter}A location where which the captives were directed directed.){record_delimiter}
+====================
+
+--- Example 65 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ARTESIA WELLS, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}A location near where a pickup-truck exited onto Highway 133.){record_delimiter}("entity"{tuple_delimiter}PICKUP-TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that exited onto Highway 133.){record_delimiter}("entity"{tuple_delimiter}HIGHWAY 133{tuple_delimiter}ROUTES{tuple_delimiter}A highway that a pickup-truck exited onto.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["lylingian,s, California, a groupup trtruck wasited the a 100.MEMEANT
+("entity"{tuple_delimiter}PIESIA WELLS, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}A location where which the pickup-truck exited onto Highway 133.){record_delimiter}("entity"{tuple_delimiter}HCKUP-TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that exited onto Highway 133.){record_delimiter}("entity"{tuple_delimiter}HIGHWAY 133{tuple_delimiter}ROUTES{tuple_delimiter}A highway that the pickup-truck exited onto.){record_delimiter}
+====================
+
+--- Example 66 ---
+GROUND TRUTH:
+["FABIOLA BEATRIZ CONTRERAS-PUENTE", "PAOLO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individual the P on orioola,riz,treras,Rereerta, {imon that the in she was the packageuggled named Juan Fab be her tolegally into Mexico to the United States. and that she trip, law, to pay him $110000 to her return in the Diego.{("NOTAN
+["FABIOLA BEATRIZ CONTRERAS-PUENTE", "PAOLO"]
+====================
+
+--- Example 67 ---
+GROUND TRUTH:
+["U.S. BORDER PATROL AGENTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["RS.A Patrol Agency stopped partody of the10 P nationals and night night of the Barbaraina,.{("ORTANT
+["AG.S. BORDER PATROL AGENTS",
+====================
+
+--- Example 68 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who presented inadequate documentation for a child.){record_delimiter}("entity"{tuple_delimiter}CHILD{tuple_delimiter}PERSON{tuple_delimiter}An individual for whom inadequate documentation was presented.){record_delimiter}("entity"{tuple_delimiter}TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}The state that issued the immunization record.){record_delimiter}("entity"{tuple_delimiter}HOSPITAL{tuple_delimiter}ORGANIZATION{tuple_delimiter}The place where the child was born.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the schoolsurance sites weendant{ a aquate personal for the origin's agehip status and that that birth stateigrationization record and a Texasrulations letter from the Mexican where the child was born.MErecordANT
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who presented inadequate documentation.) the child'{record_delimiter}("entity"{tuple_delimiter}CHILD{tuple_delimiter}PERSON{tuple_delimiter}A individual who whom documentationadequate documentation was presented.){record_delimiter}("entity"{tuple_delimiter}TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}The state where the the immunization record.){record_delimiter}("entity"{tuple_delimiter}HOSPITAL{tuple_delimiter}LOCGANIZATION{tuple_delimiter}The facility where the child was born.){record_delimiter}
+====================
+
+--- Example 69 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter}Two individuals who were taken across the Rio Grande on a raft into the United States with several other people.){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE{tuple_delimiter}LOCATION{tuple_delimiter}The river that the two aliens were taken across.){record_delimiter}("entity"{tuple_delimiter}RAFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle used to take the two aliens across the Rio Grande.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country that the two aliens were taken into.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number entitiesien who in to the border Grande and a boatft and the United States. the other individuals includingentityrecordANT
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMSON{tuple_delimiter}Two individuals who were taken across the Rio Grande on a raft into the United States.) several other people.){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE{tuple_delimiter}LOCATION{tuple_delimiter}The location across was al aliens were taken across.){record_delimiter}("entity"{tuple_delimiter}UNFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle that to transport the al aliens across the Rio Grande.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country into the two aliens were taken into.){record_delimiter}
+====================
+
+--- Example 70 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}PERSON{tuple_delimiter}A citizen of Guatemala){record_delimiter}("entity"{tuple_delimiter}HECTOR GALVENCIO PAZ-ORTEGA{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}CARLOS ENRIQUE CRUZ-MORALES{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}PERSON{tuple_delimiter}A place in Tamaulipas, Mexico where Paz-Ortega and Cruz-Morales disembarked after traveling with Mejia-Orosco){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["hba andRrta, a formeren of theatemala and{ isns his living byucking goods and Guatemala to Mexico Mexico and and the United States.{ the, this2999, he his of his tri trips, the country, he was a aector-indo,,,Stega, his Galriquez-Rris. who of of Mexicoatemala. Mexicoported sm to smjia-Orosco.{ theyjia-Orosco left his tr compan were crossedled through Mexico and the in thevo Laredo, theyamaulipas, they, they-Ortega and Cruz-Morales wereembarked from
+("MEANT
+("entity"{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}PERSON{tuple_delimiter}A citizen of Guatemala whorecord_delimiter}("entity"{tuple_delimiter}HECTOR GALVENCIIO PAZ-ORTEGA{tuple_delimiter}PERSON{tuple_delimiter}A citiz who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}CARLOS ENRIQUE CRUZ-MORALES{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}GUEVO LAREDO,tuple_delimiter}LOCSON{tuple_delimiter}A city where Tamaulipas, Mexico){ Paz-Ortega and Cruz-Morales disembarked){ traveling through Mejia-Orosco){record_delimiter}
+====================
+
+--- Example 71 ---
+GROUND TRUTH:
+["CARLOS JIMENEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[",enez, {10{ ( citiz.S. citiz,iding in Mexicoicali, Mexico, and stopped by the personanner of a smuggling operation that{("CONANT
+["CARLOS JIMENEZ"]
+====================
+
+--- Example 72 ---
+GROUND TRUTH:
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ice-three individual were been locatedicted for chargesien smuggling charges.{ [lando,ana,, Carlos Magalado,riasjendurda, andSMORTANT
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+====================
+
+--- Example 73 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who kept firearms in his house and was holding undocumented aliens against their will.){record_delimiter}("entity"{tuple_delimiter}FIREARMS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Weapons kept by the Defendant in his house.){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Individuals who were being held against their will by the Defendant.){record_delimiter}("entity"{tuple_delimiter}HOUSE{tuple_delimiter}LOCATION{tuple_delimiter}The location where the Defendant kept firearms and held undocumented aliens.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ense number aarms in his home and was arrested themocumented migriens in their will.("recordANT
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who kept firearms in his house and was holding undocumented aliens against their will.){record_delimiter}("entity"{tuple_delimiter}HOREARMS{tuple_delimiter}MEUGGLED_ITEMS{tuple_delimiter}Weapons kept in the defendant.) his house.){record_delimiter}("entity"{tuple_delimiter}HOOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Individuals being were being held against their will.) the Defendant.){record_delimiter}entity"{tuple_delimiter}HOUSE{tuple_delimiter}LOCATION{tuple_delimiter}The place where the Defendant kept firearms.) was undocumented aliens against{record_delimiter}
+====================
+
+--- Example 74 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ANTONIO HURTADO{tuple_delimiter}PERSON{tuple_delimiter}Boat captain involved in a fatal smuggling incident){record_delimiter}("entity"{tuple_delimiter}DOOMED VESSEL{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vessel used for smuggling migrants){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" andERado, a individual captain, the migromed boat,uggling operation100ants, the,2011, the the were died, including found to to to a court in 10 months in prison for{("recordANT
+("entity"{tuple_delimiter}ANTONIO HURTADO{tuple_delimiter}PERSON{tuple_delimiter}Theat captain of in sm do smuggling operation){record_delimiter}("entity"{tuple_delimiter}SMMEMED VESSEL{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Sm boat sm to smuggling migrants){record_delimiter}("
+====================
+
+--- Example 75 ---
+GROUND TRUTH:
+["CHEN", "DEFENDANT"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["AN. [- name theendant X he was her package version to herellly his sm boat that("MEANT
+["CHEN", "DEFENDANT"]
+====================
+
+--- Example 76 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}PERSON{tuple_delimiter}A citizen of Guatemala){record_delimiter}("entity"{tuple_delimiter}PAZ-ORTEGA{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}CRUZ-MORALES{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE{tuple_delimiter}LOCATION{tuple_delimiter}A river that Paz-Ortega and Cruz-Morales waded after traveling with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}LAREDO{tuple_delimiter}LOCATION{tuple_delimiter}A place in Texas where Paz-Ortega and Cruz-Morales regrouped with Mejia-Orosco){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["hba andRrta, a car to the border and thearedo, Texas.{-Gtega and his-Rris wereaved across Rio Grande River
+ were not find through thes. were to permission status to be the country.jia-Orosco was Paz vanien were drove-ed in drove the night in Laredo,("MEANT
+("entity"{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}PERSON{tuple_delimiter}A driveren of thisatemala whotuple_delimiter}("entity"{tuple_delimiter}MEZ-ORTEGA{tuple_delimiter}PERSON{tuple_delimiter}A citiz who wled across Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}CRUZ-MORALES{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE{tuple_delimiter}LOCATION{tuple_delimiter}A river that was-Ortega and Cruz-Morales waded){ crossinging with Mejia-Orosco){record_delimiter}("entity"{tuple_delimiter}LAREDO,tuple_delimiter}LOCATION{tuple_delimiter}A city where Texas where Me-Ortega and Cruz-Morales wgrouped with Mejia-Orosco){record_delimiter}
+====================
+
+--- Example 77 ---
+GROUND TRUTH:
+["CARLOS MARIO HERNANDEZ-LOPEZ", "MARIA GUADALUPE MARTINEZ-GARCIA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individuals the Pien who including and andandez andRopez and Carlos wife-law wife, Maria deladalupe Herninez-Garcia, were stopped by partes inPERCONANT
+["CARLOS MARIO HERNANDEZ-LOPEZ", "MARIA GUADALUPE MARTINEZ-GARCIA"]
+====================
+
+--- Example 78 ---
+GROUND TRUTH:
+["ORTIZ", "DEFENDANTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individual after { [ the the1130 pm { { {iz{ the followingants in vehicleitime vehicle SUpedition SUelling throughbound on Inter--15. and the total who the vehicle seat. he identified not recognize. he vehicle was stoppedelling northbound on("MEANT
+["AGIZ"] "DEFENDANTS"]
+====================
+
+--- Example 79 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" listoperworkerendant{ arresteding a flowures to the vehicleistol. the to the location to another room("ORTANT
+["CO-DEFENDANT"] "CAPTIVES"]
+====================
+
+--- Example 80 ---
+GROUND TRUTH:
+["SOTO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" name of theMM90 between theton, Texas, including theUS-s vehicle was found and and located locationorious location for human smuggling of undiens and aicitlygs.)SMMEANT
+["SOTO"]
+====================
+
+--- Example 81 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIEN SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}Smuggler who helped suspects cross into the U.S.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}Destination country of smuggling operation){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" citizens ag stopped a individualien nameduggler and was have been sm people Easternerss to by authorities authorities. the the United States. andAN and station. thisnesday morning
+(" the arrest arrest, the smed smuggler was authorities that that he vehicle had responsible byomely to help sm10 Middle cross intolegally into the United States. Canada. Mexico and Ireland. andTV television.oting the police. adding-ionage officials.
+("MEANT
+("entity"{tuple_delimiter}SMIEN SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}Anuggler who may Middles cross into the United.S.{record_delimiter}("entity"{tuple_delimiter}MITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}Countryination country for Middleuggled operation.)record_delimiter}("
+====================
+
+--- Example 82 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ILLEGAL ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of eight individuals discovered in a truck.){record_delimiter}("entity"{tuple_delimiter}DRIVER{tuple_delimiter}PERSON{tuple_delimiter}The individual driving the truck, identified as Munoz-Martinez.){record_delimiter}("entity"{tuple_delimiter}MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}The driver of the truck.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle in which eight illegal aliens were discovered.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number who the agreementative stop of found a entities immiens in a vehicleucks which the driver and whooz,Rinez.entityrecordANT
+("entity"{tuple_delimiter}AGLEGAL ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of eight individuals who in a truck.){record_delimiter}("entity"{tuple_delimiter}MRIVER{tuple_delimiter}PERSON{tuple_delimiter}The individual who the truck.) Mun as Munoz-Martinez.){record_delimiter}("entity"{tuple_delimiter}TRUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}The driver of the truck.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle used which the individuals aliens were discovered.){record_delimiter}
+====================
+
+--- Example 83 ---
+GROUND TRUTH:
+["ARCE-JASSO", "AGENT", "GARCIA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" therival (der{ the the she [cia-ed him about his relationshiphip and{("ORTANT
+["ARCE-JASSO", "AGENT G "GARCIA"]
+====================
+
+--- Example 84 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ELENA MORALES{tuple_delimiter}PERSON{tuple_delimiter}An agent on patrol){record_delimiter}("entity"{tuple_delimiter}SR-45{tuple_delimiter}ROUTES{tuple_delimiter}A US highway){record_delimiter}("entity"{tuple_delimiter}DARK GREEN CHEVY TAHOE{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that was suspected){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" {ena (eno and that vehicle vehicle SUvy Subahoe SUing inbound on Inter 10.{("MEANT
+("entity"{tuple_delimiter}ELLENA MOORALES{tuple_delimiter}PERSON{tuple_delimiter}An agent who SRrol){record_delimiter}("entity"{tuple_delimiter}CH-45{tuple_delimiter}ROUTES{tuple_delimiter}A road highway){record_delimiter}("entity"{tuple_delimiter}CHARK GREEN CHEVY TAHOE{tuple_delimiter}VEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that was noticedpected ofrecord_delimiter}
+====================
+
+--- Example 85 ---
+GROUND TRUTH:
+["ALLENDE-GARCIA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" listination between management of led made to theing the group of Piens to including the varietyft and and boatbo and cars and and a boatuck, and be to list personury to conclude that the coordinuggling operation was operating the vehiclesiens across and that thean wasRomecia was in the network.("INAN
+["ALLENDE-GARCIA"]
+====================
+
+--- Example 86 ---
+GROUND TRUTH:
+["PASSENGERS", "CHILD", "FRIEND"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ila in by her individuals persons and { name-year-one-year-year-old daughter and her man ofPERINANT
+["ONEENGERS"] "CHILD", "FRIEND"]
+====================
+
+--- Example 87 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents conducting arrests){record_delimiter}("entity"{tuple_delimiter}SAN ONOFRE STATE BEACH{tuple_delimiter}LOCATION{tuple_delimiter}Beach where aliens landed){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" crossingrol Agency stopped a group of imm10 individuals immiens and a desert morning hours of. the border of of the Diegoofre, Park. the Pendleton. a were alertuggled into the country by a.
+("recordANT
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents whoing theests){record_delimiter}("entity"{tuple_delimiter}SAN ONNOFRE STATE BEACH{tuple_delimiter}LOCATION{tuple_delimiter}Coach where theiens wereed){record_delimiter}("
+====================
+
+--- Example 88 ---
+GROUND TRUTH:
+["LOPEZ-PEREZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["h { referred the messages between theOSz andMerez and the individual individual whoLO ofant)1) andiring about the la and location of funds and and the location of borders Mexican Grande RiverPERMEANT
+["LOPEZ-PEREZ",
+====================
+
+--- Example 89 ---
+GROUND TRUTH:
+["POPOCA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ulations, that sm a with the smien and the and and they deport entry into the United States and("MEANT
+["POPOCA"]
+====================
+
+--- Example 90 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}A Border Patrol Agent of the United States){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED FEMALE MIGRANT{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Illegal immigrants without proper documentation){record_delimiter}("entity"{tuple_delimiter}SILVER CREEK RANCH{tuple_delimiter}LOCATION{tuple_delimiter}A ranch where an undocumented female migrant was in distress){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" crossingrols stopped the United Pas sector and theed to a smcher owner to a illegalocumented imm immant who the El City Ranch.{("recordANT
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Ind group Patrol agent who the El States)record_delimiter}("entity"{tuple_delimiter}ELOCUMENTED FEMALE MIGRANT{tuple_delimiter}PERUGGLED_ITEMS{tuple_delimiter}Alegal immigrant){ proper documentation){record_delimiter}("entity"{tuple_delimiter}SILVER CREEK RANCH{tuple_delimiter}LOCATION{tuple_delimiter}A ranch where an undocumented female migrant was found custress){record_delimiter}
+====================
+
+--- Example 91 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MCBRIDE{tuple_delimiter}PERSON{tuple_delimiter}Individual convicted of alien smuggling and murder){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["DonaldAN andledged to the counts of human degree murder and two counts of illegalien smuggling. three penalty from{("recordANT
+("entity"{tuple_delimiter}MCBRIDE{tuple_delimiter}PERSON{tuple_delimiter}Anividual whoicted of threeien smuggling.) death.)record_delimiter}("
+====================
+
+--- Example 92 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}HSI{tuple_delimiter}ORGANIZATION{tuple_delimiter}A US Law enforcement organization){record_delimiter}("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Defendant of the case){record_delimiter}("entity"{tuple_delimiter}SOFIA MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}A defendant in the case, suspected of alien smuggling){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["AVAN the about a source in aendant #ia (inez was inating the movementuggling ofof a immiens in{("recordANT
+("entity"{tuple_delimiter}HSI{tuple_delimiter}PERGANIZATION{tuple_delimiter}A law government Encement ag){record_delimiter}("entity"{tuple_delimiter}SOENDANT SOtuple_delimiter}PERSON{tuple_delimiter}SOendant Sof the sm){record_delimiter}("entity"{tuple_delimiter}SOFIA MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}Co coordinendant coordin the case){ coordinpected of coordinien smuggling){record_delimiter}
+====================
+
+--- Example 93 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}HENRY GUTIERREZ-ANDRADE{tuple_delimiter}PERSON{tuple_delimiter}A codefendant who handed his cell phone to the captives.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were given a cell phone and told to call their family members.){record_delimiter}("entity"{tuple_delimiter}FAMILY MEMBERS{tuple_delimiter}PERSON{tuple_delimiter}People the captives were told to call.){record_delimiter}("entity"{tuple_delimiter}ORIGINAL SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals to whom the captives were directed not to send money.){record_delimiter}("entity"{tuple_delimiter}CELL PHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}A device handed to the captives to call their family members.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" oreder{ Cierrez andRrade and over personal phone to a authoritiesors. and them to call him relatives members and friends them to to call money money money to the sm locationugglers.SMtupleANT
+("entity"{tuple_delimiter}HENRY GUTIERREZ-ANDRADE{tuple_delimiter}PERSON{tuple_delimiter}An codefendant who handed his cell phone to the captives){{record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Peividuals who were handed the cell phone by told to call their family members.){record_delimiter}("entity"{tuple_delimiter}SMMILY MEMBERS{tuple_delimiter}PERSON{tuple_delimiter}Indople who captives were told not call.){record_delimiter}("entity"{tuple_delimiter}REIGINAL SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Peividuals who whom the remainingives were told not to send the.){record_delimiter}entity"{tuple_delimiter}CELL PHONE{tuple_delimiter}MEANS_OF_TRANMMUNICATION{tuple_delimiter}Device cell handed to the captives.) call their family members.){record_delimiter}
+====================
+
+--- Example 94 ---
+GROUND TRUTH:
+["ROJAS-MENDOZA", "UNKNOWN PERSON"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["cker,Mendeza{ to the the individual number locateuggle a immiens into Mexico to("ORTANT
+["ROJAS-MENDOZA", "UNKNOWN PERSON"]
+====================
+
+--- Example 95 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ASHLEY FLORES{tuple_delimiter}PERSON{tuple_delimiter}An individual who approached the checkpoint at 12:59 a.m.){record_delimiter}("entity"{tuple_delimiter}CHECKPOINT{tuple_delimiter}LOCATION{tuple_delimiter}The location Ashley Flores approached.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["y-five entities after, the the middle time, weley andan, the vehicle- at("recordANT
+("entity"{tuple_delimiter}ASHLEY FLORES{tuple_delimiter}PERSON{tuple_delimiter}An individual who approached the checkpoint.) the41:45 p.m.){record_delimiter}("entity"{tuple_delimiter}VEECKPOINT{tuple_delimiter}LOCATION{tuple_delimiter}The location whereley Flores approached.){record_delimiter}
+====================
+
+--- Example 96 ---
+GROUND TRUTH:
+["DEFENDANT", "SOFIA MARTINEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["AVR the about the source named theendant numberia (inez was inating with movementuggling ofof a immiens in{("CONANT
+["SOENDANT SO "SOFIA MARTINEZ"]
+====================
+
+--- Example 97 ---
+GROUND TRUTH:
+["RICARDO RODRIGUEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" namelistuckss driver owner{ the number of the tr tr that andardo,riguez, { a following address name andROodriguez.PERINANT
+["RICARDO RODRIGUEZ"]
+====================
+
+--- Example 98 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}NISSAN{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle whose windows were rolled down.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" nameier of the buildingORan car found sm up and and the of more of windows were completely downway down.entityrecordANT
+("entity"{tuple_delimiter}FRSSAN{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that front were rolled down.){record_delimiter}("
+====================
+
+--- Example 99 ---
+GROUND TRUTH:
+["PRUSZENSKI"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["icesczyki, hisetans the personup truck inou thating withbound onually close in and driverlights turnedled towardward{("ORTANT
+["PRUSZENSKI",
+====================
+
+--- Example 100 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual arrested for driving a white Chevrolet pickup with thirteen undocumented aliens.){record_delimiter}("entity"{tuple_delimiter}WHITE CHEVROLET PICKUP{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle the defendant was driving.){record_delimiter}("entity"{tuple_delimiter}FALFURRIAS, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}The location near where the defendant was arrested.){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of thirteen people in the vehicle.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 1{ 201{{ theendant number arrested in a vehicle vanvyrolet Subup tr theresurrias, Texas. airteen illegalocumented immiens onentityrecordANT
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who for transport a white Chevrolet pickup near thirteen undocumented aliens.){record_delimiter}("entity"{tuple_delimiter}CHITE CHEVROLET PICKUP{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle driven defendant was driving.){record_delimiter}("entity"{tuple_delimiter}FALFURRIAS, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}The location where which the defendant was arrested.){record_delimiter}entity"{tuple_delimiter}THOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}The group of individualsirteen individuals.) the vehicle.){record_delimiter}
+====================
+
+--- Example 101 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}VIRIDIANA LOPEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who confirmed her knowledge of his involvement in an alien smuggling operation.){record_delimiter}("entity"{tuple_delimiter}JOSE DANIEL SALAZAR-AMBROSIO{tuple_delimiter}PERSON{tuple_delimiter}An individual who confirmed his knowledge of his involvement in an alien smuggling operation.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entities were [giana andopez and Vir Luissinas,Rbassadorio,ind ofants)1 and #2) were the names of thepanvement in the immien smuggling operation and("recordANT
+("entity"{tuple_delimiter}VIRIDIANA LOPEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who confirmed her knowledge of an involvement in an alien smuggling operation.){record_delimiter}("entity"{tuple_delimiter}JOSE DANIEL SALAZAR-AMBROSIO{tuple_delimiter}PERSON{tuple_delimiter}An individual who confirmed his knowledge of his involvement in an alien smuggling operation.){record_delimiter}("
+====================
+
+--- Example 102 ---
+GROUND TRUTH:
+["CANO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ARe { in be in sole of the vehicleup truck that ateenocumented imm migrs.ineding to sm entered entered thelegally into the United States.("MEANT
+["CANO",
+====================
+
+--- Example 103 ---
+GROUND TRUTH:
+["AGENT", "TWO MEN", "TWO WOMEN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individual after [ [ individual { the persons personsiens in in a woodsins a vehicleuck they including of and two women.PERINANT
+["AGENT"] "TWO MEN", "TWO WOMEN"]
+====================
+
+--- Example 104 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["andez{Ropez{ that he was been met for10000 EUos to a individualident individual to Mexico and and then to receive the  of 10000 to an and the of the destination country the United States.("MEAN
+["HERNANDEZ-LOPEZ",
+====================
+
+--- Example 105 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Took custody of migrants){record_delimiter}("entity"{tuple_delimiter}SANTA CATALINA ISLAND{tuple_delimiter}LOCATION{tuple_delimiter}Location of migrant transfer){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["PSS.A Patrol Agency stopped partody of a10 individuals nationals and night. of the Barbaraina,.{("recordANT
+("entity"{tuple_delimiter}UORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Ag take custody of Mexicanants){record_delimiter}("entity"{tuple_delimiter}MANTA CATALINA ISLAND{tuple_delimiter}LOCATION{tuple_delimiter}West where theant det){record_delimiter}
+====================
+
+--- Example 106 ---
+GROUND TRUTH:
+["DEFENDANT GUARDADO-MEZEN", "CO-DEFENDANTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [([11{([2019(" theendant{i andRzaa his other-workendants were to the addresspartment in they following immigrants were located held byMEMEANT
+["DEFENDANT GUARDADO-MEZEN", "CO-DEFENDANTS"]
+====================
+
+--- Example 107 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}TRUNK PASSENGERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who admitted that they were in the country illegally.){record_delimiter}("entity"{tuple_delimiter}COUNTRY{tuple_delimiter}LOCATION{tuple_delimiter}The location where the trunk passengers were illegally.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" numberend of were included that they were travel the vehicle oflegally.("recordANT
+("entity"{tuple_delimiter}TRUNK PASSENGERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who admitted they they were in the country illegally.){record_delimiter}("entity"{tuple_delimiter}COUNTRY{tuple_delimiter}LOCATION{tuple_delimiter}The country where they trunk passengers were illegally.){record_delimiter}
+====================
+
+--- Example 108 ---
+GROUND TRUTH:
+["SMUGGLERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ila her personuggler personien were caught caught to a United to location in located it smendant was locatedous about the smuggglers anding the locationabouts. she as the sm national whoien whoSMINANT
+["SMUGGER",
+====================
+
+--- Example 109 ---
+GROUND TRUTH:
+["INDIVIDUALS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ice-three individual were stopped with theien smuggling and 100 individuals nationals. the,{("ORTANT
+["TWDIVIDUALS",
+====================
+
+--- Example 110 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ABDULLAH YUSUF{tuple_delimiter}PERSON{tuple_delimiter}An individual who pulled a flatbed trailer north on Interstate 35.){record_delimiter}("entity"{tuple_delimiter}FLATBED TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle Abdullah Yusuf was pulling.){record_delimiter}("entity"{tuple_delimiter}INTERSTATE 35{tuple_delimiter}ROUTES{tuple_delimiter}The highway on which Abdullah Yusuf was traveling north.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the (11{22010{ theullah (usuf ( a vehicle rate triler across of thestate 15.MErecordANT
+("entity"{tuple_delimiter}ABDULLAH YUSUF{tuple_delimiter}PERSON{tuple_delimiter}An individual who pulled a flatbed trailer north on Interstate 35.){record_delimiter}("entity"{tuple_delimiter}FLATBED TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle pulledullah Yusuf pulled pulling.){record_delimiter}("entity"{tuple_delimiter}INTERSTATE 35{tuple_delimiter}ROUTES{tuple_delimiter}The highway Abd which Abdullah Yusuf pulled pullinging.).){record_delimiter}
+====================
+
+--- Example 111 ---
+GROUND TRUTH:
+["TWO MEN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list entities who were with inoard the boat were { deport of enteringien smuggling and{("ORTANT
+["TWO MEN"]
+====================
+
+--- Example 112 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who, with his co-defendants, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who, with the Movant, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Groups of people who were kidnapped and held for ransom.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ing { his wife-workendantants are agoing least one occasions occasions tonapped and held host ransom the individuals of peopleocumented migriens andentityrecordANT
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who participated along his co-defendants, kid on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who with with Mov movant, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}PERUGGLED_ITEMS{tuple_delimiter}Ind of individuals who were kidnapped and held for ransom.){record_delimiter}
+====================
+
+--- Example 113 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}KIM{tuple_delimiter}PERSON{tuple_delimiter}Operator of a marine consulting and recruiting firm){record_delimiter}("entity"{tuple_delimiter}DALIAN, NORTHEAST CHINA{tuple_delimiter}LOCATION{tuple_delimiter}Location of Marine International){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ber a in a private transportancy business fre plaruitment service in and Cons, in theian, Chinaortheast China, and the and{("tupleANT
+("entity"{tuple_delimiter}KIM{tuple_delimiter}PERSON{tuple_delimiter}An of Marine marine consulting and crewruiting business){record_delimiter}("entity"{tuple_delimiter}MAALIAN{ NORTHEAST CHINA{tuple_delimiter}LOCATION{tuple_delimiter}Location where the International){record_delimiter}("
+====================
+
+--- Example 114 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}UNDOCUMENTED IMMIGRANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals smuggled by sea into the United States){record_delimiter}("entity"{tuple_delimiter}PANGA BOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Small high-speed vessel used to smuggle immigrants){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}Destination country of the smuggling route){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" were going to the country States of a feraddle and.ing from high spe. the seas.{ to theviews with the captainocumented immigrants, the boat, they least point they they panga boat firebor and into and fellized. leaving therified imm into the water.("MEANT
+("entity"{tuple_delimiter}UNOCUMENTED IMMIGRANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals whouggled into human into the United States.)record_delimiter}("entity"{tuple_delimiter}UNANGA BOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Smugg boat speedspeed boat used to transportuggle undigrants intorecord_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}Countryination country){ the puggled operation){record_delimiter}
+====================
+
+--- Example 115 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PRUSZENSKI{tuple_delimiter}PERSON{tuple_delimiter} A Border ("entity"{tuple_delimiter}BARON{tuple_delimiter}PERSON{tuple_delimiter} A Border Patrol Agent on duty){record_delimiter}("entity"{tuple_delimiter}PICKUP TRUCK CAMPER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle that was spotted by agents Pruszenski and Baron){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["icesynki and hisetotted a vehicleup truck inper anding inbound onually close in and locationlights turnedled towardward{("recordANT
+("entity"{tuple_delimiter}PRUSZENSKI{tuple_delimiter}PERSON{tuple_delimiter}An person Patpat"{tuple_delimiter}BARON{tuple_delimiter}PERSON{tuple_delimiter} A Border Patrol agent){ the attuple_delimiter}("entity"{tuple_delimiter}PICKUP TRUCK CAMPER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle sp was spotted travel Pr){uszenski and Baron){record_delimiter}("
+====================
+
+--- Example 116 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GARY HASTON{tuple_delimiter}PERSON{tuple_delimiter} A detective in this case){record_delimiter}("entity"{tuple_delimiter}HEATHER VARGAS{tuple_delimiter}PERSON{tuple_delimiter} A detective in this case){record_delimiter}("entity"{tuple_delimiter}IH-35{tuple_delimiter}ROUTES{tuple_delimiter} An interstate highway in the US){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 10{ 201{{ the Smith and Sheriff's Office madeives found anduntings and Michaelather Haugas found stoppeding inbound on Inter--15 in
+("recordANT
+("entity"{tuple_delimiter}WIARY HASTON{tuple_delimiter}PERSON{tuple_delimiter}A detective with the case){record_delimiter}("entity"{tuple_delimiter}HEATHER VARGAS{tuple_delimiter}PERSON{tuple_delimiter} A detective in this case){record_delimiter}entity"{tuple_delimiter}IH-35{tuple_delimiter}ROUTES{tuple_delimiter} The interstate highway){ Texas case){record_delimiter}
+====================
+
+--- Example 117 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of 84 individuals who were loaded into a truck.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle into which the 84 aliens were loaded.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" again entities100ien were in on they numberucks the  hours after.("recordANT
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of individuals84 individuals who were loaded into a truck.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that which the al84 aliens were loaded.){record_delimiter}
+====================
+
+--- Example 118 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [ (10{([2019{ thez anddelonindo and stoppedained in authoritiesMMG thened to("MEANT
+["DIAZ-GALIANA"]
+====================
+
+--- Example 119 ---
+GROUND TRUTH:
+["GRUBER"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ector the{anger{ that the of to theitime sm smuggling and{("MEANT
+["GRUBER"]
+====================
+
+--- Example 120 ---
+GROUND TRUTH:
+["VIRIDIANA LOPEZ", "JOSE DANIEL SALAZAR-AMBROSIO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individuals { [giana andopez and Vir Lsinas,Rbassadorio,PER ofants)1 and #2) were the names of thepanvement in the internationalien smuggling operation.)("INANT
+["VIRIDIANA LOPEZ", "JOSE DANIEL SALAZAR-AMBROSIO"]
+====================
+
+--- Example 121 ---
+GROUND TRUTH:
+["ERNESTO DELGADO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["esto,gado, { of the vessel, wasized in the 2010, { in the death of life lives, including located to to 10 years inment for{("CONANT
+["ERNESTO DELGADO"]
+====================
+
+--- Example 122 ---
+GROUND TRUTH:
+["AGENTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list list occurred in [ between and the 1:00 pm.ena. and a from contactified of the local citizen that the possibleicious vehicle that the Diego,. California theonado,{("INANT
+["AGENTS"]
+====================
+
+--- Example 123 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PBSO{tuple_delimiter}ORGANIZATION{tuple_delimiter}A law enforcement organization involed in the case){record_delimiter}("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Defendant of the case){record_delimiter}("entity"{tuple_delimiter}CELLPHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}A device that was examined in digital forensics by PBSO){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["AR_ME a search searchensic investigationination of the computerendant's computer phone and{("recordANT
+("entity"{tuple_delimiter}DEFBSO{tuple_delimiter}PERGANIZATION{tuple_delimiter}A law enforcement ag that theled in the digital.)record_delimiter}("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Theendant in the case){record_delimiter}("entity"{tuple_delimiter}CELL PONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}Cell cell used was usedined by the forensic){ PBSO){record_delimiter}
+====================
+
+--- Example 124 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS", "MEXICAN NATIONALS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" crossingrol Agency {ed the number P on one that were not nationals.legally entering in the United.S.A("ORTANT
+["BORDER PATROL AGENTS", "PASSXICAN NATIONALS"]
+====================
+
+--- Example 125 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MEXICAN NAVY{tuple_delimiter}ORGANIZATION{tuple_delimiter}A law enforcement organization in the maritime domain){record_delimiter}("entity"{tuple_delimiter}SPEEDBOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vessel){record_delimiter}("entity"{tuple_delimiter}ISLA CLARIÓN, MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}A location in the high seas){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" Pometerat was founddicted in the Coast Navy in the high seas of and to10 miles milesutical miles off of thela deam.. and.{("recordANT
+("entity"{tuple_delimiter}SXICAN NAVY{tuple_delimiter}PERGANIZATION{tuple_delimiter}A Mexican enforcement ag){ Mexico Mexicanitime sector){record_delimiter}("entity"{tuple_delimiter}ISPEEDBOAT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vessel interrecord_delimiter}("entity"{tuple_delimiter}ISLA CLARIÓN{ MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}A location where the mar seas){record_delimiter}
+====================
+
+--- Example 126 ---
+GROUND TRUTH:
+["JOSE JALOMOS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [ list of [ or10st([2019{ the Patrol Ag J Rodavier [ and who individual11-year-an of was stopped a stops duties along the Highway 15 in in of of theitoides, Texas,{("INANT
+["JOSE JALOMOS"]
+====================
+
+--- Example 127 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" listings theading for theGRA as Company the entityrier and and the listdem and and was't match theOURuf's triler and and a address country and than theZurn,, and included a destination address other the Carolina. which the RoadFLORTANT
+["USAUSUF"]
+====================
+
+--- Example 128 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}RICARDO RODRIGUEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who responded that there were two more in the trunk.){record_delimiter}("entity"{tuple_delimiter}TRUNK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A location where there were two more people.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ardo (riguez,ed to he were no individuals individuals the vehicleuck ofentityrecordANT
+("entity"{tuple_delimiter}RICARDO RODRIGUEZ{tuple_delimiter}PERSON{tuple_delimiter}An individual who responded to there were two more in the trunk.){record_delimiter}("entity"{tuple_delimiter}TRUNK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle where two were two more.).){record_delimiter}
+====================
+
+--- Example 129 ---
+GROUND TRUTH:
+["DESCARGAS", "JAQUEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["cendar, {ime to was pay to following about following day.("CONANT
+["DESCARGAS", "JAQUEZ"]
+====================
+
+--- Example 130 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" theandoz andRopez{ hisinez-Garcia were the the border' side of of they were a person who in the passenger side ofPERINANT
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+====================
+
+--- Example 131 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ORTIZ{tuple_delimiter}PERSON{tuple_delimiter}An agent who observed the defendants' maroon Ford Expedition.){record_delimiter}("entity"{tuple_delimiter}DEFENDANTS'{tuple_delimiter}PERSON{tuple_delimiter}The individuals whose vehicle was observed by Agent Ortiz.){record_delimiter}("entity"{tuple_delimiter}MAROON FORD EXPEDITION{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle observed by Agent Ortiz.){record_delimiter}("entity"{tuple_delimiter}IH-35{tuple_delimiter}ROUTES{tuple_delimiter}The highway the vehicle was traveling on.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entities after, the the 1130 pm, the {iz and the followingants in vehicleitime vehicle SUpedition SUelling throughbound on Inter--15. and the total who the vehicle seat. was identified not recognize. he vehicle was stoppedelling northbound onMEMEANT
+("entity"{tuple_delimiter}AGIZ{tuple_delimiter}PERSON{tuple_delimiter}An agent who observed the defendants' maroon Ford Expedition trav{record_delimiter}("entity"{tuple_delimiter}DEFENDANTS{ MARtuple_delimiter}MESON{tuple_delimiter}The individuals who vehicle was observed by Agent Ortiz.){record_delimiter}("entity"{tuple_delimiter}MAROON FORD EXPEDITION{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle that by Agent Ortiz.){record_delimiter}("entity"{tuple_delimiter}IH-35{tuple_delimiter}ROUTES{tuple_delimiter}The road the vehicle was observeding on.){record_delimiter}
+====================
+
+--- Example 132 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The destination country for the smuggled individuals.){record_delimiter}("entity"{tuple_delimiter}SMUGGLED INDIVIDUALS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}People who paid to be smuggled into the United States.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entitiesg and the were for hundred dollars for a partuggled into the United States ofSMrecordANT
+("entity"{tuple_delimiter}SMITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}A country country where the smuggled persons){{record_delimiter}("entity"{tuple_delimiter}SMUGGLED INDIVIDUALS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Theople who paid to be smuggled into the United States.){record_delimiter}
+====================
+
+--- Example 133 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An individual arrested with four undocumented aliens in her car.){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of four people found in the Movant's car.){record_delimiter}("entity"{tuple_delimiter}CAR{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle the Movant was driving when arrested.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the of201{, theember # in in entering entered found by a enforcement officials theteenocumented immiens in a vehicle.MErecordANT
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who for und undocumented aliens in her car.){record_delimiter}("entity"{tuple_delimiter}FOOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}F group of four individuals.) in Mov carant's car.){record_delimiter}("entity"{tuple_delimiter}CAR{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle used Movant was stopped when she.){record_delimiter}
+====================
+
+--- Example 134 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}TREVINO{tuple_delimiter}PERSON{tuple_delimiter}An individual who approached the checkpoint at 12:57 a.m.){record_delimiter}("entity"{tuple_delimiter}CHECKPOINT{tuple_delimiter}LOCATION{tuple_delimiter}The location Defendant Trevino approached.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the11:00 PM listm. theense_vorino and the locationpoint at("recordANT
+("entity"{tuple_delimiter}TREVINO{tuple_delimiter}PERSON{tuple_delimiter}An individual who approached the checkpoint.) 12:57 a.m.){record_delimiter}("entity"{tuple_delimiter}CHECKPOINT{tuple_delimiter}LOCATION{tuple_delimiter}The location whereendant Trevino approached.){record_delimiter}
+====================
+
+--- Example 135 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PETITIONER{tuple_delimiter}PERSON{tuple_delimiter}The individual who identified himself as the driver of the vehicle.){record_delimiter}("entity"{tuple_delimiter}DRIVER{tuple_delimiter}PERSON{tuple_delimiter}The role the Petitioner identified himself as.){record_delimiter}("entity"{tuple_delimiter}VEHICLE{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle involved in the accident.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" numberaler{ the as a individual of the vehicle that in the accident.("recordANT
+("entity"{tuple_delimiter}PETITIONER{tuple_delimiter}PERSON{tuple_delimiter}An individual who identified himself as the driver of the vehicle involved{record_delimiter}("entity"{tuple_delimiter}VERIVER{tuple_delimiter}PERSON{tuple_delimiter}The individual of individualitioner identified himself as.){record_delimiter}("entity"{tuple_delimiter}VEHICLE{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle involved in the accident.){record_delimiter}("
+====================
+
+--- Example 136 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CUBAN SMUGGLING RING MEMBERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals arrested for smuggling in Florida){record_delimiter}("entity"{tuple_delimiter}SOUTH FLORIDA{tuple_delimiter}LOCATION{tuple_delimiter}Location of indictment){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["teen of the groupan smuggling organization were caught in takenicted for a Carolina.{("recordANT
+("entity"{tuple_delimiter}CUBAN SMUGGLING RING{MBERS{tuple_delimiter}SMSON{tuple_delimiter}Sividuals who and smuggling.) South.)record_delimiter}("entity"{tuple_delimiter}SOUTH FLORIDA{tuple_delimiter}LOCATION{tuple_delimiter}Where where arrestictment){record_delimiter}
+====================
+
+--- Example 137 ---
+GROUND TRUTH:
+["ROJAS-MENDOZA", "CO-CONSPIRATOR", "GUIDES", "DRIVER"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["cker,Mendeza{ the listictor to smuggle undiens into the United.S. and by wife-conspirators, Mexico to the Carolina, and in him in a hotel in and up al aliens and a hotely and and the al to a vehicle seat seat of the aliens were transport the back area of and then later be paymentation for the role in the smiracy.("NOTAN
+["ROJAS-MENDOZA", "CO-CONSPIRATOR", "DUIDES", "DRIVER"]
+====================
+
+--- Example 138 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["OURuf, that packagekered fee had him for10000, smul a package of("MEANT
+["YUSUF"]
+====================
+
+--- Example 139 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who instructed the captives.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were instructed to tell their family members to send money.){record_delimiter}("entity"{tuple_delimiter}FAMILY MEMBERS{tuple_delimiter}PERSON{tuple_delimiter}People the captives were instructed to contact.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals to whom the release money was to be sent.){record_delimiter}("entity"{tuple_delimiter}ORIGINAL SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals to whom the release money was not to be sent.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["enseants ined to smains to move the story members to move money money of to the smoperconendants. than to the capt recipugglers.entityMEANT
+("entity"{tuple_delimiter}DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who instructed the captives to{record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were instructed to tell their family members to send the to{record_delimiter}("entity"{tuple_delimiter}SMMILY MEMBERS{tuple_delimiter}PERSON{tuple_delimiter}Indople who captives were instructed to tell.){record_delimiter}("entity"{tuple_delimiter}SM-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who whom the release money was to be sent.){record_delimiter}("entity"{tuple_delimiter}ORIGINAL SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals to whom the release money was to to be sent.){record_delimiter}
+====================
+
+--- Example 140 ---
+GROUND TRUTH:
+["AGENTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["RS.As and Border Protection (ORP)
+ Marsh Marine Operations (AMO)
+ {ed a and boat that a peopleiens on includingator it permission or the international between theEXuga and the. Thomas.
+("INANT
+["AGENTS"]
+====================
+
+--- Example 141 ---
+GROUND TRUTH:
+["ARCE-JASSO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["rival (der{ the vehicle1999 Hy vehicleougar and the location ofrol officepoint in in theMM15 betweenMEMEANT
+["ARCE-JASSO"]
+====================
+
+--- Example 142 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SILVA{tuple_delimiter}PERSON{tuple_delimiter}A border patrol agent who was on patrol){record_delimiter}("entity"{tuple_delimiter}INTERSTATE 35{tuple_delimiter}ROUTE{tuple_delimiter}An interstate route in the U.S.{record_delimiter}("entity"{tuple_delimiter}ROUTE 133{tuple_delimiter}ROUTE{tuple_delimiter}An interstate route in the U.S.{record_delimiter}("entity"{tuple_delimiter}SERVICE RADIO{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}Agent Silva heard the report on his service radio about the white pickup truck possibly loaded with illegal aliens){record_delimiter}("entity"{tuple_delimiter}WHITE PICKUP TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle potentially loaded with illegal aliens){record_delimiter}("entity"{tuple_delimiter}ILLEGAL ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}The illegal aliens were suspected to be loaded on the white pickup truck)
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" { ( ining a searchving surverol in the city of thestate 10 and Inter 100. she was a sound of the personal provider that a sm vanup truck that being with illegal immiens.{("recordANT
+("entity"{tuple_delimiter}SILVA{tuple_delimiter}PERSON{tuple_delimiter}An ro patrol agent conduct heard conduct arol){record_delimiter}("entity"{tuple_delimiter}INTERSTATE 35{tuple_delimiter}ROUT{tuple_delimiter}The interstate highway){ Texas area.S. wheretuple_delimiter}){entity"{tuple_delimiter}ROUT 133{tuple_delimiter}AUTE{tuple_delimiter}A interstate route in Texas U.S.{record_delimiter}("entity"{tuple_delimiter}PIVICE RADIO{tuple_delimiter}MEANS OFOF_TRANMMUNICATION{tuple_delimiter}A Silva' the report on his service radio){ the white pickup truck possibly loaded with illegal aliens){record_delimiter}("entity"{tuple_delimiter}WHITE PICKUP TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle possibly loaded with illegal aliens){record_delimiter}entity"{tuple_delimiter}ILLEGAL ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A possible aliens potentially potentiallypected to be in into the white pickup truck){
+====================
+
+--- Example 143 ---
+GROUND TRUTH:
+["TREVINO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" least([1:00PM list([. theense("vorino and the locationpoint at("INI
+["TREVINO"]
+====================
+
+--- Example 144 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}FEDERAL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Law enforcement involved in the arrests){record_delimiter}("entity"{tuple_delimiter}OREGON COASTLINE{tuple_delimiter}LOCATION{tuple_delimiter}Shoreline where arrests were made){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" ag found a a10 individuals in a locationsings in the U Coastline. the ands{("recordANT
+("entity"{tuple_delimiter}FEDERAL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Indaw enforcement agents in the arrestests){record_delimiter}("entity"{tuple_delimiter}ORREGON COASTLINE{tuple_delimiter}LOCATION{tuple_delimiter}Locationiteseline where landests were made){record_delimiter}
+====================
+
+--- Example 145 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The destination country for the smuggling.){record_delimiter}("entity"{tuple_delimiter}MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}The country of origin for the smuggling.){record_delimiter}("entity"{tuple_delimiter}CENTRAL AMERICAN COUNTRIES{tuple_delimiter}LOCATION{tuple_delimiter}Other countries of origin for the smuggling.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entity a aements to travel inuggled into the country States of Mexico. and they were beenveled to. countries American countries.entityrecordANT
+("entity"{tuple_delimiter}SMITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}A country country where travel smuggled operation{record_delimiter}("entity"{tuple_delimiter}MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}The country from origin for the smuggling.){record_delimiter}entity"{tuple_delimiter}CENTRAL AMERICAN COUNTRIES{tuple_delimiter}LOCATION{tuple_delimiter}Other countries from origin for the smuggling.){record_delimiter}
+====================
+
+--- Example 146 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who is a citizen of the Dominican Republic and entered the United States illegally.){record_delimiter}("entity"{tuple_delimiter}DOMINICAN REPUBLIC{tuple_delimiter}LOCATION{tuple_delimiter}The country of citizenship for the Movant.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country the Movant entered illegally.){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE RIVER{tuple_delimiter}LOCATION{tuple_delimiter}The river the Movant waded across.){record_delimiter}("entity"{tuple_delimiter}HIDALGO, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}The location near the Port of Entry where the Movant entered.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" theing by the orhip, heember ( that he was not citizen of the Unitedican Republic. was entered the United States illegally. crossingading across the Rio Grande River. the Texasidalgo County Texas area location of Entry. the day day.SCrecordANT
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who admitted a citizen of the Dominican Republic and entered the United States illegally by{record_delimiter}("entity"{tuple_delimiter}RIMINICAN REPUBLIC{tuple_delimiter}LOCATION{tuple_delimiter}The country of citizenship.) the individualant.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country of Movant entered illegally.){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE RIVER{tuple_delimiter}LOCATION{tuple_delimiter}The river the Movant crossedaded across.){record_delimiter}("entity"{tuple_delimiter}HIDALGO, TEXAS{tuple_delimiter}LOCATION{tuple_delimiter}The location of which Port of Entry where the Movant was the{record_delimiter}
+====================
+
+--- Example 147 ---
+GROUND TRUTH:
+["CARLOS JIMENEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[",enez, {10{ ( citiz.S. citiz,iding in Mexicoicali, Mexico, and stopped by the personanner of a smuggling operation that{("CONANT
+["CARLOS JIMENEZ"]
+====================
+
+--- Example 148 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CANTU{tuple_delimiter}PERSON{tuple_delimiter}An individual recruited to transport illegal aliens.){record_delimiter}("entity"{tuple_delimiter}JEFFERSON{tuple_delimiter}PERSON{tuple_delimiter}An individual recruited to transport illegal aliens.){record_delimiter}("entity"{tuple_delimiter}INDIVIDUAL{tuple_delimiter}PERSON{tuple_delimiter}An unnamed person who recruited Cantu and Jefferson.){record_delimiter}("entity"{tuple_delimiter}ILLEGAL ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}People who were to be transported.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ab ( his ( inruited to the Federal entity to work a immiens fromentityrecordANT
+("entity"{tuple_delimiter}CANTU{tuple_delimiter}PERSON{tuple_delimiter}An individual whoruited to transport illegal aliens.){record_delimiter}("entity"{tuple_delimiter}JEFFERSON{tuple_delimiter}PERSON{tuple_delimiter}An individual recruited to transport illegal aliens.){record_delimiter}("entity"{tuple_delimiter}ILDIVIDUAL{tuple_delimiter}PERSON{tuple_delimiter}An individualident individual rec recruited Cantu and Jefferson.){record_delimiter}entity"{tuple_delimiter}ALLEGAL ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Theople rec were rec be transported.){record_delimiter}
+====================
+
+--- Example 149 ---
+GROUND TRUTH:
+["PACHECO", "CHAPA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" the number of to the date ofrol Agencypoint, theyEReco and theman and the location phone number told hima to they go the group atPERCONANT
+["PACHECO", "CHAPA"]
+====================
+
+--- Example 150 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BAHAMIAN MALE{tuple_delimiter}PERSON{tuple_delimiter}Smuggling suspect arrested){record_delimiter}("entity"{tuple_delimiter}PALM BEACH{tuple_delimiter}LOCATION{tuple_delimiter}Town where smuggling alert occurred){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" crossingrol Agency stopped stoppeded to the smitime incidentuggling operation that the G of _m Spr, the a smamas sm smpected of smuggling.ants. the to Mexico countryican Republic and Mexicoaiti.{("recordANT
+("entity"{tuple_delimiter}BHAMIAN MALE{tuple_delimiter}PERSON{tuple_delimiter}Anuggler migr){ inrecord_delimiter}("entity"{tuple_delimiter}CHALM BEACH{location_delimiter}LOCATION{tuple_delimiter}Town where smuggling event was){record_delimiter}("
+====================
+
+--- Example 151 ---
+GROUND TRUTH:
+["LUCIA ROMERO-ALVAREZ", "DIEGO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individual the P on orcia,ero,Ccz, {imon that was the packageuggled' Juan Rom be her to theadalala to Mexico United.S. and she contact, Gu, for to1,00 her return in{("NOTANT
+["LUCIA ROMERO-ALVAREZ", "DIEGO"]
+====================
+
+--- Example 152 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}1992{tuple_delimiter}DATE{tuple_delimiter}Year in which Lee made contact with Weng Yu Hui){record_delimiter}("entity"{tuple_delimiter}LEE{tuple_delimiter}PERSON{tuple_delimiter}A person involved in human smuggling){record_delimiter}("entity"{tuple_delimiter}WENG YU HUI{tuple_delimiter}PERSON{tuple_delimiter}A human smuggler){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 2999, anded aAL and andsu and a individualien smuggler,{("recordANT
+("entity"{tuple_delimiter}LE992{tuple_delimiter}PER{tuple_delimiter}The the which Lee contact contact with Weng Yu Hui){record_delimiter}("entity"{tuple_delimiter}LEE{tuple_delimiter}PERSON{tuple_delimiter}Contact contact who in contact smuggling){record_delimiter}("entity"{tuple_delimiter}WENG YU HUI{tuple_delimiter}PERSON{tuple_delimiter}An sm smuggler){record_delimiter}
+====================
+
+--- Example 153 ---
+GROUND TRUTH:
+["AGENTS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["h {pected of location immien in in in the humanitime incidentuggling operation. theicing the they boat crew of inaring cl clothing and and andne-on shoes and backaterspants.{ents also sus that the sm was travel belongings were pack and{("INANT
+["AGENTS"]
+====================
+
+--- Example 154 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ORTIZ{tuple_delimiter}PERSON{tuple_delimiter}An agent who noticed the vehicle was only occupied by a passenger and a driver.){record_delimiter}("entity"{tuple_delimiter}CRYSTAL DOERR{tuple_delimiter}PERSON{tuple_delimiter}The passenger in the vehicle.){record_delimiter}("entity"{tuple_delimiter}JESSE DOMINGUEZ{tuple_delimiter}PERSON{tuple_delimiter}The driver of the vehicle.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" {iz { a the was a possible by one andstal andyle. that Michaelavier Ortinguez.entitytupleANT
+("entity"{tuple_delimiter}ORTIZ{tuple_delimiter}PERSON{tuple_delimiter}An agent who noticed that vehicle.) occupied occupied by Cry passenger and driver driver.){record_delimiter}("entity"{tuple_delimiter}CRYSTAL DOERR{tuple_delimiter}PERSON{tuple_delimiter}A passenger who the vehicle.){record_delimiter}("entity"{tuple_delimiter}JESSE DOMINGUEZ{tuple_delimiter}PERSON{tuple_delimiter}The driver of the vehicle.){record_delimiter}("
+====================
+
+--- Example 155 ---
+GROUND TRUTH:
+["ELENA TORRES", "MANUEL RUIZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [ { [ 14th {2ctor19{ theLIive actionrol stopped made in theER California Park toers toena andres and Jose Toriz. the locationgar Terminal of Sansenada, Mexico,
+("INANT
+["ELENA TORRES", "MAUEL RUIZ"]
+====================
+
+--- Example 156 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MEDINA{tuple_delimiter}PERSON{tuple_delimiter}An individual who testified that Avila was armed with a 9-mm handgun.){record_delimiter}("entity"{tuple_delimiter}AVILA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was armed with a 9-mm handgun and threatened the hostages.){record_delimiter}("entity"{tuple_delimiter}9-MM HANDGUN{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}The weapon Avila was armed with.){record_delimiter}("entity"{tuple_delimiter}HOSTAGES{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Individuals who were threatened by Avila.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ina,imon that heila was the with a kn1mmmm pgun and that him authorities of to they was kill them kill them if theythey did to fle." if not else that{("recordANT
+("entity"{tuple_delimiter}MEDINA{tuple_delimiter}PERSON{tuple_delimiter}An individual who testified that Avila was armed with a 9-mm handgun and{record_delimiter}("entity"{tuple_delimiter}AVILA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was armed with a 9-mm handgun and told the hostages.){record_delimiter}("entity"{tuple_delimiter}ME-MM HANDGUN{tuple_delimiter}MEUGGLED_ITEMS{tuple_delimiter}The weapon Avila was armed with.){record_delimiter}entity"{tuple_delimiter}MEAGES{tuple_delimiter}PERUGGLED_ITEMS{tuple_delimiter}Individuals who were threatened by Avila.){record_delimiter}
+====================
+
+--- Example 157 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter}Two individuals who were taken across the Rio Grande on a raft into the United States with several other people.){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE{tuple_delimiter}LOCATION{tuple_delimiter}The river that the two aliens were taken across.){record_delimiter}("entity"{tuple_delimiter}RAFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle used to take the two aliens across the Rio Grande.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country that the two aliens were taken into.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" number entitiesien who in to the border Grande and a boatft and the United States. the other individuals includingentityrecordANT
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMSON{tuple_delimiter}Two individuals who were taken across the Rio Grande on a raft into the United States.) several other people.){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE{tuple_delimiter}LOCATION{tuple_delimiter}The location across was al aliens were taken across.){record_delimiter}("entity"{tuple_delimiter}UNFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle that to transport the al aliens across the Rio Grande.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country into the two aliens were taken into.){record_delimiter}
+====================
+
+--- Example 158 ---
+GROUND TRUTH:
+["RON TORRALBA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" crossingrol Agencyents {aldresba and{ at group thating across the 101 and("INANT
+["RON TORRALBA"]
+====================
+
+--- Example 159 ---
+GROUND TRUTH:
+["CHILD'S MOTHER"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" the [ied the location' name abouts name{ he response' that the was provided bornrehended by smuggling childreniens into the2019.("ORTANT
+["CHILD'S MOTHER"]
+====================
+
+--- Example 160 ---
+GROUND TRUTH:
+["CAPTAIN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["AVRations Louis stop the following of the vessel that violien smuggling and human captainteeniens on entering entry into the United States of{("INANT
+["CAPTAIN"]
+====================
+
+--- Example 161 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}VESSEL{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A suspicious vessel carrying undocumented migrants){record_delimiter}("entity"{tuple_delimiter}WHITE PICKUP TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A truck involved near the boat dock){record_delimiter}("entity"{tuple_delimiter}BOAT TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Trailer associated with the pickup truck){record_delimiter}("entity"{tuple_delimiter}SHELTER ISLAND BOAT DOCK{tuple_delimiter}LOCATION{tuple_delimiter}Location where the vessel was intercepted){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["ANSS ( at individual in the portoreed Marina r and were that10 illegal on theboard the were notlegally entering in the United.S. individuals individuals were also in the the total boatup truck and a.ilers.
+("MEANT
+("entity"{tuple_delimiter}MIESSEL{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}White whiteicious vehicle that ocumented migrants.)record_delimiter}("entity"{tuple_delimiter}SHITE PICKUP TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicleuck used in the Sh dock){record_delimiter}("entity"{tuple_delimiter}BOAT TRAILER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Ailer used with the whiteup truck){record_delimiter}entity"{tuple_delimiter}SHELTER ISLAND BOAT DOCK{tuple_delimiter}LOCATION{tuple_delimiter}A where the vessel was docked){record_delimiter}
+====================
+
+--- Example 162 ---
+GROUND TRUTH:
+["RUBEN MENDOZA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" crossingrol Agency {en RubARTza { stopped dutyrol along found a groupuck that through{("MEANT
+["RUBEN MENDOZA"]
+====================
+
+--- Example 163 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PICKUP{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that turned off Highway 59 and onto FM 2050.){record_delimiter}("entity"{tuple_delimiter}HIGHWAY 59{tuple_delimiter}ROUTES{tuple_delimiter}The highway from which the pickup turned off.){record_delimiter}("entity"{tuple_delimiter}FM 2050{tuple_delimiter}ROUTES{tuple_delimiter}The road the pickup turned onto.){record_delimiter}("entity"{tuple_delimiter}HOUSTON{tuple_delimiter}LOCATION{tuple_delimiter}The city the pickup was heading away from after turning onto FM 2050.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" numberup tr travel around and the 10 and and leavinging a accidentpoint at and then Highway 1109. which it the subsequental of direction it it turned to south south. from the,entityrecordANT
+("entity"{tuple_delimiter}PICKUP{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that turned right Highway 59 and onto FM 2050.){record_delimiter}("entity"{tuple_delimiter}HIGHWAY 59{tuple_delimiter}ROUTES{tuple_delimiter}A highway the which the pickup turned.).){record_delimiter}("entity"{tuple_delimiter}FM 2050{tuple_delimiter}ROUTES{tuple_delimiter}The highway onto pickup turned onto.){record_delimiter}("entity"{tuple_delimiter}HOUSTON{tuple_delimiter}LOCATION{tuple_delimiter}The city where pickup was heading away from.) turning off FM 2050.){record_delimiter}
+====================
+
+--- Example 164 ---
+GROUND TRUTH:
+["MUNOZ-MARTINEZ"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list { the extraative stop of found the ( immiens in the vehicleucks including the driver and whoir,Rinez,PERCONANT
+["MUNOZ-MARTINEZ"]
+====================
+
+--- Example 165 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Individuals who testified to paying to be smuggled into the United States.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The destination country for the smuggling operation.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entitiesien and entered the in they were to travel for least $100000 to sm smuggled into the United States.SMrecordANT
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERUGGLED_ITEMS{tuple_delimiter}Individuals who testified that paying at be smuggled into the United States.){record_delimiter}("entity"{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country country.) the smuggled operation.){record_delimiter}
+====================
+
+--- Example 166 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}JAQUEZ{tuple_delimiter}PERSON{tuple_delimiter}A smuggler responsible for transporting migrants){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}People without proper documentation of immigration){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" Pndpy entityictment was thatime and the count of humaniracy to commit and sell count of transporting aocumented immiens.{("recordANT
+("entity"{tuple_delimiter}JAQUEZ{tuple_delimiter}PERSON{tuple_delimiter}An personuggler who for transporting undants){record_delimiter}("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Aople transport documentation documentation){ theirigration statusrecord_delimiter}
+====================
+
+--- Example 167 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle that arrived at the checkpoint.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of four individuals who lay in the sleeper compartment for several hours.){record_delimiter}("entity"{tuple_delimiter}SLEEPER COMPARTMENT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The location where the four aliens lay for several hours.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" again numberucks in the portpoint, it driver individualsiens were in the vehicleeper compartment and a hours. they app by the border Patrol agent.entitytupleANT
+("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that was at the checkpoint.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}The group of four individuals who were in the sleeper compartment.) several hours.){record_delimiter}("entity"{tuple_delimiter}BLEeperPER COMPARTMENT{tuple_delimiter}LOCANS_OF_TRANSPORTATION{tuple_delimiter}The place where the al aliens were.) several hours.){record_delimiter}("
+====================
+
+--- Example 168 ---
+GROUND TRUTH:
+["TWO MEN"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list entities who were with inoard the boat were { deport of enteringien smuggling and{("ORTANT
+["TWO MEN"]
+====================
+
+--- Example 169 ---
+GROUND TRUTH:
+["ANTONIO HURTADO"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[",ERado { { individual captain of the vesselomed vessel,uggling migr100ants, the of2011, the the people died, { located to to to the court in a10 months in prison for{("CONANT
+["ANTONIO HURTADO"]
+====================
+
+--- Example 170 ---
+GROUND TRUTH:
+["INDIVIDUALS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" who who{ [ individualsidentcompanied minors -- were entered to travel for 100000 and $25,000 for sm smuggled into the United States oflegally.{("INANT
+["UNDIVIDUALS",
+====================
+
+--- Example 171 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents who made the arrest){record_delimiter}("entity"{tuple_delimiter}SAN ONOFRE STATE BEACH{tuple_delimiter}LOCATION{tuple_delimiter}Coastal area of arrest){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" crossingrol Agency stopped a group of imm10 individuals immiens and a desert morning hours of. the border of of the Diegoofre, Park. the Pendleton. a were alertuggled into the country by a.
+("recordANT
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents who arrested the arrest){record_delimiter}("entity"{tuple_delimiter}SAN ONNOFRE STATE BEACH{tuple_delimiter}LOCATION{tuple_delimiter}Coastline area where the){record_delimiter}("
+====================
+
+--- Example 172 ---
+GROUND TRUTH:
+["MCMILLON", "WILLIAMS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [ (11{([201("(" theDonaldUR and his ( in the Unitedilers-trailer they the intersectionigration checkpoint in theedom, Texas,{("ORTANT
+["MCMLLON", "WILLIAMS"]
+====================
+
+--- Example 173 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter} A person who illegally entered US){record_delimiter}("entity"{tuple_delimiter}RIO GRANDE RIVER{tuple_delimiter}LOCATION{tuple_delimiter} A river in Texas notorious for illegal entry by aliens){record_delimiter}("entity"{tuple_delimiter}HIDALGO, TEXAS, PORT OF ENTRY{tuple_delimiter}LOCATION{tuple_delimiter} A port of entry into US){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" theing by the orhip, heember ( that he was not citizen of the Unitedican Republic. was entered the United States illegally. crossingading across the Rio Grande River. the Texasidalgo County Texas area location of Entry.entityrecordANT
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}An citiz who admittedlegally entered the territoryrecord_delimiter}("entity"{tuple_delimiter}DOO GRANDE RIVER{tuple_delimiter}LOCATION{tuple_delimiter} A river that Texas thatorious for illegal imm){ wiens){record_delimiter}("entity"{tuple_delimiter}HIDALGO, TEXAS{ PORT OF ENTRY{tuple_delimiter}LOCATION{tuple_delimiter} A port of entry in the thatrecord_delimiter}
+====================
+
+--- Example 174 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" individuals the Pien who in theEMuf (s cariler were included positive that
+ wereged that they were Y hundred dollars to Y smuggled into the United States.{("MEANT
+["YUSUF"]
+====================
+
+--- Example 175 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DIAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}An individual who drove his codefendant to a location and allowed him to stay at his residence.){record_delimiter}("entity"{tuple_delimiter}CODEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who was driven to a location by Diaz-Galiana and stayed at his residence.){record_delimiter}("entity"{tuple_delimiter}RESIDENCE{tuple_delimiter}LOCATION{tuple_delimiter}The place where Diaz-Galiana allowed his codefendant to stay.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["led,Bonindo, a car numberendant to the location in they smfendant was a killed a person who and the theyz-Galiana drove the codefendant to leave at the location.MEtupleANT
+("entity"{tuple_delimiter}DAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}An individual who drove his codefendant to a location where allowed the to stay at his residence.){record_delimiter}("entity"{tuple_delimiter}CODEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who drove driven by a location and Diaz-Galiana and allowed at his residence.){record_delimiter}("entity"{tuple_delimiter}LOCIDENCE{tuple_delimiter}LOCATION{tuple_delimiter}A location where thez-Galiana allowed the codefendant to stay.){record_delimiter}("
+====================
+
+--- Example 176 ---
+GROUND TRUTH:
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ice-three individual were been locatedicted for chargesien smuggling charges.{ [lando,ana,, Carlos Magalado,riasjendurda, andSMORTANT
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+====================
+
+--- Example 177 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CANTU SILVA{tuple_delimiter}PERSON{tuple_delimiter}Cantu Silva is the defendant){record_delimiter}("entity"{tuple_delimiter}AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol Agents working on the case){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" numberendant inor was was away the scene of was through packageapidated buildingnwire fence at{("recordANT
+("entity"{tuple_delimiter}CANTU SILVA{tuple_delimiter}PERSON{tuple_delimiter}Anantu Silva ran the defendant inrecord_delimiter}("entity"{tuple_delimiter}AGENTS{tuple_delimiter}PERSON{tuple_delimiter}The Patrol agentsents){ for the case){record_delimiter}("
+====================
+
+--- Example 178 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PACHECO{tuple_delimiter}PERSON{tuple_delimiter}An individual who called Chapa from a cell phone.){record_delimiter}("entity"{tuple_delimiter}CHAPA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was called by Pacheco.){record_delimiter}("entity"{tuple_delimiter}CELL PHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}The device used by Pacheco to call Chapa.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the number of to the border ofrol Agencypoint, theyATao was theman and the vehicle phone number told hima to they go the group.entitytupleANT
+("entity"{tuple_delimiter}PACHECO{tuple_delimiter}PERSON{tuple_delimiter}A individual who called Chapa from the cell phone.){record_delimiter}("entity"{tuple_delimiter}CHAPA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was told by Pacheco.){record_delimiter}("entity"{tuple_delimiter}BLL PHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}A phone used to Pacheco to call Chapa.){record_delimiter}
+====================
+
+--- Example 179 ---
+GROUND TRUTH:
+["SMUGGLER"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" citizens ag stopped a individualien whouggler and was have been to people Easternerss to the the United States.{("ORTANT
+["ALUGGLER"]
+====================
+
+--- Example 180 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GARCIA{tuple_delimiter}PERSON{tuple_delimiter} Apotential smuggler){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter} Illegal immigratns without proper documentation){record_delimiter}("entity"{tuple_delimiter}SAN LUIS, POTOSI, MEXICO{tuple_delimiter}LOCATION{tuple_delimiter} Location where Garcia approached the aliens){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 1{ 2019{ therett and a person of people individualsocumented immiens in a Diego Ob Arizonaosi, Mexico.("recordANT
+("entity"{tuple_delimiter}GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Anologol smuggler){record_delimiter}("entity"{tuple_delimiter}SIENS{tuple_delimiter}SMSON{tuple_delimiter} Undlegal immigrantsors){ documents documentation){record_delimiter}("entity"{tuple_delimiter}SAN LUIS, POTOSI, MEXICO{tuple_delimiter}LOCATION{tuple_delimiter} Location where Garcia approached und groupiens){record_delimiter}
+====================
+
+--- Example 181 ---
+GROUND TRUTH:
+["EUCLIDES MORENO", "UNDOCUMENTED ALIENS' FAMILY MEMBERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ROid,ales, ored the individuals the followingocumented migriens in names members including the effort to locate theansom payments for("MEANT
+["EUCLIDES MORENO", "UNDOCUMENTED ALIENS' FAMILY MEMBERS"]
+====================
+
+--- Example 182 ---
+GROUND TRUTH:
+["JOSE M. VELEZ", "MIGUEL A. RIVERA"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" [ { [ [15nd {2999{ the Rico was Department detectPRPD) madeers ( andende Rodargz and Jose A. Va made("an a pursion patrols the locationgar Museum of Puertoayama, Puerto Rico.{("INANT
+["JOSE M. VELEZ", "MIGUEL A. RIVERA"]
+====================
+
+--- Example 183 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}2008 CHEVROLET TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter} A vehicle used for pulling a flatbed trailer transporting a scissor lift){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the point in the names was drawn to a person1019 Hvyrolet Impuck that a trabed trailer withing a loadanneror lift machine{("recordANT
+("entity"{tuple_delimiter}CH008 CHEVROLET TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle that to transport a flatbed trailer.)ing a scissor lift.)record_delimiter}("
+====================
+
+--- Example 184 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}AGENT{tuple_delimiter}PERSON{tuple_delimiter}An individual who discovered four more aliens in the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Four individuals found hiding in the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}MEN{tuple_delimiter}PERSON{tuple_delimiter}Two of the four aliens found hiding in the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}WOMEN{tuple_delimiter}PERSON{tuple_delimiter}Two of the four aliens found hiding in the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}CAB{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The location within the truck where the aliens were hiding.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle in which the aliens were hiding.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" entities after, the individual named the entities entitiesien in in a woodsins a vehicleuck. and of and two women.entitytupleANT
+("entity"{tuple_delimiter}ALENT{tuple_delimiter}PERSON{tuple_delimiter}An individual who discovered the more aliens hiding the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Four more who in in the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}CEN{tuple_delimiter}PERSON{tuple_delimiter}Two individuals the individuals individualsiens found in in the cab of the truck.){record_delimiter}("entity"{tuple_delimiter}WOMEN{tuple_delimiter}PERSON{tuple_delimiter}Two of the four aliens found hiding in the cab of the truck.){record_delimiter}entity"{tuple_delimiter}CAB{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle where which truck where the aliens were found.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle in which the aliens were hiding.){record_delimiter}
+====================
+
+--- Example 185 ---
+GROUND TRUTH:
+["GUTIERREZ-CASTRO", "MEMBERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("["ierrez{Mell{ in the operation immien smuggling operation and were he of his sm included the of money from pay them sm aliens. the United States.("MEANT
+["GUTIERREZ-CASTRO", "MEMBERS"]
+====================
+
+--- Example 186 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A number of people who were being moved by a smuggling network.){record_delimiter}("entity"{tuple_delimiter}RAFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}HOUSE{tuple_delimiter}LOCATION{tuple_delimiter}A location used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}CARS{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Vehicles used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}SMUGGLING NETWORK{tuple_delimiter}ORGANIZATION{tuple_delimiter}An organization moving the aliens.){record_delimiter}("entity"{tuple_delimiter}ALLENDE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}An individual who participated in the smuggling network.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" numberination between management of led done to theation the group of individualsiens to including a varietyft and was boatbo and cars and and a boatuck, and be to coordin personury to conv that the coordinuggling operation was operating the vehiclesiens across and that thean wasBoncia was in the network.SMtupleANT
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of al who were being transport.) sm smuggling network.){record_delimiter}("entity"{tuple_delimiter}RAFT{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vessel used to transport transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}HOUSE{tuple_delimiter}MEATION{tuple_delimiter}A location used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}CARS{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}Twoehicles used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}TRUCK{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A vehicle used in the transportation of aliens.){record_delimiter}("entity"{tuple_delimiter}SMUGGLING NETWORK{tuple_delimiter}ORGANIZATION{tuple_delimiter}A organization that al aliens.){record_delimiter}("entity"{tuple_delimiter}ALLENDE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}A individual who participated in the smuggling network.){record_delimiter}
+====================
+
+--- Example 187 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GRISELDA BARNICA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was in the apartment where the captives were being held.){record_delimiter}("entity"{tuple_delimiter}DAUGHTER{tuple_delimiter}PERSON{tuple_delimiter}A ten-year-old individual who was in the apartment.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were being held in the apartment.){record_delimiter}("entity"{tuple_delimiter}APARTMENT{tuple_delimiter}LOCATION{tuple_delimiter}The location where the captives were being held.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{["oupselda (nes, her husbandantyear-old daughter were Gr others, were known in the countrypartment where a least one time the time period buildingors were held held thereMErecordANT
+("entity"{tuple_delimiter}GRRISELDA BARNICA{tuple_delimiter}PERSON{tuple_delimiter}A individual who was in the apartment with the captives were being held.){record_delimiter}("entity"{tuple_delimiter}TUGHTER{tuple_delimiter}PERSON{tuple_delimiter}A ten-year-old girl who was in the apartment with{record_delimiter}("entity"{tuple_delimiter}APAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals being were being held in the apartment.){record_delimiter}("entity"{tuple_delimiter}APARTMENT{tuple_delimiter}LOCATION{tuple_delimiter}The place where the captives were being held.){record_delimiter}
+====================
+
+--- Example 188 ---
+GROUND TRUTH:
+["SMUGGLERS"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" the time of evening of [ (10{2011{ theuggglers and the Ricovo, Mexicoaja California, Mexico, wereapedle aocumented immants to the country to the boat in  miles awayshore of the beachonado Islands. theyUado and his team10 smyear y were which the "Pir Dog" -- were located for{("INANT
+["SMUGGLERS",
+====================
+
+--- Example 189 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DIAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}An individual who was detained by ICE and deported on July 20, 2004.){record_delimiter}
+
+PREDICTED:
+.assemblyALL {["["ena["["sena["["("("("("("["plesena["("ena{("{{{{{{{{{ and{{ifenate{ individual{ { pairCOUNT_idimiter}'.{["{{[" the 10122019{ thez andDelarindo and arrestedained in theCEG thened toMErecordANT
+("entity"{tuple_delimiter}DAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}An individual det was detained by ICE and deported.) July 20, 2004.){record_delimiter}("
+====================
+
+--- Example 190 ---
+GROUND TRUTH:
+["ROJAS-MENDOZA", "DRIVER"]
+
+PREDICTED:
+.assemblyALL {["["ena["["senaACKSONAL["("("("["["{FORMatted("ena["["["["["("[" list involved a over the times and the people the Piens were well as thex andRendeza and on injured and and ofiens were killed and and the vehicle was not be located.("MEANT
+["ROJAS-MENDOZA", "DRIVER"]
+====================
+
