@@ -1,0 +1,14 @@
+{
+  "test_loss": 3.7705399990081787,
+  "test_parsability_score": 0.0,
+  "test_hallucination": 0,
+  "test_wrong_type": 0,
+  "test_missed_entity": 139,
+  "test_precision_PERSON": 0.0,
+  "test_recall_PERSON": 0.0,
+  "test_f1_PERSON": 0.0,
+  "test_f1_micro_avg": 0.0,
+  "test_runtime": 28.1359,
+  "test_samples_per_second": 6.753,
+  "test_steps_per_second": 1.706
+}

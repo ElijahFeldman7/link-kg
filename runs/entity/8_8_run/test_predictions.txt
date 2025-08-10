@@ -1,0 +1,2943 @@
+--- Test Set Predictions and Labels ---
+
+--- Example 1 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ITableView["["[" "[" " " "
+
+["["
+ " "[" "["
+" "["["AT
+["ANALAYYLLAN")LE")ALGED OF")
+====================
+
+--- Example 2 ---
+GROUND TRUTH:
+["HENDERSON", "JOE SILVA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ANrick
+[" " " "["[" " " "["
+
+["
+ " " " " "ANLL""" " were " " the ""ientled"" in the"1""
+["["AL
+["ALALCA")
+AALESTAN")Jj
+====================
+
+--- Example 3 ---
+GROUND TRUTH:
+("entity" I-35 A highway that he drove on.) ("entity" RURAL AREA An area with no houses that he exited into.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity""" theENentity"" "entity by the " entity" the "" "iens into " ("
+
+" " " "entityentityentity
+entityentity"entity individualLE individual individual ofentityentityentity individual entity entityentity into theentity ofentity"entityentityU)entityLIAZ of of ofentity"   of entity stopped- by theentity the)
+====================
+
+--- Example 4 ---
+GROUND TRUTH:
+["CHILD"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "iens " " " " " " " " " " " "
+
+ "iens " " " of of " " into of " the """ the of the " of ofALAL OF["ALAL")")")
+====================
+
+--- Example 5 ---
+GROUND TRUTH:
+("entity" UNITED STATES COAST GUARD (USCG) Agency that intercepted the vessel) ("entity" PLEASURE CRAFT Boat used in the smuggling attempt) ("entity" OCEANSIDE Off-shore area where interception occurred)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ENAN" to to by" entityentity ofededentity)EN "ed by ""ed " "
+ (" (" "entityentityentityentity "G (""" the entity "iens"iensententity"
+entityentityCO
+["entity"entity CGS CUSCMMANUEA)entity)) "LEGG) "ed) entity)entityentityentity)entityentityAR)))ARGED (" (" (" G) by the locationattered toedentity ofentity)entityentityLE) GANAL (" (" Copersentityaped) for theentityed by to the)
+====================
+
+--- Example 6 ---
+GROUND TRUTH:
+["BARBA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" " " " " " "iens
+["[" " "
+ "[" "
+ "
+ " ("
+ "
+ " " inled"" "ed" " " " of" theite"."il " by )"ers into"["
+AN["ALANSG")
+====================
+
+--- Example 7 ---
+GROUND TRUTH:
+("entity" CO-DEFENDANT An individual who was directing captives with his pistol.) ("entity" CAPTIVES Individuals who were being directed by a co-defendant.) ("entity" PISTOL A weapon used to direct the captives.) ("entity" ROOM A location from which the captives were being directed.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ Sentityentitys" to" the entityane" the nameentity" the to the ofiens " "entityentityAN
+["entity"entity CRE "REREY " " " individual the were in of theule) the nameentity)entity theentity)entityentityARANRAINGD the (" ("entitys) were in the by whom "entityentity the)entity theentity)entityentityAR)) (" (" CopLIedentity get the of of) to theentity)entity the theed (" Cop CopNOT of which is entity of) the found by the the)
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+["MOVANT", "CO-DEFENDANTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+ " "["["ied" " " " "
+
+
+ " " " " " " "[" "" "["ed byiens"["["AN
+["ALGALI
+ALMM["AL")Y "
+ OF
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ANT "[" " into into " " " " " " " " " "
+ " "AL ("OB "" " "j" " " by " by """ "j into"j" the " ofAL intoj" " by "") theer of " the by the,1AAN["ALAUAIND")
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+("entity" SALAZAR An individual who was unavailable to watch over the aliens.) ("entity" MAN An individual who would watch over the aliens when Salazar was unavailable.) ("entity" ALIENS People who were being watched over.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"man""entity" " entityedentity))) to)
+ " the the "iens"entityentityAN
+["entity"entity CLE (" TAGentity ofentity entity entity entity inentity entity the into entityiens)entityentityentity)entityentityANYentity (" ("entityentity were haveed entityiens) theu" inentity)entity theentity)entityentity LAN)AN (" (" (") were in found into the the (")
+====================
+
+--- Example 11 ---
+GROUND TRUTH:
+["ANDREA GONZALEZ-PERALES", "THREE FEMALE PASSENGERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+ "
+" "["iens[" ("
+ ""ator"" ("["
+ " " " " " """ilo" " state""led"ed of theOS-j ""
+["["AN
+["AN"]AZUE THEA"G")ALS")") "AZ")LE")ZY")")")")A
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+("entity" U.S. BORDER PATROL AGENTS Agents who took custody of migrants) ("entity" SANTA CATALINA ISLAND Offshore location west of custody site)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+AL ("EN
+"entity the" byentity" theentity
+)) the theiens the"iens") ("entityentityAT
+iensentity" CY " tr
+ ("SATSCKUENS"LE C ("EN" were intoited) theant)entity ofentity"entity ("COY"ARESCO THEZLAATEN (" (" ("ersING))ersentityers)) of of"
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+("entity" LEONOR GARCIA The female driver.) ("entity" SOTO The male in the front passenger seat.) ("entity" JUAN CARLOS DE LA CRUZ-CALAMINO The male passenger in the rear passenger-side seat.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" S"" "entity"age"
+ to the the " of " of "entityied"entityentity " " of"" theentity""entity"" """entityentity"entity"""entityentityAL
+["entity"entity G""ALLE" L L L L L individual" individual individualentity"entityentityANALAL (" (" the individual" the locationeded) the ("entity)entityentityA) GALENUANAL HALALAentityALLEENALE (" (" (" C AL the location theedentity of) (" the)
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+("entity" DEFENDANT GUARDADO-MEZEN An individual who went to an apartment where illegal immigrants were being held.) ("entity" CO-DEFENDANTS Five individuals who went with Defendant Guardado-Mezen to an apartment where illegal immigrants were being held.) ("entity" APARTMENT A location where illegal immigrants were being held.) ("entity" ILLEGAL IMMIGRANTS A group of people being held in an apartment.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the"1"" "1 individual11 the "entity"ed theentityAG" "iens-entityied) " " " " "" "entity ("iens" "" withentityentityAN
+["entity"entity GSSLEAN["UEAL"SVentityAASH       theentity L) theentityersation) the stopped by (" ofentity"entityentityALentity-ENY) (" (" (" (") were to theers anded the1"" the entity location of theiensersant) iniens byentity inentity entity AN Aentityentity (" D of theentityersation) in found by (" theentity)entityentity)NALLEMMERALANS) (" (" (" G which the) to by the entity location of to the)
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+("entity" CARGO VAN  believed to belong to the smuggling organization) ("entity" ANAHEIM, CALIFORNIA  Location where the cargo van was tracked to)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+" the" the entity of of the" theentity "" the name ofSTEDentity entity"iensiensiens "
+ " " "entity"" " " " "entity["ent "" ("""" the entity L"" the"" "der the
+ weled""entity" " were location aliens) the" name) in the." theited by the and the L andentity and".)entityentityANentityentity"entity"H""IN")"" were entity" the" the individualiteers of)entity entity"entityentity L""AT theARERERNATIONZ1"GG" the entity" toheded by theentity the"
+====================
+
+--- Example 16 ---
+GROUND TRUTH:
+["EUCLIDES MORENO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " (" ("[" " " " "
+ " " "
+ " " "[" "
+ "ed byiens" the
+ed " "ill"" the "" the by" "Ugsj" "" " "" were " " " "ed byiens" the locationakeesj theited theiens ")ALA OF["ALULEICS")I GCGG
+====================
+
+--- Example 17 ---
+GROUND TRUTH:
+("entity" DELACRUZ An individual who was ducking down in the back seat.) ("entity" BACK SEAT The location where Delacruz was ducking down.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ane""" theentity" theed the "ed" " "entity
+entityentity" ("
+CU (" ("A (" (" ("entity of were incked) the the locationed) (" theentity)entityentityANedAS (" (" (" C of theacedzed incked the toentity the)
+====================
+
+--- Example 18 ---
+GROUND TRUTH:
+["ZHIVARGO MCBRIDE"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "AR"["AN
+[" " " " " " " " "["AN
+ " "
+ " " " " " "" "iens"["ind " the" "
+AL["G["ALAAL")"LL")ANZ OF
+====================
+
+--- Example 19 ---
+GROUND TRUTH:
+["SMUGGLERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "AN["[" " " ("["[" "
+ "
+
+ "
+ "
+" "ated " "ena"led
+AL["CO
+["AL"]"]IC") OF
+====================
+
+--- Example 20 ---
+GROUND TRUTH:
+("entity" JAQUEZ An individual who was picked up by a truck with a trailer in Nuevo Laredo.) ("entity" TRUCK A vehicle that, along with a trailer, picked up Jaquez.) ("entity" TRAILER A vehicle attached to a truck that picked up Jaquez.) ("entity" PLAZA The location in Nuevo Laredo where Jaquez was picked up.) ("entity" NUEVO LAREDO The city where Jaquez was picked up.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+-" by entityu" the namej" by" to the """ theITableView ("U the the "entity (" " (" (" "entity of "
+ entityentity (" (" (" """ the entity""entityentityCO
+entityentity"entity GA LGA Lentityentity individual" entity the by   individualatored the listj) thev theU alentityentityentityentity"entity AL entityentityentity ("NOT" entityentity the the trcker of " by to-)entity ("entity)entity ("RAGERU (" (" ("AR of to the stateilled was into toqu)1 (" entity)entityentityAR)ERZGGentityentity of thev theAT and the thequ) found by the (" theentity)entity ("UE)AYALD C of the-) found into to to the)
+====================
+
+--- Example 21 ---
+GROUND TRUTH:
+["MALE DRIVER", "FEMALE PASSENGER"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" " " " " " " " " "[" "AN
+ " " " "
+ "iens" " " "ALAL
+AL["AL["ALGGLEANN
+ALALGG")")")")V
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+("entity" RUBEN MENDOZA Ruben Mendoza is a border patrol agent who was on patrol) ("entity" TRUCK  Agent Ruben Mendoza had observed a truck pass while on patrol)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entityentity""""AN"" the theentity the " by "enaedenaentity ofAT
+["entity"
+ CLEER
+LEABERRE
+ CREER"LE"" the list)entityentity) is found theentityenaentity ofentity"entity"""EN on the (" "iens)AT)" to by stateilled that the which) whichentity )
+====================
+
+--- Example 23 ---
+GROUND TRUTH:
+("entity" SALDANA  A suspect in the case) ("entity" OFFICER  An officer of the law) ("entity" LAREDO  Place where Saldana lived) ("entity" DALLAS  Place where Saldana was driving the scissor lift to)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity" the "ENentity" by "" " by theAG the the the in" "entsiens"iens "
+ "iens " " " (" "entity" ("entityentityentity
+["entity"entity C T C THE" L tr tr L entity L" the entity ofentityentityentity"entity"AL the""entity (" ("entityentity" theentity)entity ofentity"entity ("") the (" Cop Copentity of theANers" byentity ofentity)entity ("AL the) (" (" Copentity of theANers" found to numberented)ed the1 the)
+====================
+
+--- Example 24 ---
+GROUND TRUTH:
+["PONCE FLORES"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " ("["
+ " " " "AR "AT ("
+ " " " "iens"["ind " the " " " "iens" by "" "AR the" ""AL
+ OF
+["ALLE THESTLEVEGAL
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+("entity" CANTU An individual who was brought to the trailer by smugglers.) ("entity" SMUGGLERS The individuals who brought Cantu to the trailer.) ("entity" JEFFERSON An individual who was witnessed closing the trailer door.) ("entity" TRAILER The vehicle to which Cantu was brought.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" the by the entityentity" the" theoss" theed by"" "ji""entity ("I
+["entity"entity CLE (" ("entityentityentity individual " was the into the entityj" theatterenters)entityentityentity"entityentityANsER) (" (" (" individual) were tou) the entitycker" the theentity"entityentityALE)) (" (" Copentityiens is founded by toentitycker of of the theentity"entity theRA"ER" (" (" Copentity of get the.led the by the the"
+====================
+
+--- Example 26 ---
+GROUND TRUTH:
+("entity" TRUCK A vehicle that returned onto I-35 and headed north.) ("entity" I-35 A highway that the truck returned onto.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+- the11""" " entity entityued by theANentity of"iensed)entityentity
+
+ ("entity"entity CAL ("entity "entityentity tr of entity the theMM11) theed by)entity theentity)entityentityMMentity1) (" (" ("LI" entityentityilled by theentity the"
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+["FERNANDO MUNOZ-MARTINEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " "["[" " "[" " (" ("
+ ""iens"AN"
+" " " """["["ed" the""["""["["G["ANALAYYGI")VAGGEDZAAG
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+("entity" ANGEL ANTONIO PEREZ An individual driving a car containing three passengers.) ("entity" CAR A vehicle containing three passengers.) ("entity" PASSENGERS Three individuals in the car.) ("entity" LAREDO, TEXAS A location near a routine immigration inspection checkpoint.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the"11entity "1 to10 the "entity"entityEN the
+iens"Gentity "
+ " (" " ("
+ " "
+ theentity ("entity"entity""ed"U with" ""entityentityAN
+["entity"entity ALSLEYRATLEOLGALELELE Gentityentity L"entity to ofentity ofentity)entityentityAN)entityentityentity L) theentity)entity ("entity)entityentity"))ANAN (" (" ("") the location) (" ofentity)entityentity) the the theRAIT the (" (" the G of the state ofers)ane) anded the the)
+====================
+
+--- Example 29 ---
+GROUND TRUTH:
+["UNDOCUMENTED IMMIGRANTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " (" " into the " ("
+ " "[" " " " " " "
+ " " " "
+ " "
+ " " ofed byel"" the " of " the of" " "led" in" " into of the" with "" "" by) the " of
+AGAANANAALENTILI BYANERANAN G")A
+====================
+
+--- Example 30 ---
+GROUND TRUTH:
+("entity" DIAZ-GALIANA An individual who drove his codefendant to a location and allowed him to stay at his residence.) ("entity" CODEFENDANT An individual who was driven to a location by Diaz-Galiana and stayed at his residence.) ("entity" RESIDENCE The place where Diaz-Galiana allowed his codefendant to stay.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity"entityAN"" by"" the" the "" the " of of"iens "
+ "" " " " ("entityentityUEiens"" ""entity" "" the location"entityentityCO
+["entity"entity LERE"entityALLEANYLEZZZ individual individual individual individualentity of)) the location where the by) the into the name) "entityentity)entityentityALAN)Ientity (" Copentity of were found by the location of whichz"entityALiens)entity into the name) "entityentity)entityentityAN)entity)ALentityentityentity location to thezers1AL)) by location to)) which into (" (")
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+("entity" DARK SUV A vehicle suspected of being used by smugglers) ("entity" CAMBRIA, CA Coastal town where vehicle was spotted)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+LI-G" by" by the " of " by the the " ofiens" "ient " " (" " (" ("iensentity" " was" the theed
+entityentityAN
+entityentity" G"""V""entityentity L"entity by  of by theatterentings" whoentityentity"entityentityAR)ANANZ "LEentity by ("""" the" foundanned byentity of"
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+["ORTIZ", "AGENT"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ANiens[" into " " ""[" "
+ " " " " "ANAL["
+AN
+["["AT
+["ALALED
+A"S OF
+====================
+
+--- Example 33 ---
+GROUND TRUTH:
+("entity" FERNANDO MUNOZ-MARTINEZ An individual driving a pickup-truck south on Interstate 35.) ("entity" PICKUP-TRUCK A vehicle being driven south on Interstate 35.) ("entity" INTERSTATE 35 A highway on which a pickup-truck was being driven south.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ theentity" the"1" "1"00" ""
+ theed" ("entity into" "-
+entityentityedentity theentity"entityentity"entityentityE
+ ("entity"entity CRE C"entityREDANCOVAentityG")")A (" (" ("Y AN LED"entityilled of theentityentityentityentity) ("entityentity"entityentityAN"ANANentityUAA (" (" (" G" the by) theentity the11)entity theentity)entityentity the))11) (" (" ("MA) which is state ofil1illed found found by the (" the)
+====================
+
+--- Example 34 ---
+GROUND TRUTH:
+["THREE MEN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ient
+
+
+ " " " " " "[" "[" "AN
+["["[" OF["C
+"
+====================
+
+--- Example 35 ---
+GROUND TRUTH:
+("entity" ORLANDO MAGRINAT Individual indicted in smuggling case) ("entity" CARLOS REGALADO AMECHAZURRA Another indicted individual)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity"entity"" to intoentity by theiens"oreind the" " "entity"iens the the " ("UE (" " (" ("entity"entity"
+entityentityG
+["entity"entity GYSS"ATOANSSLELELEORSentity individual theoreed of ofentityentityentity"entityentityAL)ATANALALAENLELEALALEAALGentity (" (""entity Lentityentityentity"
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+["CREW"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " " " "
+ " " (" "
+[""AR"
+ "
+" "
+ " the["" "" " "" theAN"AN "")" "
+["["AN
+["ALVIT OF
+====================
+
+--- Example 37 ---
+GROUND TRUTH:
+("entity" HURTADO A person smuggling people on boat) ("entity" BOAT The vessel used for carrying people) ("entity" UNITED STATES TERRITORIAL WATERS Water body through which aliens were travelled into USA)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" entityed the the entity of"" "U""" by "" " nameied
+ " into " (" " " (" " " (" "entity
+ "
+ "entityentityAN
+["entity"entity CH C""LE trentityentity L"entityers to" the ofentity ofentity"entityentity the the the the the individual" by the the)entity ofentity"entityentityentityAL byATS)RAANAL) THEEDI" (" (" ("   entityiens) inied by the"1 )
+====================
+
+--- Example 38 ---
+GROUND TRUTH:
+("entity" U.S. 59  A highway, which has an intersection with Route 133) ("entity" FARM-TO-MARKET ROAD 2050  A road "adjacent to the Border Patrol station parking lot," about "150 feet . . . 200 feet, more or less," from the checkpoint office) ("entity" WHITE MALIBU SEDAN  A vehicle which had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050) ("entity" BLACK DODGE TRUCK  A vehicle which had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity-" " "entity"uentity"entityed " "entityentity"u"iens
+iens
+
+ " (" "EN
+entity"" theentity" " "" ""entity theentityed""1"""entity " L"entity")" "entity"entity (") """entity theentity""""1 """   (" entity the entity anded entityentityAN ("entity") " ""entity""    entity L individual " the to entity the the"1, the the andentity entity"entity ("LEentityENentityW ("GANENALCKEN1) C) to (" (" (" LE)entityers) the locationedien the the the the ofentity theentity1"entity ("entityentityentityentity) to to  (" the entity theiensentity was
+ entity
+entity  Carolina ATIMMYAN byY C the the C L ofentity to the to the MM the ("1) location the location ofiens into and on theiens1 the1enaiens and1" to to toentity      IT EENLOICAEN H the ("IN L  was toited by the1AL Cop1 toentityindentity ofentity into and and thegenderind aliensentityiens to to toentity  of
+====================
+
+--- Example 39 ---
+GROUND TRUTH:
+["KIM"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" " " " " "
+ " " "[" " "
+ "
+
+ " the ([ " " (" of" " the
+ALALAN["AL"]"]
+====================
+
+--- Example 40 ---
+GROUND TRUTH:
+("entity" COAST GUARD Interdicted a drug smuggling vessel) ("entity" SPEEDBOAT Boat carrying cocaine) ("entity" ECUADOR Location off the coast of interception)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity""entity" by "ed"" theentity the "
+ to
+led"entityentity[" ag into the "
+ "LE" "entityentityCO
+["entity"entity CRE"UE"" tr trentityentity" by individualentityoreed of)entity ofentity"entityentityEN of by theS (" (" (" the" theited )entity ofentity)entityentityed)EN) (" (" Cop" the ed1entityed1 and)
+====================
+
+--- Example 41 ---
+GROUND TRUTH:
+("entity" JUNO POLICE DEPARTMENT Local law enforcement agency that alerted Border Patrol} ("entity" BORDER PATROL AGENTS Federal officers who responded to the alert} ("entity" JUNO BEACH, FLORIDA Coastal site where smuggling vessel was found}
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entityentity"""ed by"iententityentity the"entity the "iens"""
+ "' ("iediensentityentityed theentityentity" "LE "
+
+ient
+" by locationentity""entity"" theentity"
+entityentityGiensentity"entityentityAGREALVEALALSS ofentityentity individual"ced)ent) ised byed)entity)entityentity)entityentityAN)ATIAONENTS) (" the the") wereed by the locationed) ofentity)entityentityA)ALAAING ("LEON)ENZGGGAL G) theiteded the) found by the)
+====================
+
+--- Example 42 ---
+GROUND TRUTH:
+["PACHECO", "CHAPA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " into " "
+["
+
+ " "AR
+[" " "el " " """ " "[" " the " " " of["["CO
+["ALANHLLLL
+AALANZ
+====================
+
+--- Example 43 ---
+GROUND TRUTH:
+["INVESTIGATORS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "END
+ " " " " "[" "
+ " " " " " "AL "
+ " " "[" "" " " " the"
+ " " of """ALAL OF["ALCSTANANAL"] OF
+====================
+
+--- Example 44 ---
+GROUND TRUTH:
+["ALLENDE-GARCIA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " (" (" "AR " " "[" " "iens " " " "
+["[" " " " " " COUNT"ied"ANALC
+["ALLEAG"SALLO")ANZ
+====================
+
+--- Example 45 ---
+GROUND TRUTH:
+["SALDANA", "OFFICERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+ " "ANiens " " (""" " "U " " " " "["" " "" """ " "" the ""
+["
+AL["ALOLILECZ
+ALALAN") OF
+====================
+
+--- Example 46 ---
+GROUND TRUTH:
+("entity" CARLOS JIMENEZ A suspected planner of the smuggling operation) ("entity" MEXICALI, MEXICO Location where Jimenez resides)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"""
+11 to " "ALentityEN " "" the theANentity "" "iens
+ " "iens" "entity'"iens"
+entityentity
+
+iensentity" G ("" (""UERSLEAVVV LENentityentity"entity entityentityed of"entityentityentity"entityentityI)"IMM theANITANLE the the the" theI)ited theentityentity"
+====================
+
+--- Example 47 ---
+GROUND TRUTH:
+("entity" MONTEROJAS  An agent on patrol) ("entity" HIGHWAY 83  A highway near Encinal, Texas) ("entity" ENCINAL, TEXAS  Location near where Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the C1" "1 entities1"" "entityentity
+" the into " of"iensore
+ the "
+ient
+
+
+ ""entity"entity ".entity ""
+entityentityAN
+["entity"entity trLE""LEEN"entityentityentity entity entityentity theentityentityentity ofentity"entityentityANANAN)AN1"1 the (" ("entityLE) the.)entity)entity ofentity)entityentity)AN) the theRAIT the (" (" theentity) the theeditor)ane) intoentityentityane)ama al theentity)entityentityiensiensiens  of
+====================
+
+--- Example 48 ---
+GROUND TRUTH:
+["AGENT", "TWO MEN", "TWO WOMEN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " ("ied " " ("iens" " " "" " "["[" " "
+ " ""AN["AT
+["ALRS
+ALANLLANC
+ALLVERANT")")
+====================
+
+--- Example 49 ---
+GROUND TRUTH:
+["DESCARGAS", "JAQUEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["["ed " " " "iens " (""
+ "iens"ed the "" "" the""s "" " """ " the ("")["["ANT["ALSALCHAL") "AAZ")A OF
+====================
+
+--- Example 50 ---
+GROUND TRUTH:
+["ELENA MORALES"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ANena
+["
+ " " " "G "RA
+ " " " " " "AN[""AN
+("["AT
+["ALLEAG"I"]"") ("
+====================
+
+--- Example 51 ---
+GROUND TRUTH:
+("entity" MALE ALIEN An individual who was moved to the Roadrunner Inn with Fu Mei Chen.) ("entity" FU MEI CHEN A woman who was moved to the Roadrunner Inn and escaped from the bathroom.) ("entity" SMUGGLERS Individuals to whom arrangements were being made to transfer Fu Mei Chen.) ("entity" ROADRUNNER INN The motel to which the aliens were moved.) ("entity" BATHROOM The place from which Fu Mei Chen escaped.) ("entity" ROOM 297 The room from which Fu Mei Chen escaped.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity to by " the the " ofiens" " the entity of"" " the, the " " into " "
+
+ "
+G ("ied " "entityiens
+ " entityiensentityind" (" were" the " of" into" theiens aliensiens of the and1" " " "  " the" " foundaped"entityentityAN
+entityentity"entity GHG LG" Lentityentity entityentity were in by the entityentity)) the, andentity"entityentity entity"entityentityLE)AGMMAG (" and and L" was in by the entityentity)"entity by the location location to ("
+entity)entityentityENERER) (" ("ividuals) the the to) in in by the intoled, have" (" ("entity)entityentityONENENGS THEATION (" (" (" G ofAN the isentityiens) found into the theentity)entityentityOMersID to theentity to which is was was to" by to theentity)entity al anders10 al to (" ("entity was which is was wasEN" by to (" al
+====================
+
+--- Example 52 ---
+GROUND TRUTH:
+["LEE"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " " " "["["
+" "
+
+
+ " ""["ind by["["G
+["ALAGLE
+====================
+
+--- Example 53 ---
+GROUND TRUTH:
+["AGENT", "MULKINS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ANled into " " ("AN
+
+ "[" "
+ " " "
+["
+ of """
+ " "
+AL["G
+["AL"S
+ALUAAS") OF
+====================
+
+--- Example 54 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "AR[" " "
+ " " " "[" " " "["
+ "
+ " "
+ " "["["C
+["ALLLALAL")")
+AANAN")AN")IF
+====================
+
+--- Example 55 ---
+GROUND TRUTH:
+("entity" INDIVIDUAL An individual allegedly working with Perez in an alien smuggling operation.) ("entity" PEREZ An individual who was allegedly working with another individual in an alien smuggling operation.) ("entity" ALIEN SMUGGLING OPERATION A criminal operation an individual was allegedly working in with Perez.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity"entity by the entity of fored for to thez" the "iens)iensings "entityentityAN
+ ("entity"entity individualALLE ("LELEentity "entity individual individual the individual to thez" the entityiens)oreed into) (" ofentity"entityentityEN ) (" (" ("entity) is ined in with the entityiens the aliens)oreed the) (""entity)entityentity individualAN)ATATER)ERALS (" (" (" LER) entityiens foundiens found to the whichz")1 the)
+====================
+
+--- Example 56 ---
+GROUND TRUTH:
+["CUSTOMS AGENTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["ed by "" " "iens
+[" " " "ator " "
+ " "" "AL " " "icker
+"
+ALALAN["ALAL"]VER"]ANS")
+====================
+
+--- Example 57 ---
+GROUND TRUTH:
+["CHAPA", "JESUS PACHECO-PINA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "man " "["["ied" " ("AR["[" " "AN " " " "" " "iens" " """"" the were "" ""ientiens-ed theIT thej " were into   " " C"ALAL OF["ALALS")
+ALAC")ANHALURALAN THE")A
+====================
+
+--- Example 58 ---
+GROUND TRUTH:
+("entity" JOINT HARBOR OPERATION CENTER The Joint Harbor Operation Center responsible for notification) ("entity" DOWNTOWN SAN DIEGO Coastal location referenced in the event)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entityentity" by the" the1"" "" " " " "LEEN"
+OBentityentityentity"" of in LGentity " entity)))entityAN " " "iens entity) the entity of "nd of of""entityentityAN
+ ofentity" G C"ALSANNENIC")ENTI")YY HYAN")IN")") of the) ofentity"entity ofONedATIONOLEDENCONLEME (" (" ("ING)) by the location) of)
+====================
+
+--- Example 59 ---
+GROUND TRUTH:
+("entity" U.S. BORDER PATROL AGENTS Law enforcement officers who arrested the men) ("entity" IMPERIAL BEACH, CALIFORNIA Place where arrests occurred near the border wall)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ENLE""LESEN "led
+ "" " theentity" " " ("" ""
+EN
+"ient
+ in"" the" is (" (" " " """ the " of the the of "" were into." to of " " of " of)  " "ALOLentityentity OFentityentity""" entity"LE"ANSCUAI" (" the the    the were in individual of of entity"entityentityMP))ersAEDING theALIFSNATIONG (" (" (") theentity) by the entity)) of)
+====================
+
+--- Example 60 ---
+GROUND TRUTH:
+["SUSPECTED SMUGGLERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "AR
+ "[" "[" " " " " " (" "[" "[" " " " " " " " " "AL
+AN
+"""" ""
+AL
+ OF["AL"]"]STANU"")ER") OF
+====================
+
+--- Example 61 ---
+GROUND TRUTH:
+["SARAH LEE"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ient
+
+[" (" " "[" " " " "["
+
+ ("["["Y
+["ALCO"ZALGST
+====================
+
+--- Example 62 ---
+GROUND TRUTH:
+("entity" AGENTS  U.S. Border Patrol agents) ("entity" SAN DIEGO BAY  Location near Coronado)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity to"" the" " the "entity" "
+
+entityentity" " the" intoed into the " "
+
+ " "entity entity) the"entity" " "entity the "
+entityentityANentityentity" G"""entity"entity " "ANentity"entity theentityentityentityentity"entityentityANYONAGINGANZAN1 OFLELE) theentity) of of of"
+====================
+
+--- Example 63 ---
+GROUND TRUTH:
+("entity" PACHECO An individual who called Chapa from a cell phone.) ("entity" CHAPA An individual who was called by Pacheco.) ("entity" CELL PHONE The device used by Pacheco to call Chapa.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"entity"entity the entityentityentityentityeded "AT theentity the "man " the """ " "es " " " "entity)entityentityentity
+["entity"entity CYH CREentityentityentity entity entity entity theac" the " of) (" ofentity)entityentity"" individual individualentityentity) is in the whomATentityentity theentity theentity)entityentity ofAATAN of (" (" (" entity of by whichATersentity the the intomanentityentity the)
+====================
+
+--- Example 64 ---
+GROUND TRUTH:
+("entity" CO-DEFENDANT An individual who was directing captives with his pistol.) ("entity" CAPTIVES Individuals who were being directed by a co-defendant.) ("entity" PISTOL A weapon used to direct the captives.) ("entity" ROOM A location from which the captives were being directed.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+LIentityentity the" to" the entityane" the nameentity" the into the ofiens " "entityentityAN
+["entity"entity CRE "REANY " " " individual the were in of theule) the nameentity)entity theentity)entity ARANRAINGD the (" ("entitys) were in the by whom "entityentity the)entity theentity)entityentityAR)) (" (" CopLIedentity get the of of) to theentity)entity the theed (" Cop CopNOT of which is entity of) the found by the the)
+====================
+
+--- Example 65 ---
+GROUND TRUTH:
+("entity" ARTESIA WELLS, TEXAS A location near where a pickup-truck exited onto Highway 133.) ("entity" PICKUP-TRUCK A vehicle that exited onto Highway 133.) ("entity" HIGHWAY 133 A highway that a pickup-truck exited onto.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"gu"""" "" " """entityentityedentity by theA1"""entityentityAN
+["entity"entity C ("WE ("REEDLEEREN theRAIT THEVEVE the L the the the individualed"entityueedentity by the"1))) (" entity)entity AN))ANentityICALEN (" the the S" entityentityentity the-113) (" theentity)entity alLLAINGITAN1 into33 (" (" ("MA) is individualup)entityiteedited by which the the)
+====================
+
+--- Example 66 ---
+GROUND TRUTH:
+["FABIOLA BEATRIZ CONTRERAS-PUENTE", "PAOLO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " "ient[" "
+ed ("AN"["ANAL (" " " " the
+
+" by "["ind" "" the""")es " the" the """ " " were ticket." the" by the""11) """ which"iens the.""AAAN["ALALS") HSTSAN")VU")")ALL")ST "AG")")")
+====================
+
+--- Example 67 ---
+GROUND TRUTH:
+["U.S. BORDER PATROL AGENTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" ("EN ("["[" " " of " "["
+
+
+
+
+
+
+
+ ""AN ""("["G["ALA"]AN OFANGBUENTI")
+====================
+
+--- Example 68 ---
+GROUND TRUTH:
+("entity" DEFENDANT An individual who presented inadequate documentation for a child.) ("entity" CHILD An individual for whom inadequate documentation was presented.) ("entity" TEXAS The state that issued the immunization record.) ("entity" HOSPITAL The place where the child was born.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity"entity" "entity" by the theite" the " ofs""entity "iensiens " ("entity
+"iens " "rentity (" theentityentity theentityentity in"entityentityCOentityentity"entity RELE""entityentityentityentityentityentity  the ite" of the list)entity theentity)entityentityASENentity (" ("entityentity the the the theals) of found by (" ("entity)entityentityRAED) (" (" ("entity" wasentityentityers of ofentity of theentity)entity ("LL)ANALENT (" (" ("entity) theentityers found by the the"
+====================
+
+--- Example 69 ---
+GROUND TRUTH:
+("entity" ALIENS Two individuals who were taken across the Rio Grande on a raft into the United States with several other people.) ("entity" RIO GRANDE The river that the two aliens were taken across.) ("entity" RAFT The vehicle used to take the two aliens across the Rio Grande.) ("entity" UNITED STATES The country that the two aliens were taken into.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity-iens" to by the """ the ""s the " " of the " "
+entityentityAN
+["entity"entity C TLE "ENentityentityentity T entity were the into the "" the listentity) the "entity the theiens   ("   1 ANANAN S (" (" (" individual) entityentity ofiens) in by the the theentity)entityentityG theRA and and andentity of by the into of ofiens) theentity.),1 ("entity)entity (")S byATS) (" (" (" location of were entity ofiens) in by the the the)
+====================
+
+--- Example 70 ---
+GROUND TRUTH:
+("entity" MEJIA-OROSCO A citizen of Guatemala) ("entity" HECTOR GALVENCIO PAZ-ORTEGA A person who travelled with Mejia-Orosco) ("entity" CARLOS ENRIQUE CRUZ-MORALES A person who travelled with Mejia-Orosco) ("entity" NUEVO LAREDO A place in Tamaulipas, Mexico where Paz-Ortega and Cruz-Morales disembarked after traveling with Mejia-Orosco)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ckane"entity""j
+ """ "j"" ("j" the name"uedentity "["" " " "" " ("entityentity"
+ the of the11""" " the of the nameentityj" the entity." "j into withU"ena"""entity"j" the"j"")entity") " " " theant, andiensiensed) to thejAL)entityG"j"jane)entityG"j the))" hisled by thej his) thevo"OSjj "OMjiensers" the" the")As," the"Gris"gurac" by ("entityentityANT"entity" of of""entity"GENMM [ [ [LE of" thej" the (" the entity" "entityiens on)UAOLGAR HMAEN1GJJ by in inMA.) wasiens by thejane theentityLE) the were were were) were wereLO)ARENVOEDLEULEALEENENTLE theGGG L G were in by thejA andentityLE.) were wereentity were.) wereentityUE)I HALCT (" (" theLEj theOMjenaiens.) "j theienseentityjciesiens.)iensjiensiensiensiens byiensiensiensiensjiens wereiensLEiensiensiens j
+====================
+
+--- Example 71 ---
+GROUND TRUTH:
+["CARLOS JIMENEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+AN
+ "["iedied " "["["AN
+ "" " "AN "[" "" "hed by " "ind" " "["led ""
+AL
+AL["ALALCHLE."A")")AGAER
+====================
+
+--- Example 72 ---
+GROUND TRUTH:
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+ " " "" " "iens
+["[" " "
+ "[" "["
+ " ""iensiens"Zj[""""
+["
+ANT["ALGARSGI."AN")AL
+ALAL")OS")AUIDS")")LE")ALLEAALG")
+====================
+
+--- Example 73 ---
+GROUND TRUTH:
+("entity" DEFENDANT An individual who kept firearms in his house and was holding undocumented aliens against their will.) ("entity" FIREARMS Weapons kept by the Defendant in his house.) ("entity" UNDOCUMENTED ALIENS Individuals who were being held against their will by the Defendant.) ("entity" HOUSE The location where the Defendant kept firearms and held undocumented aliens.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity" by""" the"" the" theentityed byiens" theiensiensiens ("I ("["entity"entity CGLE
+Y " " "entityentityentityentity-"" the name where thehedediensed byiens) theentityiens ("entity  entity ED  EN (" (" Copighiens)entity whichentityers and the name is the ("entity)entityentityAL)EDERs)LIGS) (" (" theONs) were found found by theentityiens the iens)1 theentity)entityentityLAs (" (" (" Foundation of the entityiens was by to")entity byiensed byiens)ind theed
+====================
+
+--- Example 74 ---
+GROUND TRUTH:
+("entity" ANTONIO HURTADO Boat captain involved in a fatal smuggling incident) ("entity" DOOMED VESSEL The vessel used for smuggling migrants)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"U"" " entity of" " "
+ byentity the theentity)ated the ("entity
+
+ "
+ " "entity"
+ " "
+ " (" ("
+" "1""" the"
+entityentityANT
+["entity"entity  CLEALREANNRASLELELELEAN""entity the location locationoreed of)entity ofentity"entityentity"A ofENA)SON (" (" (" C)entity theattered toator)entity were)
+====================
+
+--- Example 75 ---
+GROUND TRUTH:
+["CHEN", "DEFENDANT"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "AN
+ ("[" " intoiens" " " " " "
+ "
+ied " " ""["
+C
+["ALEC
+ALO")") OF
+====================
+
+--- Example 76 ---
+GROUND TRUTH:
+("entity" MEJIA-OROSCO A citizen of Guatemala) ("entity" PAZ-ORTEGA A person who travelled with Mejia-Orosco) ("entity" CRUZ-MORALES A person who travelled with Mejia-Orosco) ("entity" RIO GRANDE A river that Paz-Ortega and Cruz-Morales waded after traveling with Mejia-Orosco) ("entity" LAREDO A place in Texas where Paz-Ortega and Cruz-Morales regrouped with Mejia-Orosco)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ckane"entity""j by" " the entity" theAG the the "" ("iens
+
+ ("" ""entityentity
+entity by entity
+"
+
+ "
+
+ the of" the to" location) the"""janejentityG" were "entityiens
+ " of of by the by)" theUjj
+entityentityANentityentity"entityGJG"entityLEUANALELELE L")" entity,) state entityentityentity) "entity")entity)JJ (" (" ("LE) ised by thejawentityentityLE) theentity wereentity)entityentity))AentityENNZ) OF OF the G) wereed by thejA theentityLE) theentity theentity) wereentityOM)ATGLS ("AR) is was1 wasj was was,1ning) which by whichiensentity the.)entity locationiensICentity   entity 1  ALLE  (" ("MA and the.) the,1 andj wasiens,entityj wereliediens by theiensiensciesiensEDentityentityiens j
+====================
+
+--- Example 77 ---
+GROUND TRUTH:
+["CARLOS MARIO HERNANDEZ-LOPEZ", "MARIA GUADALUPE MARTINEZ-GARCIA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " "iens " ("
+ied
+
+["U"" " "
+[" "" ""j""""""ALAL"" " the by "ed")AL
+G
+["ALAL"U")S")ALAARYS")ALVEA")
+ALGANLEUAL")IVZI")")")ALANUANLE"
+====================
+
+--- Example 78 ---
+GROUND TRUTH:
+["ORTIZ", "DEFENDANTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " (" " "[" "["
+ "
+"" ""iens"
+ "
+
+" ""[" by"ite " " " theMMALA"" " " "" the " of of is stopped into stop into the "" inied " of onALAAL["AAAN
+ALO")Y")AL
+====================
+
+--- Example 79 ---
+GROUND TRUTH:
+["CO-DEFENDANT", "CAPTIVES"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "[" " "
+ " " " "[" " " "["
+ "
+ " "
+ " "["["C
+["ALLLALAL")")
+AALAN")AN")IF
+====================
+
+--- Example 80 ---
+GROUND TRUTH:
+["SOTO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " "AN["
+" "[" " "
+ " "CO "[" " " " by " " "" " " ""led " theiens" the""." into"1
+G
+["ALAN"]LE OF
+====================
+
+--- Example 81 ---
+GROUND TRUTH:
+("entity" ALIEN SMUGGLER Smuggler who helped suspects cross into the U.S.) ("entity" UNITED STATES Destination country of smuggling operation)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+""" by entityiens" into to" the to to to" ""s"  the ("
+ (" " ("
+
+ "ARENT
+ entityentityiens"" (" (" theentityentity" (" entityiensentityiensers" by"" were"" in by"iens were which"1""" onlegged" the entity States" the" "" ("" "ARG entityentity entity"" " ofont" "1entityANentityentity"G LG"ALALIC")LELEentityEN"" were the"" of the locationA theANentity ofentity"entityentityentityAL byATS) (" (" (" the".) theats of the) of of"
+====================
+
+--- Example 82 ---
+GROUND TRUTH:
+("entity" ILLEGAL ALIENS A group of eight individuals discovered in a truck.) ("entity" DRIVER The individual driving the truck, identified as Munoz-Martinez.) ("entity" MUNOZ-MARTINEZ The driver of the truck.) ("entity" TRUCK The vehicle in which eight illegal aliens were discovered.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity" by entityentity"" the byed theiens" the "ent" " "entity (" " ("iedentityiens ("entityentityentityAN
+entityentity" individualANGAN G LVESENentityentityentity Liensentity entity by the listilledentity ofentity"entityentityALANentityentity (" ("entity)entityentityilled the by theiensedentityAN theentityentity theentity)entityentityAN)ALEDentityRISSA (" (" (" G"1 Gilled the theentity)entityentityAL") (" (" ("entity to the theediensiens) in by to the)
+====================
+
+--- Example 83 ---
+GROUND TRUTH:
+["ARCE-JASSO", "AGENT", "GARCIA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "["
+["A " "[" "
+["
+
+ "
+ " "
+
+["["AN
+["AL"LLALA")LL
+AL"S
+ALLOB")LLZ
+====================
+
+--- Example 84 ---
+GROUND TRUTH:
+("entity" ELENA MORALES An agent on patrol) ("entity" SR-45 A US highway) ("entity" DARK GREEN CHEVY TAHOE A vehicle that was suspected)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"-"c" by """ena"U"entitys the the) theAN1 " "entityentityE
+entityentity"entity CLEG"AL"LE" S S S individual" theentityingsentityentityentity"entityentity"entity- of (" (" ("LI the)entity"entity)entity theONsedAALAAALANRALELELE (" the theLE of was foundp byentity of)
+====================
+
+--- Example 85 ---
+GROUND TRUTH:
+["ALLENDE-GARCIA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "iens " " " " " " " " " " " " " " " COUNT- " "" "" " " "ued """aw) the the " stateilind""hed" "iens" " " were ofxp
+ALCHj in the al alAA OF["AIG")ALALAL"ANYA
+====================
+
+--- Example 86 ---
+GROUND TRUTH:
+["PASSENGERS", "CHILD", "FRIEND"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " by " " " " "
+[" "[" " " "[" "[" "[" " ""["["AT
+["AL"]C")")
+ANALELE
+ANLEAN")
+====================
+
+--- Example 87 ---
+GROUND TRUTH:
+("entity" BORDER PATROL AGENTS Agents conducting arrests) ("entity" SAN ONOFRE STATE BEACH Beach where aliens landed)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entityentity"" by " of the1"" toiens) the " of"iens" " "iens " " (" (" "entity ("iens the"ATentity" " were "iensind by theentity" ""
+entityentityAL
+["entity"entity LALSLE".LEUENTS")LELELEENT") the"ant of " ofentity"entityentityAN GG GLEALATVEALENTED (" the ("" the the)ed byentity of")
+====================
+
+--- Example 88 ---
+GROUND TRUTH:
+["LOPEZ-PEREZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+ "["
+ "U ("["["AN "[" " " " "[" "ated) " "
+ (" " "" " "" "" " " " of " "-STAGAG
+["AGVEAGAGUAGA")
+====================
+
+--- Example 89 ---
+GROUND TRUTH:
+["POPOCA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" " by " " " " "iens " (" " " " "
+ " " ""["
+C
+["ALOLALLLG"
+====================
+
+--- Example 90 ---
+GROUND TRUTH:
+("entity" BORDER PATROL AGENTS A Border Patrol Agent of the United States) ("entity" UNDOCUMENTED FEMALE MIGRANT Illegal immigrants without proper documentation) ("entity" SILVER CREEK RANCH A ranch where an undocumented female migrant was in distress)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity""" the entityAR"" toed by the " " "ed the "ieded into
+ator
+ " "
+
+ANed ("entityentityE
+["entity"entity TLESLE ("GUENTSENLELELE L the theer) the entityentity)entity ofentity)entityentity ofentity))) byANGGANAANIC (" the the the GATAN) theentity ofentity ofentity)entityentityANLE theENTAGENANGLAL the the (" G theAL the entityentityed by alated) found theillededentity )
+====================
+
+--- Example 91 ---
+GROUND TRUTH:
+("entity" MCBRIDE Individual convicted of alien smuggling and murder)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entityAN"entity by" the"" theed ofed " "" theiens)iensence  theiens " "entityentityAN
+entityentity"entity individualE""entityentityentityiens individualentity entity theiens)oreings that theedentityentity"
+====================
+
+--- Example 92 ---
+GROUND TRUTH:
+("entity" HSI A US Law enforcement organization) ("entity" DEFENDANT Defendant of the case) ("entity" SOFIA MARTINEZ A defendant in the case, suspected of alien smuggling)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+AL" by" the "" "entity"iens the" the" the" the "iensiediensentity "
+iens
+ "entityentityE
+entityentity"entity GREREentityentityentity tr of"'""entityentityentity"entityentity"ANONY (" (" Cop""  entity ofentity ofentity"entity the ofAN LAN of)ED (" (" (" G the) theentity of ("p by theiens)oreed theentity""
+====================
+
+--- Example 93 ---
+GROUND TRUTH:
+("entity" HENRY GUTIERREZ-ANDRADE A codefendant who handed his cell phone to the captives.) ("entity" CAPTIVES Individuals who were given a cell phone and told to call their family members.) ("entity" FAMILY MEMBERS People the captives were told to call.) ("entity" ORIGINAL SMUGGLERS Individuals to whom the captives were directed not to send money.) ("entity" CELL PHONE A device handed to the captives to call their family members.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"ied""-""entity" to by" "" the " of of "iediens " " (" " " "
+)entity ""entity"" "entity entity""ist"entityentityCO
+entityentity"entity CRE""UEWE"ICAAentity")GSLE the the L  the  the byentity of) the entity of)entity ofentity)entityentityALANRAEDD the (" ("erss) were in by state of) of by the the entity.)) (" ("entity)entity"LEILEANALER) (" (" (" OF TAN) in by the to the theentity)entityentityAL))LEERAIC) (" (" ("ENT by) the they entity is) found by to the to to we theentity)entityentityLLIARING OF Cop CopLI of by which which of) which to location to to to thez
+====================
+
+--- Example 94 ---
+GROUND TRUTH:
+["ROJAS-MENDOZA", "UNKNOWN  "]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "cker "[" " " " " " " "
+["
+
+iens ""["["G
+["ALCKA"]ALERCB")Z
+ALGAW")ANINRERE")
+====================
+
+--- Example 95 ---
+GROUND TRUTH:
+("entity" ASHLEY FLORES An individual who approached the checkpoint at 12:59 a.m.) ("entity" CHECKPOINT The location Ashley Flores approached.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+-"entity"" to " the entity-" "entity"AT" by ""edentityentityG
+["entity"entity CIY
+
+LEVEULT (" the the individual the the the entity"ed the11 entity ofentity " ("ansentity ofentity"entityentity"AN)RAentityentityentity entity)))AT))entity (")
+====================
+
+--- Example 96 ---
+GROUND TRUTH:
+["DEFENDANT", "SOFIA MARTINEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ALAN into
+ " " " "[" "AN "[" "[" "ated " "["[" "
+ " "iens"
+AL["G
+["ALAL"]"]
+ALLLL"AN")")")
+====================
+
+--- Example 97 ---
+GROUND TRUTH:
+["RICARDO RODRIGUEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " ""
+[" " " " " " " " " " "AN "iedged" " " " to
+AN"""ALALAL["ALGSCHGU")GZ")
+====================
+
+--- Example 98 ---
+GROUND TRUTH:
+("entity" NISSAN A vehicle whose windows were rolled down.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity of" the nameATIONence""" by the " " of the the the the " intoiens
+
+entityentity
+
+("entity"entity CAL
+ANentityentityentityentity tr of entity the into into with ("entity"
+====================
+
+--- Example 99 ---
+GROUND TRUTH:
+["PRUSZENSKI"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+[" " "[" " "
+ "["
+
+ " " " " " (" " " " " "ed"es by to
+AL["CO
+["AL"]"]")C")")
+====================
+
+--- Example 100 ---
+GROUND TRUTH:
+("entity" DEFENDANT An individual arrested for driving a white Chevrolet pickup with thirteen undocumented aliens.) ("entity" WHITE CHEVROLET PICKUP The vehicle the defendant was driving.) ("entity" FALFURRIAS, TEXAS The location near where the defendant was arrested.) ("entity" UNDOCUMENTED ALIENS A group of thirteen people in the vehicle.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the"1" "1 entities1"" "entity " by the " "jied the
+ into  "ED (" " " "
+ "entityentityentityentityed byiens"entityentityAT
+entityentity"entity trVLE"" tr trentityentity of  theiens list ofentityentityj of"" theentityentityciesiensed byiens"entityentityentity"entityentityV ATAAAGRAATANAAN (" (" (" G" Tentity) found ofentity ofentity)entityentityLE GLE)AN THERAIT the the the the location of the the entityentity) found by the ("entity)entityentityALedALATs by GGGAN (" (" the GLE1ruateded) the location to to the)
+====================
+
+--- Example 101 ---
+GROUND TRUTH:
+("entity" VIRIDIANA LOPEZ An individual who confirmed her knowledge of his involvement in an alien smuggling operation.) ("entity" JOSE DANIEL SALAZAR-AMBROSIO An individual who confirmed his knowledge of his involvement in an alien smuggling operation.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+-" ""EN"U"" the"su"entityiens ("""entity of)) state) " (") " "entity" " nameu" the entityiens"["indentity"entityentityAL
+entityentity"entity REIS"SLEVESSALELELE G" theentityentity) entitygu) the entityiens)oreed") (""entity"entityentityAentity)ONYANLEENLEZAIentityIANGANLE (" (" (" G G G into entity the the entityated) the entityiens)oreed to) ("entity)
+====================
+
+--- Example 102 ---
+GROUND TRUTH:
+["CANO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "AR " " into " " "
+ " "
+ ("["
+ " " "ed by
+
+
+"" " " " " ""[" " " """AN[" OF
+["ANALCLE
+====================
+
+--- Example 103 ---
+GROUND TRUTH:
+["AGENT", "TWO MEN", "TWO WOMEN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " ("ied " " ("iens" " " "" " "["[" " "
+ " ""AN["AT
+["ALRS
+ALANLLANC
+ALLVERANT")")
+====================
+
+--- Example 104 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+["["AR["[" " " " " " "["
+ "
+
+
+k
+ " "" by" "" " " " the" state" " ")) the") the" the "" the """ANA OF["AN")YS")AVESTA")
+====================
+
+--- Example 105 ---
+GROUND TRUTH:
+("entity" BORDER PATROL AGENTS Took custody of migrants) ("entity" SANTA CATALINA ISLAND Location of migrant transfer)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+AL ("EN
+"entity the" byentity" theentity
+)) the theiens the"iens") ("entityentityAT
+iensentity" C ("SLE"VERUENTS" C C C C"ers" entityator) " ofentity"entityentityANC"ARIISLELAATEN (" (" ("" theentity)iensentity of"
+====================
+
+--- Example 106 ---
+GROUND TRUTH:
+["DEFENDANT GUARDADO-MEZEN", "CO-DEFENDANTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "ed["
+" "["iens[" (" " "iens""
+ ("" (" ""["["""" into " " state" the " "ersator" in in into1["G
+["ALAL")")UIDA")SVERALGAC
+AMMAAN")S")A
+====================
+
+--- Example 107 ---
+GROUND TRUTH:
+("entity" TRUNK PASSENGERS Individuals who admitted that they were in the country illegally.) ("entity" COUNTRY The location where the trunk passengers were illegally.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entityentity""" by entity" to the " of the"" " " the
+["entity" ("
+ C GEDYANSSEN (" (" ("IC"" were to entity were in the entity)legated theedentityentity)entityentityLA)ICAN (" (" (" G of theentityilled) inleged the the the"
+====================
+
+--- Example 108 ---
+GROUND TRUTH:
+["SMUGGLERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " "["[" intoiens" " " " " "
+
+
+ " "ied " "" " " "[""AR"" " " the the " " into " """iens"["["ANT
+["ALANALER"]V
+====================
+
+--- Example 109 ---
+GROUND TRUTH:
+["INDIVIDUALS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+ " " into "iens "["[" " "["
+"
+
+ " " "" "["["AN
+["ALCLLELELE") ("
+====================
+
+--- Example 110 ---
+GROUND TRUTH:
+("entity" ABDULLAH YUSUF An individual who pulled a flatbed trailer north on Interstate 35.) ("entity" FLATBED TRAILER The vehicle Abdullah Yusuf was pulling.) ("entity" INTERSTATE 35 The highway on which Abdullah Yusuf was traveling north.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the"1"" "1 individual1"" "entity the"" the the into "iens into"
+
+ "entity
+1""entityentityAN
+["entity"entityentityANREAN trANAN"ALEDLELELE Gentity wereentity list) byj)) theentity of11)ed entity)entityentityANAR theAN byRAGLEAN (" ("entity G)entity)ersAN) the found into (" theentity)entityentity the))11) (" (" ("entity) which isentityled theAN the the foundled the entity the)
+====================
+
+--- Example 111 ---
+GROUND TRUTH:
+["TWO MEN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " "
+ " " into " " " " " " " " " "
+["ind "
+["["CO
+["ANLLLLIC"
+====================
+
+--- Example 112 ---
+GROUND TRUTH:
+("entity" MOVANT An individual who, with his co-defendants, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.) ("entity" CO-DEFENDANTS Individuals who, with the Movant, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.) ("entity" UNDOCUMENTED ALIENS Groups of people who were kidnapped and held for ransom.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+AL" the"entityentity""" by the theed """" " into "iens " (" " " " (" " "ed "iens"entityentityCO
+ ("entity"entity nameREAN OFentityentityentity individualentityentity " the individualentityentity theed) " to the the ofiensiens))  byiens  theenter iensiensiensentityiensed byiens) (" entity entityentityVEentityANANYANentityentityentityentitys) were " which "ed) " to the the  ofiens))  byiens by theenter andiensiensiensiensiensed intoiens) (" entity entityentityGENTANANSSNSGSAN (" (" ("V) the) were to) the toiens by theude) an (" thej
+====================
+
+--- Example 113 ---
+GROUND TRUTH:
+("entity" KIM Operator of a marine consulting and recruiting firm) ("entity" DALIAN, NORTHEAST CHINA Location of Marine International)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+" to to to ""ed the the "entity) the" " C " " "ied " "entityingsiens " (""
+entityentityAN
+entityentity" individualS"entityentityentity " entity location"ed"entityentity )"entityentityentity"entityentityAL GMMentity "ATIONENALEDALCLELELELE"entity"entityentityentity"
+====================
+
+--- Example 114 ---
+GROUND TRUTH:
+("entity" UNDOCUMENTED IMMIGRANTS Individuals smuggled by sea into the United States) ("entity" PANGA BOAT Small high-speed vessel used to smuggle immigrants) ("entity" UNITED STATES Destination country of the smuggling route)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+" to by the entityentity" the "entity""led the the the" the theiens "" "
+ " " "entityed "entity" theentity" " the individual of " entityentity""" " into" the"" ""rant by" theentity"entityentityEiensentity"entity C C C CE byMMATSAN")") OF the the OF""oreers by the and the entity States)entityentityentity"entityentityANC"LEES (" Copersersentity)) by theell into theersation) were inentity)entity alGEAL byATES) (" (" theers) ofentity ofattered to)entity of"
+====================
+
+--- Example 115 ---
+GROUND TRUTH:
+("entity" PRUSZENSKI  A Border ("entity" BARON  A Border Patrol Agent on duty) ("entity" PICKUP TRUCK CAMPER  A vehicle that was spotted by agents Pruszenski and Baron)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity""" the"ied by """uedentity"led the))ually " into "iensiediensentityentity " (" "entityentityG
+ ("entity"entity CRE ("A"U" trentityentityentity Lentityentity"entityentityAN)) the the theentityLIentityentity oned the ofentity ofentity)entity ("AR"ANANANAENLEANENT (" (" (" M L entity foundur by theentityados")entityentity)entityentity)
+====================
+
+--- Example 116 ---
+GROUND TRUTH:
+("entity" GARY HASTON  A detective in this case) ("entity" HEATHER VARGAS  A detective in this case) ("entity" IH-35  An interstate highway in the US)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the"11" "111" the " " " """entity "ANiens the
+U
+
+ " (" "ER" " "
+entity" " ("ALentity""
+entityentityAN
+["entity"entity UE ALSA entityentity  L of" the list ofentity ofentity"entityentity" the)AENEN the (" (" ("  L of) the location ofentity ofentity)entityentityMM)entity0) (" (" ("entityentityentity" to the location)1 of)
+====================
+
+--- Example 117 ---
+GROUND TRUTH:
+("entity" ALIENS A group of 84 individuals who were loaded into a truck.) ("entity" TRUCK The vehicle into which the 84 aliens were loaded.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ of the1""iens" in by " "ued" the "" "entity AN
+iensentity"
+ C CED
+EN
+ " " tr ofentity111) were in by the listuckeded ofentity"entityentity""ED (" (" Copentity" the isentity111iens) in byentity the"
+====================
+
+--- Example 118 ---
+GROUND TRUTH:
+["DIAZ-GALIANA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+["
+[" "["iens"" " """["UE ("" " " by "ANLL "ed by["["G
+["ALLL""]ALLOIANCZ"
+====================
+
+--- Example 119 ---
+GROUND TRUTH:
+["GRUBER"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ector " "["" " " " " " " " "["[" " ("["["G
+["["LLAN[" OF
+====================
+
+--- Example 120 ---
+GROUND TRUTH:
+["VIRIDIANA LOPEZ", "JOSE DANIEL SALAZAR-AMBROSIO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " "arin[""U "[" " (" ("iens "["["["
+
+[" "ated) " " " (" " " " "") " "u" the "iens"jled""["["AL
+["ALOL")S HY CVEST")
+ALAVZUYAN")ENTI"")")G")ANVE")VA
+====================
+
+--- Example 121 ---
+GROUND TRUTH:
+["ERNESTO DELGADO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "emi
+ena[" " "ied " ("
+ "
+ " ""["" " " " " " " of " " "hed by by the1"""ed"
+AL
+ OF["ALNSTANLEALUUESLEAG
+====================
+
+--- Example 122 ---
+GROUND TRUTH:
+["AGENTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " "
+
+ " " "[" "[" " "
+
+["
+["
+ "
+ " " by " " """ " "ied "" the""" " "u the")
+["["AN
+["AL"]"]CO OF
+====================
+
+--- Example 123 ---
+GROUND TRUTH:
+("entity" PBSO A law enforcement organization involed in the case) ("entity" DEFENDANT Defendant of the case) ("entity" CELLPHONE A device that was examined in digital forensics by PBSO)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ARANLE by " entity the"""" the entityence"s theiens" CopentityentityI
+["entity"
+ C (" ("RE " " " " of'entityed theil by the entity)entityentity"entityentityALALENIC the (" Copers)entityentity of of ofentity)entity theNINGING of Cop Cop CopLI of is theited by theentity the)) whichARANMEentity of)
+====================
+
+--- Example 124 ---
+GROUND TRUTH:
+["BORDER PATROL AGENTS", "MEXICAN NATIONALS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ient
+
+[" " " " " " (" "
+
+ " ("[" "
+ " "AL
+AL
+AL["AN["ALUILD"]AN"]LLLEERS")
+AY")ANSIL")I") ("
+====================
+
+--- Example 125 ---
+GROUND TRUTH:
+("entity" MEXICAN NAVY A law enforcement organization in the maritime domain) ("entity" SPEEDBOAT A vessel) ("entity" ISLA CLARIÓN, MEXICO A location in the high seas)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+LI""" theentity" by the "entityentity the name- of" " "1 " ("ed"" ""iens "
+
+entity"entity "
+
+entity ("entity
+entityentity"entity C ("""entityATIONINGANLELELE L"gs"ed the entityentity))entityentityentity"entityentityANentityentityATI (" (" ("Z"entity"entity)entityentityentity"ATENMMVATION theANITANA (" (" theLE of theentity aled)entityentityed
+====================
+
+--- Example 126 ---
+GROUND TRUTH:
+["JOSE JALOMOS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " "["[" "
+ "[" "
+
+
+ ""ientiens"
+OB (" (" " "["""[""" " "hed """" the""1")""")" the."ator" ""1AAN["ALALEVALEIERA
+====================
+
+--- Example 127 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+ " " " "["ARED " " " " " " " " " " of "'
+ " "AN"["s"j" " " "ator " " "Zraced" " " into "" of the of" "",AGA OF["A")")VLE")
+====================
+
+--- Example 128 ---
+GROUND TRUTH:
+("entity" RICARDO RODRIGUEZ An individual who responded that there were two more in the trunk.) ("entity" TRUNK A location where there were two more people.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity""""ed by"" to to to the "ent ofentityentity
+
+iensentity"entity CAN (" GREDUruckATEA (" the theY" wereED by were were in individual al the "ueleded ofentity)entityentity")ed (" (" ("LI of the were in the al toentity theed
+====================
+
+--- Example 129 ---
+GROUND TRUTH:
+["DESCARGAS", "JAQUEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["["ed " """[" " " " "
+
+["["AN
+["["STER"AR"]
+ANAZLL") OF
+====================
+
+--- Example 130 ---
+GROUND TRUTH:
+["HERNANDEZ-LOPEZ", "MARTINEZ-GARCIA", "MAN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "ings
+["["AR["[" "IC "["["AR["
+ " " " "[" " " " " " " """ the "" of["["ANT["ALNARCALAAVEZA
+
+GA OFAANANCHAN " "A")j
+====================
+
+--- Example 131 ---
+GROUND TRUTH:
+("entity" ORTIZ An agent who observed the defendants' maroon Ford Expedition.) ("entity" DEFENDANTS' The individuals whose vehicle was observed by Agent Ortiz.) ("entity" MAROON FORD EXPEDITION The vehicle observed by Agent Ortiz.) ("entity" IH-35 The highway the vehicle was traveling on.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" to " the "1 to "
+entity ""iens" by entityentity"entity"entity"entityentity"iteentity"entity theMMALentity"" " " "" the entity of" entity stopped into"" theentity" iniled " "entityentityI
+["entity"entity YANAentityentityentity individual ofentity into individual""entityued"pedentity)entityentity entity"entityentity ofANON G)entity of of of entity) were)hed by the and)" the theentity)entity""A) theENANAT)) (" (" (" C T  the of)Aentity theentity)entityentity foundANentity0) (" (" Copentity toentity toheded the the the the"
+====================
+
+--- Example 132 ---
+GROUND TRUTH:
+("entity" UNITED STATES The destination country for the smuggled individuals.) ("entity" SMUGGLED INDIVIDUALS People who paid to be smuggled into the United States.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+" by by entity" in to"" the inoreind by the " " ofentity ("G "["entity" (" CALED ("EDI) (" (" (" C"" the individualiteed by) ("entityentity"entityentityATsAT)VECTENALLEEN the the the" the by the initeded by theentity-)entity the)
+====================
+
+--- Example 133 ---
+GROUND TRUTH:
+("entity" MOVANT An individual arrested with four undocumented aliens in her car.) ("entity" UNDOCUMENTED ALIENS A group of four people found in the Movant's car.) ("entity" CAR The vehicle the Movant was driving when arrested.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the C11 individual"" "able " " by the" " into the "
+  " iensed
+iens
+ " "
+entityentityAN
+["entity"entity CREAN
+ tr trentity individual entity the the of ofed byiens) the name"entity ("entity)entityentity ofed))) byCTVSEN the the the G ofentity the) by the locationed)entity)"entityentityentity)entityentityAN"entityentity ("entity ofentityed) found to we by (" (")
+====================
+
+--- Example 134 ---
+GROUND TRUTH:
+("entity" TREVINO An individual who approached the checkpoint at 12:57 a.m.) ("entity" CHECKPOINT The location Defendant Trevino approached.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity1-1
+"" "entity (" "entity"enaite" " " of ofentity
+
+
+["entity"
+ CWE
+
+
+LE (" (" (" entity the were the entity-ed the1))1)) "entityalientityentityentity"entityentityedAN)RAentityentityentityentity"ers)jac the the1 (""
+====================
+
+--- Example 135 ---
+GROUND TRUTH:
+("entity" PETITIONER The individual who identified himself as the driver of the vehicle.) ("entity" DRIVER The role the Petitioner identified himself as.) ("entity" VEHICLE The vehicle involved in the accident.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entityentity"" by" the " " " "" the " ofentity "
+
+'entity" (" CLERA ofAN  " the individual of were the" the "' the ") ("entityentity)entityentityONAN) (" (" (" individual of "entity)) the the the the theentity"entity theALEINGSSS (" Cop Copentity of the the ofal the the"
+====================
+
+--- Example 136 ---
+GROUND TRUTH:
+("entity" CUBAN SMUGGLING RING MEMBERS Individuals arrested for smuggling in Florida) ("entity" SOUTH FLORIDA Location of indictment)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity" the SANentity"" theed" by "entity by the the" "iensiensI
+ ("entity"
+ CLEiensentityANANU CU"SSANANININ CINGS the the theoreed the the"entityentityentity"entityentity ofIINGLAINGINGSLEGGG) theentity the)entity ofind
+====================
+
+--- Example 137 ---
+GROUND TRUTH:
+["ROJAS-MENDOZA", "CO-CONSPIRATOR", "GUIDES", "DRIVER"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "cker "[" " " "["["[" " "["
+iens " "["
+AN
+ " "["["
+ied"" "" the"" " " " (" the "" " by to "iens" the "j" " by " of the " of of of the "iens) in the " of" " the in the theated  the"" the i,"AGAERiensASA"]ALERGJA" "AURATA")SANORG "AUES") "ALON")")")
+====================
+
+--- Example 138 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ANT "[" " "["" " " "
+["
+ "
+
+
+ " "
+[""["["C
+["ALA"ALIND
+====================
+
+--- Example 139 ---
+GROUND TRUTH:
+("entity" DEFENDANTS Individuals who instructed the captives.) ("entity" CAPTIVES Individuals who were instructed to tell their family members to send money.) ("entity" FAMILY MEMBERS People the captives were instructed to contact.) ("entity" CO-DEFENDANTS Individuals to whom the release money was to be sent.) ("entity" ORIGINAL SMUGGLERS Individuals to whom the release money was not to be sent.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity""ed by entityentity of the the"ed" the the " of" " "
+entityiens
+ " " " "entityentity'iensiens ("entityentityCO
+ ("entity"entity CGLE"entity"entityentityentityerss" wereed by entityentity) of ofentity"entity"ARANRAED" the the theividuals) were theed by the the location.)) the into of (" theentity"entityentityLEILEOURLES) (" (" (" C TAN) ined by theed the theentity)entityentityMMRLE)Y) Copividuals) the the to is to found the in into to theentity)entity theLE"SSYALY) (" (" ("ENTs) which we location were to found to be in to to the.)
+====================
+
+--- Example 140 ---
+GROUND TRUTH:
+["AGENTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" ("EN ("
+ ""
+
+["ANAN
+
+ "
+
+["IVER " by) "" " "iens") "ator the "") of "" "Yiens" "ated
+"
+AL
+ OFiensAS"]"]c
+====================
+
+--- Example 141 ---
+GROUND TRUTH:
+["ARCE-JASSO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "[" " "OB " into "["
+ " " "iens
+ARAN " " " "["
+ " " " "AN["""AL["CO
+["AL"]LLALA")VER
+====================
+
+--- Example 142 ---
+GROUND TRUTH:
+("entity" SILVA A border patrol agent who was on patrol) ("entity" INTERSTATE 35 An interstate route in the U.S. ("entity"  133 An interstate route in the U.S. ("entity" SERVICE RADIO Agent Silva heard the report on his service radio about the white pickup truck possibly loaded with illegal aliens) ("entity" WHITE PICKUP TRUCK A vehicle potentially loaded with illegal aliens) ("entity" ILLEGAL ALIENS The illegal aliens were suspected to be loaded on the white pickup truck)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" to" the S state the" the the entity" theentityentityied"iens"entity"
+ (" " were "entityentity "entity
+
+ "entityentityedentityued " into the aliens)
+entityentityCO
+["entity"entity HERRELELE were L of of the" were in the of ofentity ofentity"entityentity the")1 of) (" (" ("entityentity" the the locationA ("AN ofentity)entityentityentityentity individual to) (" Cop Copentityentity" the the locationA ("AN the ofentity)entityentity the)ANEN THE the Cop the" by  of the location to is which of is" ofilled to by theiensiens)iensentity location)1entityVEANANANENSALAA (" (" ("ININ in in theiensiens) were theentity)1 in)NALSLIKEG) (" (" ("VE oniens) inp by get in by the of which andilillediensiens
+====================
+
+--- Example 143 ---
+GROUND TRUTH:
+["TREVINO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["["
+ "["[" " "[" "["G["
+ " " " "["["CO
+["ALRAAOLCLL"
+====================
+
+--- Example 144 ---
+GROUND TRUTH:
+("entity" FEDERAL AGENTS Law enforcement involved in the arrests) ("entity" OREGON COASTLINE Shoreline where arrests were made)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" by"1 to to" the"ed" the "entityentity the aliensentityentityAN
+ ("entity"entity CLE CANTSENTSAN ("entityentity theING" the the ound)entity ofentity)entityentityW))MMANSS (" (" ("ers)) theound the the by1 of)
+====================
+
+--- Example 145 ---
+GROUND TRUTH:
+("entity" UNITED STATES The destination country for the smuggling.) ("entity" MEXICO The country of origin for the smuggling.) ("entity" CENTRAL AMERICAN COUNTRIES Other countries of origin for the smuggling.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ of by by"" the theentityed by the entity C" the" " the were " " " into " " " " "entityentityE
+entityentity"entity CALS CUES" the theentity entity" of the entityoreed weentityentityentity"entityentityAN""LE" (" (" individual" the) theentityattered theentity theentity)entityentityAL)AN GENENTENTALEDED) the the the the the1ated the individualattered to the of)
+====================
+
+--- Example 146 ---
+GROUND TRUTH:
+("entity" MOVANT An individual who is a citizen of the Dominican Republic and entered the United States illegally.) ("entity" DOMINICAN REPUBLIC The country of citizenship for the Movant.) ("entity" UNITED STATES The country the Movant entered illegally.) ("entity" RIO GRANDE RIVER The river the Movant waded across.) ("entity" HIDALGO, TEXAS The location near the Port of Entry where the Movant entered.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" by the entity"ed "able of by entity stopped in """ the entityator
+" were
+
+ (" (" ("iensiens " "iens " theentityentity"" theentityAL entityj ("" "uentity" the entity entity"entityentityGentityentity"entityentityREALIentityentityentity entity of entity the individual of"entity entityatorentityansentity by entity States"legiens alentityentityentity"entityentityAN)" entityALLANAN ("entityentityG."entity)) the entityien toentity ofentity)entityentity)AL byATES) (" (" the individual)entityed) bylega toentity theentity)entityentityOM)ANCSUMMIC the the the G) ED)ich to theentity theentity)entityentityLOENSN theRAIT the the the the location) the locationedentity, the locationed.) byj the.)
+====================
+
+--- Example 147 ---
+GROUND TRUTH:
+["CARLOS JIMENEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+AN
+ "["iedied " "["["AN
+ "" " "AN "[" "" "hed by " "ind" " "["led ""
+AL
+AL["ALALCHLE."A")")AGAER
+====================
+
+--- Example 148 ---
+GROUND TRUTH:
+("entity" CANTU An individual recruited to transport illegal aliens.) ("entity" JEFFERSON An individual recruited to transport illegal aliens.) ("entity" INDIVIDUAL An unnamed person who recruited Cantu and Jefferson.) ("entity" ILLEGAL ALIENS People who were to be transported.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" the""entity" by the " toentity theed theiens"entityentityUE
+iensentity"entity CLEU (" C C (" individual ofentity" by theed theiens)
+ theentity)entityentityULE)) (" (" ("entityiensited" by the theiensiens)entity theentity)entityentity theAN)ALI (" (" ("entityentity by) isitedited byel to the)entity ("entity)entity the))UEiensLIGSENT (" the the) were found find intoed by al the)
+====================
+
+--- Example 149 ---
+GROUND TRUTH:
+["PACHECO", "CHAPA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " into " "
+["
+
+ " "AR
+[" " "el " " """ " "[" " the " " " of["["CO
+["ALANHLLLL
+AALANZ
+====================
+
+--- Example 150 ---
+GROUND TRUTH:
+("entity" BAHAMIAN MALE Smuggling suspect arrested) ("entity" PALM BEACH Town where smuggling alert occurred)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entityentity"" tos by the " the oforeind theed the " of "iensiensiens " " "
+ (" " "entity " "iensings"ated) "" "entityatorentity" "AL" were
+entityentityAL
+["entity"entity GLE LAL""YSSSSLELELEERING""entityentity ofentity"entityentityAT"ATAGAED (" (" ("s theentityers tos byentity of"
+====================
+
+--- Example 151 ---
+GROUND TRUTH:
+["LUCIA ROMERO-ALVAREZ", "DIEGO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " "ena
+iens (" (" ("" "" "" by "["ind" "" " the" theLO"" the "AL
+AN
+ " "" the" by") ("")zj " ""
+("ALA["ALUALANZANERAAALSJA") "AVE")VA
+====================
+
+--- Example 152 ---
+GROUND TRUTH:
+("entity" 1992 Year in which Lee made contact with Weng Yu Hui) ("entity" LEE A person involved in human smuggling) ("entity" WENG YU HUI A human smuggler)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the to1"""""ed byALentity"U" " entityiens"iens
+" "entityentityAN
+["entity"
+ individual individual individual individual""entity" ("" the is" byed theAentity"U"entityentityentity"entity""LEentityentityentityLI)entity the)attered thatentity ofentity)entityentityED)UEU)U) (" (" (" Gentityiteed)entity and)
+====================
+
+--- Example 153 ---
+GROUND TRUTH:
+["AGENTS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["" by " "iens " " " "
+ "["[" "
+ "
+ " " " "" " " " "" " " "ited"1 "pping") " (" theil "
+["" were" were " ofs of of in" in")AG
+AN["ASS")AL
+====================
+
+--- Example 154 ---
+GROUND TRUTH:
+("entity" ORTIZ An agent who noticed the vehicle was only occupied by a passenger and a driver.) ("entity" CRYSTAL DOERR The passenger in the vehicle.) ("entity" JESSE DOMINGUEZ The driver of the vehicle.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"iens"" entity" to" by the " ("" the" ""A"iensentity"entityentityED
+ ("entity"entity CIC ("ENTentityentity " individual of entity to entity to to of by the state)entity list ofentity ofentity"entityentityAR)EDiensCAN (" (" (" M) theentity)entityentityentity)entity theA))AT)LLA the the the C)entityentity) of of)
+====================
+
+--- Example 155 ---
+GROUND TRUTH:
+["ELENA TORRES", "MANUEL RUIZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+ "iens["
+
+ "[" ""
+ (" "Zed
+["
+ " by "AN"""ers" C""" """") the "" OF") thej"" ""
+ALAL OFiensALEGGORG")
+AL")VUUVE")")
+====================
+
+--- Example 156 ---
+GROUND TRUTH:
+("entity" MEDINA An individual who testified that Avila was armed with a 9-mm handgun.) ("entity" AVILA An individual who was armed with a 9-mm handgun and threatened the hostages.) ("entity" 9-MM HANDGUN The weapon Avila was armed with.) ("entity" HOSTAGES Individuals who were threatened by Avila.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity"" by entityite"" by the "1 " " "ed"ed "entity
+
+entity were ("ed "
+ (" "entity were " "" " ("" "
+entityentityE
+["entity"entity GLEA". L S tr the entity" wased by entityil" in by the list1 entityentity ofed) (""entity"entity"")"entityentityentityentity of entity found by the "1entityentity ofed and the byentity that)entityentityentity"entityentity entity entityentityATAL)ALA (" (" the CEDIT) found by the the theentity)entityentityLLEDAEND (" (" ("ividuals) were to by theil" the (")
+====================
+
+--- Example 157 ---
+GROUND TRUTH:
+("entity" ALIENS Two individuals who were taken across the Rio Grande on a raft into the United States with several other people.) ("entity" RIO GRANDE The river that the two aliens were taken across.) ("entity" RAFT The vehicle used to take the two aliens across the Rio Grande.) ("entity" UNITED STATES The country that the two aliens were taken into.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity-iens" to by the """ the ""s the " " of the " "
+entityentityAN
+["entity"entity C TLE "ENentityentityentity T entity were the into the "" the listentity) the "entity the theiens   ("   1 ANANAN S (" (" (" individual) entityentity ofiens) in by the the theentity)entityentityG theRA and and andentity of by the into of ofiens) theentity.),1 ("entity)entity (")S byATS) (" (" (" location of were entity ofiens) in by the the the)
+====================
+
+--- Example 158 ---
+GROUND TRUTH:
+["RON TORRALBA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ient
+[""" " " " " " " " " ""["
+ " "["["["CO
+["ALANTAL"ANLEY ("
+====================
+
+--- Example 159 ---
+GROUND TRUTH:
+["CHILD'S MOTHER"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " " " "["["
+
+
+ " " " ("" "
+
+ " "["led by "ellable "iens" the1""""1["ANT
+["ALESLE["ENTIA")G
+====================
+
+--- Example 160 ---
+GROUND TRUTH:
+["CAPTAIN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "ALANAT ("
+ into "" " "
+ "iens
+["[" " " " ofiens " " " " C"
+ALALANT["ALENT"]GCAG
+====================
+
+--- Example 161 ---
+GROUND TRUTH:
+("entity" VESSEL A suspicious vessel carrying undocumented migrants) ("entity" WHITE PICKUP TRUCK A truck involved near the boat dock) ("entity" BOAT TRAILER Trailer associated with the pickup truck) ("entity" SHELTER ISLAND BOAT DOCK Location where the vessel was intercepted)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ANAN theentity entity" the nameentity"" theed the byentity" the" the[" " were " (" " " " "entity (" "ENentityentity" "
+ " " entity"entityued ""j"
+entityentityAL["entity"entity '"GU were wereentity L of"" of ofed byator) of ofentity"entityentityER ofAR)ENSANAEN (" (" (" G  the the theentity ofedentity ofentity)entityentityLL theRAMALEAL (" (" ("j)entity theentity of ofilledentity andentity)entityentityAL))LAER THEMESCED (" (" Cop) we T) founded by state )
+====================
+
+--- Example 162 ---
+GROUND TRUTH:
+["RUBEN MENDOZA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ient
+
+[""[" " " " "["
+ " " "["
+
+
+["["AN
+["ALANERCERCB"Z
+====================
+
+--- Example 163 ---
+GROUND TRUTH:
+("entity" PICKUP A vehicle that turned off Highway 59 and onto FM 2050.) ("entity" HIGHWAY 59 The highway from which the pickup turned off.) ("entity" FM 2050 The road the pickup turned onto.) ("entity" HOUSTON The city the pickup was heading away from after turning onto FM 2050.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entity"" to by" the"entity"" " " the the "up of " (" "iententity " """ " " theentityal (" "" ")
+
+
+" the"entityentityG
+entityentity"entity LE""AL Wentityentity L  entity on the"1"entityentity the"1 entity)entityentityentityentity"entityentityAN theAN"AN1)entityentityentityentity entity" the theentityedont by the (" ofentity)entityentity"1 individual of (" (" (" individual theentityup) by the the theentity)entity alLA)) (" the theentity of uped the into to the which to which"111"entityentityentity and
+====================
+
+--- Example 164 ---
+GROUND TRUTH:
+["MUNOZ-MARTINEZ"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " "ator "[" " " " "iens " "["
+ " " " " "
+ersANAN"AN["CO
+["ALER"]V")ALGED OF")
+====================
+
+--- Example 165 ---
+GROUND TRUTH:
+("entity" ALIENS Individuals who testified to paying to be smuggled into the United States.) ("entity" UNITED STATES The destination country for the smuggling operation.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"iens""ed by byed by the the theedentity"
+ ""entity" " "'" into " "
+
+entityentityG
+entityentity"entity T T
+ individualAN tr trentity the entity" wereed by the with) the inoreed by the entity States theentityentityentity"entity entityED byEDS) (" (" (" individual)) theentityattered that) the the)
+====================
+
+--- Example 166 ---
+GROUND TRUTH:
+("entity" JAQUEZ A smuggler responsible for transporting migrants) ("entity" UNDOCUMENTED ALIENS People without proper documentation of immigration)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+LI of" byentity"" by"" the individual" thei ("" theed "
+ of "ed " ("ed "iens" "entityentityE
+["entity"entity CRE ""A trentityentity trentity""entity theed)ating)entityentityentity"entityentity"ENED)))CTVGAN the the the" theentity"entityers)entity of"
+====================
+
+--- Example 167 ---
+GROUND TRUTH:
+("entity" TRUCK The vehicle that arrived at the checkpoint.) ("entity" ALIENS A group of four individuals who lay in the sleeper compartment for several hours.) ("entity" SLEEPER COMPARTMENT The location where the four aliens lay for several hours.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ ofentityentity" by the entity for of " entity theiens" the the " of"ied " "" the " " " " ("entityiensiensentityentityG (" ("entity"entity CANT T T tr tr tr tr of entity in the entity"ed the theentity"entity the LEN"ENentity the (" L of the the) were is theentityaked)ied) theentity) (" andentity)entityentityAN)AGALALANSS (" (" (" C) the entity ofiens)iens theiens) to the)
+====================
+
+--- Example 168 ---
+GROUND TRUTH:
+["TWO MEN"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " "
+ " " into " " " " " " " " " "
+["ind "
+["["CO
+["ANLLLLIC"
+====================
+
+--- Example 169 ---
+GROUND TRUTH:
+["ANTONIO HURTADO"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " ("Uiens
+ "["ied
+ " ("
+ ""["" "["
+
+ated the"[""""" the the"" in "hed by by" the"" the1""" the"
+["
+ OF["AI THE"]ALALALSV�
+====================
+
+--- Example 170 ---
+GROUND TRUTH:
+["INDIVIDUALS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "
+ " " "["["ied " "
+ " " " " "
+ " ("
+
+ "[" ("" " (""" """" " theilind into the """leg[" "
+["[" OF
+["ANSANELEI")AG
+====================
+
+--- Example 171 ---
+GROUND TRUTH:
+("entity" BORDER PATROL AGENTS Agents who made the arrest) ("entity" SAN ONOFRE STATE BEACH Coastal area of arrest)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entityentity"" by " of the1"" toiens) the " of"iens" " "iens " " (" (" "entity ("iens the"ATentity" " were "iensind by theentity" ""
+entityentityAL
+["entity"entity LALSLE".LEUENTS")LELELEENT") the the "ed " ofentity"entityentityAN GG GLEALATZALENTED (" the ("AL"" theedentity of"
+====================
+
+--- Example 172 ---
+GROUND TRUTH:
+["MCMILLON", "WILLIAMS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+["
+ " "["iens["
+ " "ANER" " (" " " " ""[" "" the "el""ed theAG" ""
+AL
+ OF
+["AL"]LL")")
+ALLLER"")A
+====================
+
+--- Example 173 ---
+GROUND TRUTH:
+("entity" MOVANT  A person who illegally entered US) ("entity" RIO GRANDE RIVER  A river in Texas notorious for illegal entry by aliens) ("entity" HIDALGO, TEXAS, PORT OF ENTRY  A port of entry into US)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" by the entity"ed "able of by entity stopped in """ the entityator
+" were
+
+ (" (" ("iensiens " "iens " theentityentity"" theentityAL entityj ("" "uentity"entityentityANT
+entityentity"entity REAL"entityentityentity entity L ofentity"" in byANentity theentity"entityentityAN)ANALALUMMEN the the theentity Lentity the) to location theentity.) whichiens)entity whichentity)entityentityAN) GME theRAIT the theARAL theTICA (" (" ("LELEAT1  the)1 thehed
+====================
+
+--- Example 174 ---
+GROUND TRUTH:
+["YUSUF"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " "iens into "AN["["[" " " " "
+ " "
+ged by " " " " " " "["led by the """
+AL
+ OF
+["ALAN"ALIND
+====================
+
+--- Example 175 ---
+GROUND TRUTH:
+("entity" DIAZ-GALIANA An individual who drove his codefendant to a location and allowed him to stay at his residence.) ("entity" CODEFENDANT An individual who was driven to a location by Diaz-Galiana and stayed at his residence.) ("entity" RESIDENCE The place where Diaz-Galiana allowed his codefendant to stay.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity"entityAN"" by"" the" the "" the " of of"iens "
+ "" " " " ("entityentityUEiens"" ""entity" "" the location"entityentityCO
+["entity"entity LERE"entityALLEANYLEZZZ individual individual individual individualentity of)) the location where the by) the into the name) "entityentity)entityentityALAN)Ientity (" Copentity of were found by the location of whichz"entityALiens)entity into the name) "entityentity)entityentityAN)entity)ALentityentityentity location to thezers1AL)) by location to)) which into (" (")
+====================
+
+--- Example 176 ---
+GROUND TRUTH:
+["ORLANDO MAGRINAT", "CARLOS REGALADO AMECHAZURRA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "["
+ " " "" " "iens
+["[" " "
+ "[" "["
+ " ""iensiens"Zj[""""
+["
+ANT["ALGARSGI."AN")AL
+ALAL")OS")AUIDS")")LE")ALLEAALG")
+====================
+
+--- Example 177 ---
+GROUND TRUTH:
+("entity" CANTU SILVA Cantu Silva is the defendant) ("entity" AGENTS Border Patrol Agents working on the case)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entityentity"""" into the " the to " to" the by" ("edamil  ("entityentityAN
+["entity"entity CLEALentityLELEJ (" CentityU"" the individualloredentity ofentity)entityentityINGs) (" (" ("edentityersentity) with the location ofentity of"
+====================
+
+--- Example 178 ---
+GROUND TRUTH:
+("entity" PACHECO An individual who called Chapa from a cell phone.) ("entity" CHAPA An individual who was called by Pacheco.) ("entity" CELL PHONE The device used by Pacheco to call Chapa.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"entity"entity the entityentityentityentityeded "AT theentity the "man " the """ " "es " " " "entity)entityentityentity
+["entity"entity CYH CREentityentityentity entity entity entity theac" the " of) (" ofentity)entityentity"" individual individualentityentity) is in the whomATentityentity theentity theentity)entityentity ofAATAN of (" (" (" entity of by whichATersentity the the intomanentityentity the)
+====================
+
+--- Example 179 ---
+GROUND TRUTH:
+["SMUGGLER"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+ " into "iens"["[" " " " " " "
+
+
+
+
+ " " "
+
+["["AN
+["ALAN"]IC") OF
+====================
+
+--- Example 180 ---
+GROUND TRUTH:
+("entity" GARCIA  Apotential smuggler) ("entity" ALIENS  Illegal immigratns without proper documentation) ("entity" SAN LUIS, POTOSI, MEXICO  Location where Garcia approached the aliens)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the C1" "1 entities10" " (" by "" " ofiensed byiens" the
+ (" "ENT (" " (" "entityentityentity
+["entity"
+ GLE G" tr tr tr of entityAN""ansers"entityentityentity"entityentity LAN)AN" (" ("entityiensentityers))) theentity ofentity ofentity)entityentityANGLUANAN theARALANLE theANITANAL the the theentity the theentity" byentityiens)entityentity)
+====================
+
+--- Example 181 ---
+GROUND TRUTH:
+["EUCLIDES MORENO", "UNDOCUMENTED ALIENS' FAMILY MEMBERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " (" ("[" " " " " " " " "ed "iens
+ "
+ " " " " " " "["""ALALCO
+["ALULEICS")I GCLE "ALIENT")")") LAN")ANSLEISANLLER")�
+====================
+
+--- Example 182 ---
+GROUND TRUTH:
+["JOSE M. VELEZ", "MIGUEL A. RIVERA"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " "
+ "["[" "
+ "["" " (" " "
+"""["ANEN
+ers) CI
+Actor" "")Z
+" "
+led " "ed """ the """") thej)" " Rico")AA OF["AALELLI
+ALEG") "A"")GULEIC"S""
+====================
+
+--- Example 183 ---
+GROUND TRUTH:
+("entity" 2008 CHEVROLET TRUCK  A vehicle used for pulling a flatbed trailer transporting a scissor lift)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+entity entity" "entity" in by the "1
+
+""entityite the "entityed into "iens into
+ "edentityentityentity"entity
+
+entityentityO
+ ("entity"entity C individual individualentity (""ATALBVRAUVED C (" ("RE LV  the the L  byj"ed"entityentity)entityedentityentity"
+====================
+
+--- Example 184 ---
+GROUND TRUTH:
+("entity" AGENT An individual who discovered four more aliens in the cab of the truck.) ("entity" ALIENS Four individuals found hiding in the cab of the truck.) ("entity" MEN Two of the four aliens found hiding in the cab of the truck.) ("entity" WOMEN Two of the four aliens found hiding in the cab of the truck.) ("entity" CAB The location within the truck where the aliens were hiding.) ("entity" TRUCK The vehicle in which the aliens were hiding.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+"" to " entity" by the"iens" the the "entity " "ent of "iens' " ("
+entityentityG
+ ("entity"
+ CESentity (" (" individual tr tr the" aliens" theentity)entity entityueedentity ofentity"entity (" CAN"ANentity (" (" the) by the the locationentityentityentityilled the theentity)entity theAN)"entity (" the the entity theiens) by in theentity (" theentityueled the theentity)entity theEDEN) (" the the the theentity ofiens) in into the iens which trueled (" ("entity)entityentityALING (" (" ("entity of which whichilled the isiens) into into to theentity)entity (" to"EN C to the is wasiens were into in toena al
+====================
+
+--- Example 185 ---
+GROUND TRUTH:
+["GUTIERREZ-CASTRO", "MEMBERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ "-
+
+["["[" " " " "iens
+["[" "
+ " " " " " " " " " " " " " "iens"" " C"AL[" OF
+["ALLLALLEAALAALGANG
+ALG")")G
+====================
+
+--- Example 186 ---
+GROUND TRUTH:
+("entity" ALIENS A number of people who were being moved by a smuggling network.) ("entity" RAFT A vehicle used in the transportation of aliens.) ("entity" HOUSE A location used in the transportation of aliens.) ("entity" CARS Vehicles used in the transportation of aliens.) ("entity" TRUCK A vehicle used in the transportation of aliens.) ("entity" SMUGGLING NETWORK An organization moving the aliens.) ("entity" ALLENDE-GARCIA An individual who participated in the smuggling network.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ entityentity" the to entity the by theed the "ed theiens" " " " ("iens " "iens " ("iens "entity entityentityed " "iensentity" ("" the" entity Liensind""hed"iensiens" "entity entity"eentityU"entity" the entity"entityentityLLiensentity" G L""EN"entityentity L of the" were in of by the individualore of of ofentityentityentity"entityentityAN theRA"entityentityentity" by the aled) theiens) (" theentity)entityentityLAS (" (" ("NOT of by the locationed)entityiens)entity theentity)entityentityARENEND"entity injers) by the stateed)entityiens) to theentity)entityentityAL)EN (" (" (" C of by the ed)entityiens) to ("entity)entityentityIENY)ATIONANEN (" the theentity" the Ciens) to theentity)entityentityiensNATIONAL1ALENEDINGGGGLiens was by the locationiensediensed to the and
+====================
+
+--- Example 187 ---
+GROUND TRUTH:
+("entity" GRISELDA BARNICA An individual who was in the apartment where the captives were being held.) ("entity" DAUGHTER A ten-year-old individual who was in the apartment.) ("entity" CAPTIVES Individuals who were being held in the apartment.) ("entity" APARTMENT The location where the captives were being held.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ane"" the"" the "edentitysentity"" " of" " " " " entityentity" " " (" entity "entity
+ "ane
+ ""
+entityentityAN
+ ("entity" CLE""LE"AR"S LLELELEGL" entity in the list list of the entitya) into al by (""entity"entityentity"ANEDAN (" (" ("LIentityentitysentityentityentity were found theentity state ofentity ofentity)entityentityANANRAALD (" (" ("ividuals) were in found by the location state and the ("entity)entity"A)) (" (" ("entity) theentity of) in found by to the)
+====================
+
+--- Example 188 ---
+GROUND TRUTH:
+["SMUGGLERS"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " "
+ " " "["["
+ "[" "
+ "
+ "[""ist" the
+ROck "AN"" "" "apeded byiensed byator" the " and the state" j"jaj the "el the of" theALzj the" ("")"N")" " by "A")")") " in")AAAT["AAT")AT"]A
+====================
+
+--- Example 189 ---
+GROUND TRUTH:
+("entity" DIAZ-GALIANA An individual who was detained by ICE and deported on July 20, 2004.)
+
+PREDICTED:
+.".ANT["["["["["["s["["[" ("["["["[" of the["
+[" of
+ " the " (" theentity" " of " of ")
+entityated the individual (" the "entity"""""
+ the C11entity "1"10 the "entity"entityARiens" in into into "MM
+ "ed "entityentity
+
+
+entity"entity GLE""entityUELE"YZ ofLELE entity of were in of by whomANALentityed by the 100 "1entity0)"iens "
+====================
+
+--- Example 190 ---
+GROUND TRUTH:
+["ROJAS-MENDOZA", "DRIVER"]
+
+PREDICTED:
+.".ANT["["["["["["s["["["["["["["["["["["["["[" "
+ "
+[" " "
+ " " " into the " " " " " "iens " " "G
+["["
+ " " " " ""iens" in of " " " of " of in byAL
+ OF["ALLLA"]ALUSTCWAY
+AUEVSj
+====================
+
