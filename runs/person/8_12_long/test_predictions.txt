@@ -1,0 +1,853 @@
+--- Test Set Predictions and Labels ---
+
+--- Example 1 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}The alleged smuggler told police that his organization was paid to help 19 people cross illegally into the United States from Pakistan via Britain and Canada.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] texted perpetithling, the that he name was not to sm him10 year escape thelegally into the United States. the. a. that.
+recordINST]
+'",):record,delimiter}("UGGLER{tuple_delimiter}1SON{tuple_delimiter}1 alleged smuggler told police that his organization was paid to help 19 people cross illegally into the United States from Pakistan via Britain and Canada."[.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 2 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}Munoz-Martinez's purple, low-riding pickup-truck was atypical of traffic in the area, which primarily included vehicles related to the oil industry, ranching, and hunting.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ich,Rinez,s entityse mart red-topers,up trtruck, found theical of his in Los city. and was consisted pick of to Mun entity and. andchers, and transport.recordINST]
+M",):record,delimiter}("unOZ-MARTINEZ'record_delimiter}purSON{tuple_delimiter}Munoz-Martinez's purple, low-riding pickup-truck was atypical of traffic in the area, which primarily included vehicles related to the oil industry, ranching, and hunting"]lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow..lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow..lowlowlowlowlowlowlowlowlowlowlowlow..lowlowlowlowlowlowlowlowlowlowlowlowlowlowlow...lowlowlowlowlowlowlowlowlow....lowlow...lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow...........lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow.lowlowlowlowlowlow...lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow..lowlowlowlowlow.lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow..lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow......................lowlowlow..lowlowlowlowlowlow..lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow.lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow.....lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow..lowlowlowlowlowlowlowlowlowlowlowlowlow.............low.....lowlowlow....lowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlowlow......lowlowlowlowlowlow.....................lowlowlow..lowlowlowlowlow..........................................low.....................................................................................
+====================
+
+--- Example 3 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}INVESTIGATORS{tuple_delimiter}PERSON{tuple_delimiter}Investigators approached a yacht with 13 people on board — ten from Honduras, two from Nicaragua, and one from Peru — during a boarding near Catalina Island.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ator: by totalacht at a30 Investig on board. including of theumburas and three from thearagua, and one from Gu. and the perioding in theina Island.
+ENTINST]
+Inv", "record,delimiter}InvVESTIGATORS,tuple_delimiter}APUStuple_delimiter}Investigators", a yacht with 13 people on board — ten from Honduras, two from Nicaragua, and one from Peru — during a boarding near Catalina Island."...[...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 4 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GUIDES{tuple_delimiter}PERSON{tuple_delimiter}After staying at a motel, they met eight aliens with their guides on a dirt road at 4:00 a.){record_delimiter}("entity"{tuple_delimiter}ROJAS-MENDOZA{tuple_delimiter}PERSON{tuple_delimiter}m; all eight were placed into the cargo area of the Tahoe, with Rojas-Mendoza in the front passenger seat and the unknown person driving.){record_delimiter}("entity"{tuple_delimiter}DRIVER{tuple_delimiter}PERSON{tuple_delimiter}The vehicle had rolled over several times; five of the aliens as well as Rojas-Mendoza were badly injured, two aliens were dead, and the driver could not be found.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] theing in the hotelel, the head at entitiesiens at the leaderides. the roadirt road. night2:00 PM.m. they of al human in cust mot hold of a spacesARDoe. which theirok drivingRurza and the driver passenger seat. Ro others in in. Ro T made eight down a d, they minutes the eightiens were well as Rojas-Mendoza were injured injured. and ofiens were killed. and the unknown was not be identified.ENDINST]
+entity", "record,delimiter})("UIDES,record_delimiter}RSON{tuple_delimiter}R staying at a motel, they met eight aliens with their guides on a dirt road at 4:00 a.record_delimiter}
+entity",{tuple_delimiter}GJAS-MENDOZA{tuple_delimiter}("SON{tuple_delimiter}They, all eight were placed into the cargo area of the Tahoe, with Rojas-Mendoza in the front passenger seat and the unknown person driving.{record_delimiter}("entity"{tuple_delimiter}ALRIVER{tuple_delimiter}unknownSON{tuple_delimiter}The vehicle had rolled over several times; five of the aliens as well as Rojas-Mendoza were badly injured, two aliens were dead, and the driver could not be found"]{]RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR...RRR.....RR...RRRRR...RRR....R.................R.......................................................................................................................]]................................................................................................................................................................................................................................................................................................................................................................................]]................................................................................
+====================
+
+--- Example 5 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}VICTOR BARBERENA{tuple_delimiter}PERSON{tuple_delimiter}On June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 'I-35' between Laredo and San Antonio.){record_delimiter}("entity"{tuple_delimiter}ABRAHAM ESQUEDA{tuple_delimiter}PERSON{tuple_delimiter}On June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 'I-35' between Laredo and San Antonio.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 18, 2019, the Patrol Agentents seizedianoaja and Victor Barquivel were shot in processing pursving pat patrol. thestate  45 whenInter-35") near Mcaredo, Nue Antonio. DuringENTINST]
+Inter",):record,delimiter})("ctorOR BARBERENA",record_delimiter} andSON{tuple_delimiter}A June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 ("("-35' between Laredo and San Antonio."record_delimiter}
+entity",{tuple_delimiter}ABRAHAM EQUEDA{tuple_delimiter}PERSON{tuple_delimiter}On June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 'I-35' between Laredo and San Antonio.){\\\\\\border........border.........................border..............................border............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 6 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ining, Def att-Defendantants are the casesors to the remote placevenue. the.recordINST]
+Def",):record,delimiter}":ENDANT,tuple_delimiter}andSON{tuple_delimiter}hisendant and his co-defendants took their captives to a different apartment in Houston"]record_delimiter}entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){record_delimiter}("entity"{tuple_delimiter}APAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 7 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}HSI received information from a source that Defendant Sofia Martinez was coordinating the smuggling  of illegal aliens.){record_delimiter}("entity"{tuple_delimiter}SOFIA MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}HSI received information from a source that Defendant Sofia Martinez was coordinating the smuggling  of illegal aliens.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ang, a from the source that couldense wasa hadinez was goingating with activitiesuggling ofof Def aliens from
+recordINST]
+H",):record,delimiter}":ENDANT SOtuple_delimiter}SSON{tuple_delimiter}SSI received information from a source that Defendant Sofia Martinez was coordinating the smuggling  of illegal aliens.record_delimiter}entity",{tuple_delimiter}DEFFIA{ARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}HSI received information from a source that Defendant Sofia Martinez was coordinating the smuggling  of illegal aliens.){...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 8 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}RICARDO RODRIGUEZ{tuple_delimiter}PERSON{tuple_delimiter}Ricardo Rodriguez responded that there were two more in the trunk.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ardo,ruez"]ed to he was no entities entities the textuck andrecordINST]entR",):record,delimiter}("icARDO RODRIGUEZ{record_delimiter}respondSON{tuple_delimiter}Ricardo Rodriguez{ed that there were two more in the trunk"]...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 9 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GARCIA{tuple_delimiter}PERSON{tuple_delimiter}On June 4, 2001, Garcia approached a group of nine undocumented aliens in San Luis, Potosi, Mexico.){record_delimiter}("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter}On June 4, 2001, Garcia approached a group of nine undocumented aliens in San Luis, Potosi, Mexico.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 1, 2019, therett, the male of people peopleocumented immiens near the Diego Ob Arizonaosi. Mexico. GarrecordINST]ententity",):record,delimiter}("arCIA,record_delimiter}approSON{tuple_delimiter}appro June 4, 2001, Garcia approached a group of nine undocumented aliens in San Luis, Potosi, Mexico."record_delimiter}
+entity",{tuple_delimiter}GIENS{tuple_delimiter}GROUPSON{tuple_delimiter}On June 4, 2001, Garcia approached a group of nine undocumented aliens in San Luis, Potosi, Mexico.){undundundund...und............undundund...................undundundundund...undundundundund..undundund...undundund....undundundundundundundundundundundundundundundundundundundundund...undundundund...undund.....undund..............................und....undundund.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 10 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CONTRERAS-PUENTE{tuple_delimiter}PERSON{tuple_delimiter}Paolo drove Contreras-Puente.){record_delimiter}("entity"{tuple_delimiter}PAOLO{tuple_delimiter}PERSON{tuple_delimiter}Paolo drove Contreras-Puente.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []", acorada toMintoerta to"] thevo.aredo. Tamaulipas, Mexico"]recordINST]entPa",):record,delimiter}("TRERAS-PENTE,record_delimiter} droveSON{tuple_delimiter}["olo{ Contreras-Puente ...record_delimiter}
+entity",{tuple_delimiter}CONULO{tuple_delimiter}PERSON{tuple_delimiter}Paolo drove Contreras-Puente.){PaPaPaPaPaPaPaPaPaPaPaPaPa..........PaPa....Pa..........PaPaPaPaPaPaPaPaPa...PaPaPaPaPa..PaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPa......PaPaPaPa...PaPaPaPa..PaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPaPa...PaPaPa...PaPaPa....PaPa.....PaPaPaPaPaPaPaPaPa..PaPaPa......Pa.........PaPaPa...PaPaPaPa.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 11 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}TWO MEN{tuple_delimiter}PERSON{tuple_delimiter}The two men who were found aboard the boat are facing charges for alien smuggling.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] text entities and were fish guiltyoard the ship were here charges. violien smuggling.
+recordINST]entThe",):record,delimiter}("O MEN Wrecord_delimiter}whoSON{tuple_delimiter}who two men who were found aboard the boat are facing charges for alien smuggling."............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 12 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}JIMENEZ ELVIREZ{tuple_delimiter}PERSON{tuple_delimiter}Jimenez Elvirez had transported the aliens in the same black tractor-trailer belonging to Iron Horse Logistics and registered to Gallo, which Gallo was driving through the Freer checkpoint on October 7.){record_delimiter}("entity"{tuple_delimiter}GALLO{tuple_delimiter}PERSON{tuple_delimiter}Jimenez Elvirez had transported the aliens in the same black tractor-trailer belonging to Iron Horse Logistics and registered to Gallo, which Gallo was driving through the Freer checkpoint on October 7.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] Jones,enaire,, aed  entityien to the transport way vaniler.trailer. to thewoodse.istics. had for Jimleg. who waslo had transport. the blackedom spacepoint. the 2,2INST]
+G",):record,delimiter}JimENEZ ELVIREZ",tuple_delimiter},"SON{tuple_delimiter}Gimenez Elvirez{ transported the aliens in the same black tractor-trailer belonging to Iron Horse Logistics and registered to Gallo, which Gallo was driving through the Freer checkpoint on October 7"]record_delimiter}
+ali",{tuple_delimiter}IALLO{tuple_delimiter}PERSON{tuple_delimiter}Gimenez Elvirez had transported the aliens in the same black tractor-trailer belonging to Iron Horse Logistics and registered to Gallo, which Gallo was driving through the Freer checkpoint on October 7.){I..............................................................................II..........IIII...III...III.........III...III................................I......................III...II....IIIIIIIIIII..IIII..I....II.....II.....III..IIII....II.............................II....IIII...II....II..................................................................III....I.........................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 13 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALVAREZ{tuple_delimiter}PERSON{tuple_delimiter}Evidence related to maritime human smuggling was determined by Detective Alvarez.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []idence of to theri pi rightsuggling and provided in theective Constisonz and
+recordINST]   E",):record,delimiter}("vareREZ,record_delimiter}DetSON{tuple_delimiter}Detvidence related to maritime human smuggling was determined by Detective Alvarez."[EEEEE.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 14 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){record_delimiter}("entity"{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ining, Def att-Defendantants are the casesors to the remote placevenue. the.recordINST]
+Def",):record,delimiter}":ENDANT,tuple_delimiter}andSON{tuple_delimiter}hisendant and his co-defendants took their captives to a different apartment in Houston"]record_delimiter}entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){record_delimiter}("entity"{tuple_delimiter}APAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Defendant and his co-defendants took their captives to a different apartment in Houston.){...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 15 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MONTEROJAS{tuple_delimiter}PERSON{tuple_delimiter}On June 6, 2016, Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint on Highway 83 near Encinal, Texas.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 1, 2017, the icaeyos, with case casepection stationane.  port Patrol checkpoint on the 13. mileinit, Texas.
+ENTINST]
+Agent",):record,delimiter})AgentTEROJAS,record_delimiter}"]SON{tuple_delimiter}Agent June 6, 2016, Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint on Highway 83 near Encinal, Texas."[[[[[[...[[........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 16 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MARIO ECHEVERRIA{tuple_delimiter}PERSON{tuple_delimiter}Mario Echeverria, 24, a naturalized U.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [],.verri, "10, " studentized citiz.S. citizen,iding in Uampaana, Mexico, Mariocheverria, apected of being a of the mostleaders of the Mexicaniju smuggling organization.REINST]
+mar",):record,delimiter}("rioO ECHEVERRIA,tuple_delimiter} resSON{tuple_delimiter}2ex Echeverria, 24, a naturalized U...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 17 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}he queried Defendant's name through a computer database and learned that Defendant had been apprehended on April 16, 2010 at the IH-35 Border Patrol checkpoint for alien smuggling.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []yied theense,s name", the series system. found that theendant' been convrehended. charges 18, 2012.  computer-OP45E Patrol Stationpoint. Defien smuggling.ENTINST]
+Def",):record,delimiter})("ENDANT'tuple_delimiter}nameSON{tuple_delimiter}name queried Defendant's name through a computer database and learned that Defendant had been apprehended on April 16, 2010 at the IH-35 Border Patrol checkpoint for alien smuggling"][[[[[[[[[[[[[[[[[[[hehehehehehehe......hehehehehe...hehehe..hehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehe..hehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehe...hehehehe...hehe....hehehe......................hehe....hehehe.....he.................[[[.[[[[...........[[[[[[[[....hehehe....hehe............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 18 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.){record_delimiter}("entity"{tuple_delimiter}ALLENDE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] entitiesien and as entity as 'ison.Brocia.recordINST]
+All",):record,delimiter}AllIENS identifiedrecord_delimiter}identSON{tuple_delimiter}Alloth aliens identified the man as Allende-Garcia"]record_delimiter}
+entity",{tuple_delimiter}ALINTE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.){.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 19 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CBP MARINE INTERDICTION AGENTS{tuple_delimiter}PERSON{tuple_delimiter}The 30-foot Panga used to smuggle 24 Mexican nationals was stopped by CBP Marine Interdiction agents about five miles west of the coastline at Point Loma.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] text1 entities0year longurs P to beuggle people10- migrs into seized by BorderBP agents Patdiction agents at  miles off of the internationalal. about Loma,
+ENTINST]
+'",):record,delimiter})("P MarineINE INTERDICTION,ENTS{tuple_delimiter}","SON{tuple_delimiter}2 30-foot Panga used to smuggle 24 Mexican nationals was stopped by CBP Marine Interdiction agents about five miles west of the coastline at Point Loma."[..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 20 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}HERNANDEZ-LOPEZ{tuple_delimiter}PERSON{tuple_delimiter}When Hernandez-Lopez and Martinez-Garcia entered through the driver's side door, they saw a man sitting in the passenger seat.){record_delimiter}("entity"{tuple_delimiter}MARTINEZ-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}When Hernandez-Lopez and Martinez-Garcia entered through the driver's side door, they saw a man sitting in the passenger seat.){record_delimiter}("entity"{tuple_delimiter}MAN{tuple_delimiter}PERSON{tuple_delimiter}When Hernandez-Lopez and Martinez-Garcia entered through the driver's side door, they saw a man sitting in the passenger seat.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] youandez isRopez is Herninez-Garcia meet the the record's side door, they noticed Hern driver and in the driver'.recordINST]
+H", "record,delimiter}("NANDEZ-LOPEZ,tuple_delimiter} andSON{tuple_delimiter}Mart Hernandez-Lopez and Martinez-Garcia entered through the driver's side door, they saw a man sitting in the passenger seat"]record_delimiter}
+entity",{tuple_delimiter}MARTINEZ-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}When Hernandez-Lopez and Martinez-Garcia entered through the driver's side door, they saw a man sitting in the passenger seat.){record_delimiter}("entity",{tuple_delimiter}MAN{tuple_delimiter}WhenSON{tuple_delimiter}When Hernandez-Lopez and Martinez-Garcia entered through the driver's side door, they saw a man sitting in the passenger seat.){]]endendendendendendendendendendendendendendendendendend...endendendendendendendendendendendendendendendendendendendendend....endend.....endendendendendendendendendendendendend]]]endendendendendendend...endendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend....endendendendendendendendendendendendend]]]]..endendend....end]]....endend....end]]]endend...]]]]]]end.]]]]..]]]]]...........]....]]].....................]].............................................................................................................................................................................................................................................]]]].]]]]]....]]]]...]]]]]]]]]]]]]]]]]]]]]]]]]]]..]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]....]]]]].]]]]].......]]]]]]]]]]]...]]].........................................
+====================
+
+--- Example 21 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GUIDES{tuple_delimiter}PERSON{tuple_delimiter}, accompanied his co-conspirator from Houston to South Texas, stayed with him in a hotel, picked up the aliens from the guides, accompanied the driver in the front passenger seat while the aliens were in the cargo area, and was to receive compensation for his assistance with the conspiracy.){record_delimiter}("entity"{tuple_delimiter}ROJAS-MENDOZA{tuple_delimiter}PERSON{tuple_delimiter}Rojas-Mendoza joined the conspiracy to smuggle aliens into the U.){record_delimiter}("entity"{tuple_delimiter}DRIVER{tuple_delimiter}PERSON{tuple_delimiter}, accompanied his co-conspirator from Houston to South Texas, stayed with him in a hotel, picked up the aliens from the guides, accompanied the driver in the front passenger seat while the aliens were in the cargo area, and was to receive compensation for his assistance with the conspiracy.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []le,Murza, the teamiracy against commituggle cien into the United.S. which by wife-conspirators Ro the, Gal Texas College where at him for Houston hotel room and up al aliens and Houston Houstonerr, and them al to a vehicle seat seat of the aliens were sm the back area of and the arrested be aation for services services to the smiracy.ENTINST]
+ali",):record,delimiter})("uids,tuple_delimiter}("SON{tuple_delimiter} " the co-conspirator from Houston to South Texas, stayed with him in a hotel, picked up the aliens from the guides, accompanied the driver in the front passenger seat while the aliens were in the cargo area, and was to receive compensation for his assistance with the conspiracy"]record_delimiter}entity",{tuple_delimiter}RJAS-MENDOZA{tuple_delimiter},GSON{tuple_delimiter},
+ojas-Mendoza joined the conspiracy to smuggle aliens into the U.record_delimiter}
+entity"{tuple_delimiter}HAVVER{tuple_delimiter}RSON{tuple_delimiter} " his co-conspirator from Houston to South Texas, stayed with him in a hotel, picked up the aliens from the guides, accompanied the driver in the front passenger seat while the aliens were in the cargo area, and was to receive compensation for his assistance with the conspiracy.){RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR....RRRRRRRRRR...RRRRR..........R.....................R]]......]...................R............................].........................................................RR.....................................................................................................................................................................................,,.....................................................................................................................................................................................................................................
+====================
+
+--- Example 22 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MEN{tuple_delimiter}PERSON{tuple_delimiter}The men revealed that they were Mexicans who had come illegally into the United States.){record_delimiter}("entity"{tuple_delimiter}MEXICANS{tuple_delimiter}PERSON{tuple_delimiter}The men revealed that they were Mexicans who had come illegally into the United States.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] textus in they were goingicans. were been tolegally to the United States.INSTINST]entM",):record,delimiter}("ex{tuple_delimiter}whoSON{tuple_delimiter}ENT men revealed that they were Mexicans who had come illegally into the United States"]record_delimiter}entity",{tuple_delimiter}MXICANS{tuple_delimiter}PERSON{tuple_delimiter}M men revealed that they were Mexicans who had come illegally into the United States.){..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 23 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents Monday apprehended 12 Mexican nationals suspected of illegally entering the country at sea through the use of a smuggling boat.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol Agent are,rehended two10 individuals migrs inpected of enteringlegally entering the United. the. the T of sm vesseluggled t.
+recordINST]
+M",):record,delimiter}("ord PATROL agentsENTS",tuple_delimiter}MSON{tuple_delimiter}1 Patrol agents Monday apprehended 12 Mexican nationals suspected of illegally entering the country at sea through the use of a smuggling boat............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 24 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Defendant then confirmed that the child was not a United States citizen.){record_delimiter}("entity"{tuple_delimiter}CHILD{tuple_delimiter}PERSON{tuple_delimiter}Defendant then confirmed that the child was not a United States citizen.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ining, Def the he Def was born in Def States citizen.recordINST]   Def",):record,delimiter}("ENDANT,tuple_delimiter}CONSON{tuple_delimiter}nameendant{ confirmed that the child was not a United States citizen"]record_delimiter}entity",{tuple_delimiter}DEFILD{tuple_delimiter}childSON{tuple_delimiter}childendant then confirmed that the child was not a United States citizen.){...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 25 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PETITIONER{tuple_delimiter}PERSON{tuple_delimiter}The Petitioner identified himself as the driver of the vehicle involved in the accident.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] textaler entity by as (' Pet of the vehicle. in a accident.recordINST]
+P",):record,delimiter}driveretITIONER",tuple_delimiter}driverSON{tuple_delimiter}driver Petitioner identified himself as the driver of the vehicle involved in the accident"]identidentidentidentidentidentidentidentidentidentidentident...identidentident....identident.....ident......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................]]]..............................................................................................................................................
+====================
+
+--- Example 26 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ANTONIO HURTADO{tuple_delimiter}PERSON{tuple_delimiter}Antonio Hurtado, the boat captain of the doomed vessel smuggling 32 migrants in May 2021 wherein three people died, was sentenced today in federal court to 18 years in prison.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [],.ado, Antonio Antonioman of the Antonioomed voyage,ashedled vessel10,ants across thea2010, the the of were in was detenced to to the court. 300 in prison. AntoniorecordINST]
+Ant",):record,delimiter}("onioIO HURTADO{tuple_delimiter}theSON{tuple_delimiter}theonio Hurtado{ the boat captain of the doomed vessel smuggling 32 migrants in May 2021 wherein three people died, was sentenced today in federal court to 18 years in prison."[[[
+
+
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 27 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []yz, by attention to the him the specific location. the Diegoin. B. a weekss-hul infl. for theing his ofshore. TherecordINST]
+entity",):record,delimiter}("RTINEZ,record_delimiter}directSON{tuple_delimiter}Saninez{ his crew to meet at a remote beach in San Quint\, Mexico with two rigid-hull boats intended for transporting groups offshore.".........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................,......................................................................................................................................................................................................................................
+====================
+
+--- Example 28 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}FRIEND{tuple_delimiter}PERSON{tuple_delimiter}he had agreed to help a friend bring aliens across the border in Laredo, Texas.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []y a to meet the friend of aien to the border. exchangearedo, Texas.INSTINST]ententity",):record,delimiter}("RIEND,record_delimiter}helSON{tuple_delimiter}he{ agreed to help a friend bring aliens across the border in Laredo, Texas"][...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 29 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MEN{tuple_delimiter}PERSON{tuple_delimiter}She claimed she had stopped at a gas station where the men had asked for a ride.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ila she was a working the stop station to she p were stopped her gas fill.recordINST]SheShe", "record,delimiter}("EN,record_delimiter}gasSON{tuple_delimiter}She{ she had stopped at a gas station where the men had asked for a ride"]...She.............................................................................................................................................................................................................................................................................................................SheShe.....SheShe...............SheSheShe....SheShe.................She................SheShe......She..............................................................................................................................................................................................................................................................................................................................SheSheShe....SheShe......She...SheSheSheSheShe.SheSheSheSheSheSheSheSheSheSheSheShe.SheSheSheSheSheSheSheSheShe..SheSheSheShe....]]].....She........................................................................................................................................
+====================
+
+--- Example 30 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}Movant admitted she was transporting the aliens to Houston and that she had been transporting aliens for the past six weeks.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ing isly was theing a entityien. the, she she was a transporting theiens from a past  months.recordINST]
+H",):record,delimiter}("VANT,record_delimiter}adSON{tuple_delimiter}adovant{ she was transporting the aliens to Houston and that she had been transporting aliens for the past six weeks"].................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 31 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SILVA{tuple_delimiter}PERSON{tuple_delimiter}Agent Silva was conducting a roving patrol around the intersection of Interstate 35 and Route 133 when he heard the report on his service radio about the white pickup truck possibly loaded with illegal aliens.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [],, borning a searchgue patrol when the area of Broadwaystate 87 and Inter 381. she noticed a sound of the radio radio. a accident vanup truck with being with weapons aliens.
+"]INST]
+Agent",):record,delimiter}("LVA,tuple_delimiter}InterSON{tuple_delimiter}Agent Silva", conducting a roving patrol around the intersection of Interstate 35 and Route 133 when he heard the report on his service radio about the white pickup truck possibly loaded with illegal aliens.[[[[...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 32 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SALDANA{tuple_delimiter}PERSON{tuple_delimiter}Under questioning, Saldana told the officers he lived in Laredo and was driving the scissor lift to Dallas for repairs as a favor to the owner.){record_delimiter}("entity"{tuple_delimiter}OFFICERS{tuple_delimiter}PERSON{tuple_delimiter}Under questioning, Saldana told the officers he lived in Laredo and was driving the scissor lift to Dallas for repairs as a favor to the owner.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []standingable, theCPin revealed investig investig, was in theansdo, worked travel a officersootors lift. L. theairs. directed result to his officers.
+recordINST]
+S",):record,delimiter})("aldDANA,record_delimiter}LSON{tuple_delimiter}L questioning, Saldana told the officers he lived in Laredo and was driving the scissor lift to Dallas for repairs as a favor to the owner."record_delimiter}entity",{tuple_delimiter}SICERS{tuple_delimiter}DSON{tuple_delimiter}S questioning, Saldana told the officers he lived in Laredo and was driving the scissor lift to Dallas for repairs as a favor to the owner.){.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 33 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DOMINGUEZ{tuple_delimiter}PERSON{tuple_delimiter}Dominguez and Doerr travelled northbound on IH 35 with the child towards San Antonio.){record_delimiter}("entity"{tuple_delimiter}DOERR{tuple_delimiter}PERSON{tuple_delimiter}Dominguez and Doerr travelled northbound on IH 35 with the child towards San Antonio.){record_delimiter}("entity"{tuple_delimiter}CHILD{tuple_delimiter}PERSON{tuple_delimiter}Dominguez and Doerr travelled northbound on IH 35 with the child towards San Antonio.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ainsuez, Dome andled to to on the- 15. Do intention Do the Antonio.recordINST]
+I", "record,delimiter}DomINGUEZ",tuple_delimiter} andSON,tuple_delimiter}andinguez and Doerr travelled northbound on IH 35 with the child towards San Antonio"]record_delimiter}entity"{tuple_delimiter}DOERR{tuple_delimiter}PERSON{tuple_delimiter}Doinguez and Doerr travelled northbound on IH 35 with the child towards San Antonio.){record_delimiter}("entity",{tuple_delimiter}DOILD{tuple_delimiter}PERSON{tuple_delimiter}Dominguez and Doerr travelled northbound on IH 35 with the child towards San Antonio.){............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 34 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DIAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}On July 20, 2004, Diaz-Galiana was detained by ICE and deported.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 101 2019, thez wasCranvez, bornained by theCE agents transferreded byrecordINST]
+D", "record,delimiter}DAZ-GALIANA"]record_delimiter}"]SON{tuple_delimiter}ICE July 20, 2004, Diaz-Galiana was detained by ICE and deported"]iceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceiceice...iceiceiceiceiceiceiceice...iceiceiceice..............................................................................iceiceiceice.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................,,,,,....................................................................................................................................................................................................................................
+====================
+
+--- Example 35 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}On August 4, 1999, Border Patrol agents observed a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road, a divided highway in northern Laredo, Texas.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 1, 2999, the Patrol Agent app a group1999 Che Bron-150 pick cab pickup truck near into the par parzing pit. to thet Road in near commercial highway. the Arizonaouddo, Texas. TheENTINST]
+M",):record,delimiter})("ord PATROL{ENTS",tuple_delimiter}1SON{tuple_delimiter}1 August 4, 1999, Border Patrol agents observed a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road, a divided highway in northern Laredo, Texas."BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder...BorderBorderBorderBorderBorderBorderBorderBorderBorderBorder...BorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorderBorder...BorderBorderBorderBorderBorder..BorderBorderBorder...BorderBorderBorderBorderBorder..BorderBorderBorderBorderBorder.....BorderBorderBorderBorderBorder.BorderBorderBorderBorderBorderBorder.BorderBorderBorderBorderBorder..BorderBorderBorderBorder...BorderBorderBorderBorder........BorderBorderBorderBorder........BorderBorderBorder.....BorderBorder...BorderBorderBorderBorder...BorderBorderBorder.....Border.............................Border......BorderBorderBorder...BorderBorder....BorderBorderBorderBorder.......BorderBorderBorder....BorderBorder.....Border..........................................BorderBorder......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 36 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}She was moved, along with a male alien, to the Roadrunner Inn and while arrangements were being made to transfer this woman, Fu Mei Chen, to the custody of other smugglers, she escaped from the second story bathroom by jumping or falling out of room 297 while attempting to escape and, in fact, successfully escaping.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ila born to she with her series entityien entity to the malehouse Records. Su thereements were being made for move her male to alongegoi,, to the Roadody of the alugglers and she was. the Road floor windowroom window jumping into clim into the the.21.. being to fle. was along the, she didaping.theINST]
+F",):record,delimiter}":UGGLERS,tuple_delimiter}FSON{tuple_delimiter}F", moved, along with a male alien, to the Roadrunner Inn and while arrangements were being made to transfer this woman, Fu Mei Chen, to the custody of other smugglers, she escaped from the second story bathroom by jumping or falling out of room 297 while attempting to escape and, in fact, successfully escaping."SheSheShe..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 37 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CONTRERAS DE VELASQUEZ{tuple_delimiter}PERSON{tuple_delimiter}Contreras de Velasquez admitted to giving the female passenger the birth certificate and that she expected to receive $500 after taking the undocumented woman to Victoria, Texas.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []neast, laasco", adm hospital birth name name a femaleday. the she was to be a100. the the femaleocumented passenger to the. Texas.recordINST]
+Con", "record,delimiter}":TRERAS DE VELASQUEZ,tuple_delimiter}adSON{tuple_delimiter}adtreras de Velasquez, to giving the female passenger the birth certificate and that she expected to receive $500 after taking the undocumented woman to Victoria, Texas"].....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 38 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}LOPEZ-PEREZ{tuple_delimiter}PERSON{tuple_delimiter}Lopez-Perez paid Salazar to monitor the undocumented aliens at a stash house.){record_delimiter}("entity"{tuple_delimiter}SALAZAR{tuple_delimiter}PERSON{tuple_delimiter}Lopez-Perez paid Salazar to monitor the undocumented aliens at a stash house.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []oremz,Cerez, $inas- kill the activitiesocumented workersien from the rateake house inrecordINST]
+L",):record,delimiter})LPEZ-PEZ",record_delimiter},"E",tuple_delimiter}Salopez-Perez{ Salazar to monitor the undocumented aliens at a stash house"]record_delimiter}entity"{tuple_delimiter}SalALAZAR{tuple_delimiter}PERSON{tuple_delimiter}Salopez-Perez paid Salazar to monitor the undocumented aliens at a stash house.){..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 39 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents arrested two Mexican nationals after they illegally entered the country on a personal watercraft.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol Agent are  men nationals, they werelegally crossed United United. T date vehiclecraft.
+recordINST]entM",):record,delimiter}("ord PATROL agentsENTS",tuple_delimiter}MSONALtuple_delimiter}M Patrol agents arrested two Mexican nationals after they illegally entered the country on a personal watercraft....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 40 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents arrested a group of 11 illegal aliens in the early morning hours yesterday on the coastline of San Onofre State Beach near Camp Pendleton after they were smuggled into the country by boat.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol Agent are  group of 15 und immiens from the desert morning hours of. the Ual of the Diegoofre State Beach. San Pendleton. Border were reporteduggled into the country il human.
+"]INST]
+il",):record,delimiter})("orders PATROL{ENTS",tuple_delimiter}1SON{tuple_delimiter}ENT Patrol agents arrested a group of 11 illegal aliens in the early morning hours yesterday on the coastline of San Onofre State Beach near Camp Pendleton after they were smuggled into the country by boat.Border...BorderBorder................BorderBorderBorder..........BorderBorderBorder.....Border....BorderBorderBorder........................................................................BorderBorder............Border....................................Border.....BorderBorderBorder.....................................................................................Border............BorderBorderBorder..BorderBorderBorder....BorderBorder..........BorderBorder.......................................................Border......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 41 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CANADIAN POLICE{tuple_delimiter}PERSON{tuple_delimiter}Canadian police have arrested an alien smuggler who may have helped five Middle Eastern suspects sought by US authorities cross into the United States, CTV television said early Wednesday.){record_delimiter}("entity"{tuple_delimiter}ALIEN SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}Canadian police have arrested an alien smuggler who may have helped five Middle Eastern suspects sought by US authorities cross into the United States, CTV television said early Wednesday.){record_delimiter}("entity"{tuple_delimiter}MIDDLE EASTERN SUSPECTS{tuple_delimiter}PERSON{tuple_delimiter}Canadian police have arrested an alien smuggler who may have helped five Middle Eastern suspects sought by US authorities cross into the United States, CTV television said early Wednesday.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [], arrest arrested a individualien,uggler. was be sm sm al Easternerss to by U police. the Canada US States. whereAN police network. thisnesday morning The
+ Canadian arrest arrest of the aled smuggler, authorities he that he Middle, not toomely to help Middle10 Middle cross intolegally into the United States. Canada. a. France. whereTV television.oting police police authorities policepartsionage authorities here
+INSTINST]FromCan",):record,delimiter}("CTADIAN POLICE",tuple_delimiter}","SON{tuple_delimiter}aladian police have arrested an alien smuggler who may have helped five Middle Eastern suspects sought by US authorities cross into the United States, CTV television said early Wednesday.record_delimiter}
+entity"{tuple_delimiter}CIEN SUGGLER{tuple_delimiter}("SON{tuple_delimiter}whoadian police have arrested an alien smuggler who may have helped five Middle Eastern suspects sought by US authorities cross into the United States, CTV television said early Wednesday.){record_delimiter}("entity"{tuple_delimiter}MiddleIDDLE EASTERN SUSPECTS{tuple_delimiter}PERSON{tuple_delimiter}Canadian police have arrested an alien smuggler who may have helped five Middle Eastern suspects sought by US authorities cross into the United States, CTV television said early Wednesday.){CanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCanCan
+====================
+
+--- Example 42 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents arrested a group of 11 illegal aliens in the early morning hours yesterday on the coastline of San Onofre State Beach near Camp Pendleton after they were smuggled into the country by boat.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol Agent are  group of 15 und immiens from the desert morning hours of. the Ual of the Diegoofre State Beach. San Pendleton. Border were reporteduggled into the country il human.
+"]INST]
+il",):record,delimiter})("orders PATROL{ENTS",tuple_delimiter}1SON{tuple_delimiter}ENT Patrol agents arrested a group of 11 illegal aliens in the early morning hours yesterday on the coastline of San Onofre State Beach near Camp Pendleton after they were smuggled into the country by boat.Border...BorderBorder................BorderBorderBorder..........BorderBorderBorder.....Border....BorderBorderBorder........................................................................BorderBorder............Border....................................Border.....BorderBorderBorder.....................................................................................Border............BorderBorderBorder..BorderBorderBorder....BorderBorder..........BorderBorder.......................................................Border......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 43 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}The agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] text of up agreementative stop of the a entities aliens. the Uniteduck. and one agents. whooz.Valinez.recordINST]
+M",):record,delimiter} ["unOZ-MARTINEZ,record_delimiter}"]SON{tuple_delimiter}The agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez [[.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 44 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CHEN{tuple_delimiter}PERSON{tuple_delimiter}Chen that she needed to pay a $15,000 fee, which she believed she could pay through employment in the United States.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] textithler of of set the that. Smith that she would to sm $ $100000 sm for but would did was could pay. thement. the sm States.recordINST]
+Un", "record,delimiter}("EN,record_delimiter}UnSON{tuple_delimiter}Unen{ she needed to pay a $15,000 fee, which she believed she could pay through employment in the United States"][[[[[............[[.....smsm...................................................................................................smsm..............smsmsmsmsmsmsmsmsmsmsm....sm.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 45 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MARIO ECHEVERRIA{tuple_delimiter}PERSON{tuple_delimiter}Mario Echeverria, 24, a naturalized U.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [],.verri, "10, " studentized citiz.S. citizen,iding in Uampaana, Mexico, Mariocheverria, apected of being a of the mostleaders of the Mexicaniju smuggling organization.REINST]
+mar",):record,delimiter}("rioO ECHEVERRIA,tuple_delimiter} resSON{tuple_delimiter}2ex Echeverria, 24, a naturalized U...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 46 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MALE DRIVER{tuple_delimiter}PERSON{tuple_delimiter}Agents arrested a male driver and female passenger, both U.){record_delimiter}("entity"{tuple_delimiter}FEMALE PASSENGER{tuple_delimiter}PERSON{tuple_delimiter}Agents arrested a male driver and female passenger, both U.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []re of for suspect suspect for a passenger for both of.S. citizenship for aing teen aliens in in a vehicleV.
+recordINST]
+U", "record,delimiter}("LE,RIVER,record_delimiter}USON{tuple_delimiter}Uents arrested a male driver and female passenger, both U.record_delimiter}
+entity",{tuple_delimiter}MAMALE PASSENGER{tuple_delimiter}PERSON{tuple_delimiter}afterents arrested a male driver and female passenger, both U.{.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 47 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENT{tuple_delimiter}PERSON{tuple_delimiter}Border patrol agents from the Laredo South Station were notified by the ranch hand that an undocumented female alien was in apparent distress at the La Moca Ranch.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol agents perform the Taredo S Border Border calledified of the Tchers that the unknownocumented imm immien from app the distress. the L Lesa Ranch.
+"]INST]
+entity",):record,delimiter})("ord PATROL AGENTStuple_delimiter}LSON{tuple_delimiter}ran patrol agents from the Laredo South Station were notified by the ranch hand that an undocumented female alien was in apparent distress at the La Moca Ranch.[.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 48 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}FERNANDO MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}On the evening of December 2, 2009, Fernando Munoz-Martinez was driving a pickup-truck south on Interstate 35.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the text of the 14 2019, the Aloz wasAlinez was killed south vehicleup trtruck onbound Highwaystate 15.INSTINST]
+Fern",):record,delimiter}("lorNANDO MUNOZ-MARTINEZ,record_delimiter}pickSON{tuple_delimiter}pick the evening of December 2, 2009, Fernando Munoz-Martinez was driving a pickup-truck south on Interstate 35"][[[[[[[[[[[[[..[[[[[[[[[............................[[[..................................................................................................[[[[............................[[....[[..........[[[[[[[[[[....[[[[[[[[[[[[[[....[[...[[[[..................[.............................[[[[.[[[......[[[[[[[.........[....[[[[[[........[[[[[.............[[[[[[[[[[[........[[[................................................[[[...................................................................................................................................................................................................................................................................................................................................[[[[............................................................................................
+====================
+
+--- Example 49 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MCMILLON{tuple_delimiter}PERSON{tuple_delimiter}On June 12, 2014, McMillon and Williams arrived in the tractor-trailer at an immigration checkpoint near Freer, Texas.){record_delimiter}("entity"{tuple_delimiter}WILLIAMS{tuple_delimiter}PERSON{tuple_delimiter}On June 12, 2014, McMillon and Williams arrived in the tractor-trailer at an immigration checkpoint near Freer, Texas.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 18, 2019, theDonaldur, his were at Williams cityiler-trailer at the entityigration checkpoint. Williamset, Texas. McENTINST]
+Mc", "record,delimiter})("MLLON,record_delimiter}andSON{tuple_delimiter}Will June 12, 2014, McMillon and Williams arrived in the tractor-trailer at an immigration checkpoint near Freer, Texas.record_delimiter}
+entity"{tuple_delimiter}WILLIAMS{tuple_delimiter}PERSON{tuple_delimiter}On June 12, 2014, McMillon and Williams arrived in the tractor-trailer at an immigration checkpoint near Freer, Texas.){WillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWill..WillWillWillWill........WillWillWillWill...WillWillWill....Will.....Will..........................................WillWillWillWillWillWillWillWillWill.....................WillWillWill....WillWillWill....WillWill.....WillWillWill.WillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWillWill..WillWillWillWillWill...WillWillWillWill....Will.................WillWill...............................................................................................................
+====================
+
+--- Example 50 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}LUCIA MENDOZA{tuple_delimiter}PERSON{tuple_delimiter}Information from a source was received by INA that Defendant Lucia Mendoza was coordinating the smuggling of illegal aliens.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] Technology the series of obtained by aST. INense wasiz was.za was arrestedating with activitiesuggling of a aliens into INrecordINST]
+{",):record,delimiter}("uzCIA MENDOZA{record_delimiter}"]SON{tuple_delimiter}[" from a source was received by INA that Defendant Lucia Mendoza was coordinating the smuggling of illegal aliens........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 51 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}The defendant and others were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion.){record_delimiter}("entity"{tuple_delimiter}OTHERS{tuple_delimiter}PERSON{tuple_delimiter}The defendant and others were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] textendant in pla were found for theuggling cingkui out out the United States of China homeeland China China. charges boat occasion.recordINST]
+{",):record,delimiter}("ENDANT,tuple_delimiter}MissSON{tuple_delimiter} [" defendant", others were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion"]record_delimiter}entity",{tuple_delimiter}DEFHERS{tuple_delimiter}[]SON{tuple_delimiter}Miss defendant and others were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion.){...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 52 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}JAQUEZ{tuple_delimiter}PERSON{tuple_delimiter}Jaquez confessed he knew the truck was heading north towards San Antonio and was attempting to evade the Border Patrol checkpoints.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ime,essed to was he whereuck driver st south on the Diego. he going to evade the police Patrol agentspoint.recordINST]   J", "record,delimiter}("aqueQUEZ",record_delimiter} confSON{tuple_delimiter}Sanaz{essed he knew the truck was heading north towards San Antonio and was attempting to evade the Border Patrol checkpoints"]............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 53 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}On July 14, 2023, smugglers in La Paz, Mexico, boarded undocumented migrants onto a 38-foot fishing boat bound for international waters near Isla Santa Catalina.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 17, 2011, theithglers were the Paz, Boliv, wereed aocumented immants to a boat10-foot boating vessel. for the waters. Lala Mu Cruzina. OnINSTINST]
+entity",):record,delimiter})("UGGLERS",tuple_delimiter}inSONStuple_delimiter}sm July 14, 2023, smugglers in La Paz, Mexico, boarded undocumented migrants onto a 38-foot fishing boat bound for international waters near Isla Santa Catalina."smsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsm.smsmsmsm..........smsmsm..............smsmsm....smsmsm...smsmsmsm..smsmsmsmsm....sm......................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 54 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.){record_delimiter}("entity"{tuple_delimiter}MEXICAN NATIONALS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol Agent areed agents agents agents on one they were travel.s.legally crossing in the United.S. TherecordINST]ent{", "record,delimiter}("ord PATROL agentsENTS",record_delimiter}","SONStuple_delimiter}PASS Patrol agents",ed the nine passengers and determined they were Mexican nationals illegally present in the U.record_delimiter}entity",{tuple_delimiter}BXICAN NATIONALS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.{..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 55 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}PACHECO{tuple_delimiter}PERSON{tuple_delimiter}When the group got beyond the Border Patrol checkpoint, Pacheco called Chapa from the cell phone and told Chapa where to meet the group.){record_delimiter}("entity"{tuple_delimiter}CHAPA{tuple_delimiter}PERSON{tuple_delimiter}When the group got beyond the Border Patrol checkpoint, Pacheco called Chapa from the cell phone and told Chapa where to meet the group.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] you output is to the recordlandsrol,point, theyeteeco and theman and the group phone. told hima to they go him group.whenINST]
+'", "record,delimiter}PachHECO,record_delimiter}ChSON{tuple_delimiter}Ch the group got beyond the Border Patrol checkpoint, Pacheco called Chapa from the cell phone and told Chapa where to meet the group"]record_delimiter}
+entity",{tuple_delimiter}CHAPA{tuple_delimiter}PERSON{tuple_delimiter}From the group got beyond the Border Patrol checkpoint, Pacheco called Chapa from the cell phone and told Chapa where to meet the group.){....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 56 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GARZA{tuple_delimiter}PERSON{tuple_delimiter}On February 9, 2008, Garza drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo, Texas, on Interstate 35.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 2, 2019, therett, his entity-lengthab pickodge pickup truck. work D States..rol stationpoint. on milesfiveine miles south of thearedo, Texas. United Unitedstate 35.INSTINST]
+G", "record,delimiter})("arZA",record_delimiter},DSON{tuple_delimiter}D February 9, 2008, Garza drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo, Texas, on Interstate 35"][[[[[[[[[[[[................................................................................................................................................................................................[[[[[[[[................[[...............................................................................[[[.............................................................................................................................................................................................................................................................................................................................................................................................................................................................[[..................................................................
+====================
+
+--- Example 57 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}KRISH PATIL{tuple_delimiter}PERSON{tuple_delimiter}Krish Patil transported undocumented aliens along Interstate 988 before arriving at a stash house in Velu, where illegal weapons were stored.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ishnael,ed forocumented immiens from withstate 150. Intering at Inter checkaging house in theocitycca India she al were found.
+"]INST]
+K",):record,delimiter})("rISH PATIL{tuple_delimiter}undSON{tuple_delimiter}transportrish Patil{ed undocumented aliens along Interstate 988 before arriving at a stash house in Velu, where illegal weapons were stored.[.[[...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................,,,,,..................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 58 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}PERSON{tuple_delimiter}On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 15, 2010, theamsungrahpande, S  entityuggler and was a un18-wheeler tr aocumented immants from SENTINST]
+entity",):record,delimiter})("I DESHPANDE{record_delimiter}"]SON{tuple_delimiter}und March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants."..[[[...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 59 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}AGENTS{tuple_delimiter}PERSON{tuple_delimiter}The agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez.){record_delimiter}("entity"{tuple_delimiter}MUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}The agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] text of up agreementative stop of the a entities aliens. the Uniteduck. and one agents. whooz.Valinez.recordINST]
+M",):record,delimiter} ["ENTS,tuple_delimiter}TheSON{tuple_delimiter}M agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez"]record_delimiter}
+entity",{tuple_delimiter}AGUNOZ-MARTINEZ{tuple_delimiter}PERSON{tuple_delimiter}The agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez.){...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 60 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}The offense committed by the defendant at the age of 18 was for aiding and abetting the illegal reentry of undocumented aliens.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] textense of by the defendant is the time of 18 years to the fel and abetting. the sale- of anocumented immiens intorecordINST]
+def",):record,delimiter}("ENDANT,tuple_delimiter}aSON{tuple_delimiter}age offense committed by the defendant at the age of 18 was for aiding and abetting the illegal reentry of undocumented aliens"]....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 61 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CARLOS MARIO HERNANDEZ-LOPEZ{tuple_delimiter}PERSON{tuple_delimiter}Two of the aliens, Carlos Mario Hernandez-Lopez and his common-law wife, Maria Guadalupe Martinez-Garcia, were retained as witnesses.){record_delimiter}("entity"{tuple_delimiter}MARIA GUADALUPE MARTINEZ-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Two of the aliens, Carlos Mario Hernandez-Lopez and his common-law wife, Maria Guadalupe Martinez-Garcia, were retained as witnesses.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] entities the entitiesien are ' and andandez andCopez and Carlos wife lawlaw wife, Carlos Teradalupe Herninez,Acarcia, were killed by Carloses inrecordINST]CarCar",):record,delimiter}("ARLOS MARIO HERNANDEZ-LOPEZ",record_delimiter},"SON{tuple_delimiter}M of the aliens, Carlos Mario Hernandez-Lopez and his common-law wife, Maria Guadalupe Martinez-Garcia, were retained as witnesses"]record_delimiter}
+entity",{tuple_delimiter}CRIA GUADALUPE MARTINEZ-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Two of the aliens, Carlos Mario Hernandez-Lopez and his common-law wife, Maria Guadalupe Martinez-Garcia, were retained as witnesses.){TwoTwoTwoTwoTwoTwoTwoTwoTwoTwo.TwoTwoTwo.....TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo..TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo..TwoTwoTwo...............TwoTwoTwoTwo..TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo......TwoTwoTwo....TwoTwo...TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo..TwoTwoTwoTwoTwoTwoTwo.....TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo.....Two...........TwoTwoTwo......Two...........................TwoTwoTwo..................TwoTwo....................................Two............................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 62 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ORTIZ{tuple_delimiter}PERSON{tuple_delimiter}At the scene of the traffic stop, Agent Ortiz learned that the child was a 4 year old girl from Mexico who was illegally present in the United States.){record_delimiter}("entity"{tuple_delimiter}GIRL{tuple_delimiter}PERSON{tuple_delimiter}At the scene of the traffic stop, Agent Ortiz learned that the child was a 4 year old girl from Mexico who was illegally present in the United States.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []omic end of the accident accident, the iz was that the driver was travel passenger1th old.. the. was travellegally transport in the United States.INSTINST]
+Agent",):record,delimiter}("IZ,tuple_delimiter},"SON{tuple_delimiter}Agent the scene of the traffic stop, Agent Ortiz learned that the child was a 4 year old girl from Mexico who was illegally present in the United States"]record_delimiter}
+entity",{tuple_delimiter}ORTIRL{tuple_delimiter}4SON{tuple_delimiter}At the scene of the traffic stop, Agent Ortiz learned that the child was a 4 year old girl from Mexico who was illegally present in the United States.){................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 63 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL OFFICERS{tuple_delimiter}PERSON{tuple_delimiter}border patrol officers discovered two men who admitted to being Mexican citizens illegally present in the United States.){record_delimiter}("entity"{tuple_delimiter}MEN{tuple_delimiter}PERSON{tuple_delimiter}border patrol officers discovered two men who admitted to being Mexican citizens illegally present in the United States.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []:rol",", a men hiding were to crossing sm but
+legally crossing in the U States."recordINST]
+entity", "record,delimiter}("ORDER PATROL OFFICERS",record_delimiter} discoveredSONStuple_delimiter}M patrol officers discovered two men who admitted to being Mexican citizens illegally present in the United States",record_delimiter}
+entity",{tuple_delimiter}Bex{tuple_delimiter}MSON{tuple_delimiter}border patrol officers discovered two men who admitted to being Mexican citizens illegally present in the United States.){................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 64 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}RAMON{tuple_delimiter}PERSON{tuple_delimiter}It was expected by Ramon that he would be paid $10,000 for each alien smuggled.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] is a that theon that the would be able by100000. the entityien entityuggled into
+INSTINST]
+R",):record,delimiter}("MON{tuple_delimiter}1SON{tuple_delimiter}1 was expected by Ramon that he would be paid $10,000 for each alien smuggled."RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR.RRRRRRRRRRR....R.......................R.....RRR....RR................RR..................Rtu...RRR....RRR.....................RR...................................................................................................................................................................................................................................................................................................................................................,,......................................................................................................................................................................................................................................
+====================
+
+--- Example 65 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.){record_delimiter}("entity"{tuple_delimiter}MAN{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.){record_delimiter}("entity"{tuple_delimiter}ALLENDE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] entitiesien and as entity as 'ison.Brocia.recordINST]
+All",):record,delimiter}AllIENS identifiedrecord_delimiter}identSON{tuple_delimiter}Alloth aliens identified the man as Allende-Garcia"]record_delimiter}
+entity",{tuple_delimiter}AL{tuple_delimiter}asSON{tuple_delimiter}Alloth aliens identified the man as Allende-Garcia.){record_delimiter}
+entity",{tuple_delimiter}ALINTE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Both aliens identified the man as Allende-Garcia.){........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 66 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CREW{tuple_delimiter}PERSON{tuple_delimiter}The crew observed the vessel, later identified as a 26-foot Pursuit displaying Florida registration, conduct an at-sea transfer with another vessel near Bimini, Bahamas.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] text of the following observed and identified as the '10-foot-angauit vessel  colors numbers oning equipment-sea test of a vessel, theermini. aamas.
+recordINST]
+entity",):record,delimiter})("W,tuple_delimiter}TheSONALtuple_delimiter}The crew observed the vessel, later identified as a 26-foot Pursuit displaying Florida registration, conduct an at-sea transfer with another vessel near Bimini, Bahamas."[.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 67 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}When questioned about his citizenship, Movant admitted that he was a citizen of the Dominican Republic who had entered the United States illegally by wading across the Rio Grande River near the Hidalgo, Texas, Port of Entry.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] youing about the actionship, heita answered that he is born citizen of the Unitedican Republic. was been the United States withoutlegally. crossingading across the Rio Grande River. the townidalgo, Texas area United of Entry."]INST]
+entity",):record,delimiter}("VANT,record_delimiter}WhenSON{tuple_delimiter}When questioned about his citizenship, Movant admitted that he was a citizen of the Dominican Republic who had entered the United States illegally by wading across the Rio Grande River near the Hidalgo, Texas, Port of Entry"]MMMMMM....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................,,,,,,,,,...,,,,...,,,,..,............................................................................,...,,,...........................................
+====================
+
+--- Example 68 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}At primary inspection, Defendant presented inadequate documentation regarding the child's citizenship, showing only a Texas immunization record and a Congratulations note from the hospital where the child was born.){record_delimiter}("entity"{tuple_delimiter}CHILD{tuple_delimiter}PERSON{tuple_delimiter}At primary inspection, Defendant presented inadequate documentation regarding the child's citizenship, showing only a Texas immunization record and a Congratulations note from the hospital where the child was born.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []omic levelpection station theender was as personquate evidence. its ins's agehip. Def only documentation series birthigrationization record. a Texasrulations letter. the Texas. the child was born.INSTINST]
+entity", "record,delimiter}("ENDANT,tuple_delimiter},"SON{tuple_delimiter}At primary inspection, Defendant presented inadequate documentation regarding the child's citizenship, showing only a Texas immunization record and a Congratulations note from the hospital where the child was born"]record_delimiter}entity",{tuple_delimiter}DEFILD{tuple_delimiter}PERSON{tuple_delimiter}At primary inspection, Defendant presented inadequate documentation regarding the child's citizenship, showing only a Texas immunization record and a Congratulations note from the hospital where the child was born.){[[..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 69 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CANO{tuple_delimiter}PERSON{tuple_delimiter}Cano and the other occupants of the vehicle were taken to the Cotulla Border Patrol Station for further processing.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ise C record entitiesants of the bus were extracted to the hospitalton Police Patrol Station. processing processing. CrecordINST]   C",):record,delimiter}CanoO andrecord_delimiter} andSON{tuple_delimiter}Cot{ the other occupants of the vehicle were taken to the Cotulla Border Patrol Station for further processing........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 70 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}smugglers often use Highway 83 to circumvent the larger checkpoint on Interstate Highway 35.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ithglers, use the 10 to smvent Border check vehiclespoint at Highwaystate  85.INSTINST]HighHigh", "record,delimiter}HighUGGLERS",record_delimiter} oftenSONStuple_delimiter}ougglers, use Highway 83 to circumvent the larger checkpoint on Interstate Highway 35"]smsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsmsm....smsm....smsmsm....smsmsm....smsm...smsmsmsmsmsmsmsm....smsm..................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 71 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Garcia stated that he was the only guide for the group, that he was guiding the group to San Antonio for financial gain $ 400 per alien.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []rett, that she was born victim one to the group. and he was theiding for group to the Diego. the reasons.{100). guidely).
+
+recordINST]
+G",):record,delimiter}("arCIA{record_delimiter}(" al{tuple_delimiter}thearcia{ that he was the only guide for the group, that he was guiding the group to San Antonio for financial gain ($ 400 per alien)...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 72 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DIAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}In 2008, Diaz-Galiana illegally returned to the United States and returned to North Carolina.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] this []019, thez wasConleg,legally entered to Spain United States. was to Spain Carolina.recordINST]
+D",):record,delimiter}("AZ-GALIANA"]record_delimiter} ilSON{tuple_delimiter}N 2008, Diaz-Galiana illegally returned to the United States and returned to North Carolina"]............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 73 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}When the defendants arrived at the apartment, they pointed guns at the illegal immigrants they chose to take.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] you outputants are at the courpartment complex they were out at the defend immigrants and had to defend with"]INST]ent'",):record,delimiter}("ENDANTS,record_delimiter}APSONStuple_delimiter}ENT the defendants arrived at the apartment, they pointed guns at the illegal immigrants they chose to take"].......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 74 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}STANLEY PRUSZENSKI{tuple_delimiter}PERSON{tuple_delimiter}On February 18, 1983, United States Border Patrol agents Stanley Pruszenski and Alfred Baron were sitting in their marked border patrol sedan overlooking the northbound lanes of Interstate Highway 35.){record_delimiter}("entity"{tuple_delimiter}ALFRED BARON{tuple_delimiter}PERSON{tuple_delimiter}A person entity identified as ALFRED BARON.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] the 24, 2996, the States of Patrol Agent were Gibattakki and Stanleyo Onry were killed in a pat vehicle patrol vehicle whenlooking the United bank les of thestate  85 when StanleyrecordINST]
+Inter",):record,delimiter}("ANLEY PRUSZENSKI",record_delimiter},andSON{tuple_delimiter}Un February 18, 1983, United States Border Patrol agents Stanley Pruszenski and Alfred\Baron were sitting in their marked border patrol sedan overlooking the northbound lanes of Interstate Highway 35."record_delimiter}
+entity"{tuple_delimiter}ALFRED BARON{tuple_delimiter}PERSON{tuple_delimiter}Ongency who.) by ('FRED BARON{{
+..........................................................................................................................................................................................................................................................................................................................................................................ufuf...ufuf...............................................................................................................................................................................uf.....ufuf.............ufufufufufufufufufufufufufuf.....................ufufuf.........................................ufuf..................................................................................................................................
+====================
+
+--- Example 75 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALIENS{tuple_delimiter}PERSON{tuple_delimiter}The aliens told officers that they were able to telephone 911 by getting Avila drunk and taking his cell phone when he fell asleep.){record_delimiter}("entity"{tuple_delimiter}AVILA{tuple_delimiter}PERSON{tuple_delimiter}The aliens told officers that they were able to telephone 911 by getting Avila drunk and taking his cell phone when he fell asleep.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] textien are us to they were from to travelport the111. using aatar tounk. that him wal phone away they was asleep.recordINST]
+ali",):record,delimiter}":IENS,record_delimiter}oSONStuple_delimiter}o aliens told officers that they were able to telephone 911 by getting Avila drunk and taking his cell phone when he fell asleep",record_delimiter}entity",{tuple_delimiter}ALILA{tuple_delimiter}PERSON{tuple_delimiter}Av aliens told officers that they were able to telephone 911 by getting Avila drunk and taking his cell phone when he fell asleep.){av..avav.........................................................................................................................................................................................................................................AvAvAv...AvAvAvAv...AvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAv..AvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAv...AvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAvAv...AvAvAvAv...............AvAvAvAvAvAvAvAvAv..AvAvAvAv..AvAvAvAv..AvAvAvAvAv.........................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 76 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}BORDER PATROL AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Border Patrol agents Monday apprehended 12 Mexican nationals suspected of illegally entering the country at sea through the use of a smuggling boat.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []landsrol Agent are,rehended two10 individuals migrs inpected of enteringlegally entering the United. the. the T of sm vesseluggled t.
+recordINST]
+M",):record,delimiter}("ord PATROL agentsENTS",tuple_delimiter}MSON{tuple_delimiter}1 Patrol agents Monday apprehended 12 Mexican nationals suspected of illegally entering the country at sea through the use of a smuggling boat............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 77 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}CHILD'S REAL MOTHER{tuple_delimiter}PERSON{tuple_delimiter}, the child's real mother, who was not Defendant's sister, arrived at the port of entry with a Mexican birth certificate.){record_delimiter}("entity"{tuple_delimiter}DEFENDANT'S SISTER{tuple_delimiter}PERSON{tuple_delimiter}, the child's real mother, who was not Defendant's sister, arrived at the port of entry with a Mexican birth certificate.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] record entities ago, the the 1:00 PM.m., a entity wass mother name came real was not theendant,s real, returned at the Defable entry. the few pass certificate forENTINST]
+entity", "record,delimiter}("ILD,S REAL MOTHER",record_delimiter}nameSONALtuple_delimiter} " child's real mother, who was not Defendant's sister, arrived at the port of entry with a Mexican birth certificate"]record_delimiter}entity",{tuple_delimiter}CHENDANT'S SISTER{tuple_delimiter}PERSON{tuple_delimiter}, Def child's real mother, who was not Defendant's sister, arrived at the port of entry with a Mexican birth certificate.){endendendendendendendendend.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................]],,,,,,,,,,,,,,,]]].,,,,]........................................................................................................................................
+====================
+
+--- Example 78 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}MOVANT{tuple_delimiter}PERSON{tuple_delimiter}Movant and his co-defendants severely mistreated the undocumented aliens by: brandishing firearms and threatening the aliens; tying up one of the aliens and then kicking and beating him; and sexually assaulting three of the female aliens.){record_delimiter}("entity"{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}Movant and his co-defendants severely mistreated the undocumented aliens by: brandishing firearms and threatening the aliens; tying up one of the aliens and then kicking and beating him; and sexually assaulting three of the female aliens.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []ing is Mov wife-defendants,ely beatreated Mov Movocumented immien. be
+ishing firearms; threatening to undiens with andying up the al the aliens; be being him pating him with and thenually assaulting the of the al aliens.recordINST]
+ali", "record,delimiter}":VANT",tuple_delimiter}andSON{tuple_delimiter}undovant{ his co-defendants severely mistreated the undocumented aliens by: brandishing firearms and threatening the aliens; tying up one of the aliens and then kicking and beating him; and sexually assaulting three of the female aliens"]record_delimiter}
+entity",{tuple_delimiter}MO-DEFENDANTS{tuple_delimiter}PERSON{tuple_delimiter}hisovant and his co-defendants severely mistreated the undocumented aliens by: brandishing firearms and threatening the aliens; tying up one of the aliens and then kicking and beating him; and sexually assaulting three of the female aliens.){]]MMMMM.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................].................................................
+====================
+
+--- Example 79 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ROJAS-MENDOZA{tuple_delimiter}PERSON{tuple_delimiter}Rojas-Mendoza agreed to help an unknown person smuggle illegal aliens from Mexico.){record_delimiter}("entity"{tuple_delimiter}UNKNOWN PERSON{tuple_delimiter}PERSON{tuple_delimiter}Rojas-Mendoza agreed to help an unknown person smuggle illegal aliens from Mexico.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []le,Murza, to meet the entity number.uggle an aliens into Gu torecordINST]RR",):record,delimiter}("JAS-MENDOZA,record_delimiter}smSON{tuple_delimiter}Mojas-Mendoza{ to help an unknown person smuggle illegal aliens from Mexico"]record_delimiter}entity",{tuple_delimiter}PERKNOWN{ERSON{tuple_delimiter}RSON{tuple_delimiter}Rojas-Mendoza agreed to help an unknown person smuggle illegal aliens from Mexico.){.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 80 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}DIAZ-GALIANA{tuple_delimiter}PERSON{tuple_delimiter}Diaz-Galiana drove his codefendant to a location where the codefendant shot and killed a person, and then Diaz-Galiana allowed the codefendant to stay at his residence.){record_delimiter}("entity"{tuple_delimiter}CODEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Diaz-Galiana drove his codefendant to a location where the codefendant shot and killed a person, and then Diaz-Galiana allowed the codefendant to stay at his residence.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []lect,Conleg, a car toendant to the bar near Dia codefendant could him killed Dia person with Dia Dia Diaz-Galiana and the codefendant to fle at the location.recordINST]
+D", "record,delimiter}("azZ-GALIANA,tuple_delimiter} droveSON{tuple_delimiter}Diaz-Galiana", his codefendant to a location where the codefendant shot and killed a person, and then Diaz-Galiana allowed the codefendant to stay at his residence"]record_delimiter}entity",{tuple_delimiter}codeFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Diaz-Galiana drove his codefendant to a location where the codefendant shot and killed a person, and then Diaz-Galiana allowed the codefendant to stay at his residence.){codecodecode......D.................................................................................................................................................................................................................................................................................................................................................................................................................................................,.......................................................................................,,..............................................................................]]]....]]]...]]]]...]]]................]]...............................................................................................................
+====================
+
+--- Example 81 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}ALLENDE-GARCIA{tuple_delimiter}PERSON{tuple_delimiter}Allende-Garcia had transported seven aliens: three in the windjammer, and four in the sleeper compartment.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided [] entities,Concia, aed the entitiesiens to three humans a morningshammer All three four in the transporteper shipment.ENTINST]   All",):record,delimiter}("INDE-GARCIA,tuple_delimiter} transportSON{tuple_delimiter}transportende-Garcia{ transported seven aliens: three in the windjammer, and four in the sleeper compartment"]........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+
+--- Example 82 ---
+GROUND TRUTH:
+("entity"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}PERSON{tuple_delimiter}Sai Deshpande said he arrived at the pickup location—a lot on Auburn Road in Laredo—between 11:00 p.)
+
+PREDICTED:
+Ign1ALL
+ Inst IN of, determine the text and text text text text table of messagesples. tuple extracted be given tuple. attributestext', ', ', id)parate tu entity with a space',}typeimiter}''.{ent provided []amsungrahande", " was in the airup point atthe bus in the Streeturn Street— Aouddo,at 12:30 and.m. and 11:00 a.m."TEXTINST]
+a", "record,delimiter}SI DESHPANDE,"tuple_delimiter}"]SON{tuple_delimiter}arai Deshpande{ he arrived at the pickup location\a lot on Auburn Road in Laredo—between 11:00 p.[[[[[[[[[[[[......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+====================
+

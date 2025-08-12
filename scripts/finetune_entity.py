@@ -43,11 +43,22 @@ def create_interleaved_dataset(file_path: str) -> Dataset:
         person_labels = row['Person']
         if isinstance(person_labels, str) and person_labels.strip():
             person_list = [p.strip() for p in person_labels.split(',')]
-            target_json = json.dumps(person_list)
+
+            # Convert the person list into the tuple format
+            tuple_outputs = []
+            for person_name in person_list:
+                # Create a simple description for the person entity
+                description = "A person mentioned in the text." 
+                tuple_str = f'("entity"{TUPLE_DELIMITER}{person_name}{TUPLE_DELIMITER}PERSON{TUPLE_DELIMITER}{description})'
+                tuple_outputs.append(tuple_str)
+
+            # Join them with the record delimiter
+            target_text_for_person = RECORD_DELIMITER.join(tuple_outputs)
+
             interleaved_data.append({
                 "input_text": input_text,
-                "target_text": target_json,
-                "task_type": "person_only"
+                "target_text": target_text_for_person,
+                "task_type": "full_extraction" # Now it's the same task type
             })
 
         extracted_entities = row['Extracted_Entities']
@@ -110,10 +121,7 @@ def preprocess_interleaved(example, tokenizer):
     input_text = example['input_text']
     target_output = example['target_text']
 
-    if task_type == 'person_only':
-        instruction = "From the text provided, extract all PERSON entities. Your output must be a JSON-formatted list of strings."
-    else: 
-        instruction = f"From the text provided, extract all entities. Format the output as a series of tuples. Each entity should be a tuple of ('entity', name, type, description). Separate each tuple with a '{RECORD_DELIMITER}'."
+    instruction = f"From the text provided, extract all entities. Format the output as a series of tuples. Each entity should be a tuple of ('entity', name, type, description). Separate each tuple with a '{RECORD_DELIMITER}'."
 
     full_prompt_text = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n{target_output}{tokenizer.eos_token}"
     
@@ -165,20 +173,8 @@ def compute_metrics_advanced(eval_pred, tokenizer):
         pred_entities, is_parsable = [], False
         label_entities = []
 
-        if label_str.strip().startswith('['):
-            try:
-                label_list = json.loads(label_str)
-                label_entities = [(name.strip().upper(), 'PERSON') for name in label_list]
-            except json.JSONDecodeError: pass
-            try:
-                pred_list = json.loads(pred_str)
-                if isinstance(pred_list, list):
-                    pred_entities = [(str(name).strip().upper(), 'PERSON') for name in pred_list]
-                is_parsable = True
-            except json.JSONDecodeError: is_parsable = False
-        else:
-            pred_entities, is_parsable = parse_structured_output(pred_str)
-            label_entities, _ = parse_structured_output(label_str)
+        pred_entities, is_parsable = parse_structured_output(pred_str)
+        label_entities, _ = parse_structured_output(label_str)
         
         parsability_scores.append(1 if is_parsable else 0)
         
