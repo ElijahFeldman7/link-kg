@@ -44,21 +44,18 @@ def create_interleaved_dataset(file_path: str) -> Dataset:
         if isinstance(person_labels, str) and person_labels.strip():
             person_list = [p.strip() for p in person_labels.split(',')]
 
-            # Convert the person list into the tuple format
             tuple_outputs = []
             for person_name in person_list:
-                # Create a simple description for the person entity
                 description = "A person mentioned in the text." 
                 tuple_str = f'("entity"{TUPLE_DELIMITER}{person_name}{TUPLE_DELIMITER}PERSON{TUPLE_DELIMITER}{description})'
                 tuple_outputs.append(tuple_str)
 
-            # Join them with the record delimiter
             target_text_for_person = RECORD_DELIMITER.join(tuple_outputs)
 
             interleaved_data.append({
                 "input_text": input_text,
                 "target_text": target_text_for_person,
-                "task_type": "full_extraction" # Now it's the same task type
+                "task_type": "full_extraction" 
             })
 
         extracted_entities = row['Extracted_Entities']
