@@ -81,7 +81,7 @@ def preprocess_simple(example):
     result["labels"] = result["input_ids"].copy()
 
     prompt_only_for_masking = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n"
-    prompt_only_tokens = tokenizer(prompt_only_for_masking, add_special_tokens=True)
+    prompt_only_tokens = tokenizer(prompt_only_for_masking, add_special_tokens=False)
     prompt_len = len(prompt_only_tokens['input_ids'])
 
     for i in range(prompt_len):
