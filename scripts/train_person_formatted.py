@@ -58,7 +58,7 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 model.print_trainable_parameters()
 
-# --- MODIFIED: New Preprocessing Function ---
+# --- REVISED: Preprocessing Function with Description Masking ---
 def preprocess_structured_person(example):
     instruction = "From the text provided, extract all PERSON entities. Your output must be in the specified tuple format."
     input_text = example['Input_Text']
@@ -66,66 +66,79 @@ def preprocess_structured_person(example):
     person_names_str = example.get('Person', '')
     extracted_entities_str = example.get('Extracted_Entities', '')
     
+    # --- Part 1: Construct the full target string (same as before) ---
     output_parts = []
-    
+    person_tuples_for_masking = [] # Store parts for masking
+
     if isinstance(person_names_str, str) and person_names_str.strip():
         person_list = [p.strip() for p in person_names_str.split(',')]
         
         for person_name in person_list:
-            description = "A person referenced in the text" # Default description
-            
-            # Use regex to find the description for this person in the Extracted_Entities column
-            # Pattern: ("entity"{tuple_delimiter}PERSON_NAME{tuple_delimiter}PERSON{tuple_delimiter}DESCRIPTION)
+            description = "A person referenced in the text"
             pattern = re.compile(
                 f'\\("entity"\\{TUPLE_DELIMITER}{re.escape(person_name)}\\{TUPLE_DELIMITER}PERSON\\{TUPLE_DELIMITER}(.*?)\\)'
             )
             match = pattern.search(extracted_entities_str)
-            
             if match:
                 description = match.group(1).strip()
             
-            # Construct the tuple string for this person
-            output_parts.append(
-                f'("entity"{TUPLE_DELIMITER}{person_name}{TUPLE_DELIMITER}PERSON{TUPLE_DELIMITER}{description})'
-            )
+            # Store the structured parts for later use in masking
+            person_tuples_for_masking.append({
+                "part1": f'("entity"{TUPLE_DELIMITER}{person_name}{TUPLE_DELIMITER}PERSON{TUPLE_DELIMITER}',
+                "desc": description,
+                "part3": ')'
+            })
+            
+            output_parts.append(f'{person_tuples_for_masking[-1]["part1"]}{person_tuples_for_masking[-1]["desc"]}{person_tuples_for_masking[-1]["part3"]}')
 
-    # Assemble the final target output string
     if output_parts:
-        # Join all person tuples with the record delimiter
         target_output = RECORD_DELIMITER.join(output_parts) + RECORD_DELIMITER + COMPLETION_DELIMITER
     else:
         target_output = COMPLETION_DELIMITER
 
-    # --- Tokenization and Label Masking (Same Logic as Before) ---
+    # --- Part 2: Tokenize and create initial labels (same as before) ---
     full_prompt_text = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n{target_output}{tokenizer.eos_token}"
     result = tokenizer(full_prompt_text, truncation=True, max_length=512, padding="max_length")
     result["labels"] = result["input_ids"].copy()
 
     prompt_only_for_masking = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n"
-    prompt_len = len(tokenizer(prompt_only_for_masking, add_special_tokens=True)['input_ids'])
-    
+    prompt_len = len(tokenizer(prompt_only_for_masking, add_special_tokens=False)['input_ids'])
     result["labels"][:prompt_len] = [-100] * prompt_len
-        
-    return result
+    
+    current_pos = prompt_len
+    for i, p_tuple in enumerate(person_tuples_for_masking):
+        tokens_part1 = tokenizer(p_tuple["part1"], add_special_tokens=False)['input_ids']
+        tokens_desc = tokenizer(p_tuple["desc"], add_special_tokens=False)['input_ids']
+        tokens_part3 = tokenizer(p_tuple["part3"], add_special_tokens=False)['input_ids']
+        tokens_rec_delim = tokenizer(RECORD_DELIMITER, add_special_tokens=False)['input_ids']
 
-# --- Apply the New Preprocessing ---
+        current_pos += len(tokens_part1)
+        
+        desc_start = current_pos
+        desc_end = current_pos + len(tokens_desc)
+        
+        if desc_end <= len(result["labels"]):
+             result["labels"][desc_start:desc_end] = [-100] * len(tokens_desc)
+        
+        current_pos += len(tokens_desc) + len(tokens_part3)
+        
+        if i < len(person_tuples_for_masking) - 1:
+            current_pos += len(tokens_rec_delim)
+            
+    return result
 tokenized_dataset = dataset.map(preprocess_structured_person, remove_columns=list(dataset.features))
 splits = tokenized_dataset.train_test_split(test_size=0.2, seed=42)
 train_dataset, eval_dataset = splits["train"], splits["test"]
 
-# --- MODIFIED: New Evaluation Metric Calculation ---
 def calculate_tuple_metrics(predictions, references):
     all_metrics = {"precision": [], "recall": [], "f1_score": []}
     
-    # Regex to find all (NAME, DESCRIPTION) pairs for PERSON entities in the output string
     tuple_pattern = re.compile(f'\\("entity"\\{TUPLE_DELIMITER}(.*?)\\{TUPLE_DELIMITER}PERSON\\{TUPLE_DELIMITER}(.*?)\\)')
 
     for pred_str, ref_str in zip(predictions, references):
-        # Extract tuples from prediction and reference strings
         pred_tuples = tuple_pattern.findall(pred_str)
         ref_tuples = tuple_pattern.findall(ref_str)
         
-        # Normalize by stripping whitespace and converting to uppercase for fair comparison
         pred_set = set((name.strip().upper(), desc.strip().upper()) for name, desc in pred_tuples)
         ref_set = set((name.strip().upper(), desc.strip().upper()) for name, desc in ref_tuples)
         
