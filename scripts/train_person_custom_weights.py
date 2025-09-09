@@ -88,7 +88,8 @@ def preprocess_with_granular_weights(example):
         person_list = [p.strip() for p in person_names_str.split(',') if p.strip()]
         for person_name in person_list:
             description = "A person referenced in the text"
-            pattern = re.compile(fr'(\"entity\"{re.escape(TUPLE_DELIMITER)}{re.escape(person_name)}{re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\\\)')
+            # FIXED REGEX: Escaped opening and closing parentheses.
+            pattern = re.compile(fr'\("entity"{re.escape(TUPLE_DELIMITER)}{re.escape(person_name)}{re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\)')
             match = pattern.search(extracted_entities_str)
             if match:
                 description = match.group(1).strip()
@@ -129,20 +130,20 @@ def preprocess_with_granular_weights(example):
             for j in range(start, start + length):
                 if j < len(result["loss_weights"]): result["loss_weights"][j] = weight
         
-        # Apply weights based on our hierarchy
-        apply_weights(current_pos, len(tokens["part1"])), STRUCTURE_WEIGHT)
+        # FIXED SYNTAX: Corrected the misplaced parentheses in all function calls.
+        apply_weights(current_pos, len(tokens["part1"]), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part1"])
         
-        apply_weights(current_pos, len(tokens["name"])), ENTITY_NAME_WEIGHT)
+        apply_weights(current_pos, len(tokens["name"]), ENTITY_NAME_WEIGHT)
         current_pos += len(tokens["name"])
         
-        apply_weights(current_pos, len(tokens["part2"])), STRUCTURE_WEIGHT)
+        apply_weights(current_pos, len(tokens["part2"]), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part2"])
         
-        apply_weights(current_pos, len(tokens["desc"])), DESCRIPTION_WEIGHT)
+        apply_weights(current_pos, len(tokens["desc"]), DESCRIPTION_WEIGHT)
         current_pos += len(tokens["desc"])
 
-        apply_weights(current_pos, len(tokens["part3"])), STRUCTURE_WEIGHT)
+        apply_weights(current_pos, len(tokens["part3"]), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part3"])
         
         # Apply structure weight to the delimiter between records
@@ -201,7 +202,8 @@ class WeightedLossTrainer(Trainer):
 # ==============================================================================
 def calculate_tuple_metrics(predictions, references):
     all_metrics = {"precision": [], "recall": [], "f1_score": []}
-    tuple_pattern = re.compile(fr'(\"entity\"{re.escape(TUPLE_DELIMITER)}(.*?){re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\\\) ')
+    # FIXED REGEX: Escaped opening and closing parentheses.
+    tuple_pattern = re.compile(fr'\("entity"{re.escape(TUPLE_DELIMITER)}(.*?){re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\)')
 
     for pred_str, ref_str in zip(predictions, references):
         pred_tuples = tuple_pattern.findall(pred_str)
@@ -289,4 +291,4 @@ if __name__ == "__main__":
     # Save the final model and tokenizer
     trainer.save_model(OUTPUT_DIR)
     tokenizer.save_pretrained(OUTPUT_DIR)
-    print(f"\n--- Best model saved to '{OUTPUT_DIR}' ---")
+    print(f"\n--- Best model saved to '{OUTPUT_DIR}'")
