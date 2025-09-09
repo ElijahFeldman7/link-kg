@@ -88,7 +88,7 @@ def preprocess_with_granular_weights(example):
         person_list = [p.strip() for p in person_names_str.split(',') if p.strip()]
         for person_name in person_list:
             description = "A person referenced in the text"
-            pattern = re.compile(f'\\(\"entity\\\"{TUPLE_DELIMITER}{re.escape(person_name)}\\ TUPLE_DELIMITER}PERSON\\ TUPLE_DELIMITER}(.*?)\\\)')
+            pattern = re.compile(fr'(\"entity\"{re.escape(TUPLE_DELIMITER)}{re.escape(person_name)}{re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\\\)')
             match = pattern.search(extracted_entities_str)
             if match:
                 description = match.group(1).strip()
@@ -130,19 +130,19 @@ def preprocess_with_granular_weights(example):
                 if j < len(result["loss_weights"]): result["loss_weights"][j] = weight
         
         # Apply weights based on our hierarchy
-        apply_weights(current_pos, len(tokens["part1"]), STRUCTURE_WEIGHT)
+        apply_weights(current_pos, len(tokens["part1"])), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part1"])
         
-        apply_weights(current_pos, len(tokens["name"]), ENTITY_NAME_WEIGHT)
+        apply_weights(current_pos, len(tokens["name"])), ENTITY_NAME_WEIGHT)
         current_pos += len(tokens["name"])
         
-        apply_weights(current_pos, len(tokens["part2"]), STRUCTURE_WEIGHT)
+        apply_weights(current_pos, len(tokens["part2"])), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part2"])
         
-        apply_weights(current_pos, len(tokens["desc"]), DESCRIPTION_WEIGHT)
+        apply_weights(current_pos, len(tokens["desc"])), DESCRIPTION_WEIGHT)
         current_pos += len(tokens["desc"])
 
-        apply_weights(current_pos, len(tokens["part3"]), STRUCTURE_WEIGHT)
+        apply_weights(current_pos, len(tokens["part3"])), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part3"])
         
         # Apply structure weight to the delimiter between records
@@ -201,7 +201,7 @@ class WeightedLossTrainer(Trainer):
 # ==============================================================================
 def calculate_tuple_metrics(predictions, references):
     all_metrics = {"precision": [], "recall": [], "f1_score": []}
-    tuple_pattern = re.compile(f'\\(\"entity\\\"{TUPLE_DELIMITER}(.*?)\\ TUPLE_DELIMITER}PERSON\\ TUPLE_DELIMITER}(.*?)\\\)')
+    tuple_pattern = re.compile(fr'(\"entity\"{re.escape(TUPLE_DELIMITER)}(.*?){re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\\\) ')
 
     for pred_str, ref_str in zip(predictions, references):
         pred_tuples = tuple_pattern.findall(pred_str)
