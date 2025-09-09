@@ -19,7 +19,7 @@ import torch.nn as nn
 # 1. CONFIGURATION & CONSTANTS
 # ==============================================================================
 MODEL_NAME = "Universal-NER/UniNER-7B-all"
-DATASET_PATH = "dataset_8_9.csv" # Ensure this file is in the same directory
+DATASET_PATH = "dataset.csv" # Ensure this file is in the same directory
 OUTPUT_DIR = "./uniner_person_granular_loss"
 
 # --- Custom Delimiters ---
@@ -36,7 +36,7 @@ DESCRIPTION_WEIGHT = 1.0   # Lowest weight for the subjective description
 # 2. DATA LOADING
 # ==============================================================================
 try:
-    df = pd.read_csv(DATASET_PATH).dropna(subset=['Input_Text', 'Person', 'Extracted_Entities'])
+    df = pd.read_csv(DATASET_PATH, engine='python').dropna(subset=['Input_Text', 'Person', 'Extracted_Entities'])
     dataset = Dataset.from_pandas(df)
     print(f"Successfully loaded {len(dataset)} records from {DATASET_PATH}")
 except FileNotFoundError:
@@ -88,13 +88,13 @@ def preprocess_with_granular_weights(example):
         person_list = [p.strip() for p in person_names_str.split(',') if p.strip()]
         for person_name in person_list:
             description = "A person referenced in the text"
-            pattern = re.compile(f'\\("entity"\\{TUPLE_DELIMITER}{re.escape(person_name)}\\{TUPLE_DELIMITER}PERSON\\{TUPLE_DELIMITER}(.*?)\\)')
+            pattern = re.compile(f'\\(\"entity\\\"{TUPLE_DELIMITER}{re.escape(person_name)}\\ TUPLE_DELIMITER}PERSON\\ TUPLE_DELIMITER}(.*?)\\\)')
             match = pattern.search(extracted_entities_str)
             if match:
                 description = match.group(1).strip()
 
             component = {
-                "part1": f'("entity"{TUPLE_DELIMITER}',
+                "part1": f'(\"entity\"{TUPLE_DELIMITER}',
                 "name": person_name,
                 "part2": f'{TUPLE_DELIMITER}PERSON{TUPLE_DELIMITER}',
                 "desc": description,
@@ -158,13 +158,19 @@ def preprocess_with_granular_weights(example):
 # ==============================================================================
 class CustomDataCollator(DataCollatorForSeq2Seq):
     def __call__(self, features, return_tensors="pt"):
+        # Extract loss_weights before they are removed by the parent collator
+        loss_weights = [feature.pop("loss_weights") for feature in features]
+
+        # Now, call the parent collator
         batch = super().__call__(features, return_tensors)
+
+        # Pad the weights and add them to the batch
         max_length = batch["input_ids"].shape[1]
         padded_weights = []
-        for feature in features:
-            weights = feature["loss_weights"]
+        for weights in loss_weights:
             padded_weight = weights + [0.0] * (max_length - len(weights))
             padded_weights.append(padded_weight[:max_length])
+        
         batch["loss_weights"] = torch.tensor(padded_weights, dtype=torch.float32)
         return batch
 
@@ -195,7 +201,7 @@ class WeightedLossTrainer(Trainer):
 # ==============================================================================
 def calculate_tuple_metrics(predictions, references):
     all_metrics = {"precision": [], "recall": [], "f1_score": []}
-    tuple_pattern = re.compile(f'\\("entity"\\{TUPLE_DELIMITER}(.*?)\\{TUPLE_DELIMITER}PERSON\\{TUPLE_DELIMITER}(.*?)\\)')
+    tuple_pattern = re.compile(f'\\(\"entity\\\"{TUPLE_DELIMITER}(.*?)\\ TUPLE_DELIMITER}PERSON\\ TUPLE_DELIMITER}(.*?)\\\)')
 
     for pred_str, ref_str in zip(predictions, references):
         pred_tuples = tuple_pattern.findall(pred_str)
