@@ -1,0 +1,106 @@
+
+Currently Loaded Modules:
+  1) gnu10/10.3.0-ya    4) tcl/8.6.11-d4      7) libxml2/2.9.12-lq
+  2) zlib/1.2.11-2y     5) openmpi/4.1.2-4a   8) cuda/11.5.1-75
+  3) sqlite/3.37.1-6s   6) python/3.9.9-jh
+
+ 
+
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+Loading checkpoint shards:  33%|███▎      | 1/3 [00:13<00:27, 13.81s/it]
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:29<00:15, 15.20s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:41<00:00, 13.59s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:41<00:00, 13.89s/it]
+
+Map:   0%|          | 0/407 [00:00<?, ? examples/s]
+Map:  21%|██        | 86/407 [00:00<00:00, 840.79 examples/s]
+Map:  50%|████▉     | 202/407 [00:00<00:00, 1020.36 examples/s]
+Map:  84%|████████▎ | 340/407 [00:00<00:00, 961.03 examples/s] 
+Map: 100%|██████████| 407/407 [00:00<00:00, 863.06 examples/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/scratch/efeldma5/uniner_project/train_person_custom_weights.py:276: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `WeightedLossTrainer.__init__`. Use `processing_class` instead.
+  trainer = WeightedLossTrainer(
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+
+  0%|          | 0/525 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/scratch/efeldma5/uniner_project/train_person_custom_weights.py", line 288, in <module>
+    trainer.train()
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/transformers/trainer.py", line 2206, in train
+    return inner_training_loop(
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/transformers/trainer.py", line 2502, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/transformers/trainer.py", line 5300, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/accelerate/data_loader.py", line 567, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 789, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/scratch/efeldma5/uniner_project/train_person_custom_weights.py", line 163, in __call__
+    loss_weights = [feature.pop("loss_weights") for feature in features]
+  File "/scratch/efeldma5/uniner_project/train_person_custom_weights.py", line 163, in <listcomp>
+    loss_weights = [feature.pop("loss_weights") for feature in features]
+KeyError: 'loss_weights'
+
+  0%|          | 0/525 [00:00<?, ?it/s]
+
+Currently Loaded Modules:
+  1) gnu10/10.3.0-ya    4) tcl/8.6.11-d4      7) libxml2/2.9.12-lq
+  2) zlib/1.2.11-2y     5) openmpi/4.1.2-4a   8) cuda/11.5.1-75
+  3) sqlite/3.37.1-6s   6) python/3.9.9-jh
+
+ 
+
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+Loading checkpoint shards:  33%|███▎      | 1/3 [00:13<00:27, 13.81s/it]
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:29<00:15, 15.20s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:41<00:00, 13.59s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:41<00:00, 13.89s/it]
+
+Map:   0%|          | 0/407 [00:00<?, ? examples/s]
+Map:  21%|██        | 86/407 [00:00<00:00, 840.79 examples/s]
+Map:  50%|████▉     | 202/407 [00:00<00:00, 1020.36 examples/s]
+Map:  84%|████████▎ | 340/407 [00:00<00:00, 961.03 examples/s] 
+Map: 100%|██████████| 407/407 [00:00<00:00, 863.06 examples/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/scratch/efeldma5/uniner_project/train_person_custom_weights.py:276: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `WeightedLossTrainer.__init__`. Use `processing_class` instead.
+  trainer = WeightedLossTrainer(
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+
+  0%|          | 0/525 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/scratch/efeldma5/uniner_project/train_person_custom_weights.py", line 288, in <module>
+    trainer.train()
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/transformers/trainer.py", line 2206, in train
+    return inner_training_loop(
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/transformers/trainer.py", line 2502, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/transformers/trainer.py", line 5300, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/accelerate/data_loader.py", line 567, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 789, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/scratch/efeldma5/uniner_project/uniner_py39_venv/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/scratch/efeldma5/uniner_project/train_person_custom_weights.py", line 163, in __call__
+    loss_weights = [feature.pop("loss_weights") for feature in features]
+  File "/scratch/efeldma5/uniner_project/train_person_custom_weights.py", line 163, in <listcomp>
+    loss_weights = [feature.pop("loss_weights") for feature in features]
+KeyError: 'loss_weights'
+
+  0%|          | 0/525 [00:00<?, ?it/s]

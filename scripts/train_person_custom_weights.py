@@ -179,7 +179,7 @@ class CustomDataCollator(DataCollatorForSeq2Seq):
 # 6. CUSTOM WEIGHTED LOSS TRAINER
 # ==============================================================================
 class WeightedLossTrainer(Trainer):
-    def compute_loss(self, model, inputs, return_outputs=False):
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         weights = inputs.pop("loss_weights")
         outputs = model(**inputs)
         logits = outputs.get("logits")
@@ -252,13 +252,15 @@ if __name__ == "__main__":
     # Instantiate the custom data collator
     data_collator = CustomDataCollator(tokenizer=tokenizer, model=model)
 
+    # In section 8. MAIN EXECUTION
+
     # Define Training Arguments
     training_args = TrainingArguments(
         output_dir=OUTPUT_DIR,
         per_device_train_batch_size=2,
         gradient_accumulation_steps=8,
         per_device_eval_batch_size=2,
-        num_train_epochs=25, # More complex loss may benefit from more epochs
+        num_train_epochs=25,
         learning_rate=2e-4,
         optim="paged_adamw_8bit",
         bf16=True,
@@ -270,6 +272,7 @@ if __name__ == "__main__":
         load_best_model_at_end=True,
         metric_for_best_model="eval_f1_score",
         greater_is_better=True,
+        remove_unused_columns=False, # <--- ADD THIS LINE
     )
 
     # Instantiate our custom WeightedLossTrainer
@@ -278,7 +281,7 @@ if __name__ == "__main__":
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        tokenizer=tokenizer,
+        # tokenizer=tokenizer, # <--- REMOVE THIS DEPRECATED ARGUMENT
         data_collator=data_collator,
         compute_metrics=compute_metrics_wrapper,
     )
@@ -287,6 +290,20 @@ if __name__ == "__main__":
     print("\n--- Starting Training with Granular Weighted Loss Function ---")
     trainer.train()
     print("\n--- Training Complete ---")
+
+    # Evaluate the best model
+    print("\n--- Evaluating The Best Model ---")
+    final_eval_results = trainer.evaluate()
+    print("Final evaluation results:")
+    print(final_eval_results)
+
+    # Save the evaluation results
+    import json
+    results_file_path = os.path.join(OUTPUT_DIR, "final_eval_results.json")
+    with open(results_file_path, 'w') as f:
+        json.dump(final_eval_results, f, indent=4)
+
+    print(f"\n--- Evaluation results saved to '{results_file_path}' ---")
 
     # Save the final model and tokenizer
     trainer.save_model(OUTPUT_DIR)
