@@ -15,26 +15,18 @@ from transformers import (
 from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
 import torch.nn as nn
 
-# ==============================================================================
-# 1. CONFIGURATION & CONSTANTS
-# ==============================================================================
 MODEL_NAME = "Universal-NER/UniNER-7B-all"
-DATASET_PATH = "dataset.csv" # Ensure this file is in the same directory
+DATASET_PATH = "dataset.csv"
 OUTPUT_DIR = "./uniner_person_granular_loss"
 
-# --- Custom Delimiters ---
 TUPLE_DELIMITER = "{tuple_delimiter}"
 RECORD_DELIMITER = "{record_delimiter}"
 COMPLETION_DELIMITER = "{completion_delimiter}"
 
-# --- Granular Loss Weights (New Hierarchy) ---
-ENTITY_NAME_WEIGHT = 10.0  # Highest weight for getting the name right
-STRUCTURE_WEIGHT = 5.0   # Medium weight for the surrounding format
-DESCRIPTION_WEIGHT = 1.0   # Lowest weight for the subjective description
+ENTITY_NAME_WEIGHT = 10.0
+STRUCTURE_WEIGHT = 5.0   
+DESCRIPTION_WEIGHT = 1.0   
 
-# ==============================================================================
-# 2. DATA LOADING
-# ==============================================================================
 try:
     df = pd.read_csv(DATASET_PATH, engine='python').dropna(subset=['Input_Text', 'Person', 'Extracted_Entities'])
     dataset = Dataset.from_pandas(df)
@@ -43,9 +35,6 @@ except FileNotFoundError:
     print(f"Error: Dataset file not found at {DATASET_PATH}")
     exit()
 
-# ==============================================================================
-# 3. MODEL & TOKENIZER SETUP
-# ==============================================================================
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_use_double_quant=True,
@@ -73,22 +62,17 @@ model = get_peft_model(model, lora_config)
 print("\nModel setup complete:")
 model.print_trainable_parameters()
 
-# ==============================================================================
-# 4. PREPROCESSING FUNCTION (WITH GRANULAR WEIGHT MAPPING)
-# ==============================================================================
 def preprocess_with_granular_weights(example):
     instruction = "From the text provided, extract all PERSON entities. Your output must be in the specified tuple format."
     input_text = example['Input_Text']
     person_names_str = example.get('Person', '')
     extracted_entities_str = example.get('Extracted_Entities', '')
 
-    # Deconstruct the target string into components for precise weighting
     output_parts, tuple_components = [], []
     if isinstance(person_names_str, str) and person_names_str.strip():
         person_list = [p.strip() for p in person_names_str.split(',') if p.strip()]
         for person_name in person_list:
             description = "A person referenced in the text"
-            # FIXED REGEX: Escaped opening and closing parentheses.
             pattern = re.compile(fr'\("entity"{re.escape(TUPLE_DELIMITER)}{re.escape(person_name)}{re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\)')
             match = pattern.search(extracted_entities_str)
             if match:
@@ -106,31 +90,25 @@ def preprocess_with_granular_weights(example):
 
     target_output = (RECORD_DELIMITER.join(output_parts) + RECORD_DELIMITER if output_parts else "") + COMPLETION_DELIMITER
 
-    # Tokenize the full text
     full_prompt_text = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n{target_output}{tokenizer.eos_token}"
     result = tokenizer(full_prompt_text, truncation=True, max_length=1024, padding=False)
     result["labels"] = result["input_ids"].copy()
     
-    # Create the weight map with a default value
+    result["loss_weights"] = [1.0] * len(result["input_ids"])
     result["loss_weights"] = [1.0] * len(result["input_ids"])
     
-    # Mask the prompt and set its weight to 0
     prompt_len = len(tokenizer(f"[INST] {instruction}\n\nText: {input_text} [/INST]\n", add_special_tokens=False)['input_ids'])
     result["labels"][:prompt_len] = [-100] * prompt_len
     result["loss_weights"][:prompt_len] = [0.0] * prompt_len
     
-    # Apply the granular weights to the target tokens
     current_pos = prompt_len
     for i, component in enumerate(tuple_components):
-        # Tokenize each part of the tuple separately to get token counts
         tokens = {key: tokenizer(value, add_special_tokens=False)['input_ids'] for key, value in component.items()}
         
-        # Helper function to apply weights to a range of tokens
         def apply_weights(start, length, weight):
             for j in range(start, start + length):
                 if j < len(result["loss_weights"]): result["loss_weights"][j] = weight
         
-        # FIXED SYNTAX: Corrected the misplaced parentheses in all function calls.
         apply_weights(current_pos, len(tokens["part1"]), STRUCTURE_WEIGHT)
         current_pos += len(tokens["part1"])
         
@@ -154,18 +132,13 @@ def preprocess_with_granular_weights(example):
             
     return result
 
-# ==============================================================================
-# 5. CUSTOM DATA COLLATOR
-# ==============================================================================
+
 class CustomDataCollator(DataCollatorForSeq2Seq):
     def __call__(self, features, return_tensors="pt"):
-        # Extract loss_weights before they are removed by the parent collator
         loss_weights = [feature.pop("loss_weights") for feature in features]
 
-        # Now, call the parent collator
         batch = super().__call__(features, return_tensors)
 
-        # Pad the weights and add them to the batch
         max_length = batch["input_ids"].shape[1]
         padded_weights = []
         for weights in loss_weights:
@@ -175,9 +148,7 @@ class CustomDataCollator(DataCollatorForSeq2Seq):
         batch["loss_weights"] = torch.tensor(padded_weights, dtype=torch.float32)
         return batch
 
-# ==============================================================================
-# 6. CUSTOM WEIGHTED LOSS TRAINER
-# ==============================================================================
+
 class WeightedLossTrainer(Trainer):
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         weights = inputs.pop("loss_weights")
@@ -193,16 +164,11 @@ class WeightedLossTrainer(Trainer):
         per_token_loss = loss_fct(logits_flat, labels_flat)
 
         weighted_loss = per_token_loss * weights_flat
-        final_loss = weighted_loss.sum() / weights_flat.sum()
-        
-        return (final_loss, outputs) if return_outputs else final_loss
+        final_loss = weighted_loss.sum() / (weights_flat.sum() + 1e-8)
 
-# ==============================================================================
-# 7. EVALUATION METRICS
-# ==============================================================================
+        return (final_loss, outputs) if return_outputs else final_loss
 def calculate_tuple_metrics(predictions, references):
     all_metrics = {"precision": [], "recall": [], "f1_score": []}
-    # FIXED REGEX: Escaped opening and closing parentheses.
     tuple_pattern = re.compile(fr'\("entity"{re.escape(TUPLE_DELIMITER)}(.*?){re.escape(TUPLE_DELIMITER)}PERSON{re.escape(TUPLE_DELIMITER)}(.*?)\)')
 
     for pred_str, ref_str in zip(predictions, references):
@@ -233,28 +199,31 @@ def compute_metrics_wrapper(eval_pred):
     predicted_strings = tokenizer.batch_decode(predicted_ids, skip_special_tokens=True)
     label_strings = tokenizer.batch_decode(labels, skip_special_tokens=True)
 
-    processed_preds = [pred.split('[/INST]')[1].strip() if '[/INST]' in pred else "" for pred in predicted_strings]
+    processed_preds = []
+    for pred in predicted_strings:
+        if '[/INST]' in pred:
+            processed_preds.append(pred.split('[/INST]', 1)[1].strip())
+        else:
+            processed_preds.append("")
     processed_labels = [label.split('[/INST]')[1].strip() if '[/INST]' in label else "" for label in label_strings]
+    for i in range(min(2, len(processed_preds))):
+        print(f"Example {i+1}:")
+        print(f"  PREDICTION: '{processed_preds[i]}'")
+        print(f"  LABEL:      '{processed_labels[i]}'")
+    print("--- End Debugging ---\n")
     
     return calculate_tuple_metrics(processed_preds, processed_labels)
 
-# ==============================================================================
-# 8. MAIN EXECUTION
-# ==============================================================================
 if __name__ == "__main__":
-    # Process the dataset
     print("\n--- Preprocessing Dataset with Granular Weights ---")
     tokenized_dataset = dataset.map(preprocess_with_granular_weights, remove_columns=dataset.column_names)
     splits = tokenized_dataset.train_test_split(test_size=0.2, seed=42)
     train_dataset, eval_dataset = splits["train"], splits["test"]
     print("--- Preprocessing Complete ---")
 
-    # Instantiate the custom data collator
     data_collator = CustomDataCollator(tokenizer=tokenizer, model=model)
 
-    # In section 8. MAIN EXECUTION
 
-    # Define Training Arguments
     training_args = TrainingArguments(
         output_dir=OUTPUT_DIR,
         per_device_train_batch_size=2,
@@ -272,32 +241,25 @@ if __name__ == "__main__":
         load_best_model_at_end=True,
         metric_for_best_model="eval_f1_score",
         greater_is_better=True,
-        remove_unused_columns=False, # <--- ADD THIS LINE
+        remove_unused_columns=False,
     )
 
-    # Instantiate our custom WeightedLossTrainer
     trainer = WeightedLossTrainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        # tokenizer=tokenizer, # <--- REMOVE THIS DEPRECATED ARGUMENT
         data_collator=data_collator,
         compute_metrics=compute_metrics_wrapper,
     )
 
-    # Start training
-    print("\n--- Starting Training with Granular Weighted Loss Function ---")
     trainer.train()
-    print("\n--- Training Complete ---")
 
-    # Evaluate the best model
     print("\n--- Evaluating The Best Model ---")
     final_eval_results = trainer.evaluate()
     print("Final evaluation results:")
     print(final_eval_results)
 
-    # Save the evaluation results
     import json
     results_file_path = os.path.join(OUTPUT_DIR, "final_eval_results.json")
     with open(results_file_path, 'w') as f:
@@ -305,7 +267,6 @@ if __name__ == "__main__":
 
     print(f"\n--- Evaluation results saved to '{results_file_path}' ---")
 
-    # Save the final model and tokenizer
     trainer.save_model(OUTPUT_DIR)
     tokenizer.save_pretrained(OUTPUT_DIR)
     print(f"\n--- Best model saved to '{OUTPUT_DIR}'")

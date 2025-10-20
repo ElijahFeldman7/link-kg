@@ -106,8 +106,6 @@ def setup_model_and_tokenizer():
         print("Please make sure the path is correct and contains files like 'adapter_model.bin' and 'adapter_config.json'.")
         exit()
     
-    print("\nModel successfully loaded with previous adapters.")
-    print("Trainable parameters after loading adapters:")
     model.print_trainable_parameters()
     
     return model, tokenizer
@@ -131,15 +129,14 @@ def preprocess_interleaved(example, tokenizer):
     
     result["labels"] = result["input_ids"].copy()
     
-    prompt_only_for_masking = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n"
-    prompt_len = len(tokenizer(prompt_only_for_masking, add_special_tokens=False)['input_ids'])
+    prompt = f"[INST] {instruction}\n\nText: {input_text} [/INST]\n"
+    full_prompt = f"{prompt}{target_output}{tokenizer.eos_token}"
+    result["labels"] = result["input_ids"].copy()
+    prompt_ids = tokenizer(prompt, add_special_tokens=False)["input_ids"]
+    prompt_len = len(prompt_ids)
 
-    result["labels"][:prompt_len] = [-100] * prompt_len
-        
+    result["labels"][:prompt_len] = [-100] * prompt_len        
     return result
-
-
-
 def parse_structured_output(text: str) -> (list, bool):
     pattern = re.compile(
         r'\("entity"' + TUPLE_DELIMITER + r'(.*?)' + TUPLE_DELIMITER + r'(.*?)' + TUPLE_DELIMITER + r'.*?\)',
@@ -230,7 +227,6 @@ def compute_metrics_advanced(eval_pred, tokenizer):
 
 
 def main():
-    """Main function to run the training and evaluation pipeline."""
     dataset = create_interleaved_dataset(DATASET_PATH)
     model, tokenizer = setup_model_and_tokenizer()
     
@@ -272,11 +268,8 @@ def main():
         compute_metrics=lambda p: compute_metrics_advanced(p, tokenizer),
     )
 
-    print("\n--- Starting Continued Interleaved Fine-Tuning ---")
     trainer.train()
-    print("\n--- Training Complete ---")
 
-    print("\n--- Generating and Saving Test Predictions ---")
     test_results = trainer.predict(eval_dataset)
     
     predictions = np.argmax(test_results.predictions, axis=-1)
@@ -288,19 +281,19 @@ def main():
 
     output_prediction_file = os.path.join(OUTPUT_DIR, "test_predictions.txt")
     with open(output_prediction_file, "w") as writer:
-        writer.write("--- Test Set Predictions and Labels ---\n\n")
         for i, (pred, label) in enumerate(zip(decoded_preds, decoded_labels)):
             writer.write(f"--- Example {i+1} ---\n")
             writer.write(f"GROUND TRUTH:\n{label.strip()}\n\n")
             writer.write(f"PREDICTED:\n{pred.strip()}\n")
             writer.write("="*20 + "\n\n")
     print(f"Predictions saved to {output_prediction_file}")
-
-    print("\n--- Final Evaluation Results on Test Set ---")
     final_metrics = test_results.metrics
     print(json.dumps(final_metrics, indent=2))
-    with open(os.path.join(OUTPUT_DIR, "final_eval_results.json"), "w") as f:
+    output_json_path = os.path.join(OUTPUT_DIR, "final_eval_results.json")
+
+    with open(output_json_path, "w") as f:
         json.dump(final_metrics, f, indent=2)
+    print(f"Final metrics saved to {output_json_path}")
 
 if __name__ == "__main__":
     main()
