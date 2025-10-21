@@ -4,20 +4,23 @@ import numpy as np
 import json
 import re
 import os
-from datasets import Dataset
+from datasets import Dataset, load_dataset
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
     BitsAndBytesConfig,
+    TrainingArguments,
+    Trainer,
 )
-from tqdm import tqdm
+from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
 
 BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 DATASET_PATH = "dataset5.csv"
-OUTPUT_DIR = "./llama31_8b_instruct_evaluation_with_scores"
+NEW_MODEL_DIR = "./llama31_8b_instruct_finetuned"
+MAX_LENGTH = 2048 
 
 tuple_delimiter = "{tuple_delimiter}"
-record_delimiter = "{record_delimiter}
+record_delimiter = "{record_delimiter}"
 completion_delimiter = "{completion_delimiter}"
 
 SYSTEM_PROMPT = """
@@ -38,7 +41,7 @@ Below are the entity type definitions. Extract only entities that explicitly mat
 
 -Steps-
 1. Extract entities of the defined types only if they are explicitly written in the input document without inference or completion. For each extracted entity, extract the following information:
-- entity_name: Name of the entity, capitalized. Do not alter spellings or make corrections. The name should match exactly as written. For example, if 'Jaquez' is extracted as an entity then keep 'Jaquez'. Do not correct it to 'Jacquez'. 
+- entity_name: Name of the entity, capitalized. Do not alter spellings or make corrections. The name should match exactly as written. For example, if 'Jaquez' is extracted as an entity then keep 'Jaquea'. Do not correct it to 'Jacquez'. 
 - entity_type: One of the 7 defined entity types.
 - entity_description: Comprehensive description of the entitys attributes and activities
 
@@ -60,7 +63,7 @@ For each pair of related entities, extract the following information:
 - source_entity: name of the source entity, as identified in step 1
 - target_entity: name of the target entity, as identified in step 1
 - relationship_description: explanation as to why you think the source entity and the target entity are related to each other
-- relationship_strength: A numeric score between 0 and 10 indicating the strength of the relationship, based on the following criteria. 0 to 3 (Weak): The relationship is mentioned indirectly, with minimal context. Sentences containing "may have...", "allegedly...", or other uncertain phrasing fall into this category. 4 to 6 (Moderate): The relationship is explicitly stated but lacks detailed context, supporting evidence, or additional information. If the sentence expresses uncertainty but does not use "may have" or "allegedly," it may still fall into this range. 7 to 10 (Strong): The relationship is explicitly stated with clear, detailed context, repeated mentions, or strong supporting evidence. Sentences using direct verb tenses (e.g., "did", "was", "used", "transported") without hedging terms should be rated in this range.
+- relationship_strength: A numeric score between 0 and 10 indicating the strength of the relationship, based on the following criteria. 0 to 3 (Weak): The relationship is mentioned indirectly, with minimal context. Sentences containing "may have...", "allegedly...", or other uncertain phrasing fall into this category. 4 to 6 (Moderate): The relationship is explicitly stated but lacks detailed context, supporting evidence, or additional information. If the sentence expresses uncertainty but does not use "may have" or "allegally," it may still fall into this range. 7 to 10 (Strong): The relationship is explicitly stated with clear, detailed context, repeated mentions, or strong supporting evidence. Sentences using direct verb tenses (e.g., "did", "was", "used", "transported") without hedging terms should be rated in this range.
 
 Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
 
@@ -150,7 +153,7 @@ Output:
 {record_delimiter}
 ("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Undocumented aliens were brought to the stash house before further transport{tuple_delimiter}8)
 {record_delimiter}
-("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{TUPLE_DELIMITTER}8)
+("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{tuple_delimiter}8)
 {record_delimiter}
 {completion_delimiter}
 """
@@ -166,38 +169,6 @@ Input_text:
 Output:
 """
 
-def create_dataset_from_output_col(file_path: str) -> Dataset:
-    try:
-        df = pd.read_csv(file_path).fillna('')
-    except FileNotFoundError:
-        print(f"Error: The file '{file_path}' was not found.")
-        exit()
-
-    processed_data = []
-    print("Preparing dataset from 'Input_Text' and 'Output' columns...")
-    for _, row in df.iterrows():
-        input_text = row.get('Input_Text')
-        target_output = row.get('Output')
-
-        if not (isinstance(input_text, str) and input_text.strip()):
-            continue
-        if not (isinstance(target_output, str) and target_output.strip()):
-            continue
-            
-        clean_target = target_output.strip()
-
-        processed_data.append({
-            "input_text": input_text,
-            "ground_truth": clean_target,
-        })
-
-    if not processed_data:
-        print("Error: No valid data could be processed. Check CSV content and ensure 'Input_Text' and 'Output' columns exist.")
-        exit()
-
-    print(f"Created {len(processed_data)} samples for evaluation.")
-    return Dataset.from_list(processed_data)
-
 def setup_model_and_tokenizer():
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -210,18 +181,128 @@ def setup_model_and_tokenizer():
     
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-        tokenizer.padding_side = "left" 
+        tokenizer.padding_side = "right" 
 
     print(f"Loading base model: {BASE_MODEL_NAME}")
-    print("NOTE: This requires you to be logged in via `huggingface-cli login`.")
     model = AutoModelForCausalLM.from_pretrained(
         BASE_MODEL_NAME,
         quantization_config=bnb_config,
         device_map="auto",
     )
     
-    model.eval()
+    model = prepare_model_for_kbit_training(model)
     return model, tokenizer
+
+def setup_peft_model(model):
+    lora_config = LoraConfig(
+        r=16, 
+        lora_alpha=32, 
+        target_modules=[
+            "q_proj", "k_proj", "v_proj", "o_proj",
+            "gate_proj", "up_proj", "down_proj"
+        ],
+        lora_dropout=0.05, 
+        bias="none", 
+        task_type=TaskType.CAUSAL_LM
+    )
+    model = get_peft_model(model, lora_config)
+    model.print_trainable_parameters()
+    return model
+
+def load_data(file_path: str) -> (Dataset, Dataset):
+    try:
+        df = pd.read_csv(file_path).fillna('')
+        df = df.dropna(subset=['Input_Text', 'Output'])
+    except (FileNotFoundError, KeyError) as e:
+        print(f"Error: Could not read '{file_path}'. Make sure it exists and has 'Input_Text' and 'Output' columns. Details: {e}")
+        exit()
+
+    if len(df) == 0:
+        print("Error: No valid data found in the CSV.")
+        exit()
+
+    dataset = Dataset.from_pandas(df)
+    
+    splits = dataset.train_test_split(test_size=0.2, seed=42)
+    train_dataset = splits["train"]
+    eval_dataset = splits["test"]
+    
+    print(f"Dataset loaded: {len(train_dataset)} training samples, {len(eval_dataset)} evaluation samples.")
+    return train_dataset, eval_dataset
+
+def create_preprocess_function(tokenizer):
+    
+    ent_pattern = re.compile(
+        r'(\("entity"' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r')(.*?)(\))', 
+        re.DOTALL
+    )
+    rel_pattern = re.compile(
+        r'(\("relationship"' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r')(.*?)(' + re.escape(tuple_delimiter) + r'\d+\s*\))', 
+        re.DOTALL
+    )
+
+    def preprocess_function(example):
+        input_text = example['Input_Text']
+        ground_truth = example['Output']
+        
+        user_content = INSTRUCTION_TEMPLATE.format(input_text=input_text)
+        messages = [
+            {"role": "system", "content": SYSTEM_PROMPT.strip()},
+            {"role": "user", "content": user_content.strip()}
+        ]
+        
+        prompt_str = tokenizer.apply_chat_template(
+            messages, 
+            tokenize=False, 
+            add_generation_prompt=True
+        )
+        prompt_char_len = len(prompt_str)
+        
+        full_text = f"{prompt_str}{ground_truth}{tokenizer.eos_token}"
+        
+        result = tokenizer(
+            full_text,
+            truncation=True,
+            max_length=MAX_LENGTH,
+            padding="max_length",
+            return_offsets_mapping=True
+        )
+        
+        labels = result["input_ids"].copy()
+        
+        prompt_token_len = 0
+        for token_idx, (start_char, end_char) in enumerate(result["offset_mapping"]):
+            if start_char >= prompt_char_len:
+                prompt_token_len = token_idx
+                break
+        else:
+            prompt_token_len = len(labels)
+
+        labels[:prompt_token_len] = [-100] * prompt_token_len
+        
+        desc_char_spans = []
+        for match in ent_pattern.finditer(ground_truth):
+            desc_char_spans.append(match.span(2))
+        
+        for match in rel_pattern.finditer(ground_truth):
+            desc_char_spans.append(match.span(2))
+
+        for start_char, end_char in desc_char_spans:
+            full_start_char = prompt_char_len + start_char
+            full_end_char = prompt_char_len + end_char
+
+            token_start = result.char_to_token(full_start_char)
+            token_end = result.char_to_token(full_end_char - 1)
+
+            if token_start is not None and token_end is not None:
+                mask_len = (token_end - token_start) + 1
+                labels[token_start : token_end + 1] = [-100] * mask_len
+
+        result["labels"] = labels
+        del result["offset_mapping"]
+        return result
+
+    return preprocess_function
 
 def parse_for_eval(text: str) -> (set, dict, bool):
     entities = set()
@@ -271,7 +352,6 @@ def compute_metrics(predictions: list, ground_truths: list):
         label_rel_keys = set(label_rels.keys())
         rel_tp += len(pred_rel_keys & label_rel_keys)
         rel_fp += len(pred_rel_keys - label_rel_keys)
-        
         rel_fn += len(label_rel_keys - pred_rel_keys)
         
         true_positive_rels = pred_rel_keys & label_rel_keys
@@ -295,87 +375,88 @@ def compute_metrics(predictions: list, ground_truths: list):
 
     return final_metrics
 
-def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+def compute_metrics_wrapper(eval_pred):
+    predictions, labels = eval_pred
+    if isinstance(predictions, tuple):
+        predictions = predictions[0]
+
+    predicted_ids = np.argmax(predictions, axis=-1)
     
-    model, tokenizer = setup_model_and_tokenizer()
-    eval_dataset = create_dataset_from_output_col(DATASET_PATH)
-
-    predictions = []
-    ground_truths = []
+    labels[labels == -100] = tokenizer.pad_token_id
     
-    eos_token_str = tokenizer.eos_token
+    predicted_strings = tokenizer.batch_decode(predicted_ids, skip_special_tokens=True)
+    label_strings = tokenizer.batch_decode(labels, skip_special_tokens=True)
+
+    assistant_header = "<|start_header_id|>assistant<|end_header_id|>"
     
-    terminators = [
-        tokenizer.eos_token_id,
-        tokenizer.convert_tokens_to_ids("<|end_of_text|>")
-    ]
+    clean_preds = []
+    clean_labels = []
+
+    for pred, label in zip(predicted_strings, label_strings):
+        pred_assistant_part = pred.split(assistant_header)[-1].strip()
+        label_assistant_part = label.split(assistant_header)[-1].strip()
+        
+        clean_preds.append(pred_assistant_part)
+        clean_labels.append(label_assistant_part)
     
-    print("\nRunning inference on the dataset...")
-    with torch.no_grad():
-        for example in tqdm(eval_dataset):
-            
-            user_content = INSTRUCTION_TEMPLATE.format(input_text=example["input_text"])
-            messages = [
-                {"role": "system", "content": SYSTEM_PROMPT.strip()},
-                {"role": "user", "content": user_content.strip()}
-            ]
-            
-            prompt = tokenizer.apply_chat_template(
-                messages, 
-                tokenize=False, 
-                add_generation_prompt=True
-            )
-            
-            inputs = tokenizer(
-                prompt, 
-                return_tensors="pt", 
-                add_special_tokens=False 
-            ).to(model.device)
+    return compute_metrics(clean_preds, clean_labels)
 
-            output = model.generate(
-                **inputs,
-                max_new_tokens=2048,
-                do_sample=False,
-                eos_token_id=terminators, 
-                pad_token_id=tokenizer.eos_token_id
-            )
-            
-            prompt_token_length = inputs.input_ids.shape[1]
-            decoded_output = tokenizer.decode(
-                output[0][prompt_token_length:], 
-                skip_special_tokens=False
-            )
-            
-            for token_str in [eos_token_str, "<|end_of_text|>"]:
-                 if token_str:
-                       decoded_output = decoded_output.replace(token_str, "").strip()
-            
-            if tokenizer.bos_token:
-                 decoded_output = decoded_output.replace(tokenizer.bos_token, "").strip()
-
-            predictions.append(decoded_output.strip())
-            ground_truths.append(example["ground_truth"])
-
-    output_prediction_file = os.path.join(OUTPUT_DIR, "llama3_predictions.txt")
-    with open(output_prediction_file, "w", encoding="utf-8") as writer:
-        for i, (pred, label, inp) in enumerate(zip(predictions, ground_truths, eval_dataset['input_text'])):
-            writer.write(f"--- Example {i+1} ---\n")
-            writer.write(f"INPUT TEXT:\n{inp.strip()}\n\n")
-            writer.write(f"GROUND TRUTH:\n{label.strip()}\n\n")
-            writer.write(f"PREDICTED:\n{pred.strip()}\n")
-            writer.write("="*20 + "\n\n")
-    print(f"\nRaw predictions saved to {output_prediction_file}")
-
-    final_metrics = compute_metrics(predictions, ground_truths)
-    
-    print("\n--- LLAMA 3.1 8B INSTRUCT EVALUATION RESULTS ---")
-    print(json.dumps(final_metrics, indent=2))
-
-    output_metrics_file = os.path.join(OUTPUT_DIR, "llama3_metrics.json")
-    with open(output_metrics_file, 'w') as f:
-        json.dump(final_metrics, f, indent=2)
-    print(f"Metrics saved to {output_metrics_file}")
 
 if __name__ == "__main__":
-    main()
+    model, tokenizer = setup_model_and_tokenizer()
+    
+    model = setup_peft_model(model)
+    
+    train_dataset, eval_dataset = load_data(DATASET_PATH)
+    
+    preprocess_function = create_preprocess_function(tokenizer)
+    
+    print("Tokenizing train dataset...")
+    tokenized_train = train_dataset.map(
+        preprocess_function, 
+        batched=False, 
+        remove_columns=list(train_dataset.features)
+    )
+    print("Tokenizing evaluation dataset...")
+    tokenized_eval = eval_dataset.map(
+        preprocess_function, 
+        batched=False, 
+        remove_columns=list(eval_dataset.features)
+    )
+
+    training_args = TrainingArguments(
+        output_dir=NEW_MODEL_DIR,
+        per_device_train_batch_size=2,      
+        gradient_accumulation_steps=8,     
+        per_device_eval_batch_size=2,
+        num_train_epochs=5,                
+        learning_rate=2e-4,                
+        optim="paged_adamw_8bit",
+        fp16=True,                         
+        gradient_checkpointing=True,
+        logging_steps=10,
+        eval_strategy="epoch",
+        save_strategy="epoch",
+        save_total_limit=2,
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_entity_f1", 
+        greater_is_better=True,
+        report_to="tensorboard",           
+    )
+
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        train_dataset=tokenized_train,
+        eval_dataset=tokenized_eval,
+        tokenizer=tokenizer,
+        compute_metrics=compute_metrics_wrapper,
+    )
+
+    print("\n--- Starting Llama 3.1 QLoRA Fine-tuning ---")
+    trainer.train()
+    print("\n--- Training Complete ---")
+
+    best_model_path = os.path.join(NEW_MODEL_DIR, "best_model")
+    trainer.save_model(best_model_path)
+    print(f"Best model saved to {best_model_path}")

@@ -1,0 +1,6 @@
+{
+  "parsability_score": 0.8262476894639557,
+  "entity_f1": 0.5218534341110745,
+  "relationship_f1": 0.1740139211136891,
+  "relationship_score_mae": 1.6866666666666668
+}

@@ -14,14 +14,11 @@ from transformers import (
 )
 from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
 
-# --- Define Delimiters ---
 TUPLE_DELIMITER = "{tuple_delimiter}"
 RECORD_DELIMITER = "{record_delimiter}"
 COMPLETION_DELIMITER = "{completion_delimiter}"
 
-# --- Load Data ---
 try:
-    # We now need both 'Person' and 'Extracted_Entities' columns
     df = pd.read_csv("dataset_8_9.csv").dropna(subset=['Input_Text', 'Person', 'Extracted_Entities'])
 except (FileNotFoundError, KeyError) as e:
     print(f"Error: Could not read 'dataset_8_9.csv'. Make sure the file exists and contains the required columns. Details: {e}")
