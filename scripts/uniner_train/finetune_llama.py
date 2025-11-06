@@ -158,17 +158,6 @@ Output:
 {completion_delimiter}
 """
 
-INSTRUCTION_TEMPLATE = """
-######################
--Real Data-
-Below is the Real Input Data from which you have to extract Entities and Relationships as described above.
-######################
-Input_text: 
-{input_text}
-######################
-Output:
-"""
-
 def setup_model_and_tokenizer():
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -178,7 +167,6 @@ def setup_model_and_tokenizer():
     )
 
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
-    
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = "right" 
@@ -189,7 +177,6 @@ def setup_model_and_tokenizer():
         quantization_config=bnb_config,
         device_map="auto",
     )
-    
     model = prepare_model_for_kbit_training(model)
     return model, tokenizer
 
@@ -222,16 +209,32 @@ def load_data(file_path: str) -> (Dataset, Dataset):
         exit()
 
     dataset = Dataset.from_pandas(df)
-    
     splits = dataset.train_test_split(test_size=0.2, seed=42)
     train_dataset = splits["train"]
     eval_dataset = splits["test"]
-    
     print(f"Dataset loaded: {len(train_dataset)} training samples, {len(eval_dataset)} evaluation samples.")
     return train_dataset, eval_dataset
 
-def create_preprocess_function(tokenizer):
-    
+def create_preprocess_function(tokenizer, system_prompt):
+    INSTRUCTION_TEMPLATE = """
+
+######################
+
+-Real Data-
+
+Below is the Real Input Data from which you have to extract Entities and Relationships as described above.
+
+######################
+
+Input_text: 
+
+{input_text}
+
+######################
+
+Output:
+
+"""
     ent_pattern = re.compile(
         r'(\("entity"' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r')(.*?)(\))', 
         re.DOTALL
@@ -240,68 +243,61 @@ def create_preprocess_function(tokenizer):
         r'(\("relationship"' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r')(.*?)(' + re.escape(tuple_delimiter) + r'\d+\s*\))', 
         re.DOTALL
     )
+    def preprocess_function(examples):
+        inputs = [INSTRUCTION_TEMPLATE.format(input_text=text) for text in examples['Input_Text']]
+        ground_truths = examples['Output']
+        all_messages = [
+            [
+                {"role": "system", "content": system_prompt.strip()},
 
-    def preprocess_function(example):
-        input_text = example['Input_Text']
-        ground_truth = example['Output']
-        
-        user_content = INSTRUCTION_TEMPLATE.format(input_text=input_text)
-        messages = [
-            {"role": "system", "content": SYSTEM_PROMPT.strip()},
-            {"role": "user", "content": user_content.strip()}
+                {"role": "user", "content": input_content.strip()}
+            ] for input_content in inputs
         ]
-        
-        prompt_str = tokenizer.apply_chat_template(
-            messages, 
-            tokenize=False, 
-            add_generation_prompt=True
-        )
-        prompt_char_len = len(prompt_str)
-        
-        full_text = f"{prompt_str}{ground_truth}{tokenizer.eos_token}"
-        
-        result = tokenizer(
-            full_text,
+        prompt_strs = [
+            tokenizer.apply_chat_template(
+                messages, 
+                tokenize=False, 
+                add_generation_prompt=True
+            ) for messages in all_messages
+        ]
+        full_texts = [f"{prompt}{gt}{tokenizer.eos_token}" for prompt, gt in zip(prompt_strs, ground_truths)]
+        results = tokenizer(
+            full_texts,
             truncation=True,
             max_length=MAX_LENGTH,
             padding="max_length",
             return_offsets_mapping=True
         )
-        
-        labels = result["input_ids"].copy()
-        
-        prompt_token_len = 0
-        for token_idx, (start_char, end_char) in enumerate(result["offset_mapping"]):
-            if start_char >= prompt_char_len:
-                prompt_token_len = token_idx
-                break
-        else:
-            prompt_token_len = len(labels)
-
-        labels[:prompt_token_len] = [-100] * prompt_token_len
-        
-        desc_char_spans = []
-        for match in ent_pattern.finditer(ground_truth):
-            desc_char_spans.append(match.span(2))
-        
-        for match in rel_pattern.finditer(ground_truth):
-            desc_char_spans.append(match.span(2))
-
-        for start_char, end_char in desc_char_spans:
-            full_start_char = prompt_char_len + start_char
-            full_end_char = prompt_char_len + end_char
-
-            token_start = result.char_to_token(full_start_char)
-            token_end = result.char_to_token(full_end_char - 1)
-
-            if token_start is not None and token_end is not None:
-                mask_len = (token_end - token_start) + 1
-                labels[token_start : token_end + 1] = [-100] * mask_len
-
-        result["labels"] = labels
-        del result["offset_mapping"]
-        return result
-
+        all_labels = []
+        for i in range(len(full_texts)):
+            labels = results["input_ids"][i].copy()
+            prompt_char_len = len(prompt_strs[i])
+            ground_truth = ground_truths[i]
+            prompt_token_len = 0
+            for token_idx, (start_char, end_char) in enumerate(results["offset_mapping"][i]):
+                if start_char >= prompt_char_len:
+                    prompt_token_len = token_idx
+                    break
+            else:
+                prompt_token_len = len(labels)
+            labels[:prompt_token_len] = [-100] * prompt_token_len
+            desc_char_spans = []
+            for match in ent_pattern.finditer(ground_truth):
+                desc_char_spans.append(match.span(2))
+            for match in rel_pattern.finditer(ground_truth):
+                desc_char_spans.append(match.span(2))
+            for start_char, end_char in desc_char_spans:
+                full_start_char = prompt_char_len + start_char
+                full_end_char = prompt_char_len + end_char
+                token_start = results.char_to_token(i, full_start_char)
+                token_end = results.char_to_token(i, full_end_char - 1)
+                if token_start is not None and token_end is not None:
+                    mask_len = (token_end - token_start) + 1
+                    labels[token_start : token_end + 1] = [-100] * mask_len
+            all_labels.append(labels)
+        results["labels"] = all_labels
+        del results["offset_mapping"]
+        return results
     return preprocess_function
 
 def parse_for_eval(text: str) -> (set, dict, bool):
@@ -426,13 +422,13 @@ if __name__ == "__main__":
 
     training_args = TrainingArguments(
         output_dir=NEW_MODEL_DIR,
-        per_device_train_batch_size=2,      
-        gradient_accumulation_steps=8,     
-        per_device_eval_batch_size=2,
+        per_device_train_batch_size=1,      
+        gradient_accumulation_steps=16,     
+        per_device_eval_batch_size=1,
         num_train_epochs=5,                
         learning_rate=2e-4,                
         optim="paged_adamw_8bit",
-        fp16=True,                         
+        bf16=True,                         
         gradient_checkpointing=True,
         logging_steps=10,
         eval_strategy="epoch",
