@@ -405,7 +405,7 @@ if __name__ == "__main__":
     
     train_dataset, eval_dataset = load_data(DATASET_PATH)
     
-    preprocess_function = create_preprocess_function(tokenizer)
+    preprocess_function = create_preprocess_function(tokenizer, SYSTEM_PROMPT)
     
     print("Tokenizing train dataset...")
     tokenized_train = train_dataset.map(
