@@ -163,7 +163,7 @@ def setup_model_and_tokenizer():
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,
         bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_compute_dtype=torch.bfloat16,
     )
 
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
@@ -410,13 +410,13 @@ if __name__ == "__main__":
     print("Tokenizing train dataset...")
     tokenized_train = train_dataset.map(
         preprocess_function, 
-        batched=False, 
+        batched=True, 
         remove_columns=list(train_dataset.features)
     )
     print("Tokenizing evaluation dataset...")
     tokenized_eval = eval_dataset.map(
         preprocess_function, 
-        batched=False, 
+        batched=True, 
         remove_columns=list(eval_dataset.features)
     )
 
