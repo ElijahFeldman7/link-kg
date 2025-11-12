@@ -425,6 +425,7 @@ if __name__ == "__main__":
         per_device_train_batch_size=1,      
         gradient_accumulation_steps=16,     
         per_device_eval_batch_size=1,
+        eval_accumulation_steps=1,
         num_train_epochs=5,                
         learning_rate=2e-4,                
         optim="paged_adamw_8bit",
