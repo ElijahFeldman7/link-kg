@@ -371,12 +371,14 @@ def compute_metrics(predictions: list, ground_truths: list):
 
     return final_metrics
 
-def compute_metrics_wrapper(eval_pred):
-    predictions, labels = eval_pred
-    if isinstance(predictions, tuple):
-        predictions = predictions[0]
+def preprocess_logits_for_metrics(logits, labels):
+    if isinstance(logits, tuple):
+        logits = logits[0]
+    pred_ids = torch.argmax(logits, dim=-1)
+    return pred_ids
 
-    predicted_ids = np.argmax(predictions, axis=-1)
+def compute_metrics_wrapper(eval_pred):
+    predicted_ids, labels = eval_pred
     
     labels[labels == -100] = tokenizer.pad_token_id
     
@@ -448,6 +450,7 @@ if __name__ == "__main__":
         eval_dataset=tokenized_eval,
         tokenizer=tokenizer,
         compute_metrics=compute_metrics_wrapper,
+        preprocess_logits_for_metrics=preprocess_logits_for_metrics,
     )
 
     print("\n--- Starting Llama 3.1 QLoRA Fine-tuning ---")
