@@ -4,6 +4,9 @@ import numpy as np
 import json
 import re
 import os
+from datetime import datetime
+import matplotlib.pyplot as plt
+
 from datasets import Dataset, load_dataset
 from transformers import (
     AutoTokenizer,
@@ -14,15 +17,15 @@ from transformers import (
 )
 from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 DATASET_PATH = "dataset5.csv"
-NEW_MODEL_DIR = "./llama31_8b_instruct_finetuned"
-MAX_LENGTH = 2048 
+RUN_NAME = "llama_finetune"
+MAX_LENGTH = 6000 
 
 tuple_delimiter = "{tuple_delimiter}"
 record_delimiter = "{record_delimiter}"
 completion_delimiter = "{completion_delimiter}"
-
 SYSTEM_PROMPT = """
 -Goal-
 You are an expert in Named Entity and Relationship Extraction (NER-RE) with a specialization in extracting entities and relationships from legal case documents related to human smuggling. You are highly skilled at identifying and extracting only entities of the entity types defined below, as well as extracting explicit relationships between them. These extracted entities and relationships will be used to build a Knowledge Graph, which will help researchers analyze human smuggling networks and identify patterns. Therefore, it is crucial to maintain strict factual accuracy and extract only what is explicitly stated in the input text, without inference or completion. You will receive entity definitions, input text, and structured examples demonstrating the correct extraction process. Study these examples carefully before performing extraction on the real input data. 
