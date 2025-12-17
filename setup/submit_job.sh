@@ -34,4 +34,5 @@ echo "Venv activated: $VIRTUAL_ENV"
 echo ""
 
 echo "Starting Python training"
-python /scratch/efeldma5/uniner_project/uniner-finetune/scripts/uniner_train/finetune_llama.py
+cd /scratch/efeldma5/uniner_project/uniner-finetune/
+python scripts/uniner_train/finetune_llama.py

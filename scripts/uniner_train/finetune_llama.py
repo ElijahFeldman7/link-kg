@@ -19,8 +19,10 @@ from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_tr
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
-DATASET_PATH = "dataset5.csv"
+DATASET_PATH = "datasets/dataset5.csv"
 RUN_NAME = "llama_finetune"
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+NEW_MODEL_DIR = f"runs/{RUN_NAME}_{timestamp}"
 MAX_LENGTH = 6000 
 
 tuple_delimiter = "{tuple_delimiter}"
@@ -160,6 +162,8 @@ Output:
 {record_delimiter}
 {completion_delimiter}
 """
+
+model, tokenizer = setup_model_and_tokenizer()
 
 def setup_model_and_tokenizer():
     bnb_config = BitsAndBytesConfig(
@@ -404,8 +408,6 @@ def compute_metrics_wrapper(eval_pred):
 
 
 if __name__ == "__main__":
-    model, tokenizer = setup_model_and_tokenizer()
-    
     model = setup_peft_model(model)
     
     train_dataset, eval_dataset = load_data(DATASET_PATH)
