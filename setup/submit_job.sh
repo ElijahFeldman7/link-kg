@@ -35,4 +35,4 @@ echo ""
 
 echo "Starting Python training"
 cd /scratch/efeldma5/uniner_project/uniner-finetune/
-python scripts/uniner_train/finetune_llama.py
+python -m scripts.uniner_train.llama_finetune.train
