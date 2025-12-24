@@ -5,10 +5,8 @@ from .metrics import compute_metrics
 
 class CustomTrainer(Trainer):
     def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
-        # Run the standard evaluation
         eval_output = super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
 
-        # Get predictions
         predictions = self.predict(self.eval_dataset)
         predicted_ids = predictions.predictions
         labels = predictions.label_ids
