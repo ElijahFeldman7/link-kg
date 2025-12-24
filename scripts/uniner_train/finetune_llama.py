@@ -163,8 +163,6 @@ Output:
 {completion_delimiter}
 """
 
-model, tokenizer = setup_model_and_tokenizer()
-
 def setup_model_and_tokenizer():
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -186,6 +184,8 @@ def setup_model_and_tokenizer():
     )
     model = prepare_model_for_kbit_training(model)
     return model, tokenizer
+
+model, tokenizer = setup_model_and_tokenizer()
 
 def setup_peft_model(model):
     lora_config = LoraConfig(
