@@ -97,6 +97,9 @@ def compute_metrics_wrapper(eval_pred, tokenizer):
         pred_assistant_part = pred.split(assistant_header)[-1].strip()
         label_assistant_part = label.split(assistant_header)[-1].strip()
         
+        if pred_assistant_part.startswith("assistant("):
+            pred_assistant_part = pred_assistant_part[len("assistant("):-1]
+        
         clean_preds.append(pred_assistant_part)
         clean_labels.append(label_assistant_part)
     

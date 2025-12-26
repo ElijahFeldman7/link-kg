@@ -30,20 +30,4 @@ You are an expert in Named Entity and Relationship Extraction (NER-RE). Your tas
 4. Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
 5. Do NOT extract entities related to government or legal proceedings.
 6. When finished, output {completion_delimiter}.
-
--Example-
-Input_text:
-On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.
-Output:
-("entity"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}PERSON{tuple_delimiter}A known smuggler responsible for transporting migrants in an 18-wheeler)
-{record_delimiter}
-("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
-{record_delimiter}
-("entity"{tuple_delimiter}18-WHEELER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A large truck used for smuggling operations)
-{record_delimiter}
-("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}SMUGGLER{tuple_delimiter}Sai Deshpande is identified as a smuggler involved in this case{tuple_delimiter}8)
-{record_delimiter}
-("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}18-WHEELER{tuple_delimiter}Sai Deshpande drove the 18-wheeler carrying undocumented migrants{tuple_delimiter}9)
-{record_delimiter}
-{completion_delimiter}
 """

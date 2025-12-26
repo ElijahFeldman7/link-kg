@@ -22,24 +22,9 @@ def load_data(file_path: str) -> (Dataset, Dataset):
     return train_dataset, eval_dataset
 
 def create_preprocess_function(tokenizer, system_prompt):
-    INSTRUCTION_TEMPLATE = """
-
-######################
-
--Real Data-
-
-Below is the Real Input Data from which you have to extract Entities and Relationships as described above.
-
-######################
-
-Input_text: 
-
+    INSTRUCTION_TEMPLATE = """Input_text: 
 {input_text}
-
-######################
-
 Output:
-
 """
 
     def preprocess_function(examples):
