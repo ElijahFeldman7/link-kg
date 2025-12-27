@@ -4,6 +4,11 @@ from transformers import Trainer
 from .metrics import compute_metrics
 
 class CustomTrainer(Trainer):
+    def __init__(self, *args, raw_eval_dataset=None, system_prompt=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.raw_eval_dataset = raw_eval_dataset
+        self.system_prompt = system_prompt
+
     def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
         eval_output = super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
 
@@ -15,6 +20,8 @@ class CustomTrainer(Trainer):
 
         predicted_strings = self.tokenizer.batch_decode(predicted_ids, skip_special_tokens=True)
         label_strings = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
+
+        prompts = [item['Input_Text'] for item in self.raw_eval_dataset]
 
         assistant_header = "assistant\n\n"
 
@@ -29,7 +36,10 @@ class CustomTrainer(Trainer):
         summary_report_parts = []
         jsonl_report = []
 
-        for i, (pred, label) in enumerate(zip(predicted_strings, label_strings)):
+        if self.system_prompt:
+            summary_report_parts.append(f"System Prompt:\n{self.system_prompt}\n\n")
+
+        for i, (pred, label, prompt_text) in enumerate(zip(predicted_strings, label_strings, prompts)):
             pred_assistant_part = pred.split(assistant_header)[-1].strip()
             label_assistant_part = label.split(assistant_header)[-1].strip()
 
@@ -41,6 +51,7 @@ class CustomTrainer(Trainer):
             num_samples += 1
 
             report_part = f"--- Sample {i} ---\n"
+            report_part += f"Prompt:\n{prompt_text}\n\n"
             report_part += f"Prediction:\n{pred_assistant_part}\n"
             report_part += f"Ground Truth:\n{label_assistant_part}\n"
             report_part += f"Metrics: {json.dumps(metrics, indent=2)}\n\n"
@@ -48,6 +59,7 @@ class CustomTrainer(Trainer):
 
             jsonl_report.append({
                 "sample_id": i,
+                "prompt": prompt_text,
                 "prediction": pred_assistant_part,
                 "ground_truth": label_assistant_part,
                 "metrics": metrics

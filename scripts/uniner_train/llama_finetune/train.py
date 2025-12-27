@@ -56,6 +56,8 @@ def main():
         args=training_args,
         train_dataset=tokenized_train,
         eval_dataset=tokenized_eval,
+        raw_eval_dataset=eval_dataset,
+        system_prompt=SYSTEM_PROMPT,
         tokenizer=tokenizer,
         compute_metrics=lambda eval_pred: compute_metrics_wrapper(eval_pred, tokenizer),
         preprocess_logits_for_metrics=preprocess_logits_for_metrics,
