@@ -72,7 +72,6 @@ class CustomTrainer(Trainer):
         summary_report += "".join(summary_report_parts)
 
 
-        # Save reports
         summary_path = os.path.join(self.args.output_dir, "summary_report.txt")
         with open(summary_path, "w") as f:
             f.write(summary_report)

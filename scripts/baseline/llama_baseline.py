@@ -1,23 +1,19 @@
 import pandas as pd
 import torch
-import numpy as np
-import json
-import re
-import os
 from datasets import Dataset
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
     BitsAndBytesConfig,
+    TrainingArguments,
 )
-from tqdm import tqdm
 
-BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
-DATASET_PATH = "dataset5.csv"
-OUTPUT_DIR = "./llama31_8b_instruct_evaluation_with_scores"
+from scripts.baseline.config import DATASET_PATH, BASE_MODEL_NAME, NEW_MODEL_DIR
+from scripts.baseline.trainer import CustomBaselineTrainer
+from scripts.uniner_train.llama_finetune.metrics import compute_metrics, parse_for_eval
 
 tuple_delimiter = "{tuple_delimiter}"
-record_delimiter = "{record_delimiter}
+record_delimiter = "{record_delimiter}"
 completion_delimiter = "{completion_delimiter}"
 
 SYSTEM_PROMPT = """
@@ -166,7 +162,7 @@ Input_text:
 Output:
 """
 
-def create_dataset_from_output_col(file_path: str) -> Dataset:
+def create_dataset_from_output_col(file_path: str, tokenizer) -> Dataset:
     try:
         df = pd.read_csv(file_path).fillna('')
     except FileNotFoundError:
@@ -186,9 +182,21 @@ def create_dataset_from_output_col(file_path: str) -> Dataset:
             
         clean_target = target_output.strip()
 
+        user_content = INSTRUCTION_TEMPLATE.format(input_text=input_text)
+        messages = [
+            {"role": "system", "content": SYSTEM_PROMPT.strip()},
+            {"role": "user", "content": user_content.strip()}
+        ]
+        
+        prompt = tokenizer.apply_chat_template(
+            messages, 
+            tokenize=False, 
+            add_generation_prompt=True
+        )
+
         processed_data.append({
-            "input_text": input_text,
-            "ground_truth": clean_target,
+            "text": prompt,
+            "output": clean_target,
         })
 
     if not processed_data:
@@ -223,159 +231,26 @@ def setup_model_and_tokenizer():
     model.eval()
     return model, tokenizer
 
-def parse_for_eval(text: str) -> (set, dict, bool):
-    entities = set()
-    relationships = {} 
-
-    if "<|eot_id|>" in text:
-        text = text.split("<|eot_id|>")[0]
-        
-    text = text.strip()
-
-    entity_pattern = re.compile(
-        r'\("entity"' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'.*?\)', re.DOTALL
-    )
-    rel_pattern_with_score = re.compile(
-        r'\("relationship"' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r'(\d+)\s*\)', re.DOTALL
-    )
-
-    try:
-        for name, type in entity_pattern.findall(text):
-            entities.add((name.strip().upper(), type.strip().upper()))
-        
-        for ent1, ent2, score in rel_pattern_with_score.findall(text):
-            sorted_ents = tuple(sorted([ent1.strip().upper(), ent2.strip().upper()]))
-            relationships[sorted_ents] = int(score)
-
-        is_parsable = len(text.strip()) == 0 or (len(entities) > 0 or len(relationships) > 0)
-        return entities, relationships, is_parsable
-    except Exception:
-        return set(), {}, False
-
-def compute_metrics(predictions: list, ground_truths: list):
-    parsability_scores, score_errors = [], []
-    entity_tp, entity_fp, entity_fn = 0, 0, 0
-    rel_tp, rel_fp, rel_fn = 0, 0, 0
-
-    for pred_str, label_str in zip(predictions, ground_truths):
-        pred_entities, pred_rels, is_parsable = parse_for_eval(pred_str)
-        label_entities, label_rels, _ = parse_for_eval(label_str)
-
-        parsability_scores.append(1 if is_parsable else 0)
-
-        entity_tp += len(pred_entities & label_entities)
-        entity_fp += len(pred_entities - label_entities)
-        entity_fn += len(label_entities - pred_entities)
-
-        pred_rel_keys = set(pred_rels.keys())
-        label_rel_keys = set(label_rels.keys())
-        rel_tp += len(pred_rel_keys & label_rel_keys)
-        rel_fp += len(pred_rel_keys - label_rel_keys)
-        
-        rel_fn += len(label_rel_keys - pred_rel_keys)
-        
-        true_positive_rels = pred_rel_keys & label_rel_keys
-        for rel_pair in true_positive_rels:
-            if rel_pair in pred_rels and rel_pair in label_rels:
-                error = abs(pred_rels[rel_pair] - label_rels[rel_pair])
-                score_errors.append(error)
-
-    final_metrics = {}
-    final_metrics["parsability_score"] = np.mean(parsability_scores) if parsability_scores else 0.0
-
-    entity_precision = entity_tp / (entity_tp + entity_fp) if (entity_tp + entity_fp) > 0 else 0.0
-    entity_recall = entity_tp / (entity_tp + entity_fn) if (entity_tp + entity_fn) > 0 else 0.0
-    final_metrics['entity_f1'] = 2 * (entity_precision * entity_recall) / (entity_precision + entity_recall) if (entity_precision + entity_recall) > 0 else 0.0
-    
-    rel_precision = rel_tp / (rel_tp + rel_fp) if (rel_tp + rel_fp) > 0 else 0.0
-    rel_recall = rel_tp / (rel_tp + rel_fn) if (rel_tp + rel_fn) > 0 else 0.0
-    final_metrics['relationship_f1'] = 2 * (rel_precision * rel_recall) / (rel_precision + rel_recall) if (rel_precision + rel_recall) > 0 else 0.0
-    
-    final_metrics['relationship_score_mae'] = np.mean(score_errors) if score_errors else 0.0
-
-    return final_metrics
-
 def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    
     model, tokenizer = setup_model_and_tokenizer()
-    eval_dataset = create_dataset_from_output_col(DATASET_PATH)
+    eval_dataset = create_dataset_from_output_col(DATASET_PATH, tokenizer)
 
-    predictions = []
-    ground_truths = []
-    
-    eos_token_str = tokenizer.eos_token
-    
-    terminators = [
-        tokenizer.eos_token_id,
-        tokenizer.convert_tokens_to_ids("<|end_of_text|>")
-    ]
-    
+    training_args = TrainingArguments(
+        output_dir=NEW_MODEL_DIR,
+        per_device_eval_batch_size=1,
+        logging_dir=f"{NEW_MODEL_DIR}/logs",
+    )
+
+    trainer = CustomBaselineTrainer(
+        model=model,
+        tokenizer=tokenizer,
+        args=training_args,
+        eval_dataset=eval_dataset,
+    )
+
     print("\nRunning inference on the dataset...")
-    with torch.no_grad():
-        for example in tqdm(eval_dataset):
-            
-            user_content = INSTRUCTION_TEMPLATE.format(input_text=example["input_text"])
-            messages = [
-                {"role": "system", "content": SYSTEM_PROMPT.strip()},
-                {"role": "user", "content": user_content.strip()}
-            ]
-            
-            prompt = tokenizer.apply_chat_template(
-                messages, 
-                tokenize=False, 
-                add_generation_prompt=True
-            )
-            
-            inputs = tokenizer(
-                prompt, 
-                return_tensors="pt", 
-                add_special_tokens=False 
-            ).to(model.device)
-
-            output = model.generate(
-                **inputs,
-                max_new_tokens=2048,
-                do_sample=False,
-                eos_token_id=terminators, 
-                pad_token_id=tokenizer.eos_token_id
-            )
-            
-            prompt_token_length = inputs.input_ids.shape[1]
-            decoded_output = tokenizer.decode(
-                output[0][prompt_token_length:], 
-                skip_special_tokens=False
-            )
-            
-            for token_str in [eos_token_str, "<|end_of_text|>"]:
-                 if token_str:
-                       decoded_output = decoded_output.replace(token_str, "").strip()
-            
-            if tokenizer.bos_token:
-                 decoded_output = decoded_output.replace(tokenizer.bos_token, "").strip()
-
-            predictions.append(decoded_output.strip())
-            ground_truths.append(example["ground_truth"])
-
-    output_prediction_file = os.path.join(OUTPUT_DIR, "llama3_predictions.txt")
-    with open(output_prediction_file, "w", encoding="utf-8") as writer:
-        for i, (pred, label, inp) in enumerate(zip(predictions, ground_truths, eval_dataset['input_text'])):
-            writer.write(f"--- Example {i+1} ---\n")
-            writer.write(f"INPUT TEXT:\n{inp.strip()}\n\n")
-            writer.write(f"GROUND TRUTH:\n{label.strip()}\n\n")
-            writer.write(f"PREDICTED:\n{pred.strip()}\n")
-            writer.write("="*20 + "\n\n")
-    print(f"\nRaw predictions saved to {output_prediction_file}")
-
-    final_metrics = compute_metrics(predictions, ground_truths)
-    
-    print("\n--- LLAMA 3.1 8B INSTRUCT EVALUATION RESULTS ---")
-    print(json.dumps(final_metrics, indent=2))
-
-    output_metrics_file = os.path.join(OUTPUT_DIR, "llama3_metrics.json")
-    with open(output_metrics_file, 'w') as f:
-        json.dump(final_metrics, f, indent=2)
-    print(f"Metrics saved to {output_metrics_file}")
+    trainer.evaluate()
+    print(f"Metrics and summary report saved in {NEW_MODEL_DIR}")
 
 if __name__ == "__main__":
     main()

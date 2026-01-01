@@ -43,6 +43,11 @@ def compute_metrics(predictions: list, ground_truths: list):
 
         parsability_scores.append(1 if is_parsable else 0)
 
+        if not is_parsable:
+            entity_fn += len(label_entities)
+            rel_fn += len(label_rels)
+            continue
+
         entity_tp += len(pred_entities & label_entities)
         entity_fp += len(pred_entities - label_entities)
         entity_fn += len(label_entities - pred_entities)
