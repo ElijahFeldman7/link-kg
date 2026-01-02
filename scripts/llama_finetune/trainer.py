@@ -1,13 +1,57 @@
 import os
 import json
+import sys
+import time
+import getpass
+import socket
 from transformers import Trainer
 from .metrics import compute_metrics
+from . import config as llama_finetune_config
+
 
 class CustomTrainer(Trainer):
     def __init__(self, *args, raw_eval_dataset=None, system_prompt=None, **kwargs):
         super().__init__(*args, **kwargs)
         self.raw_eval_dataset = raw_eval_dataset
         self.system_prompt = system_prompt
+        self.save_run_description()
+
+    def save_run_description(self):
+        output_dir = self.args.output_dir
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        desc = []
+        desc.append("Run Type: llama_finetune")
+        desc.append(f"Start Time: {time.ctime()}")
+
+        try:
+            desc.append(f"Model ID: {self.model.name_or_path}")
+        except AttributeError:
+            desc.append("Model ID: Not available")
+            
+        desc.append(f"User: {getpass.getuser()}")
+        desc.append(f"Hostname: {socket.gethostname()}")
+        desc.append(f"Run Command: {' '.join(sys.argv)}")
+
+        if self.train_dataset:
+            desc.append(f"Training Dataset Size: {len(self.train_dataset)}")
+        if self.eval_dataset:
+            desc.append(f"Evaluation Dataset Size: {len(self.eval_dataset)}")
+            
+        desc.append("\n--- Training Arguments ---\n")
+        desc.append(self.args.to_json_string())
+
+        desc.append("\n--- Custom Config (from scripts.llama_finetune.config) ---\n")
+        for key, value in vars(llama_finetune_config).items():
+            if not key.startswith("__") and not isinstance(
+                value, type(sys)
+            ):
+                desc.append(f"{key}: {value}")
+
+        desc_path = os.path.join(output_dir, "desc.txt")
+        with open(desc_path, "w") as f:
+            f.write("\n".join(desc))
 
     def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
         eval_output = super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)

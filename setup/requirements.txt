@@ -9,3 +9,4 @@ tensorboard
 matplotlib
 accelerate
 scikit-learn
+tqdm
