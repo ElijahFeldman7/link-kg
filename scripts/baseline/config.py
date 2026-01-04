@@ -3,7 +3,7 @@ from datetime import datetime
 
 #- Paths
 #--Train
-DATASET_PATH = "/Users/eli/research/uniner-finetune/datasets/dataset_8_9.csv"
+DATASET_PATH = "/Users/eli/research/uniner-finetune/datasets/dataset5.csv"
 BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 
 #--Output
