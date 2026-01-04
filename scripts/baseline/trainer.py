@@ -4,17 +4,24 @@ import sys
 import time
 import getpass
 import socket
-from transformers import Trainer
 from tqdm import tqdm
 import torch
 from scripts.llama_finetune.metrics import compute_metrics
 from . import config as baseline_config
 
 
-class CustomBaselineTrainer(Trainer):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class CustomBaselineTrainer:
+    def __init__(self, model, tokenizer, args, eval_dataset=None, **kwargs):
+        self.model = model
+        self.tokenizer = tokenizer
+        self.args = args
+        self.eval_dataset = eval_dataset
         self.save_run_description()
+
+    def log(self, metrics):
+        print("Evaluation Metrics:")
+        for key, value in metrics.items():
+            print(f"  {key}: {value}")
 
     def save_run_description(self):
         output_dir = self.args.output_dir
