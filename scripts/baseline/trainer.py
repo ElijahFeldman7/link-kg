@@ -70,13 +70,13 @@ class CustomBaselineTrainer:
         if os.path.exists(metrics_jsonl_path):
             os.remove(metrics_jsonl_path)
 
-        all_metrics = {
-            "eval_loss": 0.0,
-            "eval_f1": 0.0,
-            "eval_mae": 0.0,
-            "eval_correct": 0,
-            "eval_total": 0,
+        total_metrics = {
+            "parsability_score": 0.0,
+            "entity_f1": 0.0,
+            "relationship_f1": 0.0,
+            "relationship_score_mae": 0.0
         }
+        num_samples = 0
 
         with open(summary_report_path, "w") as summary_writer, open(
             metrics_jsonl_path, "w"
@@ -94,31 +94,29 @@ class CustomBaselineTrainer:
 
                 prediction_text = prediction[len(prompt) :].strip()
 
-                metrics = compute_metrics((prediction_text, ground_truth))
+                metrics = compute_metrics([prediction_text], [ground_truth])
 
                 summary_writer.write(f"Prompt: {prompt}\n")
                 summary_writer.write(f"Prediction: {prediction_text}\n")
                 summary_writer.write(f"Ground Truth: {ground_truth}\n")
-                summary_writer.write(f"Metrics: {metrics}\n")
+                summary_writer.write(f"Metrics: {json.dumps(metrics, indent=2)}\n")
                 summary_writer.write("-" * 20 + "\n")
 
                 metric_data = {
                     "prompt": prompt,
                     "prediction": prediction_text,
                     "ground_truth": ground_truth,
-                    **metrics,
+                    "metrics": metrics,
                 }
                 jsonl_writer.write(json.dumps(metric_data) + "\n")
 
-                all_metrics["eval_f1"] += metrics["f1"]
-                all_metrics["eval_mae"] += metrics["mae"]
-                all_metrics["eval_correct"] += metrics["correct"]
-                all_metrics["eval_total"] += 1
+                for key in total_metrics:
+                    if key in metrics:
+                        total_metrics[key] += metrics[key]
+                num_samples += 1
 
-        num_samples = len(eval_dataset)
-        all_metrics["eval_f1"] /= num_samples
-        all_metrics["eval_mae"] /= num_samples
+        avg_metrics = {f"eval_{key}": value / num_samples for key, value in total_metrics.items() if num_samples > 0}
+        
+        self.log(avg_metrics)
 
-        self.log(all_metrics)
-
-        return all_metrics
+        return avg_metrics
