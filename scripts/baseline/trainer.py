@@ -7,7 +7,7 @@ import socket
 from transformers import Trainer
 from tqdm import tqdm
 import torch
-from scripts.uniner_train.llama_finetune.metrics import compute_metrics
+from scripts.llama_finetune.metrics import compute_metrics
 from . import config as baseline_config
 
 

@@ -10,7 +10,7 @@ from transformers import (
 
 from scripts.baseline.config import DATASET_PATH, BASE_MODEL_NAME, NEW_MODEL_DIR
 from scripts.baseline.trainer import CustomBaselineTrainer
-from scripts.uniner_train.llama_finetune.metrics import compute_metrics, parse_for_eval
+from scripts.llama_finetune.metrics import compute_metrics, parse_for_eval
 
 tuple_delimiter = "{tuple_delimiter}"
 record_delimiter = "{record_delimiter}"
