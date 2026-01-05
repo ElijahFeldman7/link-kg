@@ -1,0 +1,10300 @@
+--- Average Metrics ---
+{
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+System Prompt:
+
+-Goal-
+You are an expert in Named Entity and Relationship Extraction (NER-RE). Your task is to identify and extract entities and their relationships from a given legal text.
+
+-Entity Types-
+1. PERSON: Short name or full name of a person.
+2. LOCATION: Name of any geographical location.
+3. ORGANIZATION: Names of companies, organized criminal groups, etc.
+4. MEANS_OF_TRANSPORTATION: The mean by which someone moves from one place to another.
+5. MEANS_OF_COMMUNICATION: The mean by which communication is performed.
+6. ROUTES: Names of roads, freeways, highways, or other types of roads.
+7. SMUGGLED_ITEMS: Any illegally transported goods.
+
+-Instructions-
+1. Extract entities of the defined types.
+2. Extract explicit relationships between entities.
+3. Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+4. Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+5. Do NOT extract entities related to government or legal proceedings.
+6. When finished, output {completion_delimiter}.
+
+
+--- Sample 0 ---
+Prompt:
+On Sunday, March 29, 1998, Puerto Rico Police Department (PRPD) Officers Jose M. Velez and Miguel A. Rivera began their preventive patrol at the Maritime Unit in Guayama, Puerto Rico.
+
+Prediction:
+("entity"!
+
+
+
+JOIG 29, 1998 DATE!
+
+
+
+Date of the)
+.accounts
+("entity"!
+
+
+
+JOU OFFORGANIZATION!
+
+
+
+Puerto Rico Police Department)
+ Officers maritime entity)
+ in the case)
+!
+
+
+
+
+("entity"!
+
+
+
+JOSE M. VELEZ PERSON!
+
+
+
+Off officer of thePD)
+!
+
+
+
+
+("entity"!
+
+
+
+MIGUEL A. RIVERA -*-
+PERSON!
+
+
+
+An officer of PRPD)
+!
+
+
+
+
+("entity"!
+
+
+
+GUAYAMA, PUERTO RICO LOCATION!
+
+
+
+Location of the patrol Unit is)
+ patrolled)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MARCH 29, 1998DATE Date of patrol)
+
+("entity"PRPDORGANIZATIONPuerto Rico Police Department - a legal authority involved in the case)
+
+("entity"JOSE M. VELEZPERSONAn officer of PRPD)
+
+("entity"MIGUEL A. RIVERAPERSONAn officer of PRPD)
+
+("entity"GUAYAMA, PUERTO RICOLOCATIONLocation where the Maritime unit was being patrolled)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 1 ---
+Prompt:
+Lopez-Perez paid Salazar to monitor the undocumented aliens at a stash house
+
+Prediction:
+("entity"!
+
+
+
+LOPEZ-PEREZ!
+
+
+
+PERSON!
+
+
+
+An individual who paid Salazar to monitor the undocumented aliens at a stash house.).accounts ("entity"!
+
+
+
+SALAZAR!
+
+
+
+PERSON!
+
+
+
+An individual who was paid by monitor the undocumented aliens at!
+
+
+
+ ("entity"!
+
+
+
+UNDOCUMENTED ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+People who were being monitored at a stash house.)!
+
+
+
+ ("entity"!
+
+
+
+STASH HOUSE!
+
+
+
+LOCATION!
+
+
+
+The location where the undocumented aliens were being monitored.)!
+
+
+
+ ("relationship"!
+
+
+
+LOPEZ-PEREZ_ABCSALAZAR!
+
+
+
+Lopez-Perez paid Salazar.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+SALAZAR -*-
+UNDOCUMENTED ALIENS -*-
+Salazar monitored the undocumented aliens.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+SALAZAR -*-
+STASH HOUSE!
+
+
+
+Salazar monitored the undocumented aliens at a stash house.!
+
+
+
+10)!
+
+
+
+ relationship"!
+
+
+
+UNDOCUMENTED ALIENS_ABCSTASH HOUSE -*-
+The undocumented aliens were at a stash house.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"LOPEZ-PEREZPERSONAn individual who paid Salazar to monitor the undocumented aliens at a stash house.)  ("entity"SALAZARPERSONAn individual who was paid to monitor the undocumented aliens.)  ("entity"UNDOCUMENTED ALIENSSMUGGLED_ITEMSPeople who were being monitored at a stash house.)  ("entity"STASH HOUSELOCATIONA location where the undocumented aliens were being monitored.)  ("relationship"LOPEZ-PEREZSALAZARLopez-Perez paid Salazar.10)  ("relationship"SALAZARUNDOCUMENTED ALIENSSalazar monitored the undocumented aliens.10)  ("relationship"SALAZARSTASH HOUSESalazar monitored the undocumented aliens at a stash house.10)  ("relationship"UNDOCUMENTED ALIENSSTASH HOUSEThe undocumented aliens were at a stash house.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 2 ---
+Prompt:
+Agents identified one of the individuals in the group as being responsible for the smuggling attempt.
+
+Prediction:
+("entity"!
+
+
+
+INDENTS.MixedRealityPERSON!
+
+
+
+Ident investigating identified one individualler)
+.accounts
+("entity"!
+
+
+
+INDUGGLER.accountsPERSON!
+
+
+
+An responsible for the attempt)
+!
+
+
+
+
+("relationship"!
+
+
+
+AGENTS!
+
+
+
+SMUGGLER!
+
+
+
+Agents of identified the group was identified as a smuggler by9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"AGENTSPERSONOfficials who identified the smuggler)
+
+("entity"SMUGGLERPERSONIndividual responsible for smuggling attempt)
+
+("relationship"AGENTSSMUGGLEROne individual in the group was identified as the smuggler9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 3 ---
+Prompt:
+Several individuals admitted that they had just crossed the Rio Grande River and had entered the United States illegally
+
+Prediction:
+("entity"!
+
+
+
+INDIVIDUALS!
+
+
+
+PERSON!
+
+
+
+Individual who admitted to crossing the Rio Grande River and entering the United States illegally.).accounts
+("entity"!
+
+
+
+RIO GRANDE RIVER LOCATION!
+
+
+
+A river that the individuals had to crossing.)
+!
+
+
+
+
+("entity"!
+
+
+
+UNITED STATES.MixedRealityLOCATION!
+
+
+
+The country that the individuals admitted to entering illegally.)
+!
+
+
+
+
+("relationship"!
+
+
+
+INDIVIDUALS -*-
+RIO GRANDE RIVER -*-
+Several individuals admitted that they had just crossed the Rio Grande River.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+INDIVIDUALS -*-
+UNITED STATES -*-
+Several individuals admitted that they had entered the United States illegally.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"INDIVIDUALSPERSONPeople who admitted to crossing the Rio Grande River and entering the United States illegally.)
+
+("entity"RIO GRANDE RIVERLOCATIONThe river that several individuals admitted to crossing.)
+
+("entity"UNITED STATESLOCATIONThe country that several individuals admitted to entering illegally.)
+
+("relationship"INDIVIDUALSRIO GRANDE RIVERSeveral individuals admitted that they had just crossed the Rio Grande River.10)
+
+("relationship"INDIVIDUALSUNITED STATESSeveral individuals admitted that they had entered the United States illegally.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 4 ---
+Prompt:
+On June 4, 2001, Garcia approached a group of nine undocumented aliens in San Luis, Potosi, Mexico.
+
+Prediction:
+("entity"!
+
+
+
+GARCIA!
+
+
+
+PERSON!
+
+
+
+Anersonential smuggler)
+!
+
+
+
+
+("entity"!
+
+
+
+SANENS SM!
+
+
+
+ A immigrantsatesns)
+ documents documentation)
+!
+
+
+
+
+("entity"!
+
+
+
+SAN LUIS, POTOSI, MEXICO LOCATION!
+
+
+
+ Location where Garcia approached the aliens)
+!
+
+
+
+
+("relationship"!
+
+
+
+GARCIA_ABCALIUNE 4, 2001 -*-
+On June date, Garcia approached a aliens aliens 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+GARCIA_ABCSANENS!
+
+
+
+Garcia approached approached a undocumented aliens in9)
+!
+
+
+
+
+("relationship"!
+
+
+
+GARCIA_ABCSAN LUIS, POTOSI, MEXICO!
+
+
+
+Garcia approached approached a aliens in San Luis, Potosi, Mexico 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"GARCIAPERSON Apotential smuggler)
+
+("entity"ALIENSPERSON Illegal immigratns without proper documentation)
+
+("entity"SAN LUIS, POTOSI, MEXICOLOCATION Location where Garcia approached the aliens)
+
+("relationship"GARCIAJUNE 4, 2001On this date, Garcia approached the undocumented aliens9)
+
+("relationship"GARCIAALIENSGarcia had approached nine undocumented aliens9)
+
+("relationship"GARCIASAN LUIS, POTOSI, MEXICOGarcia had approached undocumented aliens in San Luis, Potosi, Mexico9)
+
+"
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 5 ---
+Prompt:
+A van believed to belong to the organization spent Thursday night parked in a coastal neighborhood in Rancho Palos Verdes, Calif., but agents suspended surveillance when the vehicle left at sunrise without picking up any passengers.
+
+Prediction:
+("entity"!
+
+
+
+VAN -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle believed was believed surve by agents)
+!
+
+
+
+
+("entity"!
+
+
+
+RANCHO PALOS VERDES,,LOCATION!
+
+
+
+A coastal neighborhood in California where!
+
+
+
+
+("relationship"!
+
+
+
+VAN_ABCRANCHO PALOS VERDES A van was to belong to the organization spent Thursday night parked in a coastal neighborhood in Rancho Palos Verdes, Calif,9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"VANMEANS_OF_TRANSPORTATIONA vehicle that was being observed by agents)
+
+("entity"RANCHO PALOS VERDES LOCATIONA coastal neighborhood in California)
+
+("relationship"VANRANCHO PALOS VERDESA van believed to belong to the organization spent Thursday night parked in a coastal neighborhood in Rancho Palos Verdes, California}9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 6 ---
+Prompt:
+Durant was the sole driver and occupant of the truck in the trailer of which the 20 illegal aliens were discovered.
+
+Prediction:
+("entity"!
+
+
+
+DURANT!
+
+
+
+PERSON!
+
+
+
+The sole driver and occupant of the truck)
+ the trailer of.accounts
+("entity"!
+
+
+
+TRENS SMUGGLED_ITEMS!
+
+
+
+20 immigrants discovered proper legal documentation)
+!
+
+
+
+
+("entity"!
+
+
+
+TRUCKER -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+ A vehicle in to transport illegal20 illegal aliens)
+!
+
+
+
+
+("entity"!
+
+
+
+DURANT_ABCALIAILER!
+
+
+
+Durant was the sole driver and occupant of the truck in the trailer  which the 20 illegal aliens were discovered}9)
+!
+
+
+
+
+("relationship"!
+
+
+
+ALIURANT_ABCALIENS!
+
+
+
+Durant was the sole driver and occupant of the truck in the trailer of which the 20 illegal aliens were discovered 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DURANTPERSON the sole driver and occupant of the truck in the trailer)
+
+("entity"ALIENSSMUGGLED_ITEMS Illegal immigrant without any proper documentation)
+
+("entity"TRAILERMEANS_OF_TRANSPORTATION A vehicle used to transport 20 illegal aliens)
+
+("relationship"DURANTTRAILERDurant was the sole driver and occupant of the truck in the trailer of which the 20 illegal aliens were discovered9)
+
+("relationship"DURANTALIENSDurant was the sole driver and occupant of the truck in the trailer of which the 20 illegal aliens were discovered9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 7 ---
+Prompt:
+She was accompanied by two visible passengers: her one-and-one-half-year-old child and a friend
+
+Prediction:
+("entity"!
+
+
+
+CHILDASSENGER�PERSON!
+
+
+
+Two visible accompanying were the,.accounts ("entity"!
+
+
+
+CHILD PERSON.MixedRealityOne one-and-one-half-year-old passenger.) was a of the visible.)!
+
+
+
+ ("entity"!
+
+
+
+FRIEND.MixedRealityPERSON!
+
+
+
+An individual who was one of the passengers.)!
+
+
+
+ ("relationship"!
+
+
+
+CHILDASSENGERS.MixedRealityCHILD!
+
+
+
+The of the passengers was her one.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+PASSENGERS_ABCFRIEND!
+
+
+
+One of the passengers was a friend.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"PASSENGERSPERSONTwo individuals who accompanied her.)  ("entity"CHILDPERSONA one-and-one-half-year-old individual who was one of the passengers.)  ("entity"FRIENDPERSONAn individual who was one of the passengers.)  ("relationship"PASSENGERSCHILDOne of the passengers was a child.10)  ("relationship"PASSENGERSFRIENDOne of the passengers was a friend.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 8 ---
+Prompt:
+When the defendants arrived at the apartment, they pointed guns at the illegal immigrants they chose to take
+
+Prediction:
+("entity"!
+
+
+
+DEFENDANTS!
+
+
+
+PERSON!
+
+
+
+Individuals who pointed guns at the illegal immigrants they chose to take.).accounts
+("entity"!
+
+
+
+APARTMENT.MixedRealityLOCATION!
+
+
+
+The location where the defendants pointed guns at the immigrants.)
+!
+
+
+
+
+("entity"!
+
+
+
+GUNS.accountsSMUGGLED_ITEMS!
+
+
+
+Weapons pointed at the illegal immigrants.)
+!
+
+
+
+
+("entity"!
+
+
+
+ILLEGAL IMMIGRANTS.MixedRealitySMUGGLED_ITEMS.MixedRealityIndividual at were pointed at by guns by the defendants.)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANTS_ABCAPARTMENT!
+
+
+
+The defendants arrived at the apartment when!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANTS!
+
+
+
+GUNS!
+
+
+
+The defendants pointed guns.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANTS!
+
+
+
+ILLEGAL IMMIGRANTS!
+
+
+
+The defendants pointed guns at the illegal immigrants.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+GUNS!
+
+
+
+ILLEGAL IMMIGRANTS -*-
+Guns were pointed at the illegal immigrants.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DEFENDANTSPERSONIndividuals who pointed guns at the illegal immigrants they chose to take.)
+
+("entity"APARTMENTLOCATIONThe location where the defendants pointed guns at illegal immigrants.)
+
+("entity"GUNSSMUGGLED_ITEMSWeapons pointed at the illegal immigrants.)
+
+("entity"ILLEGAL IMMIGRANTSSMUGGLED_ITEMSPeople who were pointed at with guns by the defendants.)
+
+("relationship"DEFENDANTSAPARTMENTThe defendants were at the apartment.10)
+
+("relationship"DEFENDANTSGUNSThe defendants pointed guns.10)
+
+("relationship"DEFENDANTSILLEGAL IMMIGRANTSThe defendants pointed guns at the illegal immigrants.10)
+
+("relationship"GUNSILLEGAL IMMIGRANTSGuns were pointed at the illegal immigrants.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 9 ---
+Prompt:
+HSI St. Thomas arrested the captain of the vessel for alien smuggling and the four aliens for illegal entry into the United States.
+
+Prediction:
+("entity"!
+
+
+
+HSI ST. THOMAS PERSON!
+
+
+
+Agency involved the)
+!
+
+
+
+
+("entity"!
+
+
+
+CAPTAIN OFPERSON!
+
+
+
+Captainrested captain alien)
+!
+
+
+
+
+("entity"!
+
+
+
+HSI ST. THOMAS -*-
+CAPTAIN!
+
+
+
+HSrested captain smuggling smuggling and illegal entry  9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"HSI ST. THOMASPERSONAgency making arrests)
+
+("entity"CAPTAINPERSONArrested for smuggling)
+
+("relationship"HSI ST. THOMASCAPTAINArrested for alien smuggling and illegal entry case9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 10 ---
+Prompt:
+Forty-five seconds later, in the next vehicle, Ashley Flores approached the checkpoint. Monterojas obtained consent to search Flores' trunk. Inside, Monterojas discovered two undocumented aliens.
+
+Prediction:
+("entity"!
+
+
+
+ASHLEY FLORES!
+
+
+
+PERSON!
+
+
+
+An person who was to the checkpoint and!
+
+
+
+
+("entity"!
+
+
+
+MONTEROJAS -*-
+PERSON!
+
+
+
+ A agent who duty)
+!
+
+
+
+
+("entity"!
+
+
+
+ALIENS SMUGGLED_ITEMS!
+
+
+
+Two immigrants in proper documentation)
+!
+
+
+
+
+("relationship"!
+
+
+
+MONTEROJAS_ABCALIENS!
+
+
+
+Monterojas discovered undocumented aliens in Ashley' trunk}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"ASHLEY FLORESPERSON A person who drove to the checkpoint)
+
+("entity"MONTEROJASPERSON An agent on patrol)
+
+("entity"ALIENSSMUGGLED_ITEMS Illegal immigrants without any documentation)
+
+("relationship"MONTEROJASALIENSMonterojas two undocumented aliens inside Flores's trunk9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 11 ---
+Prompt:
+On July 14, 2023, smugglers in La Paz, Mexico, boarded undocumented migrants onto a 38-foot fishing boat bound for international waters near Isla Santa Catalina.
+
+Prediction:
+("entity"!
+
+
+
+SMUGGLERS PERSON!
+
+
+
+Individuals who the movement operations!
+
+
+
+
+("entity"!
+
+
+
+38-FOOT FISHING BOAT.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+Vat used for smuggling smuggling)
+!
+
+
+
+
+("entity"!
+
+
+
+LA PAZ, MEXICO LOCATION!
+
+
+
+Locationure location for the operation)
+!
+
+
+
+
+("entity"!
+
+
+
+ISLA SANTA CATATALINA LOCATION!
+
+
+
+Destinationby destination waters route)
+!
+
+
+
+
+("relationship"!
+
+
+
+SMUGGLERS_ABCLA PAZ, MEXICO!
+
+
+
+Smugglers departed from La Paz, Mexico 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+SM-FOOT FISHING BOAT -*-
+SMLA SANTA CATALINA -*-
+Boat used headed for internationalla Santa Catalina near9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"SMUGGLERSPERSONIndividuals coordinating offshore smuggling)
+
+("entity"38-FOOT FISHING BOATMEANS_OF_TRANSPORTATIONBoat used for maritime transport)
+
+("entity"LA PAZ, MEXICOLOCATIONDeparture point for smuggling journey)
+
+("entity"ISLA SANTA CATALINALOCATIONNearby international water destination)
+
+("relationship"SMUGGLERSLA PAZ, MEXICOSmugglers operated from La Paz, Mexico9)
+
+("relationship"38-FOOT FISHING BOATISLA SANTA CATALINABoat was bound for Isla Santa Catalina9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 12 ---
+Prompt:
+The aliens were positioned such that border patrol agents did not find them until the pickup truck was sent through the VACIS machine
+
+Prediction:
+("entity"!
+
+
+
+ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+Individuals who were positioned in a pickup truck.).accounts ("entity"!
+
+
+
+PICKUP TRUCK.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+The vehicle in aliens were positioned in.)!
+
+
+
+ ("entity"!
+
+
+
+VACIS MACHINE.accountsMEANIZATION!
+
+
+
+A machine used to check the pickup in the pickup.)!
+
+
+
+ ("relationship"!
+
+
+
+ALIENS_ABCPICKUP TRUCK!
+
+
+
+The aliens were positioned in the pickup truck.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+PICKUP TRUCK -*-
+VACIS MACHINE!
+
+
+
+The pickup truck was sent through the VACIS machine.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"ALIENSSMUGGLED_ITEMSIndividuals who were positioned in a pickup truck.)  ("entity"PICKUP TRUCKMEANS_OF_TRANSPORTATIONThe vehicle the aliens were positioned in.)  ("entity"VACIS MACHINEORGANIZATIONA machine used to find the aliens in the truck.)  ("relationship"ALIENSPICKUP TRUCKThe aliens were positioned in the pickup truck.10)  ("relationship"PICKUP TRUCKVACIS MACHINEThe pickup truck was sent through the VACIS machine.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 13 ---
+Prompt:
+Maya, Garduza-Lazaro, and Maldonado-Aguilar or their families had paid between $1,200 and $2,000 in Mexico for their transportation into and through the United States
+
+Prediction:
+("entity"!
+
+
+
+MAYA,PERSON!
+
+
+
+An individual who family had for transportation into and United States.).accounts
+("entity"!
+
+
+
+GARDUZA-LAZARO -*-
+PERSON!
+
+
+
+An individual whose family paid for transportation into the United States.)
+!
+
+
+
+
+("entity"!
+
+
+
+MALDONADO-AGUILAR -*-
+PERSON!
+
+
+
+An individual whose family paid for transportation into the United States.)
+!
+
+
+
+
+("entity"!
+
+
+
+FEXICO -*-
+LOCATION!
+
+
+
+The country where the was transportation was made.)
+!
+
+
+
+
+("entity"!
+
+
+
+UNITED STATES -*-
+LOCATION!
+
+
+
+The country country for the transportation.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MAYA_ABCMEXICO!
+
+
+
+Maya's her family paid for Mexico for transportation.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+GARDUZA-LAZARO_ABCMEXICO!
+
+
+
+Gardza-Lazaro or his family paid in Mexico for transportation.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MALDONADO-AGUILAR -*-
+MEXICO -*-
+Maldonado-Aguilar or his family paid in Mexico for transportation.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MAYA -*-
+UNITED STATES -*-
+Maya was his family paid for transportation into the through the United States.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+GARDUZA-LAZARO -*-
+UNITED STATES -*-
+Garduza-Lazaro or his family paid for transportation into and through the United States.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MALDONADO-AGUILAR -*-
+UNITED STATES -*-
+Maldonado-Aguilar or his family paid for transportation into and through the United States.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MAYAPERSONAn individual whose family paid for transportation into the United States.)
+
+("entity"GARDUZA-LAZAROPERSONAn individual whose family paid for transportation into the United States.)
+
+("entity"MALDONADO-AGUILARPERSONAn individual whose family paid for transportation into the United States.)
+
+("entity"MEXICOLOCATIONThe country where payment for transportation was made.)
+
+("entity"UNITED STATESLOCATIONThe destination country for the transportation.)
+
+("relationship"MAYAMEXICOMaya or his family paid in Mexico for transportation.10)
+
+("relationship"GARDUZA-LAZAROMEXICOGarduza-Lazaro or his family paid in Mexico for transportation.10)
+
+("relationship"MALDONADO-AGUILARMEXICOMaldonado-Aguilar or his family paid in Mexico for transportation.10)
+
+("relationship"MAYAUNITED STATESMaya or his family paid for transportation into and through the United States.10)
+
+("relationship"GARDUZA-LAZAROUNITED STATESGarduza-Lazaro or his family paid for transportation into and through the United States.10)
+
+("relationship"MALDONADO-AGUILARUNITED STATESMaldonado-Aguilar or his family paid for transportation into and through the United States.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 14 ---
+Prompt:
+South Korean police will seek the deportation of a former captain of a hijacked ship jailed in Hong Kong on alien smuggling charges.
+
+Prediction:
+("entity"!
+
+
+
+SOUTH KOREAN POLICE -*-
+PERSON!
+
+
+
+Seek seeking deportation)
+.accounts
+("entity"!
+
+
+
+FORMONG KONG LOCATION!
+
+
+
+Locationention location)
+ the captain)
+!
+
+
+
+
+("relationship"!
+
+
+
+SOUTH KOREAN POLICE -*-
+HONG KONG!
+
+
+
+South seeking deportation from former suspect in in Hong Kong 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"SOUTH KOREAN POLICEPERSONAuthorities requesting deportation)
+
+("entity"HONG KONGLOCATIONDetention location of former captain)
+
+("relationship"SOUTH KOREAN POLICEHONG KONGPolice seek deportation of smuggling suspect jailed in Hong Kong9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 15 ---
+Prompt:
+The U.S. Coast Guard interdicted a go-fast vessel on the high seas, about 655 nautical miles west of the Galapagos Islands, Ecuador.
+
+Prediction:
+("entity"!
+
+
+
+U.S. COAST GUARD PERSONANIZATION.MixedRealityInter maritime maritime Enforcement agency)
+ charge inter domain)
+!
+
+
+
+
+("entity"!
+
+
+
+GO-FAST VESSEL -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A vessel intercepted!
+
+
+
+
+("entity"!
+
+
+
+GALAPAGOS ISLANDS, ECUADOR LOCATION!
+
+
+
+A location in the Pacific seas)
+!
+
+
+
+
+("relationship"!
+
+
+
+U.S. COAST GUARD -*-
+GO-FAST VESSEL!
+
+
+
+The U.S. Coast Guard interdicted a go-fast vessel on the high seas,9)
+!
+
+
+
+
+("relationship"!
+
+
+
+U.S. COAST GUARD -*-
+GALAPAGOS ISLANDS, ECUADOR!
+
+
+
+The U.S. Coast Guard interdicted a go-fast vessel on 655 nautical miles west of the Galapagos Islands, Ecuador.8)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"U.S. COAST GUARDORGANIZATIONA US Law enforcement organization in the maritime routes)
+
+("entity"GO-FAST VESSELMEANS_OF_TRANSPORTATIONA vessel)
+
+("entity"GALAPAGOS ISLANDS, ECUADORLOCATIONA location in the high seas)
+
+("relationship"U.S. COAST GUARDGO-FAST VESSELThe U.S. Coast Guard interdicted a go-fast vessel on the high seas8)
+
+("relationship"U.S. COAST GUARDGALAPAGOS ISLANDS, ECUADORThe U.S. Coast Guard interdicted a go-fast vessel about 655 nautical miles west of the Galapagos Islands, Ecuador8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 16 ---
+Prompt:
+Descargas told Jaquez he would have the information the next day
+
+Prediction:
+("entity"!
+
+
+
+DESCARGAS!
+
+
+
+PERSON!
+
+
+
+An individual who told have information to Jaquez the.accounts
+("entity"!
+
+
+
+JAQUEZ!
+
+
+
+PERSON!
+
+
+
+An individual who was told by would have information the Descargas.)
+!
+
+
+
+
+("relationship"!
+
+
+
+DESCARGAS -*-
+JAQUEZ!
+
+
+
+Descargas told Jaquez he would have the the him the!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DESCARGASPERSONAn individual who would provide information to Jaquez.)
+
+("entity"JAQUEZPERSONAn individual who was told he would receive information from Descargas.)
+
+("relationship"DESCARGASJAQUEZDescargas told Jaquez he would have information for him.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 17 ---
+Prompt:
+When they arrived at the tractor-trailer, they were told to get inside, cover themselves, and not make any noise
+
+Prediction:
+("entity"!
+
+
+
+TRACTOR-TRAILER.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that they were told to get inside, cover themselves, and not make any noise.)!
+
+
+
+
+("
+Ground Truth:
+("entity"TRACTOR-TRAILERMEANS_OF_TRANSPORTATIONA vehicle where they were told to get inside, cover themselves, and not make any noise.)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 18 ---
+Prompt:
+In 2008, Diaz-Galiana illegally returned to the United States and returned to North Carolina
+
+Prediction:
+("entity"!
+
+
+
+DIAZ-GALIANA -*-
+PERSON!
+
+
+
+An individual who illegally returned to the United States and returned to North Carolina.) 2008.).accounts
+("entity"!
+
+
+
+UNITED STATES -*-
+LOCATION!
+
+
+
+The country Diaz Diaz-Galiana illegally returned to.)
+!
+
+
+
+
+("entity"!
+
+
+
+NORTH CAROLINA -*-
+LOCATION!
+
+
+
+The state that Diaz-Galiana returned to.)
+!
+
+
+
+
+("relationship"!
+
+
+
+DIAZ-GALIANA -*-
+UNITED STATES!
+
+
+
+Diaz-Galiana illegally returned to the United States.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DIAZ-GALIANA -*-
+NORTH CAROLINA -*-
+Diaz-Galiana returned to North Carolina.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DIAZ-GALIANAPERSONAn individual who illegally returned to the United States and returned to North Carolina in 2008.)
+
+("entity"UNITED STATESLOCATIONThe country that Diaz-Galiana illegally returned to.)
+
+("entity"NORTH CAROLINALOCATIONThe state that Diaz-Galiana returned to.)
+
+("relationship"DIAZ-GALIANAUNITED STATESDiaz-Galiana illegally returned to the United States.10)
+
+("relationship"DIAZ-GALIANANORTH CAROLINADiaz-Galiana returned to North Carolina.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 19 ---
+Prompt:
+Police said the suspects are being interviewed and undergoing extensive background checks by the RCMP, CSIS and Canadian Border Services Agency (CBSA) on suspicion of alien smuggling.
+
+Prediction:
+("entity"!
+
+
+
+RCMP,ORGANIZATION!
+
+
+
+Royal conducting background checks)
+  (" (" (" ("entity"!
+
+
+
+CSA）ORGANIZATION.MixedRealityAgency conducting background checks)         
+                                                                 ("relationship"!
+
+
+
+ALIIS.accountsORGANIZATION.MixedRealityAuthorities conducting background checks)
+                                                                                                                                                                                                                                                                relationship"!
+
+
+
+ALIAD LOCATION!
+
+
+
+Country where background is taking place)!
+
+
+
+                                                                                                                                ("relationship"!
+
+
+
+RCMP_ABCCANADA -*-
+RC conducting conducting cases' Canada}9)                                                                             ("relationship"!
+
+
+
+CBSA_ABCCANADA -*-
+CBS are reviewing suspects in Canada -*-
+9)                                                                                                                                                                                                        ("relationship"!
+
+
+
+CSIS!
+
+
+
+CANADA -*-
+Authorities are reviewing suspects in Canada -*-
+9)!
+Ground Truth:
+("entity"RCMPORGANIZATIONAuthorities conducting background checks)                                                                                                                                                         ("entity"CBSAORGANIZATIONAuthorities conducting background checks)
+                                                                                                                                                                                     ("entity"CSISORGANIZATIONAuthorities conducting background checks)                                    
+("entity"CANADALOCATIONCountry where investigation is taking place)
+
+("relationship"RCMPCANADAAuthorities are reviewing suspects in Canada9)                                                                                                                                  ("relationship"CBSACANADAAuthorities are reviewing suspects in Canada9)                                                                                                                                   ("relationship"CSISCANADAAuthorities are reviewing suspects in Canada9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 20 ---
+Prompt:
+Various defendants were armed at all times and took turns guarding the captives
+
+Prediction:
+("entity"!
+
+
+
+DEFENDANTS.MixedRealityPERSON!
+
+
+
+Individuals who were armed at took turns guarding the captives.).accounts ("entity"!
+
+
+
+CAPTIVES -*-
+PERSON!
+
+
+
+Individuals who were being guarded.)!
+
+
+
+ ("relationship"!
+
+
+
+DEFENDANTS.MixedRealityCAPTIVES -*-
+The defendants were turns guarding the captives.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"DEFENDANTSPERSONIndividuals who were armed and took turns guarding the captives.)  ("entity"CAPTIVESPERSONIndividuals who were being guarded.)  ("relationship"DEFENDANTSCAPTIVESVarious defendants took turns guarding the captives.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 21 ---
+Prompt:
+Mexican nationals Eleazar Mozqueda Simental and Manuel Antonio Mozqueda Simental were arrested and charged on March 20, 2025, in connection with a maritime smuggling incident. They were accused of illegally transporting 14 undocumented immigrants from Mexico, Vietnam and China all of whom were forced to wear large black trash bags over their heads and bodies during the four-hour trip.
+
+Prediction:
+("entity"!
+
+
+
+ELEAZAR MOZQUEDA SIMENTAL PERSON!
+
+
+
+A arrested and maritime)
+!
+
+
+
+
+("entity"!
+
+
+
+MANUEL ANTONIO MOZQUEDA SIMENTAL -*-
+PERSON!
+
+
+
+Individual arrested for smuggling)
+!
+
+
+
+
+("entity"!
+
+
+
+MEXICO,LOCATION!
+
+
+
+Country of which the immigrants were)
+!
+
+
+
+
+("entity"!
+
+
+
+VIETNAM LOCATION!
+
+
+
+Country of where undocumented immigrants originated)
+!
+
+
+
+
+("entity"!
+
+
+
+CHINA LOCATION!
+
+
+
+Country from where undocumented immigrants originated)
+!
+
+
+
+
+("relationship"!
+
+
+
+ELEAZAR MOZQUEDA SIMENTAL -*-
+MANEXICO -*-
+Eleolved in maritime undocumented immigrants from Mexico 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+MANUEL ANTONIO MOZQUEDA SIMENTAL -*-
+METNAM -*-
+Involved in transporting undocumented immigrants from Vietnam -*-
+9)
+!
+
+
+
+
+("relationship"!
+
+
+
+MANLEAZAR MOZQUEDA SIMENTAL -*-
+CHINA -*-
+Involved in transporting undocumented immigrants from China -*-
+9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"ELEAZAR MOZQUEDA SIMENTALPERSONIndividual arrested for smuggling)
+
+("entity"MANUEL ANTONIO MOZQUEDA SIMENTALPERSONIndividual arrested for smuggling)
+
+("entity"MEXICOLOCATIONCountry from where undocumented immigrants originated)
+
+("entity"VIETNAMLOCATIONCountry from where undocumented immigrants originated)
+
+("entity"CHINALOCATIONCountry from where undocumented immigrants originated)
+
+("relationship"ELEAZAR MOZQUEDA SIMENTALMEXICOInvolved in transporting undocumented immigrants from Mexico9)
+
+("relationship"MANUEL ANTONIO MOZQUEDA SIMENTALVIETNAMInvolved in transporting undocumented immigrants from Vietnam9)
+
+("relationship"ELEAZAR MOZQUEDA SIMENTALCHINAInvolved in transporting undocumented immigrants from China9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 22 ---
+Prompt:
+Fifteen migrants were transported to hospitals, five of whom died while receiving medical care
+
+Prediction:
+("entity"!
+
+
+
+FIGRANTS.accountsSMUGGLED_ITEMS!
+
+
+
+F group of fifteen individuals who were transported to hospitals.) five of whom died.).accounts
+("entity"!
+
+
+
+HOSPITALS!
+
+
+
+LOCATION!
+
+
+
+The location where the migrants were transported and.)
+ medical care.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MIGRANTS_ABCHOSPITALS -*-
+Fifteen migrants were transported to hospitals, medical care. 10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MIGRANTSSMUGGLED_ITEMSA group of fifteen people who were transported to hospitals, five of whom died.)
+
+("entity"HOSPITALSLOCATIONThe place where fifteen migrants were transported to receive medical care.)
+
+("relationship"MIGRANTSHOSPITALSFifteen migrants were transported to hospitals for medical care.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 23 ---
+Prompt:
+Border Patrol Agents Ron Torralba ... stopped a van traveling on Highway 286...
+
+Prediction:
+("entity"!
+
+
+
+RON TORRALBA PERSON!
+
+
+
+A agent of patrol)
+!
+
+
+
+
+("entity"!
+
+
+
+HIGHWAY 286 ROUTES -*-
+ A highway in theino, Texas)
+!
+
+
+
+
+("relationship"!
+
+
+
+VAN MEANS_OF_TRANSPORTATION!
+
+
+
+ A vehicle stopped was stopped of smuggling illegal aliens)
+!
+
+
+
+
+("relationship"!
+
+
+
+RON TORRALBA_ABCHIGHWAY 286!
+
+
+
+Border Torralba was the Highway inspection lane at the checkpoint Patrol checkpoint on Highway 286 near9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"RON TORRALBAPERSON An agent on patrol)
+
+("entity"HIGHWAY 286ROUTES A highway near Encinal, Texas)
+
+("entity"VANMEANS_OF_TRANSPORTATION A vehicle that was suspected of containing illegal aliens)
+
+("relationship"RON TORRALBAHIGHWAY 286Ron Torralba worked the primary inspection lane at the Border Patrol checkpoint on Highway 2869)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 24 ---
+Prompt:
+Dominguez and Doerr were hired to transport the illegal child from the Cotulla/Dilley area north to San Antonio
+
+Prediction:
+("entity"!
+
+
+
+DOMINGUEZ ANDPERSON!
+
+
+
+An individual who to transport the illegal child.)!
+
+
+
+ ("entity"!
+
+
+
+DOERR -*-
+PERSON!
+
+
+
+An individual hired to transport an illegal child.)!
+
+
+
+ ("entity"!
+
+
+
+CLEGAL CHILD -*-
+SMUGGLED_ITEMS!
+
+
+
+An person who was to be transported.)!
+
+
+
+ ("entity"!
+
+
+
+COTULLA/DILLEY AREA LOCATION!
+
+
+
+The starting from which the illegal child was to be transported.)!
+
+
+
+ ("entity"!
+
+
+
+SAN ANTONIO -*-
+LOCATION!
+
+
+
+The destination of the transportation child's!
+
+
+
+ ("relationship"!
+
+
+
+DOMINGUEZ_ABCILLEGAL CHILD!
+
+
+
+Dominguez was hired to transport the illegal child.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+DOERR!
+
+
+
+ILLEGAL CHILD!
+
+
+
+Doerr was hired to transport the illegal child.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+DOMLEGAL CHILD_ABCCOTULLA/DILLEY AREA -*-
+The illegal child was to be transported from the Cotulla/Dilley area.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+ILLEGAL CHILD -*-
+SAN ANTONIO -*-
+The illegal child was to be transported to San Antonio.!
+
+
+
+10)!
+
+
+
+ ("!
+Ground Truth:
+("entity"DOMINGUEZPERSONAn individual hired to transport an illegal child.)  ("entity"DOERRPERSONAn individual hired to transport an illegal child.)  ("entity"ILLEGAL CHILDSMUGGLED_ITEMSA child who was to be transported.)  ("entity"COTULLA/DILLEY AREALOCATIONThe area from which the illegal child was to be transported.)  ("entity"SAN ANTONIOLOCATIONThe destination for the illegal child.)  ("relationship"DOMINGUEZILLEGAL CHILDDominguez was hired to transport the illegal child.10)  ("relationship"DOERRILLEGAL CHILDDoerr was hired to transport the illegal child.10)  ("relationship"ILLEGAL CHILDCOTULLA/DILLEY AREAThe illegal child was to be transported from the Cotulla/Dilley area.10)  ("relationship"ILLEGAL CHILDSAN ANTONIOThe illegal child was to be transported to San Antonio.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 25 ---
+Prompt:
+On June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 ("I-35") between Laredo and San Antonio.
+
+Prediction:
+("entity"!
+
+
+
+VUNE 11, 2009 DATE!
+
+
+
+Date of which Border Patrol Agents were engaged a roving border patrol)
+ I Highway 35)
+!
+
+
+
+
+("entity"!
+
+
+
+VORDER PATROL AGENTS VPERSON!
+
+
+
+ Agents agent onrolling the border)
+ the United States)
+!
+
+
+
+
+("entity"!
+
+
+
+VICTOR BARBERENA -*-
+PERSON!
+
+
+
+ A Border patrol agent)
+ duty)
+)
+!
+
+
+
+
+("entity"!
+
+
+
+ABRAHAM ESQUEDA -*-
+PERSON!
+
+
+
+ A border patrol agent on patrol duty)
+!
+
+
+
+
+("entity"!
+
+
+
+INTERSTATE HIGHWAY 35 ("ROUTES -*-
+ A highway highway on!
+
+
+
+
+("entity"!
+
+
+
+LAREDO LOCATION!
+
+
+
+ A of the the patrol was were pat patrol)
+!
+
+
+
+
+("entity"!
+
+
+
+SAN ANTONIO.MixedRealityLOCATION!
+
+
+
+ Location near where border patrol agents were on patrol)
+!
+
+
+
+
+("relationship"!
+
+
+
+JICTOR BARBERENA_ABCBUNE 11, 2009!
+
+
+
+Vict June date, Victor Patrol Agent Victor Barberena was on in a roving border patrol on9)
+!
+
+
+
+
+("relationship"!
+
+
+
+ABRAHAM ESQUEDA_ABCJUNE 11, 2009!
+
+
+
+On this date, Border Patrol Agent Abraham Esqueda was engaged in a roving border patrol 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+VICTOR BARBERENA_ABCINTERSTATE HIGHWAY 35!
+
+
+
+ L}imiter Patrol Agent were Barberena and engaged in a roving border patrol on Interstate Highway 35} }9)
+!
+
+
+
+
+("relationship"!
+
+
+
+ABRAHAM ESQUEDA_ABCINTERSTATE HIGHWAY 35{tuple_delimiterBorder Patrol Agents Abraham Esqueda was engaged in a roving border patrol on Interstate Highway 35!
+
+
+
+9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"JUNE 11, 2009DATE Date on which Border Patrol agents were in a roving border patrol on Interstate Highway 35)
+
+("entity"BORDER PATROL AGENTPERSON An Agent patrolling the Borders of the United States)
+
+("entity"VICTOR BARBERENAPERSON A border patrol agent on patrol duty)
+
+("entity"ABRAHAM ESQUEDAPERSON A border patrol agent on patrol duty)
+
+("entity"INTERSTATE HIGHWAY 35ROUTES A US highway)
+
+("entity"LAREDOLOCATION Location near where border patrol agents were on patrol)
+
+("entity"SAN ANTONIOLOCATION Location near where border patrol agents were on patrol)
+
+("relationship"VICTOR BARBERENAJUNE 11, 2009On this date, Border Patrol Agent Victor Barberena was engaged in a roving border patrol9)
+
+("relationship"ABRAHAM ESQUEDAJUNE 11, 2009On this date, Border Patrol Agent Abraham Esqueda was engaged in a roving border patrol9)
+
+("relationship"VICTOR BARBERENAINTERSTATE HIGHWAY 35{tuple_delimiterBorder Patrol Agents Victor Barberena was engaged in a roving border patrol on Interstate Highway 35 9)
+
+("relationship"ABRAHAM ESQUEDAINTERSTATE HIGHWAY 35{tuple_delimiterBorder Patrol Agents Abraham Esqueda was engaged in a roving border patrol on Interstate Highway 35 9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 26 ---
+Prompt:
+AMO quickly reached the area and intercepted a 24-foot Bayliner pleasure craft.
+
+Prediction:
+("entity"!
+
+
+
+AMO PERSON!
+
+
+
+Agency that intercepted a vessel)
+!
+
+
+
+
+("entity"!
+
+
+
+24-FOOT BAYLINER PLEASURE CRAFT -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+Boessel intercepted by sea)
+!
+
+
+
+
+("relationship"!
+
+
+
+SEA JGO, CALIFORNIA,LOCATION!
+
+
+
+Location of interception)
+!
+
+
+
+
+("relationship"!
+
+
+
+AMO -*-
+24-FOOT BAYLINER PLEASURE CRAFT!
+
+
+
+AMO intercepted the vessel24-foot Bay craft at9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"AMOPERSONAgency that intercepted the vessel)
+
+("entity"24-FOOT BAYLINER PLEASURE CRAFTMEANS_OF_TRANSPORTATIONVessel intercepted at sea)
+
+("entity"SAN DIEGO, CALIFORNIALOCATIONLocation of interception)
+
+("relationship"AMO24-FOOT BAYLINER PLEASURE CRAFTAMO intercepted the 24-foot pleasure craft9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 27 ---
+Prompt:
+Both acknowledged that they paid several thousand dollars to be smuggled into the United States
+
+Prediction:
+("entity"!
+
+
+
+THED STATES.MixedRealityLOCATION!
+
+
+
+The country country for illegal smugglingled individuals.).accounts
+("entity"!
+
+
+
+SEUGGLLED INDIVIDUALS -*-
+PERSONUGGLED_ITEMS!
+
+
+
+Individual who paid to be smuggled into the United States.)
+!
+
+
+
+
+("relationship"!
+
+
+
+SMUGGLED INDIVIDUALS -*-
+UNITED STATES -*-
+Both smugg were to thousand dollars to be smuggled into the United States.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"UNITED STATESLOCATIONThe destination country for the smuggled individuals.)
+
+("entity"SMUGGLED INDIVIDUALSSMUGGLED_ITEMSPeople who paid to be smuggled into the United States.)
+
+("relationship"SMUGGLED INDIVIDUALSUNITED STATESThe individuals paid several thousand dollars to be smuggled into the United States.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 28 ---
+Prompt:
+On the evening of December 2, 2009, Fernando Munoz-Martinez was driving a pickup-truck south on Interstate 35
+
+Prediction:
+("entity"!
+
+
+
+FERNANDO MUNOZ-MARTINEZ -*-
+PERSON!
+
+
+
+An individual driving a pickup-truck south on Interstate 35.).accounts ("entity"!
+
+
+
+PICKUP-TRUCK MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle being driven south on Interstate 35.)!
+
+
+
+ ("entity"!
+
+
+
+INTERSTATE 35 -*-
+ROUTES -*-
+A highway on which a pickup-truck was being driven south.)!
+
+
+
+ ("relationship"!
+
+
+
+FERNANDO MUNOZ-MARTINEZ_ABCPICKUP-TRUCK!
+
+
+
+Fernando Munoz-Martinez was driving a pickup-truck.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+FERNANDO MUNOZ-MARTINEZ!
+
+
+
+INTERSTATE 35!
+
+
+
+Fernando Munoz-Martinez was driving on Interstate 35.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+PICKUP-TRUCK_ABCINTERSTATE 35!
+
+
+
+The pickup-truck was being driven south on Interstate 35.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"FERNANDO MUNOZ-MARTINEZPERSONAn individual driving a pickup-truck south on Interstate 35.)  ("entity"PICKUP-TRUCKMEANS_OF_TRANSPORTATIONA vehicle being driven south on Interstate 35.)  ("entity"INTERSTATE 35ROUTESA highway on which a pickup-truck was being driven south.)  ("relationship"FERNANDO MUNOZ-MARTINEZPICKUP-TRUCKFernando Munoz-Martinez was driving a pickup-truck.10)  ("relationship"FERNANDO MUNOZ-MARTINEZINTERSTATE 35Fernando Munoz-Martinez was driving on Interstate 35.10)  ("relationship"PICKUP-TRUCKINTERSTATE 35The pickup-truck was being driven south on Interstate 35.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 29 ---
+Prompt:
+Ten to 15 minutes later, the same truck returned onto I-35 and head north
+
+Prediction:
+("entity"!
+
+
+
+TRUCK.MixedRealityMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that returned onto I-35 and headed north.).accounts
+("entity"!
+
+
+
+I-35 -*-
+ROUTES -*-
+A highway that the truck returned onto.)
+!
+
+
+
+
+("relationship"!
+
+
+
+TRUCK!
+
+
+
+I-35 -*-
+The truck returned onto I-35.!
+
+
+
+10)
+!
+Ground Truth:
+("entity"TRUCKMEANS_OF_TRANSPORTATIONA vehicle that returned onto I-35 and headed north.)
+
+("entity"I-35ROUTESA highway that the truck returned onto.)
+
+("relationship"TRUCKI-35The truck returned onto I-35.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 30 ---
+Prompt:
+Guardado-Mezen specifically forced one of the captives to request additional money from a friend, even though the friend had already paid the original group an agreed to amount
+
+Prediction:
+("entity"!
+
+
+
+GUARDADO-MEZEN!
+
+
+
+PERSON!
+
+
+
+An individual who forced one of the captives to request additional money from a friend.)!
+
+
+
+ ("entity"!
+
+
+
+CAPTIVES -*-
+PERSON!
+
+
+
+Individual individual who was forced to request additional money from a friend.)!
+
+
+
+ ("entity" -*-
+FRIEND.accountsPERSON!
+
+
+
+An individual who was requested to pay additional money.)!
+
+
+
+ ("relationship"!
+
+
+
+ORIGINAL GROUP.accountsPERSON.MixedRealityA group that had already been paid an agreed amount.)!
+
+
+
+ ("relationship"!
+
+
+
+GUARDADO-MEZEN_ABCCAPTIVES!
+
+
+
+Guardado-Mezen forced forced one of the captives.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES.MixedRealityFRIEND!
+
+
+
+One of the captives was forced to request additional money from a friend.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+FRIEND!
+
+
+
+ORIGINAL GROUP!
+
+
+
+The friend had already paid the original group an agreed to amount.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"GUARDADO-MEZENPERSONAn individual who forced one of the captives to request additional money from a friend.)  ("entity"CAPTIVESPERSONAn individual who was forced to request additional money from a friend.)  ("entity"FRIENDPERSONAn individual who was requested to provide additional money.)  ("entity"ORIGINAL GROUPPERSONA group that had already been paid an agreed amount.)  ("relationship"GUARDADO-MEZENCAPTIVESGuardado-Mezen specifically forced one of the captives.10)  ("relationship"CAPTIVESFRIENDOne of the captives was forced to request additional money from a friend.10)  ("relationship"FRIENDORIGINAL GROUPThe friend had already paid the original group an agreed to amount.8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 31 ---
+Prompt:
+She admitted to the officers that she knew that the aliens she was transporting were illegally in the United States
+
+Prediction:
+("entity"!
+
+
+
+ALIENS SMUGGLED_ITEMS!
+
+
+
+Individual people she was transporting.).accounts ("entity"!
+
+
+
+UNITED STATES.MixedRealityLOCATION!
+
+
+
+The country the the aliens were illegally.)!
+
+
+
+ ("relationship"!
+
+
+
+ALIENS_ABCUNITED STATES -*-
+The aliens were illegally in the United States.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"ALIENSSMUGGLED_ITEMSThe people she was transporting.)  ("entity"UNITED STATESLOCATIONThe country where the aliens were illegally.)  ("relationship"ALIENSUNITED STATESThe aliens were illegally in the United States.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 32 ---
+Prompt:
+The 30-foot Panga used to smuggle 24 Mexican nationals was stopped by CBP Marine Interdiction agents about five miles west of the coastline at Point Loma.
+
+Prediction:
+("entity"!
+
+
+
+PP MARINE INTERDICTION AGENTS.accountsPERSON!
+
+
+
+Agents who stopped the  vessel)
+!
+
+
+
+
+("entity"!
+
+
+
+P-FOOT PANGA MEANS_OF_TRANSPORTATION!
+
+
+
+Smessel used for smuggling)
+!
+
+
+
+
+("relationship"!
+
+
+
+POINT LOMA -*-
+LOCATION -*-
+Locationd point)
+ the coastline)
+!
+
+
+
+
+("relationship"!
+
+
+
+CBP MARINE INTERDICTION AGENTS -*-
+30-FOOT PANGA!
+
+
+
+CB stopped the smuggling about for smuggling}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"CBP MARINE INTERDICTION AGENTSPERSONAgents who stopped the smuggling boat)
+
+("entity"30-FOOT PANGAMEANS_OF_TRANSPORTATIONVessel used for smuggling)
+
+("entity"POINT LOMALOCATIONInterception point near the coastline)
+
+("relationship"CBP MARINE INTERDICTION AGENTS30-FOOT PANGAAgents stopped the vessel used in smuggling9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 33 ---
+Prompt:
+Border patrol agents from the El Centro Station were alerted by a ranch hand about an undocumented female migrant at the Silver Creek Ranch.
+
+Prediction:
+("entity"!
+
+
+
+BORDER PATROL AGENTS PERSON!
+
+
+
+Agents group Patrol team)
+ the United States)
+ 
+("entity"!
+
+
+
+ELDOCUMENTED FEMALE MIGRANT -*-
+PERSONUGGLED_ITEMS!
+
+
+
+An immigrant without proper documentation) 
+("entity"!
+
+
+
+ELILVER CREEK RANCH.accountsLOCATION!
+
+
+
+A location in the undocumented female migrant was found custody)!
+
+
+
+
+("relationship"!
+
+
+
+BORDER PATROL AGENTSsSILVER CREEK RANCH!
+
+
+
+Border patrol agents were the El Centro Station were alerted about an undocumented female at the Creek Ranch.9)
+Ground Truth:
+("entity"BORDER PATROL AGENTSPERSONA Border Patrol Agent of the United States)
+("entity"UNDOCUMENTED FEMALE MIGRANTSMUGGLED_ITEMSIllegal immigrants without proper documentation)
+("entity"SILVER CREEK RANCHLOCATIONA ranch where an undocumented female migrant was in distress)
+("relationship"BORDER PATROL AGENTSILVER CREEK RANCHBorder patrol agents from the El Centro Station were notified about an undocumented migrant at Silver Creek Ranch9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 34 ---
+Prompt:
+One of the passengers, Fabiola Beatriz Contreras-Puente, testified at trial that she found a smuggler named Paolo to bring her illegally from Mexico to the United States, and that her brother in Houston agreed to pay him $ 1,000 upon her arrival in San Antonio.
+
+Prediction:
+("entity"!
+
+
+
+FABIOLA BEATRIZ CONERAS-PUENTE -*-
+PERSON!
+
+
+
+A of the passengers who!
+
+
+
+
+("entity"!
+
+
+
+PAOLO PERSON!
+
+
+
+ A smuggler)
+!
+
+
+
+
+("entity"!
+
+
+
+M11,000 FEES  The paid be Paolo)
+ heriola's brother)
+ arrival arrival in San Antonio)
+!
+
+
+
+
+("entity"!
+
+
+
+FABIOLA BEATRIZ CONTRERAS-PUENTE -*-
+PAOLO!
+
+
+
+Fabiola found Paolo smuggler named Paolo to bring her illegally from Mexico to the United States 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+FOLO -*-
+$ 1,000 -*-
+Paabiola's brother agreed Houston agreed to pay Paolo $ 1,000 upon her arrival in San Antonio 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"FABIOLA BEATRIZ CONTRERAS-PUENTEPERSON One of the passengers)
+
+("entity"PAOLOPERSON A smuggler)
+
+("entity"$ 1,000FEES Fee to pay Paolo from Fabiola's brother on her arrival in San Antonio)
+
+("relationship"FABIOLA BEATRIZ CONTRERAS-PUENTEPAOLOFabiola found a smuggler named Paolo to bring her illegally from Mexico to the United States9)
+
+("relationship"PAOLO$ 1,000Fabiola's brother in Houston agreed to pay him $ 1,000 upon her arrival in San Antonio9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 35 ---
+Prompt:
+When agents approached the mobile homes, Movant and four others attempted to flee
+
+Prediction:
+("entity"!
+
+
+
+AGANT_ABCPERSON!
+
+
+
+An individual who attempted to flee when the homes when.accounts ("entity"!
+
+
+
+MOS PERSON!
+
+
+
+Four individuals who attempted to flee with Mov Movant.)!
+
+
+
+ ("entity"!
+
+
+
+MOBILE HOMES.MixedRealityLOCATION!
+
+
+
+The location from which the Mov attempted to flee.)!
+
+
+
+ ("relationship"!
+
+
+
+MOVANT_ABCMOS -*-
+The Movant was four others attempted to flee together.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+MOVANT_ABCMOBILE HOMES -*-
+The Movant attempted to flee from the mobile homes.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+OTHERS_ABCMOBILE HOMES -*-
+The others attempted to flee from the mobile homes.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"MOVANTPERSONAn individual who attempted to flee from mobile homes.)  ("entity"OTHERSPERSONFour individuals who attempted to flee with the Movant.)  ("entity"MOBILE HOMESLOCATIONThe location from which the individuals attempted to flee.)  ("relationship"MOVANTOTHERSThe Movant and four others attempted to flee together.10)  ("relationship"MOVANTMOBILE HOMESThe Movant attempted to flee from the mobile homes.10)  ("relationship"OTHERSMOBILE HOMESFour others attempted to flee from the mobile homes.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 36 ---
+Prompt:
+Defendant and the other co-defendants placed those individuals into cars
+
+Prediction:
+("entity"!
+
+
+
+DEFENDANT ANDPERSON!
+
+
+
+An individual who placed people individuals into cars.).accounts ("entity"!
+
+
+
+IND-DEFENDANTS!
+
+
+
+PERSON!
+
+
+
+Individuals who were others individuals into cars.)!
+
+
+
+ ("entity"!
+
+
+
+INDIVIDUALS.MixedRealitySM!
+
+
+
+People who were placed into cars.)!
+
+
+
+ ("entity"!
+
+
+
+CARS.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+Theehicles into which individuals individuals were placed.)!
+
+
+
+ ("relationship"!
+
+
+
+DEFENDANT_ABCCOIVIDUALS!
+
+
+
+The defendant placed individuals individuals into cars.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CO-DEFENDANTS_ABCINDIVIDUALS!
+
+
+
+The co-defendants placed the individuals into cars.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+INDIVIDUALS -*-
+CARS!
+
+
+
+The individuals were placed into cars.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"DEFENDANTPERSONAn individual who placed other individuals into cars.)  ("entity"CO-DEFENDANTSPERSONIndividuals who placed other individuals into cars.)  ("entity"INDIVIDUALSPERSONPeople who were placed into cars.)  ("entity"CARSMEANS_OF_TRANSPORTATIONVehicles into which the individuals were placed.)  ("relationship"DEFENDANTINDIVIDUALSThe defendant placed the individuals into cars.10)  ("relationship"CO-DEFENDANTSINDIVIDUALSThe co-defendants placed the individuals into cars.10)  ("relationship"INDIVIDUALSCARSThe individuals were placed into cars.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 37 ---
+Prompt:
+Evidence related to maritime human smuggling was determined by Detective Alvarez.
+
+Prediction:
+("entity"!
+
+
+
+DETECTIVE ALPERSON!
+
+
+
+An law enforcement officer involved in the case)
+!
+
+
+
+
+("entity"!
+
+
+
+ALVAREZ,PERSON!
+
+
+
+A detective involved the case)
+!
+
+
+
+
+("entity"!
+
+
+
+DETECTIVE ALVAREZ!
+
+
+
+Detect detective named Alvarez was evidence evidence of maritime related to maritime human smuggling 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DETECTIVEPERSONA law enforcement officer involved in the case)
+
+("entity"ALVAREZPERSONA detective on the case)
+
+("relationship"DETECTIVEALVAREZA detective named Alvarez determined the presence of evidence related to maritime human smuggling8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 38 ---
+Prompt:
+A USCG vessel intercepted the panga, which was 27-feet in length, and confirmed the presence of 17 migrants on board. Border Patrol agents arrived shortly after on an Orange County Sheriff's boat and determined that all 17 individuals were Mexican nationals illegally present in the U.S.
+
+Prediction:
+("entity"!
+
+
+
+USCG VESSEL.accountsMEANS_OF_TRANSPORTATION.MixedRealityInter States Coast Guard vessel involved in the interception)
+!
+
+
+
+
+("entity"!
+
+
+
+PANGA MEANS_OF_TRANSPORTATION!
+
+
+
+Sm-fe vessel vessel intercepted migrants)
+!
+
+
+
+
+("entity"!
+
+
+
+BORDER PATROL AGENTS�PERSON.accountsAgents who arrived on the interception)
+!
+
+
+
+
+("entity"!
+
+
+
+ORANGE COUNTY SHERIFF'S BOAT.MixedRealityMEANS_OF_TRANSPORTATION!
+
+
+
+Boat used by Border for arrive the interception)
+!
+
+
+
+
+("entity"!
+
+
+
+MED STATES LOCATION!
+
+
+
+Country where the were found illegally be illegally present)
+!
+
+
+
+
+("entity"!
+
+
+
+USCG VESSEL!
+
+
+
+PANGA!
+
+
+
+USCG vessel the smuggling27-foot panga vessel9)
+!
+
+
+
+
+("relationship"!
+
+
+
+BORDER PATROL AGENTS_ABCORANGE COUNTY SHERIFF'S BOAT!
+
+
+
+Agents used on the Orange's boat 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+BORDER PATROL AGENTS -*-
+PED STATES -*-
+Agents determined the were illegally present in the U.S. 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"USCG VESSELMEANS_OF_TRANSPORTATIONUnited States Coast Guard vessel involved in the interception)
+
+("entity"PANGAMEANS_OF_TRANSPORTATION27-foot smuggling vessel carrying migrants)
+
+("entity"BORDER PATROL AGENTSPERSONAgents who arrived after the interception)
+
+("entity"ORANGE COUNTY SHERIFF'S BOATMEANS_OF_TRANSPORTATIONBoat used by agents to reach the location)
+
+("entity"UNITED STATESLOCATIONCountry where migrants were found to be illegally present)
+
+("relationship"USCG VESSELPANGAUSCG intercepted the 27-foot panga9)
+
+("relationship"BORDER PATROL AGENTSORANGE COUNTY SHERIFF'S BOATAgents arrived using the Sheriff's boat9)
+
+("relationship"BORDER PATROL AGENTSUNITED STATESAgents confirmed migrants were illegally present in the U.S.9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 39 ---
+Prompt:
+Agents made contact with the vessel and determined that all 11 people on-board were unlawfully present in the U.S. Nine of the boat's occupants were Mexican nationals, one was a Guatemalan national, and one was a Salvadoran national.
+
+Prediction:
+("entity"!
+
+
+
+AGENTS.MixedRealityPERSON!
+
+
+
+Law enforcement officers)
+!
+
+
+
+
+("entity"!
+
+
+
+VESSEL.MixedRealityMEANS_OF_TRANSPORTATION!
+
+
+
+Bo boat suspected  migrants)
+!
+
+
+
+
+("entity"!
+
+
+
+AGENTS.MixedRealityVESSEL!
+
+
+
+Agents made contact with the vessel and undocumented migrants 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"AGENTSPERSONLaw enforcement agents)
+
+("entity"VESSELMEANS_OF_TRANSPORTATIONA vessel carrying undocumented migrants)
+
+("relationship"AGENTSVESSELAgents made contact with the vessel carrying undocumented migrants9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 40 ---
+Prompt:
+Lopez-Perez, himself, may be counted as a participant in the criminal activity (participant #6)
+
+Prediction:
+("entity"!
+
+
+
+LOPEZ-PEREZ,PERSON!
+
+
+
+An individual who may be counted as a participant in the criminal activity.)!
+
+
+
+ (" ("
+Ground Truth:
+("entity"LOPEZ-PEREZPERSONAn individual who may be counted as a participant in the criminal activity.)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 41 ---
+Prompt:
+Jimenez-Elvirez was arrested on June 30, 2015, for illegally transporting 17 aliens near Laredo, Texas
+
+Prediction:
+("entity"!
+
+
+
+JIMENEZ-ELVIREZ!
+
+
+
+PERSON!
+
+
+
+An individual arrested for illegally transporting 17 aliens near Laredo, Texas.).accounts
+("entity"!
+
+
+
+ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+A group of 17 individuals illegally were illegally transported.)
+!
+
+
+
+
+("entity"!
+
+
+
+LAREDO, TEXAS LOCATION!
+
+
+
+The location near which the aliens transportation occurred aliens occurred.)
+!
+
+
+
+
+("relationship"!
+
+
+
+JIMENEZ-ELVIREZ_ABCALIENS!
+
+
+
+Jimenez-Elvirez was arrested for illegally transporting 17 aliens.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JIMENEZ-ELVIREZ!
+
+
+
+LAREDO, TEXAS!
+
+
+
+Jimenez-Elvirez was arrested near Laredo, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+ALIENS_ABCLAREDO, TEXAS -*-
+The aliens were illegally transported near Laredo, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"JIMENEZ-ELVIREZPERSONAn individual arrested for illegally transporting 17 aliens near Laredo, Texas.)
+
+("entity"ALIENSSMUGGLED_ITEMSA group of 17 individuals who were illegally transported.)
+
+("entity"LAREDO, TEXASLOCATIONThe location near where the illegal transportation of aliens occurred.)
+
+("relationship"JIMENEZ-ELVIREZALIENSJimenez-Elvirez was arrested for illegally transporting 17 aliens.10)
+
+("relationship"JIMENEZ-ELVIREZLAREDO, TEXASJimenez-Elvirez was arrested near Laredo, Texas.10)
+
+("relationship"ALIENSLAREDO, TEXASThe aliens were illegally transported near Laredo, Texas.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 42 ---
+Prompt:
+On August 4, 1999, Border Patrol agents observed a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road, a divided highway in northern Laredo, Texas.
+
+Prediction:
+("entity"!
+
+
+
+BEOIA PITLOCATION!
+
+
+
+A Border smuggler)
+!
+
+
+
+
+("entity"!
+
+
+
+198 ANUIS, TEXUNI, TEXEXICO,LOCATION!
+
+
+
+ A of the was the border)
+!
+
+
+
+
+("entity"!
+
+
+
+GARCIA_ABCSANENS�Garcia approached been the undocumented aliens in9)
+!
+
+
+
+
+("relationship"!
+
+
+
+GARCIA_ABCSAN LUIS, POTOSI, MEXICO!
+
+
+
+Garcia had approached the aliens in San Luis, Pototosi, Mexico,9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"GARCIAPERSON A potential smuggler)
+
+("entity"SAN LUIS, POTOSI, MEXICOLOCATION Location where Garcia approached the aliens)
+
+("relationship"GARCIAALIENSGarcia had approached nine undocumented aliens9)
+
+("relationship"GARCIASAN LUIS, POTOSI, MEXICOGarcia had approached undocumented aliens in San Luis, Potosi, Mexico9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 43 ---
+Prompt:
+the suspicious behavior of Delacruz, who was observed attempting to conceal himself from Border Patrol agents for a period of minutes in a northbound vehicle sixty miles from the border on a route known for illegal alien trafficking
+
+Prediction:
+("entity"!
+
+
+
+DELACRUZ!
+
+
+
+PERSON!
+
+
+
+An individual who was observed attempting to conceal himself from Border Patrol agents.)!
+
+
+
+ ("entity"!
+
+
+
+BHICLE -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A northbound vehicle sixty which Delacruz was attempting to conceal himself.)!
+
+
+
+ ("entity"!
+
+
+
+BORDER PATPERSON!
+
+
+
+The location sixty is vehicle was sixty miles from.)!
+
+
+
+ ("entity"!
+
+
+
+ROUTE ROUTES.accountsA route known for illegal alien trafficking.)!
+
+
+
+ ("relationship"!
+
+
+
+DELACRUZ_ABCVEHICLE!
+
+
+
+Delacruz was in a northbound vehicle.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+DELHICLE_ABCBORDER_ABCThe vehicle was sixty miles from the border.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+DELHICLE!
+
+
+
+ROUTE -*-
+The vehicle was on a route known for illegal alien trafficking.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"DELACRUZPERSONAn individual who was observed attempting to conceal himself from Border Patrol agents.)  ("entity"VEHICLEMEANS_OF_TRANSPORTATIONA northbound vehicle in which Delacruz was attempting to conceal himself.)  ("entity"BORDERLOCATIONA location that the vehicle was sixty miles from.)  ("entity"ROUTEROUTESA route known for illegal alien trafficking.)  ("relationship"DELACRUZVEHICLEDelacruz was in a northbound vehicle.10)  ("relationship"VEHICLEBORDERThe vehicle was sixty miles from the border.10)  ("relationship"VEHICLEROUTEThe vehicle was on a route known for illegal alien trafficking.9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 44 ---
+Prompt:
+The two men who were found aboard the boat are facing charges for alien smuggling.
+
+Prediction:
+("entity"!
+
+
+
+MWO MEN PERSON!
+
+
+
+Twos found with alien)
+.accounts
+("entity"!
+
+
+
+BOAT.MixedRealityMEANS_OF_TRANSPORTATION!
+
+
+
+V for transportle aliens)
+!
+
+
+
+
+("relationship"!
+
+
+
+TWO MEN -*-
+BOAT!
+
+
+
+Two men were on the boat, charged with smuggling}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"TWO MENPERSONIndividuals charged for smuggling)
+
+("entity"BOATMEANS_OF_TRANSPORTATIONUsed to smuggle individuals)
+
+("relationship"TWO MENBOATTwo men found aboard the boat were charged with smuggling9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 45 ---
+Prompt:
+The Tahoe did not attempt to pass the tractor-trailer, despite the absence of oncoming traffic
+
+Prediction:
+("entity"!
+
+
+
+TAHOE.MixedRealityMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that did not attempt to pass the tractor-trailer.).accounts
+("entity"!
+
+
+
+TRACTOR-TRAILER.ReportingMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that the Tahoe did not attempt to pass.)
+!
+
+
+
+
+("relationship"!
+
+
+
+TAHOE_ABCTRACTOR-TRAILER!
+
+
+
+The Tahoe did not attempt to pass the tractor-trailer.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"TAHOEMEANS_OF_TRANSPORTATIONA vehicle that did not attempt to pass a tractor-trailer.)
+
+("entity"TRACTOR-TRAILERMEANS_OF_TRANSPORTATIONA vehicle that the Tahoe did not attempt to pass.)
+
+("relationship"TAHOETRACTOR-TRAILERThe Tahoe did not attempt to pass the tractor-trailer.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 46 ---
+Prompt:
+Mario Echeverria, 24, a naturalized U.S. citizen residing in Tijuana, Mexico. Echeverria is suspected of being one of the ringleaders of the maritime smuggling organization
+
+Prediction:
+("entity"!
+
+
+
+MARIO ECHEVERRIA -*-
+PERSON!
+
+
+
+Sus suspected ringleader of a maritime smuggling organization)
+!
+
+
+
+
+("entity"!
+
+
+
+TIJUANA, MEXICO.getElementsLOCATION!
+
+
+
+Location where Echevererra resides)
+!
+
+
+
+
+("relationship"!
+
+
+
+MARIO ECHEVERRIA -*-
+TIJUANA, MEXICO!
+
+
+
+E Echeverria resides a naturalized U.S. citizen, in Tijuana, Mexico. is suspected of being one of the ringleaders of the maritime smuggling organization 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MARIO ECHEVERRIAPERSON A suspected ringleader of the maritime smuggling organization)
+
+("entity"TIJUANA, MEXICO LOCATIONLocation where Echevierra resides)
+
+("relationship"MARIO ECHEVERRIATIJUANA, MEXICOMario Echeverria, a naturalized U.S. citizen residing in Tijuana, Mexico, is suspected of being one of the ringleaders of the maritime smuggling organization}9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 47 ---
+Prompt:
+The pickup then turned right off Highway 59, thereby avoiding the checkpoint, and onto FM 2050, where in a reversal of direction, it began heading due south away from Houston
+
+Prediction:
+("entity"!
+
+
+
+PICKUP MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that turned off Highway 59 and onto FM 2050.).accounts
+("entity"!
+
+
+
+HIGHWAY 59.MixedRealityROUTES -*-
+A highway that which the pickup turned off.)
+!
+
+
+
+
+("entity"!
+
+
+
+FM 2050 -*-
+ROUTES!
+
+
+
+The route onto pickup turned onto.)
+!
+
+
+
+
+("entity"!
+
+
+
+HOUSTON -*-
+LOCATION!
+
+
+
+The city from pickup was heading away from.)
+ turning onto FM 2050.)
+!
+
+
+
+
+("relationship"!
+
+
+
+PICKUP_ABCHIGHWAY 59!
+
+
+
+The pickup turned off Highway 59.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+PICKUP!
+
+
+
+FM 2050!
+
+
+
+The pickup turned onto FM 2050.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+PICKUP -*-
+HOUSTON -*-
+The pickup was heading due south away from Houston.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+HIGHWAY 59 -*-
+FM 2050!
+
+
+
+FM pickup turned from Highway 59 to FM 2050.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"PICKUPMEANS_OF_TRANSPORTATIONA vehicle that turned off Highway 59 and onto FM 2050.)
+
+("entity"HIGHWAY 59ROUTESThe highway from which the pickup turned off.)
+
+("entity"FM 2050ROUTESThe road the pickup turned onto.)
+
+("entity"HOUSTONLOCATIONThe city the pickup was heading away from after turning onto FM 2050.)
+
+("relationship"PICKUPHIGHWAY 59The pickup turned off Highway 59.10)
+
+("relationship"PICKUPFM 2050The pickup turned onto FM 2050.10)
+
+("relationship"PICKUPHOUSTONThe pickup began heading due south away from Houston.10)
+
+("relationship"HIGHWAY 59FM 2050The pickup turned from Highway 59 onto FM 2050.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 48 ---
+Prompt:
+Border Patrol agents arrested two Mexican nationals after they illegally entered the country on a personal watercraft.
+
+Prediction:
+("entity"!
+
+
+
+BORDER PATROL AGENTS.MixedRealityPERSON!
+
+
+
+Agents who arrested the arrest)
+!
+
+
+
+
+("entity"!
+
+
+
+PERSONAL WATERCRAFT MEANS_OF_TRANSPORTATION!
+
+
+
+The for enter the country.S. illegally)
+!
+
+
+
+
+("relationship"!
+
+
+
+BORDER PATROL AGENTS -*-
+PERSONAL WATERCRAFT!
+
+
+
+Agentsrest was made after illegal on a personal watercraft 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"BORDER PATROL AGENTSPERSONOfficials who made the arrest)
+
+("entity"PERSONAL WATERCRAFTMEANS_OF_TRANSPORTATIONUsed to enter the U.S. illegally)
+
+("relationship"BORDER PATROL AGENTSPERSONAL WATERCRAFTArrest was made after entry on a personal watercraft9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 49 ---
+Prompt:
+She was accompanied by two visible passengers: her one-and-one-half-year-old child and a friend
+
+Prediction:
+("entity"!
+
+
+
+CHILDASSENGER�PERSON!
+
+
+
+Two visible accompanying were the,.accounts ("entity"!
+
+
+
+CHILD PERSON.MixedRealityOne one-and-one-half-year-old passenger.) was a of the visible.)!
+
+
+
+ ("entity"!
+
+
+
+FRIEND.MixedRealityPERSON!
+
+
+
+An individual who was one of the passengers.)!
+
+
+
+ ("relationship"!
+
+
+
+CHILDASSENGERS.MixedRealityCHILD!
+
+
+
+The of the passengers was her one.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+PASSENGERS_ABCFRIEND!
+
+
+
+One of the passengers was a friend.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"PASSENGERSPERSONTwo individuals who accompanied her.)  ("entity"CHILDPERSONA one-and-one-half-year-old individual who was one of the passengers.)  ("entity"FRIENDPERSONAn individual who was one of the passengers.)  ("relationship"PASSENGERSCHILDOne of the passengers was a child.10)  ("relationship"PASSENGERSFRIENDOne of the passengers was a friend.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 50 ---
+Prompt:
+HSI St. Thomas arrested the captain of the vessel for alien smuggling and the four aliens for illegal entry into the United States.
+
+Prediction:
+("entity"!
+
+
+
+HSI ST. THOMAS PERSON!
+
+
+
+Agencyeland Security Investigations)
+)
+ for the)
+!
+
+
+
+
+("entity"!
+
+
+
+CAPTAIN OFPERSON!
+
+
+
+Captain of the smuggling)
+ for alien)
+!
+
+
+
+
+("entity"!
+
+
+
+VESUR ALIENS�SM!
+
+
+
+Individuals arrested for illegal entry)
+!
+
+
+
+
+("relationship"!
+
+
+
+VESSEL MEANS_OF_TRANSPORTATION!
+
+
+
+Boat used in smuggling smuggling)
+!
+
+
+
+
+("relationship"!
+
+
+
+UNITED STATES -*-
+LOCATION!
+
+
+
+Country country illegal entry)
+!
+
+
+
+
+("relationship"!
+
+
+
+HSI ST. THOMAS -*-
+CAPTAIN!
+
+
+
+HSI St the captain's for smuggling}9)
+!
+
+
+
+
+("relationship"!
+
+
+
+HSI ST. THOMAS -*-
+FOUR ALIENS!
+
+
+
+HSI arrested four aliens for illegal entry 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+CAPSEL_ABCCAPED STATES -*-
+Vessel used intercepted for illegal into the United States without9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"HSI ST. THOMASPERSONHomeland Security Investigations team responsible for arrests)
+
+("entity"CAPTAINPERSONCaptain of the vessel arrested for smuggling)
+
+("entity"FOUR ALIENSPERSONIndividuals arrested for illegal entry)
+
+("entity"VESSELMEANS_OF_TRANSPORTATIONBoat involved in alien smuggling)
+
+("entity"UNITED STATESLOCATIONDestination of illegal entry)
+
+("relationship"HSI ST. THOMASCAPTAINHSI arrested the vessel captain for smuggling9)
+
+("relationship"HSI ST. THOMASFOUR ALIENSHSI arrested four aliens for illegal entry9)
+
+("relationship"VESSELUNITED STATESVessel was used for entry into the United States9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 51 ---
+Prompt:
+the aliens were traveling lying on the floorboards, partially under the back seat and wedged between the front seat and the back seat, with a child sitting on top of the back seat
+
+Prediction:
+("entity"!
+
+
+
+ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+Individuals traveling in the floorboards of a vehicle.).accounts ("                                                                 ("entity"!
+
+
+
+CHILD PERSON!
+
+
+
+An individual sitting on top of the back seat.)                                                                                                                                                                                                   ("entity"!
+
+
+
+FLOORBOARDS MEANS_OF_TRANSPORTATION!
+
+
+
+The location where the aliens were lying.)                                                                                                     ("                                                                                                                                                                         ("entity"!
+
+
+
+BACK SEAT.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+The location where which the aliens were partially lying.)                                                                                                                                                                                                                                                                                                                                                                              ("entity"!
+
+
+
+FRONT SEAT 和MEANS_OF_TRANSPORTATION!
+
+
+
+The location between the vehicle where                                                                                                                               !
+
+
+
+                                                                                                                                                                            ("relationship"!
+
+
+
+ALIENS.MixedRealityFLOORBOARDS!
+
+
+
+The aliens were traveling lying on the floorboards.!
+
+
+
+10)                                                                                                                                                                                                                                    ("relationship"!
+
+
+
+ALIENS!
+
+
+
+BACK SEAT!
+
+
+
+The aliens were partially under the back seat.!
+
+
+
+10)                                                                                                                                                                            ‌                                                                                                                                                                       ("relationship"!
+
+
+
+ALIENS!
+
+
+
+FRONT SEAT!
+
+
+
+The aliens were wedged between the front seat and the back seat.!
+
+
+
+10)                                                                                                                                                                            )                                             ("relationship"!
+
+
+
+CHILD_ABCBACK SEAT!
+
+
+
+A child was sitting on top of the back seat.!
+
+
+
+10)                                                                                                                               !
+
+
+
+                                                                                                                               !
+Ground Truth:
+("entity"ALIENSSMUGGLED_ITEMSIndividuals traveling on the floorboards of a vehicle.)                                                                                                                                                                               ("entity"CHILDPERSONAn individual sitting on top of the back seat.)                                                                                                                                                                                                                      ("entity"FLOORBOARDSMEANS_OF_TRANSPORTATIONThe location where the aliens were lying.)                                                                                                                                                                                                                                                                                                                                                                                                                   ("entity"BACK SEATMEANS_OF_TRANSPORTATIONThe location under which the aliens were partially lying.)                                                                                                                                                                                                                                                                                                                                                              ("entity"FRONT SEATMEANS_OF_TRANSPORTATIONA location in the vehicle.)                                                                                                                                                                      ("relationship"ALIENSFLOORBOARDSThe aliens were traveling lying on the floorboards.10)                                                                                                                                                                                                                                                                                                                                                           ("relationship"ALIENSBACK SEATThe aliens were partially under the back seat.10)                                                                                                                                                                                                                                                                                                                                                         ("relationship"ALIENSFRONT SEATThe aliens were wedged between the front seat and the back seat.10)                                                                                                                                                                                                                                                                                                                           ("relationship"CHILDBACK SEATThe child was sitting on top of the back seat.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 52 ---
+Prompt:
+Both aliens identified the man as Allende-Garcia
+
+Prediction:
+("entity"!
+
+
+
+ALIENS.MixedRealityPERSON!
+
+
+
+Individuals who identified the man as Allende-Garcia.).accounts
+("entity"!
+
+
+
+MANLENDE-GARCIA -*-
+PERSON!
+
+
+
+The man of the man.)
+ this case compartment.)
+!
+
+
+
+
+("relationship"!
+
+
+
+ALIENS.MixedRealityALLENDE-GARCIA -*-
+Both aliens identified theende-Garcia as 10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"ALIENSPERSONIndividuals who identified the man as Allende-Garcia.)
+
+("entity"ALLENDE-GARCIAPERSONThe identity of the man in the passenger seat.)
+
+("relationship"ALIENSALLENDE-GARCIABoth aliens identified Allende-Garcia.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 53 ---
+Prompt:
+Codefendant Henry Gutierrez-Andrade handed his cell phone to the captives, telling them to call their family members and direct them not to send the remaining money to the original smugglers
+
+Prediction:
+("entity"!
+
+
+
+HENRY GUTIERREZ-ANDRADE PERSON!
+
+
+
+A codefendant in handed his cell phone to the captives.).accounts ("entity"!
+
+
+
+CELLTIVES.MixedRealityPERSON!
+
+
+
+Individuals to were handed a cell phone by instructions not call their family members.)!
+
+
+
+ ("entity"!
+
+
+
+CELLAMILY MEMBERS!
+
+
+
+PERSON.MixedRealityPeople who captives were instructed to call.)!
+
+
+
+ ("entity"!
+
+
+
+ORIGINAL SMUGGLERS -*-
+PERSON!
+
+
+
+Thes the whom the captives were told not to send money.)!
+
+
+
+ ("relationship"!
+
+
+
+CELL PHONE!
+
+
+
+MEANS_OF_COMMUNICATION.MixedRealityThe device handed to the captives.) make their family members.)!
+
+
+
+ ("relationship"!
+
+
+
+HENRY GUTIERREZ-ANDRADE_ABCCAPTIVES!
+
+
+
+Henry Gutierrez-Andrade handed his cell phone to the captives.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPRY GUTIERREZ-ANDRADE!
+
+
+
+CELL PHONE!
+
+
+
+Henry Gutierrez-Andrade handed his cell phone.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES.MixedRealityF PHONE!
+
+
+
+The captives were given a cell phone.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES -*-
+FAMILY MEMBERS!
+
+
+
+The captives were told to call their family members.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES -*-
+ORIGINAL SMUGGLERS -*-
+The captives were directed not to send money to the original smugglers.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"HENRY GUTIERREZ-ANDRADEPERSONA codefendant who handed his cell phone to the captives.)  ("entity"CAPTIVESPERSONIndividuals who were given a cell phone and told to call their family members.)  ("entity"FAMILY MEMBERSPERSONPeople the captives were told to call.)  ("entity"ORIGINAL SMUGGLERSPERSONIndividuals to whom the captives were directed not to send money.)  ("entity"CELL PHONEMEANS_OF_COMMUNICATIONA device handed to the captives to call their family members.)  ("relationship"HENRY GUTIERREZ-ANDRADECAPTIVESHenry Gutierrez-Andrade handed his cell phone to the captives.10)  ("relationship"HENRY GUTIERREZ-ANDRADECELL PHONEHenry Gutierrez-Andrade handed his cell phone.10)  ("relationship"CAPTIVESCELL PHONEThe captives were handed a cell phone.10)  ("relationship"CAPTIVESFAMILY MEMBERSThe captives were told to call their family members.10)  ("relationship"CAPTIVESORIGINAL SMUGGLERSThe captives were directed not to send money to the original smugglers.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 54 ---
+Prompt:
+Mr. Yang's family originally paid $10,000 to smuggle Mr. Yang into the United States
+
+Prediction:
+("entity"!
+
+
+
+MR. YANG.MixedReality FAMILY PERSON!
+
+
+
+Paid individuals who Mr. Yang who who paid paid $10,000 to smuggle him into the United States.).accounts
+("entity"!
+
+
+
+$. YANG_ABCPERSON!
+
+
+
+An individual who was smuggled into the United States by!
+
+
+
+
+("entity"!
+
+
+
+UNITED STATES.accountsLOCATION!
+
+
+
+The country country for Mr smuggling operation.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MR. YANG'S FAMILY -*-
+MR. YANG!
+
+
+
+Mr. Yang's family paid for smugg him smuggled.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MR. YANG'SUNITED STATES!
+
+
+
+Mr. Yang was smuggled into the United States.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MR. YANG'S FAMILYPERSONThe family of Mr. Yang, who originally paid $10,000 to smuggle him into the United States.)
+
+("entity"MR. YANGPERSONAn individual who was smuggled into the United States.)
+
+("entity"UNITED STATESLOCATIONThe destination country for the smuggling operation.)
+
+("relationship"MR. YANG'S FAMILYMR. YANGMr. Yang's family paid to have him smuggled.10)
+
+("relationship"MR. YANGUNITED STATESMr. Yang was smuggled into the United States.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 55 ---
+Prompt:
+Although the trip was supposed to take six hours, it ended up taking 36 hours because Pacheco got lost
+
+Prediction:
+("entity"!
+
+
+
+PACHECO -*-
+PERSON!
+
+
+
+An individual who got lost during the trip.).accounts (" ("
+Ground Truth:
+("entity"PACHECOPERSONAn individual who got lost during a trip.)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 56 ---
+Prompt:
+Zhivargo McBride pled guilty to all fifteen counts in the Indictment: three counts of second degree murder, three counts of alien smuggling with death resulting...
+
+Prediction:
+("entity"!
+
+
+
+ZHIVARGO MCBRIDE PERSON!
+
+
+
+An who guilty to all and murder charges)
+!
+
+
+
+
+("entity"!
+
+
+
+ZHIVARGO MCBRIDE_ABCALIEN SMUGGLING WITHZhBride pled guilty to alien with  death resulting 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"ZHIVARGO MCBRIDEPERSONIndividual pleading guilty to smuggling and murder charges)
+
+("relationship"ZHIVARGO MCBRIDEALIEN SMUGGLINGMcBride pled guilty to smuggling offenses with death resulting9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 57 ---
+Prompt:
+Movant and his co-defendants had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens
+
+Prediction:
+("entity"!
+
+
+
+MOVANT ANDPERSON!
+
+
+
+An individual who had along his co-defendants, had kidnapped at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.).accounts ("entity"!
+
+
+
+CO-DEFENDANTS -*-
+PERSON!
+
+
+
+Individuals who, with the movant, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.)!
+
+
+
+ ("entity" -*-
+UNDOCUMENTED ALIENS -*-
+SMUGGLED_ITEMS!
+
+
+
+The of people who were kidnapped and held for ransom on!
+
+
+
+ ("relationship"!
+
+
+
+MOVANT_ABCCO-DEFENDANTS!
+
+
+
+The Movant and his co-defendants acted together.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+MOVANT.MixedRealityUNDOCUMENTED ALIENS!
+
+
+
+The Movant and and held for ransom other groups of undocumented aliens.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CO-DEFENDANTS�UNDOCUMENTED ALIENS!
+
+
+
+The co-defendants kidnapped and held for ransom other groups of undocumented aliens.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"MOVANTPERSONAn individual who, with his co-defendants, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.)  ("entity"CO-DEFENDANTSPERSONIndividuals who, with the Movant, had on at least two prior occasions kidnapped and held for ransom other groups of undocumented aliens.)  ("entity"UNDOCUMENTED ALIENSSMUGGLED_ITEMSGroups of people who were kidnapped and held for ransom.)  ("relationship"MOVANTCO-DEFENDANTSThe Movant and his co-defendants acted together.10)  ("relationship"MOVANTUNDOCUMENTED ALIENSThe Movant kidnapped and held for ransom other groups of undocumented aliens.10)  ("relationship"CO-DEFENDANTSUNDOCUMENTED ALIENSThe co-defendants kidnapped and held for ransom other groups of undocumented aliens.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 58 ---
+Prompt:
+Border Patrol agents Monday apprehended 12 Mexican nationals suspected of illegally entering the country at sea through the use of a smuggling boat.
+
+Prediction:
+("entity"!
+
+
+
+BORDER PATROL AGENTS.MixedRealityPERSON!
+
+
+
+Agentsrested individuals)
+ sea)
+!
+
+
+
+
+("entity"!
+
+
+
+SMUGGLING BOAT.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+Used for enter enter the country.S.)
+ at sea)
+!
+
+
+
+
+("relationship"!
+
+
+
+BORDER PATROL AGENTS -*-
+SMUGGLING BOAT!
+
+
+
+Border Mexican were of illegally illegally sea through9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"BORDER PATROL AGENTSPERSONArrested migrants at sea)
+
+("entity"SMUGGLING BOATMEANS_OF_TRANSPORTATIONUsed to illegally enter the U.S. by sea)
+
+("relationship"BORDER PATROL AGENTSSMUGGLING BOAT12 migrants suspected of entering by sea9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 59 ---
+Prompt:
+On June 6, 2016, Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint on Highway 83 near Encinal, Texas.
+
+Prediction:
+("entity"!
+
+
+
+MONTEROJAS,PERSON!
+
+
+
+An agent working duty)
+!
+
+
+
+
+("entity"!
+
+
+
+HIGHWAY 83 ROUTES -*-
+ A highway near Encinal, Texas)
+!
+
+
+
+
+("entity"!
+
+
+
+ENCINAL, TEXAS -*-
+LOCATION!
+
+
+
+ A near Highway Agent Monterojas worked the primary inspection lane)
+ the Border Patrol checkpoint)
+!
+
+
+
+
+("relationship"!
+
+
+
+MONTEROJAS_ABCHIGHWAY 83!
+
+
+
+Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint on Highway 83 near Encinal, Texas 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MONTEROJASPERSON An agent on patrol)
+
+("entity"HIGHWAY 83ROUTES A highway near Encinal, Texas)
+
+("entity"ENCINAL, TEXASLOCATION Location near where Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint)
+
+("relationship"MONTEROJASHIGHWAY 83Agent Monterojas worked the primary inspection lane at the Border Patrol checkpoint on Highway 83 near Encinal, Texas9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 60 ---
+Prompt:
+Jaquez maintained the truck with the trailer picked him up at a plaza in Nuevo Laredo between 5:45 and 6:00 a.m. to take him to the day job
+
+Prediction:
+("entity"!
+
+
+
+JAQUEZ!
+
+
+
+PERSON!
+
+
+
+An individual who maintained picked up by a truck with a trailer.) Nuevo Laredo.).accounts
+("entity"!
+
+
+
+TRUCK WITHMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that picked along with its trailer, picked up Jaquez.)
+!
+
+
+
+
+("entity"!
+
+
+
+PLAILER -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that to the truck that picked up Jaquez.)
+!
+
+
+
+
+("entity"!
+
+
+
+NAZA INLOCATION!
+
+
+
+A location where Nuevo Laredo where Jaquez was picked up.)
+!
+
+
+
+
+("entity"!
+
+
+
+NUEVO LAREDO -*-
+LOCATION!
+
+
+
+The city where theaquez was picked up.)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ_ABCTRUCK Theaquez maintained maintained up by the truck.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ!
+
+
+
+TRAILER!
+
+
+
+Jaquez was picked up by the trailer with a trailer.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ!
+
+
+
+PLAZA!
+
+
+
+Jaquez was picked up at a plaza.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ!
+
+
+
+NUEVO LAREDO -*-
+Jaquez was picked up in Nuevo Laredo.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+TRUCK!
+
+
+
+TRAZA!
+
+
+
+The truck with up Jaquez at a plaza.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+TRAIL.ReportingNUEVO LAREDO -*-
+The truck was up Jaquez in Nuevo Laredo.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+TRAILER!
+
+
+
+PLAZA.MixedRealityThe trailer was at the truck at was up Jaquez at a plaza.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+TRAILER -*-
+NUEVO LAREDO -*-
+The trailer was with the truck that picked up Jaquez in Nuevo Laredo.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+PLAZA�NUEVO LAREDO -*-
+The plaza is in in Nuevo Laredo.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"JAQUEZPERSONAn individual who was picked up by a truck with a trailer in Nuevo Laredo.)
+
+("entity"TRUCKMEANS_OF_TRANSPORTATIONA vehicle that, along with a trailer, picked up Jaquez.)
+
+("entity"TRAILERMEANS_OF_TRANSPORTATIONA vehicle attached to a truck that picked up Jaquez.)
+
+("entity"PLAZALOCATIONThe location in Nuevo Laredo where Jaquez was picked up.)
+
+("entity"NUEVO LAREDOLOCATIONThe city where Jaquez was picked up.)
+
+("relationship"JAQUEZTRUCKJaquez was picked up by the truck.10)
+
+("relationship"JAQUEZTRAILERJaquez was picked up by the truck with the trailer.10)
+
+("relationship"JAQUEZPLAZAJaquez was picked up at a plaza.10)
+
+("relationship"JAQUEZNUEVO LAREDOJaquez was picked up in Nuevo Laredo.10)
+
+("relationship"TRUCKPLAZAThe truck picked up Jaquez at a plaza.10)
+
+("relationship"TRUCKNUEVO LAREDOThe truck picked up Jaquez in Nuevo Laredo.10)
+
+("relationship"TRAILERPLAZAThe trailer was with the truck that picked up Jaquez at a plaza.10)
+
+("relationship"TRAILERNUEVO LAREDOThe trailer was with the truck that picked up Jaquez in Nuevo Laredo.10)
+
+("relationship"PLAZANUEVO LAREDOThe plaza is located in Nuevo Laredo.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 61 ---
+Prompt:
+At about 6:30 a.m. Friday, the Santa Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach in Santa Cruz, CA, linked to an ongoing smuggling case.
+
+Prediction:
+("entity"!
+
+
+
+SFLATABLE RAFT.MixedRealityMEANS_OF_TRANSPORTATION!
+
+
+
+An abandoned raft linked near Seal Rock Beach in Santa Cruz, CA)
+.accounts
+("entity"!
+
+
+
+SEAL ROCK BEACH,LOCATION -*-
+A location in Santa Cruz, California)
+!
+
+
+
+
+("entity"!
+
+
+
+INFLATABLE RAFT -*-
+SEAL ROCK BEACH -*-
+An Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach in Santa Cruz, California 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"INFLATABLE RAFTMEANS_OF_TRANSPORTATIONAn abandoned raft found near Seal Rock Beach in Santa Cruz, California)
+
+("entity"SEAL ROCK BEACHLOCATIONA location in Santa Cruz, California)
+
+("relationship"INFLATABLE RAFTSEAL ROCK BEACHSanta Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach in Santa Cruz, California9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 62 ---
+Prompt:
+Gutierrez-Castro directed the movement and actions of these witnesses and facilitated their entry into and presence in the United States
+
+Prediction:
+("entity"!
+
+
+
+GUTIERREZ-CASTRO -*-
+PERSON!
+
+
+
+An individual who directed the movement and actions of witnesses and.accounts ("entity"!
+
+
+
+WITNESSES.MixedRealityPERSON!
+
+
+
+Individuals whose movement and actions were directed by Gutierrez-Castro.)!
+
+
+
+ ("entity"!
+
+
+
+UNITED STATES.MixedRealityLOCATION!
+
+
+
+The country where the witnesses of presence of the witnesses were facilitated.)!
+
+
+
+ ("relationship"!
+
+
+
+GUTIERREZ-CASTRO -*-
+WITNESSES!
+
+
+
+Gutierrez-Castro directed the movement and actions of these witnesses.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+GUTIERREZ-CASTRO!
+
+
+
+UNITED STATES!
+
+
+
+Gutierrez-Castro facilitated the entry into and presence in the United States.!
+
+
+
+10)!
+
+
+
+ ("!
+Ground Truth:
+("entity"GUTIERREZ-CASTROPERSONAn individual who directed the movement and actions of witnesses.)  ("entity"WITNESSESPERSONIndividuals whose movement and actions were directed by Gutierrez-Castro.)  ("entity"UNITED STATESLOCATIONThe country where the entry and presence of the witnesses was facilitated.)  ("relationship"GUTIERREZ-CASTROWITNESSESGutierrez-Castro directed the movement and actions of these witnesses.10)  ("relationship"GUTIERREZ-CASTROUNITED STATESGutierrez-Castro facilitated their entry into and presence in the United States.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 63 ---
+Prompt:
+On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.
+
+Prediction:
+("entity"!
+
+
+
+SAI DESHPANDE PERSON!
+
+
+
+A known smuggler)
+ for transporting undocumented)
+ an 18-wheeler.)
+.accounts
+("entity"!
+
+
+
+18UGGLER PERSON!
+
+
+
+An individual involved in the human smuggling activities)
+!
+
+
+
+
+("entity"!
+
+
+
+18-WHEELER -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A large vehicle used for smuggling migrants)
+!
+
+
+
+
+("entity"!
+
+
+
+SAI DESHPANDE -*-
+SMUGGLER!
+
+
+
+Sai Deshpande is identified as a smuggler involved in the case 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+SAI DESHPANDE!
+
+
+
+18-WHEELER!
+
+
+
+Sai Deshpande drove an 18-wheeler carrying undocumented migrants 8)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"SAI DESHPANDEPERSONA known smuggler responsible for transporting migrants in an 18-wheeler)
+
+("entity"SMUGGLERPERSONAn individual engaged in illegal human smuggling activities)
+
+("entity"18-WHEELERMEANS_OF_TRANSPORTATIONA large truck used for smuggling operations)
+
+("relationship"SAI DESHPANDESMUGGLERSai Deshpande is identified as a smuggler involved in this case8)
+
+("relationship"SAI DESHPANDE18-WHEELERSai Deshpande drove the 18-wheeler carrying undocumented migrants8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 64 ---
+Prompt:
+Movant and his co-defendants stole a group of undocumented aliens at gunpoint from another alien smuggling organization, transported them to another stash house, extorted money from their families, threatened the aliens with guns, and physically abused them
+
+Prediction:
+("entity"!
+
+
+
+MOVANT ANDPERSON!
+
+
+
+An individual who stole along his co-defendants, stole a group of undocumented aliens and gunpoint from.accounts
+("entity"!
+
+
+
+CO-DEFENDANTS -*-
+PERSON!
+
+
+
+Individuals who stole with the movant, stole a group of undocumented aliens at gunpoint.)
+!
+
+
+
+
+("entity"!
+
+
+
+UNDOCUMENTED ALIENS.accountsSMUGGLED_ITEMS!
+
+
+
+A group of individuals who were stolen at gunpoint by the Movant and his co-defendants.)
+!
+
+
+
+
+("entity"!
+
+
+
+STEN SMUGGLING ORGANIZATION_ABCORGANIZATION -*-
+The organization from which the undocumented aliens were stolen at!
+
+
+
+
+("entity"!
+
+
+
+STASH HOUSE!
+
+
+
+LOCATION!
+
+
+
+A location to which the undocumented aliens were transported.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MOVANT!
+
+
+
+CO-DEFENDANTS!
+
+
+
+The Movant and his co-defendants acted a group of undocumented aliens..!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MOVANT!
+
+
+
+UNDOCUMENTED ALIENS!
+
+
+
+The Movant and a group of undocumented aliens at!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CO-DEFENDANTS�UNDOCUMENTED ALIENS!
+
+
+
+The co-defendants stole a group of undocumented aliens with!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+UNANT_ABCALIEN SMUGGLING ORGANIZATION!
+
+
+
+The Movant stole undocumented group of undocumented aliens from another alien smuggling organization.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CO-DEFENDANTS�ALIEN SMUGGLING ORGANIZATION -*-
+The co-defendants stole a group of undocumented aliens from another alien smuggling organization.!
+
+
+
+9)
+!
+
+
+
+
+("relationship"!
+
+
+
+UNDOCUMENTED ALIENS_ABCSTEN SMUGGLING ORGANIZATION!
+
+
+
+The undocumented aliens were stolen from another alien smuggling organization.!
+
+
+
+9)
+!
+
+
+
+
+("relationship"!
+
+
+
+UNANT_ABCSTASH HOUSE!
+
+
+
+The Movant transported the undocumented aliens to another stash house.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CO-DEFENDANTS!
+
+
+
+STASH HOUSE!
+
+
+
+The co-defendants transported the undocumented aliens to another stash house.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+UNDOCUMENTED ALIENS -*-
+STASH HOUSE!
+
+
+
+The undocumented aliens were transported to another stash house.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MOVANTPERSONAn individual who, with his co-defendants, stole a group of undocumented aliens at gunpoint.)
+
+("entity"CO-DEFENDANTSPERSONIndividuals who, with the Movant, stole a group of undocumented aliens at gunpoint.)
+
+("entity"UNDOCUMENTED ALIENSSMUGGLED_ITEMSA group of people who were stolen at gunpoint by the Movant and his co-defendants.)
+
+("entity"ALIEN SMUGGLING ORGANIZATIONORGANIZATIONAn organization from which the undocumented aliens were stolen.)
+
+("entity"STASH HOUSELOCATIONA location to which the undocumented aliens were transported.)
+
+("relationship"MOVANTCO-DEFENDANTSThe Movant and his co-defendants stole a group of undocumented aliens together.10)
+
+("relationship"MOVANTUNDOCUMENTED ALIENSThe Movant stole a group of undocumented aliens.10)
+
+("relationship"CO-DEFENDANTSUNDOCUMENTED ALIENSThe co-defendants stole a group of undocumented aliens.10)
+
+("relationship"MOVANTALIEN SMUGGLING ORGANIZATIONThe Movant stole a group of undocumented aliens from another alien smuggling organization.9)
+
+("relationship"CO-DEFENDANTSALIEN SMUGGLING ORGANIZATIONThe co-defendants stole a group of undocumented aliens from another alien smuggling organization.9)
+
+("relationship"UNDOCUMENTED ALIENSALIEN SMUGGLING ORGANIZATIONThe undocumented aliens were stolen from an alien smuggling organization.9)
+
+("relationship"MOVANTSTASH HOUSEThe Movant transported the undocumented aliens to another stash house.10)
+
+("relationship"CO-DEFENDANTSSTASH HOUSEThe co-defendants transported the undocumented aliens to another stash house.10)
+
+("relationship"UNDOCUMENTED ALIENSSTASH HOUSEThe undocumented aliens were transported to another stash house.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 65 ---
+Prompt:
+YANG,DEFENDANT,NEW YORK BROKER
+
+Prediction:
+("entity"!
+
+
+
+Y. YANG PERSON!
+
+
+
+A individual who was charged to was be paid to a Mexican York broker.).accounts
+("entity"!
+
+
+
+NEWENDANT PERSON!
+
+
+
+An individual who was to kill a. Yang to a New York broker.)
+!
+
+
+
+
+("entity"!
+
+
+
+NEW YORK BROKER.MixedRealityPERSON!
+
+
+
+An individual who whom Mr defendant threatened to sell Mr. Yang.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MR YORK LOCATION!
+
+
+
+The location where the broker.)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEF. YANG_ABCDEFENDANT!
+
+
+
+The Defendant was to sell Mr. Yang to!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEF. YANG -*-
+NEW YORK BROKER!
+
+
+
+The Defendant threatened to sell Mr. Yang to a New York broker.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANT_ABCNEW YORK BROKER!
+
+
+
+The Defendant threatened to sell to. Yang to a New York broker. -*-
+9)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEF YORK BROKER -*-
+NEW YORK.MixedRealityThe New was in in New York.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MR. YANGPERSONAn individual who was told he would be sold to a New York broker.)
+
+("entity"DEFENDANTPERSONAn individual who threatened to sell Mr. Yang to a New York broker.)
+
+("entity"NEW YORK BROKERPERSONAn individual to whom the Defendant threatened to sell Mr. Yang.)
+
+("entity"NEW YORKLOCATIONThe location of the broker.)
+
+("relationship"MR. YANGDEFENDANTThe Defendant threatened to sell Mr. Yang.10)
+
+("relationship"MR. YANGNEW YORK BROKERThe Defendant threatened to sell Mr. Yang to a New York broker.9)
+
+("relationship"DEFENDANTNEW YORK BROKERThe Defendant threatened to sell Mr. Yang to a New York broker.9)
+
+("relationship"NEW YORK BROKERNEW YORKThe broker is located in New York.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 66 ---
+Prompt:
+In the video, Jaquez asserted he saw the last four aliens get into the trailer but admitted he did not ask any questions or walk away because he wanted to get paid
+
+Prediction:
+("entity"!
+
+
+
+JAQUEZ!
+
+
+
+PERSON!
+
+
+
+An individual who asserted aliens aliens entering into a trailer.)!
+
+
+
+
+("entity"!
+
+
+
+ALIENS.MixedRealitySMUGGLED_ITEMS.MixedRealityA group of four individuals who got into a trailer.)
+!
+
+
+
+
+("entity"!
+
+
+
+TRAILER.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+The vehicle the which the aliens aliens got.)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ.MixedRealityALIENS!
+
+
+
+Jaquez asserted the last four aliens get into the trailer.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ!
+
+
+
+TRAILER!
+
+
+
+Jaquez saw the aliens get into the trailer.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+ALIENS_ABCTRAILER!
+
+
+
+The aliens got into the trailer.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"JAQUEZPERSONAn individual who witnessed four aliens getting into a trailer.)
+
+("entity"ALIENSSMUGGLED_ITEMSA group of four individuals who got into the trailer.)
+
+("entity"TRAILERMEANS_OF_TRANSPORTATIONThe vehicle into which the four aliens got.)
+
+("relationship"JAQUEZALIENSJaquez saw the last four aliens get into the trailer.10)
+
+("relationship"JAQUEZTRAILERJaquez saw the aliens get into the trailer.10)
+
+("relationship"ALIENSTRAILERFour aliens got into the trailer.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 67 ---
+Prompt:
+Shortly after 6 a.m., an agent patrolling the Imperial Beach coastline near Seacoast Drive and Admiralty Way observed four men walking north along the beach.
+
+Prediction:
+("entity"!
+
+
+
+AGENT.MixedRealityPERSON!
+
+
+
+An Patrol Agent on patrol)
+)
+!
+
+
+
+
+("entity"!
+
+
+
+IMPERIAL BEACH COASTLINE LOCATION!
+
+
+
+Coastal area area)
+!
+
+
+
+
+("entity"!
+
+
+
+SEACOAST DRIVE AND ADMIRALTY WAY LOCATION.MixedRealityPatmark near Imperial suspects were spotted)
+!
+
+
+
+
+("relationship"!
+
+
+
+AGENT_ABCIMPERIAL BEACH COASTLINE -*-
+Agent pat patrolling the Imperial Beach coastline near9)
+!
+
+
+
+
+("relationship"!
+
+
+
+AGENTPERIAL BEACH COASTLINE -*-
+SEACOAST DRIVE AND ADMIRALTY WAY -*-
+Se Imperial is near Seacoast Drive and Admiralty Way,9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"AGENTPERSONBorder Patrol agent on foot patrol)
+
+("entity"IMPERIAL BEACH COASTLINELOCATIONCoastal patrol area)
+
+("entity"SEACOAST DRIVE AND ADMIRALTY WAYLOCATIONLandmarks near where individuals were seen)
+
+("relationship"AGENTIMPERIAL BEACH COASTLINEAgent was patrolling the Imperial Beach coastline9)
+
+("relationship"IMPERIAL BEACH COASTLINESEACOAST DRIVE AND ADMIRALTY WAYThe coastline is near Seacoast Drive and Admiralty Way9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 68 ---
+Prompt:
+Agent Ortiz noticed that it was only occupied by passenger Crystal Doerr and driver Jesse Dominguez
+
+Prediction:
+("entity"!
+
+
+
+ORTIZ.MixedRealityPERSON!
+
+
+
+An agent who noticed the vehicle was only occupied by a passenger and a driver.).accounts ("entity"!
+
+
+
+CRYSTAL DOERR -*-
+PERSON!
+
+
+
+A passenger in the vehicle.)!
+
+
+
+ ("entity"!
+
+
+
+JESSE DOMINGUEZ -*-
+PERSON!
+
+
+
+The driver of the vehicle.)!
+
+
+
+ ("relationship"!
+
+
+
+ORTIZ.MixedRealityCRYSTAL DOERR!
+
+
+
+Agent Ortiz noticed that Doerr in the vehicle.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+ORTIZ -*-
+JESSE DOMINGUEZ -*-
+Agent Ortiz noticed Jesse Dominguez in the vehicle.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CRYSTAL DOERR -*-
+JESSE DOMINGUEZ!
+
+
+
+Crystal Doerr was a driver and Jesse Dominguez was the driver.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"ORTIZPERSONAn agent who noticed the vehicle was only occupied by a passenger and a driver.)  ("entity"CRYSTAL DOERRPERSONThe passenger in the vehicle.)  ("entity"JESSE DOMINGUEZPERSONThe driver of the vehicle.)  ("relationship"ORTIZCRYSTAL DOERRAgent Ortiz noticed Crystal Doerr in the vehicle.10)  ("relationship"ORTIZJESSE DOMINGUEZAgent Ortiz noticed Jesse Dominguez in the vehicle.10)  ("relationship"CRYSTAL DOERRJESSE DOMINGUEZCrystal Doerr was the passenger and Jesse Dominguez was the driver.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 69 ---
+Prompt:
+A total of 20 individuals were encountered, including two suspected smugglers who were among those arrested and transferred to U.S. Coast Guard custody for processing.
+
+Prediction:
+("entity"!
+
+
+
+SMUS.ED SMUGGLERS -*-
+PERSON.MixedRealityTwo individuals suspected of smuggling)
+.MixedReality
+("
+Ground Truth:
+("entity"SUSPECTED SMUGGLERSPERSONTwo individuals suspected of smuggling)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 70 ---
+Prompt:
+Agents suspected the illegal aliens were involved in a maritime smuggling incident upon noticing that the entire group was wearing similar clothing, new slip-on shoes and sweatpants. Agents also noticed that the group's personal belongings were wet.
+
+Prediction:
+("entity"!
+
+
+
+ILENTS.MixedRealityPERSON!
+
+
+
+Border.S. Border Patrol Agents)
+ in the smuggling incident)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"AGENTSPERSONU.S. Border Patrol agents involved in maritime smuggling investigation)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 71 ---
+Prompt:
+USBP agents were notified that the United States Coast Guard (USCG) intercepted a pleasure craft with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt.
+
+Prediction:
+("entity"!
+
+
+
+USBED STATES COAST GUARD (USCG).accountsORG.accountsCo involved intercepted the vessel)
+!
+
+
+
+
+("entity"!
+
+
+
+PLEASURE CRAFT MEANS_OF_TRANSPORTATION!
+
+
+
+Boat used in smuggling smuggling attempt)
+!
+
+
+
+
+("entity"!
+
+
+
+OCEANSIDE LOCATION!
+
+
+
+Locationshoreore location where interception occurred)
+!
+
+
+
+
+("relationship"!
+
+
+
+USBED STATES COAST GUARD (USCG) -*-
+PLEASURE CRAFT!
+
+
+
+USCG intercepted a pleasure craft carrying in smuggling attempt9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"UNITED STATES COAST GUARD (USCG)PERSONAgency that intercepted the vessel)
+
+("entity"PLEASURE CRAFTMEANS_OF_TRANSPORTATIONBoat used in the smuggling attempt)
+
+("entity"OCEANSIDELOCATIONOff-shore area where interception occurred)
+
+("relationship"UNITED STATES COAST GUARD (USCG)PLEASURE CRAFTUSCG intercepted the pleasure craft involved in smuggling9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 72 ---
+Prompt:
+IMPERIAL BEACH, Calif.- Sunday, at approximately 6:20 a.m., U.S. Border Patrol agents arrested four men from Mexico who swam around the international border wall into the United States along with two additional men who picked them up north of the border to transport them further into the U.S.
+
+Prediction:
+("entity"!
+
+
+
+IM.S. BORDER PATROL AGENTS.accountsPERSON!
+
+
+
+Agents enforcement agents who arrested the smugg)
+!
+
+
+
+
+("entity"!
+
+
+
+MPERIAL BEACH, CALIFORNIA,LOCATION!
+
+
+
+Location where the were)
+ the border)
+)
+!
+
+
+
+
+("entity"!
+
+
+
+U.S. BORDER PATROL AGENTS -*-
+IMPERIAL BEACH, CALIFORNIA!
+
+
+
+Agents arrested arrests arrests near the Beach, California,9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"U.S. BORDER PATROL AGENTSPERSONLaw enforcement officers who arrested the men)
+
+("entity"IMPERIAL BEACH, CALIFORNIALOCATIONPlace where arrests occurred near the border wall)
+
+("relationship"U.S. BORDER PATROL AGENTSIMPERIAL BEACH, CALIFORNIAAgents made the arrests near Imperial Beach, California9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 73 ---
+Prompt:
+Moreno and the other occupants of the vehicle were taken to the Border Patrol Station for further processing.
+
+Prediction:
+("entity"!
+
+
+
+MORENO!
+
+
+
+PERSON!
+
+
+
+An individualant of the vehicle)
+ was taken to theulla Border Patrol Station for further processing.).accounts
+("entity"!
+
+
+
+CORDER PATROL STATION LOCATION!
+
+
+
+The location patrol station where Moreno and other other occupants of the vehicle were taken for further processing)
+!
+
+
+
+
+("relationship"!
+
+
+
+MORENO_ABCBORDER PATROL STATION -*-
+Moreno and the other occupants of the vehicle were taken to further processing to the station Patrol Station 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MORENOPERSONAn occupant of the vehicle that was taken to Cotulla Border Patrol Station for further processing)
+
+("entity"BORDER PATROL STATIONLOCATIONA border patrol station where Moreno and the other occupants of the vehicle were taken for further processing)
+
+("relationship"MORENOBORDER PATROL STATIONMoreno and the other occupants of the vehicle were taken for further processing to this Border Patrol Station8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 74 ---
+Prompt:
+During this time, the group contacted relatives of the aliens living in the United States. The family members were instructed to wire Mejia-Orosco funds. He received $ 1,000 from Paz-Ortega's family in Los Angeles and $ 1,700 from relatives of Cruz-Morales living in New York City. Two days after arriving, the three drove to the Laredo International Airport. Mejia-Orosco supplied the aliens with airline tickets to San Antonio and the key to a motel room there. Later, Mejia-Orosco met the aliens at the motel and drove them to the San Antonio International Airport.
+
+Prediction:
+("entity"!
+
+
+
+MEJIA-OROSCO -*-
+PERSON!
+
+
+
+An smugg of Mexico who!
+
+
+
+
+("entity"!
+
+
+
+PAZ-ORTEGA'SPERSON!
+
+
+
+A relative who supplied with Mejia-Orosco)
+!
+
+
+
+
+("entity"!
+
+
+
+CRUZ-MORALES -*-
+PERSON!
+
+
+
+A person who travelled with Mejia-Orosco)
+!
+
+
+
+
+("entity"!
+
+
+
+LOSAREDO INTERNATIONAL AIRPORT!
+
+
+
+LOCATION!
+
+
+
+A airport in was-Ortega and Cruz-Morales flew to)
+ Mejia-Orosco)
+!
+
+
+
+
+("entity"!
+
+
+
+SAN ANTONIO INTERNATIONALLOCATION!
+
+
+
+A city where the where Paz-Ortega and Cruz-Morales went to with)
+)
+ key was given by Mejia-Orosco)
+!
+
+
+
+
+("relationship"!
+
+
+
+SAN ANTONIO INTERNATIONALLOCATION!
+
+
+
+A place in Texas where Paz-Ortega and Cruz-Morales flew to airport room whose key was provided by Mejia-Orosco)
+!
+
+
+
+
+("relationship"!
+
+
+
+MEJIA-OROSCO_ABCPAZ-ORTEGA!
+
+
+
+Mejia-Orosco received Paz-Ortega to L Laredo, Tamaulipas, Mexico,9)
+!
+
+
+
+
+("relationship"!
+
+
+
+MEJIA-OROSCO -*-
+CRUZ-MORALES!
+
+
+
+Mejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico}9)
+!
+
+
+
+
+("relationship"!
+
+
+
+MEJIA-OROSCO!
+
+
+
+SAN ANTONIO!
+
+
+
+Me motel in Texas where Paz-Ortega and Cruz-Morales went Mej Mejia-Orosco} went went to San Antonio International Airport}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MEJIA-OROSCOPERSONA citizen of Guatemala)
+
+("entity"PAZ-ORTEGAPERSONA person who travelled with Mejia-Orosco)
+
+("entity"CRUZ-MORALESPERSONA person who travelled with Mejia-Orosco)
+
+("entity"LAREDO INTERNATIONAL AIRPORTLOCATIONAn airport that Paz-Ortega and Cruz-Morales went to with Mejia-Orosco)
+
+("entity"SAN ANTONIOLOCATIONA place in Texas where Paz-Ortega and Cruz-Morales went to motel room whose key was provided by Mejia-Orosco)
+
+("entity"SAN ANTONIOLOCATIONA place in Texas where Paz-Ortega and Cruz-Morales went to motel room whose key was provided by Mejia-Orosco)
+
+("relationship"MEJIA-OROSCOPAZ-ORTEGAMejia-Orosco brought Paz-Ortega to Nuevo Laredo, Tamaulipas, Mexico}9)
+
+("relationship"MEJIA-OROSCOCRUZ-MORALESMejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico}9)
+
+("relationship"MEJIA-OROSCOSAN ANTONIOA place in Texas where Paz-Ortega and Cruz-Morales met with Mejia-Orosco and later went to San Antonio International Airport}9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 75 ---
+Prompt:
+The 30-foot Panga used to smuggle 24 Mexican nationals was stopped by CBP Marine Interdiction agents about five miles west of the coastline at Point Loma.
+
+Prediction:
+("entity"!
+
+
+
+PP MARINE INTERDICTION AGENTS.accountsPERSON!
+
+
+
+Agents who stopped the  vessel)
+!
+
+
+
+
+("entity"!
+
+
+
+P-FOOT PANGA MEANS_OF_TRANSPORTATION!
+
+
+
+Smessel used for smuggle migrants nationals)
+!
+
+
+
+
+("relationship"!
+
+
+
+POINT LOMA.MixedRealityLOCATION -*-
+Locationastal location where of Point the vessel was stopped)
+!
+
+
+
+
+("relationship"!
+
+
+
+CBP MARINE INTERDICTION AGENTS -*-
+30-FOOT PANGA!
+
+
+
+CBP agents stopped the smuggling30-foot Panga smuggling9)
+!
+
+
+
+
+("relationship"!
+
+
+
+CB-FOOT PANGA -*-
+POINT LOMA!
+
+
+
+The vessel was intercepted about Point Loma,9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"CBP MARINE INTERDICTION AGENTSPERSONOfficers who stopped the smuggling vessel)
+
+("entity"30-FOOT PANGAMEANS_OF_TRANSPORTATIONVessel used to smuggle Mexican nationals)
+
+("entity"POINT LOMALOCATIONCoastal area west of which the vessel was intercepted)
+
+("relationship"CBP MARINE INTERDICTION AGENTS30-FOOT PANGACBP agents stopped the 30-foot Panga9)
+
+("relationship"30-FOOT PANGAPOINT LOMAThe vessel was intercepted near Point Loma9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 76 ---
+Prompt:
+Ms. Chen made it into the United States on May 31, 1999, and the organization brought her to Houston, Texas, where Defendant met her
+
+Prediction:
+("entity"!
+
+
+
+MS. CHEN.MixedRealityPERSON!
+
+
+
+An individual who made it into the United States on May 31, 1999,.accounts
+("entity"!
+
+
+
+UNITANIZATION_ABCPERSONANIZATION!
+
+
+
+The organization that brought Ms. Chen to Houston, Texas.)
+!
+
+
+
+
+("entity"!
+
+
+
+HOENDANT -*-
+PERSON!
+
+
+
+An individual who met Ms. Chen in Houston, Texas.)
+!
+
+
+
+
+("entity"!
+
+
+
+HOED STATES -*-
+LOCATION!
+
+
+
+The country Ms. Chen made on!
+
+
+
+
+("entity"!
+
+
+
+HOUSTON, TEXAS -*-
+LOCATION!
+
+
+
+The location where Ms organization brought Ms. Chen and where she Defendant met her.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MS. CHEN_ABCUNITED STATES!
+
+
+
+Ms. Chen made it into the United States on!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MS. CHEN_ABCHOANIZATION!
+
+
+
+The organization brought Ms. Chen. Houston, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MS. CHEN -*-
+HOUSTON, TEXAS -*-
+The organization brought Ms. Chen to Houston, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEF. CHEN -*-
+DEFENDANT!
+
+
+
+Theendant met Ms. Chen in Houston, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+ORGANIZATION_ABCHOUSTON, TEXAS -*-
+The organization brought her. Chen to Houston, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANT_ABCHOUSTON, TEXAS -*-
+Defendant met Ms. Chen in Houston, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MS. CHENPERSONAn individual who made it into the United States on May 31, 1999.)
+
+("entity"ORGANIZATIONORGANIZATIONAn entity that brought Ms. Chen to Houston, Texas.)
+
+("entity"DEFENDANTPERSONAn individual who met Ms. Chen in Houston, Texas.)
+
+("entity"UNITED STATESLOCATIONThe country Ms. Chen entered.)
+
+("entity"HOUSTON, TEXASLOCATIONThe city where the organization brought Ms. Chen and where the Defendant met her.)
+
+("relationship"MS. CHENUNITED STATESMs. Chen made it into the United States.10)
+
+("relationship"MS. CHENORGANIZATIONThe organization brought Ms. Chen to Houston, Texas.10)
+
+("relationship"MS. CHENHOUSTON, TEXASThe organization brought Ms. Chen to Houston, Texas.10)
+
+("relationship"MS. CHENDEFENDANTDefendant met Ms. Chen in Houston, Texas.10)
+
+("relationship"ORGANIZATIONHOUSTON, TEXASThe organization brought Ms. Chen to Houston, Texas.10)
+
+("relationship"DEFENDANTHOUSTON, TEXASDefendant met Ms. Chen in Houston, Texas.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 77 ---
+Prompt:
+Allende-Garcia had transported seven aliens: three in the windjammer, and four in the sleeper compartment
+
+Prediction:
+("entity"!
+
+
+
+ALLLENDE-GARCIA -*-
+PERSON!
+
+
+
+An individual who had transported seven aliens.).accounts ("entity"!
+
+
+
+ALIENS.MixedRealitySMUGGLED_ITEMS.MixedRealityA group of seven individuals who were transported by Allende-Garcia.)!
+
+
+
+ ("entity"!
+
+
+
+WINDJAMMER_ABCMEANS_OF_TRANSPORTATION!
+
+
+
+The vessel where three aliens the aliens were transported.)!
+
+
+
+ ("entity"!
+
+
+
+SLEEPER COMPARTMENT.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+A location where four of the aliens were transported.)!
+
+
+
+ ("relationship"!
+
+
+
+ALLENDE-GARCIA -*-
+ALIENS!
+
+
+
+Allende-Garcia had transported seven aliens.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+ALENS_ABCWINDJAMMER!
+
+
+
+Three of the aliens were transported in the windjammer.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+ALIENS -*-
+SLEEPER COMPARTMENT -*-
+Four of the aliens were transported in the sleeper compartment.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"ALLENDE-GARCIAPERSONAn individual who had transported seven aliens.)  ("entity"ALIENSSMUGGLED_ITEMSA group of seven individuals who were transported by Allende-Garcia.)  ("entity"WINDJAMMERMEANS_OF_TRANSPORTATIONA location where three of the aliens were transported.)  ("entity"SLEEPER COMPARTMENTMEANS_OF_TRANSPORTATIONA location where four of the aliens were transported.)  ("relationship"ALLENDE-GARCIAALIENSAllende-Garcia had transported seven aliens.10)  ("relationship"ALIENSWINDJAMMERThree of the aliens were transported in the windjammer.10)  ("relationship"ALIENSSLEEPER COMPARTMENTFour of the aliens were transported in the sleeper compartment.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 78 ---
+Prompt:
+The second event happened on Monday at 12:30 a.m , when the U.S Coast Guard’s Joint Harbor Operation Center notified AMO’s marine interdiction agents (MIAs) about a suspicious vessel off the coast of downtown San Diego.
+
+Prediction:
+("entity"!
+
+
+
+UINT HARBOR OPERATION CENTER ORGANIZATION.MixedRealityCenter agency Harbor Operation Center is for the)
+.MixedReality
+("entity"!
+
+
+
+MIOWNTOWN SAN DIEGO,LOCATION!
+
+
+
+Coastal area of in the notification)
+!
+
+
+
+
+("relationship"!
+
+
+
+JOINT HARBOR OPERATION CENTER_ABCDOWNTOWN SAN DIEGO -*-
+The Joint Harbor Operation Center notified MI about a suspicious vessel off the coast of downtown San Diego}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"JOINT HARBOR OPERATION CENTERORGANIZATIONThe Joint Harbor Operation Center responsible for notification)
+
+("entity"DOWNTOWN SAN DIEGOLOCATIONCoastal location referenced in the event)
+
+("relationship"JOINT HARBOR OPERATION CENTERDOWNTOWN SAN DIEGOThe Joint Harbor Operation Center notified agents about a suspicious vessel off the coast of downtown San Diego9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 79 ---
+Prompt:
+A dark SUV reportedly used by the organization was seen overnight in a coastal neighborhood of Cambria, CA, but agents halted observation after it drove off at dawn.
+
+Prediction:
+("entity"!
+
+
+
+DARK SUV.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle reportedly of smuggling used by thelers)
+!
+
+
+
+
+("entity"!
+
+
+
+CAMBRIA, CA -*-
+LOCATION!
+
+
+
+Aastal area where the was spotted)
+!
+
+
+
+
+("relationship"!
+
+
+
+DARK SUV_ABCCAMBRIA, CA -*-
+A dark SUV was to smugglinglers was seen in Cambria, CA 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DARK SUVMEANS_OF_TRANSPORTATIONA vehicle suspected of being used by smugglers)
+
+("entity"CAMBRIA, CALOCATIONCoastal town where vehicle was spotted)
+
+("relationship"DARK SUVCAMBRIA, CAA dark SUV linked to smugglers was observed in Cambria, California9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 80 ---
+Prompt:
+a vehicle bearing Florida plate had been used to smuggle 17 illegal aliens through a checkpoint near Laredo, Texas in July 2015
+
+Prediction:
+("entity"!
+
+
+
+VEHICLE MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle used a Florida plate plate)
+ had used to smuggle  aliens.).accounts
+("entity"!
+
+
+
+FLLEGAL ALIENS -*-
+SMUGGLED_ITEMS!
+
+
+
+A group of 17 people who were smuggled through!
+
+
+
+
+("entity"!
+
+
+
+LORIDA LOCATION!
+
+
+
+The state of issued the license plate of the vehicle.)
+!
+
+
+
+
+("entity"!
+
+
+
+LAREDO, TEXAS LOCATION!
+
+
+
+The location near which the vehicle was.)
+.)
+!
+
+
+
+
+("relationship"!
+
+
+
+VEHICLE!
+
+
+
+ILORIDA -*-
+The vehicle had a Florida license plate.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+VEHICLE!
+
+
+
+ILLEGAL ALIENS!
+
+
+
+The vehicle was used to smuggle illegal17 illegal aliens.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+VELEGAL ALIENS -*-
+LAREDO, TEXAS -*-
+The illegal aliens were smuggled through a checkpoint near Laredo, Texas.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"VEHICLEMEANS_OF_TRANSPORTATIONA vehicle bearing a Florida license plate that was used to smuggle illegal aliens.)
+
+("entity"ILLEGAL ALIENSSMUGGLED_ITEMSA group of 17 individuals who were smuggled.)
+
+("entity"FLORIDALOCATIONThe state that issued the license plate for the vehicle.)
+
+("entity"LAREDO, TEXASLOCATIONThe location near where the checkpoint was located.)
+
+("relationship"VEHICLEFLORIDAThe vehicle had a Florida license plate.10)
+
+("relationship"VEHICLEILLEGAL ALIENSThe vehicle was used to smuggle 17 illegal aliens.10)
+
+("relationship"ILLEGAL ALIENSLAREDO, TEXASThe illegal aliens were smuggled through a checkpoint near Laredo, Texas.9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 81 ---
+Prompt:
+On March 11, 2004, Defendant Guardado-Mezen and five co-defendants went to an apartment where the illegal immigrants were being held
+
+Prediction:
+("entity"!
+
+
+
+DEFENDANT GUARDADO-MEZEN!
+
+
+
+PERSON!
+
+
+
+An individual who went to an apartment where illegal immigrants were being held.).accounts
+("entity"!
+
+
+
+IL-DEFENDANTS.getElementsPERSON!
+
+
+
+Five individuals who went to Defendant Guardado-Mezen to an apartment.)
+ illegal immigrants were being held.)
+!
+
+
+
+
+("entity"!
+
+
+
+APARTMENT.MixedRealityLOCATION!
+
+
+
+A location where illegal immigrants were being held.)
+!
+
+
+
+
+("relationship"!
+
+
+
+ILLEGAL IMMIGRANTS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+People group of people who held in an apartment.)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANT GUARDADO-MEZEN_ABCCO-DEFENDANTS!
+
+
+
+Defendant Guardado-Mezen went five co-defendants went to an apartment together.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANT GUARDADO-MEZEN!
+
+
+
+APARTMENT!
+
+
+
+Defendant Guardado-Mezen went to an apartment.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+COENDANT GUARDADO-MEZEN!
+
+
+
+ILLEGAL IMMIGRANTS!
+
+
+
+Defendant Guardado-Mezen went to an apartment where illegal immigrants were being held.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CO-DEFENDANTS�APARTMENT!
+
+
+
+The co-defendants went to an apartment.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CO-DEFENDANTS_ABCILLEGAL IMMIGRANTS!
+
+
+
+The co-defendants went to an apartment where illegal immigrants were being held.!
+
+
+
+9)
+!
+
+
+
+
+("relationship"!
+
+
+
+APARTMENT -*-
+ILLEGAL IMMIGRANTS -*-
+Illegal immigrants were being held in an apartment.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DEFENDANT GUARDADO-MEZENPERSONAn individual who went to an apartment where illegal immigrants were being held.)
+
+("entity"CO-DEFENDANTSPERSONFive individuals who went with Defendant Guardado-Mezen to an apartment where illegal immigrants were being held.)
+
+("entity"APARTMENTLOCATIONA location where illegal immigrants were being held.)
+
+("entity"ILLEGAL IMMIGRANTSSMUGGLED_ITEMSA group of people being held in an apartment.)
+
+("relationship"DEFENDANT GUARDADO-MEZENCO-DEFENDANTSDefendant Guardado-Mezen and five co-defendants went to an apartment together.10)
+
+("relationship"DEFENDANT GUARDADO-MEZENAPARTMENTDefendant Guardado-Mezen went to an apartment.10)
+
+("relationship"DEFENDANT GUARDADO-MEZENILLEGAL IMMIGRANTSDefendant Guardado-Mezen went to an apartment where illegal immigrants were being held.9)
+
+("relationship"CO-DEFENDANTSAPARTMENTThe co-defendants went to an apartment.10)
+
+("relationship"CO-DEFENDANTSILLEGAL IMMIGRANTSThe co-defendants went to an apartment where illegal immigrants were being held.9)
+
+("relationship"APARTMENTILLEGAL IMMIGRANTSIllegal immigrants were being held in an apartment.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 82 ---
+Prompt:
+She claimed she had stopped at a gas station where the men had asked for a ride
+
+Prediction:
+("entity"!
+
+
+
+MAS STATION.accountsLOCATION.MixedRealityA location where the men had asked for a ride.).accounts ("entity"!
+
+
+
+MEN PERSON.accountsIndividuals who had for a ride at a gas station.)!
+
+
+
+ ("relationship"!
+
+
+
+MEN_ABCGAS STATION -*-
+The men had asked for a ride at a gas station.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"GAS STATIONLOCATIONA location where the men had asked for a ride.)  ("entity"MENPERSONIndividuals who asked for a ride at a gas station.)  ("relationship"MENGAS STATIONThe men had asked for a ride at the gas station.8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 83 ---
+Prompt:
+Two of the female aliens stated that Movant had sexually assaulted them
+
+Prediction:
+("entity"!
+
+
+
+MOVEMALE ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+Two individuals who stated that Mov Movant had sexually assaulted them.).accounts ("entity"!
+
+
+
+MOVANT!
+
+
+
+PERSON!
+
+
+
+An individual who had accused to have sexually assaulted two female aliens.)!
+
+
+
+ ("relationship"!
+
+
+
+FEMALE ALIENS -*-
+MOVANT!
+
+
+
+Two of the female aliens stated that Mov Movant had sexually assaulted them. 8)!
+
+
+
+!
+Ground Truth:
+("entity"FEMALE ALIENSSMUGGLED_ITEMSTwo individuals who stated that the Movant had sexually assaulted them.)  ("entity"MOVANTPERSONAn individual who was stated to have sexually assaulted the female aliens.)  ("relationship"FEMALE ALIENSMOVANTTwo of the female aliens stated that the Movant had sexually assaulted them.8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 84 ---
+Prompt:
+Cantu and Jefferson were recruited by the same individual to transport illegal aliens
+
+Prediction:
+("entity"!
+
+
+
+CANTU PERSON!
+
+
+
+An individual who to transport illegal aliens.).MixedReality
+("entity"!
+
+
+
+JEFFERSON.MixedRealityPERSON!
+
+
+
+An individual recruited to transport illegal aliens.)
+!
+
+
+
+
+("entity"!
+
+
+
+ILIVIDUAL PERSON.MixedRealityThe individual individual who recruited Cantu and Jefferson.)
+!
+
+
+
+
+("relationship"!
+
+
+
+ILLEGAL ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+The who were to be transported by!
+
+
+
+
+("relationship"!
+
+
+
+CANTU -*-
+INDIVIDUAL -*-
+Cantu was recruited by the individual individual. a was 10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JEFFERSON_ABCINDIVIDUAL!
+
+
+
+Jefferson was recruited by the same individual as Cantu.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CIVIDUAL.MixedRealityILANTU -*-
+C individual recruited Cantu. transport illegal aliens.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+INDIVIDUAL -*-
+JEFFERSON!
+
+
+
+The individual recruited Jefferson to transport illegal aliens.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CANTU_ABCILLEGAL ALIENS!
+
+
+
+Cantu was recruited to transport illegal aliens.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JEFFERSON_ABCILLEGAL ALIENS -*-
+Jefferson was recruited to transport illegal aliens.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"CANTUPERSONAn individual recruited to transport illegal aliens.)
+
+("entity"JEFFERSONPERSONAn individual recruited to transport illegal aliens.)
+
+("entity"INDIVIDUALPERSONAn unnamed person who recruited Cantu and Jefferson.)
+
+("entity"ILLEGAL ALIENSSMUGGLED_ITEMSPeople who were to be transported.)
+
+("relationship"CANTUINDIVIDUALCantu was recruited by the same individual as Jefferson.10)
+
+("relationship"JEFFERSONINDIVIDUALJefferson was recruited by the same individual as Cantu.10)
+
+("relationship"INDIVIDUALCANTUThe individual recruited Cantu to transport illegal aliens.10)
+
+("relationship"INDIVIDUALJEFFERSONThe individual recruited Jefferson to transport illegal aliens.10)
+
+("relationship"CANTUILLEGAL ALIENSCantu was recruited to transport illegal aliens.10)
+
+("relationship"JEFFERSONILLEGAL ALIENSJefferson was recruited to transport illegal aliens.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 85 ---
+Prompt:
+A total of 20 individuals were encountered, including two suspected smugglers who were among those arrested and transferred to U.S. Coast Guard custody for processing.
+
+Prediction:
+("entity"!
+
+
+
+SMUS.ED SMUGGLERS -*-
+PERSON.MixedRealityTwo individuals suspected of smuggling)
+.MixedReality
+("
+Ground Truth:
+("entity"SUSPECTED SMUGGLERSPERSONTwo individuals suspected of smuggling)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 86 ---
+Prompt:
+The 30-foot Panga used to smuggle 24 Mexican nationals was stopped by CBP Marine Interdiction agents about five miles west of the coastline at Point Loma.
+
+Prediction:
+("entity"!
+
+
+
+PP MARINE INTERDICTION AGENTS.accountsPERSON!
+
+
+
+Agents who stopped the anga)
+!
+
+
+
+
+("entity"!
+
+
+
+P-FOOT PANGA -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+Sm to smuggle 24 Mexican)
+!
+
+
+
+
+("entity"!
+
+
+
+POINT LOMA.MixedRealityLOCATION -*-
+Locationastal location where where)
+!
+
+
+
+
+("relationship"!
+
+
+
+CBP MARINE INTERDICTION AGENTS -*-
+30 LOMA -*-
+Agents were the panga near Point Loma}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"CBP MARINE INTERDICTION AGENTSPERSONAgents who stopped the panga)
+
+("entity"30-FOOT PANGAMEANS_OF_TRANSPORTATIONUsed to smuggle 24 nationals)
+
+("entity"POINT LOMALOCATIONCoastline location near interception)
+
+("relationship"CBP MARINE INTERDICTION AGENTSPOINT LOMAAgents stopped the panga near Point Loma9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 87 ---
+Prompt:
+During the early morning hours of that same date of June 2nd, 1999, Miss Fu Mei Chen was moved around at the direction of the defendant and other smugglers
+
+Prediction:
+("entity"!
+
+
+
+MISS FU MEI CHEN!
+
+
+
+PERSON!
+
+
+
+An individual who was moved around at the direction of the defendant and other smugglers.).accounts
+("entity"!
+
+
+
+DEFENDANT PERSON!
+
+
+
+An individual who directed the movement of Miss Fu Mei Chen.)
+!
+
+
+
+
+("entity"!
+
+
+
+SMUGGLERS -*-
+PERSON!
+
+
+
+Individuals who directed Miss Fu Mei Chen at.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MISS FU MEI CHEN_ABCDEFENDANT!
+
+
+
+The Fu Mei Chen was moved around at the direction of the defendant.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+MISS FU MEI CHEN_ABCSMUGGLERS!
+
+
+
+Miss Fu Mei Chen was moved around by the direction of other smugglers.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DEFENDANT_ABCSMUGGLERS -*-
+The defendant was involved with other smugglers.!
+
+
+
+9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MISS FU MEI CHENPERSONAn individual who was moved around at the direction of the defendant and other smugglers.)
+
+("entity"DEFENDANTPERSONAn individual who directed the movement of Miss Fu Mei Chen.)
+
+("entity"SMUGGLERSPERSONIndividuals who moved Miss Fu Mei Chen around.)
+
+("relationship"MISS FU MEI CHENDEFENDANTMiss Fu Mei Chen was moved around at the direction of the defendant.10)
+
+("relationship"MISS FU MEI CHENSMUGGLERSMiss Fu Mei Chen was moved around at the direction of other smugglers.10)
+
+("relationship"DEFENDANTSMUGGLERSThe defendant was working with other smugglers.9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 88 ---
+Prompt:
+Movant and his co-defendants severely mistreated the undocumented aliens by: brandishing firearms and threatening the aliens; tying up one of the aliens and then kicking and beating him; and sexually assaulting three of the female aliens
+
+Prediction:
+("entity"!
+
+
+
+MOVANT ANDPERSON!
+
+
+
+An individual who severely along his co-defendants, severely mistreated undocumented undocumented aliens.)!
+
+
+
+ ("entity"!
+
+
+
+CO-DEFENDANTS -*-
+PERSON!
+
+
+
+Individuals who, with the movant, severely mistreated the undocumented aliens.)!
+
+
+
+ ("entity" -*-
+UNDOCUMENTED ALIENS.accountsSMUGGLED_ITEMS!
+
+
+
+A group of people who were severely mistreated by the Movant and his co-defendants.)!
+
+
+
+ ("entity"!
+
+
+
+FIREARMS.getElementsMEUGGLED_ITEMS!
+
+
+
+Weapons brandished by the Movant and his co-defendants.)!
+
+
+
+ ("entity"!
+
+
+
+MOVANT!
+
+
+
+UNDOCUMENTED ALIENS -*-
+The Movant severely mistreated the undocumented aliens.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CO-DEFENDANTS_ABCUNDOCUMENTED ALIENS!
+
+
+
+The co-defendants severely mistreated the undocumented aliens.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+MOVANT_ABCFIREARMS!
+
+
+
+The Movant brandished firearms.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CO-DEFENDANTS�FIREARMS!
+
+
+
+The co-defendants brandished firearms.!
+
+
+
+10)!
+
+
+
+ ("!
+Ground Truth:
+("entity"MOVANTPERSONAn individual who, with his co-defendants, severely mistreated the undocumented aliens.)  ("entity"CO-DEFENDANTSPERSONIndividuals who, with the Movant, severely mistreated the undocumented aliens.)  ("entity"UNDOCUMENTED ALIENSSMUGGLED_ITEMSA group of people who were severely mistreated by the Movant and his co-defendants.)  ("entity"FIREARMSSMUGGLED_ITEMSWeapons brandished by the Movant and his co-defendants.)  ("relationship"MOVANTUNDOCUMENTED ALIENSThe Movant severely mistreated the undocumented aliens.10)  ("relationship"CO-DEFENDANTSUNDOCUMENTED ALIENSThe co-defendants severely mistreated the undocumented aliens.10)  ("relationship"MOVANTFIREARMSThe Movant brandished firearms.10)  ("relationship"CO-DEFENDANTSFIREARMSThe co-defendants brandished firearms.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 89 ---
+Prompt:
+On August 28, 2022, Jaquez asked Descargas through WhatsApp whether Descargas had a schedule "to load the box,"
+
+Prediction:
+("entity"!
+
+
+
+JAQUEZ!
+
+
+
+PERSON!
+
+
+
+An person who.accounts
+("entity"!
+
+
+
+DESCARGAS -*-
+PERSON!
+
+
+
+ A person)
+ was asked to Jaquez)
+ inquiry)
+ a a)
+!
+
+
+
+
+("entity"!
+
+
+
+WHATSAPP -*-
+MEANS_OF_COMMUNICATION!
+
+
+
+ The used which Jaquez asked with Descargas)
+!
+
+
+
+
+("relationship"!
+
+
+
+JAQUEZ!
+
+
+
+DESCARGAS!
+
+
+
+Jaquez asked Descargas if WhatsApp whether Descargas had a schedule "to load the box,"9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"JAQUEZPERSON A person)
+
+("entity"DESCARGASPERSON A person who was related to Jaquez's communication about loading box)
+
+("entity"WHATSAPPMEANS_OF_COMMUNICATION Channel through which Jaquez communicated with Descargas)
+
+("relationship"JAQUEZDESCARGAS Jaquez asked Descargas through WhatsApp whether Descargas had a schedule "to load the box9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 90 ---
+Prompt:
+Cantu was brought to the trailer by smugglers and witnessed Jefferson close the trailer door
+
+Prediction:
+("entity"!
+
+
+
+CANTU!
+
+
+
+PERSON!
+
+
+
+An individual who was brought to the trailer by smugglers.).accounts
+("entity"!
+
+
+
+SMUGGLERS!
+
+
+
+PERSON!
+
+
+
+Individual individuals who brought Cantu to the trailer.)
+!
+
+
+
+
+("entity"!
+
+
+
+JEFFERSON -*-
+PERSON!
+
+
+
+An individual who closed witnessed closing the trailer door.)
+!
+
+
+
+
+("entity"!
+
+
+
+TRAILER MEANS_OF_TRANSPORTATION!
+
+
+
+The vehicle used which Cantu was brought by!
+
+
+
+
+("entity"!
+
+
+
+CANTU_ABCSMUGGLERS!
+
+
+
+Cantu was brought to the trailer by smugglers.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+CANTU_ABCTRAILER!
+
+
+
+Cantu was brought to the trailer.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JEUGGLERS -*-
+JEAILER!
+
+
+
+Sm smugglers brought Cantu to the trailer.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+JEFFERSON_ABCTRAILER!
+
+
+
+Jefferson was the trailer door.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"CANTUPERSONAn individual who was brought to the trailer by smugglers.)
+
+("entity"SMUGGLERSPERSONThe individuals who brought Cantu to the trailer.)
+
+("entity"JEFFERSONPERSONAn individual who was witnessed closing the trailer door.)
+
+("entity"TRAILERMEANS_OF_TRANSPORTATIONThe vehicle to which Cantu was brought.)
+
+("relationship"CANTUSMUGGLERSCantu was brought to the trailer by smugglers.10)
+
+("relationship"CANTUTRAILERCantu was brought to the trailer.10)
+
+("relationship"SMUGGLERSTRAILERThe smugglers brought Cantu to the trailer.10)
+
+("relationship"JEFFERSONTRAILERJefferson closed the trailer door.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 91 ---
+Prompt:
+Codefendant Henry Gutierrez-Andrade handed his cell phone to the captives, telling them to call their family members and direct them not to send the remaining money to the original smugglers
+
+Prediction:
+("entity"!
+
+
+
+HENRY GUTIERREZ-ANDRADE PERSON!
+
+
+
+A codefendant in handed his cell phone to the captives.).accounts ("entity"!
+
+
+
+CELLTIVES.MixedRealityPERSON!
+
+
+
+Individuals to were handed a cell phone by instructions not call their family members.)!
+
+
+
+ ("entity"!
+
+
+
+CELLAMILY MEMBERS!
+
+
+
+PERSON.MixedRealityPeople who captives were instructed to call.)!
+
+
+
+ ("entity"!
+
+
+
+ORIGINAL SMUGGLERS -*-
+PERSON!
+
+
+
+Thes the whom the captives were told not to send money.)!
+
+
+
+ ("relationship"!
+
+
+
+CELL PHONE!
+
+
+
+MEANS_OF_COMMUNICATION.MixedRealityThe device handed to the captives.) make their family members.)!
+
+
+
+ ("relationship"!
+
+
+
+HENRY GUTIERREZ-ANDRADE_ABCCAPTIVES!
+
+
+
+Henry Gutierrez-Andrade handed his cell phone to the captives.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPRY GUTIERREZ-ANDRADE!
+
+
+
+CELL PHONE!
+
+
+
+Henry Gutierrez-Andrade handed his cell phone.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES.MixedRealityF PHONE!
+
+
+
+The captives were given a cell phone.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES -*-
+FAMILY MEMBERS!
+
+
+
+The captives were told to call their family members.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES -*-
+ORIGINAL SMUGGLERS -*-
+The captives were directed not to send money to the original smugglers.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"HENRY GUTIERREZ-ANDRADEPERSONA codefendant who handed his cell phone to the captives.)  ("entity"CAPTIVESPERSONIndividuals who were given a cell phone and told to call their family members.)  ("entity"FAMILY MEMBERSPERSONPeople the captives were told to call.)  ("entity"ORIGINAL SMUGGLERSPERSONIndividuals to whom the captives were directed not to send money.)  ("entity"CELL PHONEMEANS_OF_COMMUNICATIONA device handed to the captives to call their family members.)  ("relationship"HENRY GUTIERREZ-ANDRADECAPTIVESHenry Gutierrez-Andrade handed his cell phone to the captives.10)  ("relationship"HENRY GUTIERREZ-ANDRADECELL PHONEHenry Gutierrez-Andrade handed his cell phone.10)  ("relationship"CAPTIVESCELL PHONEThe captives were handed a cell phone.10)  ("relationship"CAPTIVESFAMILY MEMBERSThe captives were told to call their family members.10)  ("relationship"CAPTIVESORIGINAL SMUGGLERSThe captives were directed not to send money to the original smugglers.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 92 ---
+Prompt:
+The black truck had a camper, either dark blue or black in color, which are commonly used to transport illegal aliens
+
+Prediction:
+("entity"!
+
+
+
+BLACK TRUCK MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle with a camper that.accounts ("entity"!
+
+
+
+CAMPER -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that.) used to transport illegal aliens.)!
+
+
+
+ ("entity" -*-
+ILLEGAL ALIENS.MixedRealitySMUGGLED_ITEMS!
+
+
+
+People who transported in theers.)!
+
+
+
+ ("relationship"!
+
+
+
+BLACK TRUCK.getElementsCAMPER!
+
+
+
+The black truck had a camper.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAMPER -*-
+ILLEGAL ALIENS -*-
+Camers are commonly used to transport illegal aliens.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"BLACK TRUCKMEANS_OF_TRANSPORTATIONA vehicle with a camper.)  ("entity"CAMPERMEANS_OF_TRANSPORTATIONA vehicle component commonly used to transport illegal aliens.)  ("entity"ILLEGAL ALIENSSMUGGLED_ITEMSPeople commonly transported in campers.)  ("relationship"BLACK TRUCKCAMPERThe black truck had a camper.10)  ("relationship"CAMPERILLEGAL ALIENSCampers are commonly used to transport illegal aliens.8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 93 ---
+Prompt:
+According to the complaint, Chelliah is alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States.
+
+Prediction:
+("entity"!
+
+
+
+CHLLIAH.MixedRealityPERSON!
+
+
+
+An alleged of human alien alien)
+.MixedReality
+("entity"!
+
+
+
+ALIRI LANKA -*-
+LOCATION!
+
+
+
+Country of origin for smuggling alleged scheme}
+!
+
+
+
+
+("entity"!
+
+
+
+HAITI,LOCATION!
+
+
+
+Countryit country in!
+
+
+
+
+("entity"!
+
+
+
+TURKS AND CAICOS ISLANDS -*-
+LOCATION!
+
+
+
+Transit location}
+!
+
+
+
+
+("entity"!
+
+
+
+THE BAHAMAS -*-
+LOCATION!
+
+
+
+Transit location}
+!
+
+
+
+
+("entity"!
+
+
+
+UNITED STATES -*-
+LOCATION!
+
+
+
+Destination destination of the route}
+!
+
+
+
+
+("relationship"!
+
+
+
+CHELLIAH!
+
+
+
+SRI LANKA -*-
+Chelliah attempted travel from Sri Lanka}9)
+!
+
+
+
+
+("relationship"!
+
+
+
+CHELLIAH -*-
+HAITI -*-
+Chelliah facilitated travel through Haiti}9)
+!
+
+
+
+
+("relationship"!
+
+
+
+CHELLIAH -*-
+TURKS AND CAICOS ISLANDS -*-
+Chelliah facilitated travel through Turks and Caicos Islands -*-
+9)
+!
+
+
+
+
+("relationship"!
+
+
+
+CHELLIAH -*-
+THE BAHAMAS -*-
+Chelliah facilitated travel through the Bahamas ‌9)
+!
+
+
+
+
+("relationship"!
+
+
+
+CHELLIAH -*-
+UNITED STATES -*-
+Chelliah facilitated travel travel into the United States}9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"CHELLIAHPERSONIndividual accused of facilitating illegal travel}
+
+("entity"SRI LANKALOCATIONCountry of origin in the smuggling route}
+
+("entity"HAITILOCATIONTransit location}
+
+("entity"TURKS AND CAICOS ISLANDSLOCATIONTransit location}
+
+("entity"THE BAHAMASLOCATIONTransit location}
+
+("entity"UNITED STATESLOCATIONFinal destination of smuggling route}
+
+("relationship"CHELLIAHSRI LANKAChelliah facilitated travel from Sri Lanka9)
+
+("relationship"CHELLIAHHAITIChelliah facilitated travel through Haiti9)
+
+("relationship"CHELLIAHTURKS AND CAICOS ISLANDSChelliah facilitated travel through Turks and Caicos Islands9)
+
+("relationship"CHELLIAHTHE BAHAMASChelliah facilitated travel through the Bahamas9)
+
+("relationship"CHELLIAHUNITED STATESChelliah facilitated illegal entry into the United States9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 94 ---
+Prompt:
+The defendant Sofia Navarro ran from the agents and passed a barb wire fence.
+
+Prediction:
+("entity"!
+
+
+
+SOFIA NAVARRO PERSON!
+
+
+
+Anofia Navarro is a defendant who.accounts
+("entity"!
+
+
+
+BARENDANT PERSON!
+
+
+
+The individual in the case)
+!
+
+
+
+
+("relationship"!
+
+
+
+AGENTS.MixedRealityPERSON!
+
+
+
+The Patrol Agents)
+ on the case)
+!
+
+
+
+
+("entity"!
+
+
+
+SOFIA NAVARRO -*-
+DEFENDANT!
+
+
+
+Sofia Navarro is the defendant in9)
+!
+
+
+
+
+("relationship"!
+
+
+
+SOFIA NAVARRO_ABCAGENTS!
+
+
+
+Sofia Navarro ran from the agents 8)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"SOFIA NAVARROPERSONSofia Navarro is the defendant)
+
+("entity"DEFENDANTPERSONThe defendant of the case)
+
+("entity"AGENTSPERSONBorder Patrol Agents working on the case)
+
+("relationship"SOFIA NAVARRODEFENDANTSofia Navarro is the defendant8)
+
+("relationship"SOFIA NAVARROAGENTSSofia Navarro ran from the agents8)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 95 ---
+Prompt:
+Investigators approached a yacht with 13 people on board — ten from Honduras, two from Nicaragua, and one from Peru — during a boarding near Catalina Island.
+
+Prediction:
+("entity"!
+
+
+
+YVESTIGATORS.MixedRealityPERSON!
+
+
+
+Agents conducting the vessel)
+.accounts
+("entity"!
+
+
+
+YACHT MEANS_OF_TRANSPORTATION!
+
+
+
+Boury vessel carrying for smuggling)
+!
+
+
+
+
+("entity"!
+
+
+
+CATALINA ISLAND LOCATION!
+
+
+
+Location of boarding boarding)
+!
+
+
+
+
+("relationship"!
+
+
+
+INVESTIGATORS.MixedRealityYACHT!
+
+
+
+Board boarded the yacht with inspection 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"INVESTIGATORSPERSONAuthorities boarding the vessel)
+
+("entity"YACHTMEANS_OF_TRANSPORTATIONLuxury vessel used for smuggling)
+
+("entity"CATALINA ISLANDLOCATIONLocation of vessel boarding)
+
+("relationship"INVESTIGATORSYACHTInvestigators boarded the yacht for inspection9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 96 ---
+Prompt:
+Following intelligence about a boat drop in Oceanside, Homeland Security resumed tracking a minivan to an apartment in Fullerton, CA.
+
+Prediction:
+("entity"!
+
+
+
+BOIVAN.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle that to the boat operation)
+.MixedReality
+("entity"!
+
+
+
+APERTON, CA LOCATION!
+
+
+
+Location where the min was tracked)
+!
+
+
+
+
+("relationship"!
+
+
+
+MINIVAN!
+
+
+
+FULLERTON, CA -*-
+Homeland Security tracked a minivan to an apartment in Fullerton, CA 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MINIVANMEANS_OF_TRANSPORTATIONA van linked to the smuggling organization)
+
+("entity"FULLERTON, CALOCATIONLocation where the vehicle was tracked)
+
+("relationship"MINIVANFULLERTON, CAHomeland Security tracked the minivan to an apartment in Fullerton, California9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 97 ---
+Prompt:
+Diaz-Galiana drove his codefendant to a location where the codefendant shot and killed a person, and then Diaz-Galiana allowed the codefendant to stay at his residence
+
+Prediction:
+("entity"!
+
+
+
+DIAZ-GALIANA!
+
+
+
+PERSON!
+
+
+
+An individual who drove his codefendant to a location where allowed him to stay at his residence.).accounts
+("entity"!
+
+
+
+CODEFENDANT.accountsPERSON!
+
+
+
+An individual who was driven to a location and Diaz-Galiana and stayed at his residence.)
+!
+
+
+
+
+("entity"!
+
+
+
+RESIDENCE LOCATION!
+
+
+
+The location where Diaz-Galiana allowed the codefendant to stay.)
+!
+
+
+
+
+("relationship"!
+
+
+
+DIAZ-GALIANA_ABCCODEFENDANT!
+
+
+
+Diaz-Galiana drove his codefendant to a location. allowed him to stay at his residence.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DFENDANT.MixedRealityRESIDENCE!
+
+
+
+The codefendant stayed at Diaz-Galiana's residence.!
+
+
+
+10)
+!
+
+
+
+
+("relationship"!
+
+
+
+DIAZ-GALIANA -*-
+RESIDENCE!
+
+
+
+Diaz-Galiana allowed his codefendant to stay at his residence.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"DIAZ-GALIANAPERSONAn individual who drove his codefendant to a location and allowed him to stay at his residence.)
+
+("entity"CODEFENDANTPERSONAn individual who was driven to a location by Diaz-Galiana and stayed at his residence.)
+
+("entity"RESIDENCELOCATIONThe place where Diaz-Galiana allowed his codefendant to stay.)
+
+("relationship"DIAZ-GALIANACODEFENDANTDiaz-Galiana drove his codefendant to a location and allowed him to stay at his residence.10)
+
+("relationship"CODEFENDANTRESIDENCEThe codefendant stayed at Diaz-Galiana's residence.10)
+
+("relationship"DIAZ-GALIANARESIDENCEDiaz-Galiana allowed his codefendant to stay at his residence.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 98 ---
+Prompt:
+During the afternoon and evening of May 1, 2021, smugglers in Puerto Neuvo, Baja California, Mexico, shuttled undocumented migrants from the beach to a location approximately two hours offshore near the Coronado Islands where Hurtado and his 40-foot boat -- named the "Salty Lady" -- were waiting.
+
+Prediction:
+("entity"!
+
+
+
+SMUGGLERS.MixedRealityPERSON!
+
+
+
+Individuals whotling migrants)
+!
+
+
+
+
+("entity"!
+
+
+
+PU-FOOT BOAT,TY LADY -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+Bo vessel used for the transport)
+!
+
+
+
+
+("entity"!
+
+
+
+PUERTO NEUEVO, BAJA CALIFORNIA, MEXICO -*-
+LOCATION!
+
+
+
+Sh point for smugglingtling operation)
+!
+
+
+
+
+("entity"!
+
+
+
+CORONADO ISLANDS LOCATION!
+
+
+
+Location offshore where pickup point)
+!
+
+
+
+
+("relationship"!
+
+
+
+SMUGGLERS_ABCPUERTO NUEVO, BAJA CALIFORNIA, MEXICO!
+
+
+
+Smugglers operated from Puerto Nuevo, Baja California, Mexico 9)
+!
+
+
+
+
+("relationship"!
+
+
+
+SM-FOOT BOAT SALTY LADY -*-
+CORONADO ISLANDS -*-
+The Salty Lady was waiting near near the Coronado Islands for9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"SMUGGLERSPERSONIndividuals shuttling migrants)
+
+("entity"40-FOOT BOAT SALTY LADYMEANS_OF_TRANSPORTATIONThe vessel used for offshore pickup)
+
+("entity"PUERTO NUEVO, BAJA CALIFORNIA, MEXICOLOCATIONStarting point for shuttling operation)
+
+("entity"CORONADO ISLANDSLOCATIONLocation offshore near pickup point)
+
+("relationship"SMUGGLERSPUERTO NUEVO, BAJA CALIFORNIA, MEXICOSmugglers operated from Puerto Nuevo, Baja California, Mexico9)
+
+("relationship"40-FOOT BOAT SALTY LADYCORONADO ISLANDSThe Salty Lady was positioned offshore near the Coronado Islands9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 99 ---
+Prompt:
+Border Patrol agents were alerted to a maritime smuggling event in the town of Palm Beach and arrested the Bahamian male suspected of smuggling migrants from China, the Dominican Republic and Haiti.
+
+Prediction:
+("entity"!
+
+
+
+BAHAMIAN MALE PERSON!
+
+
+
+Susugg suspect)
+ by!
+
+
+
+
+("entity"!
+
+
+
+PALM BEACH LOCATION!
+
+
+
+Location where smuggling event was)
+!
+
+
+
+
+("relationship"!
+
+
+
+BAHAMIAN MALE -*-
+PALM BEACH!
+
+
+
+Smpected arrested arrested in Palm Beach, smuggling migrants9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"BAHAMIAN MALEPERSONSmuggling suspect arrested)
+
+("entity"PALM BEACHLOCATIONTown where smuggling alert occurred)
+
+("relationship"BAHAMIAN MALEPALM BEACHSuspect was arrested in Palm Beach for smuggling9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 100 ---
+Prompt:
+The two vehicles, a white Malibu sedan and a black Dodge truck, had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050, a road adjacent to the Border Patrol station parking lot
+
+Prediction:
+("entity"!
+
+
+
+WHITE MALIBU SEDAN.accountsMEANS_OF_TRANSPORTATION!
+
+
+
+A of the vehicles that had off of U.S. 59 and turned south Farm-to-Market Road 2050.)!
+
+
+
+ ("entity"!
+
+
+
+BLACK DODGE TRUCK -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+One of two vehicles that exited off of U.S. 59 and turned onto Farm-to-Market Road 2050.)!
+
+
+
+ ("entity"!
+
+
+
+U.S. 59 -*-
+ROUTES -*-
+A highway that which the two vehicles exited.!
+
+
+
+ ("entity"!
+
+
+
+FARM-TO-MARKET ROAD 2050 -*-
+ROUTES!
+
+
+
+The road onto which the two vehicles turned.)!
+
+
+
+ ("relationship"!
+
+
+
+WHITE MALIBU SEDAN_ABCU DODGE TRUCK!
+
+
+
+The two vehicles were together together.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+WHITE MALIBU SEDAN!
+
+
+
+U.S. 59!
+
+
+
+The white Malibu sedan exited off of U.S. 59. -*-
+10)!
+
+
+
+ ("relationship"!
+
+
+
+BLACK DODGE TRUCK -*-
+U.S. 59!
+
+
+
+The black Dodge truck exited off of U.S. 59.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+WHITE MALIBU SEDAN_ABCFARM-TO-MARKET ROAD 2050!
+
+
+
+The white Malibu sedan turned onto Farm-to-Market Road 2050.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+BLACK DODGE TRUCK_ABCFARM-TO-MARKET ROAD 2050 -*-
+The black Dodge truck turned onto Farm-to-Market Road 2050.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"WHITE MALIBU SEDANMEANS_OF_TRANSPORTATIONOne of two vehicles that exited off of U.S. 59 and turned onto Farm-to-Market Road 2050.)  ("entity"BLACK DODGE TRUCKMEANS_OF_TRANSPORTATIONOne of two vehicles that exited off of U.S. 59 and turned onto Farm-to-Market Road 2050.)  ("entity"U.S. 59ROUTESThe road from which the two vehicles exited.)  ("entity"FARM-TO-MARKET ROAD 2050ROUTESThe road onto which the two vehicles turned.)  ("relationship"WHITE MALIBU SEDANBLACK DODGE TRUCKThe two vehicles were traveling together.10)  ("relationship"WHITE MALIBU SEDANU.S. 59The white Malibu sedan exited off of U.S. 59.10)  ("relationship"BLACK DODGE TRUCKU.S. 59The black Dodge truck exited off of U.S. 59.10)  ("relationship"WHITE MALIBU SEDANFARM-TO-MARKET ROAD 2050The white Malibu sedan turned onto Farm-to-Market Road 2050.10)  ("relationship"BLACK DODGE TRUCKFARM-TO-MARKET ROAD 2050The black Dodge truck turned onto Farm-to-Market Road 2050.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 101 ---
+Prompt:
+The officers intercepted the speedboat at the Port Angeles dock, discovering 16 migrants inside. Two additional suspects were found with a dark gray SUV nearby.
+
+Prediction:
+("entity"!
+
+
+
+SPEEDBOAT MEANS_OF_TRANSPORTATION!
+
+
+
+A vessel-moving boat used migrants)
+!
+
+
+
+
+("entity"!
+
+
+
+PORTARK GRAY SUV -*-
+MEANS_OF_TRANSPORTATION!
+
+
+
+A vehicle linked to the suspects)
+!
+
+
+
+
+("entity"!
+
+
+
+PORT ANGELES DOCK.MixedRealityLOCATION!
+
+
+
+A where the speedboat was intercepted)
+!
+
+
+
+
+("entity"!
+
+
+
+SPEEDBOAT -*-
+PORT ANGELES DOCK!
+
+
+
+Theboat was intercepted at the Angeles dock}9)
+!
+
+
+
+
+("relationship"!
+
+
+
+SARK GRAY SUV_ABCPORT ANGELES DOCK!
+
+
+
+SUV was found near the dock where the were found�9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"SPEEDBOATMEANS_OF_TRANSPORTATIONA fast-moving boat carrying migrants)
+
+("entity"DARK GRAY SUVMEANS_OF_TRANSPORTATIONA vehicle linked to the suspects)
+
+("entity"PORT ANGELES DOCKLOCATIONDock where the speedboat was intercepted)
+
+("relationship"SPEEDBOATPORT ANGELES DOCKSpeedboat was intercepted at Port Angeles dock9)
+
+("relationship"DARK GRAY SUVPORT ANGELES DOCKSUV was located near the dock where suspects were found9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 102 ---
+Prompt:
+Around 11:30 at night on February 8, a San Diego Air & Marine Branch (SDAMB)BE-350 Multi-Role Enforcement Aircraftdetected a possible lights out vessel by radar off the Southern California Coast headed north towards the maritime boundary line between Mexico and the United States.
+
+Prediction:
+("entity"!
+
+
+
+SD-350 MULTI-ROLE ENFORCEMENT AIRCRAFT MEANS_OF_TRANSPORTATION!
+
+
+
+Aircraft used detected the possible out vessel)
+!
+
+
+
+
+("entity"!
+
+
+
+SOUTHERN CALIFORNIA COAST.MixedRealityLOCATION -*-
+Coastal area where the boundary line)
+!
+
+
+
+
+("relationship"!
+
+
+
+BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT -*-
+SOUTHERN CALIFORNIA COAST!
+
+
+
+A BE detected a possible off north the maritime California Coast 9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFTMEANS_OF_TRANSPORTATIONAircraft that detected a lights out vessel)
+
+("entity"SOUTHERN CALIFORNIA COASTLOCATIONCoastal area near maritime boundary line)
+
+("relationship"BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFTSOUTHERN CALIFORNIA COASTThe aircraft detected a vessel headed toward the Southern California Coast9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 103 ---
+Prompt:
+After the crossing, they were taken to a house where they stayed for several hours
+
+Prediction:
+("entity"!
+
+
+
+C LOCATION!
+
+
+
+A location where they were for several hours after the crossing.)!
+Ground Truth:
+("entity"HOUSELOCATIONA place where they stayed for several hours after the crossing.)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 104 ---
+Prompt:
+Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.
+
+Prediction:
+("entity"!
+
+
+
+BORDER PATROL AGENTS.MixedRealityPERSON!
+
+
+
+Agentsceptated the nine)
+.MixedReality
+("entity"!
+
+
+
+NEXICAN NATIONALS -*-
+PERSON.MixedRealityIndividual immigrants in by Border)
+!
+
+
+
+
+("relationship"!
+
+
+
+BORDER PATROL AGENTS -*-
+MEXICAN NATIONALS -*-
+Agents identified the nationality passengers as Mexican nationals illegally9)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"BORDER PATROL AGENTSPERSONInterrogated the migrants)
+
+("entity"MEXICAN NATIONALSPERSONIllegal immigrants identified by nationality)
+
+("relationship"BORDER PATROL AGENTSMEXICAN NATIONALSAgents identified the nine passengers as Mexican nationals9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 105 ---
+Prompt:
+Each had made arrangements to be smuggled into the United States from Mexico, where they had traveled from other Central American countries
+
+Prediction:
+("entity"!
+
+
+
+CENTED STATES.MixedRealityLOCATION!
+
+
+
+The country country for the smuggling operation.accounts ("entity"!
+
+
+
+MEXICO -*-
+LOCATION!
+
+
+
+The country from origin for the smuggling route!
+
+
+
+ ("entity"!
+
+
+
+CENTRAL AMERICAN COUNTRIES -*-
+LOCATION!
+
+
+
+The countries the origin for the smuggling.)!
+
+
+
+ ("!
+Ground Truth:
+("entity"UNITED STATESLOCATIONThe destination country for the smuggling.)  ("entity"MEXICOLOCATIONThe country of origin for the smuggling.)  ("entity"CENTRAL AMERICAN COUNTRIESLOCATIONOther countries of origin for the smuggling.)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 106 ---
+Prompt:
+A co-defendant was directing the captives with his pistol to move from one room to another
+
+Prediction:
+("entity"!
+
+
+
+CO-DEFENDANT PERSON!
+
+
+
+An individual directing was directing theives with his pistol.).accounts ("entity"!
+
+
+
+CAPTIVES.MixedRealityPERSON!
+
+
+
+Individuals who were being directed by a co-defendant.)!
+
+
+
+ ("entity"!
+
+
+
+PISTOL MEUGGLED_ITEMS!
+
+
+
+A weapon used by direct the captives.)!
+
+
+
+ ("entity"!
+
+
+
+ROOM LOCATION!
+
+
+
+A location from which the captives were moved moved to!
+
+
+
+ ("relationship"!
+
+
+
+CO-DEFENDANT_ABCCAPTIVES!
+
+
+
+The co-defendant was directing the captives.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CO-DEFENDANT -*-
+PISTOL!
+
+
+
+A co-defendant was using a pistol to direct the captives.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES.MixedRealityPISTOL!
+
+
+
+The captives were being directed with a pistol.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CAPTIVES -*-
+ROOM!
+
+
+
+The captives were being directed from move from one room to another.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"CO-DEFENDANTPERSONAn individual who was directing captives with his pistol.)  ("entity"CAPTIVESPERSONIndividuals who were being directed by a co-defendant.)  ("entity"PISTOLSMUGGLED_ITEMSA weapon used to direct the captives.)  ("entity"ROOMLOCATIONA location from which the captives were being directed.)  ("relationship"CO-DEFENDANTCAPTIVESA co-defendant was directing the captives.10)  ("relationship"CO-DEFENDANTPISTOLA co-defendant was using his pistol to direct the captives.10)  ("relationship"CAPTIVESPISTOLThe captives were being directed with a pistol.10)  ("relationship"CAPTIVESROOMThe captives were being directed to move from one room to another.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 107 ---
+Prompt:
+Miss Fu Mei Chen was in room 297
+
+Prediction:
+("entity"!
+
+
+
+MISS FU MEI CHEN!
+
+
+
+PERSON.MixedRealityAn person who was in room 297.).accounts
+("entity"!
+
+
+
+ROOM 297 LOCATION!
+
+
+
+A location where Miss Fu Mei Chen was.)
+!
+
+
+
+
+("relationship"!
+
+
+
+MISS FU MEI CHEN -*-
+ROOM 297 -*-
+Miss Fu Mei Chen was in room 297.!
+
+
+
+10)
+!
+
+
+
+
+("
+Ground Truth:
+("entity"MISS FU MEI CHENPERSONA person who was in room 297.)
+
+("entity"ROOM 297LOCATIONThe room where Miss Fu Mei Chen was.)
+
+("relationship"MISS FU MEI CHENROOM 297Miss Fu Mei Chen was in room 297.10)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
+--- Sample 108 ---
+Prompt:
+When the group got beyond the Border Patrol checkpoint, Pacheco called Chapa from the cell phone and told Chapa where to meet the group
+
+Prediction:
+("entity"!
+
+
+
+PACHECO -*-
+PERSON!
+
+
+
+An individual who called Chapa from a cell phone.).accounts ("entity"!
+
+
+
+CHAPA.MixedRealityPERSON!
+
+
+
+An individual who was called by Pacheco.)!
+
+
+
+ ("entity"!
+
+
+
+CELL PHONE -*-
+MEANS_OF_COMMUNICATION!
+
+
+
+The device used by Pacheco to call Chapa.)!
+
+
+
+ ("relationship"!
+
+
+
+PACHECO -*-
+CHAPA!
+
+
+
+Pacheco called Chapa.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+PACHECO -*-
+CELL PHONE -*-
+Pacheco used a cell phone to call Chapa.!
+
+
+
+10)!
+
+
+
+ ("relationship"!
+
+
+
+CHAPA.MixedRealityCELL PHONE!
+
+
+
+Chapa was called from a cell phone.!
+
+
+
+10)!
+
+
+
+!
+Ground Truth:
+("entity"PACHECOPERSONAn individual who called Chapa from a cell phone.)  ("entity"CHAPAPERSONAn individual who was called by Pacheco.)  ("entity"CELL PHONEMEANS_OF_COMMUNICATIONThe device used by Pacheco to call Chapa.)  ("relationship"PACHECOCHAPAPacheco called Chapa.10)  ("relationship"PACHECOCELL PHONEPacheco used a cell phone to call Chapa.10)  ("relationship"CHAPACELL PHONEChapa was called from a cell phone.9)
+Metrics: {
+  "parsability_score": 0.0,
+  "entity_f1": 0.0,
+  "relationship_f1": 0.0,
+  "relationship_score_mae": 0.0
+}
+
