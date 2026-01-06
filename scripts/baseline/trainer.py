@@ -4,11 +4,10 @@ import sys
 import time
 import getpass
 import socket
-from tqdm import tqdm
 import torch
+from tqdm import tqdm
 from scripts.llama_finetune.metrics import compute_metrics
-from . import config as baseline_config
-
+import scripts.baseline.config as baseline_config
 
 class CustomBaselineTrainer:
     def __init__(self, model, tokenizer, args, eval_dataset=None, **kwargs):
@@ -48,24 +47,24 @@ class CustomBaselineTrainer:
         desc.append(self.args.to_json_string())
 
         desc.append("\n--- Custom Config (from scripts.baseline.config) ---\n")
-        for key, value in vars(baseline_config).items():
-            if not key.startswith("__") and not isinstance(
-                value, type(sys)
-            ):
-                desc.append(f"{key}: {value}")
+        try:
+            for key, value in vars(baseline_config).items():
+                if not key.startswith("__") and not isinstance(value, type(sys)):
+                    desc.append(f"{key}: {value}")
+        except Exception:
+            desc.append("Could not read baseline config vars.")
 
         desc_path = os.path.join(output_dir, "desc.txt")
         with open(desc_path, "w") as f:
             f.write("\n".join(desc))
 
-def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"):
+    def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"):
         eval_dataset = self.eval_dataset if eval_dataset is None else eval_dataset
 
         output_dir = self.args.output_dir
         summary_report_path = os.path.join(output_dir, "summary_report.txt")
         metrics_jsonl_path = os.path.join(output_dir, "metrics.jsonl")
 
-        # Clean up old files
         if os.path.exists(summary_report_path):
             os.remove(summary_report_path)
         if os.path.exists(metrics_jsonl_path):
@@ -80,7 +79,7 @@ def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"
         num_samples = 0
 
         print(f"Generating responses and saving to {summary_report_path}...")
-        
+
         with open(summary_report_path, "w") as summary_writer, open(metrics_jsonl_path, "w") as jsonl_writer:
             
             for sample in tqdm(eval_dataset, desc="Evaluating"):
@@ -115,7 +114,7 @@ def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"
                     "metrics": metrics,
                 }
                 jsonl_writer.write(json.dumps(metric_data) + "\n")
-    
+
                 for key in total_metrics:
                     if key in metrics and isinstance(metrics[key], (int, float)):
                         total_metrics[key] += metrics[key]
@@ -124,15 +123,19 @@ def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"
 
         avg_metrics = {f"eval_{key}": value / num_samples for key, value in total_metrics.items() if num_samples > 0}
         
-        with open(summary_report_path, "r") as f:
-            existing_content = f.read()
-            
-        header = "--- GLOBAL METRICS (AVERAGE) ---\n"
-        header += json.dumps(avg_metrics, indent=2) + "\n"
-        header += "=" * 30 + "\n\n"
-        
-        with open(summary_report_path, "w") as f:
-            f.write(header + existing_content)
-            
         self.log(avg_metrics)
+
+        try:
+            with open(summary_report_path, "r") as f:
+                existing_content = f.read()
+            
+            header = "--- GLOBAL METRICS (AVERAGE) ---\n"
+            header += json.dumps(avg_metrics, indent=2) + "\n"
+            header += "=" * 30 + "\n\n"
+            
+            with open(summary_report_path, "w") as f:
+                f.write(header + existing_content)
+        except Exception as e:
+            print(f"Could not prepend metrics to report: {e}")
+
         return avg_metrics
