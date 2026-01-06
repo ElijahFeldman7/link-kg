@@ -109,7 +109,7 @@ Output:
 {record_delimiter}
 ("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}WHATSAPP{tuple_delimiter}Smugglers used WhatsApp to coordinate while avoiding detection{tuple_delimiter}7)
 {record_delimiter}
-("relationship"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}The Horizon Smuggling Ring used this route for illegal transportation{TUPLE_DELIMITTER}7)
+("relationship"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}The Horizon Smuggling Ring used this route for illegal transportation{tuple_delimiter}7)
 {record_delimiter}
 {completion_delimiter}
 
@@ -146,7 +146,7 @@ Output:
 {record_delimiter}
 ("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Undocumented aliens were brought to the stash house before further transport{tuple_delimiter}8)
 {record_delimiter}
-("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{TUPLE_DELIMITTER}8)
+("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{tuple_delimiter}8)
 {record_delimiter}
 {completion_delimiter}
 """
@@ -168,23 +168,33 @@ def create_dataset_from_output_col(file_path: str, tokenizer) -> Dataset:
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' was not found.")
         exit()
-
+    tdem = '|'
+    rdem = '\n'
+    cdem = '<END>'
+    formatted_system_prompt = SYSTEM_PROMPT.format(
+        tuple_delimiter=tdem,
+        record_delimiter=rdem,
+        completion_delimiter=cdem
+    )
     processed_data = []
     print("Preparing dataset from 'Input_Text' and 'Output' columns...")
     for _, row in df.iterrows():
         input_text = row.get('Input_Text')
         target_output = row.get('Output')
-
+        
         if not (isinstance(input_text, str) and input_text.strip()):
             continue
         if not (isinstance(target_output, str) and target_output.strip()):
             continue
             
         clean_target = target_output.strip()
+        clean_target = clean_target.replace("{tuple_delimiter}", "|")
+        clean_target = clean_target.replace("{record_delimiter}", "\n")
+        clean_target = clean_target.replace("{completion_delimiter}", "<END>")
 
         user_content = INSTRUCTION_TEMPLATE.format(input_text=input_text)
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT.strip()},
+            {"role": "system", "content": formatted_system_prompt},
             {"role": "user", "content": user_content.strip()}
         ]
         

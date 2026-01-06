@@ -84,16 +84,15 @@ class CustomBaselineTrainer:
             for sample in tqdm(eval_dataset, desc="Evaluating"):
                 prompt = sample["text"]
                 ground_truth = sample["output"]
-
                 inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
+                input_length = inputs.input_ids.shape[1]
 
                 with torch.no_grad():
-                    outputs = self.model.generate(**inputs, max_new_tokens=100)
+                    outputs = self.model.generate(**inputs, max_new_tokens=2048, pad_token_id=self.tokenizer.eos_token_id)
 
-                prediction = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-                prediction_text = prediction[len(prompt) :].strip()
-
+                generated_tokens = outputs[0][input_length:]
+                prediction_text = self.tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
                 metrics = compute_metrics([prediction_text], [ground_truth])
 
                 summary_writer.write(f"Prompt: {prompt}\n")
@@ -110,10 +109,12 @@ class CustomBaselineTrainer:
                 }
                 jsonl_writer.write(json.dumps(metric_data) + "\n")
 
+    
                 for key in total_metrics:
-                    if key in metrics:
+                    if key in metrics and isinstance(metrics[key], (int, float)):
                         total_metrics[key] += metrics[key]
-                num_samples += 1
+
+                  num_samples += 1
 
         avg_metrics = {f"eval_{key}": value / num_samples for key, value in total_metrics.items() if num_samples > 0}
         

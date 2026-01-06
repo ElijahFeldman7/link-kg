@@ -12,7 +12,7 @@ from transformers import (
 )
 from tqdm import tqdm
 
-BASE_MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
+BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 DATASET_PATH = "dataset5.csv"
 OUTPUT_DIR = "./uniner_baseline_evaluation_with_scores"
 

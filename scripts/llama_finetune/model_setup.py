@@ -5,7 +5,7 @@ from transformers import (
     BitsAndBytesConfig,
 )
 from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
-from .config import BASE_MODEL_NAME, tuple_delimiter, record_delimiter, completion_delimiter
+from .config import BASE_MODEL_NAME
 
 def setup_model_and_tokenizer():
     bnb_config = BitsAndBytesConfig(
@@ -17,21 +17,21 @@ def setup_model_and_tokenizer():
 
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
     
-    special_tokens = [tuple_delimiter, record_delimiter, completion_delimiter]
-    tokenizer.add_special_tokens({"additional_special_tokens": special_tokens})
-    
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-        tokenizer.padding_side = "right" 
+        
+    tokenizer.padding_side = "right" 
 
     print(f"Loading base model: {BASE_MODEL_NAME}")
     model = AutoModelForCausalLM.from_pretrained(
         BASE_MODEL_NAME,
         quantization_config=bnb_config,
         device_map="auto",
+        pad_token_id=tokenizer.pad_token_id 
     )
-    model.resize_token_embeddings(len(tokenizer))
+
     model = prepare_model_for_kbit_training(model)
+    
     return model, tokenizer
 
 def setup_peft_model(model):

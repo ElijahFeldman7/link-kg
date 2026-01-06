@@ -1,33 +1,40 @@
 import re
 import numpy as np
 import torch
-from .config import tuple_delimiter
+from functools import partial
+
+tuple_delimiter = "|" 
 
 def parse_for_eval(text: str) -> (set, dict, bool):
     entities = set()
     relationships = {} 
 
-    if "<|eot_id|>" in text:
-        text = text.split("<|eot_id|>")[0]
-        
+    text = text.replace("<|eot_id|>", "").replace("<|end_of_text|>", "")
     text = text.strip()
 
+    d = re.escape(tuple_delimiter)
+
     entity_pattern = re.compile(
-        r'\("entity"' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'.*?\)', re.DOTALL
+        r'\(\s*"entity"\s*' + d + r'\s*(.*?)\s*' + d + r'\s*(.*?)\s*' + d + r'.*?\)', 
+        re.DOTALL
     )
+    
     rel_pattern_with_score = re.compile(
-        r'\("relationship"' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'(.*?)' + re.escape(tuple_delimiter) + r'.*?' + re.escape(tuple_delimiter) + r'(\d+)\s*\)', re.DOTALL
+        r'\(\s*"relationship"\s*' + d + r'\s*(.*?)\s*' + d + r'\s*(.*?)\s*' + d + r'.*?' + d + r'\s*(\d+)\s*\)', 
+        re.DOTALL
     )
 
     try:
-        for name, type in entity_pattern.findall(text):
-            entities.add((name.strip().upper(), type.strip().upper()))
+        for name, type_ in entity_pattern.findall(text):
+            entities.add((name.strip().upper(), type_.strip().upper()))
         
         for ent1, ent2, score in rel_pattern_with_score.findall(text):
             sorted_ents = tuple(sorted([ent1.strip().upper(), ent2.strip().upper()]))
             relationships[sorted_ents] = int(score)
 
-        is_parsable = len(text.strip()) == 0 or (len(entities) > 0 or len(relationships) > 0)
+        has_content = len(entities) > 0 or len(relationships) > 0
+        is_parsable = has_content
+        
         return entities, relationships, is_parsable
     except Exception:
         return set(), {}, False
@@ -54,6 +61,7 @@ def compute_metrics(predictions: list, ground_truths: list):
 
         pred_rel_keys = set(pred_rels.keys())
         label_rel_keys = set(label_rels.keys())
+        
         rel_tp += len(pred_rel_keys & label_rel_keys)
         rel_fp += len(pred_rel_keys - label_rel_keys)
         rel_fn += len(label_rel_keys - pred_rel_keys)
@@ -67,14 +75,14 @@ def compute_metrics(predictions: list, ground_truths: list):
     final_metrics = {}
     final_metrics["parsability_score"] = np.mean(parsability_scores) if parsability_scores else 0.0
 
-    entity_precision = entity_tp / (entity_tp + entity_fp) if (entity_tp + entity_fp) > 0 else 0.0
-    entity_recall = entity_tp / (entity_tp + entity_fn) if (entity_tp + entity_fn) > 0 else 0.0
-    final_metrics['entity_f1'] = 2 * (entity_precision * entity_recall) / (entity_precision + entity_recall) if (entity_precision + entity_recall) > 0 else 0.0
-    
-    rel_precision = rel_tp / (rel_tp + rel_fp) if (rel_tp + rel_fp) > 0 else 0.0
-    rel_recall = rel_tp / (rel_tp + rel_fn) if (rel_tp + rel_fn) > 0 else 0.0
-    final_metrics['relationship_f1'] = 2 * (rel_precision * rel_recall) / (rel_precision + rel_recall) if (rel_precision + rel_recall) > 0 else 0.0
-    
+    def calc_f1(tp, fp, fn):
+        prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        rec = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+        f1 = 2 * (prec * rec) / (prec + rec) if (prec + rec) > 0 else 0.0
+        return f1
+
+    final_metrics['entity_f1'] = calc_f1(entity_tp, entity_fp, entity_fn)
+    final_metrics['relationship_f1'] = calc_f1(rel_tp, rel_fp, rel_fn)
     final_metrics['relationship_score_mae'] = np.mean(score_errors) if score_errors else 0.0
 
     return final_metrics
@@ -88,24 +96,27 @@ def preprocess_logits_for_metrics(logits, labels):
 def compute_metrics_wrapper(eval_pred, tokenizer):
     predicted_ids, labels = eval_pred
     
-    labels[labels == -100] = tokenizer.pad_token_id
+    labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
     
-    predicted_strings = tokenizer.batch_decode(predicted_ids, skip_special_tokens=True)
+    predicted_strings = tokenizer.batch_decode(predicted_ids, skip_special_tokens=False)
     label_strings = tokenizer.batch_decode(labels, skip_special_tokens=True)
 
-    assistant_header = "<|start_header_id|>assistant<|end_header_id|>"
+    header_token = "<|start_header_id|>assistant<|end_header_id|>"
     
     clean_preds = []
     clean_labels = []
 
     for pred, label in zip(predicted_strings, label_strings):
-        pred_assistant_part = pred.split(assistant_header)[-1].strip()
-        label_assistant_part = label.split(assistant_header)[-1].strip()
+        if header_token in pred:
+            pred_content = pred.split(header_token)[-1]
+        else:
+            pred_content = pred
+
+        pred_content = pred_content.replace("<|eot_id|>", "").replace("<|end_of_text|>", "").strip()
         
-        if pred_assistant_part.startswith("assistant("):
-            pred_assistant_part = pred_assistant_part[len("assistant("):-1]
+        label_content = label.split(header_token)[-1] if header_token in label else label
         
-        clean_preds.append(pred_assistant_part)
-        clean_labels.append(label_assistant_part)
+        clean_preds.append(pred_content)
+        clean_labels.append(label_content.strip())
     
     return compute_metrics(clean_preds, clean_labels)
