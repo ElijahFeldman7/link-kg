@@ -58,13 +58,14 @@ class CustomBaselineTrainer:
         with open(desc_path, "w") as f:
             f.write("\n".join(desc))
 
-    def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"):
+def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix="eval"):
         eval_dataset = self.eval_dataset if eval_dataset is None else eval_dataset
 
         output_dir = self.args.output_dir
         summary_report_path = os.path.join(output_dir, "summary_report.txt")
         metrics_jsonl_path = os.path.join(output_dir, "metrics.jsonl")
 
+        # Clean up old files
         if os.path.exists(summary_report_path):
             os.remove(summary_report_path)
         if os.path.exists(metrics_jsonl_path):
@@ -78,21 +79,27 @@ class CustomBaselineTrainer:
         }
         num_samples = 0
 
-        with open(summary_report_path, "w") as summary_writer, open(
-            metrics_jsonl_path, "w"
-        ) as jsonl_writer:
+        print(f"Generating responses and saving to {summary_report_path}...")
+        
+        with open(summary_report_path, "w") as summary_writer, open(metrics_jsonl_path, "w") as jsonl_writer:
+            
             for sample in tqdm(eval_dataset, desc="Evaluating"):
                 prompt = sample["text"]
                 ground_truth = sample["output"]
+                
                 inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
                 input_length = inputs.input_ids.shape[1]
 
                 with torch.no_grad():
-                    outputs = self.model.generate(**inputs, max_new_tokens=2048, pad_token_id=self.tokenizer.eos_token_id)
-
+                    outputs = self.model.generate(
+                        **inputs, 
+                        max_new_tokens=2048, 
+                        pad_token_id=self.tokenizer.eos_token_id
+                    )
 
                 generated_tokens = outputs[0][input_length:]
                 prediction_text = self.tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
+                
                 metrics = compute_metrics([prediction_text], [ground_truth])
 
                 summary_writer.write(f"Prompt: {prompt}\n")
@@ -108,16 +115,24 @@ class CustomBaselineTrainer:
                     "metrics": metrics,
                 }
                 jsonl_writer.write(json.dumps(metric_data) + "\n")
-
     
                 for key in total_metrics:
                     if key in metrics and isinstance(metrics[key], (int, float)):
                         total_metrics[key] += metrics[key]
 
-                  num_samples += 1
+                num_samples += 1
 
         avg_metrics = {f"eval_{key}": value / num_samples for key, value in total_metrics.items() if num_samples > 0}
         
+        with open(summary_report_path, "r") as f:
+            existing_content = f.read()
+            
+        header = "--- GLOBAL METRICS (AVERAGE) ---\n"
+        header += json.dumps(avg_metrics, indent=2) + "\n"
+        header += "=" * 30 + "\n\n"
+        
+        with open(summary_report_path, "w") as f:
+            f.write(header + existing_content)
+            
         self.log(avg_metrics)
-
         return avg_metrics

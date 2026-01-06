@@ -65,6 +65,10 @@ def main():
 
     print("\n--- Starting Llama 3.1 QLoRA Fine-tuning ---")
     trainer.train()
+    
+    print("\n--- Running Final Evaluation ---")
+    metrics = trainer.evaluate()
+    print(metrics)
     print("\n--- Training Complete ---")
 
 if __name__ == "__main__":
