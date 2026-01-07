@@ -54,40 +54,36 @@ class CustomTrainer(Trainer):
 
     def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
         eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
-        
         if eval_dataset is None:
              raise ValueError("Trainer: No evaluation dataset found (eval_dataset is None).")
 
         predictions_output = self.predict(eval_dataset)
         
         predicted_ids = predictions_output.predictions
-        predicted_strings = self.tokenizer.batch_decode(predicted_ids, skip_special_tokens=True)
+        tokenizer = getattr(self, "processing_class", self.tokenizer)
+        predicted_strings = tokenizer.batch_decode(predicted_ids, skip_special_tokens=False)
         
         original_texts = [item['Input_Text'] for item in self.raw_eval_dataset]
         original_ground_truths = [item['Output'] for item in self.raw_eval_dataset]
 
-        prompt_strs = []
-        for text in original_texts:
-            messages = [
-                {"role": "system", "content": self.system_prompt.strip()},
-                {"role": "user", "content": text.strip()}
-            ]
-            prompt_strs.append(self.tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            ))
-
         decoded_predictions = []
         decoded_ground_truths = []
+
+        HEADER_PATTERN = "assistant<|end_header_id|>"
 
         for i in range(len(predicted_strings)):
             pred_text = predicted_strings[i]
             
-            if "assistant" in pred_text:
-                pred_assistant_part = pred_text.split(prompt_strs[i].split('\n')[-1])[-1].strip()
-                pred_assistant_part = pred_assistant_part.replace("assistant\n\n", "").strip()
+            if HEADER_PATTERN in pred_text:
+                pred_assistant_part = pred_text.split(HEADER_PATTERN)[-1]
             else:
-                pred_assistant_part = pred_text.strip()
+                if "assistant" in pred_text:
+                     pred_assistant_part = pred_text.split("assistant")[-1]
+                else:
+                     pred_assistant_part = pred_text
 
+            pred_assistant_part = pred_assistant_part.replace("<|eot_id|>", "").replace("<|end_of_text|>", "").strip()
+            
             decoded_predictions.append(pred_assistant_part)
             
             gt = original_ground_truths[i].strip()

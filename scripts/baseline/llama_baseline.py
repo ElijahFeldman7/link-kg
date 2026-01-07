@@ -65,90 +65,6 @@ Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tupl
 4. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
  
 5. When finished, output {completion_delimiter}
-
-
-######################
--Examples-
-Below are four structured examples illustrating entity and relationship extraction. Each example consists of input text and the correct output format. Use these examples to learn the correct extraction process.
-######################
-Example 01:
-Input_text:
-On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.
-######################
-Output:
-("entity"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}PERSON{tuple_delimiter}A known smuggler responsible for transporting migrants in an 18-wheeler)
-{record_delimiter}
-("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
-{record_delimiter}
-("entity"{tuple_delimiter}18-WHEELER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A large truck used for smuggling operations)
-{record_delimiter}
-("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}SMUGGLER{tuple_delimiter}Sai Deshpande is identified as a smuggler involved in this case{tuple_delimiter}8)
-{record_delimiter}
-("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}18-WHEELER{tuple_delimiter}Sai Deshpande drove the 18-wheeler carrying undocumented migrants{tuple_delimiter}9)
-{record_delimiter}
-{completion_delimiter}
-
-
-######################
-Example 02:
-Input_text:
-Smugglers from the Horizon Smuggling Ring used remote desert roads to avoid law enforcement, communicating via WhatsApp. The District Court later issued an order against the smuggling ring, and the Government launched an investigation.
-######################
-Output:
-("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals engaged in illegal human smuggling activities)
-{record_delimiter}
-("entity"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}ORGANIZATION{tuple_delimiter}An organized smuggling group involved in human trafficking and illegal transportation activities)
-{record_delimiter}
-("entity"{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}ROUTES{tuple_delimiter}A smuggling route to move migrants undetected)
-{record_delimiter}
-("entity"{tuple_delimiter}WHATSAPP{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}Application used by smugglers to coordinate and evade law enforcement)
-{record_delimiter}
-("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}The smugglers were associated with the Horizon Smuggling Ring{tuple_delimiter}7)
-{record_delimiter}
-("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}Smugglers used this route to avoid law enforcement{tuple_delimiter}8)
-{record_delimiter}
-("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}WHATSAPP{tuple_delimiter}Smugglers used WhatsApp to coordinate while avoiding detection{tuple_delimiter}7)
-{record_delimiter}
-("relationship"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}The Horizon Smuggling Ring used this route for illegal transportation{tuple_delimiter}7)
-{record_delimiter}
-{completion_delimiter}
-
-
-######################
-Example 03:
-Input_text:
-Krish Patil transported undocumented aliens along Interstate 988 before arriving at a stash house in Velu, Gujarat where illegal weapons were stored.
-######################
-Output:
-("entity"{tuple_delimiter}KRISH PATIL{tuple_delimiter}PERSON{tuple_delimiter}A smuggler involved in transporting undocumented aliens and illegal weapons)
-{record_delimiter}
-("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
-{record_delimiter}
-("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of individuals smuggled across the border without legal documentation)
-{record_delimiter}
-("entity"{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Firearms and other restricted weapons illegally transported and stored)
-{record_delimiter}
-("entity"{tuple_delimiter}INTERSTATE 988{tuple_delimiter}ROUTES{tuple_delimiter}A known smuggling route used to transport undocumented aliens without detection)
-{record_delimiter}
-("entity"{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}LOCATION{tuple_delimiter}A city where illegal weapons were stored and smuggling operations were coordinated)
-{record_delimiter}
-("entity"{tuple_delimiter}STASH HOUSE{tuple_delimiter}LOCATION{tuple_delimiter}A hidden facility used to shelter undocumented aliens and store illegal weapons before further transport)
-{record_delimiter}
-("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}SMUGGLER{tuple_delimiter}Krish Patil is identified as a smuggler involved in this case{tuple_delimiter}9)
-{record_delimiter}
-("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}Krish Patil was responsible for smuggling undocumented aliens along Interstate 988{tuple_delimiter}10)
-{record_delimiter}
-("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}Krish Patil was involved in smuggling and storing illegal weapons at the stash house{tuple_delimiter}9)
-{record_delimiter}
-("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}INTERSTATE 988{tuple_delimiter}Undocumented aliens were transported via Interstate 988 to avoid detection{tuple_delimiter}9)
-{record_delimiter}
-("relationship"{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Illegal weapons were stored in the stash house before being distributed{tuple_delimiter}9)
-{record_delimiter}
-("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Undocumented aliens were brought to the stash house before further transport{tuple_delimiter}8)
-{record_delimiter}
-("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{tuple_delimiter}8)
-{record_delimiter}
-{completion_delimiter}
 """
 
 INSTRUCTION_TEMPLATE = """
@@ -256,6 +172,7 @@ def main():
         tokenizer=tokenizer,
         args=training_args,
         eval_dataset=eval_dataset,
+        system_prompt=formatted_system_prompt
     )
 
     print("\nRunning inference on the dataset...")

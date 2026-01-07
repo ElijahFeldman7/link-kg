@@ -10,11 +10,12 @@ from scripts.llama_finetune.metrics import compute_metrics
 import scripts.baseline.config as baseline_config
 
 class CustomBaselineTrainer:
-    def __init__(self, model, tokenizer, args, eval_dataset=None, **kwargs):
+    def __init__(self, model, tokenizer, args, eval_dataset=None, system_prompt=None, **kwargs):
         self.model = model
         self.tokenizer = tokenizer
         self.args = args
         self.eval_dataset = eval_dataset
+        self.system_prompt = system_prompt
         self.save_run_description()
 
     def log(self, metrics):
@@ -43,6 +44,10 @@ class CustomBaselineTrainer:
         if self.eval_dataset:
             desc.append(f"Evaluation Dataset Size: {len(self.eval_dataset)}")
 
+        if self.system_prompt:
+            desc.append("\n--- System Prompt ---\n")
+            desc.append(self.system_prompt)
+
         desc.append("\n--- Training Arguments ---\n")
         desc.append(self.args.to_json_string())
 
@@ -52,7 +57,7 @@ class CustomBaselineTrainer:
                 if not key.startswith("__") and not isinstance(value, type(sys)):
                     desc.append(f"{key}: {value}")
         except Exception:
-            desc.append("Could not read baseline config vars.")
+            pass
 
         desc_path = os.path.join(output_dir, "desc.txt")
         with open(desc_path, "w") as f:
@@ -83,10 +88,17 @@ class CustomBaselineTrainer:
         with open(summary_report_path, "w") as summary_writer, open(metrics_jsonl_path, "w") as jsonl_writer:
             
             for sample in tqdm(eval_dataset, desc="Evaluating"):
-                prompt = sample["text"]
+                full_prompt = sample["text"]
                 ground_truth = sample["output"]
                 
-                inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
+                if "Input_text:" in full_prompt:
+                    display_prompt = full_prompt.split("Input_text:")[-1].strip()
+                    if "Output:" in display_prompt:
+                        display_prompt = display_prompt.split("Output:")[0].strip()
+                else:
+                    display_prompt = full_prompt 
+
+                inputs = self.tokenizer(full_prompt, return_tensors="pt").to(self.model.device)
                 input_length = inputs.input_ids.shape[1]
 
                 with torch.no_grad():
@@ -101,14 +113,14 @@ class CustomBaselineTrainer:
                 
                 metrics = compute_metrics([prediction_text], [ground_truth])
 
-                summary_writer.write(f"Prompt: {prompt}\n")
+                summary_writer.write(f"Input Data: {display_prompt}\n")
                 summary_writer.write(f"Prediction: {prediction_text}\n")
                 summary_writer.write(f"Ground Truth: {ground_truth}\n")
                 summary_writer.write(f"Metrics: {json.dumps(metrics, indent=2)}\n")
                 summary_writer.write("-" * 20 + "\n")
 
                 metric_data = {
-                    "prompt": prompt,
+                    "prompt": display_prompt,
                     "prediction": prediction_text,
                     "ground_truth": ground_truth,
                     "metrics": metrics,
@@ -122,7 +134,6 @@ class CustomBaselineTrainer:
                 num_samples += 1
 
         avg_metrics = {f"eval_{key}": value / num_samples for key, value in total_metrics.items() if num_samples > 0}
-        
         self.log(avg_metrics)
 
         try:
@@ -135,7 +146,7 @@ class CustomBaselineTrainer:
             
             with open(summary_report_path, "w") as f:
                 f.write(header + existing_content)
-        except Exception as e:
-            print(f"Could not prepend metrics to report: {e}")
+        except Exception:
+            pass
 
         return avg_metrics
