@@ -53,6 +53,11 @@ class CustomTrainer(Trainer):
             f.write("\n".join(desc))
 
     def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
+        eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
+        
+        if eval_dataset is None:
+             raise ValueError("Trainer: No evaluation dataset found (eval_dataset is None).")
+
         predictions_output = self.predict(eval_dataset)
         
         predicted_ids = predictions_output.predictions
