@@ -12,9 +12,9 @@ from scripts.baseline.config import DATASET_PATH, BASE_MODEL_NAME, NEW_MODEL_DIR
 from scripts.baseline.trainer import CustomBaselineTrainer
 from scripts.llama_finetune.metrics import compute_metrics, parse_for_eval
 
-tuple_delimiter = "{tuple_delimiter}"
-record_delimiter = "{record_delimiter}"
-completion_delimiter = "{completion_delimiter}"
+tuple_delimiter = "|"
+record_delimiter = "\n"
+completion_delimiter = "<END>"
 
 SYSTEM_PROMPT = """
 -Goal-
@@ -67,6 +67,12 @@ Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tupl
 5. When finished, output {completion_delimiter}
 """
 
+formatted_system_prompt = SYSTEM_PROMPT.format(
+    tuple_delimiter=tuple_delimiter,
+    record_delimiter=record_delimiter,
+    completion_delimiter=completion_delimiter
+)
+
 INSTRUCTION_TEMPLATE = """
 ######################
 -Real Data-
@@ -84,14 +90,7 @@ def create_dataset_from_output_col(file_path: str, tokenizer) -> Dataset:
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' was not found.")
         exit()
-    tdem = '|'
-    rdem = '\n'
-    cdem = '<END>'
-    formatted_system_prompt = SYSTEM_PROMPT.format(
-        tuple_delimiter=tdem,
-        record_delimiter=rdem,
-        completion_delimiter=cdem
-    )
+
     processed_data = []
     print("Preparing dataset from 'Input_Text' and 'Output' columns...")
     for _, row in df.iterrows():
@@ -172,7 +171,7 @@ def main():
         tokenizer=tokenizer,
         args=training_args,
         eval_dataset=eval_dataset,
-        system_prompt=formatted_system_prompt
+        system_prompt=formatted_system_prompt 
     )
 
     print("\nRunning inference on the dataset...")
