@@ -52,7 +52,7 @@ class CustomTrainer(Trainer):
         with open(desc_path, "w") as f:
             f.write("\n".join(desc))
 
-    def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
+def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
         eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
         if eval_dataset is None:
              raise ValueError("Trainer: No evaluation dataset found (eval_dataset is None).")
@@ -74,16 +74,19 @@ class CustomTrainer(Trainer):
         for i in range(len(predicted_strings)):
             pred_text = predicted_strings[i]
             
-            prompt_text = original_texts[i]
-
             if HEADER_PATTERN in pred_text:
-                pred_assistant_part = pred_text.split(HEADER_PATTERN, 1)[-1]
-            elif pred_text.strip().startswith(prompt_text.strip()):
-                pred_assistant_part = pred_text.strip()[len(prompt_text.strip()):]
-            elif "assistant" in pred_text:
-                pred_assistant_part = pred_text.split("assistant", 1)[-1]
+                pred_assistant_part = pred_text.split(HEADER_PATTERN)[-1]
             else:
-                pred_assistant_part = pred_text
+                if "assistant" in pred_text:
+                     pred_assistant_part = pred_text.split("assistant")[-1]
+                else:
+                     pred_assistant_part = pred_text
+
+            if "<END>" in pred_assistant_part:
+                pred_assistant_part = pred_assistant_part.split("<END>")[0] + "<END>"
+            
+            if "<|start_header_id|>" in pred_assistant_part:
+                pred_assistant_part = pred_assistant_part.split("<|start_header_id|>")[0]
 
             pred_assistant_part = pred_assistant_part.replace("<|eot_id|>", "").replace("<|end_of_text|>", "").strip()
             
@@ -103,15 +106,12 @@ class CustomTrainer(Trainer):
         summary_report_parts = []
         jsonl_report = []
 
-        if self.system_prompt:
-            summary_report_parts.append(f"System Prompt:\n{self.system_prompt}\n\n")
-
         for i, (pred, label, prompt_text) in enumerate(zip(decoded_predictions, decoded_ground_truths, original_texts)):
             
             sample_metrics = compute_metrics([pred], [label])
 
             report_part = f"--- Sample {i} ---\n"
-            report_part += f"Prompt:\n{prompt_text}\n\n"
+            report_part += f"Input Data: {prompt_text}\n\n" 
             report_part += f"Prediction:\n{pred}\n"
             report_part += f"Ground Truth:\n{label}\n"
             report_part += f"Metrics: {json.dumps(sample_metrics, indent=2)}\n\n"
