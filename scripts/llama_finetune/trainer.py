@@ -74,13 +74,16 @@ class CustomTrainer(Trainer):
         for i in range(len(predicted_strings)):
             pred_text = predicted_strings[i]
             
+            prompt_text = original_texts[i]
+
             if HEADER_PATTERN in pred_text:
-                pred_assistant_part = pred_text.split(HEADER_PATTERN)[-1]
+                pred_assistant_part = pred_text.split(HEADER_PATTERN, 1)[-1]
+            elif pred_text.strip().startswith(prompt_text.strip()):
+                pred_assistant_part = pred_text.strip()[len(prompt_text.strip()):]
+            elif "assistant" in pred_text:
+                pred_assistant_part = pred_text.split("assistant", 1)[-1]
             else:
-                if "assistant" in pred_text:
-                     pred_assistant_part = pred_text.split("assistant")[-1]
-                else:
-                     pred_assistant_part = pred_text
+                pred_assistant_part = pred_text
 
             pred_assistant_part = pred_assistant_part.replace("<|eot_id|>", "").replace("<|end_of_text|>", "").strip()
             
