@@ -52,7 +52,7 @@ class CustomTrainer(Trainer):
         with open(desc_path, "w") as f:
             f.write("\n".join(desc))
 
-def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
+    def evaluate(self, eval_dataset=None, ignore_keys=None, metric_key_prefix: str = "eval"):
         eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
         if eval_dataset is None:
              raise ValueError("Trainer: No evaluation dataset found (eval_dataset is None).")
