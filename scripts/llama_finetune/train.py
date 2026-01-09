@@ -3,6 +3,7 @@ from transformers import TrainingArguments
 from .config import (
     DATASET_PATH,
     SYSTEM_PROMPT,
+    NEW_MODEL_DIR,
 )
 from .data_processing import load_data, create_preprocess_function
 from .model_setup import setup_model_and_tokenizer, setup_peft_model
@@ -13,6 +14,8 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 def main():
     FINAL_OUTPUT_DIR = "/scratch/efeldma5/uniner_project/model"
+    
+    REPORT_DIR = NEW_MODEL_DIR 
     
     model, tokenizer = setup_model_and_tokenizer()
     model = setup_peft_model(model)
@@ -41,8 +44,8 @@ def main():
         gradient_accumulation_steps=4,     
         per_device_eval_batch_size=1,
         eval_accumulation_steps=1,
-        num_train_epochs=3,                
-        learning_rate=1e-4,                
+        num_train_epochs=5,                
+        learning_rate=2e-5,                
         optim="paged_adamw_8bit",
         bf16=True,                         
         gradient_checkpointing=True,
@@ -63,6 +66,7 @@ def main():
         tokenizer=tokenizer,
         compute_metrics=lambda eval_pred: compute_metrics_wrapper(eval_pred, tokenizer),
         preprocess_logits_for_metrics=preprocess_logits_for_metrics,
+        report_dir=REPORT_DIR
     )
 
     print("\n--- Starting Llama 3.1 QLoRA Fine-tuning ---")
@@ -72,7 +76,7 @@ def main():
     trainer.save_model(FINAL_OUTPUT_DIR)
     tokenizer.save_pretrained(FINAL_OUTPUT_DIR)
     
-    print("\n--- Running Final Evaluation ---")
+    print(f"\n--- Running Final Evaluation (Report: {REPORT_DIR}) ---")
     metrics = trainer.evaluate()
     print(metrics)
     print("\n--- Training Complete ---")

@@ -9,17 +9,18 @@ from .metrics import compute_metrics
 from . import config as llama_finetune_config
 
 class CustomTrainer(Trainer):
-    def __init__(self, *args, raw_eval_dataset=None, system_prompt=None, **kwargs):
+    def __init__(self, *args, raw_eval_dataset=None, system_prompt=None, report_dir=None, **kwargs):
         super().__init__(*args, **kwargs)
         self.raw_eval_dataset = raw_eval_dataset
         self.system_prompt = system_prompt
+        self.report_dir = report_dir if report_dir is not None else self.args.output_dir
+        
+        if not os.path.exists(self.report_dir):
+            os.makedirs(self.report_dir)
+            
         self.save_run_description()
 
     def save_run_description(self):
-        output_dir = self.args.output_dir
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-
         desc = []
         desc.append("Run Type: llama_finetune")
         desc.append(f"Start Time: {time.ctime()}")
@@ -37,6 +38,10 @@ class CustomTrainer(Trainer):
             desc.append(f"Training Dataset Size: {len(self.train_dataset)}")
         if self.eval_dataset:
             desc.append(f"Evaluation Dataset Size: {len(self.eval_dataset)}")
+        
+        if self.system_prompt:
+            desc.append("\n--- System Prompt ---\n")
+            desc.append(self.system_prompt)
             
         desc.append("\n--- Training Arguments ---\n")
         desc.append(self.args.to_json_string())
@@ -48,7 +53,7 @@ class CustomTrainer(Trainer):
             ):
                 desc.append(f"{key}: {value}")
 
-        desc_path = os.path.join(output_dir, "desc.txt")
+        desc_path = os.path.join(self.report_dir, "desc.txt")
         with open(desc_path, "w") as f:
             f.write("\n".join(desc))
 
@@ -132,11 +137,11 @@ class CustomTrainer(Trainer):
         
         summary_report = summary_report_header + "".join(summary_report_parts)
 
-        summary_path = os.path.join(self.args.output_dir, "summary_report.txt")
+        summary_path = os.path.join(self.report_dir, "summary_report.txt")
         with open(summary_path, "w") as f:
             f.write(summary_report)
 
-        jsonl_path = os.path.join(self.args.output_dir, "metrics.jsonl")
+        jsonl_path = os.path.join(self.report_dir, "metrics.jsonl")
         with open(jsonl_path, "w") as f:
             for entry in jsonl_report:
                 f.write(json.dumps(entry) + "\n")
