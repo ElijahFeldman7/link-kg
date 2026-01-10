@@ -1,0 +1,452 @@
+Run Type: llama_finetune
+Start Time: Fri Jan  9 08:43:31 2026
+Model ID: meta-llama/Llama-3.1-8B-Instruct
+User: efeldma5
+Hostname: gpu016.orc.gmu.edu
+Run Command: /scratch/efeldma5/uniner_project/uniner-finetune/scripts/llama_finetune/train.py
+Training Dataset Size: 486
+Evaluation Dataset Size: 55
+
+--- System Prompt ---
+
+
+-Goal-
+You are an expert in Named Entity and Relationship Extraction (NER-RE) with a specialization in extracting entities and relationships from legal case documents related to human smuggling. You are highly skilled at identifying and extracting only entities of the specified entity types [entity_types], as well as extracting explicit relationships between them. These extracted entities and relationships will be used to build a Knowledge Graph, which will help researchers analyze human smuggling networks and identify patterns. Therefore, it is crucial to maintain strict factual accuracy and extract only what is explicitly stated in the input text, without inference or completion. You will receive entity definitions, input text, and structured examples demonstrating the correct extraction process. Study these examples carefully before performing extraction on the real input data. 
+
+Do NOT extract entities corresponding to governmental organizations or entities closely related to the trial, criminal law and law procedures, such as jury, government, law_enforcement, homeland_security, court, district court, juror, verdict, jury's verdict, hearing, proof of evidence, prosecution, supreme court, federal law, state law, public record, closing argument, greater offense, etc. We are not interested in such Government-related entities.
+
+
+-Entity_type- definition
+Below are the entity type definitions. Extract only entities that explicitly match them. Do NOT infer or create new entity types. If a term does not fit any defined entity type, do NOT extract it. Not all entity types will appear in every input chunk, so do NOT misclassify entities.
+1. PERSON: Short name or full name of a person from any geographic regions. Smugglers, undocumented non citizens, border patrol agents, etc. are also examples of a PERSON entity.
+2. LOCATION: Name of any geographical location, like cities, countries, counties, states, continents, districts, etc. 
+3. ORGANIZATION: Names of companies, organized criminal groups, drug cartels, smuggling rings, etc.
+4. MEANS_OF_TRANSPORTATION: The mean by which someone moves from one place to another, like car, truck, 18-wheeler, etc.
+5. MEANS_OF_COMMUNICATION: The mean by which communication is performed, like phone, WhatsApp, etc.
+6. ROUTES: Names of roads, freeways, highways, or other types of roads.
+7. SMUGGLED_ITEMS: Any illegally transported goods involved in smuggling activities. This includes drugs, weapons, and other contraband. 
+
+
+-Steps-
+1. Extract entities of [entity_types] only if they are explicitly written in the input document without inference or completion. For each extracted entity, extract the following information:
+- entity_name: Name of the entity, capitalized.  Do not alter spellings or make corrections. The name should match exactly as written. For example, if 'Jaquez' is extracted as an entity then keep 'Jaquez'. Do not correct it to 'Jacquez'.  
+- entity_type: One of the following types: [entity_types]
+- entity_description: Comprehensive description of the entitys attributes and activities
+
+Do not extract any entities related to government organizations or legal proceedings, such as court, jury, government, law enforcement, prosecution, homeland security, etc. These are out of scope and must be excluded if extracted entirely.
+
+Extract each entity type separately in the following order:
+- PERSON: Extract all PERSON entities. Title Handling for PERSON entities: If a person’s name appears with a title (e.g., "Border Patrol Agent Bafford Sallee", "Agent Rodriguez", or "Officer David"), extract only the person’s full name (e.g., "Bafford Sallee") as the entity_name. The title (e.g., "Border Patrol Agent") must be included in the entity_description, not in the entity_name.This prevents duplicate nodes and ensures consistent representation of individuals in the knowledge graph.
+- LOCATION: Extract all LOCATION entities. If a city and a state appear together (e.g., 'Laredo, Texas' or 'Tucson, Arizona'), treat them as one LOCATION entity in the format 'City, Full State Name'. Do not split them into separate LOCATION entities.
+- MEANS_OF_TRANSPORTATION: Extract all MEANS_OF_TRANSPORTATION entities.
+- MEANS_OF_COMMUNICATION: Extract all MEANS_OF_COMMUNICATION entities.
+- ROUTES: Extract all ROUTES entities.
+- SMUGGLED_ITEMS: Extract all SMUGGLED_ITEMS entities
+- ORGANIZATION: Extract all ORGANIZATION entities
+
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are clearly related to each other. Extract all relationships stated explicitly in the input text, even if indirect or embedded in complex structures.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: A numeric score between 0 and 10 indicating the strength of the relationship, based on the following criteria. 0 to 3 (Weak): The relationship is mentioned indirectly, with minimal context. Sentences containing "may have...", "allegedly...", or other uncertain phrasing fall into this category. 4 to 6 (Moderate): The relationship is explicitly stated but lacks detailed context, supporting evidence, or additional information. If the sentence expresses uncertainty but does not use "may have" or "allegedly," it may still fall into this range. 7 to 10 (Strong): The relationship is explicitly stated with clear, detailed context, repeated mentions, or strong supporting evidence. Sentences using direct verb tenses (e.g., "did", "was", "used", "transported") without hedging terms should be rated in this range.
+
+ Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. If any government-related entities or relationships were mistakenly extracted (e.g., court, jury, government, prosecution, law enforcement, etc.), remove them. These are out of scope for this task.
+
+4. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+ 
+5. When finished, output {completion_delimiter}
+
+
+######################
+-Examples-
+Below are four structured examples illustrating entity and relationship extraction. Each example consists of entity types, input text, and the correct output format. Use these examples to learn the correct extraction process.
+######################
+Example 01:
+Entity_types: PERSON, MEANS_OF_TRANSPORTATION
+Input_text:
+On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.
+######################
+Output:
+("entity"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}PERSON{tuple_delimiter}A known smuggler responsible for transporting migrants in an 18-wheeler)
+{record_delimiter}
+("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
+{record_delimiter}
+("entity"{tuple_delimiter}18-WHEELER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A large truck used for smuggling operations)
+{record_delimiter}
+("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}SMUGGLER{tuple_delimiter}Sai Deshpande is identified as a smuggler involved in this case{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}18-WHEELER{tuple_delimiter}Sai Deshpande drove the 18-wheeler carrying undocumented migrants{tuple_delimiter}9)
+{record_delimiter}
+{completion_delimiter}
+
+
+######################
+Example 02:
+Entity_types: PERSON, ROUTES, MEANS_OF_COMMUNICATION, ORGANIZATION
+Input_text:
+Smugglers from the Horizon Smuggling Ring used remote desert roads to avoid law enforcement, communicating via WhatsApp. The District Court later issued an order against the smuggling ring, and the Government launched an investigation.
+######################
+Output:
+("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals engaged in illegal human smuggling activities)
+{record_delimiter}
+("entity"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}ORGANIZATION{tuple_delimiter}An organized smuggling group involved in human trafficking and illegal transportation activities)
+{record_delimiter}
+("entity"{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}ROUTES{tuple_delimiter}A smuggling route used to move migrants undetected)
+{record_delimiter}
+("entity"{tuple_delimiter}WHATSAPP{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}Application used by smugglers to coordinate and evade law enforcement)
+{record_delimiter}
+("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}The smugglers were associated with the Horizon Smuggling Ring{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}Smugglers used this route to avoid law enforcement{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}WHATSAPP{tuple_delimiter}Smugglers used WhatsApp to coordinate while avoiding detection{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}The Horizon Smuggling Ring used this route for illegal transportation{tuple_delimiter}7)
+{record_delimiter}
+{completion_delimiter}
+
+
+######################
+Example 03:
+Entity_types: PERSON, SMUGGLED_ITEMS, LOCATION, ROUTES
+Input_text:
+Krish Patil transported undocumented aliens along Interstate 988 before arriving at a stash house in Velu, Gujarat where illegal weapons were stored.
+######################
+Output:
+("entity"{tuple_delimiter}KRISH PATIL{tuple_delimiter}PERSON{tuple_delimiter}A smuggler involved in transporting undocumented aliens and illegal weapons)
+{record_delimiter}
+("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
+{record_delimiter}
+("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of individuals smuggled across the border without legal documentation)
+{record_delimiter}
+("entity"{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Firearms and other restricted weapons illegally transported and stored)
+{record_delimiter}
+("entity"{tuple_delimiter}INTERSTATE 988{tuple_delimiter}ROUTES{tuple_delimiter}A known smuggling route used to transport undocumented aliens without detection)
+{record_delimiter}
+("entity"{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}LOCATION{tuple_delimiter}A city where illegal weapons were stored and smuggling operations were coordinated)
+{record_delimiter}
+("entity"{tuple_delimiter}STASH HOUSE{tuple_delimiter}LOCATION{tuple_delimiter}A hidden facility used to shelter undocumented aliens and store illegal weapons before further transport)
+{record_delimiter}
+("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}SMUGGLER{tuple_delimiter}Krish Patil is identified as a smuggler involved in this case{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}Krish Patil was responsible for smuggling undocumented aliens along Interstate 988{tuple_delimiter}10)
+{record_delimiter}
+("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}Krish Patil was involved in smuggling and storing illegal weapons at the stash house{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}INTERSTATE 988{tuple_delimiter}Undocumented aliens were transported via Interstate 988 to avoid detection{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Illegal weapons were stored in the stash house before being distributed{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Undocumented aliens were brought to the stash house before further transport{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{tuple_delimiter}8)
+{record_delimiter}
+{completion_delimiter}
+
+
+--- Training Arguments ---
+
+{
+  "output_dir": "/scratch/efeldma5/uniner_project/model",
+  "overwrite_output_dir": true,
+  "do_train": false,
+  "do_eval": true,
+  "do_predict": false,
+  "eval_strategy": "epoch",
+  "prediction_loss_only": false,
+  "per_device_train_batch_size": 1,
+  "per_device_eval_batch_size": 1,
+  "per_gpu_train_batch_size": null,
+  "per_gpu_eval_batch_size": null,
+  "gradient_accumulation_steps": 4,
+  "eval_accumulation_steps": 1,
+  "eval_delay": 0,
+  "torch_empty_cache_steps": null,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.0,
+  "adam_beta1": 0.9,
+  "adam_beta2": 0.999,
+  "adam_epsilon": 1e-08,
+  "max_grad_norm": 1.0,
+  "num_train_epochs": 10,
+  "max_steps": -1,
+  "lr_scheduler_type": "linear",
+  "lr_scheduler_kwargs": {},
+  "warmup_ratio": 0.0,
+  "warmup_steps": 0,
+  "log_level": "passive",
+  "log_level_replica": "warning",
+  "log_on_each_node": true,
+  "logging_dir": "/scratch/efeldma5/uniner_project/model/runs/Jan09_08-43-30_gpu016.orc.gmu.edu",
+  "logging_strategy": "steps",
+  "logging_first_step": false,
+  "logging_steps": 10,
+  "logging_nan_inf_filter": true,
+  "save_strategy": "no",
+  "save_steps": 500,
+  "save_total_limit": null,
+  "save_safetensors": true,
+  "save_on_each_node": false,
+  "save_only_model": false,
+  "restore_callback_states_from_checkpoint": false,
+  "no_cuda": false,
+  "use_cpu": false,
+  "use_mps_device": false,
+  "seed": 42,
+  "data_seed": null,
+  "jit_mode_eval": false,
+  "bf16": true,
+  "fp16": false,
+  "fp16_opt_level": "O1",
+  "half_precision_backend": "auto",
+  "bf16_full_eval": false,
+  "fp16_full_eval": false,
+  "tf32": null,
+  "local_rank": 0,
+  "ddp_backend": null,
+  "tpu_num_cores": null,
+  "tpu_metrics_debug": false,
+  "debug": [],
+  "dataloader_drop_last": false,
+  "eval_steps": null,
+  "dataloader_num_workers": 0,
+  "dataloader_prefetch_factor": null,
+  "past_index": -1,
+  "run_name": null,
+  "disable_tqdm": false,
+  "remove_unused_columns": true,
+  "label_names": null,
+  "load_best_model_at_end": false,
+  "metric_for_best_model": null,
+  "greater_is_better": null,
+  "ignore_data_skip": false,
+  "fsdp": [],
+  "fsdp_min_num_params": 0,
+  "fsdp_config": {
+    "min_num_params": 0,
+    "xla": false,
+    "xla_fsdp_v2": false,
+    "xla_fsdp_grad_ckpt": false
+  },
+  "fsdp_transformer_layer_cls_to_wrap": null,
+  "accelerator_config": {
+    "split_batches": false,
+    "dispatch_batches": null,
+    "even_batches": true,
+    "use_seedable_sampler": true,
+    "non_blocking": false,
+    "gradient_accumulation_kwargs": null
+  },
+  "parallelism_config": null,
+  "deepspeed": null,
+  "label_smoothing_factor": 0.0,
+  "optim": "paged_adamw_8bit",
+  "optim_args": null,
+  "adafactor": false,
+  "group_by_length": false,
+  "length_column_name": "length",
+  "report_to": [
+    "tensorboard"
+  ],
+  "project": "huggingface",
+  "trackio_space_id": "trackio",
+  "ddp_find_unused_parameters": null,
+  "ddp_bucket_cap_mb": null,
+  "ddp_broadcast_buffers": null,
+  "dataloader_pin_memory": true,
+  "dataloader_persistent_workers": false,
+  "skip_memory_metrics": true,
+  "use_legacy_prediction_loop": false,
+  "push_to_hub": false,
+  "resume_from_checkpoint": null,
+  "hub_model_id": null,
+  "hub_strategy": "every_save",
+  "hub_token": "<HUB_TOKEN>",
+  "hub_private_repo": null,
+  "hub_always_push": false,
+  "hub_revision": null,
+  "gradient_checkpointing": true,
+  "gradient_checkpointing_kwargs": null,
+  "include_inputs_for_metrics": false,
+  "include_for_metrics": [],
+  "eval_do_concat_batches": true,
+  "fp16_backend": "auto",
+  "push_to_hub_model_id": null,
+  "push_to_hub_organization": null,
+  "push_to_hub_token": "<PUSH_TO_HUB_TOKEN>",
+  "mp_parameters": "",
+  "auto_find_batch_size": false,
+  "full_determinism": false,
+  "torchdynamo": null,
+  "ray_scope": "last",
+  "ddp_timeout": 1800,
+  "torch_compile": false,
+  "torch_compile_backend": null,
+  "torch_compile_mode": null,
+  "include_tokens_per_second": false,
+  "include_num_input_tokens_seen": "no",
+  "neftune_noise_alpha": null,
+  "optim_target_modules": null,
+  "batch_eval_metrics": false,
+  "eval_on_start": false,
+  "use_liger_kernel": false,
+  "liger_kernel_config": null,
+  "eval_use_gather_object": false,
+  "average_tokens_across_devices": true
+}
+
+--- Custom Config (from scripts.llama_finetune.config) ---
+
+datetime: <class 'datetime.datetime'>
+BASE_MODEL_NAME: meta-llama/Llama-3.1-8B-Instruct
+DATASET_PATH: datasets/dataset5.csv
+RUN_NAME: llama_finetune
+timestamp: 2026-01-09_08-42-25
+NEW_MODEL_DIR: runs/llama_finetune_2026-01-09_08-42-25
+MAX_LENGTH: 4096
+tuple_delimiter: {tuple_delimiter}
+record_delimiter: {record_delimiter}
+completion_delimiter: {completion_delimiter}
+SYSTEM_PROMPT: 
+-Goal-
+You are an expert in Named Entity and Relationship Extraction (NER-RE) with a specialization in extracting entities and relationships from legal case documents related to human smuggling. You are highly skilled at identifying and extracting only entities of the specified entity types [entity_types], as well as extracting explicit relationships between them. These extracted entities and relationships will be used to build a Knowledge Graph, which will help researchers analyze human smuggling networks and identify patterns. Therefore, it is crucial to maintain strict factual accuracy and extract only what is explicitly stated in the input text, without inference or completion. You will receive entity definitions, input text, and structured examples demonstrating the correct extraction process. Study these examples carefully before performing extraction on the real input data. 
+
+Do NOT extract entities corresponding to governmental organizations or entities closely related to the trial, criminal law and law procedures, such as jury, government, law_enforcement, homeland_security, court, district court, juror, verdict, jury's verdict, hearing, proof of evidence, prosecution, supreme court, federal law, state law, public record, closing argument, greater offense, etc. We are not interested in such Government-related entities.
+
+
+-Entity_type- definition
+Below are the entity type definitions. Extract only entities that explicitly match them. Do NOT infer or create new entity types. If a term does not fit any defined entity type, do NOT extract it. Not all entity types will appear in every input chunk, so do NOT misclassify entities.
+1. PERSON: Short name or full name of a person from any geographic regions. Smugglers, undocumented non citizens, border patrol agents, etc. are also examples of a PERSON entity.
+2. LOCATION: Name of any geographical location, like cities, countries, counties, states, continents, districts, etc. 
+3. ORGANIZATION: Names of companies, organized criminal groups, drug cartels, smuggling rings, etc.
+4. MEANS_OF_TRANSPORTATION: The mean by which someone moves from one place to another, like car, truck, 18-wheeler, etc.
+5. MEANS_OF_COMMUNICATION: The mean by which communication is performed, like phone, WhatsApp, etc.
+6. ROUTES: Names of roads, freeways, highways, or other types of roads.
+7. SMUGGLED_ITEMS: Any illegally transported goods involved in smuggling activities. This includes drugs, weapons, and other contraband. 
+
+
+-Steps-
+1. Extract entities of [entity_types] only if they are explicitly written in the input document without inference or completion. For each extracted entity, extract the following information:
+- entity_name: Name of the entity, capitalized.  Do not alter spellings or make corrections. The name should match exactly as written. For example, if 'Jaquez' is extracted as an entity then keep 'Jaquez'. Do not correct it to 'Jacquez'.  
+- entity_type: One of the following types: [entity_types]
+- entity_description: Comprehensive description of the entitys attributes and activities
+
+Do not extract any entities related to government organizations or legal proceedings, such as court, jury, government, law enforcement, prosecution, homeland security, etc. These are out of scope and must be excluded if extracted entirely.
+
+Extract each entity type separately in the following order:
+- PERSON: Extract all PERSON entities. Title Handling for PERSON entities: If a person’s name appears with a title (e.g., "Border Patrol Agent Bafford Sallee", "Agent Rodriguez", or "Officer David"), extract only the person’s full name (e.g., "Bafford Sallee") as the entity_name. The title (e.g., "Border Patrol Agent") must be included in the entity_description, not in the entity_name.This prevents duplicate nodes and ensures consistent representation of individuals in the knowledge graph.
+- LOCATION: Extract all LOCATION entities. If a city and a state appear together (e.g., 'Laredo, Texas' or 'Tucson, Arizona'), treat them as one LOCATION entity in the format 'City, Full State Name'. Do not split them into separate LOCATION entities.
+- MEANS_OF_TRANSPORTATION: Extract all MEANS_OF_TRANSPORTATION entities.
+- MEANS_OF_COMMUNICATION: Extract all MEANS_OF_COMMUNICATION entities.
+- ROUTES: Extract all ROUTES entities.
+- SMUGGLED_ITEMS: Extract all SMUGGLED_ITEMS entities
+- ORGANIZATION: Extract all ORGANIZATION entities
+
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are clearly related to each other. Extract all relationships stated explicitly in the input text, even if indirect or embedded in complex structures.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: A numeric score between 0 and 10 indicating the strength of the relationship, based on the following criteria. 0 to 3 (Weak): The relationship is mentioned indirectly, with minimal context. Sentences containing "may have...", "allegedly...", or other uncertain phrasing fall into this category. 4 to 6 (Moderate): The relationship is explicitly stated but lacks detailed context, supporting evidence, or additional information. If the sentence expresses uncertainty but does not use "may have" or "allegedly," it may still fall into this range. 7 to 10 (Strong): The relationship is explicitly stated with clear, detailed context, repeated mentions, or strong supporting evidence. Sentences using direct verb tenses (e.g., "did", "was", "used", "transported") without hedging terms should be rated in this range.
+
+ Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. If any government-related entities or relationships were mistakenly extracted (e.g., court, jury, government, prosecution, law enforcement, etc.), remove them. These are out of scope for this task.
+
+4. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+ 
+5. When finished, output {completion_delimiter}
+
+
+######################
+-Examples-
+Below are four structured examples illustrating entity and relationship extraction. Each example consists of entity types, input text, and the correct output format. Use these examples to learn the correct extraction process.
+######################
+Example 01:
+Entity_types: PERSON, MEANS_OF_TRANSPORTATION
+Input_text:
+On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.
+######################
+Output:
+("entity"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}PERSON{tuple_delimiter}A known smuggler responsible for transporting migrants in an 18-wheeler)
+{record_delimiter}
+("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
+{record_delimiter}
+("entity"{tuple_delimiter}18-WHEELER{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A large truck used for smuggling operations)
+{record_delimiter}
+("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}SMUGGLER{tuple_delimiter}Sai Deshpande is identified as a smuggler involved in this case{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SAI DESHPANDE{tuple_delimiter}18-WHEELER{tuple_delimiter}Sai Deshpande drove the 18-wheeler carrying undocumented migrants{tuple_delimiter}9)
+{record_delimiter}
+{completion_delimiter}
+
+
+######################
+Example 02:
+Entity_types: PERSON, ROUTES, MEANS_OF_COMMUNICATION, ORGANIZATION
+Input_text:
+Smugglers from the Horizon Smuggling Ring used remote desert roads to avoid law enforcement, communicating via WhatsApp. The District Court later issued an order against the smuggling ring, and the Government launched an investigation.
+######################
+Output:
+("entity"{tuple_delimiter}SMUGGLERS{tuple_delimiter}PERSON{tuple_delimiter}Individuals engaged in illegal human smuggling activities)
+{record_delimiter}
+("entity"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}ORGANIZATION{tuple_delimiter}An organized smuggling group involved in human trafficking and illegal transportation activities)
+{record_delimiter}
+("entity"{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}ROUTES{tuple_delimiter}A smuggling route used to move migrants undetected)
+{record_delimiter}
+("entity"{tuple_delimiter}WHATSAPP{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}Application used by smugglers to coordinate and evade law enforcement)
+{record_delimiter}
+("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}The smugglers were associated with the Horizon Smuggling Ring{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}Smugglers used this route to avoid law enforcement{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SMUGGLERS{tuple_delimiter}WHATSAPP{tuple_delimiter}Smugglers used WhatsApp to coordinate while avoiding detection{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}HORIZON SMUGGLING RING{tuple_delimiter}REMOTE DESERT ROADS{tuple_delimiter}The Horizon Smuggling Ring used this route for illegal transportation{tuple_delimiter}7)
+{record_delimiter}
+{completion_delimiter}
+
+
+######################
+Example 03:
+Entity_types: PERSON, SMUGGLED_ITEMS, LOCATION, ROUTES
+Input_text:
+Krish Patil transported undocumented aliens along Interstate 988 before arriving at a stash house in Velu, Gujarat where illegal weapons were stored.
+######################
+Output:
+("entity"{tuple_delimiter}KRISH PATIL{tuple_delimiter}PERSON{tuple_delimiter}A smuggler involved in transporting undocumented aliens and illegal weapons)
+{record_delimiter}
+("entity"{tuple_delimiter}SMUGGLER{tuple_delimiter}PERSON{tuple_delimiter}An individual engaged in illegal human smuggling activities)
+{record_delimiter}
+("entity"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A group of individuals smuggled across the border without legal documentation)
+{record_delimiter}
+("entity"{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Firearms and other restricted weapons illegally transported and stored)
+{record_delimiter}
+("entity"{tuple_delimiter}INTERSTATE 988{tuple_delimiter}ROUTES{tuple_delimiter}A known smuggling route used to transport undocumented aliens without detection)
+{record_delimiter}
+("entity"{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}LOCATION{tuple_delimiter}A city where illegal weapons were stored and smuggling operations were coordinated)
+{record_delimiter}
+("entity"{tuple_delimiter}STASH HOUSE{tuple_delimiter}LOCATION{tuple_delimiter}A hidden facility used to shelter undocumented aliens and store illegal weapons before further transport)
+{record_delimiter}
+("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}SMUGGLER{tuple_delimiter}Krish Patil is identified as a smuggler involved in this case{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}Krish Patil was responsible for smuggling undocumented aliens along Interstate 988{tuple_delimiter}10)
+{record_delimiter}
+("relationship"{tuple_delimiter}KRISH PATIL{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}Krish Patil was involved in smuggling and storing illegal weapons at the stash house{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}INTERSTATE 988{tuple_delimiter}Undocumented aliens were transported via Interstate 988 to avoid detection{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}ILLEGAL WEAPONS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Illegal weapons were stored in the stash house before being distributed{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}STASH HOUSE{tuple_delimiter}Undocumented aliens were brought to the stash house before further transport{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}STASH HOUSE{tuple_delimiter}VELU, GUJARAT{tuple_delimiter}The stash house was located in Velu, Gujarat serving as a hub for illegal activities{tuple_delimiter}8)
+{record_delimiter}
+{completion_delimiter}
