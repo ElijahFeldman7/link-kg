@@ -141,7 +141,14 @@ class CustomTrainer(Trainer):
         with open(summary_path, "w") as f:
             f.write(summary_report)
 
-        jsonl_path = os.path.join(self.report_dir, "metrics.jsonl")
+        if self.state.epoch is not None:
+            epoch_label = int(self.state.epoch) 
+        else:
+            epoch_label = "final"
+            
+        jsonl_filename = f"metrics_epoch_{epoch_label}.jsonl"
+        jsonl_path = os.path.join(self.report_dir, jsonl_filename)
+        
         with open(jsonl_path, "w") as f:
             for entry in jsonl_report:
                 f.write(json.dumps(entry) + "\n")
