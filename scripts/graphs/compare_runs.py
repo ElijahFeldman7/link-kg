@@ -1,68 +1,168 @@
-
+import os
 import json
+import re
+import glob
 import matplotlib.pyplot as plt
 import numpy as np
-import sys
-import os
 
-def load_metrics(file_path):
-    metrics = {
-        'entity_f1': [],
-        'relationship_f1': [],
-        'relationship_score_mae': []
+# ================= CONFIGURATION =================
+# Update these paths to match your exact folder structure
+FINETUNE_DIR = "runs/llama_finetune_2026-01-09_23-28-44"
+BASELINE_DIR = "runs/llama_baseline_2026-01-06_18-30-26"
+# =================================================
+
+def calculate_average_from_jsonl(file_path):
+    """Reads a JSONL file and calculates average metrics across all samples."""
+    totals = {
+        "entity_f1": 0.0,
+        "rel_f1": 0.0,
+        "mae": 0.0,
+        "count": 0
     }
-    with open(file_path, 'r') as f:
-        for line in f:
-            data = json.loads(line)
-            if 'metrics' in data:
-                metrics['entity_f1'].append(data['metrics'].get('entity_f1', 0))
-                metrics['relationship_f1'].append(data['metrics'].get('relationship_f1', 0))
-                metrics['relationship_score_mae'].append(data['metrics'].get('relationship_score_mae', 0))
-    return metrics
-
-def plot_comparison(baseline_metrics, finetuned_metrics, metric_name, output_dir):
-    plt.figure(figsize=(10, 6))
-    plt.boxplot([baseline_metrics[metric_name], finetuned_metrics[metric_name]],
-                labels=['Baseline', 'Finetuned'])
-    plt.title(f'{metric_name.replace("_", " ").title()} Comparison')
-    plt.ylabel('Score')
     
-    mean_baseline = np.mean(baseline_metrics[metric_name])
-    mean_finetuned = np.mean(finetuned_metrics[metric_name])
-    plt.text(1, plt.ylim()[1]*0.9, f'Mean: {mean_baseline:.2f}', ha='center', va='center', backgroundcolor='white')
-    plt.text(2, plt.ylim()[1]*0.9, f'Mean: {mean_finetuned:.2f}', ha='center', va='center', backgroundcolor='white')
+    try:
+        with open(file_path, 'r') as f:
+            for line in f:
+                data = json.loads(line)
+                # The structure is {"metrics": {"entity_f1": ...}, ...}
+                metrics = data.get("metrics", {})
+                
+                totals["entity_f1"] += metrics.get("entity_f1", 0)
+                totals["rel_f1"] += metrics.get("relationship_f1", 0)
+                totals["mae"] += metrics.get("relationship_score_mae", 0)
+                totals["count"] += 1
+    except Exception as e:
+        print(f"Error parsing {file_path}: {e}")
+        return None
 
-    plot_filename = os.path.join(output_dir, f'{metric_name}_comparison.png')
-    plt.savefig(plot_filename)
-    print(f'Saved plot to {plot_filename}')
+    if totals["count"] == 0:
+        return None
+
+    # Return Averages
+    return {
+        "entity_f1": totals["entity_f1"] / totals["count"],
+        "rel_f1": totals["rel_f1"] / totals["count"],
+        "mae": totals["mae"] / totals["count"]
+    }
+
+def get_finetune_data():
+    """Parses all metrics_epoch_X.jsonl files."""
+    data = []
+    # Look for files like metrics_epoch_1.jsonl
+    files = glob.glob(os.path.join(FINETUNE_DIR, "metrics_epoch_*.jsonl"))
+    
+    print(f"DEBUG: Found {len(files)} JSONL files in Finetune dir.")
+
+    for f in files:
+        filename = os.path.basename(f)
+        # Extract epoch number
+        match = re.search(r"epoch_(\d+)", filename)
+        if match:
+            epoch = int(match.group(1))
+            avgs = calculate_average_from_jsonl(f)
+            if avgs:
+                avgs["epoch"] = epoch
+                data.append(avgs)
+    
+    data.sort(key=lambda x: x["epoch"])
+    return data
+
+def get_baseline_data():
+    """Parses the metrics.jsonl from the baseline directory."""
+    f_path = os.path.join(BASELINE_DIR, "metrics.jsonl")
+    if not os.path.exists(f_path):
+        return {"entity_f1": 0.0, "rel_f1": 0.0}
+    
+    avgs = calculate_average_from_jsonl(f_path)
+    if not avgs:
+        return {"entity_f1": 0.0, "rel_f1": 0.0}
+    return avgs
+
+# ================= PLOTTING FUNCTIONS =================
+
+def plot_learning_curve(data):
+    epochs = [d["epoch"] for d in data]
+    ent_f1 = [d["entity_f1"] for d in data]
+    rel_f1 = [d["rel_f1"] for d in data]
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(epochs, ent_f1, marker='o', linewidth=2, label='Entity Extraction F1')
+    plt.plot(epochs, rel_f1, marker='s', linewidth=2, label='Relationship Extraction F1')
+    
+    plt.title('Learning Curve: Extraction Performance over Epochs', fontsize=14)
+    plt.xlabel('Training Epochs', fontsize=12)
+    plt.ylabel('F1 Score (0.0 - 1.0)', fontsize=12)
+    plt.ylim(0, 1.05)
+    plt.grid(True, linestyle='--', alpha=0.6)
+    plt.legend(fontsize=12)
+    
+    plt.savefig("graph_1_learning_curve.png", dpi=300)
+    print("Saved graph_1_learning_curve.png")
     plt.close()
 
-def main(baseline_file, finetuned_file, output_dir):
-    """Main function to load data, generate plots, and print summaries."""
-    baseline_metrics = load_metrics(baseline_file)
-    finetuned_metrics = load_metrics(finetuned_file)
+def plot_mae_curve(data):
+    epochs = [d["epoch"] for d in data]
+    mae = [d["mae"] for d in data]
 
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    for metric in ['entity_f1', 'relationship_f1', 'relationship_score_mae']:
-        plot_comparison(baseline_metrics, finetuned_metrics, metric, output_dir)
-
-    print("\n--- Average Scores ---")
-    print("Metric                  | Baseline | Finetuned")
-    print("------------------------|----------|----------")
-    for metric in ['entity_f1', 'relationship_f1', 'relationship_score_mae']:
-        mean_baseline = np.mean(baseline_metrics[metric])
-        mean_finetuned = np.mean(finetuned_metrics[metric])
-        print(f'{metric:<23} | {mean_baseline:<8.2f} | {mean_finetuned:<8.2f}')
-
-if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        print("Usage: python compare_runs.py <baseline_metrics.jsonl> <finetuned_metrics.jsonl> <output_dir>")
-        sys.exit(1)
+    plt.figure(figsize=(10, 6))
+    plt.plot(epochs, mae, marker='^', color='purple', linewidth=2, label='Relationship Score MAE')
     
-    baseline_file = sys.argv[1]
-    finetuned_file = sys.argv[2]
-    output_dir = sys.argv[3]
+    plt.title('Accuracy of Relationship Strength Scores (1-10)', fontsize=14)
+    plt.xlabel('Training Epochs', fontsize=12)
+    plt.ylabel('Mean Absolute Error (Lower is Better)', fontsize=12)
+    plt.grid(True, linestyle='--', alpha=0.6)
+    plt.legend(fontsize=12)
     
-    main(baseline_file, finetuned_file, output_dir)
+    plt.savefig("graph_4_mae_curve.png", dpi=300)
+    print("Saved graph_4_mae_curve.png")
+    plt.close()
+
+def plot_baseline_comparison(ft_data, bl_data):
+    if not ft_data: return
+    best_ft = ft_data[-1] # Last epoch
+
+    labels = ['Entity F1', 'Relationship F1']
+    baseline_scores = [bl_data["entity_f1"], bl_data["rel_f1"]]
+    finetuned_scores = [best_ft["entity_f1"], best_ft["rel_f1"]]
+
+    x = np.arange(len(labels))
+    width = 0.35
+
+    plt.figure(figsize=(10, 6))
+    bars1 = plt.bar(x - width/2, baseline_scores, width, label='Baseline', color='gray', alpha=0.7)
+    bars2 = plt.bar(x + width/2, finetuned_scores, width, label='Finetuned', color='#1f77b4')
+
+    plt.title('Baseline vs. Finetuned', fontsize=14)
+    plt.ylabel('F1 Score', fontsize=12)
+    plt.xticks(x, labels, fontsize=12)
+    plt.ylim(0, 1.1)
+    plt.legend(fontsize=12)
+    plt.grid(axis='y', linestyle='--', alpha=0.5)
+    
+    for bar in bars1 + bars2:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height,
+                 f'{height:.2f}', ha='center', va='bottom')
+
+    plt.savefig("graph_3_baseline_vs_finetune.png", dpi=300)
+    print("Saved graph_3_baseline_vs_finetune.png")
+    plt.close()
+
+# ================= MAIN EXECUTION =================
+
+if __name__ == "__main__":
+    print(f"Reading from: {FINETUNE_DIR}")
+    ft_data = get_finetune_data()
+    bl_data = get_baseline_data()
+
+    if not ft_data:
+        print(f"Error: No metrics_epoch_*.jsonl files found in {FINETUNE_DIR}")
+        print("Please check the folder path and ensure the files exist.")
+    else:
+        print(f"Successfully processed {len(ft_data)} epoch files.")
+        print(f"Baseline Data: {bl_data}")
+        
+        plot_learning_curve(ft_data)
+        plot_mae_curve(ft_data)
+        plot_baseline_comparison(ft_data, bl_data)
+        print("All graphs generated.")
