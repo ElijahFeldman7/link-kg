@@ -3,9 +3,9 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-base_model_name = "Universal-NER/UniNER-7B-all"
-adapter_path = "./uniner_person_baseline"
-merged_model_path = "./merged_uniner_model"
+base_model_name = "meta-llama/Llama-3.1-8B-Instruct"
+adapter_path = "/scratch/efeldma5/uniner_project/model"
+merged_model_path = "/scratch/efeldma5/uniner_project/merged_model"
 
 print("\nLoading base model...")
 base_model = AutoModelForCausalLM.from_pretrained(
