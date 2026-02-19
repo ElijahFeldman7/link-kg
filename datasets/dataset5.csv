@@ -193,13 +193,15 @@ Sr.No.,Entity_Types,Input_Text,Output
 {record_delimiter}
 (""entity""{tuple_delimiter}CARLOS ENRIQUE CRUZ-MORALES{tuple_delimiter}PERSON{tuple_delimiter}A person who travelled with Mejia-Orosco)
 {record_delimiter}
-(""entity""{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}PERSON{tuple_delimiter}A place in Tamaulipas, Mexico where Paz-Ortega and Cruz-Morales disembarked after traveling with Mejia-Orosco)
+(""entity""{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}LOCATION{tuple_delimiter}A place in Tamaulipas, Mexico where Paz-Ortega and Cruz-Morales disembarked after traveling with Mejia-Orosco)
 {record_delimiter}
-(""relationship""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}HECTOR GALVENCIO PAZ-ORTEGA{tuple_delimiter}Mejia-Orosco brought Paz-Ortega to Nuevo Laredo, Tamaulipas, Mexico}9)
+(""entity""{tuple_delimiter}GUATEMALA{tuple_delimiter}LOCATION{tuple_delimiter}Country of citizenship for Mejia-Orosco, Paz-Ortega, and Cruz-Morales)
 {record_delimiter}
-(""relationship""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}CARLOS ENRIQUE CRUZ-MORALES{tuple_delimiter}Mejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico}9)
+(""relationship""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}HECTOR GALVENCIO PAZ-ORTEGA{tuple_delimiter}Mejia-Orosco brought Paz-Ortega to Nuevo Laredo, Tamaulipas, Mexico{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}A place in Tamaulipas, Mexico where Paz-Ortega and Cruz-Morales disembarked after traveling with Mejia-Orosco}9)
+(""relationship""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}CARLOS ENRIQUE CRUZ-MORALES{tuple_delimiter}Mejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico{tuple_delimiter}9)
+{record_delimiter}
+(""relationship""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}NUEVO LAREDO{tuple_delimiter}A place in Tamaulipas, Mexico where Paz-Ortega and Cruz-Morales disembarked after traveling with Mejia-Orosco{tuple_delimiter}9)
 {record_delimiter}
 {completion_delimiter}"
 20,"PERSON, LOCATION","Mejia-Orosco drove his van across the bridge into Laredo, Texas. Paz-Ortega and Cruz-Morales waded the Rio Grande. They did not pass through customs and had no legal right to enter this country. Mejia-Orosco and the aliens then regrouped and spent two days in Laredo.","(""entity""{tuple_delimiter}MEJIA-OROSCO{tuple_delimiter}PERSON{tuple_delimiter}A citizen of Guatemala)
