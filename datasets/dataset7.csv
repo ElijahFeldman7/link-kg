@@ -143,7 +143,7 @@ Sr.No.,Input_Text,Output
 (""relationship""{tuple_delimiter}BLACK DODGE TRUCK{tuple_delimiter}FARM-TO-MARKET ROAD 2050{tuple_delimiter}A ""black Dodge"" truck had exited off of U.S. 59 to the right and turned southbound onto Farm-to-Market Road 2050{tuple_delimiter}9)
 {record_delimiter}
 {completion_delimiter}"
-13,One contact in the cellphone was Tony Primo.,"(""entity""{tuple_delimiter}TONY PRIMO{tuple_delimiter}PERSON{tuple_delimiter}A contact in the cellphone)                                                                                                                             {record_delimiter}                                                                                                                                                                                                                                             (""entity""{tuple_delimiter}CELLPHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}One contact in the cellphone was Tony Primo)                                                                                                                                                                                                                                     {record_delimiter}                                                                                                                                                                                                                                           (""entity""{tuple_delimiter}TONY PRIMO{tuple_delimiter}CELLPHONE{tuple_delimiter}Tony Primo was a contact in the cellphone{tuple_delimiter}9)                                                                               
+13,One contact in the cellphone was Tony Primo.,"(""entity""{tuple_delimiter}TONY PRIMO{tuple_delimiter}PERSON{tuple_delimiter}A contact in the cellphone)                                                                                                                             {record_delimiter}                                                                                                                                                                                                                                             (""entity""{tuple_delimiter}CELLPHONE{tuple_delimiter}MEANS_OF_COMMUNICATION{tuple_delimiter}One contact in the cellphone was Tony Primo)                                                                                                                                                                                                                                     {record_delimiter}                                                                                                                                                                                                                                           (""relationship""{tuple_delimiter}TONY PRIMO{tuple_delimiter}CELLPHONE{tuple_delimiter}Tony Primo was a contact in the cellphone{tuple_delimiter}9)                                                                               
 {completion_delimiter}"
 14,"On November 15, 2005, Andrea Gonzalez-Perales drove three female passengers to the primary inspection lane of a border patrol checkpoint north of Laredo, Texas.","(""entity""{tuple_delimiter}ANDREA GONZALEZ-PERALES{tuple_delimiter}PERSON{tuple_delimiter}Person who drove three female passengers to the primary inspection lane of a border patrol checkpoint north of Laredo, Texas)
 {record_delimiter}
@@ -1876,25 +1876,17 @@ Sr.No.,Input_Text,Output
 {record_delimiter}
 (""entity""{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}LOCATION{tuple_delimiter}The location in California where the Santa Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach linked to an ongoing smuggling case)
 {record_delimiter}
-(""entity""{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}EVENT{tuple_delimiter}An ongoing smuggling case to which the abandoned inflatable raft found by the Santa Cruz Police Department near Seal Rock Beach in Santa Cruz, California was linked)
-{record_delimiter}
 (""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}The Santa Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach in Santa Cruz, California{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}The Santa Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach in Santa Cruz, California{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}The Santa Cruz Police Department found an abandoned inflatable raft in Santa Cruz, California{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}The Santa Cruz Police Department found an abandoned inflatable raft linked to an ongoing smuggling case{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}The abandoned inflatable raft was found by the Santa Cruz Police Department near Seal Rock Beach in Santa Cruz, California{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}The abandoned inflatable raft was found by the Santa Cruz Police Department in Santa Cruz, California{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}The abandoned inflatable raft found near Seal Rock Beach in Santa Cruz, California was linked to an ongoing smuggling case{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}Seal Rock Beach is located in Santa Cruz, California{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}The ongoing smuggling case was linked to the abandoned inflatable raft found near Seal Rock Beach in Santa Cruz, California{tuple_delimiter}9)
 {record_delimiter}
 {completion_delimiter}"
 106,"A dark SUV reportedly used by the organization was seen overnight in a coastal neighborhood of Cambria, CA, but agents halted observation after it drove off at dawn.","(""entity""{tuple_delimiter}DARK SUV{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A dark SUV reportedly used by the organization that was seen overnight in a coastal neighborhood of Cambria, California before driving off at dawn)
@@ -2174,25 +2166,17 @@ Sr.No.,Input_Text,Output
 {record_delimiter}
 (""entity""{tuple_delimiter}CARLSBAD, CA{tuple_delimiter}LOCATION{tuple_delimiter}The city in California where the Carlsbad Police Department located an abandoned panga-style boat near Ponto Beach linked to a smuggling investigation)
 {record_delimiter}
-(""entity""{tuple_delimiter}SMUGGLING INVESTIGATION{tuple_delimiter}EVENT{tuple_delimiter}A smuggling investigation that shifted into high gear at around 7 a.m. Friday after the Carlsbad Police Department located an abandoned panga-style boat near Ponto Beach in Carlsbad, California)
-{record_delimiter}
 (""relationship""{tuple_delimiter}CARLSBAD POLICE DEPARTMENT{tuple_delimiter}PANGA-STYLE BOAT{tuple_delimiter}The Carlsbad Police Department located an abandoned panga-style boat near Ponto Beach in Carlsbad, California{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}CARLSBAD POLICE DEPARTMENT{tuple_delimiter}PONTO BEACH{tuple_delimiter}The Carlsbad Police Department located an abandoned panga-style boat near Ponto Beach in Carlsbad, California{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}CARLSBAD POLICE DEPARTMENT{tuple_delimiter}CARLSBAD, CA{tuple_delimiter}The Carlsbad Police Department located an abandoned panga-style boat in Carlsbad, California{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}CARLSBAD POLICE DEPARTMENT{tuple_delimiter}SMUGGLING INVESTIGATION{tuple_delimiter}The Carlsbad Police Department's discovery of the abandoned panga-style boat advanced the smuggling investigation{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}PANGA-STYLE BOAT{tuple_delimiter}PONTO BEACH{tuple_delimiter}The abandoned panga-style boat was located by the Carlsbad Police Department near Ponto Beach in Carlsbad, California{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}PANGA-STYLE BOAT{tuple_delimiter}CARLSBAD, CA{tuple_delimiter}The abandoned panga-style boat was located by the Carlsbad Police Department in Carlsbad, California{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}PANGA-STYLE BOAT{tuple_delimiter}SMUGGLING INVESTIGATION{tuple_delimiter}The abandoned panga-style boat found near Ponto Beach in Carlsbad, California was linked to the smuggling investigation{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}PONTO BEACH{tuple_delimiter}CARLSBAD, CA{tuple_delimiter}Ponto Beach is located in Carlsbad, California{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}SMUGGLING INVESTIGATION{tuple_delimiter}PONTO BEACH{tuple_delimiter}The smuggling investigation was advanced by the discovery of an abandoned panga-style boat near Ponto Beach in Carlsbad, California{tuple_delimiter}9)
 {record_delimiter}
 {completion_delimiter}"
 120,"A van believed to belong to the organization spent Thursday night parked in a coastal neighborhood in Rancho Palos Verdes, Calif., but agents suspended surveillance when the vehicle left at sunrise without picking up any passengers.","(""entity""{tuple_delimiter}VAN{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}A van believed to belong to the organization that spent Thursday night parked in a coastal neighborhood in Rancho Palos Verdes, California before agents suspended surveillance when it left at sunrise without picking up any passengers)
@@ -2685,27 +2669,17 @@ Sr.No.,Input_Text,Output
 {record_delimiter}
 (""entity""{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}LOCATION{tuple_delimiter}The city in California where the Santa Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach linked to an ongoing smuggling case at about 6:30 a.m. Friday)
 {record_delimiter}
-(""entity""{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}EVENT{tuple_delimiter}An ongoing smuggling case to which the abandoned inflatable raft found by the Santa Cruz Police Department near Seal Rock Beach in Santa Cruz, CA was linked)
-{record_delimiter}
 (""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}The Santa Cruz Police Department found an abandoned inflatable raft near Seal Rock Beach in Santa Cruz, CA{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}The Santa Cruz Police Department found the abandoned inflatable raft near Seal Rock Beach{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}The Santa Cruz Police Department found the abandoned inflatable raft in Santa Cruz, CA{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}SANTA CRUZ POLICE DEPARTMENT{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}The Santa Cruz Police Department found the raft linked to an ongoing smuggling case{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}The abandoned inflatable raft was found near Seal Rock Beach in Santa Cruz, CA{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}The abandoned inflatable raft was found in Santa Cruz, CA{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}INFLATABLE RAFT{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}The abandoned inflatable raft was linked to an ongoing smuggling case{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}Seal Rock Beach is located in Santa Cruz, CA{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}SEAL ROCK BEACH{tuple_delimiter}The ongoing smuggling case was linked to the raft found near Seal Rock Beach{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}SMUGGLING CASE{tuple_delimiter}SANTA CRUZ, CA{tuple_delimiter}The ongoing smuggling case was linked to the raft found in Santa Cruz, CA{tuple_delimiter}9)
 {record_delimiter}
 {completion_delimiter}"
 136,"A dark SUV reportedly used by the organization was seen overnight in a coastal neighborhood of Cambria, CA, but agents halted observation after it drove off at dawn.","(""entity""{tuple_delimiter}AGENTS{tuple_delimiter}PERSON{tuple_delimiter}Agents who observed a dark SUV reportedly used by the organization overnight in a coastal neighborhood of Cambria, CA but halted observation after it drove off at dawn)
@@ -2764,23 +2738,17 @@ Sr.No.,Input_Text,Output
 {completion_delimiter}"
 138,"Carlos Jimenez, 31, a U.S. national residing in Mexicali, Mexico, was identified as a planner of the smuggling operation.","(""entity""{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}PERSON{tuple_delimiter}A 31-year-old U.S. national residing in Mexicali, Mexico who was identified as a planner of the smuggling operation)
 {record_delimiter}
-(""entity""{tuple_delimiter}SMUGGLING OPERATION{tuple_delimiter}EVENT{tuple_delimiter}A smuggling operation of which Carlos Jimenez, a 31-year-old U.S. national residing in Mexicali, Mexico, was identified as a planner)
-{record_delimiter}
 (""entity""{tuple_delimiter}MEXICALI, MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}The location in Mexico where Carlos Jimenez, a 31-year-old U.S. national identified as a planner of the smuggling operation, resides)
 {record_delimiter}
 (""entity""{tuple_delimiter}MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}The country where Mexicali is located and where Carlos Jimenez, a 31-year-old U.S. national identified as a planner of the smuggling operation, resides)
 {record_delimiter}
 (""entity""{tuple_delimiter}UNITED STATES{tuple_delimiter}LOCATION{tuple_delimiter}The country of nationality of Carlos Jimenez, a 31-year-old identified as a planner of the smuggling operation who resides in Mexicali, Mexico)
 {record_delimiter}
-(""relationship""{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}SMUGGLING OPERATION{tuple_delimiter}Carlos Jimenez was identified as a planner of the smuggling operation{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}MEXICALI, MEXICO{tuple_delimiter}Carlos Jimenez, a 31-year-old U.S. national, resides in Mexicali, Mexico{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}MEXICO{tuple_delimiter}Carlos Jimenez resides in Mexicali, Mexico{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}CARLOS JIMENEZ{tuple_delimiter}UNITED STATES{tuple_delimiter}Carlos Jimenez is a U.S. national{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}SMUGGLING OPERATION{tuple_delimiter}MEXICALI, MEXICO{tuple_delimiter}The smuggling operation was planned from Mexicali, Mexico by Carlos Jimenez{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}MEXICALI, MEXICO{tuple_delimiter}MEXICO{tuple_delimiter}Mexicali is located in Mexico{tuple_delimiter}9)
 {record_delimiter}
@@ -3066,8 +3034,6 @@ Sr.No.,Input_Text,Output
 {record_delimiter}
 (""entity""{tuple_delimiter}14 UNDOCUMENTED IMMIGRANTS{tuple_delimiter}PERSON{tuple_delimiter}14 undocumented immigrants from Mexico, Vietnam, and China who were illegally transported by Eleazar Mozqueda Simental and Manuel Antonio Mozqueda Simental and forced to wear large black trash bags over their heads and bodies during a four-hour trip)
 {record_delimiter}
-(""entity""{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}EVENT{tuple_delimiter}A maritime smuggling incident on March 20, 2025 in connection with which Eleazar Mozqueda Simental and Manuel Antonio Mozqueda Simental were arrested and accused of illegally transporting 14 undocumented immigrants from Mexico, Vietnam, and China)
-{record_delimiter}
 (""entity""{tuple_delimiter}MEXICO{tuple_delimiter}LOCATION{tuple_delimiter}One of the countries of origin of the 14 undocumented immigrants illegally transported by Eleazar Mozqueda Simental and Manuel Antonio Mozqueda Simental during the maritime smuggling incident)
 {record_delimiter}
 (""entity""{tuple_delimiter}VIETNAM{tuple_delimiter}LOCATION{tuple_delimiter}One of the countries of origin of the 14 undocumented immigrants illegally transported by Eleazar Mozqueda Simental and Manuel Antonio Mozqueda Simental during the maritime smuggling incident)
@@ -3076,8 +3042,6 @@ Sr.No.,Input_Text,Output
 {record_delimiter}
 (""relationship""{tuple_delimiter}ELEAZAR MOZQUEDA SIMENTAL{tuple_delimiter}MANUEL ANTONIO MOZQUEDA SIMENTAL{tuple_delimiter}Eleazar Mozqueda Simental and Manuel Antonio Mozqueda Simental were co-accused Mexican nationals arrested on March 20, 2025 in connection with the same maritime smuggling incident{tuple_delimiter}9)
 {record_delimiter}
-(""relationship""{tuple_delimiter}ELEAZAR MOZQUEDA SIMENTAL{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}Eleazar Mozqueda Simental was arrested in connection with the maritime smuggling incident on March 20, 2025{tuple_delimiter}9)
-{record_delimiter}
 (""relationship""{tuple_delimiter}ELEAZAR MOZQUEDA SIMENTAL{tuple_delimiter}14 UNDOCUMENTED IMMIGRANTS{tuple_delimiter}Eleazar Mozqueda Simental was accused of illegally transporting 14 undocumented immigrants{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}ELEAZAR MOZQUEDA SIMENTAL{tuple_delimiter}MEXICO{tuple_delimiter}Eleazar Mozqueda Simental was involved in transporting undocumented immigrants from Mexico{tuple_delimiter}9)
@@ -3085,8 +3049,6 @@ Sr.No.,Input_Text,Output
 (""relationship""{tuple_delimiter}ELEAZAR MOZQUEDA SIMENTAL{tuple_delimiter}VIETNAM{tuple_delimiter}Eleazar Mozqueda Simental was involved in transporting undocumented immigrants from Vietnam{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}ELEAZAR MOZQUEDA SIMENTAL{tuple_delimiter}CHINA{tuple_delimiter}Eleazar Mozqueda Simental was involved in transporting undocumented immigrants from China{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}MANUEL ANTONIO MOZQUEDA SIMENTAL{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}Manuel Antonio Mozqueda Simental was arrested in connection with the maritime smuggling incident on March 20, 2025{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}MANUEL ANTONIO MOZQUEDA SIMENTAL{tuple_delimiter}14 UNDOCUMENTED IMMIGRANTS{tuple_delimiter}Manuel Antonio Mozqueda Simental was accused of illegally transporting 14 undocumented immigrants{tuple_delimiter}9)
 {record_delimiter}
@@ -3101,14 +3063,6 @@ Sr.No.,Input_Text,Output
 (""relationship""{tuple_delimiter}14 UNDOCUMENTED IMMIGRANTS{tuple_delimiter}VIETNAM{tuple_delimiter}Some of the 14 undocumented immigrants were from Vietnam{tuple_delimiter}9)
 {record_delimiter}
 (""relationship""{tuple_delimiter}14 UNDOCUMENTED IMMIGRANTS{tuple_delimiter}CHINA{tuple_delimiter}Some of the 14 undocumented immigrants were from China{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}14 UNDOCUMENTED IMMIGRANTS{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}The 14 undocumented immigrants were transported during the maritime smuggling incident{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}MEXICO{tuple_delimiter}The maritime smuggling incident involved undocumented immigrants from Mexico{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}VIETNAM{tuple_delimiter}The maritime smuggling incident involved undocumented immigrants from Vietnam{tuple_delimiter}9)
-{record_delimiter}
-(""relationship""{tuple_delimiter}MARITIME SMUGGLING INCIDENT{tuple_delimiter}CHINA{tuple_delimiter}The maritime smuggling incident involved undocumented immigrants from China{tuple_delimiter}9)
 {record_delimiter}
 {completion_delimiter}"
 149,"They were brought into the United States on a panga boat traveling at high speed across rough seas. According to interviews with the undocumented immigrants on the boat, at one point, the panga caught air, broke apart and capsized, sending terrified passengers into the water.","(""entity""{tuple_delimiter}UNDOCUMENTED IMMIGRANTS{tuple_delimiter}PERSON{tuple_delimiter}Undocumented immigrants brought into the United States on a panga boat traveling at high speed across rough seas, who reported that the panga caught air, broke apart, and capsized, sending terrified passengers into the water)
@@ -5664,7 +5618,7 @@ After his recent arrest, the alleged smuggler told police here that his organiza
 {completion_delimiter}"
 274,Defendant kept firearms in his house and was holding undocumented aliens against their will,"(""entity""{tuple_delimiter}DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}Individual who kept firearms in his house and was holding undocumented aliens against their will)
 {record_delimiter}
-(""entity""{tuple_delimiter}FIREARMS{tuple_delimiter}WEAPON{tuple_delimiter}Weapons kept by the defendant in his house while holding undocumented aliens against their will)
+(""entity""{tuple_delimiter}FIREARMS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Weapons kept by the defendant in his house while holding undocumented aliens against their will)
 {record_delimiter}
 (""entity""{tuple_delimiter}UNDOCUMENTED ALIENS{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were being held against their will by the defendant in his house where he also kept firearms)
 {record_delimiter}
@@ -5993,7 +5947,7 @@ After his recent arrest, the alleged smuggler told police here that his organiza
 {record_delimiter}
 (""entity""{tuple_delimiter}FAMILIES{tuple_delimiter}PERSON{tuple_delimiter}Relatives of the undocumented aliens from whom the movant and his co-defendants extorted money)
 {record_delimiter}
-(""entity""{tuple_delimiter}GUNS{tuple_delimiter}WEAPON{tuple_delimiter}Weapons used by the movant and his co-defendants to steal the undocumented aliens from another smuggling organization and to threaten them)
+(""entity""{tuple_delimiter}GUNS{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}Weapons used by the movant and his co-defendants to steal the undocumented aliens from another smuggling organization and to threaten them)
 {record_delimiter}
 (""relationship""{tuple_delimiter}MOVANT{tuple_delimiter}CO-DEFENDANTS{tuple_delimiter}The movant and his co-defendants together stole undocumented aliens at gunpoint transported them to a stash house extorted their families and physically abused them{tuple_delimiter}9)
 {record_delimiter}
@@ -9086,7 +9040,7 @@ After his recent arrest, the alleged smuggler told police here that his organiza
 501,Guardado-Mezen was driving the car,"(""entity""{tuple_delimiter}GUARDADO-MEZEN{tuple_delimiter}PERSON{tuple_delimiter}An individual who was driving the car.)                                                                                                                                    {record_delimiter}                                                                                                                                                                                                                                                                                                               (""entity""{tuple_delimiter}CAR{tuple_delimiter}MEANS_OF_TRANSPORTATION{tuple_delimiter}The vehicle that Guardado-Mezen was driving.) {record_delimiter} (""relationship""{tuple_delimiter}GUARDADO-MEZEN{tuple_delimiter}CAR{tuple_delimiter}Guardado-Mezen was driving the car.{tuple_delimiter}10) {record_delimiter} {completion_delimiter}"
 502,a co-defendant was directing the captives with his pistol to move from one room to another,"(""entity""{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}PERSON{tuple_delimiter}An individual who directed captives at gunpoint to move from one room to another.) {record_delimiter}
 (""entity""{tuple_delimiter}CAPTIVES{tuple_delimiter}PERSON{tuple_delimiter}Individuals who were directed at gunpoint by a co-defendant to move from one room to another.) {record_delimiter}
-(""entity""{tuple_delimiter}PISTOL{tuple_delimiter}WEAPON{tuple_delimiter}A firearm used by the co-defendant to direct the captives.) {record_delimiter}
+(""entity""{tuple_delimiter}PISTOL{tuple_delimiter}SMUGGLED_ITEMS{tuple_delimiter}A firearm used by the co-defendant to direct the captives.) {record_delimiter}
 (""relationship""{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}CAPTIVES{tuple_delimiter}The co-defendant directed the captives at gunpoint to move from one room to another.{tuple_delimiter}10) {record_delimiter}
 (""relationship""{tuple_delimiter}CO-DEFENDANT{tuple_delimiter}PISTOL{tuple_delimiter}The co-defendant used his pistol to direct the captives.{tuple_delimiter}10) {record_delimiter}
 {completion_delimiter}"
