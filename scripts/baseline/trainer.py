@@ -1,3 +1,4 @@
+import pandas as pd
 import json
 import os
 import sys
@@ -69,11 +70,17 @@ class CustomBaselineTrainer:
         output_dir = self.args.output_dir
         summary_report_path = os.path.join(output_dir, "summary_report.txt")
         metrics_jsonl_path = os.path.join(output_dir, "metrics.jsonl")
+        predictions_csv_path = os.path.join(output_dir, "predictions.csv")
+        detailed_metrics_path = os.path.join(output_dir, "detailed_metrics.csv")
 
         if os.path.exists(summary_report_path):
             os.remove(summary_report_path)
         if os.path.exists(metrics_jsonl_path):
             os.remove(metrics_jsonl_path)
+        if os.path.exists(predictions_csv_path):
+            os.remove(predictions_csv_path)
+        if os.path.exists(detailed_metrics_path):
+            os.remove(detailed_metrics_path)
 
         total_metrics = {
             "parsability_score": 0.0,
@@ -82,12 +89,14 @@ class CustomBaselineTrainer:
             "relationship_score_mae": 0.0
         }
         num_samples = 0
+        all_predictions_data = []
+        all_detailed_metrics = []
 
         print(f"Generating responses and saving to {summary_report_path}...")
 
         with open(summary_report_path, "w") as summary_writer, open(metrics_jsonl_path, "w") as jsonl_writer:
             
-            for sample in tqdm(eval_dataset, desc="Evaluating"):
+            for i, sample in enumerate(tqdm(eval_dataset, desc="Evaluating")):
                 full_prompt = sample["text"]
                 ground_truth = sample["output"]
                 
@@ -127,26 +136,82 @@ class CustomBaselineTrainer:
                 }
                 jsonl_writer.write(json.dumps(metric_data) + "\n")
 
+                all_predictions_data.append({
+                    "Input_text": display_prompt,
+                    "Ground_Truth": ground_truth,
+                    "Predicted_Text": prediction_text,
+                })
+
+                all_detailed_metrics.append({
+                    "Row_ID": i + 1,
+                    "TP_entities": metrics.get("entity_tp", 0),
+                    "FP_entities": metrics.get("entity_fp", 0),
+                    "FN_entities": metrics.get("entity_fn", 0),
+                    "TP_rel": metrics.get("relationship_tp", 0),
+                    "FP_rel": metrics.get("relationship_fp", 0),
+                    "FN_rel": metrics.get("relationship_fn", 0),
+                    "TP_entity_pairs": metrics.get("tp_entity_pairs", ""),
+                    "FP_entity_pairs": metrics.get("fp_entity_pairs", ""),
+                    "FN_entity_pairs": metrics.get("fn_entity_pairs", ""),
+                    "TP_relation_pairs": metrics.get("tp_relation_pairs", ""),
+                    "FP_relation_pairs": metrics.get("fp_relation_pairs", ""),
+                    "FN_relation_pairs": metrics.get("fn_relation_pairs", ""),
+                })
+
                 for key in total_metrics:
                     if key in metrics and isinstance(metrics[key], (int, float)):
                         total_metrics[key] += metrics[key]
 
                 num_samples += 1
+        
+        if all_predictions_data:
+            predictions_df = pd.DataFrame(all_predictions_data)
+            predictions_df.to_csv(predictions_csv_path, index=False)
+            
+            detailed_df = pd.DataFrame(all_detailed_metrics)
+            detailed_df.to_csv(detailed_metrics_path, index=False)
 
         avg_metrics = {f"eval_{key}": value / num_samples for key, value in total_metrics.items() if num_samples > 0}
+        
+        all_decoded_preds = [d["Predicted_Text"] for d in all_predictions_data]
+        all_decoded_gts = [d["Ground_Truth"] for d in all_predictions_data]
+        final_global_metrics = compute_metrics(all_decoded_preds, all_decoded_gts)
+        
         self.log(avg_metrics)
 
         try:
-            with open(summary_report_path, "r") as f:
-                existing_content = f.read()
+            header = "===== GLOBAL SUMMARY =====\n"
+            header += f"Entities: TP={final_global_metrics.get('entity_tp', 0)}, FP={final_global_metrics.get('entity_fp', 0)}, FN={final_global_metrics.get('entity_fn', 0)}\n"
+            header += f"P={final_global_metrics.get('entity_precision', 0):.4f}, R={final_global_metrics.get('entity_recall', 0):.4f}, F1={final_global_metrics.get('entity_f1', 0):.4f}\n\n"
             
-            header = "--- GLOBAL METRICS (AVERAGE) ---\n"
+            header += f"Relations: TP={final_global_metrics.get('relationship_tp', 0)}, FP={final_global_metrics.get('relationship_fp', 0)}, FN={final_global_metrics.get('relationship_fn', 0)}\n"
+            header += f"P={final_global_metrics.get('relationship_precision', 0):.4f}, R={final_global_metrics.get('relationship_recall', 0):.4f}, F1={final_global_metrics.get('relationship_f1', 0):.4f}\n\n"
+            
+            header += "===== PER-TYPE ENTITY SUMMARY =====\n\n"
+            entity_types = ["PERSON", "LOCATION", "ORGANIZATION", "MEANS_OF_TRANSPORTATION", "MEANS_OF_COMMUNICATION", "ROUTES", "SMUGGLED_ITEMS"]
+            for etype in entity_types:
+                tp = final_global_metrics.get(f"entity_{etype}_tp", 0)
+                fp = final_global_metrics.get(f"entity_{etype}_fp", 0)
+                fn = final_global_metrics.get(f"entity_{etype}_fn", 0)
+                p = final_global_metrics.get(f"entity_{etype}_precision", 0)
+                r = final_global_metrics.get(f"entity_{etype}_recall", 0)
+                f1 = final_global_metrics.get(f"entity_{etype}_f1", 0)
+                
+                header += f"{etype}:\n"
+                header += f"  TP={tp}, FP={fp}, FN={fn}\n"
+                header += f"  P={p:.4f}, R={r:.4f}, F1={f1:.4f}\n\n"
+
+            header += "--- GLOBAL METRICS (AVERAGE) ---\n"
             header += json.dumps(avg_metrics, indent=2) + "\n"
             header += "=" * 30 + "\n\n"
             
+            with open(summary_report_path, "r") as f:
+                existing_content = f.read()
+            
             with open(summary_report_path, "w") as f:
                 f.write(header + existing_content)
-        except Exception:
+        except Exception as e:
+            print(f"Error writing summary report header: {e}")
             pass
 
         return avg_metrics
