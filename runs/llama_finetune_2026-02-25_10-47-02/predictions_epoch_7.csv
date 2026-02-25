@@ -1,0 +1,2701 @@
+Input_Text,Ground_Truth,Predicted_Text
+"Zhivargo McBride pled guilty to all fifteen counts in the Indictment: three counts of second degree murder, three counts of alien smuggling with death resulting...","(""entity""|ZHIVARGO MCBRIDE|PERSON|Individual who pled guilty to fifteen counts including three counts of second degree murder and three counts of alien smuggling with death resulting)
+
+
+<END>","(""entity""|ZHIVARGO MCCBRIDE|PERSON|An convicted pled guilty to all counts in three counts of second degree murder and three counts of alien smuggling with death resulting)
+
+
+<END>"
+Various defendants were armed at all times and took turns guarding the captives,"(""entity""|DEFENDANTS|PERSON|Individuals who were armed at all times and took turns guarding the captives.) 
+
+(""entity""|CAPTIVES|PERSON|Individuals who were guarded by the armed defendants.) 
+
+(""relationship""|DEFENDANTS|CAPTIVES|Various defendants were armed at all times and took turns guarding the captives.|10) 
+
+<END>","(""entity""|DEFENDANTS|PERSON|Individuals who were armed at all times and took turns guarding the captives)
+
+
+ 
+
+(""entity""|CAPTIVES|PERSON|Individuals who were guarded by the defendants defendants who 
+
+(""relationship""|DEFENDANTS|CAPTIVES|The defendants were armed at all times and took turns guarding the captives.|10) 
+
+<END>"
+"At about 5:20 a.m., Sheriff's Deputies and U.S. Border Patrol agents responded to an area near Swami's Beach.","(""entity""|SHERIFF'S DEPUTIES|PERSON|Sheriff's Deputies who responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|U.S. BORDER PATROL AGENTS|PERSON|U.S. Border Patrol agents who responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|SHERIFF'S DEPARTMENT|ORGANIZATION|Organization whose deputies responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|U.S. BORDER PATROL|ORGANIZATION|Organization whose agents responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|SWAMI'S BEACH|LOCATION|Coastal location near which Sheriff's Deputies and U.S. Border Patrol agents responded at about 5:20 a.m.)
+
+
+(""relationship""|SHERIFF'S DEPUTIES|SHERIFF'S DEPARTMENT|Sheriff's Deputies operate under the Sheriff's Department|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|U.S. BORDER PATROL|U.S. Border Patrol agents operate under the U.S. Border Patrol organization|9)
+
+
+(""relationship""|SHERIFF'S DEPUTIES|SWAMI'S BEACH|Sheriff's Deputies responded to an area near Swami's Beach at about 5:20 a.m.|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|SWAMI'S BEACH|U.S. Border Patrol agents responded to an area near Swami's Beach at about 5:20 a.m.|9)
+
+
+(""relationship""|SHERIFF'S DEPUTIES|U.S. BORDER PATROL AGENTS|Sheriff's Deputies and U.S. Border Patrol agents jointly responded to an area near Swami's Beach|9)
+
+
+<END>","(""entity""|SHERIFF'S DEPUTIES|PERSON|Sheriff's Deputies who at at an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|U.S. BORDER PATROL AGENTS|PERSON|U.S. Border Patrol agents who responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|SWWAREIFF'S DEPUT|ORGANIZATION|Sher whose deputies responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|U.S. BORDER PATROL|ORGANIZATION|Organization whose agents responded to an area near Swami's Beach at about 5:20 a.m.)
+
+
+(""entity""|SWAMI'S BEACH|LOCATION|Areaastal area near which Sheriff's Deputies and U.S. Border Patrol agents responded at about 5:20 a.m.)
+
+
+(""relationship""|SHERIFF'S DEPUTIES|SHERIFF'S DEPARTMENT|Sheriff's Deputies are under the Sheriff's Department|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|U.S. BORDER PATROL|U.S. Border Patrol agents operate under U U.S. Border Patrol organization|9)
+
+
+(""relationship""|SHERIFF'S DEPUTIES|UAMI'S BEACH|Sheriff's Deputies responded to an area near Swami's Beach| about 5:20 a.m.|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|SWAMI'S BEACH|U.S. Border Patrol agents responded to an area near Swami's Beach at about 5:20 a.m.|9)
+
+
+(""relationship""|SHERIFF'S DEPUTIES|U.S. BORDER PATROL AGENTS|Sheriff's Deputies and U.S. Border Patrol agents responded responded to an area near Swami's Beach|9)
+
+
+<END>"
+Border patrol agents from the Laredo South Station were notified by the ranch hand that an undocumented female alien was in apparent distress at the La Moca Ranch.,"(""entity""|RANCH HAND|PERSON|A ranch hand at La Moca Ranch who notified Border Patrol agents from Laredo South Station that an undocumented female alien was in apparent distress)
+
+
+(""entity""|ALIENS|PERSON|An undocumented female alien found in apparent distress at La Moca Ranch)
+
+
+(""entity""|LA MOCA RANCH|LOCATION|A ranch where an undocumented female alien was found in apparent distress and reported to Border Patrol by a ranch hand)
+
+
+(""entity""|LAREDO SOUTH STATION|LOCATION|A Border Patrol station whose agents were notified by a ranch hand about an undocumented female alien in apparent distress at La Moca Ranch)
+
+
+(""relationship""|RANCH HAND|LAREDO SOUTH STATION|The ranch hand notified Border Patrol agents from Laredo South Station about an undocumented female alien in apparent distress|9)
+
+
+(""relationship""|RANCH HAND|LA MOCA RANCH|The ranch hand was at La Moca Ranch when they notified Border Patrol about the alien in distress|9)
+
+
+(""relationship""|RANCH HAND|ALIENS|The ranch hand reported an undocumented female alien in apparent distress at La Moca Ranch|9)
+
+
+(""relationship""|ALIENS|LA MOCA RANCH|An undocumented female alien was found in apparent distress at La Moca Ranch|9)
+
+
+(""relationship""|LAREDO SOUTH STATION|LA MOCA RANCH|Border Patrol agents from Laredo South Station were notified about an alien in distress at La Moca Ranch|9)
+
+
+<END>","(""entity""|LANCH HAND|PERSON|Individual ranch hand who the Moca Ranch who notified Border Patrol agents from thearedo South Station that an undocumented female alien was in apparent distress.)(""entity""|BEN|PERSON|An undocumented female alien reported by apparent distress at La Moca Ranch by(""entity""|L MOCA RANCH|LOCATION|The ranch where a undocumented female alien was found in apparent distress, where by Border Patrol agents a ranch hand)
+
+
+(""entity""|LAREDO SOUTH STATION|LOCATION|A Border Patrol station whose agents were notified by a ranch hand that an undocumented female alien in apparent distress at La Moca Ranch)
+
+
+(""relationship""|RANCH HAND|ALIAREDO SOUTH STATION|The ranch hand notified Border Patrol agents from Laredo South Station that an undocumented female alien in apparent distress at9)
+
+
+(""relationship""|RANCH HAND|ALI MOCA RANCH|The ranch hand reported at La Moca Ranch when he found Border Patrol agents an undocumented in apparent|9)
+
+
+(""relationship""|ALIANCH HAND|ALIENS|The ranch hand notified an undocumented female alien in apparent distress at La Moca Ranch to9)
+
+
+(""relationship""|ALIENS|LA MOCA RANCH|The undocumented female alien was found in apparent distress at La Moca Ranch|9)
+
+
+(""relationship""|ALIAREDO SOUTH STATION|LA MOCA RANCH|Border Patrol agents from Laredo South Station were notified about an undocumented in distress at La Moca Ranch|9)
+
+
+(""END>"
+Fu Mei Chen's journey began in November or December 1997 when she took a ship from China to Guatemala,"(""entity""|FU MEI CHEN|PERSON|Individual whose journey began in November or December 1997 when she took a ship from China to Guatemala)
+
+
+(""entity""|SHIP|MEANS_OF_TRANSPORTATION|Vessel that Fu Mei Chen took from China to Guatemala in November or December 1997)
+
+
+(""entity""|CHINA|LOCATION|Country from which Fu Mei Chen departed by ship to Guatemala in November or December 1997)
+
+
+(""entity""|GUATEMALA|LOCATION|Destination country to which Fu Mei Chen traveled by ship from China in November or December 1997)
+
+
+(""relationship""|FU MEI CHEN|SHIP|Fu Mei Chen took a ship from China to Guatemala in November or December 1997|9)
+
+
+(""relationship""|FU MEI CHEN|CHINA|Fu Mei Chen's journey began in China in November or December 1997 when she took a ship to Guatemala|9)
+
+
+(""relationship""|FU MEI CHEN|GUATEMALA|Fu Mei Chen traveled by ship from China to Guatemala in November or December 1997|9)
+
+
+(""relationship""|SHIP|CHINA|The ship departed from China carrying Fu Mei Chen to Guatemala in November or December 1997|9)
+
+
+(""relationship""|SHIP|GUATEMALA|The ship traveled from China to Guatemala carrying Fu Mei Chen in November or December 1997|9)
+
+
+(""relationship""|CHINA|GUATEMALA|China was the origin and Guatemala was the destination of Fu Mei Chen's ship journey in November or December 1997|9)
+
+
+<END>","(""entity""|FU MEI CHEN|PERSON|Individual who journey began in November or December 1997 when she took a ship from China to Guatemala)
+
+
+(""entity""|SHIP|MEANS_OF_TRANSPORTATION|Shipessel that Fu Mei Chen took from China to Guatemala in November or December 1997)
+
+
+(""entity""|CHINA|LOCATION|Country from which Fu Mei Chen took on ship in Guatemala in November or December 1997)
+
+
+(""entity""|GUATEMALA|LOCATION|Country country to which Fu Mei Chen traveled by ship from China in November or December 1997)
+
+
+(""relationship""|FU MEI CHEN|SHIP|Fu Mei Chen took a ship from China to Guatemala in November or December 1997|9)
+
+
+(""relationship""|FU MEI CHEN|CHINA|Fu Mei Chen took journey began when November when November or December 1997 when she took a ship to Guatemala|9)
+
+
+(""relationship""|FU MEI CHEN|GUATEMALA|Fu Mei Chen took by ship from China to Guatemala in November or December 1997|9)
+
+
+(""relationship""|SHIP|CHINA|The ship departed from China carrying Fu Mei Chen to Guatemala in November or December 1997|9)
+
+
+(""relationship""|SHIP|GUATEMALA|The ship sailed from China to Guatemala carrying Fu Mei Chen in November or December 1997|9)
+
+
+(""relationship""|CHINA|GUATEMALA|Fu was the point and Guatemala was the destination of Fu Mei Chen's ship journey in November or December 1997|9)
+
+
+<END>"
+Both aliens identified the man as Allende-Garcia,"(""entity""|ALIENS|PERSON|Individuals who identified Allende-Garcia.) 
+
+(""entity""|ALLENDE-GARCIA|PERSON|The individual identified by both aliens.) 
+
+(""relationship""|ALIENS|ALLENDE-GARCIA|Both aliens identified the man as Allende-Garcia.|10) 
+
+<END>","(""entity""|ALIENS|PERSON|Individuals who identified theende-Garcia.) 
+(""entity""|ALLENDE-GARCIA|PERSON|The man who by both aliens.) 
+
+(""relationship""|ALIENS|ALLENDE-GARCIA|Both aliens identified All man as Allende-Garcia.|10) 
+
+<END>"
+Defendant and the other co-defendants placed those individuals into cars,"(""entity""|DEFENDANT|PERSON|An individual who, along with co-defendants, placed individuals into cars.) 
+
+(""entity""|CO-DEFENDANTS|PERSON|Individuals who, along with the defendant, placed individuals into cars.) 
+
+(""entity""|INDIVIDUALS|PERSON|People who were placed into cars by the defendant and co-defendants.) 
+
+(""entity""|CARS|MEANS_OF_TRANSPORTATION|Vehicles into which the individuals were placed.) 
+
+(""relationship""|DEFENDANT|INDIVIDUALS|The defendant placed the individuals into cars.|10) 
+
+(""relationship""|CO-DEFENDANTS|INDIVIDUALS|The co-defendants placed the individuals into cars.|10) 
+
+(""relationship""|INDIVIDUALS|CARS|The individuals were placed into cars by the defendant and co-defendants.|10) 
+
+<END>","(""entity""|DEFENDANT|PERSON|An individual who placed along with co-defendants, placed individuals into cars.) 
+
+(""entity""|CO-DEFENDANTS|PERSON|Individuals who, along with the defendant, placed individuals into cars.) 
+
+(""entity""|INDIVIDUALS|PERSON|People who were placed into cars by the defendant and co-defendants.) 
+
+(""entity""|CARS|MEANS_OF_TRANSPORTATION| Vehiclesehicles into which the individuals were placed by 
+
+(""relationship""|DEFENDANT|COIVIDUALS|The defendant placed individuals individuals into cars.|10) 
+
+(""relationship""|CO-DEFENDANTS|INDIVIDUALS|The co-defendants placed the individuals into cars.|10) 
+
+(""relationship""|DEFIVIDUALS|CARS|The individuals were placed into cars.| the defendant and co-defendants.|10) 
+
+<END>"
+"A few minutes later, at approximately 3:30 a.m., the child's real mother, who was not Defendant's sister, arrived at the port of entry with a Mexican birth certificate","(""entity""|CHILD'S REAL MOTHER|PERSON|An individual who arrived at the port of entry with a Mexican birth certificate.) 
+ (""entity""|DEFENDANT'S SISTER|PERSON|An individual who was not the child's real mother.) 
+ (""relationship""|CHILD'S REAL MOTHER|DEFENDANT'S SISTER|The child's real mother was not the Defendant's sister.|10) 
+ <END>","(""entity""|CHILD'S REAL MOTHER|PERSON|An individual who arrived at the port of entry with a Mexican birth certificate and 
+
+ (""entity""|PORTENDANT| SISTER|PERSON|An individual who was not the child's real mother.) 
+ (""entity""|CHILD'S REAL MOTHER|DEFENDANT'S SISTER|The child's real mother was not the defendant's sister.|10) 
+ <END>"
+"Hernandez-Lopez explained that he had first paid 5,000 pesos to an unnamed person in Mexico, and expected to send another payment of $2,000 to Mexico after arrival at their destination in the United States","(""entity""|HERNANDEZ-LOPEZ|PERSON|Individual who paid 5,000 pesos to an unnamed person in Mexico and expected to send another payment of $2,000 to Mexico after arrival at their destination in the United States)
+
+
+(""entity""|UNNAMED PERSON|PERSON|Individual in Mexico who received 5,000 pesos from Hernandez-Lopez and was expected to receive another payment of $2,000 after Hernandez-Lopez arrived at their destination in the United States)
+
+
+(""entity""|MEXICO|LOCATION|Country where Hernandez-Lopez made an initial payment of 5,000 pesos to an unnamed person and to which a second payment of $2,000 was expected to be sent after arrival in the United States)
+
+
+(""entity""|UNITED STATES|LOCATION|Country where Hernandez-Lopez expected to arrive at their destination before sending another payment of $2,000 to Mexico)
+
+
+(""relationship""|HERNANDEZ-LOPEZ|UNNAMED PERSON|Hernandez-Lopez paid an unnamed person 5,000 pesos in Mexico and expected to send another payment of $2,000 to Mexico after arrival in the United States|9)
+
+
+(""relationship""|HERNANDEZ-LOPEZ|MEXICO|Hernandez-Lopez paid 5,000 pesos to an unnamed person in Mexico and expected to send another payment of $2,000 to Mexico after arrival in the United States|9)
+
+
+(""relationship""|HERNANDEZ-LOPEZ|UNITED STATES|Hernandez-Lopez expected to send another payment of $2,000 to Mexico after arrival at their destination in the United States|9)
+
+
+(""relationship""|UNNAMED PERSON|MEXICO|The unnamed person was in Mexico and received 5,000 pesos from Hernandez-Lopez and was expected to receive another $2,000 after his arrival in the United States|9)
+
+
+(""relationship""|UNNAMED PERSON|UNITED STATES|The unnamed person was expected to receive a payment of $2,000 to be sent to Mexico after Hernandez-Lopez arrived at their destination in the United States|8)
+
+
+(""relationship""|MEXICO|UNITED STATES|Hernandez-Lopez made an initial payment in Mexico and expected to send another payment of $2,000 to Mexico after arrival at their destination in the United States|9)
+
+
+<END>","(""entity""|HERNANDEZ-LOPEZ|PERSON|Individual who explained 5,000 pesos to an unnamed person in Mexico and expected to send another payment of $2,000 to Mexico after arriving at their destination in the United States)
+
+
+(""entity""|UNNAMED PERSON|PERSON|Individual in Mexico who received 5,000 pesos from Hernandez-Lopez)
+
+
+ is expected to receive another payment of $2,000 from Hernandez-Lopez arrived at his destination in the United States)
+
+
+(""entity""|MEXICO|LOCATION|Country where the-Lopez paid the initial payment of 5,000 pesos to an unnamed person and where whom another second payment of $2,000 was expected to be sent after arrival at the United States)
+
+
+(""entity""|UNITED STATES|LOCATION|Destination where Hernandez-Lopez expected to arrive at a destination and sending another payment of $2,000 to an)
+
+
+(""relationship""|HERNANDEZ-LOPEZ|UNNAMED PERSON|Hernandez-Lopez paid  initial person 5,000 pesos in Mexico and expected to send another payment of $2,000 to the after arriving in the United States|9)
+
+
+(""relationship""|HERNANDEZ-LOPEZ|MEXICO|Hernandez-Lopez made 5,000 pesos to an unnamed person in Mexico and expected to send another payment of $2,000 to Mexico after arriving in the United States|9)
+
+
+(""relationship""|UNNANDEZ-LOPEZ|UNITED STATES|Hernandez-Lopez expected to arrive another payment of $2,000 to Mexico after arriving at their destination in the United States|9)
+
+
+(""relationship""|UNNAMED PERSON|MEXICO|The unnamed person who in Mexico when received 5,000 pesos from Hernandez-Lopez with was expected to receive another payment2,000 payment Hernandez arrival in the United States|9)
+
+
+(""relationship""|UNNAMED PERSON|UNITED STATES|The unnamed person was expected to receive another second of $2,000 from Mexico sent from Mexico after Hernandez-Lopez arrived at their destination in the United States|9)
+
+
+(""relationship""|MEXICO|UNITED STATES|Hernandez-Lopez expected an initial payment in Mexico and expected to send another payment to $2,000 to Mexico after arriving at their destination in the United States|7)
+
+
+<END>"
+"Ten to 15 minutes later, the same truck returned onto I-35 and head north","(""entity""|TRUCK|MEANS_OF_TRANSPORTATION|A vehicle that returned onto I-35 and headed north ten to fifteen minutes later.) 
+
+(""entity""|I-35|ROUTES|The highway that the truck returned onto and headed north on.) 
+
+(""relationship""|TRUCK|I-35|The truck returned onto I-35 and headed north.|10) 
+
+<END>","(""entity""|TRUCK|MEANS_OF_TRANSPORTATION|The vehicle that returned onto I-35 and headed north.) to  minutes later.) 
+
+(""entity""|I-35|ROUTES|A highway that the truck returned onto ten headed north on.) 
+
+(""relationship""|TRUCK|I-35|The truck returned onto I-35 and headed north.|10) 
+
+<END>"
+"Mr. Yang's family originally paid $10,000 to smuggle Mr. Yang into the United States","(""entity""|MR. YANG'S FAMILY|PERSON|Family of Mr. Yang who originally paid $10,000 to smuggle him into the United States)
+
+
+(""entity""|MR. YANG|PERSON|Individual who was smuggled into the United States after his family originally paid $10,000)
+
+
+(""entity""|UNITED STATES|LOCATION|Destination country into which Mr. Yang was smuggled after his family originally paid $10,000)
+
+
+(""relationship""|MR. YANG'S FAMILY|MR. YANG|Mr. Yang's family originally paid $10,000 to smuggle Mr. Yang into the United States|9)
+
+
+(""relationship""|MR. YANG'S FAMILY|UNITED STATES|Mr. Yang's family originally paid $10,000 to smuggle Mr. Yang into the United States|9)
+
+
+(""relationship""|MR. YANG|UNITED STATES|Mr. Yang was smuggled into the United States after his family originally paid $10,000|9)
+
+
+<END>","(""entity""|MR. YANG| FAMILY|PERSON|A of Mr. Yang who originally paid $10,000 to smuggle Mr into the United States)
+
+
+(""entity""|MR. YANG|PERSON|Individual who was smuggled into the United States at Mr family paid paid $10,000)
+
+
+(""entity""|UNITED STATES|LOCATION|Country country into which Mr. Yang's smuggled after his family paid paid $10,000)
+
+
+(""relationship""|MR. YANG'S FAMILY|MR. YANG|Mr. Yang's family originally paid $10,000 to smuggle him. Yang into the United States|9)
+
+
+(""relationship""|MR. YANG'S FAMILY|UNITED STATES|Mr. Yang's family originally paid $10,000 to smuggle Mr. Yang into the United States|8)
+
+
+(""relationship""|MR. YANG|UNITED STATES|Mr. Yang was smuggled into the United States after Mr family originally paid $10,000|9)
+
+
+<END>"
+"Garcia stated that he was the only guide for the group, that he was guiding the group to San Antonio for financial gain ($ 400 per alien)...","(""entity""|GARCIA|PERSON|A person who stated he was the only guide for the group, guiding them to San Antonio for $400 per alien)
+
+
+(""entity""|ALIENS|PERSON|A group of undocumented aliens being guided by Garcia to San Antonio for $400 per alien)
+
+
+(""entity""|SAN ANTONIO|LOCATION|The destination where Garcia claimed he was guiding the group of aliens)
+
+
+(""relationship""|GARCIA|ALIENS|Garcia stated he was the only guide for the group of aliens, guiding them to San Antonio for $400 per alien|9)
+
+
+(""relationship""|GARCIA|SAN ANTONIO|Garcia was guiding the group of aliens to San Antonio|9)
+
+
+(""relationship""|ALIENS|SAN ANTONIO|The group of aliens was being guided by Garcia to San Antonio|9)
+
+
+<END>","(""entity""|GARCIA|PERSON|Individual person who stated he was the only guide for the group, guiding them to San Antonio for financial400 per alien)
+
+
+(""entity""|ALIEN|PERSON|A group of people aliens being guided by Garcia to San Antonio for financial400 per alien)
+
+
+(""entity""|SAN ANTONIO|LOCATION|The destination where Garcia was he was guiding the group of aliens for(""relationship""|GARCIA|ALIENS|Garcia stated he was the only guide for the group, aliens, guiding them to San Antonio for $400 per alien|8)
+
+
+(""relationship""|GARCIA|SAN ANTONIO|Garcia stated guiding the group to aliens to San Antonio for9)
+
+
+(""relationship""|ALIENS|SAN ANTONIO|The group of aliens was being guided by Garcia to San Antonio|9)
+
+
+<END>"
+"At the house, he pointed the gun at them and warned that he would shoot them if they tried to run away or escape","(""entity""|HOUSE|LOCATION|A location where he pointed a gun at them.) 
+ (""entity""|GUN|SMUGGLED_ITEMS|A weapon he pointed at them.) 
+ (""relationship""|HOUSE|GUN|He pointed the gun at them at the house.|10) 
+ <END>","(""entity""|G|LOCATION|The location where he pointed the gun at them and 
+
+ (""entity""|GUN|SMUGGLED_ITEMS|A weapon pointed pointed at them.) 
+ (""entity""|HOUSE|GUN|The pointed the gun at them at the house.|10) 
+ <END>"
+"On June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 (""I-35"") between Laredo and San Antonio.","(""entity""|VICTOR BARBERENA|PERSON|A Border Patrol Agent engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio together with Abraham Esqueda)
+
+
+(""entity""|ABRAHAM ESQUEDA|PERSON|A Border Patrol Agent engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio together with Victor Barberena)
+
+
+(""entity""|INTERSTATE HIGHWAY 35|ROUTES|A US highway between Laredo and San Antonio on which Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol)
+
+
+(""entity""|LAREDO|LOCATION|A city between which Border Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving border patrol on Interstate Highway 35)
+
+
+(""entity""|SAN ANTONIO|LOCATION|A city between which Border Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving border patrol on Interstate Highway 35)
+
+
+(""relationship""|VICTOR BARBERENA|ABRAHAM ESQUEDA|Victor Barberena and Abraham Esqueda were together engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|VICTOR BARBERENA|INTERSTATE HIGHWAY 35|Border Patrol Agent Victor Barberena was engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|VICTOR BARBERENA|LAREDO|Border Patrol Agent Victor Barberena was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|VICTOR BARBERENA|SAN ANTONIO|Border Patrol Agent Victor Barberena was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|ABRAHAM ESQUEDA|INTERSTATE HIGHWAY 35|Border Patrol Agent Abraham Esqueda was engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|ABRAHAM ESQUEDA|LAREDO|Border Patrol Agent Abraham Esqueda was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|ABRAHAM ESQUEDA|SAN ANTONIO|Border Patrol Agent Abraham Esqueda was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|INTERSTATE HIGHWAY 35|LAREDO|Interstate Highway 35 runs between Laredo and San Antonio where agents were on roving patrol|9)
+
+
+(""relationship""|INTERSTATE HIGHWAY 35|SAN ANTONIO|Interstate Highway 35 runs between Laredo and San Antonio where agents were on roving patrol|9)
+
+
+(""relationship""|LAREDO|SAN ANTONIO|Border Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+<END>","(""entity""|VICTOR BARBERENA|PERSON|A Border Patrol Agent who in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio)
+
+
+ with Abraham Esqueda)
+
+
+(""entity""|ABRAHAM ESQUEDA|PERSON|A Border Patrol Agent engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio together with Victor Barberena)
+
+
+(""entity""|INTERSTATE HIGHWAY 35|ROUTES|A highway highway on Laredo and San Antonio on which Victor Patrol Agents Victor Barberena and Abraham Esqueda were conducting in a roving border patrol)
+
+
+(""entity""|LAREDO|LOCATION|One city on which and Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving patrol patrol on Interstate Highway 35)
+
+
+(""entity""|SAN ANTONIO|LOCATION|A city between which Border Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving border patrol on Interstate Highway 35)
+
+
+(""relationship""|VICTOR BARBERENA|ABRAHAM ESQUEDA|Victor Barberena and Abraham Esqueda were together engaged in a roving border patrol on Interstate Highway 35| Laredo and San Antonio|9)
+
+
+(""relationship""|VICTOR BARBERENA|INTERSTATE HIGHWAY 35|Border Patrol Agent Victor Barberena was engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|VICTOR BARBERENA|LAREDO|Border Patrol Agent Victor Barberena was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|VICTOR BARBERENA|SAN ANTONIO|Border Patrol Agent Victor Barberena was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|ABRAHAM ESQUEDA|INTERSTATE HIGHWAY 35|Border Patrol Agent Abraham Esqueda was engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|ABRAHAM ESQUEDA|LAREDO|Border Patrol Agent Abraham Esqueda was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|ABRAHAM ESQUEDA|SAN ANTONIO|Border Patrol Agent Abraham Esqueda was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+(""relationship""|INTERSTATE HIGHWAY 35|LAREDO|Interstate Highway 35 on between Laredo and San Antonio| the Barber conducting patrolving patrol|9)
+
+
+(""relationship""|INTERSTATE HIGHWAY 35|SAN ANTONIO|Interstate Highway 35 runs between Laredo and San Antonio where agents were on roving patrol|9)
+
+
+<relationship""|LAREDO|SAN ANTONIO|L Patrol Agents were Barberena and Abraham Esqueda were pat a roving border on Interstate Highway 35 between Laredo and San Antonio|9)
+
+
+<END>"
+"On August 4, 1999, Border Patrol agents observed a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road, a divided highway in northern Laredo, Texas.","(""entity""|BORDER PATROL AGENTS|PERSON|Border Patrol agents who observed a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas)
+
+
+(""entity""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|MEANS_OF_TRANSPORTATION|A vehicle observed by Border Patrol agents pulling into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas)
+
+
+(""entity""|COMMERCIAL GRAVEL PIT|LOCATION|A commercial gravel pit adjacent to Mines Road in northern Laredo, Texas where the 1982 Ford F-150 was observed pulling into by Border Patrol agents)
+
+
+(""entity""|MINES ROAD|ROUTES|A divided highway in northern Laredo, Texas adjacent to the commercial gravel pit where the 1982 Ford F-150 was observed)
+
+
+(""entity""|LAREDO, TEXAS|LOCATION|The city in northern Texas where Border Patrol agents observed a 1982 Ford F-150 pull into a commercial gravel pit adjacent to Mines Road)
+
+
+(""relationship""|BORDER PATROL AGENTS|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|Border Patrol agents observed the 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road|9)
+
+
+(""relationship""|BORDER PATROL AGENTS|COMMERCIAL GRAVEL PIT|Border Patrol agents observed a 1982 Ford F-150 pull into the commercial gravel pit adjacent to Mines Road in northern Laredo, Texas|9)
+
+
+(""relationship""|BORDER PATROL AGENTS|MINES ROAD|Border Patrol agents observed a 1982 Ford F-150 pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas|9)
+
+
+(""relationship""|BORDER PATROL AGENTS|LAREDO, TEXAS|Border Patrol agents were in northern Laredo, Texas when they observed the 1982 Ford F-150|9)
+
+
+(""relationship""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|COMMERCIAL GRAVEL PIT|The 1982 Ford F-150 extended cab pickup truck pulled into the commercial gravel pit adjacent to Mines Road|9)
+
+
+(""relationship""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|MINES ROAD|The 1982 Ford F-150 extended cab pickup truck pulled into a commercial gravel pit adjacent to Mines Road|9)
+
+
+(""relationship""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|LAREDO, TEXAS|The 1982 Ford F-150 extended cab pickup truck was observed in northern Laredo, Texas|9)
+
+
+(""relationship""|COMMERCIAL GRAVEL PIT|MINES ROAD|The commercial gravel pit is adjacent to Mines Road in northern Laredo, Texas|9)
+
+
+(""relationship""|COMMERCIAL GRAVEL PIT|LAREDO, TEXAS|The commercial gravel pit is located in northern Laredo, Texas|9)
+
+
+(""relationship""|MINES ROAD|LAREDO, TEXAS|Mines Road is a divided highway in northern Laredo, Texas|9)
+
+
+<END>","(""entity""|BORDER PATROL AGENTS|PERSON|Border Patrol agents who on a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas on(""entity""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|MEANS_OF_TRANSPORTATION|A  observed by Border Patrol agents to into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas)
+
+
+(""entity""|COMMERCIAL GRAVEL PIT|LOCATION|A commercial gravel pit adjacent to Mines Road in northern Laredo, Texas where the 1982 Ford F-150 extended observed to in)
+
+
+ Border Patrol agents)
+
+
+(""entity""|MINES ROAD|ROUTES|A divided highway in northern Laredo, Texas near to which commercial gravel pit where the 1982 Ford F-150 pickup observed pulling(""entity""|LAREDO, TEXAS|LOCATION|The city in Texas Texas where the Patrol agents observed a 1982 Ford F-150 extended into a commercial gravel pit adjacent to Mines Road)
+
+
+(""relationship""|BORDER PATROL AGENTS|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|Border Patrol agents observed the 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road in9)
+
+
+(""relationship""|BORDER PATROL AGENTS|COMMERCIAL GRAVEL PIT|Border Patrol agents observed the vehicle1982 Ford F-150 pull into the commercial gravel pit adjacent to Mines Road| northern Laredo, Texas|9)
+
+
+(""relationship""|BORDER PATROL AGENTS|MINES ROAD|Border Patrol agents observed a 1982 Ford F-150 pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas|9)
+
+
+(""relationship""|BORDER PATROL AGENTS|LAREDO, TEXAS|Border Patrol agents observed in northern Laredo, Texas when they observed the 1982 Ford F-150 extended9)
+
+
+(""relationship""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|COMMERCIAL GRAVEL PIT|The 1982 Ford F-150 extended cab pickup truck was into the commercial gravel pit adjacent to Mines Road in9)
+
+
+(""relationship""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|MINES ROAD|The 1982 Ford F-150 extended cab pickup truck was into a commercial gravel pit adjacent to Mines Road in9)
+
+
+(""relationship""|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|LAREDO, TEXAS|The 1982 Ford F-150 extended cab pickup truck was observed in northern Laredo, Texas|9)
+
+
+(""relationship""|COMMERCIAL GRAVEL PIT|MINES ROAD|The commercial gravel pit is adjacent to Mines Road in northern Laredo, Texas|9)
+
+
+(""relationship""|COMMERCIAL GRAVEL PIT|LAREDO, TEXAS|The commercial gravel pit is located in northern Laredo, Texas|9)
+
+
+(""relationship""|MINES ROAD|LAREDO, TEXAS|Mines Road is located divided highway located northern Laredo, Texas|9)
+
+
+<END>"
+She claimed she had stopped at a gas station where the men had asked for a ride,"(""entity""|GAS STATION|LOCATION|Location where she claimed she had stopped and where the men had allegedly asked her for a ride)
+
+
+(""entity""|MEN|PERSON|Individuals who according to her claim had asked for a ride at a gas station where she had stopped)
+
+
+(""relationship""|MEN|GAS STATION|She claimed the men had asked for a ride at the gas station where she had stopped|4)
+
+
+<END>","(""entity""|GAS STATION|LOCATION|A where the stopped the had stopped after where the men had asked asked for for a ride)
+
+
+(""entity""|MEN|PERSON|Individuals who allegedly to her claim had asked her a ride at a gas station where she had stopped)
+
+
+(""relationship""|GEN|GAS STATION|She claimed the men had asked her a ride at the gas station where she had stopped|7)
+
+
+<END>"
+"On February 9, 2008, Garza drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo, Texas, on Interstate 35","(""entity""|GARZA|PERSON|Individual who on February 9 2008 drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
+
+
+(""entity""|EXTENDED-CAB DODGE PICKUP TRUCK|MEANS_OF_TRANSPORTATION|Vehicle driven by Garza on February 9 2008 to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
+
+
+(""entity""|BORDER PATROL CHECKPOINT|LOCATION|United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 that Garza drove to on February 9 2008)
+
+
+(""entity""|LAREDO, TEXAS|LOCATION|City in Texas located twenty-nine miles south of the border patrol checkpoint on Interstate 35 that Garza drove to on February 9 2008)
+
+
+(""entity""|UNITED STATES|LOCATION|Country where the border patrol checkpoint that Garza drove to on February 9 2008 was located twenty-nine miles north of Laredo Texas on Interstate 35)
+
+
+(""entity""|INTERSTATE 35|ROUTES|Highway on which the border patrol checkpoint was located twenty-nine miles north of Laredo Texas and on which Garza drove on February 9 2008)
+
+
+(""relationship""|GARZA|EXTENDED-CAB DODGE PICKUP TRUCK|Garza drove an extended-cab Dodge pickup truck to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+
+
+(""relationship""|GARZA|BORDER PATROL CHECKPOINT|Garza drove to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+
+
+(""relationship""|GARZA|LAREDO, TEXAS|Garza drove to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|8)
+
+
+(""relationship""|GARZA|INTERSTATE 35|Garza drove on Interstate 35 to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on February 9 2008|9)
+
+
+(""relationship""|GARZA|UNITED STATES|Garza drove to a United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|8)
+
+
+(""relationship""|EXTENDED-CAB DODGE PICKUP TRUCK|BORDER PATROL CHECKPOINT|Garza drove the extended-cab Dodge pickup truck to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+
+
+(""relationship""|EXTENDED-CAB DODGE PICKUP TRUCK|INTERSTATE 35|Garza drove the extended-cab Dodge pickup truck on Interstate 35 to the border patrol checkpoint twenty-nine miles north of Laredo Texas on February 9 2008|8)
+
+
+(""relationship""|EXTENDED-CAB DODGE PICKUP TRUCK|LAREDO, TEXAS|Garza drove the extended-cab Dodge pickup truck to the border patrol checkpoint twenty-nine miles north of Laredo Texas on February 9 2008|7)
+
+
+(""relationship""|EXTENDED-CAB DODGE PICKUP TRUCK|UNITED STATES|Garza drove the extended-cab Dodge pickup truck to a United States border patrol checkpoint on February 9 2008|7)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|LAREDO, TEXAS|The border patrol checkpoint was located twenty-nine miles north of Laredo Texas on Interstate 35|9)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|INTERSTATE 35|The border patrol checkpoint was located on Interstate 35 twenty-nine miles north of Laredo Texas|9)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|UNITED STATES|The border patrol checkpoint was a United States checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35|8)
+
+
+(""relationship""|LAREDO, TEXAS|INTERSTATE 35|Laredo Texas was located twenty-nine miles south of the border patrol checkpoint on Interstate 35|8)
+
+
+(""relationship""|LAREDO, TEXAS|UNITED STATES|Laredo Texas is a city located within the United States twenty-nine miles south of the border patrol checkpoint on Interstate 35|7)
+
+
+(""relationship""|INTERSTATE 35|UNITED STATES|Interstate 35 is a highway within the United States on which the border patrol checkpoint was located twenty-nine miles north of Laredo Texas|7)
+
+
+<END>","(""entity""|GARZA|PERSON|A who on February 9 2008 drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
+
+
+(""entity""|EXTENDED-CAB DODGE PICKUP TRUCK|MEANS_OF_TRANSPORTATION|Vehicle driven by Garza to February 9 2008 to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
+
+
+(""entity""|UNITORDER PATROL CHECKPOINT|LOCATION|United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 to Garza drove to on February 9 2008)
+
+
+(""entity""|LAREDO, TEXAS|LOCATION|City near Texas near near-nine miles south of the border patrol checkpoint on Interstate 35 that Garza drove to on February 9 2008)
+
+
+(""entity""|INTERED STATES|LOCATION|Country whose the border patrol checkpoint located Garza drove to on February 9 2008 was located)
+
+
+-nine miles north of Laredo Texas)
+
+
+ Interstate 35)
+
+
+(""entity""|INTERSTATE 35|ROUTES|Highway on which the border patrol checkpoint was located twenty-nine miles north of Laredo Texas and to which Garza drove to February 9 2008)
+
+
+(""relationship""|GARZA|EXTENDED-CAB DODGE PICKUP TRUCK|Garza drove an extended-cab Dodge pickup truck to the border patrol checkpoint on twenty-nine miles north of Laredo Texas on February 35 on February 9 2008|9)
+
+
+(""relationship""|GARZA|BORDER PATROL CHECKPOINT|Garza drove to the border States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+
+
+(""relationship""|GARZA|LAREDO, TEXAS|Garza drove to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on February 35 on February 9 2008|8)
+
+
+(""relationship""|GARZA|INTERSTATE 35|Garza drove on Interstate 35 to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on February 9 2008|8)
+
+
+(""relationship""|GARZA|UNITED STATES|Garza drove to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+
+
+(""relationship""|EXTENDED-CAB DODGE PICKUP TRUCK|BORDER PATROL CHECKPOINT|Garza drove the extended-cab Dodge pickup truck to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+
+
+(""relationship""|BENDED-CAB DODGE PICKUP TRUCK|LSTATE 35|Garza drove the extended-cab Dodge pickup truck on Interstate 35 to the border patrol checkpoint located-nine miles north of Laredo Texas on February 9 2008|9)
+
+
+(""relationship""|BENDED-CAB DODGE PICKUP TRUCK|LAREDO, TEXAS|Garza drove the extended-cab Dodge pickup truck to the border patrol checkpoint located-nine miles north of Laredo Texas on February 9 2008|7)
+
+
+(""relationship""|BENDED-CAB DODGE PICKUP TRUCK|UNITED STATES|Garza drove the extended-cab Dodge pickup truck to a United States border patrol checkpoint on Interstate 9 2008|7)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|LAREDO, TEXAS|The border patrol checkpoint is located twenty-nine miles north of Laredo Texas on Interstate 35|9)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|INTERSTATE 35|The border patrol checkpoint was located on Interstate 35 twenty-nine miles north of Laredo Texas|9)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|UNITED STATES|The border patrol checkpoint was a United States border located twenty-nine miles north of Laredo Texas on Interstate 35|9)
+
+
+(""relationship""|LAREDO, TEXAS|INTERSTATE 35|Laredo Texas is located twenty-nine miles south of the border patrol checkpoint on Interstate 35|9)
+
+
+(""relationship""|LAREDO, TEXAS|UNITED STATES|Laredo Texas is located city located in the United States|-nine miles south of the border patrol checkpoint on Interstate 35|7)
+
+
+(""relationship""|INTERSTATE 35|UNITED STATES|Interstate 35 is a highway located the United States on which the border patrol checkpoint was located twenty-nine miles north of Laredo Texas|7)
+
+
+<END>"
+"He previously entered the United States approximately two years ago by walking from Juarez, Mexico, to El Paso, Texas","(""entity""|UNITED STATES|LOCATION|Country that was previously entered approximately two years ago by an individual who walked from Juarez Mexico to El Paso Texas)
+
+
+(""entity""|JUAREZ, MEXICO|LOCATION|Starting point from which an individual walked to El Paso Texas to enter the United States approximately two years ago)
+
+
+(""entity""|EL PASO, TEXAS|LOCATION|Destination in the United States to which an individual walked from Juarez Mexico approximately two years ago)
+
+
+(""relationship""|JUAREZ, MEXICO|EL PASO, TEXAS|An individual previously walked from Juarez Mexico to El Paso Texas to enter the United States approximately two years ago|9)
+
+
+(""relationship""|JUAREZ, MEXICO|UNITED STATES|An individual previously entered the United States by walking from Juarez Mexico to El Paso Texas approximately two years ago|9)
+
+
+(""relationship""|EL PASO, TEXAS|UNITED STATES|El Paso Texas is located in the United States and was the destination of an individual who walked from Juarez Mexico approximately two years ago|9)
+
+
+<END>","(""entity""|INDED STATES|LOCATION|Country that he entered entered approximately two years ago by an individual who walked from Juarez, to El Paso Texas)
+
+
+(""entity""|JUAREZ, MEXICO|LOCATION|Origin point of which an individual walked to El Paso Texas approximately enter the United States approximately two years ago)
+
+
+(""entity""|EL PASO, TEXAS|LOCATION|Destination where the United States where which an individual walked from Juarez Mexico approximately two years ago)
+
+
+(""relationship""|JUAREZ, MEXICO|EL PASO, TEXAS|An individual walked walked from Juarez Mexico to El Paso Texas to enter the United States approximately two years ago|9)
+
+
+(""relationship""|JUAREZ, MEXICO|UNITED STATES|An individual previously entered the United States by walking from Juarez Mexico to El Paso Texas approximately two years ago|9)
+
+
+(""relationship""|EL PASO, TEXAS|UNITED STATES|El Paso Texas is located in the United States and was the destination an an individual who walked from Juarez Mexico approximately two years ago|9)
+
+
+<END>"
+"Although the trip was supposed to take six hours, it ended up taking 36 hours because Pacheco got lost","(""entity""|PACHECO|PERSON|An individual who got lost during a trip.)
+
+
+<END>","(""entity""|PACHECO|PERSON|An individual who got lost, a trip,)
+
+
+(""END>"
+"The agents made an investigatory stop and discovered eight illegal aliens in the truck, including the driver, Munoz-Martinez","(""entity""|AGENTS|PERSON|The individuals who made an investigatory stop and discovered the illegal aliens.) 
+
+(""entity""|MUNOZ-MARTINEZ|PERSON|The driver of the truck, identified as one of the eight illegal aliens.) 
+
+(""entity""|TRUCK|MEANS_OF_TRANSPORTATION|The vehicle in which eight illegal aliens were discovered.) 
+
+(""entity""|ILLEGAL ALIENS|PERSON|A group of eight individuals discovered in the truck, including the driver Munoz-Martinez.) 
+
+(""relationship""|AGENTS|TRUCK|The agents made an investigatory stop of the truck.|10) 
+
+(""relationship""|AGENTS|ILLEGAL ALIENS|The agents discovered eight illegal aliens.|10) 
+
+(""relationship""|MUNOZ-MARTINEZ|TRUCK|Munoz-Martinez was the driver of the truck.|10) 
+
+(""relationship""|MUNOZ-MARTINEZ|ILLEGAL ALIENS|Munoz-Martinez was identified as one of the eight illegal aliens.|10) 
+
+(""relationship""|ILLEGAL ALIENS|TRUCK|Eight illegal aliens were discovered inside the truck.|10) 
+
+<END>","(""entity""|AGENTS|PERSON|Individual agents who made an investigatory stop and discovered eight eight aliens in 
+
+(""entity""|MUNOZ-MARTINEZ|PERSON|The driver of the truck who discovered as one of the eight illegal aliens discovered 
+
+(""entity""|ILUCK|MEANS_OF_TRANSPORTATION|The vehicle in which eight illegal aliens were discovered.) 
+
+(""relationship""|ILLEGAL ALIENS|PERSON|A group of eight individuals found in the truck, including the driver Munoz-Martinez.) 
+
+(""relationship""|AGENTS|TRUCK|The agents made an investigatory stop and the truck.|10) 
+
+(""relationship""|AGENTS|ILLEGAL ALIENS|The agents discovered eight illegal aliens in10) 
+
+(""relationship""|MUNOZ-MARTINEZ|TRUCK|unoz-Martinez was the driver of the truck.|10) 
+
+(""relationship""|MUNOZ-MARTINEZ|ILLEGAL ALIENS|Munoz-Martinez was the as one of the eight illegal aliens.|10) 
+
+<relationship""|TRLEGAL ALIENS|TRUCK|Eight illegal aliens were discovered in the truck.|10) 
+
+<END>"
+U.S Border Patrol (USBP) agents assisted in the arrest of 28 people during two separate incursions along the California coastline.,"(""entity""|USBP|ORGANIZATION|U.S. Border Patrol agents who assisted in the arrest of 28 people during two separate incursions along the California coastline)
+
+
+(""entity""|CALIFORNIA COASTLINE|LOCATION|The location along which U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions)
+
+
+(""entity""|28 PEOPLE|PERSON|28 people arrested by U.S. Border Patrol agents during two separate incursions along the California coastline)
+
+
+(""relationship""|USBP|CALIFORNIA COASTLINE|U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions along the California coastline|9)
+
+
+(""relationship""|USBP|28 PEOPLE|U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions along the California coastline|9)
+
+
+(""relationship""|28 PEOPLE|CALIFORNIA COASTLINE|28 people were arrested during two separate incursions along the California coastline|9)
+
+
+<END>","(""entity""|UP|ORGANIZATION|U.S. Border Patrol whose who assisted in the arrest of 28 people during two separate incursions along the California coastline)
+
+
+(""entity""|UIFORNIA COASTLINE|LOCATION|The location along which U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions)
+
+
+(""entity""|28 PEOPLE|PERSON|28 people arrested with U.S. Border Patrol agents during two separate incursions along the California coastline)
+
+
+(""relationship""|USBP|28IFORNIA COASTLINE|U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions along the California coastline|9)
+
+
+(""relationship""|USBP|28 PEOPLE|U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions along the California coastline|9)
+
+
+(""relationship""|28 PEOPLE|CALIFORNIA COASTLINE|28 people were arrested during two separate incursions along the California coastline assisted9)
+
+
+<END>"
+USBP agents were notified that the United States Coast Guard (USCG) intercepted a pleasure craft with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt.,"(""entity""|USBP AGENTS|PERSON|U.S. Border Patrol agents who were notified that the United States Coast Guard intercepted a pleasure craft with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt)
+
+
+(""entity""|UNITED STATES COAST GUARD (USCG)|ORGANIZATION|The United States Coast Guard that intercepted a pleasure craft with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt and notified USBP agents)
+
+
+(""entity""|PLEASURE CRAFT|MEANS_OF_TRANSPORTATION|A pleasure craft intercepted by the United States Coast Guard with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt)
+
+
+(""entity""|NINE PEOPLE|PERSON|Nine people aboard the pleasure craft intercepted by the United States Coast Guard off-shore from Oceanside in an apparent alien smuggling attempt)
+
+
+(""entity""|OCEANSIDE|LOCATION|The location off-shore from which the United States Coast Guard intercepted a pleasure craft with nine people aboard in an apparent alien smuggling attempt)
+
+
+(""relationship""|USBP AGENTS|UNITED STATES COAST GUARD (USCG)|USBP agents were notified that the United States Coast Guard intercepted a pleasure craft with nine people aboard off-shore from Oceanside|9)
+
+
+(""relationship""|USBP AGENTS|PLEASURE CRAFT|USBP agents were notified about the pleasure craft intercepted by the United States Coast Guard off-shore from Oceanside|9)
+
+
+(""relationship""|USBP AGENTS|NINE PEOPLE|USBP agents were notified about nine people aboard the pleasure craft intercepted off-shore from Oceanside|9)
+
+
+(""relationship""|USBP AGENTS|OCEANSIDE|USBP agents were notified about the interception of a pleasure craft off-shore from Oceanside|9)
+
+
+(""relationship""|UNITED STATES COAST GUARD (USCG)|PLEASURE CRAFT|The United States Coast Guard intercepted the pleasure craft with nine people aboard off-shore from Oceanside|9)
+
+
+(""relationship""|UNITED STATES COAST GUARD (USCG)|NINE PEOPLE|The United States Coast Guard intercepted a pleasure craft with nine people aboard off-shore from Oceanside|9)
+
+
+(""relationship""|UNITED STATES COAST GUARD (USCG)|OCEANSIDE|The United States Coast Guard intercepted a pleasure craft off-shore from Oceanside|9)
+
+
+(""relationship""|PLEASURE CRAFT|NINE PEOPLE|Nine people were aboard the pleasure craft intercepted by the United States Coast Guard off-shore from Oceanside|9)
+
+
+(""relationship""|PLEASURE CRAFT|OCEANSIDE|The pleasure craft was intercepted by the United States Coast Guard off-shore from Oceanside|9)
+
+
+(""relationship""|NINE PEOPLE|OCEANSIDE|Nine people were aboard the pleasure craft intercepted off-shore from Oceanside|9)
+
+
+<END>","(""entity""|USBP AGENTS|PERSON|USB.S. Border Patrol agents notified were notified that the United States Coast Guard had a pleasure craft with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt)
+
+
+(""entity""|UNITED STATES COAST GUARD|USCG)|ORGANIZATION|The United States Coast Guard that intercepted a pleasure craft with nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt, notified USBP agents)
+
+
+(""entity""|PLEASURE CRAFT|MEANS_OF_TRANSPORTATION|A pleasure craft with by the United States Coast Guard off nine people aboard off-shore from Oceanside in an apparent alien smuggling attempt)
+
+
+(""entity""|NINE PEOPLE|PERSON|Nine people found the pleasure craft intercepted off the United States Coast Guard off-shore from Oceanside in an apparent alien smuggling attempt)
+
+
+(""entity""|OCEANSIDE|LOCATION|The coastal off-shore from which the United States Coast Guard intercepted a pleasure craft with nine people aboard in an apparent alien smuggling attempt)
+
+
+(""relationship""|USBP AGENTS|UNITED STATES COAST GUARD (USCG)|USBP agents were notified that the United States Coast Guard had a pleasure craft with nine people aboard off-shore from Oceanside|9)
+
+
+(""relationship""|USBP AGENTS|PLEASURE CRAFT|USBP agents were notified about the interception craft intercepted by the United States Coast Guard off-shore from Oceanside|9)
+
+
+(""relationship""|USBP AGENTS|OINE PEOPLE|USBP agents were notified about the people aboard the pleasure craft intercepted off-shore from Oceanside|9)
+
+
+(""relationship""|USBP AGENTS|OCEANSIDE|USBP agents were notified about the interception off a pleasure craft off-shore from Oceanside|9)
+
+
+(""relationship""|UNITED STATES COAST GUARD (USCG)|PLEASURE CRAFT|The United States Coast Guard intercepted the pleasure craft with nine people aboard off-shore from Oceanside|9)
+
+
+(""relationship""|UNITED STATES COAST GUARD (USCG)|NINE PEOPLE|The United States Coast Guard intercepted a pleasure craft with nine people aboard off-shore from Oceanside|9)
+
+
+(""relationship""|UNITED STATES COAST GUARD (USCG)|OCEANSIDE|The United States Coast Guard intercepted the pleasure craft off-shore from Oceanside|9)
+
+
+(""relationship""|PLEASURE CRAFT|NINE PEOPLE|Nine people were aboard the pleasure craft intercepted off the United States Coast Guard off-shore from Oceanside|9)
+
+
+(""relationship""|PLEASURE CRAFT|OCEANSIDE|The pleasure craft was intercepted off the United States Coast Guard off-shore from Oceanside|9)
+
+
+(""relationship""|NINE PEOPLE|OCEANSIDE|Nine people were aboard the pleasure craft intercepted off-shore from Oceanside|9)
+
+
+<END>"
+One of the aliens died as a result of an accident in which there was an attempt to elude law enforcement,"(""entity""|ALIENS|PERSON|Group of individuals one of whom died as a result of an accident during an attempt to elude law enforcement)
+
+
+(""entity""|LAW ENFORCEMENT|ORGANIZATION|Authority that there was an attempt to elude resulting in an accident in which one of the aliens died)
+
+
+(""relationship""|ALIENS|LAW ENFORCEMENT|One of the aliens died in an accident during an attempt to elude law enforcement|8)
+
+
+<END>","(""entity""|ALIENS|PERSON|Individual of people involved of whom died as a result of an accident during an attempt to elude law enforcement)
+
+
+(""entity""|ALIAW ENFORCEMENT|PERSONANIZATION|Authority whose the was an attempt to elude during in an accident in which one of the aliens died)
+
+
+(""entity""|ALIENS|LAW ENFORCEMENT|One of the aliens died as an accident during an attempt to elude law enforcement|8)
+
+
+<END>"
+"On December 19, 2019, at around 3:45 p.m., JHOC contacted AMO about a suspicious vessel off the coast of San Diego, Calif. AMO quickly reached the area and intercepted a 24-foot Bayliner pleasure craft.","(""entity""|JOINT HARBOR OPERATIONS CENTER (JHOC)|ORGANIZATION|The Joint Harbor Operations Center that on December 19, 2019 at around 3:45 p.m. contacted Air and Marine Operations about a suspicious vessel off the coast of San Diego, California)
+
+
+(""entity""|AIR AND MARINE OPERATIONS (AMO)|ORGANIZATION|Air and Marine Operations that on December 19, 2019 was contacted by the Joint Harbor Operations Center about a suspicious vessel off the coast of San Diego, California and quickly reached the area to intercept a 24-foot Bayliner pleasure craft)
+
+
+(""entity""|24-FOOT BAYLINER PLEASURE CRAFT|MEANS_OF_TRANSPORTATION|A 24-foot Bayliner pleasure craft intercepted by Air and Marine Operations off the coast of San Diego, California on December 19, 2019 after the Joint Harbor Operations Center reported a suspicious vessel)
+
+
+(""entity""|SAN DIEGO, CALIFORNIA|LOCATION|The coastal area off which a suspicious vessel was reported by the Joint Harbor Operations Center and intercepted by Air and Marine Operations on December 19, 2019)
+
+
+(""entity""|CALIFORNIA|LOCATION|The state where San Diego is located and off whose coast a suspicious vessel was reported by the Joint Harbor Operations Center and intercepted by Air and Marine Operations on December 19, 2019)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|AIR AND MARINE OPERATIONS (AMO)|The Joint Harbor Operations Center contacted Air and Marine Operations on December 19, 2019 about a suspicious vessel off the coast of San Diego, California|9)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|24-FOOT BAYLINER PLEASURE CRAFT|The Joint Harbor Operations Center reported the suspicious vessel that Air and Marine Operations intercepted as a 24-foot Bayliner pleasure craft|9)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|SAN DIEGO, CALIFORNIA|The Joint Harbor Operations Center reported a suspicious vessel off the coast of San Diego, California|9)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|CALIFORNIA|The Joint Harbor Operations Center reported a suspicious vessel off the coast of California|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS (AMO)|24-FOOT BAYLINER PLEASURE CRAFT|Air and Marine Operations intercepted the 24-foot Bayliner pleasure craft off the coast of San Diego, California|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS (AMO)|SAN DIEGO, CALIFORNIA|Air and Marine Operations intercepted the vessel off the coast of San Diego, California|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS (AMO)|CALIFORNIA|Air and Marine Operations intercepted the vessel off the coast of California|9)
+
+
+(""relationship""|24-FOOT BAYLINER PLEASURE CRAFT|SAN DIEGO, CALIFORNIA|The 24-foot Bayliner pleasure craft was intercepted off the coast of San Diego, California|9)
+
+
+(""relationship""|24-FOOT BAYLINER PLEASURE CRAFT|CALIFORNIA|The 24-foot Bayliner pleasure craft was found off the coast of California|9)
+
+
+(""relationship""|SAN DIEGO, CALIFORNIA|CALIFORNIA|San Diego is located in California|9)
+
+
+<END>","(""entity""|JINT HAZOR OPERATIONS CENTER (JHOC)|ORGANIZATION|A law Harbor Operations Center that contacted December 19, 2019 at around 3:45 p.m. contacted AM and Marine Operations about a suspicious vessel off the coast of San Diego, California)
+
+
+(""entity""|AIR AND MARINE OPERATIONS (AMO)|ORGANIZATION|The and Marine Operations that on December 19, 2019 at contacted by J Joint Harbor Operations Center and a suspicious vessel off the coast of San Diego, California and quickly reached the area to intercept a 24-foot Bayliner pleasure craft)
+
+
+(""entity""|S-FOOT BAYLINER PLEASURE CRAFT|MEANS_OF_TRANSPORTATION|A 24-foot Bayliner pleasure craft intercepted by AM and Marine Operations off the coast of San Diego, California after December 19, 2019 after J Joint Harbor Operations Center contacted it suspicious vessel to(""entity""|SAN DIEGO, CALIFORNIA|LOCATION|The coastal area off which the suspicious vessel was reported by the Joint Harbor Operations Center to intercepted by Air and Marine Operations as December 19, 2019)
+
+
+(""relationship""|SIFORNIA|LOCATION|The state where San Diego is located and where whose coast a suspicious vessel was reported by the Joint Harbor Operations Center and intercepted by Air and Marine Operations on December 19, 2019)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|AIR AND MARINE OPERATIONS (AMO)|On Joint Harbor Operations Center contacted Air and Marine Operations about December 19, 2019 about a suspicious vessel off the coast of San Diego, California|9)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|24-FOOT BAYLINER PLEASURE CRAFT|The Joint Harbor Operations Center reported a  vessel that was and Marine Operations intercepted on a 24-foot Bayliner pleasure craft|9)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|SAN DIEGO, CALIFORNIA|The Joint Harbor Operations Center reported a suspicious vessel off the coast of San Diego, California|9)
+
+
+(""relationship""|JOINT HARBOR OPERATIONS CENTER (JHOC)|CALIFORNIA|The Joint Harbor Operations Center reported a suspicious vessel off the coast of California|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS (AMO)|24-FOOT BAYLINER PLEASURE CRAFT|Air and Marine Operations quickly the 24-foot Bayliner pleasure craft reported the coast of San Diego, California|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS (AMO)|SAN DIEGO, CALIFORNIA|Air and Marine Operations intercepted the suspicious off the coast of San Diego, California|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS (AMO)|CALIFORNIA|Air and Marine Operations intercepted the vessel off the coast of California|9)
+
+
+(""relationship""|24-FOOT BAYLINER PLEASURE CRAFT|SAN DIEGO, CALIFORNIA|The 24-foot Bayliner pleasure craft was intercepted off the coast of San Diego, California|9)
+
+
+(""relationship""|24-FOOT BAYLINER PLEASURE CRAFT|CALIFORNIA|The 24-foot Bayliner pleasure craft was intercepted off the coast of California|9)
+
+
+(""relationship""|SAN DIEGO, CALIFORNIA|CALIFORNIA|San Diego is a in California|9)
+
+
+<END>"
+"A speedboat was interdicted by the Mexican Navy on the high seas, about 600 nautical miles west of Isla Clarión, Mexico.","(""entity""|MEXICAN NAVY|ORGANIZATION|A law enforcement organization that interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
+
+
+(""entity""|SPEEDBOAT|MEANS_OF_TRANSPORTATION|A vessel interdicted by the Mexican Navy on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
+
+
+(""entity""|HIGH SEAS|LOCATION|The location on the high seas about 600 nautical miles west of Isla Clarión, Mexico where the Mexican Navy interdicted a speedboat)
+
+
+(""entity""|ISLA CLARIÓN, MEXICO|LOCATION|A location in Mexico about 600 nautical miles east of where the Mexican Navy interdicted a speedboat on the high seas)
+
+
+(""relationship""|MEXICAN NAVY|SPEEDBOAT|The Mexican Navy interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|MEXICAN NAVY|HIGH SEAS|The Mexican Navy interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|MEXICAN NAVY|ISLA CLARIÓN, MEXICO|The Mexican Navy interdicted a speedboat about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|SPEEDBOAT|HIGH SEAS|The speedboat was interdicted by the Mexican Navy on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|SPEEDBOAT|ISLA CLARIÓN, MEXICO|The speedboat was interdicted about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|HIGH SEAS|ISLA CLARIÓN, MEXICO|The interdiction on the high seas occurred about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+<END>","(""entity""|MEXICAN NAVY|ORGANIZATION|A Mexican enforcement organization that interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
+
+
+(""entity""|SPEEDBOAT|MEANS_OF_TRANSPORTATION|A speed thatdicted by the Mexican Navy on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
+
+
+(""entity""|IS SEAS|LOCATION|The location on the high seas about 600 nautical miles west of Isla Clarión, Mexico where the Mexican Navy interdicted the speedboat)
+
+
+(""entity""|ISLA CLARIÓN, MEXICO|LOCATION|The location in Mexico about 600 nautical miles east of where the Mexican Navy interdicted a speedboat on the high seas)
+
+
+(""relationship""|MEXICAN NAVY|SPEEDBOAT|The Mexican Navy interdicted the speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|MEXICAN NAVY|HIGH SEAS|The Mexican Navy interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|MEXICAN NAVY|ISLA CLARIÓN, MEXICO|The Mexican Navy interdicted a speedboat about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|SPEEDBOAT|HIGH SEAS|The speedboat was interdicted by the Mexican Navy on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|SPEEDBOAT|ISLA CLARIÓN, MEXICO|The speedboat was interdicted about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+(""relationship""|HIGH SEAS|ISLA CLARIÓN, MEXICO|The interdiction on the high seas occurred about 600 nautical miles west of Isla Clarión, Mexico|9)
+
+
+<END>"
+Durant was the sole driver and occupant of the truck in the trailer of which the 20 illegal aliens were discovered.,"(""entity""|DURANT|PERSON|The sole driver and occupant of the truck whose trailer contained 20 illegal aliens)
+
+
+(""entity""|TRUCK|MEANS_OF_TRANSPORTATION|The vehicle driven solely by Durant, to which the trailer containing 20 illegal aliens was attached)
+
+
+(""entity""|TRAILER|MEANS_OF_TRANSPORTATION|The trailer attached to Durant's truck in which 20 illegal aliens were discovered)
+
+
+(""entity""|ALIENS|PERSON|20 illegal aliens discovered in the trailer of Durant's truck)
+
+
+(""relationship""|DURANT|TRUCK|Durant was the sole driver and occupant of the truck|9)
+
+
+(""relationship""|DURANT|TRAILER|Durant was the sole driver of the truck to which the trailer containing the aliens was attached|9)
+
+
+(""relationship""|DURANT|ALIENS|Durant was the sole driver of the truck in whose trailer 20 illegal aliens were discovered|9)
+
+
+(""relationship""|TRUCK|TRAILER|The trailer in which the aliens were discovered was attached to Durant's truck|9)
+
+
+(""relationship""|TRAILER|ALIENS|20 illegal aliens were discovered in the trailer|9)
+
+
+(""relationship""|TRUCK|ALIENS|The 20 illegal aliens were found in the trailer of Durant's truck|9)
+
+
+<END>","(""entity""|DURANT|PERSON|Individual sole driver and occupant of the truck in trailer contained 20 illegal aliens)
+
+
+(""entity""|TRUCK|MEANS_OF_TRANSPORTATION|The vehicle whose by by Durant in in whose the trailer was 20 illegal aliens was attached)
+
+
+(""entity""|20AILER|MEANS_OF_TRANSPORTATION|The trailer attached to the's truck in which 20 illegal aliens were discovered)
+
+
+(""entity""|20ENS|PERSON|A illegal aliens discovered in the trailer attached the's truck)
+
+
+(""relationship""|DURANT|TRUCK|Durant was the sole driver and occupant of the truck|9)
+
+
+(""relationship""|DURANT|TRAILER|Theant was the sole occup and the truck to which the trailer was  aliens was attached|9)
+
+
+(""relationship""|DURANT|ALIENS|20ant was the sole occup and the truck in which trailer the20 illegal aliens were discovered|9)
+
+
+(""relationship""|TRUCK|TRAILER|The trailer was which  aliens were discovered was attached to the's truck|9)
+
+
+(""relationship""|TRUCKER|ALIENS|20 illegal aliens were discovered in the trailer attached9)
+
+
+<relationship""|TRUCK|ALIENS|20 20 illegal aliens were discovered in the trailer attached Durant's truck|9)
+
+
+<END>"
+The defendant and others were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion,"(""entity""|DEFENDANT|PERSON|Individual who along with others was responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion)
+
+
+(""entity""|OTHERS|PERSON|Individuals who along with the defendant were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion)
+
+
+(""entity""|MISS FU MEI CHEN|PERSON|Individual who was smuggled into the United States from her homeland in China by the defendant and others on a previous occasion)
+
+
+(""entity""|UNITED STATES|LOCATION|Destination country into which Miss Fu Mei Chen was smuggled from China by the defendant and others on a previous occasion)
+
+
+(""entity""|CHINA|LOCATION|Homeland and country of origin of Miss Fu Mei Chen from which she was smuggled into the United States by the defendant and others on a previous occasion)
+
+
+(""relationship""|DEFENDANT|OTHERS|The defendant and others were jointly responsible for smuggling Miss Fu Mei Chen into the United States from China|9)
+
+
+(""relationship""|DEFENDANT|MISS FU MEI CHEN|The defendant was responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|DEFENDANT|UNITED STATES|The defendant was responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|DEFENDANT|CHINA|The defendant was responsible for smuggling Miss Fu Mei Chen from her homeland in China into the United States on a previous occasion|9)
+
+
+(""relationship""|OTHERS|MISS FU MEI CHEN|Others were responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|OTHERS|UNITED STATES|Others were responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|OTHERS|CHINA|Others were responsible for smuggling Miss Fu Mei Chen from her homeland in China into the United States on a previous occasion|9)
+
+
+(""relationship""|MISS FU MEI CHEN|UNITED STATES|Miss Fu Mei Chen was smuggled into the United States from her homeland in China on a previous occasion|9)
+
+
+(""relationship""|MISS FU MEI CHEN|CHINA|Miss Fu Mei Chen was smuggled from her homeland in China into the United States on a previous occasion|9)
+
+
+(""relationship""|CHINA|UNITED STATES|China was the origin country and the United States was the destination country for the smuggling of Miss Fu Mei Chen on a previous occasion|9)
+
+
+<END>","(""entity""|DEFENDANT|PERSON|Individual who along with others was responsible for smuggling Miss Fu Mei Chen into the United States from China homeland in China on a previous occasion)
+
+
+(""entity""|MISSS|PERSON|Individuals who along with the defendant were responsible for smuggling Miss Fu Mei Chen into the United States from her homeland in China on a previous occasion)
+
+
+(""entity""|MISS FU MEI CHEN|PERSON|Individual who was smuggled into the United States from her homeland in China by the defendant and others on a previous occasion)
+
+
+(""entity""|UNITED STATES|LOCATION|Country country into which the Fu Mei Chen was smuggled by her by the defendant and others on a previous occasion)
+
+
+(""entity""|CHINA|LOCATION|Countryeland of country of origin of Miss Fu Mei Chen who which the was smuggled into the United States by the defendant and others on a previous occasion)
+
+
+(""relationship""|DEFENDANT|OTHERS|The defendant and others were together responsible for smuggling Miss Fu Mei Chen into the United States from China on9)
+
+
+(""relationship""|DEFENDANT|MISS FU MEI CHEN|The defendant was responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|DEFENDANT|UNITED STATES|The defendant smugg responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|DEFENDANT|CHINA|The defendant smugg responsible for smuggling Miss Fu Mei Chen from China homeland in China into the United States on a previous occasion|9)
+
+
+(""relationship""|OTHERS|MISS FU MEI CHEN|Others were responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|OTHERS|UNITED STATES|Others were responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
+
+
+(""relationship""|OTHERS|CHINA|Others were responsible for smuggling Miss Fu Mei Chen from China homeland in China into the United States on a previous occasion|9)
+
+
+(""relationship""|MISS FU MEI CHEN|UNITED STATES|Miss Fu Mei Chen was smuggled into the United States from China homeland in China by a previous occasion|9)
+
+
+(""relationship""|MISS FU MEI CHEN|CHINA|Miss Fu Mei Chen was smuggled from her homeland in China into the United States by a previous occasion|9)
+
+
+(""relationship""|UNITINA|UNITED STATES|Miss was the origin and and the United States was the destination country for Miss smuggling of Miss Fu Mei Chen on a previous occasion|9)
+
+
+<END>"
+"Antonio Hurtado, the boat captain of the doomed vessel smuggling 32 migrants in May 2021 wherein three people died, was sentenced today in federal court to 18 years in prison.","(""entity""|ANTONIO HURTADO|PERSON|The boat captain of a doomed vessel smuggling 32 migrants in May 2021 wherein three people died)
+
+
+(""entity""|DOOMED VESSEL|MEANS_OF_TRANSPORTATION|A vessel captained by Antonio Hurtado that was smuggling 32 migrants in May 2021 wherein three people died)
+
+
+(""entity""|32 MIGRANTS|PERSON|32 migrants being smuggled on the doomed vessel captained by Antonio Hurtado in May 2021 wherein three people died)
+
+
+(""entity""|THREE PEOPLE|PERSON|Three people who died during the doomed vessel smuggling incident captained by Antonio Hurtado in May 2021)
+
+
+(""relationship""|ANTONIO HURTADO|DOOMED VESSEL|Antonio Hurtado was the boat captain of the doomed vessel smuggling 32 migrants in May 2021|9)
+
+
+(""relationship""|ANTONIO HURTADO|32 MIGRANTS|Antonio Hurtado captained the doomed vessel that was smuggling 32 migrants in May 2021|9)
+
+
+(""relationship""|ANTONIO HURTADO|THREE PEOPLE|Three people died during the smuggling incident in which Antonio Hurtado was the boat captain|9)
+
+
+(""relationship""|DOOMED VESSEL|32 MIGRANTS|The doomed vessel was smuggling 32 migrants in May 2021|9)
+
+
+(""relationship""|DOOMED VESSEL|THREE PEOPLE|Three people died during the doomed vessel smuggling incident in May 2021|9)
+
+
+(""relationship""|32 MIGRANTS|THREE PEOPLE|Three of the 32 migrants being smuggled on the doomed vessel died in the May 2021 incident|9)
+
+
+<END>","(""entity""|ANTONIO HURTADO|PERSON|The boat captain of the doomed vessel smuggling 32 migrants in May 2021 wherein three people died who(""entity""|DOOMED VESSEL|MEANS_OF_TRANSPORTATION|A vessel captained by Antonio Hurtado smuggling was smuggling 32 migrants in May 2021 wherein three people died)
+
+
+(""entity""|32 MIGRANTS|PERSON|32 migrants who smuggled on the doomed vessel captained by Antonio Hurtado in May 2021)
+
+
+ three people died)
+
+
+(""entity""|THREE PEOPLE|PERSON|Three people who died during the smuggling vessel smuggling  inained by Antonio Hurtado in May 2021)
+
+
+(""relationship""|ANTONIO HURTADO|DOOMED VESSEL|Antonio Hurtado was the boat captain of the doomed vessel smuggling 32 migrants in May 2021 wherein9)
+
+
+(""relationship""|ANTONIO HURTADO|32 MIGRANTS|Antonio Hurtado wasained the vessel vessel smuggling was smuggling 32 migrants in May 2021|9)
+
+
+(""relationship""|ANTONIO HURTADO|THREE PEOPLE|Three people died on the doomed incident capt which Antonio Hurtado was the boat captain|9)
+
+
+(""relationship""|DOOMED VESSEL|32 MIGRANTS|The doomed vessel capt smuggling 32 migrants in May 2021 wherein9)
+
+
+(""relationship""|DOOMED VESSEL|THREE PEOPLE|Three people died during the doomed vessel's incident in May 2021|9)
+
+
+(""relationship""|32 MIGRANTS|THREE PEOPLE|Three people the 32 migrants on smuggled died the doomed vessel died in May incident 2021 incident|9)
+
+
+<END>"
+"According to the complaint, Chelliah is alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States.","(""entity""|CHELLIAH|PERSON|An individual alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
+
+
+(""entity""|ALIENS|PERSON|Aliens whose travel Chelliah allegedly attempted to facilitate from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
+
+
+(""entity""|SRI LANKA|LOCATION|The country of origin of the aliens whose travel Chelliah allegedly attempted to facilitate through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
+
+
+(""entity""|HAITI|LOCATION|A transit location through which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka to the United States)
+
+
+(""entity""|TURKS AND CAICOS ISLANDS|LOCATION|A transit location through which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka to the United States)
+
+
+(""entity""|THE BAHAMAS|LOCATION|A transit location through which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka to the United States)
+
+
+(""entity""|UNITED STATES|LOCATION|The final destination to which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas)
+
+
+(""relationship""|CHELLIAH|ALIENS|Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States|9)
+
+
+(""relationship""|CHELLIAH|SRI LANKA|Chelliah allegedly facilitated the travel of aliens from Sri Lanka|9)
+
+
+(""relationship""|CHELLIAH|HAITI|Chelliah allegedly facilitated the travel of aliens through Haiti|9)
+
+
+(""relationship""|CHELLIAH|TURKS AND CAICOS ISLANDS|Chelliah allegedly facilitated the travel of aliens through Turks and Caicos Islands|9)
+
+
+(""relationship""|CHELLIAH|THE BAHAMAS|Chelliah allegedly facilitated the travel of aliens through the Bahamas|9)
+
+
+(""relationship""|CHELLIAH|UNITED STATES|Chelliah allegedly facilitated the travel of aliens to the United States|9)
+
+
+(""relationship""|ALIENS|SRI LANKA|The aliens whose travel Chelliah allegedly facilitated were from Sri Lanka|9)
+
+
+(""relationship""|ALIENS|HAITI|The aliens were facilitated through Haiti|9)
+
+
+(""relationship""|ALIENS|TURKS AND CAICOS ISLANDS|The aliens were facilitated through Turks and Caicos Islands|9)
+
+
+(""relationship""|ALIENS|THE BAHAMAS|The aliens were facilitated through the Bahamas|9)
+
+
+(""relationship""|ALIENS|UNITED STATES|The aliens were being facilitated to the United States|9)
+
+
+(""relationship""|SRI LANKA|HAITI|Haiti was a transit point on the smuggling route from Sri Lanka to the United States|9)
+
+
+(""relationship""|SRI LANKA|TURKS AND CAICOS ISLANDS|Turks and Caicos Islands was a transit point on the smuggling route from Sri Lanka to the United States|9)
+
+
+(""relationship""|SRI LANKA|THE BAHAMAS|The Bahamas was a transit point on the smuggling route from Sri Lanka to the United States|9)
+
+
+(""relationship""|SRI LANKA|UNITED STATES|The smuggling route ran from Sri Lanka to the United States|9)
+
+
+(""relationship""|HAITI|TURKS AND CAICOS ISLANDS|Haiti and Turks and Caicos Islands were both transit points on the same smuggling route|9)
+
+
+(""relationship""|HAITI|THE BAHAMAS|Haiti and the Bahamas were both transit points on the same smuggling route|9)
+
+
+(""relationship""|HAITI|UNITED STATES|Haiti was a transit point on the smuggling route to the United States|9)
+
+
+(""relationship""|TURKS AND CAICOS ISLANDS|THE BAHAMAS|Turks and Caicos Islands and the Bahamas were both transit points on the same smuggling route|9)
+
+
+(""relationship""|TURKS AND CAICOS ISLANDS|UNITED STATES|Turks and Caicos Islands was a transit point on the smuggling route to the United States|9)
+
+
+(""relationship""|THE BAHAMAS|UNITED STATES|The Bahamas was a transit point on the smuggling route to the United States|9)
+
+
+<END>","(""entity""|CHLLIAH|PERSON|Individual individual alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
+
+
+(""entity""|ALIENS|PERSON|Individualen alleged travel facilitelliah is facilitated to facilitate from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
+
+
+(""entity""|SRI LANKA|LOCATION|The origin of origin from the aliens whose travel Chelliah allegedly facilitated to facilitate)
+
+
+ multiple, Turks and Caicos Islands, and the Bahamas to the United States)
+
+
+(""entity""|HAITI|LOCATION|A transit point through which Chelliah allegedly facilitated to facilitate the travel of aliens from Sri Lanka to the United States)
+
+
+(""entity""|TURKS AND CAICOS ISLANDS|LOCATION|A transit location through which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka to the United States)
+
+
+(""entity""|B BAHAMAS|LOCATION|A transit location through which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka to the United States)
+
+
+(""entity""|UNITED STATES|LOCATION|The destination destination country which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas)
+
+
+(""relationship""|CHELLIAH|ALIENS|Chelliah is attempted to facilitate the travel of aliens from Sri Lanka through multiple, Turks and Caicos Islands, and the Bahamas to the United States|9)
+
+
+(""relationship""|CHELLIAH|SRI LANKA|Chelliah allegedly attempted the travel of aliens from Sri Lanka to9)
+
+
+(""relationship""|CHELLIAH|HAITI|Chelliah allegedly attempted the travel of aliens through Haiti|9)
+
+
+(""relationship""|CHELLIAH|TURKS AND CAICOS ISLANDS|Chelliah allegedly facilitated the travel of aliens through Turks and Caicos Islands|9)
+
+
+(""relationship""|CHELLIAH|THE BAHAMAS|Chelliah allegedly facilitated the travel of aliens through the Bahamas|9)
+
+
+(""relationship""|CHELLIAH|UNITED STATES|Chelliah allegedly facilitated the travel of aliens to the United States|9)
+
+
+(""relationship""|ALIENS|SRI LANKA|The aliens allegedly travel waselliah allegedly facilitated originated from Sri Lanka|9)
+
+
+(""relationship""|ALIENS|HAITI|The aliens whose allegedly through Haiti by9)
+
+
+(""relationship""|ALIENS|TURKS AND CAICOS ISLANDS|The aliens were facilitated through Turks and Caicos Islands|9)
+
+
+(""relationship""|ALIENS|THE BAHAMAS|The aliens were facilitated through the Bahamas|9)
+
+
+(""relationship""|ALIENS|UNITED STATES|The aliens were facilitated facilitated to the United States|9)
+
+
+(""relationship""|SRI LANKA|HAITI|Haiti was a transit location on the route route from Sri Lanka to the United States|9)
+
+
+(""relationship""|SRI LANKA|TURKS AND CAICOS ISLANDS|Turks and Caicos Islands was a transit point on the smuggling route from Sri Lanka to the United States|9)
+
+
+(""relationship""|SRI LANKA|THE BAHAMAS|The Bahamas was a transit point on the smuggling route from Sri Lanka to the United States|9)
+
+
+(""relationship""|SRI LANKA|UNITED STATES|The United route ran from Sri Lanka to the United States|9)
+
+
+(""relationship""|HAITI|TURKS AND CAICOS ISLANDS|Haiti and Turks and Caicos Islands were both transit points on the same smuggling route|9)
+
+
+(""relationship""|HAITI|THE BAHAMAS|Haiti and the Bahamas were both transit points on the same smuggling route|9)
+
+
+(""relationship""|HAITI|UNITED STATES|Haiti was a transit point on the smuggling route to the United States|9)
+
+
+(""relationship""|TURKS AND CAICOS ISLANDS|THE BAHAMAS|Bothks and Caicos Islands and the Bahamas were both transit points on the same smuggling route|9)
+
+
+(""relationship""|TURKS AND CAICOS ISLANDS|UNITED STATES|Turks and Caicos Islands was a transit point on the smuggling route to the United States|9)
+
+
+(""relationship""|THE BAHAMAS|UNITED STATES|The Bahamas was a transit point on the smuggling route to the United States|9)
+
+
+<END>"
+"Chapa's co-defendant, Jesus Pacheco-Pina, led a group of illegal aliens through the South Texas brush so they could avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States","(""entity""|CHAPA|PERSON|Individual whose co-defendant Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|JESUS PACHECO-PINA|PERSON|Co-defendant of Chapa who led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|ILLEGAL ALIENS|PERSON|Group of individuals led by Jesus Pacheco-Pina through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|SOUTH TEXAS|LOCATION|Region through whose brush Jesus Pacheco-Pina led a group of illegal aliens to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|BORDER PATROL CHECKPOINT|LOCATION|Checkpoint near Laredo that Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid as they moved farther north into the United States)
+
+
+(""entity""|LAREDO|LOCATION|City in South Texas near which the Border Patrol checkpoint was located that Jesus Pacheco-Pina led a group of illegal aliens through the brush to avoid)
+
+
+(""entity""|UNITED STATES|LOCATION|Country into which the group of illegal aliens led by Jesus Pacheco-Pina were moving farther north after avoiding the Border Patrol checkpoint near Laredo)
+
+
+(""relationship""|CHAPA|JESUS PACHECO-PINA|Jesus Pacheco-Pina was Chapa's co-defendant who led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|ILLEGAL ALIENS|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|SOUTH TEXAS|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|JESUS PACHECO-PINA|BORDER PATROL CHECKPOINT|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush specifically to avoid the Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|LAREDO|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo|7)
+
+
+(""relationship""|JESUS PACHECO-PINA|UNITED STATES|Jesus Pacheco-Pina led a group of illegal aliens farther north into the United States after avoiding the Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|ILLEGAL ALIENS|SOUTH TEXAS|The illegal aliens were led through the South Texas brush by Jesus Pacheco-Pina to avoid a Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|ILLEGAL ALIENS|BORDER PATROL CHECKPOINT|The illegal aliens were led through the South Texas brush by Jesus Pacheco-Pina to avoid the Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|ILLEGAL ALIENS|LAREDO|The illegal aliens were led through the South Texas brush to avoid a Border Patrol checkpoint near Laredo by Jesus Pacheco-Pina|7)
+
+
+(""relationship""|ILLEGAL ALIENS|UNITED STATES|The illegal aliens were moving farther north into the United States after being led through the South Texas brush to avoid the Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|SOUTH TEXAS|BORDER PATROL CHECKPOINT|The Border Patrol checkpoint near Laredo was located in South Texas through whose brush Jesus Pacheco-Pina led the illegal aliens to avoid it|8)
+
+
+(""relationship""|SOUTH TEXAS|LAREDO|Laredo is a city in South Texas near which the Border Patrol checkpoint was located|8)
+
+
+(""relationship""|SOUTH TEXAS|UNITED STATES|South Texas is a region within the United States through whose brush Jesus Pacheco-Pina led illegal aliens to avoid a Border Patrol checkpoint near Laredo|7)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|LAREDO|The Border Patrol checkpoint was located near Laredo and was avoided by the group of illegal aliens led by Jesus Pacheco-Pina through the South Texas brush|9)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|UNITED STATES|The Border Patrol checkpoint near Laredo was a United States checkpoint that the group of illegal aliens led by Jesus Pacheco-Pina through the South Texas brush sought to avoid|7)
+
+
+(""relationship""|LAREDO|UNITED STATES|Laredo is a city in the United States near which the Border Patrol checkpoint was located that Jesus Pacheco-Pina led the illegal aliens to avoid|7)
+
+
+<END>","(""entity""|CHAPA|PERSON|A whose co-defendant was Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|JESUS PACHECO-PINA|PERSON|Co-defendant of Chapa who led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|ILLEGAL ALIENS|PERSON|Group of people led by Jesus Pacheco-Pina through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|SOUTH TEXAS|LOCATION|Area through which brush Jesus Pacheco-Pina led a group of illegal aliens to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States)
+
+
+(""entity""|BORDER PATROL CHECKPOINT|LOCATION|Checkpoint near Laredo that the Pacheco-Pina led the group of illegal aliens through the South Texas brush to avoid as they moved farther north into the United States)
+
+
+(""entity""|LAREDO|LOCATION|Location near the Texas near which Jesus Border Patrol checkpoint was located that Jesus Pacheco-Pina led a group of illegal aliens through the South to avoid as(""entity""|UNITED STATES|LOCATION|Country into which the group of illegal aliens led by Jesus Pacheco-Pina through moving farther north while passing a Border Patrol checkpoint near Laredo)
+
+
+(""relationship""|CHAPA|JESUS PACHECO-PINA|Jesus Pacheco-Pina was Chapa's co-defendant who led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|ILLEGAL ALIENS|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo as they moved farther north into the United States|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|SOUTH TEXAS|Jesus Pacheco-Pina led the group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|BORDER PATROL CHECKPOINT|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to to avoid the Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|JESUS PACHECO-PINA|LAREDO|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid the Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|JESUS PACHECO-PINA|UNITED STATES|Jesus Pacheco-Pina led a group of illegal aliens moving north into the United States while avoiding the Border Patrol checkpoint near Laredo|7)
+
+
+(""relationship""|ILLEGAL ALIENS|SOUTH TEXAS|The group aliens were led through the South Texas brush by Jesus Pacheco-Pina to avoid a Border Patrol checkpoint near Laredo|9)
+
+
+(""relationship""|ILLEGAL ALIENS|BORDER PATROL CHECKPOINT|The illegal aliens were led through the South Texas brush by Jesus Pacheco-Pina to avoid the Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|ILLEGAL ALIENS|LAREDO|The illegal aliens were led through the South Texas brush by avoid the Border Patrol checkpoint near Laredo by Jesus Pacheco-Pina|8)
+
+
+(""relationship""|ILLEGAL ALIENS|UNITED STATES|The illegal aliens were being farther north into the United States having being led through the South Texas brush by avoid the Border Patrol checkpoint near Laredo|8)
+
+
+(""relationship""|SOUTH TEXAS|BORDER PATROL CHECKPOINT|The South Patrol checkpoint near Laredo was located in the Texas and whose brush the Pacheco-Pina led the illegal aliens| avoid||8)
+
+
+(""relationship""|BOUTH TEXAS|LAREDO|Thearedo is located city in South Texas where which the Border Patrol checkpoint was located that7)
+
+
+(""relationship""|BOUTH TEXAS|UNITED STATES|The Texas is part region within the United States where whose brush Jesus Pacheco-Pina led the aliens| avoid a checkpoint Patrol checkpoint| Laredo|7)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|LAREDO|The Border Patrol checkpoint is located near Laredo in was avoided by Jesus illegal of illegal aliens led through Jesus Pacheco-Pina| the South Texas brush|9)
+
+
+(""relationship""|BORDER PATROL CHECKPOINT|UNITED STATES|The Border Patrol checkpoint near Laredo was located checkpoint States checkpoint that the illegal of illegal aliens avoided by Jesus Pacheco-Pina avoided the South Texas brush avoided to avoid|7)
+
+
+(""relationship""|LAREDO|UNITED STATES|Laredo is a city located the United States near which the Border Patrol checkpoint was located that the Pacheco-Pina led the illegal aliens through avoid|8)
+
+
+<END>"
+"On August 24, U.S Border Patrol (USBP) agents, in conjunction with Homeland Security Investigations, the Marine Task Force (MTF), and Air and Marine Operations (AMO), arrested 14 individuals connected to a maritime smuggling event.","(""entity""|U.S. BORDER PATROL AGENTS|PERSON|U.S. Border Patrol agents who on August 24 in conjunction with Homeland Security Investigations, the Marine Task Force, and Air and Marine Operations arrested 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|HOMELAND SECURITY INVESTIGATIONS|ORGANIZATION|An agency that on August 24 worked in conjunction with U.S. Border Patrol agents, the Marine Task Force, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|MARINE TASK FORCE|ORGANIZATION|An agency that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|AIR AND MARINE OPERATIONS|ORGANIZATION|An agency that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|14 INDIVIDUALS|PERSON|14 individuals arrested on August 24 in connection with a maritime smuggling event by U.S. Border Patrol agents in conjunction with Homeland Security Investigations, the Marine Task Force, and Air and Marine Operations)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|HOMELAND SECURITY INVESTIGATIONS|U.S. Border Patrol agents worked in conjunction with Homeland Security Investigations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|MARINE TASK FORCE|U.S. Border Patrol agents worked in conjunction with the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|AIR AND MARINE OPERATIONS|U.S. Border Patrol agents worked in conjunction with Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|14 INDIVIDUALS|U.S. Border Patrol agents arrested 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|HOMELAND SECURITY INVESTIGATIONS|MARINE TASK FORCE|Homeland Security Investigations worked in conjunction with the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|HOMELAND SECURITY INVESTIGATIONS|AIR AND MARINE OPERATIONS|Homeland Security Investigations worked in conjunction with Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|HOMELAND SECURITY INVESTIGATIONS|14 INDIVIDUALS|Homeland Security Investigations participated in the arrest of 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|MARINE TASK FORCE|AIR AND MARINE OPERATIONS|The Marine Task Force worked in conjunction with Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|MARINE TASK FORCE|14 INDIVIDUALS|The Marine Task Force participated in the arrest of 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS|14 INDIVIDUALS|Air and Marine Operations participated in the arrest of 14 individuals connected to a maritime smuggling event|9)
+
+
+<END>","(""entity""|U.S. BORDER PATROL|ENTS|PERSON|U.S. Border Patrol agents who in August 24 in conjunction with Homeland Security Investigations the the Marine Task Force, and Air and Marine Operations arrested 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|HOMELAND SECURITY INVESTIGATIONS|ORGANIZATION|A investigative that on August 24 in with conjunction with U.S. Border Patrol agents, the Marine Task Force, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|MARINE TASK FORCE|ORGANIZATION|A organization that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|AIR AND MARINE OPERATIONS|ORGANIZATION|An agency that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event)
+
+
+(""entity""|14 INDIVIDUALS|PERSON|14 individuals arrested on August 24 by conjunction with a maritime smuggling event)
+
+
+ U.S. Border Patrol agents and conjunction with Homeland Security Investigations, the Marine Task Force, and Air and Marine Operations)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|HOMELAND SECURITY INVESTIGATIONS|U.S. Border Patrol agents worked in conjunction with Homeland Security Investigations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|MARINE TASK FORCE|U.S. Border Patrol agents worked in conjunction with the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|AIR AND MARINE OPERATIONS|U.S. Border Patrol agents worked in conjunction with Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|U.S. BORDER PATROL AGENTS|14 INDIVIDUALS|U.S. Border Patrol agents arrested 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|HOMELAND SECURITY INVESTIGATIONS|MARINE TASK FORCE|Homeland Security Investigations and in conjunction with the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|HOMELAND SECURITY INVESTIGATIONS|AIR AND MARINE OPERATIONS|Homeland Security Investigations worked in conjunction with Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|HOMELAND SECURITY INVESTIGATIONS|14 INDIVIDUALS|Homeland Security Investigations arrested in the arrest of 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|MARINE TASK FORCE|AIR AND MARINE OPERATIONS|The Marine Task Force and in conjunction with Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|MARINE TASK FORCE|14 INDIVIDUALS|The Marine Task Force arrested in the arrest of 14 individuals connected to a maritime smuggling event|9)
+
+
+(""relationship""|AIR AND MARINE OPERATIONS|14 INDIVIDUALS|Air and Marine Operations participated in the arrest of 14 individuals connected to a maritime smuggling event|9)
+
+
+<END>"
+The two men who were found aboard the boat are facing charges for alien smuggling.,"(""entity""|TWO MEN|PERSON|Two individuals found aboard the boat and facing charges for alien smuggling)
+
+
+(""entity""|BOAT|MEANS_OF_TRANSPORTATION|Vessel aboard which two men were found, involved in alien smuggling)
+
+
+(""relationship""|TWO MEN|BOAT|The two men were found aboard the boat involved in alien smuggling|9)
+
+
+<END>","(""entity""|TWO MEN|PERSON|Two men found aboard the boat facing facing charges for alien smuggling)
+
+
+(""entity""|BOAT|MEANS_OF_TRANSPORTATION|Theessel aboard which the men were found and subsequently in alien smuggling)
+
+
+(""relationship""|TWO MEN|BOAT|The two men were found aboard the boat| in alien smuggling|9)
+
+
+<END>"
+"The illegal immigrants, their friends or their relatives had paid the smugglers to sneak the illegal immigrants into the United States","(""entity""|ILLEGAL IMMIGRANTS|PERSON|People who were smuggled into the United States and whose friends or relatives paid the smugglers.) 
+
+(""entity""|FRIENDS|PERSON|Individuals who may have paid the smugglers on behalf of the illegal immigrants.) 
+
+(""entity""|RELATIVES|PERSON|Individuals who may have paid the smugglers on behalf of the illegal immigrants.) 
+
+(""entity""|SMUGGLERS|PERSON|Individuals who were paid to sneak illegal immigrants into the United States.) 
+
+(""entity""|UNITED STATES|LOCATION|The country the illegal immigrants were smuggled into.) 
+
+(""relationship""|ILLEGAL IMMIGRANTS|SMUGGLERS|The illegal immigrants, their friends, or their relatives paid the smugglers to sneak them into the United States.|9) 
+
+(""relationship""|FRIENDS|SMUGGLERS|The friends of illegal immigrants may have paid the smugglers to sneak them into the United States.|9) 
+
+(""relationship""|RELATIVES|SMUGGLERS|The relatives of illegal immigrants may have paid the smugglers to sneak them into the United States.|9) 
+
+(""relationship""|ILLEGAL IMMIGRANTS|UNITED STATES|The smugglers snuck the illegal immigrants into the United States.|10) 
+
+<END>","(""entity""|ILLEGAL IMMIGRANTS|PERSON|Individual who were snled into the United States as whose illegal and relatives had the smugglers to 
+
+(""entity""|SMRIENDS|PERSON|Peoples who may have paid the smugglers to behalf of the illegal immigrants.) 
+
+(""entity""|RELATIVES|PERSON|Individuals who may have paid the smugglers on behalf of the illegal immigrants.) 
+
+(""entity""|SMUGGLERS|PERSON|Individuals who were paid by sneak the immigrants into the United States.) 
+
+(""entity""|UNITED STATES|LOCATION|The country into illegal immigrants were smuggled into.) 
+
+(""relationship""|ILLEGAL IMMIGRANTS|SMUGGLERS|The illegal immigrants or their friends or or their relatives paid the smugglers to sneak them into the United States.|10) 
+
+(""relationship""|ILRIENDS|ILUGGLERS|The friends of the immigrants may have paid the smugglers.| sneak them into the United States.|8) 
+
+(""relationship""|RELATIVES|SMUGGLERS|The relatives of illegal immigrants may have paid the smugglers to sneak them into the United States.|9) 
+
+(""relationship""|ILLEGAL IMMIGRANTS|UNITED STATES|The illegalled wereuck the illegal immigrants into the United States.|9) 
+
+<END>"
+three loaded handguns were found in the toilet tank,"(""entity""|HANDGUNS|SMUGGLED_ITEMS|Three loaded weapons found in the toilet tank.) 
+
+<END>","(""entity""|THGUNS|SMUGGLED_ITEMS|Three loaded handguns found in the toilet tank.) 
+<END>"
+"On March 12, 2024, Sai Deshpande, a known smuggler, drove an 18-wheeler carrying undocumented migrants.","(""entity""|SAI DESHPANDE|PERSON|A known smuggler responsible for transporting migrants in an 18-wheeler)
+
+
+(""entity""|SMUGGLER|PERSON|An individual engaged in illegal human smuggling activities)
+
+
+(""entity""|18-WHEELER|MEANS_OF_TRANSPORTATION|A large truck used for smuggling operations)
+
+
+(""relationship""|SAI DESHPANDE|SMUGGLER|Sai Deshpande is identified as a smuggler involved in this case|8)
+
+
+(""relationship""|SAI DESHPANDE|18-WHEELER|Sai Deshpande drove the 18-wheeler carrying undocumented migrants|8)
+
+
+<END>","(""entity""|SAI DESHPANDE|PERSON|A known smuggler responsible for transporting migrants in an 18-wheeler)
+
+
+(""entity""|SMUGGLER|PERSON|An individual engaged in illegal human smuggling activities)
+
+
+(""entity""|18-WHEELER|MEANS_OF_TRANSPORTATION|A large truck used for smuggling operations)
+
+
+(""entity""|SAI DESHPANDE|SMUGGLER|Sai Deshpande is identified as a smuggler involved in this case|8)
+
+
+(""relationship""|SAI DESHPANDE|18-WHEELER|Sai Deshpande drove the 18-wheeler carrying undocumented migrants|9)
+
+
+<END>"
+"Homero Zamorano, Jr., participated in a human smuggling organization illegally bringing adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States","(""entity""|HOMERO ZAMORANO, JR.|PERSON|Individual who participated in a human smuggling organization illegally bringing adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States)
+
+
+(""entity""|HUMAN SMUGGLING ORGANIZATION|ORGANIZATION|Organization that illegally brought adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States)
+
+
+(""entity""|ADULTS|PERSON|Adults illegally brought from Guatemala, Honduras, El Salvador, and Mexico into the United States by the human smuggling organization)
+
+
+(""entity""|CHILDREN|PERSON|Children illegally brought from Guatemala, Honduras, El Salvador, and Mexico into the United States by the human smuggling organization)
+
+
+(""entity""|GUATEMALA|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|HONDURAS|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|EL SALVADOR|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|MEXICO|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|UNITED STATES|LOCATION|Destination country where adults and children were illegally brought by the human smuggling organization)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|HUMAN SMUGGLING ORGANIZATION|Homero Zamorano, Jr. participated in the human smuggling organization|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|ADULTS|Homero Zamorano, Jr. participated in the illegal transportation of adults into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|CHILDREN|Homero Zamorano, Jr. participated in the illegal transportation of children into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|GUATEMALA|Homero Zamorano, Jr. participated in smuggling people from Guatemala into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|HONDURAS|Homero Zamorano, Jr. participated in smuggling people from Honduras into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|EL SALVADOR|Homero Zamorano, Jr. participated in smuggling people from El Salvador into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|MEXICO|Homero Zamorano, Jr. participated in smuggling people from Mexico into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|UNITED STATES|Homero Zamorano, Jr. participated in illegally bringing people into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|ADULTS|The human smuggling organization illegally brought adults into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|CHILDREN|The human smuggling organization illegally brought children into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|GUATEMALA|The human smuggling organization brought people from Guatemala into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|HONDURAS|The human smuggling organization brought people from Honduras into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|EL SALVADOR|The human smuggling organization brought people from El Salvador into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|MEXICO|The human smuggling organization brought people from Mexico into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|UNITED STATES|The human smuggling organization illegally brought people into the United States|9)
+
+
+(""relationship""|ADULTS|GUATEMALA|The smuggled adults originated from Guatemala|9)
+
+
+(""relationship""|ADULTS|HONDURAS|The smuggled adults originated from Honduras|9)
+
+
+(""relationship""|ADULTS|EL SALVADOR|The smuggled adults originated from El Salvador|9)
+
+
+(""relationship""|ADULTS|MEXICO|The smuggled adults originated from Mexico|9)
+
+
+(""relationship""|ADULTS|UNITED STATES|The smuggled adults were illegally brought into the United States|9)
+
+
+(""relationship""|CHILDREN|GUATEMALA|The smuggled children originated from Guatemala|9)
+
+
+(""relationship""|CHILDREN|HONDURAS|The smuggled children originated from Honduras|9)
+
+
+(""relationship""|CHILDREN|EL SALVADOR|The smuggled children originated from El Salvador|9)
+
+
+(""relationship""|CHILDREN|MEXICO|The smuggled children originated from Mexico|9)
+
+
+(""relationship""|CHILDREN|UNITED STATES|The smuggled children were illegally brought into the United States|9)
+
+
+<END>","(""entity""|HOMERO ZAMORANO, JR.|PERSON|Individual who participated in a human smuggling organization illegally bringing adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States)
+
+
+(""entity""|HUMAN SMUGGLING ORGANIZATION|ORGANIZATION|Organization that Hom brought adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States in(""entity""|ADULTS|PERSON|Groups who brought into Guatemala, Honduras, El Salvador, and Mexico into the United States by Hom human smuggling organization)
+
+
+(""entity""|CHILDREN|PERSON|Children illegally brought from Guatemala, Honduras, El Salvador, and Mexico into the United States by the human smuggling organization)
+
+
+(""entity""|GUATEMALA|LOCATION|Country from origin from which the and children were illegally broughtled into the United States)
+
+
+(""entity""|HONDURAS|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|EL SALVADOR|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|MEXICO|LOCATION|Country of origin from which adults and children were illegally smuggled into the United States)
+
+
+(""entity""|UNITED STATES|LOCATION|Country country into adults and children were illegally brought by the human smuggling organization)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|HUMAN SMUGGLING ORGANIZATION|Homero Zamorano, Jr. participated in the human smuggling organization|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|ADULTS|Homero Zamorano, Jr. participated in illegally human smuggling of adults| the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|CHILDREN|Homero Zamorano, Jr. participated in the illegal transportation of children into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|UNITATEMALA|Homero Zamorano, Jr. participated in smuggling adults from Guatemala| the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|HONDURAS|Homero Zamorano, Jr. participated in smuggling people from Honduras into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|EL SALVADOR|Homero Zamorano, Jr. participated in smuggling people from El Salvador into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|MEXICO|Homero Zamorano, Jr. participated in smuggling people from Mexico into the United States|9)
+
+
+(""relationship""|HOMERO ZAMORANO, JR.|UNITED STATES|Homero Zamorano, Jr. participated in smuggling bringing adults into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|ADULTS|The human smuggling organization illegally brought adults from the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|CHILDREN|The human smuggling organization illegally brought children into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|GUATEMALA|The human smuggling organization operated adults from Guatemala into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|HONDURAS|The human smuggling organization brought people from Honduras into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|EL SALVADOR|The human smuggling organization brought people from El Salvador into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|MEXICO|The human smuggling organization brought people from Mexico into the United States|9)
+
+
+(""relationship""|HUMAN SMUGGLING ORGANIZATION|UNITED STATES|The human smuggling organization operated brought adults into the United States|9)
+
+
+(""relationship""|ADULTS|CHILDATEMALA|Adult humanled adults originated from Guatemala|9)
+
+
+(""relationship""|ADULTS|HONDURAS|The smuggled adults originated from Honduras|9)
+
+
+(""relationship""|ADULTS|EL SALVADOR|The smuggled adults originated from El Salvador|9)
+
+
+(""relationship""|ADULTS|MEXICO|The smuggled adults originated from Mexico|9)
+
+
+(""relationship""|ADULTS|UNITED STATES|The smuggled adults were illegally brought into the United States|9)
+
+
+(""relationship""|CHILDREN|GUATEMALA|The smuggled children originated from Guatemala|9)
+
+
+(""relationship""|CHILDREN|HONDURAS|The smuggled children originated from Honduras|9)
+
+
+(""relationship""|CHILDREN|EL SALVADOR|The smuggled children originated from El Salvador|9)
+
+
+(""relationship""|CHILDREN|MEXICO|The smuggled children originated from Mexico|9)
+
+
+(""relationship""|CHILDREN|UNITED STATES|The smuggled children were illegally brought into the United States|9)
+
+
+(""END>"
+"With the exception of Mr. Mejia-Morales, who is Guatemalan, they are all from El Salvador","(""entity""|MR. MEJIA-MORALES|PERSON|An individual who is Guatemalan.)
+
+
+(""entity""|GUATEMALA|LOCATION|The country of origin of Mr. Mejia-Morales.)
+
+
+(""entity""|EL SALVADOR|LOCATION|The country of origin for the rest of the group.)
+
+
+(""relationship""|MR. MEJIA-MORALES|GUATEMALAN|Mr. Mejia-Morales is Guatemalan.|10)
+
+
+<END>","(""entity""|MR. MEJIA-MORALES|PERSON|Individual individual who is Guatemalan, With(""entity""|ELATEMALA|LOCATION|The country of origin of Mr. Mejia-Morales.)
+
+
+(""entity""|EL SALVADOR|LOCATION|The country of origin of all group of the individuals.)
+
+
+(""relationship""|MR. MEJIA-MORALES|GUATEMALA|Mr. Mejia-Morales is Guatemalan.|10)
+
+
+(""END>"
+He traveled with that person from Houston to South Texas in a stolen Chevy Tahoe,"(""entity""|HOUSTON|LOCATION|The starting point of the travel from Houston to South Texas.) 
+
+(""entity""|SOUTH TEXAS|LOCATION|The destination of the travel from Houston.) 
+
+(""entity""|STOLEN CHEVY TAHOE|MEANS_OF_TRANSPORTATION|The vehicle used to travel from Houston to South Texas.) 
+
+(""relationship""|STOLEN CHEVY TAHOE|HOUSTON|The stolen Chevy Tahoe was used to travel from Houston.|10) 
+
+(""relationship""|STOLEN CHEVY TAHOE|SOUTH TEXAS|The stolen Chevy Tahoe was used to travel to South Texas.|10) 
+
+(""relationship""|HOUSTON|SOUTH TEXAS|The travel was from Houston to South Texas.|10) 
+
+<END>","(""entity""|CHEUSTON|LOCATION|City starting point of the trip route which to South Texas.) 
+
+(""entity""|SOUTH TEXAS|LOCATION|The destination of the travel from Houston.) 
+
+(""entity""|CHEOLEN CHEVY TAHOE|MEANS_OF_TRANSPORTATION|The vehicle used for travel from Houston to South Texas.) 
+
+(""relationship""|HOOLEN CHEVY TAHOE|HOUSTON|The stolen Chevy Tahoe was the to travel from Houston.|10) 
+
+(""relationship""|STOLEN CHEVY TAHOE|SOUTH TEXAS|The stolen Chevy Tahoe was used to travel to South Texas.|10) 
+
+<relationship""|HOUSTON|SOUTH TEXAS|He person took from Houston to South Texas.|10) 
+
+<END>"
+"Around 11:30 at night on February 8, a San Diego Air & Marine Branch (SDAMB)BE-350 Multi-Role Enforcement Aircraftdetected a possible lights out vessel by radar off the Southern California Coast headed north towards the maritime boundary line between Mexico and the United States.","(""entity""|SAN DIEGO AIR & MARINE BRANCH|ORGANIZATION|A law enforcement organization operating the BE-350 Multi-Role Enforcement Aircraft that detected a lights out vessel off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|MEANS_OF_TRANSPORTATION|A San Diego Air & Marine Branch BE-350 Multi-Role Enforcement Aircraft that detected a possible lights out vessel by radar off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|LIGHTS OUT VESSEL|MEANS_OF_TRANSPORTATION|A possible lights out vessel detected by radar by the SDAMB BE-350 aircraft off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|SOUTHERN CALIFORNIA COAST|LOCATION|The coastal area off which the SDAMB BE-350 aircraft detected a lights out vessel headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|MARITIME BOUNDARY LINE|LOCATION|The maritime boundary line between Mexico and the United States toward which the lights out vessel was headed north)
+
+
+(""entity""|MEXICO|LOCATION|One of the two countries forming the maritime boundary line toward which the lights out vessel was headed)
+
+
+(""entity""|UNITED STATES|LOCATION|One of the two countries forming the maritime boundary line toward which the lights out vessel was headed)
+
+
+(""relationship""|SAN DIEGO AIR & MARINE BRANCH|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|The San Diego Air & Marine Branch operates the BE-350 Multi-Role Enforcement Aircraft that detected a lights out vessel off the Southern California Coast|9)
+
+
+(""relationship""|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|LIGHTS OUT VESSEL|The SDAMB BE-350 aircraft detected a possible lights out vessel by radar off the Southern California Coast|9)
+
+
+(""relationship""|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|SOUTHERN CALIFORNIA COAST|The SDAMB BE-350 aircraft detected a lights out vessel off the Southern California Coast|9)
+
+
+(""relationship""|LIGHTS OUT VESSEL|SOUTHERN CALIFORNIA COAST|The lights out vessel was detected off the Southern California Coast headed north toward the maritime boundary line|9)
+
+
+(""relationship""|LIGHTS OUT VESSEL|MARITIME BOUNDARY LINE|The lights out vessel was headed north toward the maritime boundary line between Mexico and the United States|9)
+
+
+(""relationship""|MARITIME BOUNDARY LINE|MEXICO|The maritime boundary line is between Mexico and the United States|9)
+
+
+(""relationship""|MARITIME BOUNDARY LINE|UNITED STATES|The maritime boundary line is between Mexico and the United States|9)
+
+
+(""relationship""|MARITIME BOUNDARY LINE|SOUTHERN CALIFORNIA COAST|The maritime boundary line between Mexico and the United States is near the Southern California Coast|9)
+
+
+(""relationship""|MEXICO|UNITED STATES|The maritime boundary line separates Mexico and the United States|9)
+
+
+<END>","(""entity""|SAN DIEGO AIR & MARINE BRANCH|ORGANIZATION|A law enforcement organization also the BE-350 Multi-Role Enforcement Aircraft that detected a possible out vessel by the Southern California Coast)
+
+
+ north towards the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|MEANS_OF_TRANSPORTATION|A San Diego Air & Marine Branch BE-350 Multi-Role Enforcement Aircraft that detected a lights lights out vessel off radar off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|LIGHTS OUT VESSEL|MEANS_OF_TRANSPORTATION|A possible lights out vessel detected by radar by the SanAMB BE-350 Multi off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|SOUTHERN CALIFORNIA COAST|LOCATION|The coastal area off which the SDAMB BE-350 aircraft detected a lights out vessel headed north toward the maritime boundary line between Mexico and the United States)
+
+
+(""entity""|MARITIME BOUNDARY LINE|LOCATION|The maritime boundary line between Mexico and the United States toward which the lights out vessel detected headed north when(""entity""|MEXICO|LOCATION|One side the two countries forming the maritime boundary line toward which the lights out vessel was headed north(""entity""|UNITED STATES|LOCATION|One of the two countries forming the maritime boundary line toward which the lights out vessel was headed)
+
+
+(""relationship""|SAN DIEGO AIR & MARINE BRANCH|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|The BE Diego Air & Marine Branch operates the BE-350 Multi-Role Enforcement Aircraft| detected the lights out vessel off the Southern California Coast|9)
+
+
+(""relationship""|SAN-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|LIGHTS OUT VESSEL|The SDAMB BE-350 aircraft detected a possible lights out vessel off radar off the Southern California Coast headed9)
+
+
+(""relationship""|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|SOUTHERN CALIFORNIA COAST|The BEAMB BE-350 aircraft detected the lights out vessel off the Southern California Coast|9)
+
+
+(""relationship""|LIGHTS OUT VESSEL|SOUTHERN CALIFORNIA COAST|The lights out vessel was detected off the Southern California Coast| north| the maritime boundary line|9)
+
+
+(""relationship""|LIGHTS OUT VESSEL|MARITIME BOUNDARY LINE|The lights out vessel was headed north toward the maritime boundary line between Mexico and the United States|9)
+
+
+(""relationship""|LIGHTITIME BOUNDARY LINE|MEXICO|The maritime boundary line is between Mexico and the United States|9)
+
+
+(""relationship""|MARITIME BOUNDARY LINE|UNITED STATES|The maritime boundary line is between Mexico and the United States|9)
+
+
+(""relationship""|MITIME BOUNDARY LINE|SOUTHERN CALIFORNIA COAST|The maritime boundary line is Mexico and the United States is near the Southern California Coast|9)
+
+
+<relationship""|MEXICO|UNITED STATES|Mexico maritime boundary line is Mexico and the United States|9)
+
+
+<END>"
+Freeman's deviation from the most direct route from Laredo to Houston by turning right on FM 2050 which heads due south away from Houston and adds almost an hour to the trip,"(""entity""|FREEMAN|PERSON|Individual who deviated from the most direct route from Laredo to Houston by turning right on FM 2050 which heads due south away from Houston adding almost an hour to the trip)
+
+
+(""entity""|LAREDO|LOCATION|Starting point of the most direct route from which Freeman deviated by turning onto FM 2050)
+
+
+(""entity""|HOUSTON|LOCATION|Destination of the most direct route from Laredo from which Freeman deviated by turning onto FM 2050 which heads due south away from it)
+
+
+(""entity""|FM 2050|ROUTES|Road onto which Freeman turned right deviating from the most direct route from Laredo to Houston heading due south away from Houston and adding almost an hour to the trip)
+
+
+(""relationship""|FREEMAN|LAREDO|Freeman deviated from the most direct route from Laredo to Houston by turning right on FM 2050|9)
+
+
+(""relationship""|FREEMAN|HOUSTON|Freeman deviated from the most direct route to Houston by turning right on FM 2050 which heads due south away from Houston|9)
+
+
+(""relationship""|FREEMAN|FM 2050|Freeman turned right onto FM 2050 deviating from the most direct route from Laredo to Houston|9)
+
+
+(""relationship""|LAREDO|HOUSTON|The most direct route runs between Laredo and Houston from which Freeman deviated by turning onto FM 2050|9)
+
+
+(""relationship""|FM 2050|LAREDO|FM 2050 is the road Freeman turned onto deviating from the most direct route from Laredo to Houston|9)
+
+
+(""relationship""|FM 2050|HOUSTON|FM 2050 heads due south away from Houston adding almost an hour to the trip from Laredo|9)
+
+
+<END>","(""entity""|FREEMAN|PERSON|Individual who deviated from the most direct route from Laredo to Houston by turning right on FM 2050 which heads due south away from Houston adding almost an hour to the trip)
+
+
+(""entity""|LAREDO|LOCATION|Starting point of the trip direct route to which Freeman deviated by turning right FM 2050 heading(""entity""|HOUSTON|LOCATION|Destination of the most direct route from Laredo which which FM'siated by turning onto FM 2050)
+
+
+ heads due south away from Houston)
+
+
+(""entity""|FM 2050|ROUTES|Road that which Freeman turned to fromiating from the most direct route from Laredo to Houston heading due south away from Houston and adding almost an hour to the trip)
+
+
+(""relationship""|FREEMAN|LAREDO|Freeman startediated from the most direct route from Laredo to Houston by turning right onto FM 2050|9)
+
+
+(""relationship""|FREEMAN|HOUSTON|Freeman deviated from the most direct route from Houston by turning right on FM 2050 which heads due south away from Houston|9)
+
+
+(""relationship""|FREEMAN|FM 2050|Freeman turned right onto FM 2050 deviating from the most direct route from Laredo to Houston|9)
+
+
+(""relationship""|LAREDO|HOUSTON|The most direct route runs from Laredo and Houston from which Freeman deviated by turning onto FM 2050|9)
+
+
+(""relationship""|L 2050|HOAREDO|FM 2050 heads the route taken took onto toiating from the most direct route from Laredo south Houston|9)
+
+
+(""relationship""|FM 2050|HOUSTON|FM 2050 heads due south away from Houston after almost an hour to the trip after Laredo|9)
+
+
+<END>"
+"Contreras de Velasquez admitted to giving the female passenger the birth certificate and that she expected to receive $500 after taking the undocumented woman to Victoria, Texas","(""entity""|CONTRERAS DE VELASQUEZ|PERSON|Individual who admitted to giving the female passenger a birth certificate and expected to receive $500 after taking the undocumented woman to Victoria Texas)
+
+
+(""entity""|FEMALE PASSENGER|PERSON|Individual who received a birth certificate from Contreras de Velasquez and is identified as the undocumented woman to be taken to Victoria Texas)
+
+
+(""entity""|UNDOCUMENTED WOMAN|PERSON|Undocumented individual identified as the female passenger who was to be taken to Victoria Texas by Contreras de Velasquez in exchange for $500)
+
+
+(""entity""|VICTORIA, TEXAS|LOCATION|Destination to which Contreras de Velasquez was to take the undocumented woman in exchange for $500)
+
+
+(""relationship""|CONTRERAS DE VELASQUEZ|FEMALE PASSENGER|Contreras de Velasquez admitted to giving the female passenger a birth certificate|9)
+
+
+(""relationship""|CONTRERAS DE VELASQUEZ|UNDOCUMENTED WOMAN|Contreras de Velasquez expected to receive $500 after taking the undocumented woman to Victoria Texas|9)
+
+
+(""relationship""|CONTRERAS DE VELASQUEZ|VICTORIA, TEXAS|Contreras de Velasquez expected to receive $500 after taking the undocumented woman to Victoria Texas|9)
+
+
+(""relationship""|FEMALE PASSENGER|UNDOCUMENTED WOMAN|The female passenger is identified as the undocumented woman to be taken to Victoria Texas|9)
+
+
+(""relationship""|FEMALE PASSENGER|VICTORIA, TEXAS|The female passenger identified as the undocumented woman was to be taken to Victoria Texas|9)
+
+
+(""relationship""|UNDOCUMENTED WOMAN|VICTORIA, TEXAS|The undocumented woman was to be taken to Victoria Texas by Contreras de Velasquez in exchange for $500|9)
+
+
+<END>","(""entity""|CONTRERAS DE VELASQUEZ|PERSON|Individual who admitted to giving the female passenger the birth certificate and expecting to receive $500 after taking the undocumented woman to Victoria,)
+
+
+(""entity""|FEMALE PASSENGER|PERSON|Individual who received the birth certificate from Contreras de Velasquez and expected expected as the person woman's be taken to Victoria Texas for(""entity""|UNDOCUMENTED WOMAN|PERSON|Individualocumented individual who as the female passenger who was to be taken to Victoria Texas by Contreras de Velasquez and exchange for $500)
+
+
+(""entity""|VICTORIA, TEXAS|LOCATION|Destination where which Contreras de Velasquez admitted to take the undocumented woman after exchange for $500)
+
+
+(""relationship""|CONTRERAS DE VELASQUEZ|FEMALE PASSENGER|Contreras de Velasquez admitted to giving the female passenger the birth certificate|9)
+
+
+(""relationship""|CONTRERAS DE VELASQUEZ|UNDOCUMENTED WOMAN|Contreras de Velasquez admitted to receive $500 after taking the undocumented woman to Victoria Texas|9)
+
+
+(""relationship""|CONTRERAS DE VELASQUEZ|VICTORIA, TEXAS|Contreras de Velasquez expected to receive $500 after taking the undocumented woman to Victoria Texas|9)
+
+
+(""relationship""|FEMALE PASSENGER|UNDOCUMENTED WOMAN|The female passenger was the as the undocumented woman to be taken to Victoria Texas|9)
+
+
+(""relationship""|FEMALE PASSENGER|VICTORIA, TEXAS|The female passenger expected as the undocumented woman was to be taken to Victoria Texas|9)
+
+
+(""relationship""|UNDOCUMENTED WOMAN|VICTORIA, TEXAS|The undocumented woman was to be taken to Victoria Texas by Contreras de Velasquez in exchange for $500|9)
+
+
+<END>"
+Agent Elena Morales noticed a dark green Chevy Tahoe traveling southbound on SR-45.,"(""entity""|ELENA MORALES|PERSON|A Border Patrol Agent who noticed a dark green Chevy Tahoe traveling southbound on SR-45)
+
+
+(""entity""|SR-45|ROUTES|A highway on which a dark green Chevy Tahoe was observed traveling southbound by Agent Elena Morales)
+
+
+(""entity""|DARK GREEN CHEVY TAHOE|MEANS_OF_TRANSPORTATION|A vehicle observed by Agent Elena Morales traveling southbound on SR-45)
+
+
+(""relationship""|ELENA MORALES|SR-45|Agent Elena Morales noticed a dark green Chevy Tahoe traveling southbound on SR-45|9)
+
+
+(""relationship""|ELENA MORALES|DARK GREEN CHEVY TAHOE|Agent Elena Morales noticed a dark green Chevy Tahoe traveling southbound on SR-45|9)
+
+
+(""relationship""|DARK GREEN CHEVY TAHOE|SR-45|The dark green Chevy Tahoe was traveling southbound on SR-45 when noticed by Agent Elena Morales|9)
+
+
+<END>","(""entity""|ELENA MORALES|PERSON|A Border Patrol Agent who noticed a dark green Chevy Tahoe traveling southbound on SR-45)
+
+
+(""entity""|D-45|ROUTES|A highway on which a dark green Chevy Tahoe was observed traveling southbound by Agent Elena Morales)
+
+
+(""entity""|DARK GREEN CHEVY TAHOE|MEANS_OF_TRANSPORTATION|A vehicle observed by Agent Elena Morales traveling southbound on SR-45)
+
+
+(""relationship""|ELENA MORALES|D-45|Agent Elena Morales noticed a dark green Chevy Tahoe traveling southbound on SR-45|9)
+
+
+(""relationship""|ELENA MORALES|DARK GREEN CHEVY TAHOE|Agent Elena Morales noticed a dark green Chevy Tahoe traveling southbound on SR-45|9)
+
+
+(""relationship""|DARK GREEN CHEVY TAHOE|SR-45|The dark green Chevy Tahoe was traveling southbound on SR-45 when noticed by Agent Elena Morales|9)
+
+
+<END>"
+Three migrants drowned while attempting to reach shore and a fourth was seriously injured when he was struck by the boat's propeller.,"(""entity""|THREE MIGRANTS|PERSON|Victims who drowned trying to reach shore)
+
+
+(""relationship""|THREE MIGRANTS|SHORE|Three migrants drowned attempting to reach shore|9)
+
+
+<END>","(""entity""|THREE MIGRANTS|PERSON|Threeims who drowned while to reach shore while(""entity""|THREE MIGRANTS|SHORE|Three migrants drowned while to reach shore|9)
+
+
+<END>"
+"On July 20, 2004, Diaz-Galiana was detained by ICE and deported","(""entity""|DIAZ-GALIANA|PERSON|Individual who on July 20 2004 was detained by ICE and deported)
+
+
+(""entity""|ICE|ORGANIZATION|Organization that on July 20 2004 detained and deported Diaz-Galiana)
+
+
+(""relationship""|DIAZ-GALIANA|ICE|Diaz-Galiana was detained and deported by ICE on July 20 2004|9)
+
+
+<END>","(""entity""|DIAZ-GALIANA|PERSON|An who on July 20,2004 was detained by ICE and deported)
+
+
+(""entity""|ICE|ORGANIZATION|Law that on July 20 2004 detained and deported Diaz-Galiana)
+
+
+(""relationship""|DIAZ-GALIANA|ICE|Oniaz-Galiana was detained and deported by ICE on July 20 2004|9)
+
+
+<END>"
+Ricardo Rodriguez responded that there were two more in the trunk,"(""entity""|RICARDO RODRIGUEZ|PERSON|Individual who responded that there were two more individuals in the trunk)
+
+
+(""entity""|TWO INDIVIDUALS|PERSON|Two individuals who according to Ricardo Rodriguez's response were in the trunk)
+
+
+(""relationship""|RICARDO RODRIGUEZ|TWO INDIVIDUALS|Ricardo Rodriguez responded that there were two more individuals in the trunk|9)
+
+
+<END>","(""entity""|RICARDO RODRIGUEZ|PERSON|A who responded that there were two more in in the trunk)
+
+
+(""entity""|TRWO MOREIVIDUALS|PERSON|Two individuals who according to Ricardo Rodriguez were response were in the trunk)
+
+
+(""entity""|RICARDO RODRIGUEZ|TWO INDIVIDUALS|Ricardo Rodriguez responded that there were two more individuals in the trunk|8)
+
+
+<END>"
+"Once back near Pearsall, the vehicle pulled into the gas station at exit 101, again rather abruptly, and parked near a pump.","(""entity""|VEHICLE|MEANS_OF_TRANSPORTATION|A vehicle that pulled into the gas station at exit 101 near Pearsall rather abruptly and parked near a pump)
+
+
+(""entity""|PEARSALL|LOCATION|A location in Texas near which the vehicle pulled into a gas station at exit 101)
+
+
+(""entity""|GAS STATION|LOCATION|A gas station at exit 101 near Pearsall where the vehicle pulled in abruptly and parked near a pump)
+
+
+(""entity""|EXIT 101|ROUTES|A highway exit near Pearsall where the gas station was located and where the vehicle pulled in abruptly)
+
+
+(""relationship""|VEHICLE|PEARSALL|The vehicle pulled into a gas station near Pearsall at exit 101|9)
+
+
+(""relationship""|VEHICLE|GAS STATION|The vehicle pulled into the gas station at exit 101 near Pearsall rather abruptly and parked near a pump|9)
+
+
+(""relationship""|VEHICLE|EXIT 101|The vehicle pulled into the gas station at exit 101 near Pearsall|9)
+
+
+(""relationship""|GAS STATION|EXIT 101|The gas station is located at exit 101 near Pearsall|9)
+
+
+(""relationship""|GAS STATION|PEARSALL|The gas station at exit 101 is located near Pearsall|9)
+
+
+(""relationship""|EXIT 101|PEARSALL|Exit 101 is near Pearsall where the vehicle pulled into the gas station|9)
+
+
+<END>","(""entity""|VEHICLE|MEANS_OF_TRANSPORTATION|A vehicle that once into a gas station at exit 101 near Pearsall rather abruptly and parked near a pump.)(""entity""|GARSALL|LOCATION|A location near Texas near which the vehicle pulled into the gas station at exit 101)
+
+
+(""entity""|GAS STATION|LOCATION|A gas station at exit 101 near Pearsall where the vehicle pulled in rather and parked near a pump)
+
+
+(""entity""|P 101|ROUTES|The highway exit at Pearsall where the gas station is located and where the vehicle pulled in abruptly)
+
+
+(""relationship""|VEHICLE|PEARSALL|The vehicle pulled back the gas station near Pearsall| exit 101|9)
+
+
+(""relationship""|VEHICLE|GAS STATION|The vehicle pulled into the gas station at exit 101 near Pearsall and abruptly| parked near a pump|9)
+
+
+(""relationship""|VEHICLE|EXIT 101|The vehicle pulled into the gas station at exit 101 near Pearsall|9)
+
+
+(""relationship""|GAS STATION|PE 101|The gas station is located at exit 101 near Pearsall|9)
+
+
+(""relationship""|GAS STATION|PEARSALL|The gas station is exit 101 is located near Pearsall|9)
+
+
+(""relationship""|PE 101|PEARSALL|Exit 101 is located Pearsall where the gas pulled into the gas station|9)
+
+
+<END>"
+"he knowingly facilitated and encouraged the undocumented aliens' prearranged plan to enter the United States in violation of law, as evidenced by his admission that he met with them in a Mexican hotel room prior to their entry and gave them assurances that he would help them secure transportation inside the United States after they crossed the border","(""entity""|UNDOCUMENTED ALIENS|PERSON|Individuals whose prearranged plan to enter the United States in violation of law was knowingly facilitated and encouraged by him as evidenced by his admission that he met with them in a Mexican hotel room and gave them assurances he would help secure transportation inside the United States after they crossed the border)
+
+
+(""entity""|UNITED STATES|LOCATION|Country that the undocumented aliens had a prearranged plan to enter in violation of law with him having admitted to facilitating and encouraging this plan and promising to help secure transportation inside after they crossed the border)
+
+
+(""entity""|MEXICAN HOTEL ROOM|LOCATION|Location in Mexico where he admitted to having met with the undocumented aliens prior to their entry into the United States and gave them assurances he would help secure transportation inside the United States)
+
+
+(""entity""|MEXICO|LOCATION|Country where he admitted to having met with the undocumented aliens in a hotel room prior to their illegal entry into the United States)
+
+
+(""relationship""|UNDOCUMENTED ALIENS|UNITED STATES|He knowingly facilitated and encouraged the undocumented aliens prearranged plan to enter the United States in violation of law and gave them assurances he would help secure transportation inside after they crossed the border|9)
+
+
+(""relationship""|UNDOCUMENTED ALIENS|MEXICAN HOTEL ROOM|He admitted to having met with the undocumented aliens in a Mexican hotel room prior to their entry into the United States where he gave them assurances he would help secure transportation inside the United States|8)
+
+
+(""relationship""|UNDOCUMENTED ALIENS|MEXICO|He admitted to having met with the undocumented aliens in a Mexican hotel room prior to their illegal entry into the United States|8)
+
+
+(""relationship""|MEXICAN HOTEL ROOM|UNITED STATES|The meeting in the Mexican hotel room between him and the undocumented aliens took place prior to their planned illegal entry into the United States where he gave them assurances of transportation assistance|7)
+
+
+(""relationship""|MEXICAN HOTEL ROOM|MEXICO|The hotel room where he met with the undocumented aliens prior to their illegal entry into the United States was located in Mexico|8)
+
+
+(""relationship""|MEXICO|UNITED STATES|He met with the undocumented aliens in a Mexican hotel room prior to their illegal entry into the United States which he knowingly facilitated and encouraged|7)
+
+
+<END>","(""entity""|ALIDOCUMENTED ALIENS|PERSON|Individuals who prearranged plan to enter the United States was violation of law was knowingly facilitated and encouraged by him as evidenced by his admission that he met with them in a Mexican hotel room prior gave them assurances he would help secure transportation inside the United States after they crossed the border)
+
+
+(""entity""|MED STATES|LOCATION|Country that he undocumented aliens planned a prearranged plan to enter in violation of law as facilit facilitating admitted he meeting their encouraging their by by promising to help secure transportation inside the crossing crossed the border)
+
+
+(""entity""|MEXICOAN HOTEL ROOM|LOCATION|Location where Mexico where he admitted to meeting met with the undocumented aliens prior to their entry into the United States in where them assurances he would help secure transportation inside the United States after(""entity""|UNITEXICO|LOCATION|Country where the met to meeting met with the undocumented aliens in a hotel room prior to their entry entry into the United States having(""entity""|UNDOCUMENTED ALIENS|UNITED STATES|The knowingly facilitated and encouraged the undocumented aliens'arranged plan to enter the United States in violation of law as admitted them assurances he would help secure transportation inside after they crossed the border|9)
+
+
+(""relationship""|UNDOCUMENTED ALIENS|MEXICAN HOTEL ROOM|He admitted to having met with the undocumented aliens in a Mexican hotel room prior to their entry into the United States| he gave them assurances he would help secure transportation inside the United States|9)
+
+
+(""relationship""|UNDOCUMENTED ALIENS|MEXICO|He admitted to having met with the undocumented aliens in a Mexican hotel room prior to their entry entry into the United States|8)
+
+
+(""relationship""|MEXICAN HOTEL ROOM|MUNITED STATES|He Mexican in a Mexican hotel room was him and the undocumented aliens was place prior to the entry entry entry into the United States| he promised assurances assurances he future inside|7)
+
+
+(""relationship""|MEXICAN HOTEL ROOM|MEXICO|The Mexican room where he met with the undocumented aliens was to their entry entry into the United States was located in Mexico|7)
+
+
+(""relationship""|MEXICO|UNITED STATES|The met the the undocumented aliens in a Mexican hotel room in to their illegal entry into the United States having violated facilitated facilitated and encouraged|6)
+
+
+<END>"
+Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.,"(""entity""|BORDER PATROL AGENTS|PERSON|Border Patrol agents who questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.)
+
+
+(""entity""|MEXICAN NATIONALS|PERSON|Nine passengers identified as Mexican nationals illegally present in the U.S.)
+
+
+(""entity""|UNITED STATES|LOCATION|Country where the Mexican nationals were found to be illegally present)
+
+
+(""relationship""|BORDER PATROL AGENTS|MEXICAN NATIONALS|Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.|9)
+
+
+(""relationship""|MEXICAN NATIONALS|UNITED STATES|The nine Mexican nationals were found to be illegally present in the United States|9)
+
+
+<END>","(""entity""|BORDER PATROL AGENTS|PERSON|Border Patrol agents who questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.)
+
+
+(""entity""|NEXICAN NATIONALS|PERSON|Nine passengers questioned by Mexican nationals who present in the U.S.)
+
+
+(""entity""|UED STATES|LOCATION|The where the nine nationals were found illegally be illegally present)
+
+
+(""relationship""|BORDER PATROL AGENTS|MEXICAN NATIONALS|Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.|9)
+
+
+(""relationship""|BEXICAN NATIONALS|UNITED STATES|The nine Mexican nationals were determined to be illegally present in the United States|9)
+
+
+(""END>"
+"Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore.","(""entity""|MARTINEZ|PERSON|A suspected smuggling leader who directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|CREW|PERSON|Martinez's crew directed to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|RIGID-HULL BOATS|MEANS_OF_TRANSPORTATION|Two rigid-hull boats intended for transporting groups offshore that Martinez directed his crew to meet with at a remote beach in San Quintín, Mexico)
+
+
+(""entity""|REMOTE BEACH|LOCATION|A remote beach in San Quintín, Mexico where Martinez directed his crew to meet with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|SAN QUINTÍN, MEXICO|LOCATION|The location in Mexico where Martinez directed his crew to meet at a remote beach with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""relationship""|MARTINEZ|CREW|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats|9)
+
+
+(""relationship""|MARTINEZ|RIGID-HULL BOATS|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore|9)
+
+
+(""relationship""|MARTINEZ|REMOTE BEACH|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|MARTINEZ|SAN QUINTÍN, MEXICO|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|CREW|REMOTE BEACH|Martinez's crew was directed to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|CREW|SAN QUINTÍN, MEXICO|Martinez's crew was directed to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|CREW|RIGID-HULL BOATS|Martinez's crew was directed to meet with two rigid-hull boats at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|RIGID-HULL BOATS|REMOTE BEACH|Two rigid-hull boats were to meet Martinez's crew at the remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|RIGID-HULL BOATS|SAN QUINTÍN, MEXICO|Two rigid-hull boats were at the remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|REMOTE BEACH|SAN QUINTÍN, MEXICO|The remote beach where Martinez directed his crew to meet is located in San Quintín, Mexico|9)
+
+
+<END>","(""entity""|MARTINEZ|PERSON|A person smugg organizer who directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|CREW|PERSON|Ainez's crew who to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|RIGID-HULL BOATS|MEANS_OF_TRANSPORTATION|Two rigid-hull boats brought for transporting groups offshore that Martinez directed his crew to meet with at a remote beach in San Quintín, Mexico)
+
+
+(""entity""|REMOTE BEACH|LOCATION|A remote beach in San Quintín, Mexico where Martinez directed his crew to meet with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|SAN QUINTÍN, MEXICO|LOCATION|The location in Mexico where Martinez directed his crew to meet at a remote beach with two rigid-hull boats intended for transporting groups offshore)
+
+
+(""entity""|MARTINEZ|CREW|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended9)
+
+
+(""relationship""|MARTINEZ|RIGID-HULL BOATS|Martinez directed his crew to meet with a remote beach with San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore|9)
+
+
+(""relationship""|MARTINEZ|REMOTE BEACH|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|MARTINEZ|SAN QUINTÍN, MEXICO|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|CREW|RREMOTE BEACH|Martinez's crew was directed to meet at a remote beach in San Quintín, Mexico with9)
+
+
+(""relationship""|CREW|RSAN QUINTÍN, MEXICO|Martinez's crew was directed to meet at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|RW|RIGID-HULL BOATS|Martinez's crew was directed to meet with two rigid-hull boats intended a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|RIGID-HULL BOATS|REMOTE BEACH|Two rigid-hull boats were to meet Martinez's crew at a remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|RIGID-HULL BOATS|SAN QUINTÍN, MEXICO|Two rigid-hull boats intended intended sea remote beach in San Quintín, Mexico|9)
+
+
+(""relationship""|REMOTE BEACH|SAN QUINTÍN, MEXICO|The remote beach is Martinez's his crew to meet with located in San Quintín, Mexico|9)
+
+
+<END>"
+"During this time, the group contacted relatives of the aliens living in the United States. The family members were instructed to wire Mejia-Orosco funds. He received $ 1,000 from Paz-Ortega's family in Los Angeles and $ 1,700 from relatives of Cruz-Morales living in New York City. Two days after arriving, the three drove to the Laredo International Airport. Mejia-Orosco supplied the aliens with airline tickets to San Antonio and the key to a motel room there. Later, Mejia-Orosco met the aliens at the motel and drove them to the San Antonio International Airport.","(""entity""|MEJIA-OROSCO|PERSON|A citizen of Guatemala)
+
+
+(""entity""|PAZ-ORTEGA|PERSON|A person who travelled with Mejia-Orosco)
+
+
+(""entity""|CRUZ-MORALES|PERSON|A person who travelled with Mejia-Orosco)
+
+
+(""entity""|LAREDO INTERNATIONAL AIRPORT|LOCATION|An airport that Paz-Ortega and Cruz-Morales went to with Mejia-Orosco)
+
+
+(""entity""|SAN ANTONIO|LOCATION|A place in Texas where Paz-Ortega and Cruz-Morales went to motel room whose key was provided by Mejia-Orosco)
+
+
+(""entity""|SAN ANTONIO|LOCATION|A place in Texas where Paz-Ortega and Cruz-Morales went to motel room whose key was provided by Mejia-Orosco)
+
+
+(""relationship""|MEJIA-OROSCO|PAZ-ORTEGA|Mejia-Orosco brought Paz-Ortega to Nuevo Laredo, Tamaulipas, Mexico}9)
+
+
+(""relationship""|MEJIA-OROSCO|CRUZ-MORALES|Mejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico}9)
+
+
+(""relationship""|MEJIA-OROSCO|SAN ANTONIO|A place in Texas where Paz-Ortega and Cruz-Morales met with Mejia-Orosco and later went to San Antonio International Airport}9)
+
+
+<END>","(""entity""|MEJIA-OROSCO|PERSON|A person of Guatemala who(""entity""|ALIZ-ORTEGA|PERSON|A citizen from received with Mejia-Orosco)
+
+
+(""entity""|CRUZ-MORALES|PERSON|A person who travelled with Mejia-Orosco)
+
+
+(""entity""|ALIAREDO INTERNATIONAL AIRPORT|LOCATION|A airport in Mej-Ortega, Mej-Morales arrived to)
+
+
+ Mejia-Orosco)
+
+
+(""entity""|SAN ANTONIO|LOCATION|A city where the where Mej-Ortega and Cruz-Morales stayed with with and)
+
+
+ key was supplied by Mejia-Orosco)
+
+
+(""entity""|SAN ANTONIO INTERNATIONALLOCATION|A city in Texas where Paz-Ortega and Cruz-Morales flew to airline room whose key was provided by Mejia-Orosco)
+
+
+(""entity""|MEJIA-OROSCO|PAZ-ORTEGA|Mejia-Orosco received Paz-Ortega to L Laredo and suppliedamaulipas, Mexico, |)
+
+
+(""relationship""|MEJIA-OROSCO|CRUZ-MORALES|Mejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico|9)
+
+
+<relationship""|MEJIA-OROSCO|L ANTONIO|Me motel in Texas where Paz-Ortega and Cruz-Morales went Mej Mejia-Orosco at where flew to the Antonio International Airport with9)
+
+
+<END>"
+Federal agents helped arrest 34 people in separate landings along the Oregon coastline on Saturday night.,"(""entity""|FEDERAL AGENTS|PERSON|Federal agents who helped arrest 34 people in separate landings along the Oregon coastline on Saturday night)
+
+
+(""entity""|34 PEOPLE|PERSON|34 people arrested by federal agents in separate landings along the Oregon coastline on Saturday night)
+
+
+(""entity""|OREGON COASTLINE|LOCATION|The coastline along which federal agents helped arrest 34 people in separate landings on Saturday night)
+
+
+(""relationship""|FEDERAL AGENTS|34 PEOPLE|Federal agents helped arrest 34 people in separate landings along the Oregon coastline on Saturday night|9)
+
+
+(""relationship""|FEDERAL AGENTS|OREGON COASTLINE|Federal agents helped arrest 34 people in separate landings along the Oregon coastline on Saturday night|9)
+
+
+(""relationship""|34 PEOPLE|OREGON COASTLINE|34 people were arrested in separate landings along the Oregon coastline on Saturday night|9)
+
+
+<END>","(""entity""|OREEDERAL AGENTS|PERSON|Federal agents who helped arrest 34 people in separate landings along the Oregon coastline on Saturday night)
+
+
+(""entity""|34 PEOPLE|PERSON|34 people arrested by federal agents in separate landings along the Oregon coastline on Saturday night)
+
+
+(""entity""|OREGON COASTLINE|LOCATION|The location along which federal agents helped arrest 34 people in separate landings on Saturday night)
+
+
+(""relationship""|FEDERAL AGENTS|34 PEOPLE|Federal agents helped arrest 34 people in separate landings along the Oregon coastline| Saturday night|9)
+
+
+(""relationship""|FEDERAL AGENTS|OREGON COASTLINE|Federal agents helped arrest 34 people in separate landings along the Oregon coastline on Saturday night|9)
+
+
+(""relationship""|34 PEOPLE|OREGON COASTLINE|34 people were arrested in separate landings along the Oregon coastline on Saturday night|9)
+
+
+<END>"
+Evidence related to maritime human smuggling was determined by Detective Alvarez.,"(""entity""|ALVAREZ|PERSON|A detective who determined that evidence related to maritime human smuggling was present)
+
+
+<END>","(""entity""|ALVAREZ|PERSON|A detective who determined evidence evidence related to maritime human smuggling existed present)
+
+
+<END>"
