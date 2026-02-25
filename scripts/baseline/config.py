@@ -1,12 +1,9 @@
 import os
 from datetime import datetime
 
-#- Paths
-#--Train
-DATASET_PATH = "datasets/dataset5.csv"
+DATASET_PATH = "datasets/dataset7.csv"
 BASE_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 
-#--Output
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 RUN_NAME = f"llama_baseline_{timestamp}"
 NEW_MODEL_DIR = os.path.join("runs", RUN_NAME)
