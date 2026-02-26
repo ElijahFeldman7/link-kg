@@ -1,27 +1,27 @@
 ===== GLOBAL SUMMARY =====
-Entities: TP=128, FP=46, FN=61
-P=0.7356, R=0.6772, F1=0.7052
+Entities: TP=122, FP=45, FN=67
+P=0.7305, R=0.6455, F1=0.6854
 
-Relations: TP=194, FP=40, FN=75
-P=0.8291, R=0.7212, F1=0.7714
+Relations: TP=196, FP=39, FN=73
+P=0.8340, R=0.7286, F1=0.7778
 
 ===== PER-TYPE ENTITY SUMMARY =====
 
 PERSON:
-  TP=57, FP=13, FN=23
-  P=0.8143, R=0.7125, F1=0.7600
+  TP=55, FP=13, FN=25
+  P=0.8088, R=0.6875, F1=0.7432
 
 LOCATION:
-  TP=41, FP=12, FN=25
-  P=0.7736, R=0.6212, F1=0.6891
+  TP=39, FP=13, FN=27
+  P=0.7500, R=0.5909, F1=0.6610
 
 ORGANIZATION:
-  TP=9, FP=3, FN=5
-  P=0.7500, R=0.6429, F1=0.6923
+  TP=7, FP=3, FN=7
+  P=0.7000, R=0.5000, F1=0.5833
 
 MEANS_OF_TRANSPORTATION:
-  TP=16, FP=2, FN=4
-  P=0.8889, R=0.8000, F1=0.8421
+  TP=15, FP=2, FN=5
+  P=0.8824, R=0.7500, F1=0.8108
 
 MEANS_OF_COMMUNICATION:
   TP=0, FP=0, FN=0
@@ -32,50 +32,50 @@ ROUTES:
   P=0.7143, R=0.7143, F1=0.7143
 
 SMUGGLED_ITEMS:
-  TP=0, FP=1, FN=2
-  P=0.0000, R=0.0000, F1=0.0000
+  TP=1, FP=0, FN=1
+  P=1.0000, R=0.5000, F1=0.6667
 
 --- GLOBAL METRICS (AVERAGE) ---
 {
-  "eval_loss": 0.37688401341438293,
+  "eval_loss": 0.44519874453544617,
   "eval_parsability_score": 1.0,
-  "eval_entity_precision": 0.735632183908046,
-  "eval_entity_recall": 0.6772486772486772,
-  "eval_entity_f1": 0.7052341597796143,
-  "eval_entity_tp": 128,
-  "eval_entity_fp": 46,
-  "eval_entity_fn": 61,
-  "eval_relationship_precision": 0.8290598290598291,
-  "eval_relationship_recall": 0.7211895910780669,
-  "eval_relationship_f1": 0.7713717693836978,
-  "eval_relationship_tp": 194,
-  "eval_relationship_fp": 40,
-  "eval_relationship_fn": 75,
-  "eval_relationship_score_mae": 0.10824742268041238,
-  "eval_entity_PERSON_tp": 57,
+  "eval_entity_precision": 0.7305389221556886,
+  "eval_entity_recall": 0.6455026455026455,
+  "eval_entity_f1": 0.6853932584269664,
+  "eval_entity_tp": 122,
+  "eval_entity_fp": 45,
+  "eval_entity_fn": 67,
+  "eval_relationship_precision": 0.8340425531914893,
+  "eval_relationship_recall": 0.7286245353159851,
+  "eval_relationship_f1": 0.7777777777777778,
+  "eval_relationship_tp": 196,
+  "eval_relationship_fp": 39,
+  "eval_relationship_fn": 73,
+  "eval_relationship_score_mae": 0.10714285714285714,
+  "eval_entity_PERSON_tp": 55,
   "eval_entity_PERSON_fp": 13,
-  "eval_entity_PERSON_fn": 23,
-  "eval_entity_PERSON_precision": 0.8142857142857143,
-  "eval_entity_PERSON_recall": 0.7125,
-  "eval_entity_PERSON_f1": 0.7599999999999999,
-  "eval_entity_LOCATION_tp": 41,
-  "eval_entity_LOCATION_fp": 12,
-  "eval_entity_LOCATION_fn": 25,
-  "eval_entity_LOCATION_precision": 0.7735849056603774,
-  "eval_entity_LOCATION_recall": 0.6212121212121212,
-  "eval_entity_LOCATION_f1": 0.689075630252101,
-  "eval_entity_ORGANIZATION_tp": 9,
+  "eval_entity_PERSON_fn": 25,
+  "eval_entity_PERSON_precision": 0.8088235294117647,
+  "eval_entity_PERSON_recall": 0.6875,
+  "eval_entity_PERSON_f1": 0.7432432432432432,
+  "eval_entity_LOCATION_tp": 39,
+  "eval_entity_LOCATION_fp": 13,
+  "eval_entity_LOCATION_fn": 27,
+  "eval_entity_LOCATION_precision": 0.75,
+  "eval_entity_LOCATION_recall": 0.5909090909090909,
+  "eval_entity_LOCATION_f1": 0.6610169491525425,
+  "eval_entity_ORGANIZATION_tp": 7,
   "eval_entity_ORGANIZATION_fp": 3,
-  "eval_entity_ORGANIZATION_fn": 5,
-  "eval_entity_ORGANIZATION_precision": 0.75,
-  "eval_entity_ORGANIZATION_recall": 0.6428571428571429,
-  "eval_entity_ORGANIZATION_f1": 0.6923076923076924,
-  "eval_entity_MEANS_OF_TRANSPORTATION_tp": 16,
+  "eval_entity_ORGANIZATION_fn": 7,
+  "eval_entity_ORGANIZATION_precision": 0.7,
+  "eval_entity_ORGANIZATION_recall": 0.5,
+  "eval_entity_ORGANIZATION_f1": 0.5833333333333334,
+  "eval_entity_MEANS_OF_TRANSPORTATION_tp": 15,
   "eval_entity_MEANS_OF_TRANSPORTATION_fp": 2,
-  "eval_entity_MEANS_OF_TRANSPORTATION_fn": 4,
-  "eval_entity_MEANS_OF_TRANSPORTATION_precision": 0.8888888888888888,
-  "eval_entity_MEANS_OF_TRANSPORTATION_recall": 0.8,
-  "eval_entity_MEANS_OF_TRANSPORTATION_f1": 0.8421052631578948,
+  "eval_entity_MEANS_OF_TRANSPORTATION_fn": 5,
+  "eval_entity_MEANS_OF_TRANSPORTATION_precision": 0.8823529411764706,
+  "eval_entity_MEANS_OF_TRANSPORTATION_recall": 0.75,
+  "eval_entity_MEANS_OF_TRANSPORTATION_f1": 0.8108108108108107,
   "eval_entity_MEANS_OF_COMMUNICATION_tp": 0,
   "eval_entity_MEANS_OF_COMMUNICATION_fp": 0,
   "eval_entity_MEANS_OF_COMMUNICATION_fn": 0,
@@ -88,16 +88,16 @@ SMUGGLED_ITEMS:
   "eval_entity_ROUTES_precision": 0.7142857142857143,
   "eval_entity_ROUTES_recall": 0.7142857142857143,
   "eval_entity_ROUTES_f1": 0.7142857142857143,
-  "eval_entity_SMUGGLED_ITEMS_tp": 0,
-  "eval_entity_SMUGGLED_ITEMS_fp": 1,
-  "eval_entity_SMUGGLED_ITEMS_fn": 2,
-  "eval_entity_SMUGGLED_ITEMS_precision": 0.0,
-  "eval_entity_SMUGGLED_ITEMS_recall": 0.0,
-  "eval_entity_SMUGGLED_ITEMS_f1": 0.0,
-  "eval_runtime": 1012.8848,
-  "eval_samples_per_second": 0.051,
-  "eval_steps_per_second": 0.051,
-  "epoch": 8.0
+  "eval_entity_SMUGGLED_ITEMS_tp": 1,
+  "eval_entity_SMUGGLED_ITEMS_fp": 0,
+  "eval_entity_SMUGGLED_ITEMS_fn": 1,
+  "eval_entity_SMUGGLED_ITEMS_precision": 1.0,
+  "eval_entity_SMUGGLED_ITEMS_recall": 0.5,
+  "eval_entity_SMUGGLED_ITEMS_f1": 0.6666666666666666,
+  "eval_runtime": 714.4123,
+  "eval_samples_per_second": 0.073,
+  "eval_steps_per_second": 0.073,
+  "epoch": 10.0
 }
 ==============================
 
@@ -105,7 +105,7 @@ SMUGGLED_ITEMS:
 Input Data: Zhivargo McBride pled guilty to all fifteen counts in the Indictment: three counts of second degree murder, three counts of alien smuggling with death resulting...
 
 Prediction:
-("entity"|ZHIVARGO MCCBRIDE|PERSON|An convicted pled guilty to all counts in three counts of second degree murder and three counts of alien smuggling with death resulting)
+("entity"|ZHIVARGO MCCBRIDE|PERSON|An who pled guilty to all counts in three counts of second degree murder and three counts of alien smuggling with death resulting)
 
 
 ("END>
@@ -188,9 +188,9 @@ Prediction:
 
  
 
-("entity"|CAPTIVES|PERSON|Individuals who were guarded by the defendants defendants who 
+("entity"|CAPTIVES|PERSON|Individuals who were guarded by the defendants defendants.) 
 
-("relationship"|DEFENDANTS|CAPTIVES|Various defendants were armed at all times and took turns guarding the captives.|10) 
+("relationship"|DEFENDANTS|CAPTIVES|The defendants were armed at all times and took turns guarding the captives.|10) 
 
 <END>
 Ground Truth:
@@ -282,10 +282,10 @@ Prediction:
 ("entity"|U.S. BORDER PATROL|ORGANIZATION|Organization whose agents responded to an area near Swami's Beach at about 5:20 a.m.)
 
 
-("entity"|SWAMI'S BEACH|LOCATION|Areaastal area near which Sheriff's Deputies and U.S. Border Patrol agents responded at about 5:20 a.m.)
+("entity"|SWAMI'S BEACH|LOCATION|Theastal area near which Sheriff's Deputies and U.S. Border Patrol agents responded at about 5:20 a.m.)
 
 
-("relationship"|SHERIFF'S DEPUTIES|UHERIFF'S DEPARTMENT|Sheriff's Deputies are under the Sheriff's Department|9)
+("relationship"|SHERIFF'S DEPUTIES|SHERIFF'S DEPARTMENT|Sheriff's Deputies are under the Sheriff's Department|9)
 
 
 ("relationship"|U.S. BORDER PATROL AGENTS|U.S. BORDER PATROL|U.S. Border Patrol agents operate under U U.S. Border Patrol organization|9)
@@ -341,12 +341,12 @@ Metrics: {
   "entity_tp": 4,
   "entity_fp": 1,
   "entity_fn": 1,
-  "relationship_precision": 0.6,
-  "relationship_recall": 0.6,
-  "relationship_f1": 0.6,
-  "relationship_tp": 3,
-  "relationship_fp": 2,
-  "relationship_fn": 2,
+  "relationship_precision": 0.8,
+  "relationship_recall": 0.8,
+  "relationship_f1": 0.8000000000000002,
+  "relationship_tp": 4,
+  "relationship_fp": 1,
+  "relationship_fn": 1,
   "relationship_score_mae": 0.0,
   "entity_PERSON_tp": 2,
   "entity_PERSON_fp": 0,
@@ -393,16 +393,16 @@ Metrics: {
   "tp_entity_pairs": "('sheriff's deputies', 'person'); ('swami's beach', 'location'); ('u.s. border patrol', 'organization'); ('u.s. border patrol agents', 'person')",
   "fp_entity_pairs": "('swwareiff's deput', 'organization')",
   "fn_entity_pairs": "('sheriff's department', 'organization')",
-  "tp_relation_pairs": "('sheriff's deputies', 'u.s. border patrol agents'); ('swami's beach', 'u.s. border patrol agents'); ('u.s. border patrol', 'u.s. border patrol agents')",
-  "fp_relation_pairs": "('sheriff's deputies', 'uami's beach'); ('sheriff's deputies', 'uheriff's department')",
-  "fn_relation_pairs": "('sheriff's department', 'sheriff's deputies'); ('sheriff's deputies', 'swami's beach')"
+  "tp_relation_pairs": "('sheriff's department', 'sheriff's deputies'); ('sheriff's deputies', 'u.s. border patrol agents'); ('swami's beach', 'u.s. border patrol agents'); ('u.s. border patrol', 'u.s. border patrol agents')",
+  "fp_relation_pairs": "('sheriff's deputies', 'uami's beach')",
+  "fn_relation_pairs": "('sheriff's deputies', 'swami's beach')"
 }
 
 --- Sample 3 ---
 Input Data: Border patrol agents from the Laredo South Station were notified by the ranch hand that an undocumented female alien was in apparent distress at the La Moca Ranch.
 
 Prediction:
-("entity"|LANCH HAND|PERSON|Individual ranch hand who the Moca Ranch who notified Border Patrol agents from thearedo South Station that an undocumented female alien was in apparent distress)
+("entity"|LANCH HAND|PERSON|Individual person hand who the Moca Ranch who notified Border Patrol agents from thearedo South Station that an undocumented female alien was in apparent distress)
 
 
 ("entity"|BEN|PERSON|An undocumented female alien reported by apparent distress at La Moca Ranch by("entity"|LA MOCA RANCH|LOCATION|The ranch where a undocumented female alien was found in apparent distress, where by Border Patrol agents a ranch hand)
@@ -528,7 +528,7 @@ Prediction:
 ("entity"|FU MEI CHEN|PERSON|Individual who journey began in November or December 1997 when she took a ship from China to Guatemala)
 
 
-("entity"|SHIP|MEANS_OF_TRANSPORTATION|Shipessel that Fu Mei Chen took from China to Guatemala in November or December 1997)
+("entity"|SHIP|MEANS_OF_TRANSPORTATION|Shipessel taken Fu Mei Chen took from China to Guatemala in November or December 1997)
 
 
 ("entity"|CHINA|LOCATION|Country from which Fu Mei Chen took on ship in Guatemala in November or December 1997)
@@ -540,7 +540,7 @@ Prediction:
 ("relationship"|FU MEI CHEN|SHIP|Fu Mei Chen took a ship from China to Guatemala in November or December 1997|9)
 
 
-("relationship"|FU MEI CHEN|CHINA|Fu Mei Chen took journey began when November when November or December 1997 when she took a ship to Guatemala|9)
+("relationship"|FU MEI CHEN|CHINA|Fu Mei Chen took journey began with November when November or December 1997 when she took a ship to Guatemala|9)
 
 
 ("relationship"|FU MEI CHEN|GUATEMALA|Fu Mei Chen took by ship from China to Guatemala in November or December 1997|9)
@@ -658,7 +658,7 @@ Input Data: Both aliens identified the man as Allende-Garcia
 
 Prediction:
 ("entity"|ALIENS|PERSON|Individuals who identified theende-Garcia. 
-("entity"|ALLENDE-GARCIA|PERSON|The man who by the aliens.) 
+("entity"|ALLENDE-GARCIA|PERSON|The man who by both aliens.) 
 
 ("relationship"|ALIENS|ALLENDE-GARCIA|Both aliens identified All man as Allende-Garcia.|10) 
 
@@ -842,8 +842,8 @@ Input Data: A few minutes later, at approximately 3:30 a.m., the child's real mo
 Prediction:
 ("entity"|CHILD'S REAL MOTHER|PERSON|Individual individual who arrived at the port of entry with a Mexican birth certificate and 
 
- ("entity"|DEFENDANT| SISTER|PERSON|An individual who was not the child's real mother.) 
- ("entity"|CHILD'S REAL MOTHER|DEFENDANT'S SISTER|The child's real mother was not the defendant's sister.|10) 
+ ("entity"|PORTENDANT| SISTER|PERSON|An individual who was not the child's real mother.) 
+ ("entity"|CHILD'S REAL MOTHER|DEFENDANT'S SISTER|The child's real mother was not the defendant's sister.|8) 
  <END>
 Ground Truth:
 ("entity"|CHILD'S REAL MOTHER|PERSON|An individual who arrived at the port of entry with a Mexican birth certificate.) 
@@ -925,7 +925,7 @@ Prediction:
 ("entity"|UNNAMED PERSON|PERSON|Individual in Mexico who received 5,000 pesos from Hernandez-Lopez)
 
 
- is expected to receive another payment of $2,000 from Hernandez-Lopez arrived at his destination in the United States)
+ to expected to receive another payment of $2,000 from Hernandez-Lopez arrived at his destination in the United States)
 
 
 ("entity"|MEXICO|LOCATION|Country where the-Lopez paid the initial payment of 5,000 pesos to an unnamed person and where which another second payment of $2,000 was expected to be sent after arrival at the United States)
@@ -949,7 +949,7 @@ Prediction:
 ("relationship"|UNNAMED PERSON|UNITED STATES|The unnamed person was expected to receive another second of $2,000 from Mexico sent from Mexico after Hernandez-Lopez arrived at their destination in the United States|9)
 
 
-("relationship"|MEXICO|UNITED STATES|Hernandez-Lopez expected an initial payment in Mexico and expected to send another payment to $2,000 to Mexico after arriving at their destination in the United States|8)
+("relationship"|MEXICO|UNITED STATES|Hernandez-Lopez expected payments initial payment in Mexico and expected to send another payment to $2,000 to Mexico after arriving at their destination in the United States|7)
 
 
 <END>
@@ -999,7 +999,7 @@ Metrics: {
   "relationship_tp": 4,
   "relationship_fp": 2,
   "relationship_fn": 2,
-  "relationship_score_mae": 0.5,
+  "relationship_score_mae": 0.75,
   "entity_PERSON_tp": 2,
   "entity_PERSON_fp": 0,
   "entity_PERSON_fn": 0,
@@ -1054,7 +1054,7 @@ Metrics: {
 Input Data: Ten to 15 minutes later, the same truck returned onto I-35 and head north
 
 Prediction:
-("entity"|TRUCK|MEANS_OF_TRANSPORTATION|Vehicle vehicle that returned onto I-35 and headed north.) to  minutes later.) 
+("entity"|TRUCK|MEANS_OF_TRANSPORTATION|The vehicle that returned onto I-35 and headed north.) to  minutes later.) 
 
 ("entity"|I-35|ROUTES|A highway that the truck returned onto ten headed north on.) 
 
@@ -1141,7 +1141,7 @@ Prediction:
 ("entity"|MR. YANG| FAMILY|PERSON|A of Mr. Yang who originally paid $10,000 to smuggle him into the United States)
 
 
-("entity"|MR. YANG|PERSON|Individual who was smuggled into the United States with Mr family paid paid $10,000)
+("entity"|MR. YANG|PERSON|Individual who was smuggled into the United States at Mr family paid paid $10,000)
 
 
 ("entity"|UNITED STATES|LOCATION|Country country into which Mr. Yang's smuggled by his family paid paid $10,000)
@@ -1252,7 +1252,7 @@ Prediction:
 ("entity"|ALIEN|PERSON|A group of people aliens being guided by Garcia to San Antonio for financial400 per alien)
 
 
-("entity"|SAN ANTONIO|LOCATION|The destination where Garcia was he was guiding the group of aliens for("relationship"|GARCIA|ALIENS|Garcia stated he was the only guide for the group, aliens, guiding them to San Antonio for $400 per alien|8)
+("entity"|SAN ANTONIO|LOCATION|The destination where Garcia was he was guiding the aliens of aliens for("relationship"|GARCIA|ALIENS|Garcia stated he was the only guide for the group, aliens, guiding them to San Antonio for $400 per alien|8)
 
 
 ("relationship"|GARCIA|SAN ANTONIO|Garcia stated guiding the aliens of aliens to San Antonio for9)
@@ -1354,7 +1354,7 @@ Prediction:
 ("entity"|G|LOCATION|The location where he pointed a gun at them and 
 
  ("entity"|GUN|SMUGGLED_ITEMS|A weapon pointed pointed at them.) 
- ("entity"|HOUSE|GUN|The pointed the gun at them at the house.|10) 
+ ("entity"|HOUSE|GUN|The pointed the gun at them at the house.|8) 
  <END>
 Ground Truth:
 ("entity"|HOUSE|LOCATION|A location where he pointed a gun at them.) 
@@ -1430,10 +1430,7 @@ Metrics: {
 Input Data: On June 11, 2009, Border Patrol Agents Victor Barberena and Abraham Esqueda were engaged in a roving border patrol on Interstate Highway 35 ("I-35") between Laredo and San Antonio.
 
 Prediction:
-("entity"|VICTOR BARBERENA|PERSON|A Border Patrol Agent who in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio)
-
-
- with Abraham Esqueda)
+("entity"|VICTOR BARBERENA|PERSON|A Border Patrol Agent who in a roving border patrol together Interstate Highway 35 between Laredo and San Antonio on with Abraham Esqueda)
 
 
 ("entity"|ABRAHAM ESQUEDA|PERSON|A Border Patrol Agent engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio together with Victor Barberena)
@@ -1442,7 +1439,7 @@ Prediction:
 ("entity"|INTERSTATE HIGHWAY 35|ROUTES|A highway highway on Laredo and San Antonio on which Victor Patrol Agents Victor Barberena and Abraham Esqueda were conducting in a roving patrol patrol)
 
 
-("entity"|LAREDO|LOCATION|One city on which and Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving patrol patrol on Interstate Highway 35)
+("entity"|LAREDO|LOCATION|One city one which and Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving patrol patrol on Interstate Highway 35)
 
 
 ("entity"|SAN ANTONIO|LOCATION|A city between which Border Patrol Agents Victor Barberena and Abraham Esqueda were conducting a roving border patrol on Interstate Highway 35)
@@ -1451,7 +1448,7 @@ Prediction:
 ("relationship"|VICTOR BARBERENA|ABRAHAM ESQUEDA|Victor Barberena and Abraham Esqueda were together engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
 
 
-("relationship"|VICTOR BARBERENA|INTERSTATE HIGHWAY 35|Border Patrol Agent Victor Barberena was engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
+("relationship"|VICTOR BARBERENA|INTERSTATE HIGHWAY 35|Agent Patrol Agent Victor Barberena was engaged in a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
 
 
 ("relationship"|VICTOR BARBERENA|LAREDO|Border Patrol Agent Victor Barberena was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
@@ -1469,13 +1466,13 @@ Prediction:
 ("relationship"|ABRAHAM ESQUEDA|SAN ANTONIO|Border Patrol Agent Abraham Esqueda was conducting a roving border patrol on Interstate Highway 35 between Laredo and San Antonio|9)
 
 
-("relationship"|INTERSTATE HIGHWAY 35|LAREDO|Interstate Highway 35 on between Laredo and San Antonio on the Barber conducting patrolving patrol|9)
+("relationship"|INTERSTATE HIGHWAY 35|LAREDO|Interstate Highway 35 on between Laredo and San Antonio| the Barber conducting patrolving patrol|9)
 
 
 ("relationship"|INTERSTATE HIGHWAY 35|SAN ANTONIO|Interstate Highway 35 runs between Laredo and San Antonio where agents were on roving patrol|9)
 
 
-("relationship"|LAREDO|SAN ANTONIO|L Patrol Agents were Barberena and Abraham Esqueda were conducting a roving border on Interstate Highway 35 between Laredo and San Antonio|9)
+<relationship"|LAREDO|SAN ANTONIO|L Patrol Agents were Barberena and Abraham Esqueda were conducting a roving border on Interstate Highway 35 between Laredo and San Antonio|9)
 
 
 <END>
@@ -1535,11 +1532,11 @@ Metrics: {
   "entity_fp": 0,
   "entity_fn": 0,
   "relationship_precision": 1.0,
-  "relationship_recall": 1.0,
-  "relationship_f1": 1.0,
-  "relationship_tp": 10,
+  "relationship_recall": 0.9,
+  "relationship_f1": 0.9473684210526316,
+  "relationship_tp": 9,
   "relationship_fp": 0,
-  "relationship_fn": 0,
+  "relationship_fn": 1,
   "relationship_score_mae": 0.0,
   "entity_PERSON_tp": 2,
   "entity_PERSON_fp": 0,
@@ -1586,22 +1583,22 @@ Metrics: {
   "tp_entity_pairs": "('abraham esqueda', 'person'); ('interstate highway 35', 'routes'); ('laredo', 'location'); ('san antonio', 'location'); ('victor barberena', 'person')",
   "fp_entity_pairs": "",
   "fn_entity_pairs": "",
-  "tp_relation_pairs": "('abraham esqueda', 'interstate highway 35'); ('abraham esqueda', 'laredo'); ('abraham esqueda', 'san antonio'); ('abraham esqueda', 'victor barberena'); ('interstate highway 35', 'laredo'); ('interstate highway 35', 'san antonio'); ('interstate highway 35', 'victor barberena'); ('laredo', 'san antonio'); ('laredo', 'victor barberena'); ('san antonio', 'victor barberena')",
+  "tp_relation_pairs": "('abraham esqueda', 'interstate highway 35'); ('abraham esqueda', 'laredo'); ('abraham esqueda', 'san antonio'); ('abraham esqueda', 'victor barberena'); ('interstate highway 35', 'laredo'); ('interstate highway 35', 'san antonio'); ('interstate highway 35', 'victor barberena'); ('laredo', 'victor barberena'); ('san antonio', 'victor barberena')",
   "fp_relation_pairs": "",
-  "fn_relation_pairs": ""
+  "fn_relation_pairs": "('laredo', 'san antonio')"
 }
 
 --- Sample 14 ---
 Input Data: On August 4, 1999, Border Patrol agents observed a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road, a divided highway in northern Laredo, Texas.
 
 Prediction:
-("entity"|BORDER PATROL AGENTS|PERSON|Border Patrol agents who on a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas)
+("entity"|BORDER PATROL AGENTS|PERSON|Border Patrol agents who on a 1982 Ford F-150 extended cab pickup truck pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas on("entity"|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|MEANS_OF_TRANSPORTATION|A  observed by Border Patrol agents to into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas)
 
 
-("entity"|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|MEANS_OF_TRANSPORTATION|A  observed by Border Patrol agents to into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas)
+("entity"|COMMERCIAL GRAVEL PIT|LOCATION|A commercial gravel pit adjacent to Mines Road in northern Laredo, Texas where the 1982 Ford F-150 extended observed)
 
 
-("entity"|COMMERCIAL GRAVEL PIT|LOCATION|A commercial gravel pit adjacent to Mines Road in northern Laredo, Texas where the 1982 Ford F-150 extended observed to in)
+ in)
 
 
  Border Patrol agents)
@@ -1619,7 +1616,7 @@ Prediction:
 ("relationship"|BORDER PATROL AGENTS|MINES ROAD|Border Patrol agents observed a 1982 Ford F-150 pull into a commercial gravel pit adjacent to Mines Road in northern Laredo, Texas|9)
 
 
-("relationship"|BORDER PATROL AGENTS|LAREDO, TEXAS|Border Patrol agents observed in northern Laredo, Texas when they observed a 1982 Ford F-150 extended9)
+("relationship"|BORDER PATROL AGENTS|LAREDO, TEXAS|Border Patrol agents observed in L Laredo, Texas when they observed a 1982 Ford F-150 extended9)
 
 
 ("relationship"|1982 FORD F-150 EXTENDED CAB PICKUP TRUCK|COMMERCIAL GRAVEL PIT|The 1982 Ford F-150 extended cab pickup truck was into the commercial gravel pit adjacent to Mines Road in9)
@@ -1637,7 +1634,7 @@ Prediction:
 ("relationship"|COMMERCIAL GRAVEL PIT|LAREDO, TEXAS|The commercial gravel pit is located in northern Laredo, Texas|9)
 
 
-("relationship"|MINES ROAD|LAREDO, TEXAS|Mines Road is a divided highway located northern Laredo, Texas|9)
+("relationship"|MINES ROAD|LAREDO, TEXAS|Mines Road is located divided highway located northern Laredo, Texas|9)
 
 
 <END>
@@ -1691,11 +1688,11 @@ Ground Truth:
 Metrics: {
   "parsability_score": 1.0,
   "entity_precision": 1.0,
-  "entity_recall": 0.8,
-  "entity_f1": 0.888888888888889,
-  "entity_tp": 4,
+  "entity_recall": 0.6,
+  "entity_f1": 0.7499999999999999,
+  "entity_tp": 3,
   "entity_fp": 0,
-  "entity_fn": 1,
+  "entity_fn": 2,
   "relationship_precision": 1.0,
   "relationship_recall": 0.6,
   "relationship_f1": 0.7499999999999999,
@@ -1721,12 +1718,12 @@ Metrics: {
   "entity_ORGANIZATION_precision": 0.0,
   "entity_ORGANIZATION_recall": 0.0,
   "entity_ORGANIZATION_f1": 0.0,
-  "entity_MEANS_OF_TRANSPORTATION_tp": 1,
+  "entity_MEANS_OF_TRANSPORTATION_tp": 0,
   "entity_MEANS_OF_TRANSPORTATION_fp": 0,
-  "entity_MEANS_OF_TRANSPORTATION_fn": 0,
-  "entity_MEANS_OF_TRANSPORTATION_precision": 1.0,
-  "entity_MEANS_OF_TRANSPORTATION_recall": 1.0,
-  "entity_MEANS_OF_TRANSPORTATION_f1": 1.0,
+  "entity_MEANS_OF_TRANSPORTATION_fn": 1,
+  "entity_MEANS_OF_TRANSPORTATION_precision": 0.0,
+  "entity_MEANS_OF_TRANSPORTATION_recall": 0.0,
+  "entity_MEANS_OF_TRANSPORTATION_f1": 0.0,
   "entity_MEANS_OF_COMMUNICATION_tp": 0,
   "entity_MEANS_OF_COMMUNICATION_fp": 0,
   "entity_MEANS_OF_COMMUNICATION_fn": 0,
@@ -1745,9 +1742,9 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_precision": 0.0,
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "('1982 ford f-150 extended cab pickup truck', 'means_of_transportation'); ('border patrol agents', 'person'); ('commercial gravel pit', 'location'); ('mines road', 'routes')",
+  "tp_entity_pairs": "('border patrol agents', 'person'); ('commercial gravel pit', 'location'); ('mines road', 'routes')",
   "fp_entity_pairs": "",
-  "fn_entity_pairs": "('laredo, texas', 'location')",
+  "fn_entity_pairs": "('1982 ford f-150 extended cab pickup truck', 'means_of_transportation'); ('laredo, texas', 'location')",
   "tp_relation_pairs": "('1982 ford f-150 extended cab pickup truck', 'border patrol agents'); ('border patrol agents', 'laredo, texas'); ('border patrol agents', 'mines road'); ('commercial gravel pit', 'laredo, texas'); ('commercial gravel pit', 'mines road'); ('laredo, texas', 'mines road')",
   "fp_relation_pairs": "",
   "fn_relation_pairs": "('1982 ford f-150 extended cab pickup truck', 'commercial gravel pit'); ('1982 ford f-150 extended cab pickup truck', 'laredo, texas'); ('1982 ford f-150 extended cab pickup truck', 'mines road'); ('border patrol agents', 'commercial gravel pit')"
@@ -1757,7 +1754,7 @@ Metrics: {
 Input Data: She claimed she had stopped at a gas station where the men had asked for a ride
 
 Prediction:
-("entity"|GAS STATION|LOCATION|A where the stopped the had stopped after where the men had asked asked for for a ride)
+("entity"|GAS STATION|LOCATION|A where the stopped the stopped stopped after where the men had asked asked for for a ride)
 
 
 ("entity"|MEN|PERSON|Individuals who allegedly to her claim had asked her a ride at a gas station where she had stopped)
@@ -1847,7 +1844,7 @@ Metrics: {
 Input Data: On February 9, 2008, Garza drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo, Texas, on Interstate 35
 
 Prediction:
-("entity"|GARZA|PERSON|A who on February 9 2008 drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
+("entity"|GARZA|PERSON|An who on February 9 2008 drove an extended-cab Dodge pickup truck to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
 
 
 ("entity"|EXTENDED-CAB DODGE PICKUP TRUCK|MEANS_OF_TRANSPORTATION|Vehicle driven by Garza to February 9 2008 to the United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35)
@@ -1856,7 +1853,7 @@ Prediction:
 ("entity"|UNITORDER PATROL CHECKPOINT|LOCATION|United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 to Garza drove to on February 9 2008 in("entity"|LAREDO, TEXAS|LOCATION|City near Texas near near-nine miles south of the border patrol checkpoint on Interstate 35 that Garza visited to on February 9 2008)
 
 
-("entity"|INTERED STATES|LOCATION|Country whose the border patrol checkpoint is Garza drove to on February 9 2008 was located)
+("entity"|INTERED STATES|LOCATION|Country whose the border patrol checkpoint located Garza drove to on February 9 2008 was located)
 
 
 -nine miles north of Laredo Texas)
@@ -1880,7 +1877,7 @@ Prediction:
 ("relationship"|GARZA|INTERSTATE 35|Garza drove to Interstate 35 to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on February 9 2008|8)
 
 
-("relationship"|GARZA|UNITED STATES|Garza drove to a United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
+("relationship"|EXTARZA|UNITED STATES|Garza drove to a United States border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
 
 
 ("relationship"|EXTENDED-CAB DODGE PICKUP TRUCK|BORDER PATROL CHECKPOINT|Garza drove the extended-cab Dodge pickup truck to the border patrol checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35 on February 9 2008|9)
@@ -1901,7 +1898,7 @@ Prediction:
 ("relationship"|BORDER PATROL CHECKPOINT|INTERSTATE 35|The border patrol checkpoint is located on Interstate 35 twenty-nine miles north of Laredo Texas|9)
 
 
-("relationship"|BORDER PATROL CHECKPOINT|UNITED STATES|The border patrol checkpoint is a United States checkpoint located twenty-nine miles north of Laredo Texas on Interstate 35|9)
+("relationship"|BORDER PATROL CHECKPOINT|UNITED STATES|The border patrol checkpoint is a United States border located twenty-nine miles north of Laredo Texas on Interstate 35|9)
 
 
 ("relationship"|LAREDO, TEXAS|INTERSTATE 35|Laredo Texas is located twenty-nine miles south of the border patrol checkpoint on Interstate 35|9)
@@ -1987,13 +1984,13 @@ Metrics: {
   "entity_tp": 3,
   "entity_fp": 2,
   "entity_fn": 3,
-  "relationship_precision": 0.8,
-  "relationship_recall": 0.8,
-  "relationship_f1": 0.8000000000000002,
-  "relationship_tp": 12,
-  "relationship_fp": 3,
-  "relationship_fn": 3,
-  "relationship_score_mae": 0.3333333333333333,
+  "relationship_precision": 0.7333333333333333,
+  "relationship_recall": 0.7333333333333333,
+  "relationship_f1": 0.7333333333333333,
+  "relationship_tp": 11,
+  "relationship_fp": 4,
+  "relationship_fn": 4,
+  "relationship_score_mae": 0.2727272727272727,
   "entity_PERSON_tp": 1,
   "entity_PERSON_fp": 0,
   "entity_PERSON_fn": 0,
@@ -2039,22 +2036,22 @@ Metrics: {
   "tp_entity_pairs": "('extended-cab dodge pickup truck', 'means_of_transportation'); ('garza', 'person'); ('interstate 35', 'routes')",
   "fp_entity_pairs": "('intered states', 'location'); ('unitorder patrol checkpoint', 'location')",
   "fn_entity_pairs": "('border patrol checkpoint', 'location'); ('laredo, texas', 'location'); ('united states', 'location')",
-  "tp_relation_pairs": "('border patrol checkpoint', 'extended-cab dodge pickup truck'); ('border patrol checkpoint', 'garza'); ('border patrol checkpoint', 'interstate 35'); ('border patrol checkpoint', 'laredo, texas'); ('border patrol checkpoint', 'united states'); ('extended-cab dodge pickup truck', 'garza'); ('garza', 'interstate 35'); ('garza', 'laredo, texas'); ('garza', 'united states'); ('interstate 35', 'laredo, texas'); ('interstate 35', 'united states'); ('laredo, texas', 'united states')",
-  "fp_relation_pairs": "('bended-cab dodge pickup truck', 'laredo, texas'); ('bended-cab dodge pickup truck', 'lstate 35'); ('bended-cab dodge pickup truck', 'united states')",
-  "fn_relation_pairs": "('extended-cab dodge pickup truck', 'interstate 35'); ('extended-cab dodge pickup truck', 'laredo, texas'); ('extended-cab dodge pickup truck', 'united states')"
+  "tp_relation_pairs": "('border patrol checkpoint', 'extended-cab dodge pickup truck'); ('border patrol checkpoint', 'garza'); ('border patrol checkpoint', 'interstate 35'); ('border patrol checkpoint', 'laredo, texas'); ('border patrol checkpoint', 'united states'); ('extended-cab dodge pickup truck', 'garza'); ('garza', 'interstate 35'); ('garza', 'laredo, texas'); ('interstate 35', 'laredo, texas'); ('interstate 35', 'united states'); ('laredo, texas', 'united states')",
+  "fp_relation_pairs": "('bended-cab dodge pickup truck', 'laredo, texas'); ('bended-cab dodge pickup truck', 'lstate 35'); ('bended-cab dodge pickup truck', 'united states'); ('extarza', 'united states')",
+  "fn_relation_pairs": "('extended-cab dodge pickup truck', 'interstate 35'); ('extended-cab dodge pickup truck', 'laredo, texas'); ('extended-cab dodge pickup truck', 'united states'); ('garza', 'united states')"
 }
 
 --- Sample 17 ---
 Input Data: He previously entered the United States approximately two years ago by walking from Juarez, Mexico, to El Paso, Texas
 
 Prediction:
-("entity"|MED STATES|LOCATION|Country that he entered entered approximately two years ago by an individual who walked from Juarez, to El Paso Texas)
+("entity"|MED STATES|LOCATION|Country that he entered entered approximately two years ago by individuals individual who walked from Juarez, to El Paso Texas)
 
 
 ("entity"|JUAREZ, MEXICO|LOCATION|Origin point of which an individual walked to El Paso Texas approximately enter the United States approximately two years ago)
 
 
-("entity"|EL PASO, TEXAS|LOCATION|Destination where the United States an which an individual walked from Juarez Mexico approximately two years ago)
+("entity"|EL PASO, TEXAS|LOCATION|Destination where the United States where which an individual walked from Juarez Mexico approximately two years ago)
 
 
 ("relationship"|JUAREZ, MEXICO|EL PASO, TEXAS|An individual walked walked from Juarez Mexico to El Paso Texas to enter the United States approximately two years ago|9)
@@ -2063,7 +2060,7 @@ Prediction:
 ("relationship"|JUAREZ, MEXICO|UNITED STATES|An individual previously entered the United States from walking from Juarez Mexico to El Paso Texas approximately two years ago|9)
 
 
-("relationship"|EL PASO, TEXAS|UNITED STATES|El Paso Texas is located in the United States and was the destination an an individual who walked from Juarez Mexico approximately two years ago|9)
+("relationship"|EL PASO, TEXAS|UNITED STATES|El Paso Texas is located in the United States and was the destination an the individual who walked from Juarez Mexico approximately two years ago|9)
 
 
 <END>
@@ -2156,7 +2153,7 @@ Metrics: {
 Input Data: Although the trip was supposed to take six hours, it ended up taking 36 hours because Pacheco got lost
 
 Prediction:
-("entity"|PACHECO|PERSON|An individual who got lost, a trip that)
+("entity"|PACHECO|PERSON|An individual who got lost, a trip,)
 
 
 ("END>
@@ -2246,7 +2243,7 @@ Prediction:
 
 ("relationship"|AGENTS|ILLEGAL ALIENS|The agents discovered eight illegal aliens in10) 
 
-("relationship"|MUNOZ-MARTINEZ|TRUCK|unoz-Martinez was the driver of the truck.|10) 
+("relationship"|MUNOZ-MARTINEZ|TRUCK|Munoz-Martinez was the driver of the truck.|10) 
 
 ("relationship"|MUNOZ-MARTINEZ|ILLEGAL ALIENS|Munoz-Martinez was the as one of the eight illegal aliens.|10) 
 
@@ -2357,7 +2354,7 @@ Prediction:
 ("relationship"|USBP|28 PEOPLE|U.S. Border Patrol agents assisted in the arrest of 28 people during two separate incursions along the California coastline|9)
 
 
-("relationship"|28 PEOPLE|CALIFORNIA COASTLINE|28 people were arrested during two separate incursions along the California coastline assisted9)
+("relationship"|28 PEOPLE|CALIFORNIA COASTLINE|28 people were arrested during two separate incursions along the California coastline with9)
 
 
 <END>
@@ -2465,7 +2462,7 @@ Prediction:
 ("entity"|OCEANSIDE|LOCATION|The coastal off-shore from which the United States Coast Guard intercepted a pleasure craft with nine people aboard in an apparent alien smuggling attempt)
 
 
-("relationship"|USBP AGENTS|UNITED STATES COAST GUARD|USCG)|USBP agents were notified that the United States Coast Guard had a pleasure craft in nine people aboard off-shore from Oceanside|9)
+("relationship"|USBP AGENTS|UNITED STATES COAST GUARD|USCG)|USBP agents were notified that the United States Coast Guard intercepted a pleasure craft in nine people aboard off-shore from Oceanside|9)
 
 
 ("relationship"|USBP AGENTS|PLEASURE CRAFT|USBP agents were notified that the interception craft intercepted by the United States Coast Guard off-shore from Oceanside|9)
@@ -2474,7 +2471,7 @@ Prediction:
 ("relationship"|USBP AGENTS|OINE PEOPLE|USBP agents were notified about the people aboard the pleasure craft intercepted off-shore from Oceanside|9)
 
 
-("relationship"|USBP AGENTS|OCEANSIDE|USBP agents were notified about the interception off a pleasure craft off-shore from Oceanside|9)
+("relationship"|USBP AGENTS|OCEANSIDE|USBP agents were notified about an interception off a pleasure craft off-shore from Oceanside|9)
 
 
 ("relationship"|UNITED STATES COAST GUARD (USCG)|PLEASURE CRAFT|The United States Coast Guard intercepted the pleasure craft with nine people aboard off-shore from Oceanside|9)
@@ -2615,10 +2612,10 @@ Prediction:
 ("entity"|ALIENS|PERSON|Individual of people involved of whom died as a result of an accident during an attempt to elude law enforcement)
 
 
-("entity"|ALIAW ENFORCEMENT|PERSONANIZATION|Authority that aliens was an attempt to elude during in an accident in which one of the aliens died)
+("entity"|ALIAW ENFORCEMENT|PERSONANIZATION|Authority that was was an attempt to elude during in an accident in which one of the aliens died)
 
 
-("entity"|ALIENS|LAW ENFORCEMENT|One of the aliens died as an accident during an attempt to elude law enforcement|8)
+("relationship"|ALIENS|LAW ENFORCEMENT|One of the aliens died as an accident during an attempt to elude law enforcement|9)
 
 
 <END>
@@ -2635,19 +2632,19 @@ Ground Truth:
 <END>
 Metrics: {
   "parsability_score": 1.0,
-  "entity_precision": 0.3333333333333333,
+  "entity_precision": 0.5,
   "entity_recall": 0.5,
-  "entity_f1": 0.4,
+  "entity_f1": 0.5,
   "entity_tp": 1,
-  "entity_fp": 2,
+  "entity_fp": 1,
   "entity_fn": 1,
-  "relationship_precision": 0.0,
-  "relationship_recall": 0.0,
-  "relationship_f1": 0.0,
-  "relationship_tp": 0,
+  "relationship_precision": 1.0,
+  "relationship_recall": 1.0,
+  "relationship_f1": 1.0,
+  "relationship_tp": 1,
   "relationship_fp": 0,
-  "relationship_fn": 1,
-  "relationship_score_mae": 0.0,
+  "relationship_fn": 0,
+  "relationship_score_mae": 1.0,
   "entity_PERSON_tp": 1,
   "entity_PERSON_fp": 0,
   "entity_PERSON_fn": 0,
@@ -2691,11 +2688,11 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
   "tp_entity_pairs": "('aliens', 'person')",
-  "fp_entity_pairs": "('aliaw enforcement', 'personanization'); ('aliens', 'law enforcement')",
+  "fp_entity_pairs": "('aliaw enforcement', 'personanization')",
   "fn_entity_pairs": "('law enforcement', 'organization')",
-  "tp_relation_pairs": "",
+  "tp_relation_pairs": "('aliens', 'law enforcement')",
   "fp_relation_pairs": "",
-  "fn_relation_pairs": "('aliens', 'law enforcement')"
+  "fn_relation_pairs": ""
 }
 
 --- Sample 23 ---
@@ -2705,10 +2702,10 @@ Prediction:
 ("entity"|JINT HAZOR OPERATIONS CENTER (JHOC)|ORGANIZATION|A law Harbor Operations Center that on December 19, 2019 at around 3:45 p.m. contacted AM and Marine Operations about a suspicious vessel off the coast of San Diego, California)
 
 
-("entity"|AIR AND MARINE OPERATIONS (AMO)|ORGANIZATION|Air and Marine Operations that on December 19, 2019 at contacted by J Joint Harbor Operations Center and a suspicious vessel off the coast of San Diego, California and quickly reached the area to intercept a 24-foot Bayliner pleasure craft)
+("entity"|AIR AND MARINE OPERATIONS (AMO)|ORGANIZATION|The and Marine Operations contacted on December 19, 2019 at contacted by J Joint Harbor Operations Center and a suspicious vessel off the coast of San Diego, California and quickly reached the area to intercept a 24-foot Bayliner pleasure craft)
 
 
-("entity"|S-FOOT BAYLINER PLEASURE CRAFT|MEANS_OF_TRANSPORTATION|A 24-foot Bayliner pleasure craft intercepted by Air and Marine Operations off the coast of San Diego, California after December 19, 2019 after J Joint Harbor Operations Center contacted it suspicious vessel to("entity"|SAN DIEGO, CALIFORNIA|LOCATION|The coastal area off which the suspicious vessel was reported by the Joint Harbor Operations Center to intercepted by Air and Marine Operations as December 19, 2019)
+("entity"|S-FOOT BAYLINER PLEASURE CRAFT|MEANS_OF_TRANSPORTATION|A 24-foot Bayliner pleasure craft intercepted by AM and Marine Operations off the coast of San Diego, California after December 19, 2019 after the Joint Harbor Operations Center contacted a suspicious vessel to("entity"|SAN DIEGO, CALIFORNIA|LOCATION|The coastal area off which the suspicious vessel was reported by the Joint Harbor Operations Center to intercepted by Air and Marine Operations as December 19, 2019)
 
 
 ("relationship"|SIFORNIA|LOCATION|The state whose San Diego is located and where whose coast a suspicious vessel was reported by the Joint Harbor Operations Center and intercepted by Air and Marine Operations on December 19, 2019)
@@ -2726,7 +2723,7 @@ Prediction:
 ("relationship"|JOINT HARBOR OPERATIONS CENTER (JHOC)|CALIFORNIA|The Joint Harbor Operations Center reported a suspicious vessel off the coast of California|9)
 
 
-("relationship"|AIR AND MARINE OPERATIONS (AMO)|24-FOOT BAYLINER PLEASURE CRAFT|Air and Marine Operations intercepted the 24-foot Bayliner pleasure craft reported the coast of San Diego, California|9)
+("relationship"|AIR AND MARINE OPERATIONS (AMO)|24-FOOT BAYLINER PLEASURE CRAFT|Air and Marine Operations intercepted the 24-foot Bayliner pleasure craft suspected the coast of San Diego, California|9)
 
 
 ("relationship"|AIR AND MARINE OPERATIONS (AMO)|SAN DIEGO, CALIFORNIA|Air and Marine Operations intercepted the suspicious off the coast of San Diego, California|9)
@@ -2864,13 +2861,13 @@ Prediction:
 ("entity"|MEXICAN NAVY|ORGANIZATION|The Mexican enforcement organization that interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
 
 
-("entity"|SPEEDBOAT|MEANS_OF_TRANSPORTATION|A speed thatdicted by the Mexican Navy on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
+("entity"|SPEEDBOAT|MEANS_OF_TRANSPORTATION|A speed interdicted by the Mexican Navy on the high seas about 600 nautical miles west of Isla Clarión, Mexico)
 
 
-("entity"|HIGH SEAS|LOCATION|The location on the high seas about 600 nautical miles west of Isla Clarión, Mexico where the Mexican Navy interdicted a speedboat)
+("entity"|I SEAS|LOCATION|The location on the high seas about 600 nautical miles west of Isla Clarión, Mexico where the Mexican Navy interdicted the speedboat)
 
 
-("entity"|ISLA CLARIÓN, MEXICO|LOCATION|A location in Mexico about 600 nautical miles east of where the Mexican Navy interdicted a speedboat on the high seas)
+("entity"|ISLA CLARIÓN, MEXICO|LOCATION|The location in Mexico about 600 nautical miles east of where the Mexican Navy interdicted a speedboat on the high seas)
 
 
 ("relationship"|MEXICAN NAVY|SPEEDBOAT|The Mexican Navy interdicted a speedboat on the high seas about 600 nautical miles west of Isla Clarión, Mexico|9)
@@ -2926,12 +2923,12 @@ Ground Truth:
 <END>
 Metrics: {
   "parsability_score": 1.0,
-  "entity_precision": 1.0,
-  "entity_recall": 1.0,
-  "entity_f1": 1.0,
-  "entity_tp": 4,
-  "entity_fp": 0,
-  "entity_fn": 0,
+  "entity_precision": 0.75,
+  "entity_recall": 0.75,
+  "entity_f1": 0.75,
+  "entity_tp": 3,
+  "entity_fp": 1,
+  "entity_fn": 1,
   "relationship_precision": 1.0,
   "relationship_recall": 1.0,
   "relationship_f1": 1.0,
@@ -2945,12 +2942,12 @@ Metrics: {
   "entity_PERSON_precision": 0.0,
   "entity_PERSON_recall": 0.0,
   "entity_PERSON_f1": 0.0,
-  "entity_LOCATION_tp": 2,
-  "entity_LOCATION_fp": 0,
-  "entity_LOCATION_fn": 0,
-  "entity_LOCATION_precision": 1.0,
-  "entity_LOCATION_recall": 1.0,
-  "entity_LOCATION_f1": 1.0,
+  "entity_LOCATION_tp": 1,
+  "entity_LOCATION_fp": 1,
+  "entity_LOCATION_fn": 1,
+  "entity_LOCATION_precision": 0.5,
+  "entity_LOCATION_recall": 0.5,
+  "entity_LOCATION_f1": 0.5,
   "entity_ORGANIZATION_tp": 1,
   "entity_ORGANIZATION_fp": 0,
   "entity_ORGANIZATION_fn": 0,
@@ -2981,9 +2978,9 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_precision": 0.0,
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "('high seas', 'location'); ('isla clari\u00f3n, mexico', 'location'); ('mexican navy', 'organization'); ('speedboat', 'means_of_transportation')",
-  "fp_entity_pairs": "",
-  "fn_entity_pairs": "",
+  "tp_entity_pairs": "('isla clari\u00f3n, mexico', 'location'); ('mexican navy', 'organization'); ('speedboat', 'means_of_transportation')",
+  "fp_entity_pairs": "('i seas', 'location')",
+  "fn_entity_pairs": "('high seas', 'location')",
   "tp_relation_pairs": "('high seas', 'isla clari\u00f3n, mexico'); ('high seas', 'mexican navy'); ('high seas', 'speedboat'); ('isla clari\u00f3n, mexico', 'mexican navy'); ('isla clari\u00f3n, mexico', 'speedboat'); ('mexican navy', 'speedboat')",
   "fp_relation_pairs": "",
   "fn_relation_pairs": ""
@@ -2999,7 +2996,7 @@ Prediction:
 ("entity"|TRUCK|MEANS_OF_TRANSPORTATION|The vehicle whose by by Durant in whose whose the trailer was 20 illegal aliens was attached)
 
 
-("entity"|20AILER|MEANS_OF_TRANSPORTATION|The trailer attached to the's truck, which 20 illegal aliens were discovered)
+("entity"|20AILER|MEANS_OF_TRANSPORTATION|The trailer attached to the's truck containing which 20 illegal aliens were discovered)
 
 
 ("entity"|20ENS|PERSON|A illegal aliens discovered in the trailer attached the's truck)
@@ -3008,7 +3005,7 @@ Prediction:
 ("relationship"|DURANT|TRUCK|Durant was the sole driver and occupant of the truck|9)
 
 
-("relationship"|DURANT|TRAILER|Durant was the sole occup and the truck to which the trailer was   was attached|9)
+("relationship"|DURANT|TRAILER|Durant was the sole occup and the truck to which the trailer containing   was attached|9)
 
 
 ("relationship"|DURANT|ALIENS|20ant was the sole occup and the truck in whose trailer the20 illegal aliens were discovered|9)
@@ -3020,7 +3017,7 @@ Prediction:
 ("relationship"|TRUCKER|ALIENS|20 illegal aliens were discovered in the trailer attached9)
 
 
-<relationship"|TRUCK|ALIENS|20 20 illegal aliens were discovered in the trailer attached Durant's truck|9)
+<relationship"|TRUCK|ALIENS|20 truck20 illegal aliens were discovered in the trailer attached Durant's truck|9)
 
 
 <END>
@@ -3137,10 +3134,10 @@ Prediction:
 ("entity"|UNITED STATES|LOCATION|Country country into which the Fu Mei Chen was smuggled by her by the defendant and others on a previous occasion)
 
 
-("entity"|CHINA|LOCATION|Countryeland of country of origin of Miss Fu Mei Chen who which the was smuggled into the United States by the defendant and others on a previous occasion)
+("entity"|CHINA|LOCATION|Countryeland of point of origin of Miss Fu Mei Chen who which the was smuggled into the United States by the defendant and others on a previous occasion)
 
 
-("relationship"|DEFENDANT|MISSS|The defendant and others were together responsible for smuggling Miss Fu Mei Chen into the United States from China on9)
+("relationship"|DEFENDANT|OTHERS|The defendant and others were together responsible for smuggling Miss Fu Mei Chen into the United States from China on9)
 
 
 ("relationship"|DEFENDANT|MISS FU MEI CHEN|The defendant was responsible for smuggling Miss Fu Mei Chen into the United States from China on a previous occasion|9)
@@ -3167,7 +3164,7 @@ Prediction:
 ("relationship"|MISS FU MEI CHEN|CHINA|Miss Fu Mei Chen was smuggled from her homeland in China into the United States by a previous occasion|9)
 
 
-("relationship"|UNITINA|UNITED STATES|Miss was the origin and and the United States was the destination country for Miss smuggling of Miss Fu Mei Chen on a previous occasion|9)
+("relationship"|UNITINA|UNITED STATES|Miss was the origin and and the United States was the destination country of the smuggling of Miss Fu Mei Chen on a previous occasion|9)
 
 
 <END>
@@ -3226,12 +3223,12 @@ Metrics: {
   "entity_tp": 4,
   "entity_fp": 1,
   "entity_fn": 1,
-  "relationship_precision": 0.7777777777777778,
-  "relationship_recall": 0.7,
-  "relationship_f1": 0.7368421052631577,
-  "relationship_tp": 7,
-  "relationship_fp": 2,
-  "relationship_fn": 3,
+  "relationship_precision": 0.8888888888888888,
+  "relationship_recall": 0.8,
+  "relationship_f1": 0.8421052631578948,
+  "relationship_tp": 8,
+  "relationship_fp": 1,
+  "relationship_fn": 2,
   "relationship_score_mae": 0.0,
   "entity_PERSON_tp": 2,
   "entity_PERSON_fp": 1,
@@ -3278,9 +3275,9 @@ Metrics: {
   "tp_entity_pairs": "('china', 'location'); ('defendant', 'person'); ('miss fu mei chen', 'person'); ('united states', 'location')",
   "fp_entity_pairs": "('misss', 'person')",
   "fn_entity_pairs": "('others', 'person')",
-  "tp_relation_pairs": "('china', 'defendant'); ('china', 'miss fu mei chen'); ('china', 'others'); ('defendant', 'united states'); ('miss fu mei chen', 'others'); ('miss fu mei chen', 'united states'); ('others', 'united states')",
-  "fp_relation_pairs": "('defendant', 'misss'); ('united states', 'unitina')",
-  "fn_relation_pairs": "('china', 'united states'); ('defendant', 'miss fu mei chen'); ('defendant', 'others')"
+  "tp_relation_pairs": "('china', 'defendant'); ('china', 'miss fu mei chen'); ('china', 'others'); ('defendant', 'others'); ('defendant', 'united states'); ('miss fu mei chen', 'others'); ('miss fu mei chen', 'united states'); ('others', 'united states')",
+  "fp_relation_pairs": "('united states', 'unitina')",
+  "fn_relation_pairs": "('china', 'united states'); ('defendant', 'miss fu mei chen')"
 }
 
 --- Sample 27 ---
@@ -3305,13 +3302,13 @@ Prediction:
 ("relationship"|ANTONIO HURTADO|32 MIGRANTS|Antonio Hurtado wasained the vessel vessel smuggling was smuggling 32 migrants in May 2021|9)
 
 
-("relationship"|ANTONIO HURTADO|THREE PEOPLE|Three people died on the doomed incident capt which Antonio Hurtado was the boat captain|9)
+("relationship"|ANTONIO HURTADO|THREE PEOPLE|Three people died on the doomed incident capt May Antonio Hurtado was the boat captain|9)
 
 
 ("relationship"|DOOMED VESSEL|32 MIGRANTS|The doomed vessel capt smuggling 32 migrants in May 2021 wherein9)
 
 
-("relationship"|DOOMED VESSEL|THREE PEOPLE|Three people died during the doomed vessel's incident in May 2021|9)
+("relationship"|DOOMED VESSEL|THREE PEOPLE|Three people died during the smuggling vessel's incident in May 2021|9)
 
 
 ("relationship"|32 MIGRANTS|THREE PEOPLE|Three people the 32 migrants on smuggled on the doomed vessel died in May incident 2021 incident|9)
@@ -3419,10 +3416,7 @@ Metrics: {
 Input Data: According to the complaint, Chelliah is alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States.
 
 Prediction:
-("entity"|CHLLIAH|PERSON|Individual individual alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
-
-
-("entity"|ALIENS|PERSON|Individualen whose travel facilitelliah was facilitated to facilitate from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
+("entity"|CHLLIAH|PERSON|Individual individual alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States,("entity"|ALIENS|PERSON|Individualen alleged travel facilitelliah was facilitated to facilitate from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
 
 
 ("entity"|SRI LANKA|LOCATION|The origin of origin from the aliens whose travel Chelliah allegedly facilitated to facilitate)
@@ -3431,7 +3425,7 @@ Prediction:
  multiple, Turks and Caicos Islands, and the Bahamas to the United States)
 
 
-("entity"|HAITI|LOCATION|A transit point through which Chelliah allegedly facilitated to facilitate the travel of aliens from Sri Lanka to the United States)
+("entity"|HAITI|LOCATION|A transit point through which Chelliah allegedly facilitated to facilitate the travel of aliens on Sri Lanka to the United States)
 
 
 ("entity"|TURKS AND CAICOS ISLANDS|LOCATION|A transit location through which Chelliah allegedly attempted to facilitate the travel of aliens from Sri Lanka to the United States)
@@ -3461,7 +3455,7 @@ Prediction:
 ("relationship"|CHELLIAH|UNITED STATES|Chelliah allegedly facilitated the travel of aliens to the United States|9)
 
 
-("relationship"|ALIENS|SRI LANKA|The aliens whose travel waselliah allegedly facilitated originated from Sri Lanka|9)
+("relationship"|ALIENS|SRI LANKA|The aliens moved travel waselliah allegedly facilitated originated from Sri Lanka|9)
 
 
 ("relationship"|ALIENS|HAITI|The aliens whose allegedly through Haiti by9)
@@ -3476,7 +3470,7 @@ Prediction:
 ("relationship"|ALIENS|UNITED STATES|The aliens were facilitated facilitated to the United States|9)
 
 
-("relationship"|SRI LANKA|HAITI|Haiti was a transit location on the route route from Sri Lanka to the United States|9)
+("relationship"|SRI LANKA|HAITI|Haiti was a transit location on the alien route from Sri Lanka to the United States|9)
 
 
 ("relationship"|SRI LANKA|TURKS AND CAICOS ISLANDS|Turks and Caicos Islands was a transit point on the smuggling route from Sri Lanka to the United States|9)
@@ -3485,7 +3479,7 @@ Prediction:
 ("relationship"|SRI LANKA|THE BAHAMAS|The Bahamas was a transit point on the smuggling route from Sri Lanka to the United States|9)
 
 
-("relationship"|SRI LANKA|UNITED STATES|The smuggling route ran from Sri Lanka to the United States|9)
+("relationship"|SRI LANKA|UNITED STATES|The United route ran from Sri Lanka to the United States|9)
 
 
 ("relationship"|HAITI|TURKS AND CAICOS ISLANDS|Bothaiti and Turks and Caicos Islands are both transit points on the same smuggling route|9)
@@ -3506,7 +3500,7 @@ Prediction:
 ("relationship"|THE BAHAMAS|UNITED STATES|The Bahamas was a transit point on the smuggling route to the United States|9)
 
 
-("END>
+<END>
 Ground Truth:
 ("entity"|CHELLIAH|PERSON|An individual alleged to have attempted to facilitate the travel of aliens from Sri Lanka through Haiti, Turks and Caicos Islands, and the Bahamas to the United States)
 
@@ -3595,12 +3589,12 @@ Ground Truth:
 <END>
 Metrics: {
   "parsability_score": 1.0,
-  "entity_precision": 0.7142857142857143,
-  "entity_recall": 0.7142857142857143,
-  "entity_f1": 0.7142857142857143,
-  "entity_tp": 5,
+  "entity_precision": 0.6666666666666666,
+  "entity_recall": 0.5714285714285714,
+  "entity_f1": 0.6153846153846153,
+  "entity_tp": 4,
   "entity_fp": 2,
-  "entity_fn": 2,
+  "entity_fn": 3,
   "relationship_precision": 1.0,
   "relationship_recall": 0.9047619047619048,
   "relationship_f1": 0.9500000000000001,
@@ -3608,12 +3602,12 @@ Metrics: {
   "relationship_fp": 0,
   "relationship_fn": 2,
   "relationship_score_mae": 0.0,
-  "entity_PERSON_tp": 1,
+  "entity_PERSON_tp": 0,
   "entity_PERSON_fp": 1,
-  "entity_PERSON_fn": 1,
-  "entity_PERSON_precision": 0.5,
-  "entity_PERSON_recall": 0.5,
-  "entity_PERSON_f1": 0.5,
+  "entity_PERSON_fn": 2,
+  "entity_PERSON_precision": 0.0,
+  "entity_PERSON_recall": 0.0,
+  "entity_PERSON_f1": 0.0,
   "entity_LOCATION_tp": 4,
   "entity_LOCATION_fp": 1,
   "entity_LOCATION_fn": 1,
@@ -3650,9 +3644,9 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_precision": 0.0,
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "('aliens', 'person'); ('haiti', 'location'); ('sri lanka', 'location'); ('turks and caicos islands', 'location'); ('united states', 'location')",
+  "tp_entity_pairs": "('haiti', 'location'); ('sri lanka', 'location'); ('turks and caicos islands', 'location'); ('united states', 'location')",
   "fp_entity_pairs": "('b bahamas', 'location'); ('chlliah', 'person')",
-  "fn_entity_pairs": "('chelliah', 'person'); ('the bahamas', 'location')",
+  "fn_entity_pairs": "('aliens', 'person'); ('chelliah', 'person'); ('the bahamas', 'location')",
   "tp_relation_pairs": "('aliens', 'chelliah'); ('aliens', 'haiti'); ('aliens', 'sri lanka'); ('aliens', 'the bahamas'); ('aliens', 'united states'); ('chelliah', 'sri lanka'); ('chelliah', 'the bahamas'); ('chelliah', 'turks and caicos islands'); ('chelliah', 'united states'); ('haiti', 'sri lanka'); ('haiti', 'the bahamas'); ('haiti', 'turks and caicos islands'); ('haiti', 'united states'); ('sri lanka', 'the bahamas'); ('sri lanka', 'turks and caicos islands'); ('sri lanka', 'united states'); ('the bahamas', 'turks and caicos islands'); ('the bahamas', 'united states'); ('turks and caicos islands', 'united states')",
   "fp_relation_pairs": "",
   "fn_relation_pairs": "('aliens', 'turks and caicos islands'); ('chelliah', 'haiti')"
@@ -3677,7 +3671,7 @@ Prediction:
 ("entity"|BORDER PATROL CHECKPOINT|LOCATION|Checkpoint near Laredo that Jesus Pacheco-Pina led the group of illegal aliens through the South Texas brush to avoid as they moved farther north into the United States)
 
 
-("entity"|LAREDO|LOCATION|Location near the Texas near the Jesus Border Patrol checkpoint was located that Jesus Pacheco-Pina led a group of illegal aliens through the South to avoid as("entity"|UNITED STATES|LOCATION|Country into which Jesus group of illegal aliens led by Jesus Pacheco-Pina through moving farther north having passing a Border Patrol checkpoint near Laredo)
+("entity"|LAREDO|LOCATION|Location near the Texas near the Jesus Border Patrol checkpoint was located that Jesus Pacheco-Pina led a group of illegal aliens through the South to avoid as("entity"|UNITED STATES|LOCATION|Country into which Jesus group of illegal aliens led by Jesus Pacheco-Pina through moving farther north having avoiding a Border Patrol checkpoint near Laredo)
 
 
 ("relationship"|CHAPA|JESUS PACHECO-PINA|Jesus Pacheco-Pina was Chapa's co-defendant who led a group of illegal aliens through the South Texas brush to avoid a Border Patrol checkpoint near Laredo|9)
@@ -3695,13 +3689,13 @@ Prediction:
 ("relationship"|JESUS PACHECO-PINA|LAREDO|Jesus Pacheco-Pina led a group of illegal aliens through the South Texas brush to avoid the Border Patrol checkpoint near Laredo|9)
 
 
-("relationship"|JESUS PACHECO-PINA|UNITED STATES|Jesus Pacheco-Pina led the group of illegal aliens moving north into the United States by avoiding the Border Patrol checkpoint near Laredo|7)
+("relationship"|JESUS PACHECO-PINA|UNITED STATES|Jesus Pacheco-Pina led the group of illegal aliens moving north into the United States while avoiding the Border Patrol checkpoint near Laredo|7)
 
 
 ("relationship"|ILLEGAL ALIENS|SOUTH TEXAS|The group aliens were led through the South Texas brush by Jesus Pacheco-Pina to avoid a Border Patrol checkpoint near Laredo|9)
 
 
-("relationship"|ILLEGAL ALIENS|BORDER PATROL CHECKPOINT|The illegal aliens were led through the brush Texas brush by Jesus Pacheco-Pina to avoid the Border Patrol checkpoint near Laredo|8)
+("relationship"|ILLEGAL ALIENS|BORDER PATROL CHECKPOINT|The illegal aliens were led through the South Texas brush by Jesus Pacheco-Pina to avoid the Border Patrol checkpoint near Laredo|8)
 
 
 ("relationship"|ILLEGAL ALIENS|LAREDO|The illegal aliens were led through the South Texas brush by avoid the Border Patrol checkpoint near Laredo by Jesus Pacheco-Pina|8)
@@ -3710,19 +3704,19 @@ Prediction:
 ("relationship"|ILLEGAL ALIENS|UNITED STATES|The illegal aliens were being farther north into the United States having being led through the South Texas brush by avoid the Border Patrol checkpoint near Laredo|8)
 
 
-("relationship"|SOUTH TEXAS|BORDER PATROL CHECKPOINT|The Border Patrol checkpoint near Laredo was avoided in an Texas and whose brush the Pacheco-Pina led the illegal aliens| avoid it|8)
+("relationship"|BOUTH TEXAS|BORDER PATROL CHECKPOINT|The Border Patrol checkpoint near Laredo was avoided in an Texas and whose brush the Pacheco-Pina led the illegal aliens| avoid||8)
 
 
-("relationship"|SOUTH TEXAS|LAREDO|Thearedo is located city in South Texas where which the Border Patrol checkpoint was located that7)
+("relationship"|BOUTH TEXAS|LAREDO|Thearedo is a city in South Texas where which the Border Patrol checkpoint was located that7)
 
 
-("relationship"|BOUTH TEXAS|UNITED STATES|The Texas is the region within the United States through whose brush Jesus Pacheco-Pina led the aliens| avoid a checkpoint Patrol checkpoint| Laredo|7)
+("relationship"|BOUTH TEXAS|UNITED STATES|The Texas is the region within the United States where whose brush Jesus Pacheco-Pina led the aliens| avoid a checkpoint Patrol checkpoint| Laredo|7)
 
 
 ("relationship"|BORDER PATROL CHECKPOINT|LAREDO|The Border Patrol checkpoint is located near Laredo in was avoided by Jesus illegal of illegal aliens led through Jesus Pacheco-Pina| the South Texas brush|9)
 
 
-("relationship"|BORDER PATROL CHECKPOINT|UNITED STATES|The Border Patrol checkpoint was Laredo was part point States checkpoint that the illegal of illegal aliens avoided by Jesus Pacheco-Pina avoided the South Texas brush avoided to avoid|7)
+("relationship"|BORDER PATROL CHECKPOINT|UNITED STATES|The Border Patrol checkpoint was Laredo was located checkpoint States checkpoint that the illegal of illegal aliens avoided by Jesus Pacheco-Pina avoided the South Texas brush avoided to avoid|7)
 
 
 ("relationship"|LAREDO|UNITED STATES|Laredo is a city located the United States near which the Border Patrol checkpoint was located that the Pacheco-Pina led the illegal aliens through avoid by8)
@@ -3808,13 +3802,13 @@ Metrics: {
   "entity_tp": 6,
   "entity_fp": 0,
   "entity_fn": 1,
-  "relationship_precision": 1.0,
-  "relationship_recall": 0.875,
-  "relationship_f1": 0.9333333333333333,
-  "relationship_tp": 14,
-  "relationship_fp": 0,
-  "relationship_fn": 2,
-  "relationship_score_mae": 0.6428571428571429,
+  "relationship_precision": 0.8571428571428571,
+  "relationship_recall": 0.75,
+  "relationship_f1": 0.7999999999999999,
+  "relationship_tp": 12,
+  "relationship_fp": 2,
+  "relationship_fn": 4,
+  "relationship_score_mae": 0.6666666666666666,
   "entity_PERSON_tp": 3,
   "entity_PERSON_fp": 0,
   "entity_PERSON_fn": 0,
@@ -3860,9 +3854,9 @@ Metrics: {
   "tp_entity_pairs": "('border patrol checkpoint', 'location'); ('chapa', 'person'); ('illegal aliens', 'person'); ('jesus pacheco-pina', 'person'); ('laredo', 'location'); ('south texas', 'location')",
   "fp_entity_pairs": "",
   "fn_entity_pairs": "('united states', 'location')",
-  "tp_relation_pairs": "('border patrol checkpoint', 'illegal aliens'); ('border patrol checkpoint', 'jesus pacheco-pina'); ('border patrol checkpoint', 'laredo'); ('border patrol checkpoint', 'south texas'); ('border patrol checkpoint', 'united states'); ('chapa', 'jesus pacheco-pina'); ('illegal aliens', 'jesus pacheco-pina'); ('illegal aliens', 'laredo'); ('illegal aliens', 'south texas'); ('illegal aliens', 'united states'); ('jesus pacheco-pina', 'laredo'); ('jesus pacheco-pina', 'south texas'); ('jesus pacheco-pina', 'united states'); ('laredo', 'south texas')",
-  "fp_relation_pairs": "",
-  "fn_relation_pairs": "('laredo', 'united states'); ('south texas', 'united states')"
+  "tp_relation_pairs": "('border patrol checkpoint', 'illegal aliens'); ('border patrol checkpoint', 'jesus pacheco-pina'); ('border patrol checkpoint', 'laredo'); ('border patrol checkpoint', 'united states'); ('chapa', 'jesus pacheco-pina'); ('illegal aliens', 'jesus pacheco-pina'); ('illegal aliens', 'laredo'); ('illegal aliens', 'south texas'); ('illegal aliens', 'united states'); ('jesus pacheco-pina', 'laredo'); ('jesus pacheco-pina', 'south texas'); ('jesus pacheco-pina', 'united states')",
+  "fp_relation_pairs": "('border patrol checkpoint', 'bouth texas'); ('bouth texas', 'laredo')",
+  "fn_relation_pairs": "('border patrol checkpoint', 'south texas'); ('laredo', 'south texas'); ('laredo', 'united states'); ('south texas', 'united states')"
 }
 
 --- Sample 30 ---
@@ -3875,16 +3869,13 @@ Prediction:
 ("entity"|HOMELAND SECURITY INVESTIGATIONS|ORGANIZATION|Hom investigative that on August 24 in with conjunction with U.S. Border Patrol agents, the Marine Task Force, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
 
 
-("entity"|MARINE TASK FORCE|ORGANIZATION|A investigative that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
+("entity"|MARINE TASK FORCE (ORGANIZATION|A organization that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and Air and Marine Operations to arrest 14 individuals connected to a maritime smuggling event)
 
 
 ("entity"|AIR AND MARINE OPERATIONS|ORGANIZATION|An agency that on August 24 worked in conjunction with U.S. Border Patrol agents, Homeland Security Investigations, and the Marine Task Force to arrest 14 individuals connected to a maritime smuggling event)
 
 
-("entity"|14 INDIVIDUALS|PERSON|14 individuals arrested on August 24 by conjunction with a maritime smuggling event)
-
-
- U.S. Border Patrol agents and conjunction with Homeland Security Investigations, the Marine Task Force, and Air and Marine Operations)
+("entity"|14 INDIVIDUALS|PERSON|14 individuals arrested on August 24 by conjunction with a maritime smuggling event following U.S. Border Patrol agents and conjunction with Homeland Security Investigations, the Marine Task Force, and Air and Marine Operations)
 
 
 ("relationship"|U.S. BORDER PATROL AGENTS|HOMELAND SECURITY INVESTIGATIONS|U.S. Border Patrol agents worked in conjunction with Homeland Security Investigations to arrest 14 individuals connected to a maritime smuggling event|9)
@@ -3967,12 +3958,12 @@ Ground Truth:
 <END>
 Metrics: {
   "parsability_score": 1.0,
-  "entity_precision": 0.8,
-  "entity_recall": 0.8,
-  "entity_f1": 0.8000000000000002,
-  "entity_tp": 4,
-  "entity_fp": 1,
-  "entity_fn": 1,
+  "entity_precision": 0.5,
+  "entity_recall": 0.4,
+  "entity_f1": 0.4444444444444445,
+  "entity_tp": 2,
+  "entity_fp": 2,
+  "entity_fn": 3,
   "relationship_precision": 1.0,
   "relationship_recall": 1.0,
   "relationship_f1": 1.0,
@@ -3992,12 +3983,12 @@ Metrics: {
   "entity_LOCATION_precision": 0.0,
   "entity_LOCATION_recall": 0.0,
   "entity_LOCATION_f1": 0.0,
-  "entity_ORGANIZATION_tp": 3,
+  "entity_ORGANIZATION_tp": 1,
   "entity_ORGANIZATION_fp": 0,
-  "entity_ORGANIZATION_fn": 0,
+  "entity_ORGANIZATION_fn": 2,
   "entity_ORGANIZATION_precision": 1.0,
-  "entity_ORGANIZATION_recall": 1.0,
-  "entity_ORGANIZATION_f1": 1.0,
+  "entity_ORGANIZATION_recall": 0.3333333333333333,
+  "entity_ORGANIZATION_f1": 0.5,
   "entity_MEANS_OF_TRANSPORTATION_tp": 0,
   "entity_MEANS_OF_TRANSPORTATION_fp": 0,
   "entity_MEANS_OF_TRANSPORTATION_fn": 0,
@@ -4022,9 +4013,9 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_precision": 0.0,
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "('14 individuals', 'person'); ('air and marine operations', 'organization'); ('homeland security investigations', 'organization'); ('marine task force', 'organization')",
-  "fp_entity_pairs": "('u.s. border patrol', 'ents')",
-  "fn_entity_pairs": "('u.s. border patrol agents', 'person')",
+  "tp_entity_pairs": "('14 individuals', 'person'); ('homeland security investigations', 'organization')",
+  "fp_entity_pairs": "('marine task force (organization', 'a organization that on august 24 worked in conjunction with u.s. border patrol agents, homeland security investigations, and air and marine operations to arrest 14 individuals connected to a maritime smuggling event)\n\n\n(\"entity\"'); ('u.s. border patrol', 'ents')",
+  "fn_entity_pairs": "('air and marine operations', 'organization'); ('marine task force', 'organization'); ('u.s. border patrol agents', 'person')",
   "tp_relation_pairs": "('14 individuals', 'air and marine operations'); ('14 individuals', 'homeland security investigations'); ('14 individuals', 'marine task force'); ('14 individuals', 'u.s. border patrol agents'); ('air and marine operations', 'homeland security investigations'); ('air and marine operations', 'marine task force'); ('air and marine operations', 'u.s. border patrol agents'); ('homeland security investigations', 'marine task force'); ('homeland security investigations', 'u.s. border patrol agents'); ('marine task force', 'u.s. border patrol agents')",
   "fp_relation_pairs": "",
   "fn_relation_pairs": ""
@@ -4037,7 +4028,7 @@ Prediction:
 ("entity"|TWO MEN|PERSON|Two men found aboard a boat facing facing charges for alien smuggling)
 
 
-("entity"|BOAT|MEANS_OF_TRANSPORTATION|Theessel aboard which the men were found and subsequently in alien smuggling)
+("entity"|BOAT|MEANS_OF_TRANSPORTATION|Theessel aboard which the men were found and charged in alien smuggling)
 
 
 ("entity"|TWO MEN|BOAT|The two men were found aboard the boat involved in alien smuggling|9)
@@ -4134,7 +4125,7 @@ Prediction:
 
 ("entity"|UNITED STATES|LOCATION|The country into illegal immigrants were smuggled into.) 
 
-("relationship"|ILLEGAL IMMIGRANTS|SMUGGLERS|The illegal immigrants or their friends, or their relatives paid the smugglers to sneak the into the United States.|10) 
+("relationship"|ILLEGAL IMMIGRANTS|SMUGGLERS|The illegal immigrants or their friends, or their relatives paid the smugglers to sneak them into the United States.|10) 
 
 ("relationship"|FRIENDS|ILUGGLERS|The friends of the immigrants may have paid the smugglers.| sneak them into the United States.|8) 
 
@@ -4232,7 +4223,7 @@ Metrics: {
 Input Data: three loaded handguns were found in the toilet tank
 
 Prediction:
-("entity"|LOGUNS|SMUGGLED_ITEMS|Three loaded handguns found in the toilet tank)
+("entity"|HANDGUNS|SMUGGLED_ITEMS|Three loaded handguns found in the toilet tank)
 
 
  
@@ -4243,12 +4234,12 @@ Ground Truth:
 <END>
 Metrics: {
   "parsability_score": 1.0,
-  "entity_precision": 0.0,
-  "entity_recall": 0.0,
-  "entity_f1": 0.0,
-  "entity_tp": 0,
-  "entity_fp": 1,
-  "entity_fn": 1,
+  "entity_precision": 1.0,
+  "entity_recall": 1.0,
+  "entity_f1": 1.0,
+  "entity_tp": 1,
+  "entity_fp": 0,
+  "entity_fn": 0,
   "relationship_precision": 0.0,
   "relationship_recall": 0.0,
   "relationship_f1": 0.0,
@@ -4292,15 +4283,15 @@ Metrics: {
   "entity_ROUTES_precision": 0.0,
   "entity_ROUTES_recall": 0.0,
   "entity_ROUTES_f1": 0.0,
-  "entity_SMUGGLED_ITEMS_tp": 0,
-  "entity_SMUGGLED_ITEMS_fp": 1,
-  "entity_SMUGGLED_ITEMS_fn": 1,
-  "entity_SMUGGLED_ITEMS_precision": 0.0,
-  "entity_SMUGGLED_ITEMS_recall": 0.0,
-  "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "",
-  "fp_entity_pairs": "('loguns', 'smuggled_items')",
-  "fn_entity_pairs": "('handguns', 'smuggled_items')",
+  "entity_SMUGGLED_ITEMS_tp": 1,
+  "entity_SMUGGLED_ITEMS_fp": 0,
+  "entity_SMUGGLED_ITEMS_fn": 0,
+  "entity_SMUGGLED_ITEMS_precision": 1.0,
+  "entity_SMUGGLED_ITEMS_recall": 1.0,
+  "entity_SMUGGLED_ITEMS_f1": 1.0,
+  "tp_entity_pairs": "('handguns', 'smuggled_items')",
+  "fp_entity_pairs": "",
+  "fn_entity_pairs": "",
   "tp_relation_pairs": "",
   "fp_relation_pairs": "",
   "fn_relation_pairs": ""
@@ -4412,13 +4403,13 @@ Metrics: {
 Input Data: Homero Zamorano, Jr., participated in a human smuggling organization illegally bringing adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States
 
 Prediction:
-("entity"|HOMERO ZAMORANO, JR.|PERSON|Individual who participated in a human smuggling organization illegally bringing adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States)
+("entity"|HOMERO ZAMORANO, JR.|PERSON|Individual who participated in a human smuggling organization)
 
 
-("entity"|HUMAN SMUGGLING ORGANIZATION|ORGANIZATION|C that Hom brought adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States in("entity"|ADULTS|PERSON|Groups who brought into Guatemala, Honduras, El Salvador, and Mexico into the United States by Hom human smuggling organization)
+ bringing adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States)
 
 
-("entity"|CHILDREN|PERSON|Children illegally brought from Guatemala, Honduras, El Salvador, and Mexico into the United States by the human smuggling organization)
+("entity"|HUMAN SMUGGLING ORGANIZATION|ORGANIZATION|C that Hom brought adults and children from Guatemala, Honduras, El Salvador, and Mexico into the United States in("entity"|ADULTS|PERSON|Individuals who brought into Guatemala, Honduras, El Salvador, and Mexico into the United States by Hom human smuggling organization participated("entity"|CHILDREN|PERSON|Children illegally brought from Guatemala, Honduras, El Salvador, and Mexico into the United States by the human smuggling organization)
 
 
 ("entity"|GUATEMALA|LOCATION|Country from origin from which the and children were illegally broughtled into the United States)
@@ -4439,7 +4430,7 @@ Prediction:
 ("relationship"|HOMERO ZAMORANO, JR.|HUMAN SMUGGLING ORGANIZATION|Homero Zamorano, Jr. participated in the human smuggling organization that9)
 
 
-("relationship"|HOMERO ZAMORANO, JR.|ADULTS|Homero Zamorano, Jr. participated in illegally smuggling smuggling of adults| the United States|9)
+("relationship"|HOMERO ZAMORANO, JR.|ADULTS|Homero Zamorano, Jr. was in illegally smuggling smuggling of adults| the United States|9)
 
 
 ("relationship"|HOMERO ZAMORANO, JR.|CHILDREN|Homero Zamorano, Jr. participated in the illegal transportation of children into the United States|9)
@@ -4493,7 +4484,7 @@ Prediction:
 ("relationship"|ADULTS|MEXICO|The smuggled adults originated from Mexico|9)
 
 
-("relationship"|ADULTS|UNITED STATES|The smuggled adults were brought brought into the United States|9)
+("relationship"|ADULTS|UNITED STATES|The smuggled adults were illegally brought into the United States|9)
 
 
 ("relationship"|CHILDREN|GUATEMALA|The smuggled children originated from Guatemala|9)
@@ -4619,11 +4610,11 @@ Ground Truth:
 Metrics: {
   "parsability_score": 1.0,
   "entity_precision": 1.0,
-  "entity_recall": 0.8888888888888888,
-  "entity_f1": 0.9411764705882353,
-  "entity_tp": 8,
+  "entity_recall": 0.7777777777777778,
+  "entity_f1": 0.8750000000000001,
+  "entity_tp": 7,
   "entity_fp": 0,
-  "entity_fn": 1,
+  "entity_fn": 2,
   "relationship_precision": 0.9166666666666666,
   "relationship_recall": 0.88,
   "relationship_f1": 0.8979591836734694,
@@ -4631,12 +4622,12 @@ Metrics: {
   "relationship_fp": 2,
   "relationship_fn": 3,
   "relationship_score_mae": 0.0,
-  "entity_PERSON_tp": 2,
+  "entity_PERSON_tp": 1,
   "entity_PERSON_fp": 0,
-  "entity_PERSON_fn": 1,
+  "entity_PERSON_fn": 2,
   "entity_PERSON_precision": 1.0,
-  "entity_PERSON_recall": 0.6666666666666666,
-  "entity_PERSON_f1": 0.8,
+  "entity_PERSON_recall": 0.3333333333333333,
+  "entity_PERSON_f1": 0.5,
   "entity_LOCATION_tp": 5,
   "entity_LOCATION_fp": 0,
   "entity_LOCATION_fn": 0,
@@ -4673,9 +4664,9 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_precision": 0.0,
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "('children', 'person'); ('el salvador', 'location'); ('guatemala', 'location'); ('homero zamorano, jr.', 'person'); ('honduras', 'location'); ('human smuggling organization', 'organization'); ('mexico', 'location'); ('united states', 'location')",
+  "tp_entity_pairs": "('el salvador', 'location'); ('guatemala', 'location'); ('homero zamorano, jr.', 'person'); ('honduras', 'location'); ('human smuggling organization', 'organization'); ('mexico', 'location'); ('united states', 'location')",
   "fp_entity_pairs": "",
-  "fn_entity_pairs": "('adults', 'person')",
+  "fn_entity_pairs": "('adults', 'person'); ('children', 'person')",
   "tp_relation_pairs": "('adults', 'el salvador'); ('adults', 'honduras'); ('adults', 'human smuggling organization'); ('adults', 'mexico'); ('adults', 'united states'); ('children', 'el salvador'); ('children', 'guatemala'); ('children', 'homero zamorano, jr.'); ('children', 'honduras'); ('children', 'human smuggling organization'); ('children', 'mexico'); ('children', 'united states'); ('el salvador', 'homero zamorano, jr.'); ('el salvador', 'human smuggling organization'); ('guatemala', 'human smuggling organization'); ('homero zamorano, jr.', 'honduras'); ('homero zamorano, jr.', 'human smuggling organization'); ('homero zamorano, jr.', 'mexico'); ('homero zamorano, jr.', 'united states'); ('honduras', 'human smuggling organization'); ('human smuggling organization', 'mexico'); ('human smuggling organization', 'united states')",
   "fp_relation_pairs": "('adults', 'childatemala'); ('homero zamorano, jr.', 'unitatemala')",
   "fn_relation_pairs": "('adults', 'guatemala'); ('adults', 'homero zamorano, jr.'); ('guatemala', 'homero zamorano, jr.')"
@@ -4685,7 +4676,7 @@ Metrics: {
 Input Data: With the exception of Mr. Mejia-Morales, who is Guatemalan, they are all from El Salvador
 
 Prediction:
-("entity"|MR. MEJIA-MORALES|PERSON|Individual individual who is Guatemalan, With("entity"|INDATEMALA|LOCATION|The country of origin of Mr. Mejia-Morales.)
+("entity"|MR. MEJIA-MORALES|PERSON|Individual individual who is Guatemalan. With("entity"|INDATEMALA|LOCATION|The country of origin of Mr. Mejia-Morales.)
 
 
 ("entity"|EL SALVADOR|LOCATION|The country of origin of all group of the individuals.)
@@ -4778,17 +4769,17 @@ Metrics: {
 Input Data: He traveled with that person from Houston to South Texas in a stolen Chevy Tahoe
 
 Prediction:
-("entity"|CHEUSTON|LOCATION|City starting point of the trip route which to South Texas in 
+("entity"|STUSTON|LOCATION|City starting point of the trip route where to South Texas in 
 
 ("entity"|SOUTH TEXAS|LOCATION|The destination of the travel from Houston.) 
 
 ("entity"|STOLEN CHEVY TAHOE|MEANS_OF_TRANSPORTATION|The vehicle used for travel from Houston to South Texas.) 
 
-("relationship"|HOOLEN CHEVY TAHOE|HOUSTON|The stolen Chevy Tahoe was the to travel from Houston.|10) 
+("relationship"|STOLEN CHEVY TAHOE|HOUSTON|The stolen Chevy Tahoe was the to travel from Houston.|10) 
 
 ("relationship"|STOLEN CHEVY TAHOE|SOUTH TEXAS|The stolen Chevy Tahoe was used to travel to South Texas.|10) 
 
-<relationship"|HOUSTON|SOUTH TEXAS|He person took from Houston to South Texas.|10) 
+<relationship"|PERSONUSTON|SOUTH TEXAS|He person took from Houston to South Texas.|10) 
 
 <END>
 Ground Truth:
@@ -4813,12 +4804,12 @@ Metrics: {
   "entity_tp": 1,
   "entity_fp": 1,
   "entity_fn": 2,
-  "relationship_precision": 0.5,
-  "relationship_recall": 0.3333333333333333,
-  "relationship_f1": 0.4,
-  "relationship_tp": 1,
-  "relationship_fp": 1,
-  "relationship_fn": 2,
+  "relationship_precision": 1.0,
+  "relationship_recall": 0.6666666666666666,
+  "relationship_f1": 0.8,
+  "relationship_tp": 2,
+  "relationship_fp": 0,
+  "relationship_fn": 1,
   "relationship_score_mae": 0.0,
   "entity_PERSON_tp": 0,
   "entity_PERSON_fp": 0,
@@ -4863,21 +4854,21 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
   "tp_entity_pairs": "('stolen chevy tahoe', 'means_of_transportation')",
-  "fp_entity_pairs": "('cheuston', 'location')",
+  "fp_entity_pairs": "('stuston', 'location')",
   "fn_entity_pairs": "('houston', 'location'); ('south texas', 'location')",
-  "tp_relation_pairs": "('south texas', 'stolen chevy tahoe')",
-  "fp_relation_pairs": "('hoolen chevy tahoe', 'houston')",
-  "fn_relation_pairs": "('houston', 'south texas'); ('houston', 'stolen chevy tahoe')"
+  "tp_relation_pairs": "('houston', 'stolen chevy tahoe'); ('south texas', 'stolen chevy tahoe')",
+  "fp_relation_pairs": "",
+  "fn_relation_pairs": "('houston', 'south texas')"
 }
 
 --- Sample 38 ---
 Input Data: Around 11:30 at night on February 8, a San Diego Air & Marine Branch (SDAMB)BE-350 Multi-Role Enforcement Aircraftdetected a possible lights out vessel by radar off the Southern California Coast headed north towards the maritime boundary line between Mexico and the United States.
 
 Prediction:
-("entity"|SAN DIEGO AIR & MARINE BRANCH|ORGANIZATION|A law enforcement organization also a BE-350 Multi-Role Enforcement Aircraft that detected a possible out vessel by the Southern California Coast headed north towards the maritime boundary line between Mexico and the United States)
+("entity"|SAN DIEGO AIR & MARINE BRANCH|ORGANIZATION|A law enforcement organization also the BE-350 Multi-Role Enforcement Aircraft that detected a possible out vessel by the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
 
 
-("entity"|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|MEANS_OF_TRANSPORTATION|A San Diego Air & Marine Branch BE-350 Multi-Role Enforcement Aircraft that detected a lights lights out vessel off radar off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
+("entity"|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|MEANS_OF_TRANSPORTATION|A San Diego Air & Marine Branch BE-350 Multi-Role Enforcement Aircraft that detected a lights lights out vessel by radar off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
 
 
 ("entity"|LIGHTS OUT VESSEL|MEANS_OF_TRANSPORTATION|A possible lights out vessel detected by radar by the SanAMB BE-350 Multi off the Southern California Coast headed north toward the maritime boundary line between Mexico and the United States)
@@ -4889,7 +4880,7 @@ Prediction:
 ("entity"|MARITIME BOUNDARY LINE|LOCATION|The maritime boundary line between Mexico and the United States toward which the lights out vessel detected headed north when("entity"|MEXICO|LOCATION|One side the two countries forming the maritime boundary line toward which the lights out vessel was headed north("entity"|UNITED STATES|LOCATION|One of the two countries forming the maritime boundary line toward which the lights out vessel was headed)
 
 
-("relationship"|SAN DIEGO AIR & MARINE BRANCH|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|The San Diego Air & Marine Branch operates the BE-350 Multi-Role Enforcement Aircraft| detected the lights out vessel off the Southern California Coast|9)
+("relationship"|SAN DIEGO AIR & MARINE BRANCH|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|The BE Diego Air & Marine Branch operates the BE-350 Multi-Role Enforcement Aircraft| detected the lights out vessel off the Southern California Coast|9)
 
 
 ("relationship"|SAN-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|LIGHTS OUT VESSEL|The SDAMB BE-350 aircraft detected a possible lights out vessel off radar off the Southern California Coast headed9)
@@ -4898,7 +4889,7 @@ Prediction:
 ("relationship"|BE-350 MULTI-ROLE ENFORCEMENT AIRCRAFT|SOUTHERN CALIFORNIA COAST|The BEAMB BE-350 aircraft detected the lights out vessel off the Southern California Coast|9)
 
 
-("relationship"|BES OUT VESSEL|SOUTHERN CALIFORNIA COAST|The lights out vessel was detected off the Southern California Coast| north| the maritime boundary line|9)
+("relationship"|LIGHTS OUT VESSEL|SOUTHERN CALIFORNIA COAST|The lights out vessel was detected off the Southern California Coast| north| the maritime boundary line|9)
 
 
 ("relationship"|LIGHTS OUT VESSEL|MARITIME BOUNDARY LINE|The lights out vessel was headed north toward the maritime boundary line between Mexico and the United States|9)
@@ -4913,7 +4904,7 @@ Prediction:
 ("relationship"|MITIME BOUNDARY LINE|SOUTHERN CALIFORNIA COAST|The maritime boundary line is Mexico and the United States is near the Southern California Coast|9)
 
 
-<relationship"|MEXICO|UNITED STATES|Mexico maritime boundary line is Mexico and the United States|9)
+<relationship"|MEXICO|UNITED STATES|Mexico maritime boundary line is the and the United States|9)
 
 
 <END>
@@ -4975,12 +4966,12 @@ Metrics: {
   "entity_tp": 5,
   "entity_fp": 0,
   "entity_fn": 2,
-  "relationship_precision": 0.42857142857142855,
-  "relationship_recall": 0.3333333333333333,
-  "relationship_f1": 0.375,
-  "relationship_tp": 3,
-  "relationship_fp": 4,
-  "relationship_fn": 6,
+  "relationship_precision": 0.5714285714285714,
+  "relationship_recall": 0.4444444444444444,
+  "relationship_f1": 0.5,
+  "relationship_tp": 4,
+  "relationship_fp": 3,
+  "relationship_fn": 5,
   "relationship_score_mae": 0.0,
   "entity_PERSON_tp": 0,
   "entity_PERSON_fp": 0,
@@ -5027,9 +5018,9 @@ Metrics: {
   "tp_entity_pairs": "('be-350 multi-role enforcement aircraft', 'means_of_transportation'); ('lights out vessel', 'means_of_transportation'); ('maritime boundary line', 'location'); ('san diego air & marine branch', 'organization'); ('southern california coast', 'location')",
   "fp_entity_pairs": "",
   "fn_entity_pairs": "('mexico', 'location'); ('united states', 'location')",
-  "tp_relation_pairs": "('be-350 multi-role enforcement aircraft', 'san diego air & marine branch'); ('lights out vessel', 'maritime boundary line'); ('maritime boundary line', 'united states')",
-  "fp_relation_pairs": "('bes out vessel', 'southern california coast'); ('lightitime boundary line', 'mexico'); ('lights out vessel', 'san-350 multi-role enforcement aircraft'); ('mitime boundary line', 'southern california coast')",
-  "fn_relation_pairs": "('be-350 multi-role enforcement aircraft', 'lights out vessel'); ('be-350 multi-role enforcement aircraft', 'southern california coast'); ('lights out vessel', 'southern california coast'); ('maritime boundary line', 'mexico'); ('maritime boundary line', 'southern california coast'); ('mexico', 'united states')"
+  "tp_relation_pairs": "('be-350 multi-role enforcement aircraft', 'san diego air & marine branch'); ('lights out vessel', 'maritime boundary line'); ('lights out vessel', 'southern california coast'); ('maritime boundary line', 'united states')",
+  "fp_relation_pairs": "('lightitime boundary line', 'mexico'); ('lights out vessel', 'san-350 multi-role enforcement aircraft'); ('mitime boundary line', 'southern california coast')",
+  "fn_relation_pairs": "('be-350 multi-role enforcement aircraft', 'lights out vessel'); ('be-350 multi-role enforcement aircraft', 'southern california coast'); ('maritime boundary line', 'mexico'); ('maritime boundary line', 'southern california coast'); ('mexico', 'united states')"
 }
 
 --- Sample 39 ---
@@ -5060,7 +5051,7 @@ Prediction:
 ("relationship"|LAREDO|HOUSTON|The most direct route runs from Laredo and Houston from which Freeman deviated by turning onto FM 2050|9)
 
 
-("relationship"|L 2050|HOAREDO|FM 2050 heads the road taken took onto headingiating from the most direct route from Laredo south Houston|9)
+("relationship"|FM 2050|HOAREDO|FM 2050 heads the road taken took onto headingiating from the most direct route from Laredo south Houston|9)
 
 
 ("relationship"|FM 2050|HOUSTON|FM 2050 heads due south away from Houston after almost an hour to the trip after Laredo|9)
@@ -5160,7 +5151,7 @@ Metrics: {
   "fp_entity_pairs": "",
   "fn_entity_pairs": "('houston', 'location')",
   "tp_relation_pairs": "('fm 2050', 'freeman'); ('fm 2050', 'houston'); ('freeman', 'houston'); ('freeman', 'laredo')",
-  "fp_relation_pairs": "('hoaredo', 'l 2050')",
+  "fp_relation_pairs": "('fm 2050', 'hoaredo')",
   "fn_relation_pairs": "('fm 2050', 'laredo'); ('houston', 'laredo')"
 }
 
@@ -5171,13 +5162,10 @@ Prediction:
 ("entity"|CONTRERAS DE VELASQUEZ|PERSON|Individual who admitted to giving the female passenger the birth certificate and expecting to receive $500 after taking the undocumented woman to Victoria,)
 
 
-("entity"|FEMALE PASSENGER|PERSON|Individual who received the birth certificate from Contreras de Velasquez and was expected as the person woman's be taken to Victoria Texas for("entity"|UNDOCUMENTED WOMAN|PERSON|Individualocumented individual who as the female passenger who was to be taken to Victoria Texas by Contreras de Velasquez following exchange for $500)
+("entity"|FEMALE PASSENGER|PERSON|Individual who received the birth certificate from Contreras de Velasquez and expected expected as the person woman's be taken to Victoria Texas for("entity"|UNDOCUMENTED WOMAN|PERSON|Individualocumented individual who as the female passenger who was to be taken to Victoria Texas by Contreras de Velasquez following exchange for $500)
 
 
-("entity"|BICTORIA, TEXAS|LOCATION|Destination where which Contreras de Velasquez admitted to take the undocumented woman following exchange for $500)
-
-
-("relationship"|CONTRERAS DE VELASQUEZ|FEMALE PASSENGER|Contreras de Velasquez admitted to giving the female passenger the birth certificate|9)
+("entity"|BICTORIA, TEXAS|LOCATION|Destination where which Contreras de Velasquez admitted to take the undocumented woman following exchange for $500 as("relationship"|CONTRERAS DE VELASQUEZ|FEMALE PASSENGER|Contreras de Velasquez admitted to giving the female passenger the birth certificate|9)
 
 
 ("relationship"|CONTRERAS DE VELASQUEZ|UNDOCUMENTED WOMAN|Contreras de Velasquez admitted to receive $500 after taking the undocumented woman to Victoria Texas|9)
@@ -5579,7 +5567,7 @@ Prediction:
 ("entity"|RICARDO RODRIGUEZ|PERSON|A who responded that there were two more in in the trunk)
 
 
-("entity"|TRWO INDIVIDUALS|PERSON|Two individuals who were to Ricardo Rodriguez were response were in the trunk)
+("entity"|TRWO INDIVIDUALS|PERSON|Two individuals reported were to Ricardo Rodriguez were response were in the trunk)
 
 
 ("entity"|RICARDO RODRIGUEZ|TWO INDIVIDUALS|Ricardo Rodriguez responded that there were two more individuals in the trunk|8)
@@ -5666,28 +5654,22 @@ Metrics: {
 Input Data: Once back near Pearsall, the vehicle pulled into the gas station at exit 101, again rather abruptly, and parked near a pump.
 
 Prediction:
-("entity"|VEHICLE|MEANS_OF_TRANSPORTATION|Vehicle vehicle that once into a gas station at exit 101 near Pearsall rather abruptly and parked near a pump)
-
-
-("entity"|GARSALL|LOCATION|A location near Texas near which the vehicle pulled into the gas station at exit 101)
-
-
-("entity"|GAS STATION|LOCATION|A gas station at exit 101 near Pearsall where the vehicle pulled in rather and parked near a pump)
+("entity"|VEHICLE|MEANS_OF_TRANSPORTATION|The vehicle that once into a gas station at exit 101 near Pearsall rather abruptly and parked near a pump.)("entity"|GARSALL|LOCATION|A location near Texas near which the vehicle pulled into a gas station at exit 101 rather("entity"|GAS STATION|LOCATION|A gas station at exit 101 near Pearsall where the vehicle pulled in rather and parked near a pump)
 
 
 ("entity"|P 101|ROUTES|The highway exit at Pearsall where the gas station was located and where the vehicle pulled in abruptly)
 
 
-("entity"|VEHICLE|PEARSALL|The vehicle pulled back the gas station near Pearsall| exit 101|9)
+("relationship"|VEHICLE|PEARSALL|The vehicle pulled back the gas station near Pearsall| exit 101|9)
 
 
 ("relationship"|VEHICLE|GAS STATION|The vehicle pulled into the gas station at exit 101 near Pearsall and abruptly and parked near a pump|9)
 
 
-("relationship"|VEHICLE|EXIT 101|The vehicle pulled into the gas station at exit 101 near Pearsall|9)
+("relationship"|VEHICLE|EXIT 101|The vehicle pulled into a gas station at exit 101 near Pearsall|9)
 
 
-("relationship"|GAS STATION|PE 101|The gas station is located at exit 101 near Pearsall|9)
+("relationship"|GAS STATION|PE 101|The gas station was located at exit 101 near Pearsall|9)
 
 
 ("relationship"|GAS STATION|PEARSALL|The gas station is exit 101 is located near Pearsall|9)
@@ -5731,18 +5713,18 @@ Ground Truth:
 <END>
 Metrics: {
   "parsability_score": 1.0,
-  "entity_precision": 0.4,
-  "entity_recall": 0.5,
-  "entity_f1": 0.4444444444444445,
-  "entity_tp": 2,
-  "entity_fp": 3,
-  "entity_fn": 2,
-  "relationship_precision": 0.6,
-  "relationship_recall": 0.5,
-  "relationship_f1": 0.5454545454545454,
-  "relationship_tp": 3,
+  "entity_precision": 0.3333333333333333,
+  "entity_recall": 0.25,
+  "entity_f1": 0.28571428571428575,
+  "entity_tp": 1,
+  "entity_fp": 2,
+  "entity_fn": 3,
+  "relationship_precision": 0.6666666666666666,
+  "relationship_recall": 0.6666666666666666,
+  "relationship_f1": 0.6666666666666666,
+  "relationship_tp": 4,
   "relationship_fp": 2,
-  "relationship_fn": 3,
+  "relationship_fn": 2,
   "relationship_score_mae": 0.0,
   "entity_PERSON_tp": 0,
   "entity_PERSON_fp": 0,
@@ -5750,12 +5732,12 @@ Metrics: {
   "entity_PERSON_precision": 0.0,
   "entity_PERSON_recall": 0.0,
   "entity_PERSON_f1": 0.0,
-  "entity_LOCATION_tp": 1,
+  "entity_LOCATION_tp": 0,
   "entity_LOCATION_fp": 1,
-  "entity_LOCATION_fn": 1,
-  "entity_LOCATION_precision": 0.5,
-  "entity_LOCATION_recall": 0.5,
-  "entity_LOCATION_f1": 0.5,
+  "entity_LOCATION_fn": 2,
+  "entity_LOCATION_precision": 0.0,
+  "entity_LOCATION_recall": 0.0,
+  "entity_LOCATION_f1": 0.0,
   "entity_ORGANIZATION_tp": 0,
   "entity_ORGANIZATION_fp": 0,
   "entity_ORGANIZATION_fn": 0,
@@ -5786,25 +5768,25 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_precision": 0.0,
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
-  "tp_entity_pairs": "('gas station', 'location'); ('vehicle', 'means_of_transportation')",
-  "fp_entity_pairs": "('garsall', 'location'); ('p 101', 'routes'); ('vehicle', 'pearsall')",
-  "fn_entity_pairs": "('exit 101', 'routes'); ('pearsall', 'location')",
-  "tp_relation_pairs": "('exit 101', 'vehicle'); ('gas station', 'pearsall'); ('gas station', 'vehicle')",
+  "tp_entity_pairs": "('vehicle', 'means_of_transportation')",
+  "fp_entity_pairs": "('garsall', 'location'); ('p 101', 'routes')",
+  "fn_entity_pairs": "('exit 101', 'routes'); ('gas station', 'location'); ('pearsall', 'location')",
+  "tp_relation_pairs": "('exit 101', 'vehicle'); ('gas station', 'pearsall'); ('gas station', 'vehicle'); ('pearsall', 'vehicle')",
   "fp_relation_pairs": "('gas station', 'pe 101'); ('pe 101', 'pearsall')",
-  "fn_relation_pairs": "('exit 101', 'gas station'); ('exit 101', 'pearsall'); ('pearsall', 'vehicle')"
+  "fn_relation_pairs": "('exit 101', 'gas station'); ('exit 101', 'pearsall')"
 }
 
 --- Sample 46 ---
 Input Data: he knowingly facilitated and encouraged the undocumented aliens' prearranged plan to enter the United States in violation of law, as evidenced by his admission that he met with them in a Mexican hotel room prior to their entry and gave them assurances that he would help them secure transportation inside the United States after they crossed the border
 
 Prediction:
-("entity"|ALIDOCUMENTED ALIENS|PERSON|Individuals who prearranged plan to enter the United States was violation of law was knowingly facilitated and encouraged by him as evidenced by his admission that he met with them in a Mexican hotel room prior would them assurances he would help secure transportation inside the United States after they crossed the border)
+("entity"|MDOCUMENTED ALIENS|PERSON|Individuals who prearranged plan to enter the United States was violation of law was facilitated facilitated and encouraged by him as evidenced by his admission that he met with them in a Mexican hotel room prior would them assurances he would help secure transportation inside the United States after they crossed the border)
 
 
 ("entity"|MED STATES|LOCATION|Country that was undocumented aliens planned a prearranged plan to enter in violation of law as facilit facilitating admitted he meeting their encouraging their by by promising to help secure transportation inside the crossing crossed the border)
 
 
-("entity"|MEXICOAN HOTEL ROOM|LOCATION|Location where which where he admitted to meeting met with the undocumented aliens prior to their entry into the United States in where them assurances he would help secure transportation inside the United States after("entity"|UNITEXICO|LOCATION|Country where he met to meeting met with the undocumented aliens in a hotel room prior to their entry entry into the United States having("entity"|UNDOCUMENTED ALIENS|UNITED STATES|The knowingly facilitated and encouraged the undocumented aliens'arranged plan to enter the United States in violation of law as admitted them assurances he would help secure transportation inside after they crossed the border|9)
+("entity"|MEXICOAN HOTEL ROOM|LOCATION|Location where Mexico where he admitted to meeting met with the undocumented aliens prior to their entry into the United States in where them assurances he would help secure transportation inside the United States after("entity"|UNITEXICO|LOCATION|Country where the met to meeting met with the undocumented aliens in a hotel room prior to their entry entry into the United States having("entity"|UNDOCUMENTED ALIENS|UNITED STATES|The knowingly facilitated and encouraged the undocumented aliens'arranged plan to enter the United States in violation of law as admitted them assurances he would help secure transportation inside after they crossed the border|9)
 
 
 ("relationship"|UNDOCUMENTED ALIENS|MEXICAN HOTEL ROOM|He admitted to having met with the undocumented aliens in a Mexican hotel room prior to their entry into the United States| he gave them assurances he would help secure transportation inside the United States|9)
@@ -5813,13 +5795,13 @@ Prediction:
 ("relationship"|UNDOCUMENTED ALIENS|MEXICO|He admitted to having met with the undocumented aliens in a Mexican hotel room prior to their entry entry into the United States|8)
 
 
-("relationship"|MEXICAN HOTEL ROOM|MUNITED STATES|The Mexican in a Mexican hotel room was him and the undocumented aliens was place prior to the entry entry entry into the United States| he promised assurances assurances he future inside|7)
+("relationship"|MEXICAN HOTEL ROOM|MUNITED STATES|The Mexican between a Mexican hotel room was him and the undocumented aliens was place prior to the entry entry entry into the United States| he promised assurances assurances he future inside|7)
 
 
 ("relationship"|MEXICAN HOTEL ROOM|MEXICO|The Mexican room where he met with the undocumented aliens was to their entry entry into the United States was located in Mexico|7)
 
 
-("relationship"|MEXICO|UNITED STATES|The met the the undocumented aliens in a Mexican hotel room to to their illegal entry into the United States having violated facilitated facilitated and encouraged in6)
+("relationship"|MEXICO|UNITED STATES|The facilitated the the undocumented aliens in a Mexican hotel room to to their illegal entry into the United States having violated facilitated facilitated and encouraged in6)
 
 
 <END>
@@ -5913,7 +5895,7 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
   "tp_entity_pairs": "",
-  "fp_entity_pairs": "('alidocumented aliens', 'person'); ('med states', 'location'); ('mexicoan hotel room', 'location')",
+  "fp_entity_pairs": "('mdocumented aliens', 'person'); ('med states', 'location'); ('mexicoan hotel room', 'location')",
   "fn_entity_pairs": "('mexican hotel room', 'location'); ('mexico', 'location'); ('undocumented aliens', 'person'); ('united states', 'location')",
   "tp_relation_pairs": "('mexican hotel room', 'mexico'); ('mexican hotel room', 'undocumented aliens'); ('mexico', 'undocumented aliens')",
   "fp_relation_pairs": "('mexican hotel room', 'munited states')",
@@ -5927,13 +5909,13 @@ Prediction:
 ("entity"|UORDER PATROL AGENTS|PERSON|Border Patrol agents who questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.)
 
 
-("entity"|NORAICAN NATIONALS|PERSON|Nine passengers questioned by Mexican nationals who present in the U.S. questioned("entity"|UED STATES|LOCATION|Country where the nine nationals were found illegally be illegally present)
+("entity"|NORGICAN NATIONALS|PERSON|Nine passengers questioned by Mexican nationals who present in the U.S. questioned("entity"|UED STATES|LOCATION|Country where the nine nationals were found illegally be illegally present)
 
 
 ("relationship"|BORDER PATROL AGENTS|MEXICAN NATIONALS|Border Patrol agents questioned the nine passengers and determined they were Mexican nationals illegally present in the U.S.|9)
 
 
-("relationship"|BEXICAN NATIONALS|UNITED STATES|The nine Mexican nationals were determined to be illegally present in the United States|9)
+("relationship"|BEXICAN NATIONALS|UNITED STATES|The nine Mexican nationals were illegally to be illegally present in the United States|9)
 
 
 ("END>
@@ -6012,7 +5994,7 @@ Metrics: {
   "entity_SMUGGLED_ITEMS_recall": 0.0,
   "entity_SMUGGLED_ITEMS_f1": 0.0,
   "tp_entity_pairs": "",
-  "fp_entity_pairs": "('noraican nationals', 'person'); ('uorder patrol agents', 'person')",
+  "fp_entity_pairs": "('norgican nationals', 'person'); ('uorder patrol agents', 'person')",
   "fn_entity_pairs": "('border patrol agents', 'person'); ('mexican nationals', 'person'); ('united states', 'location')",
   "tp_relation_pairs": "('border patrol agents', 'mexican nationals')",
   "fp_relation_pairs": "('bexican nationals', 'united states')",
@@ -6023,10 +6005,10 @@ Metrics: {
 Input Data: Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore.
 
 Prediction:
-("entity"|MARTINEZ|PERSON|A person smugg organizer who directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting migrants offshore)
+("entity"|MARTINEZ|PERSON|A person smugg organizer who directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
 
 
-("entity"|CREW|PERSON|Ainez's crew that to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
+("entity"|CREW|PERSON|Ainez's crew who to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore)
 
 
 ("entity"|RIGID-HULL BOATS|MEANS_OF_TRANSPORTATION|Two rigid-hull boats brought for transporting groups offshore that Martinez directed his crew to meet with at a remote beach in San Quintín, Mexico)
@@ -6041,7 +6023,7 @@ Prediction:
 ("entity"|MARTINEZ|CREW|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico with two rigid-hull boats intended9)
 
 
-("relationship"|MARTINEZ|RIGID-HULL BOATS|Martinez directed his crew to meet with a remote beach with San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore|9)
+("relationship"|MARTINEZ|RIGID-HULL BOATS|Martinez directed the crew to meet with a remote beach with San Quintín, Mexico with two rigid-hull boats intended for transporting groups offshore|9)
 
 
 ("relationship"|MARTINEZ|REMOTE BEACH|Martinez directed his crew to meet at a remote beach in San Quintín, Mexico|9)
@@ -6197,10 +6179,7 @@ Prediction:
  Mejia-Orosco)
 
 
-("entity"|SAN ANTONIO|LOCATION|The city where the where Mej-Ortega and Cruz-Morales were with with)
-
-
-)
+("entity"|SAN ANTONIO|LOCATION|The city where the where Mej-Ortega and Cruz-Morales were with with and)
 
 
  key was supplied by Mejia-Orosco)
@@ -6215,7 +6194,7 @@ Prediction:
 ("relationship"|MEJIA-OROSCO|CRUZ-MORALES|Mejia-Orosco brought Cruz-Morales to Nuevo Laredo, Tamaulipas, Mexico|9)
 
 
-("relationship"|MEJIA-OROSCO|L ANTONIO|Me motel in Texas where Paz-Ortega and Cruz-Morales went Mej Mejia-Orosco at where flew to the Antonio International Airport with9)
+<relationship"|MEJIA-OROSCO|L ANTONIO|Me motel in Texas where Mej-Ortega and Cruz-Morales went Mej Mejia-Orosco at where flew to the Antonio International Airport with9)
 
 
 <END>
@@ -6323,7 +6302,7 @@ Prediction:
 ("entity"|34 PEOPLE|PERSON|34 people arrested by federal agents in separate landings along the Oregon coastline on Saturday night)
 
 
-("entity"|OREGON COASTLINE|LOCATION|The location along which federal agents helped arrest 34 people in separate landings on Saturday night)
+("entity"|OREGON COASTLINE|LOCATION|The coastal along which federal agents helped arrest 34 people in separate landings on Saturday night)
 
 
 ("relationship"|FEDERAL AGENTS|34 PEOPLE|Federal agents helped arrest 34 people in separate landings along the Oregon coastline on Saturday night|9)
