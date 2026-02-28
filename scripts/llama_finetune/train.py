@@ -18,8 +18,15 @@ def main():
     REPORT_DIR = NEW_MODEL_DIR 
     
     model, tokenizer = setup_model_and_tokenizer()
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+        model.config.pad_token_id = tokenizer.pad_token_id
     model = setup_peft_model(model)
-    
+    formatted_system_prompt = SYSTEM_PROMPT.format(
+        tuple_delimiter="|",
+        record_delimiter="\n",
+        completion_delimiter="<END>"
+    )
     train_dataset, eval_dataset = load_data(DATASET_PATH)
     
     preprocess_function = create_preprocess_function(tokenizer, SYSTEM_PROMPT)
@@ -44,15 +51,17 @@ def main():
         gradient_accumulation_steps=4,     
         per_device_eval_batch_size=1,
         eval_accumulation_steps=1,
-        num_train_epochs=10,                
-        learning_rate=2e-5,                
+        num_train_epochs=4,                
+        learning_rate=2e-5,     
+        lr_scheduler_type="cosine",           
         optim="paged_adamw_8bit",
         bf16=True,                         
         gradient_checkpointing=True,
         logging_steps=10,
         eval_strategy="epoch",
-        save_strategy="no",
-        load_best_model_at_end=False,
+        save_strategy="epoch",
+        metric_for_best_model="eval_loss",
+        load_best_model_at_end=True,
         report_to="tensorboard",           
     )
 
@@ -62,7 +71,7 @@ def main():
         train_dataset=tokenized_train,
         eval_dataset=tokenized_eval,
         raw_eval_dataset=eval_dataset,
-        system_prompt=SYSTEM_PROMPT,
+        system_prompt=formatted_system_prompt,
         tokenizer=tokenizer,
         compute_metrics=lambda eval_pred: compute_metrics_wrapper(eval_pred, tokenizer),
         preprocess_logits_for_metrics=preprocess_logits_for_metrics,

@@ -24,67 +24,67 @@ def load_data(file_path: str) -> (Dataset, Dataset):
     return train_dataset, eval_dataset
 
 def create_preprocess_function(tokenizer, system_prompt):
-    INSTRUCTION_TEMPLATE = """Input_text: 
-{input_text}
-Output:
-"""
     formatted_system_prompt = system_prompt.format(
         tuple_delimiter="|",
         record_delimiter="\n",
         completion_delimiter="<END>"
     )
 
+    INSTRUCTION_TEMPLATE = """Input_text: 
+{input_text}
+Output:
+"""
+
     def preprocess_function(examples):
-        inputs = [INSTRUCTION_TEMPLATE.format(input_text=text) for text in examples['Input_Text']]
-        
-        ground_truths = []
-        for gt in examples['Output']:
+        all_input_ids =[]
+        all_attention_masks = []
+        all_labels = []
+
+        for input_text, gt in zip(examples['Input_Text'], examples['Output']):
+            user_content = INSTRUCTION_TEMPLATE.format(input_text=input_text).strip()
+            
             clean_gt = gt.replace("{tuple_delimiter}", "|")
             clean_gt = clean_gt.replace("{record_delimiter}", "\n")
             clean_gt = clean_gt.replace("{completion_delimiter}", "<END>")
-            ground_truths.append(clean_gt)
-
-        all_messages = [
-            [
+            
+            messages =[
                 {"role": "system", "content": formatted_system_prompt},
-                {"role": "user", "content": input_content.strip()}
-            ] for input_content in inputs
-        ]
-        
-        prompt_strs = [
-            tokenizer.apply_chat_template(
-                messages, 
-                tokenize=False, 
-                add_generation_prompt=True
-            ) for messages in all_messages
-        ]
-        
-        full_texts = [f"{prompt}{gt}{tokenizer.eos_token}" for prompt, gt in zip(prompt_strs, ground_truths)]
-        
-        results = tokenizer(
-            full_texts,
-            truncation=True,
-            max_length=MAX_LENGTH,
-            padding="max_length",
-        )
-        
-        all_labels = []
-        for i, full_text_ids in enumerate(results["input_ids"]):
-            prompt_ids = tokenizer(prompt_strs[i], add_special_tokens=False)["input_ids"]
-            prompt_len = len(prompt_ids)
-
-            labels = full_text_ids.copy()
+                {"role": "user", "content": user_content}
+            ]
             
-            labels[:prompt_len] = [-100] * prompt_len
+            prompt_str = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            prompt_tokenized = tokenizer(prompt_str, add_special_tokens=False) 
+            prompt_ids = prompt_tokenized["input_ids"]
             
-            if tokenizer.pad_token_id is not None:
-                for j in range(len(labels)):
-                    if full_text_ids[j] == tokenizer.pad_token_id:
-                        labels[j] = -100
+            gt_str = clean_gt + tokenizer.eos_token
+            gt_tokenized = tokenizer(gt_str, add_special_tokens=False)
+            gt_ids = gt_tokenized["input_ids"]
+            
+            input_ids = prompt_ids + gt_ids
+            
+            if len(input_ids) > MAX_LENGTH:
+                input_ids = input_ids[:MAX_LENGTH]
+                
+            labels = input_ids.copy()
+            prompt_length = min(len(prompt_ids), MAX_LENGTH)
+            labels[:prompt_length] = [-100] * prompt_length
+            
+            pad_len = MAX_LENGTH - len(input_ids)
+            if pad_len > 0:
+                input_ids = input_ids + [tokenizer.pad_token_id] * pad_len
+                attention_mask = [1] * (MAX_LENGTH - pad_len) + [0] * pad_len
+                labels = labels + [-100] * pad_len
+            else:
+                attention_mask = [1] * MAX_LENGTH
 
+            all_input_ids.append(input_ids)
+            all_attention_masks.append(attention_mask)
             all_labels.append(labels)
 
-        results["labels"] = all_labels
-        return results
+        return {
+            "input_ids": all_input_ids,
+            "attention_mask": all_attention_masks,
+            "labels": all_labels
+        }
 
     return preprocess_function
