@@ -98,7 +98,7 @@ class CustomTrainer(Trainer):
             with torch.no_grad():
                 output_ids = self.model.generate(
                     **inputs,
-                    max_new_tokens=512,
+                    max_new_tokens=2056,
                     pad_token_id=tokenizer.eos_token_id,
                     eos_token_id=tokenizer.eos_token_id,
                     do_sample=False,
