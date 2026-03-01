@@ -3,11 +3,22 @@ import os
 import json
 import sys
 import time
+import re
+import torch
+from tqdm import tqdm
 import getpass
 import socket
 from transformers import Trainer
 from .metrics import compute_metrics
 from . import config as llama_finetune_config
+
+def normalize_extraction(text):
+    if not isinstance(text, str):
+        return text
+    text=text.lower()
+    text=re.sub(r'\$\s+', '$', text)
+    text=re.sub(r'\s+', ' ', text)
+    return text.strip()
 
 class CustomTrainer(Trainer):
     def __init__(self, *args, raw_eval_dataset=None, system_prompt=None, report_dir=None, **kwargs):
@@ -62,50 +73,57 @@ class CustomTrainer(Trainer):
         eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
         if eval_dataset is None:
              raise ValueError("Trainer: No evaluation dataset found (eval_dataset is None).")
+        eval_output = super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
+        if eval_output is None:
+            eval_output = {}
+        self.model.eval()
 
-        predictions_output = self.predict(eval_dataset)
-        
-        predicted_ids = predictions_output.predictions
         tokenizer = getattr(self, "processing_class", self.tokenizer)
-        predicted_strings = tokenizer.batch_decode(predicted_ids, skip_special_tokens=False)
         
         original_texts = [item['Input_Text'] for item in self.raw_eval_dataset]
         original_ground_truths = [item['Output'] for item in self.raw_eval_dataset]
 
         decoded_predictions = []
         decoded_ground_truths = []
-
-        HEADER_PATTERN = "assistant<|end_header_id|>"
-
-        for i in range(len(predicted_strings)):
-            pred_text = predicted_strings[i]
-            
-            if HEADER_PATTERN in pred_text:
-                pred_assistant_part = pred_text.split(HEADER_PATTERN)[-1]
-            else:
-                if "assistant" in pred_text:
-                     pred_assistant_part = pred_text.split("assistant")[-1]
-                else:
-                     pred_assistant_part = pred_text
-
-            if "<END>" in pred_assistant_part:
-                pred_assistant_part = pred_assistant_part.split("<END>")[0] + "<END>"
-            
-            if "<|start_header_id|>" in pred_assistant_part:
-                pred_assistant_part = pred_assistant_part.split("<|start_header_id|>")[0]
-
-            pred_assistant_part = pred_assistant_part.replace("<|eot_id|>", "").replace("<|end_of_text|>", "").strip()
-            
-            decoded_predictions.append(pred_assistant_part)
-            
+        INSTRUCTION_TEMPLATE = """Input_text: \n{input_text}\nOutput:\n"""
+        for i in tqdm(range(len(original_texts)), desc="Evaluating Samples"):
+            user_content=INSTRUCTION_TEMPLATE.format(input_text=original_texts[i]).strip()
+            messages = [
+                {"role": "system", "content": self.system_prompt},
+                {"role": "user", "content": user_content}
+            ]
+            prompt_str = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            inputs = tokenizer(prompt_str, return_tensors="pt", add_special_tokens=False).to(self.model.device)
+            prompt_length = inputs["input_ids"].shape[1]
+            with torch.no_grad():
+                output_ids = self.model.generate(
+                    **inputs,
+                    max_new_tokens=512,
+                    pad_token_id=tokenizer.eos_token_id,
+                    eos_token_id=tokenizer.eos_token_id,
+                    do_sample=False,
+                    use_cache=True
+                )
+            generated_ids=output_ids[0][prompt_length:]
+            pred_text=tokenizer.decode(generated_ids, skip_special_tokens=True)
+            if "<END>" in pred_text:
+                pred_text = pred_text.split("<END>")[0] + "<END>"
+            pred_text= pred_text.strip()
             gt = original_ground_truths[i].strip()
             gt = gt.replace("{tuple_delimiter}", "|").replace("{record_delimiter}", "\n").replace("{completion_delimiter}", "<END>")
+
+            pred_text = normalize_extraction(pred_text)
+            gt = normalize_extraction(gt)
+
+            decoded_predictions.append(pred_text)
             decoded_ground_truths.append(gt)
+
+        
+
+
 
         global_metrics = compute_metrics(decoded_predictions, decoded_ground_truths)
         
-        eval_output = super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
-        if eval_output is None: eval_output = {}
         for key, value in global_metrics.items():
             eval_output[f"{metric_key_prefix}_{key}"] = value
 
