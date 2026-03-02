@@ -94,10 +94,10 @@ SMUGGLED_ITEMS:
   "eval_entity_SMUGGLED_ITEMS_precision": 0.0,
   "eval_entity_SMUGGLED_ITEMS_recall": 0.0,
   "eval_entity_SMUGGLED_ITEMS_f1": 0.0,
-  "eval_runtime": 1207.3977,
-  "eval_samples_per_second": 0.043,
-  "eval_steps_per_second": 0.043,
-  "epoch": 3.0
+  "eval_runtime": 1300.3972,
+  "eval_samples_per_second": 0.04,
+  "eval_steps_per_second": 0.04,
+  "epoch": 4.0
 }
 ==============================
 
